@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 const navItems = [
   { label: "Home", to: "/" },
@@ -15,81 +15,58 @@ const navItems = [
   { label: "Contact", to: "/contact" },
 ];
 
-const badgeItems = [
-  "Automation Systems",
-  "ManyChat Experts",
-  "ROI-Driven Campaigns",
-  "Conversion Design",
-];
+const navPillBase =
+  "group relative inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full border border-white/55 bg-white/40 px-[clamp(0.9rem,2vw,1.3rem)] py-[clamp(0.36rem,0.85vw,0.55rem)] text-[clamp(0.78rem,1.6vw,0.9rem)] font-medium text-slate-600 shadow-[0_12px_24px_-22px_rgba(15,23,42,0.45)] backdrop-blur transition-all duration-300 ease-out hover:scale-[1.03] hover:border-indigo-200 hover:bg-white hover:text-indigo-600 after:absolute after:bottom-[0.2rem] after:left-1/2 after:h-0.5 after:w-1/2 after:-translate-x-1/2 after:rounded-full after:bg-indigo-500/85 after:opacity-0 after:transition-all after:duration-300 group-hover:after:translate-y-[0.18rem] group-hover:after:opacity-100";
+
+const navPillActive =
+  "border-indigo-400 bg-indigo-600/90 text-white shadow-[0_20px_45px_-20px_rgba(79,70,229,0.6)] after:opacity-100 after:bg-indigo-200/90";
+
+const navPillInactive =
+  "text-slate-600 hover:shadow-[0_18px_34px_-24px_rgba(79,70,229,0.4)]";
 
 export default function SiteLayout() {
-  const location = useLocation();
-
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-        <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-indigo-600 text-white shadow-lg">
-              <span className="text-lg font-semibold">DF</span>
+      <header className="sticky top-0 z-50 border-b border-slate-200/40 bg-white/70 shadow-sm backdrop-blur-xl supports-[backdrop-filter]:bg-white/30">
+        <div className="mx-auto flex w-full max-w-screen-xl items-center justify-between gap-8 px-4 py-4 sm:px-6 lg:px-8">
+          <Link
+            to="/"
+            className="flex items-center gap-[clamp(0.5rem,1.5vw,0.75rem)]"
+          >
+            <div className="flex h-[clamp(2.5rem,5vw,2.9rem)] w-[clamp(2.5rem,5vw,2.9rem)] items-center justify-center rounded-full bg-indigo-600 text-white shadow-lg">
+              <span className="text-[clamp(1rem,2vw,1.15rem)] font-semibold">
+                DF
+              </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold tracking-tight">
+              <span className="text-[clamp(1.05rem,2.4vw,1.25rem)] font-semibold tracking-tight">
                 DigitalFace Marketing
               </span>
-              <span className="text-xs text-slate-500">
-                Colombia · Florida
+              <span className="text-[clamp(0.65rem,1.6vw,0.75rem)] text-slate-500">
+                Colombia &middot; Florida
               </span>
             </div>
           </Link>
 
-          <nav className="hidden items-center gap-1 lg:flex">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className={({ isActive }) =>
-                  cn(
-                    "rounded-full px-3 py-2 text-sm font-medium transition-colors",
-                    isActive
-                      ? "bg-indigo-50 text-indigo-700"
-                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
-                  )
-                }
-                end={item.to === "/"}
-              >
-                {item.label}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link
-              to="/contact"
-              className="hidden text-sm font-semibold text-slate-600 transition hover:text-slate-900 md:inline"
-            >
-              hello@digitalfacemarketing.com
-            </Link>
+          <div className="flex flex-shrink-0 items-center justify-end gap-4">
             <Button
               asChild
-              className="rounded-full bg-indigo-600 px-5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 hover:bg-indigo-700"
+              className="whitespace-nowrap rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_25px_55px_-20px_rgba(79,70,229,0.65)] transition-all duration-300 ease-out hover:-translate-y-[1px] hover:shadow-[0_30px_60px_-24px_rgba(79,70,229,0.7)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
             >
               <Link to="/contact">Book a Strategy Session</Link>
             </Button>
           </div>
         </div>
-        <div className="border-t border-slate-200 bg-white/95 lg:hidden">
-          <nav className="mx-auto flex w-full max-w-6xl items-center gap-1 overflow-x-auto px-4 py-3 text-sm font-medium text-slate-600 sm:px-6">
+        <div className="border-t border-white/55 bg-white/40 shadow-[0_25px_45px_-38px_rgba(15,23,42,0.4)] backdrop-blur-xl supports-[backdrop-filter]:bg-white/20">
+          <nav className="mx-auto flex w-full max-w-screen-xl flex-nowrap items-center justify-center gap-3 overflow-x-auto px-4 py-3 text-slate-600 sm:gap-4 sm:px-6 sm:py-3.5 md:gap-6 lg:px-8">
             {navItems.map((item) => (
               <NavLink
-                key={`mobile-${item.to}`}
+                key={`badge-${item.to}`}
                 to={item.to}
                 className={({ isActive }) =>
                   cn(
-                    "whitespace-nowrap rounded-full px-3 py-2 transition-colors",
-                    isActive
-                      ? "bg-indigo-600 text-white"
-                      : "bg-slate-100 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700"
+                    navPillBase,
+                    isActive ? navPillActive : navPillInactive
                   )
                 }
                 end={item.to === "/"}
@@ -98,23 +75,6 @@ export default function SiteLayout() {
               </NavLink>
             ))}
           </nav>
-        </div>
-        <div className="border-t border-slate-200 bg-indigo-50/60 py-2">
-          <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-2 px-4 text-xs font-medium text-indigo-700 sm:px-6 lg:px-8">
-            {badgeItems.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-indigo-200 bg-white px-3 py-1 shadow-sm"
-              >
-                {item}
-              </span>
-            ))}
-            <span className="rounded-full border border-indigo-200 bg-white px-3 py-1 shadow-sm">
-              {location.pathname === "/"
-                ? "Automation-first marketing partner"
-                : "Let's build your next growth play"}
-            </span>
-          </div>
         </div>
       </header>
 
@@ -153,14 +113,14 @@ export default function SiteLayout() {
                   Florida, USA
                 </span>
                 <br />
-                Miami · Remote-first across the East Coast
+                Miami &middot; Remote-first across the East Coast
               </li>
               <li>
                 <span className="font-semibold text-slate-900">
                   Cali, Colombia
                 </span>
                 <br />
-                Zona Rosa · Serving LATAM growth brands
+                Zona Rosa &middot; Serving LATAM growth brands
               </li>
             </ul>
           </div>
@@ -216,7 +176,10 @@ export default function SiteLayout() {
         </div>
         <div className="border-t border-slate-200 bg-indigo-50 py-4">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-            <p>© {new Date().getFullYear()} DigitalFace Marketing. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} DigitalFace Marketing. All
+              rights reserved.
+            </p>
             <div className="flex flex-wrap gap-4">
               <a className="hover:text-indigo-600" href="/privacy">
                 Privacy Policy
