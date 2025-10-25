@@ -1,218 +1,197 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
+import { Hero } from "@/sections/Hero";
+import { CtaSection } from "@/sections/CTA";
 import { CalendarDays, Globe2, HeartHandshake, Users } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const values = [
   {
     title: "Innovation",
     description:
-      "We experiment with AI, automation, and emerging platforms so our clients always stay ahead of the curve.",
+      "We experiment with AI, automation, and emerging platforms so your brand is always ahead of the trend line.",
   },
   {
     title: "Transparency",
     description:
-      "Clear communication, shared dashboards, and honest conversations—because trust is built on openness.",
+      "Shared dashboards, open comms, and clear pricing keep every sprint visible, measurable, and calm.",
   },
   {
     title: "Results",
     description:
-      "Every deliverable ties back to your north-star metrics. We celebrate wins and quickly iterate when data tells another story.",
+      "Every launch ladders up to the metrics you care about. If the data shifts, the plan pivots with it.",
   },
 ];
 
-const teamHighlights = [
+const specialties = [
   {
-    icon: Users,
-    title: "Automation Architects",
-    copy:
-      "Certified ManyChat, HubSpot, and Make specialists designing bots, workflows, and integrations that add up to +30% lead conversion (Cazoomi).",
+    icon: <Users className="h-6 w-6 text-brand-500" />,
+    title: "Automation architects",
+    description:
+      "Certified ManyChat, HubSpot, and Make specialists building bots and workflows that push lead conversion past the plus 30 percent benchmark noted on the original site.",
   },
   {
-    icon: CalendarDays,
-    title: "Social Media Maestros",
-    copy:
-      "Media buyers and creative strategists who marry trend-aware storytelling with rigorous testing to beat the ~5:1 social ROI benchmark (SQ Magazine).",
+    icon: <CalendarDays className="h-6 w-6 text-brand-500" />,
+    title: "Paid media maestros",
+    description:
+      "Media buyers and creative strategists blending trend-aware storytelling with relentless testing to beat the five to one social ROI metric.",
   },
   {
-    icon: Globe2,
-    title: "Web & Experience Designers",
-    copy:
-      "UX strategists and developers crafting fast, accessible, conversion-led experiences—knowing 75% of credibility is defined by design (Rareform New Media).",
+    icon: <Globe2 className="h-6 w-6 text-brand-500" />,
+    title: "UX and web makers",
+    description:
+      "Conversion-first designers and developers who respect that seventy five percent of credibility comes from your site experience.",
   },
 ];
 
 export default function About() {
   usePageMetadata(
-    "About Us – DigitalFace Marketing | Your Automation & Growth Partner",
-    "Meet DigitalFace Marketing, the automation-first agency operating from Florida and Colombia. Discover our mission, team, and values powering automation, social ads, and web design."
+    "About DigitalFace Marketing | Automation-first growth studio",
+    "Meet the bilingual team behind DigitalFace Marketing. We design automation, ads, and web experiences that deliver measurable growth for Colombia and Florida brands."
   );
 
   return (
     <div className="bg-white">
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-          <div className="space-y-6">
-            <span className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-              About DigitalFace Marketing
-            </span>
-            <h1 className="text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
-              Innovators in marketing automation, dedicated to your success.
-            </h1>
-            <p className="text-lg text-slate-600">
-              DigitalFace Marketing was founded to make advanced marketing simple, accessible, and profitable for growth
-              marketers and founders. We operate between Colombia and Florida, blending bilingual expertise, startup
-              agility, and enterprise-level execution. Our obsession: pairing automation with creativity to unlock
-              results that compound.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button
-                asChild
-                className="rounded-full bg-indigo-600 px-6 py-5 text-sm font-semibold text-white hover:bg-indigo-700"
-              >
-                <Link to="/contact">Book a call with our team</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-full border-2 border-slate-200 px-6 py-5 text-sm font-semibold text-slate-900 hover:bg-slate-100"
-              >
-                <Link to="/portfolio">See our impact</Link>
-              </Button>
+      <Hero
+        eyebrow="About DigitalFace"
+        title="Humans building automation-first growth for ambitious teams."
+        description="Founded between Cali and Miami, DigitalFace Marketing blends bilingual strategy, creative, and engineering to deliver automation, ads, and web experiences that scale sin friccion."
+        primaryCta={{ label: "Book a call with our team", href: "/contact" }}
+        secondaryCta={{ label: "See pricing options", href: "/pricing" }}
+        stats={[
+          { label: "Two hubs", value: "Colombia + Florida" },
+          { label: "Average partnership", value: "18 months" },
+          { label: "Automation ROI", value: "5x+" },
+        ]}
+        media={
+          <div className="flex h-full flex-col justify-between gap-6 p-8">
+            <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
+              <p className="font-semibold text-ink-600">Our mission</p>
+              <p className="mt-2">
+                Empower teams of any size to do more with less effort by weaving automation, paid media, and conversion design into one measurable system.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500 shadow-brand-card">
+              <p className="font-semibold text-ink-600">Our vision</p>
+              <p className="mt-2">
+                Marketing that runs around the clock, feels personal, and frees humans to focus on strategy, storytelling, and community.
+              </p>
             </div>
           </div>
-          <Card className="border-indigo-100 bg-indigo-50/70">
-            <CardContent className="space-y-4 p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-indigo-700">
-                Our mission
-              </p>
-              <p className="text-base text-slate-700">
-                Empower businesses of all sizes to achieve more with less effort by weaving automation, paid media, and
-                conversion-focused design into unified systems that drive measurable growth.
-              </p>
-              <p className="text-sm font-semibold uppercase tracking-wide text-indigo-700">
-                Our vision
-              </p>
-              <p className="text-base text-slate-700">
-                A world where marketing is always on, personalized, and joyful—for brands and customers alike. A world
-                where technology creates more human time.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+        }
+      />
 
-      <section className="border-y border-slate-200 bg-slate-50/60">
-        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mb-12 space-y-4">
-            <span className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-              Who we are
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
+              How we operate
             </span>
-            <h2 className="text-3xl font-semibold text-slate-900">
-              A collective of marketing technologists bridging the gap between ideas and intelligent execution.
+            <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
+              Principles that guide every partnership
             </h2>
-            <p className="max-w-3xl text-base text-slate-600">
-              Born in 2020, DigitalFace Marketing emerged to help founders, marketing teams, and operators ride the wave
-              of automation instead of being crushed by it. We thrive on complex funnels, global audiences, and problems
-              that demand creative systems thinking. We experiment relentlessly, share knowledge with clients, and treat
-              your business like it’s our own.
+            <p className="mt-4 text-lg text-ink-500">
+              Professional yet approachable, proactive yet flexible. Expect weekly updates, Loom walkthroughs, and shared Slack channels so your team stays in lockstep with ours.
             </p>
           </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {teamHighlights.map((item) => (
-              <Card key={item.title} className="border-slate-200 bg-white">
-                <CardContent className="space-y-3 p-8">
-                  <item.icon className="h-8 w-8 text-indigo-600" />
-                  <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                  <p className="text-sm text-slate-600">{item.copy}</p>
-                </CardContent>
-              </Card>
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
+              >
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {value.title}
+                </h3>
+                <p className="mt-3 text-sm text-ink-500">{value.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
-          <div className="space-y-6">
-            <span className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-              Our values in action
-            </span>
-            <h2 className="text-3xl font-semibold text-slate-900">The principles guiding every partnership.</h2>
-            <p className="text-base text-slate-600">
-              “Professional yet approachable” isn’t just a copy line—it’s how we work. Expect proactive updates, quick
-              responses, shared Slack channels, Loom walk-throughs, and invites to the brainstorming table. We push
-              forward together.
-            </p>
-            <div className="grid gap-6 md:grid-cols-3">
-              {values.map((value) => (
-                <Card key={value.title} className="border-slate-200 bg-white">
-                  <CardContent className="space-y-2 p-6">
-                    <h3 className="text-base font-semibold text-slate-900">{value.title}</h3>
-                    <p className="text-sm text-slate-600">{value.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <p className="rounded-2xl border border-indigo-100 bg-indigo-50/60 p-6 text-sm text-slate-700">
-              “DigitalFace didn’t just launch campaigns—they helped reimagine how our marketing team works. We gained
-              systems, visibility, and a partner who cares as much as we do.” — Client feedback shared in 2025.
-            </p>
-          </div>
-          <Card className="border-indigo-100 bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-500 text-white">
-            <CardContent className="space-y-4 p-10">
-              <HeartHandshake className="h-10 w-10 text-white/80" />
-              <h3 className="text-2xl font-semibold leading-tight">
-                Collaboration is our superpower—remote-first, human-centered, and inclusive.
-              </h3>
-              <p className="text-sm text-indigo-100">
-                We host weekly knowledge swaps between offices, support flexible schedules across time zones, and invest
-                in ongoing education. Our team bonding fuel: music drops, AI experiments, and the eternal arepas vs.
-                donuts debate.
+      <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
+            <div className="space-y-8">
+              <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
+                Leadership stack
+              </span>
+              <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
+                Specialists who blend automation, media, and design into one growth engine
+              </h2>
+              <p className="text-lg text-ink-500">
+                Strategy, creative, and engineering collaborate daily so every launch is cohesive. The same minds who ideate are the ones who build and optimize, giving you faster timelines and tighter feedback loops.
               </p>
-              <Button
-                asChild
-                variant="secondary"
-                className="rounded-full bg-white px-6 py-5 text-sm font-semibold text-indigo-700 hover:bg-indigo-100"
-              >
-                <Link to="/services">Explore what we do</Link>
-              </Button>
-            </CardContent>
-          </Card>
+              <div className="grid gap-6 sm:grid-cols-2">
+                {specialties.map((specialty) => (
+                  <div
+                    key={specialty.title}
+                    className="flex items-start gap-4 rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
+                  >
+                    <div className="rounded-xl bg-secondary px-3 py-2">
+                      {specialty.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold text-slate-900">
+                        {specialty.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-ink-500">
+                        {specialty.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-6 rounded-3xl border border-ink-100 bg-white/90 p-8 text-sm text-ink-500 shadow-brand-card">
+              <div className="flex items-center gap-3 text-ink-600">
+                <HeartHandshake className="h-6 w-6 text-brand-500" />
+                <p className="font-semibold">Collaboration is our oxygen</p>
+              </div>
+              <p>
+                Weekly knowledge swaps between offices, flexible schedules across time zones, and ongoing training keep ideas flowing. Our favorite debates: arepas or donuts, and which AI tool wins this week.
+              </p>
+              <p>
+                Partnerships span 18 months on average because we stay embedded, iterate quickly, and celebrate every win with your team.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-2">
-            <div className="space-y-4">
-              <span className="text-sm font-semibold uppercase tracking-wide text-indigo-300">
-                Global presence
+      <section className="bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div className="space-y-6">
+              <span className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-200">
+                Two offices, one rhythm
               </span>
-              <h2 className="text-3xl font-semibold">
-                Two offices. Infinite collaboration. Serving clients across the Americas.
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                Miami and Cali give us range, speed, and cultural fluency
               </h2>
-              <p className="text-sm text-indigo-100">
-                Our dual presence means we operate almost around the clock and understand both North and Latin American
-                markets deeply. Need bilingual campaigns? We’ve got you. Need local insights? We bring them to the
-                table.
+              <p className="text-lg text-white/70">
+                Need bilingual campaigns? We have you. Need local insight for LATAM or the US? Already on it. Remote collaboration tools keep us connected, while in-person sessions spark the creative leaps.
               </p>
             </div>
-            <div className="space-y-6 rounded-3xl border border-indigo-500/40 bg-white/10 p-8 text-indigo-100">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-indigo-300">Florida, USA</p>
-                <p className="text-lg font-semibold text-white">Miami · Remote-first across the East Coast</p>
-                <p className="mt-2 text-sm text-indigo-100">
-                  Serving growth-stage startups, e-commerce brands, and professional services that value pace and
-                  performance.
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
+                <p className="text-xs uppercase tracking-wide text-white/60">
+                  Florida, USA
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  Miami - Remote across the East Coast
+                </p>
+                <p className="mt-3 text-sm text-white/70">
+                  Serving growth stage startups, ecommerce, and professional services that value pace and performance.
                 </p>
               </div>
-              <div className="border-t border-indigo-500/30 pt-6">
-                <p className="text-xs uppercase tracking-wide text-indigo-300">Cali, Colombia</p>
-                <p className="text-lg font-semibold text-white">Zona Rosa · LATAM innovation hub</p>
-                <p className="mt-2 text-sm text-indigo-100">
+              <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
+                <p className="text-xs uppercase tracking-wide text-white/60">
+                  Cali, Colombia
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  Zona Rosa innovation hub
+                </p>
+                <p className="mt-3 text-sm text-white/70">
                   Partnering with ambitious founders and marketing teams across Colombia, Mexico, Peru, and beyond.
                 </p>
               </div>
@@ -221,56 +200,13 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="grid gap-12 rounded-3xl border border-indigo-100 bg-indigo-50/80 p-10 md:grid-cols-[minmax(0,1fr)_320px]">
-          <div className="space-y-5">
-            <span className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-              Join us on this journey
-            </span>
-            <h2 className="text-3xl font-semibold text-slate-900">
-              Your growth fuels our growth. Let’s write the next success story together.
-            </h2>
-            <p className="text-base text-slate-600">
-              Whether you’re exploring automation for the first time or scaling complex ecosystems, DigitalFace
-              Marketing is ready to partner with you. Bring the vision; we’ll bring the strategy, the systems, and the
-              relentless execution.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button
-                asChild
-                className="rounded-full bg-indigo-600 px-6 py-5 text-sm font-semibold text-white hover:bg-indigo-700"
-              >
-                <Link to="/contact">Start a conversation</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="rounded-full border-2 border-slate-200 px-6 py-5 text-sm font-semibold text-slate-900 hover:bg-white"
-              >
-                <Link to="/pricing">Browse pricing & retainers</Link>
-              </Button>
-            </div>
-          </div>
-          <Card className="border-none bg-white shadow-lg shadow-indigo-200/50">
-            <CardContent className="space-y-4 p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-                Work with us
-              </p>
-              <p className="text-sm text-slate-600">
-                Curious about roles, freelance collaborations, or partnerships? Email{" "}
-                <a
-                  className="font-semibold text-indigo-600"
-                  href="mailto:talent@digitalfacemarketing.com"
-                >
-                  talent@digitalfacemarketing.com
-                </a>{" "}
-                —we’re always excited to meet fellow innovators.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      <CtaSection
+        eyebrow="Join forces"
+        title="Let us craft your next growth story"
+        description="Drop us a line at hello@digitalfacemarketing.com or book a strategy session to map quick wins, automation ideas, and long term momentum."
+        primaryCta={{ label: "Start a conversation", href: "/contact" }}
+        secondaryCta={{ label: "Explore pricing", href: "/pricing" }}
+      />
     </div>
   );
 }
-
