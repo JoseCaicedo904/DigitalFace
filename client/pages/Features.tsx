@@ -1,231 +1,223 @@
+import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { FeaturesSection } from "@/sections/Features";
 import { ValuePropsSection } from "@/sections/ValueProps";
 import { CtaSection } from "@/sections/CTA";
 import {
-  Bot,
-  Megaphone,
-  MonitorSmartphone,
-  Workflow,
-  Brain,
-  PanelsTopLeft,
-  Rocket,
+  BarChart3,
   CheckCircle2,
+  Layers,
+  Target,
 } from "lucide-react";
 
-const coreFeatures = [
+const overviewFeatures = [
   {
-    title: "Automation systems",
+    title: "Clarity first",
     description:
-      "Chatbots, nurture sequences, and CRM integrations choreographed to capture, qualify, and reactivate leads automatically.",
-    icon: <Bot className="h-6 w-6" />,
+      "We start with a single roadmap so ads, CRM, web, and automation roll out in sync.",
+    icon: <Target className="h-6 w-6" />,
   },
   {
-    title: "Paid media engine",
+    title: "Execution pods",
     description:
-      "Full funnel campaigns across Meta, TikTok, Google, and LinkedIn with testing cadences built for compounding ROI.",
-    icon: <Megaphone className="h-6 w-6" />,
+      "Media, automation, UX, and dev leads sit in one Slack channel for faster feedback loops.",
+    icon: <Layers className="h-6 w-6" />,
   },
   {
-    title: "Conversion-first web",
+    title: "Reporting that matters",
     description:
-      "Design systems, landing pages, and microsites engineered for speed, clarity, and persuasive storytelling.",
-    icon: <MonitorSmartphone className="h-6 w-6" />,
-  },
-  {
-    title: "Growth enablement",
-    description:
-      "Playbooks, dashboards, and training that keep your in-house team empowered long after launch day.",
-    icon: <Workflow className="h-6 w-6" />,
+      "Dashboards show revenue impact, ops hours saved, and next tests—not vanity stats.",
+    icon: <BarChart3 className="h-6 w-6" />,
   },
 ];
 
-const playbooks = [
+const services = [
   {
-    icon: <Brain className="h-5 w-5 text-brand-500" />,
-    title: "Strategy blueprint",
+    id: 1,
+    title: "Social media + Google Ads",
+    description:
+      "Channel mixes across Meta, TikTok, LinkedIn, and Google focused on booked calls, qualified form fills, and tracked revenue.",
     bullets: [
-      "Growth audit covering messaging, funnel leak points, and tech stack readiness.",
-      "Forecast model mapping KPIs to automation, ads, and CRO improvements.",
+      "Strategy sprints covering audiences, offers, and creative hooks",
+      "Daily pacing, bids, and routing leads straight into CRM",
+      "Creative refresh calendar with rapid variations",
+      "Source-of-truth reporting mapped to CAC and pipeline",
     ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_1]",
   },
   {
-    icon: <PanelsTopLeft className="h-5 w-5 text-brand-500" />,
-    title: "Execution sprints",
+    id: 2,
+    title: "CRM installation + setup",
+    description:
+      "HubSpot, Bitrix24, or GoHighLevel configured with custom pipelines, automation, notifications, and documentation.",
     bullets: [
-      "Two-week build cycles followed by review, launch, and optimization windows.",
-      "Shared dashboards show automation performance, media spend, and conversion lift in real time.",
+      "Architecture workshop and data migration plan",
+      "Lifecycle stages, scoring, and handoff workflows",
+      "Dashboards for leadership, ops, and sales",
+      "Team onboarding with SOPs and loom walkthroughs",
     ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_2]",
   },
   {
-    icon: <Rocket className="h-5 w-5 text-brand-500" />,
-    title: "Enablement loop",
+    id: 3,
+    title: "Chatbots + auto-scheduling",
+    description:
+      "ManyChat experiences that capture interest on social, web, or SMS and route hot leads to your booking tool.",
     bullets: [
-      "Live training, SOPs, and Loom walkthroughs delivered with every release.",
-      "Retainer support or hand-off ready kits so you can scale internally sin friccion.",
+      "Persona-based flows with branching logic",
+      "Calendar and CRM sync plus notifications",
+      "Compliance-ready opt-ins and double confirmation",
+      "Live dashboards monitoring drop-off and conversion",
     ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_3]",
+  },
+  {
+    id: 4,
+    title: "Landing pages + corporate websites",
+    description:
+      "High-speed pages and multi-page sites that communicate value quickly and connect straight to analytics + CRM.",
+    bullets: [
+      "Messaging hierarchy, UX wireframes, and component library",
+      "SEO and analytics baked in from day one",
+      "Performance budgets to keep load times sub-two seconds",
+      "Experiment backlog with copy and layout tests",
+    ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_4]",
+  },
+  {
+    id: 5,
+    title: "Shopify e-commerce builds",
+    description:
+      "Custom themes, apps, and merchandising strategy so every visit feels branded and ready to convert.",
+    bullets: [
+      "Theme customization and modular sections",
+      "App selection, fulfillment, and payment setup",
+      "Lifecycle automation with Klaviyo or similar",
+      "Conversion monitoring plus optimization roadmap",
+    ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_5]",
+  },
+  {
+    id: 6,
+    title: "Automations + integrations",
+    description:
+      "Make.com and n8n workflows that pass data, trigger alerts, and remove repetitive manual steps.",
+    bullets: [
+      "System inventory and dependency mapping",
+      "Workflow diagrams plus monitoring and alerts",
+      "API, webhook, and database connections",
+      "Documentation so internal teams can extend",
+    ],
+    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_6]",
   },
 ];
 
-const automationWins = [
-  "Lead nurture and abandoned cart flows that recovered the 15 percent revenue lift quoted on the original site.",
-  "CRM sync and scoring that improved pipeline quality by 110 percent for fintech and B2B teams.",
-  "Template library of ManyChat flows ready to deploy for lead gen, e-commerce, and appointment booking.",
-];
-
-const mediaWins = [
-  "Cross-channel creative testing that consistently beats the five to one social ROI benchmark.",
-  "Always-on optimization with weekly creative refreshes so campaigns never stagnate.",
-  "Reporting that ties spend to pipeline impact, not vanity clicks.",
-];
-
-const webWins = [
-  "UX frameworks that push trial conversion from two to five percent, as highlighted in the previous site.",
-  "Performance-first builds on Webflow, Shopify, or custom stacks with <200ms first paint targets.",
-  "Experimentation roadmaps with heatmap reviews, copy tests, and personalization ideas every month.",
+const valuePoints = [
+  {
+    badge: "PROCESS",
+    title: "Discovery to launch inside 4-6 weeks",
+    description:
+      "We compress research, build, QA, and training into tight sprints so you see value fast.",
+  },
+  {
+    badge: "OWNERSHIP",
+    title: "Your stack, not a black box",
+    description:
+      "Everything is documented, shared, and built to live inside your existing tools.",
+  },
+  {
+    badge: "PARTNERSHIP",
+    title: "Senior leads on every touchpoint",
+    description:
+      "Strategists, creatives, and engineers stay on the project from kickoff through optimization.",
+  },
 ];
 
 export default function Features() {
   usePageMetadata(
-    "Features | DigitalFace Marketing automation, ads, and web capabilities",
-    "Explore DigitalFace Marketing's automation systems, paid media engine, and conversion-first web services that power growth for Colombia and Florida teams."
+    "Services | DigitalFace Marketing",
+    "Explore DigitalFace Marketing services covering paid media, CRM installs, chat automation, landing pages, Shopify builds, and custom integrations."
   );
 
   return (
     <div className="bg-white">
       <FeaturesSection
-        eyebrow="Capabilities"
-        title="Three capabilities, one integrated growth engine"
-        description="Your audience should experience a seamless journey. We connect automation, media, and web so you can scale faster and smarter."
-        features={coreFeatures}
+        eyebrow="Services"
+        title="Marketing systems built for clarity"
+        description="Every engagement blends media, CRM, chat, web, Shopify, and automation so growth stays predictable."
+        features={overviewFeatures}
       />
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-3">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-                Automation systems built to convert 24-7
-              </h2>
-              <p className="text-lg text-ink-500">
-                We build conversational journeys, triggers, and CRM sync so leads get the right follow up within seconds. Expect faster response times, cleaner data, and deals that move without manual chasing.
-              </p>
+        <div className="container mx-auto max-w-6xl space-y-16 px-4 sm:px-6 lg:px-8">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="grid gap-10 rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center"
+            >
+              <div className="space-y-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
+                  Service 0{service.id}
+                </p>
+                <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
+                  {service.title}
+                </h2>
+                <p className="text-lg text-ink-500">
+                  {service.description}
+                </p>
+                <ul className="space-y-3 text-sm text-ink-500">
+                  {service.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-500" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
+                >
+                  Discuss this service
+                  <span aria-hidden="true">?</span>
+                </Link>
+              </div>
+              <div className="flex h-full min-h-[240px] items-center justify-center rounded-3xl border border-dashed border-ink-200 bg-secondary/40 text-xs font-semibold uppercase tracking-wide text-ink-400">
+                {service.placeholder}
+              </div>
             </div>
-            <div className="lg:col-span-2">
-              <ul className="space-y-4">
-                {automationWins.map((win) => (
-                  <li
-                    key={win}
-                    className="flex items-start gap-3 rounded-2xl border border-ink-100 bg-white/90 p-6 text-sm text-ink-500 shadow-brand-card"
-                  >
-                    <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-brand-500" />
-                    {win}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-3">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-                Paid media engineered for measurable lift
-              </h2>
-              <p className="text-lg text-ink-500">
-                From audience research to creative iterations, we operate as your in-house growth squad. Every test ladder connects to KPIs, so you always know what is working.
-              </p>
-            </div>
-            <div className="lg:col-span-2">
-              <ul className="space-y-4">
-                {mediaWins.map((win) => (
-                  <li
-                    key={win}
-                    className="flex items-start gap-3 rounded-2xl border border-ink-100 bg-white/90 p-6 text-sm text-ink-500 shadow-brand-card"
-                  >
-                    <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-brand-500" />
-                    {win}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-3">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-                Web experiences that turn interest into action
-              </h2>
-              <p className="text-lg text-ink-500">
-                We craft sites and landing pages that balance storytelling with conversion psychology. Expect fast load times, accessibility, and analytics baked in from day one.
-              </p>
-            </div>
-            <div className="lg:col-span-2">
-              <ul className="space-y-4">
-                {webWins.map((win) => (
-                  <li
-                    key={win}
-                    className="flex items-start gap-3 rounded-2xl border border-ink-100 bg-white/90 p-6 text-sm text-ink-500 shadow-brand-card"
-                  >
-                    <CheckCircle2 className="mt-1 h-5 w-5 flex-shrink-0 text-brand-500" />
-                    {win}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       <ValuePropsSection
         eyebrow="How we work"
-        title="Playbooks that keep momentum high"
-        description="Each engagement runs through learn, build, launch, and optimize cycles. The cadence keeps results compounding and teams aligned."
-        points={playbooks.map((playbook) => ({
-          badge: playbook.title.split(" ")[0],
-          title: playbook.title,
-          description: playbook.bullets.join(" "),
-        }))}
+        title="Playbooks that keep teams in sync"
+        description="We maintain a calm cadence: plan together, build fast, share dashboards, and document everything."
+        points={valuePoints}
         media={
           <div className="space-y-6 text-sm text-white/85">
-            {playbooks.map((playbook) => (
-              <div
-                key={playbook.title}
-                className="rounded-2xl border border-white/15 bg-white/10 p-6"
-              >
-                <div className="flex items-center gap-3 text-white">
-                  <div className="rounded-xl bg-white/10 p-2">
-                    {playbook.icon}
-                  </div>
-                  <p className="font-semibold">{playbook.title}</p>
-                </div>
-                <ul className="mt-4 space-y-2 text-sm text-white/75">
-                  {playbook.bullets.map((bullet) => (
-                    <li key={bullet} className="flex gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-ocean-300" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+              <p className="font-semibold text-white">Weekly standups</p>
+              <p>15-minute syncs or Loom updates keep decisions moving without clogging calendars.</p>
+            </div>
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+              <p className="font-semibold text-white">Shared dashboards</p>
+              <p>Live metrics for media, automation, UX, and dev progress give stakeholders instant context.</p>
+            </div>
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
+              <p className="font-semibold text-white">Documentation dropbox</p>
+              <p>SOPs, scripts, and templates live in your workspace so internal teams can build on our work.</p>
+            </div>
           </div>
         }
       />
 
       <CtaSection
-        eyebrow="Next move"
-        title="Tell us where you need momentum"
-        description="We will review your funnel, surface quick wins, and outline an automation, ads, and web sprint tailored to your goals."
-        primaryCta={{ label: "Book a discovery session", href: "/contact" }}
-        secondaryCta={{ label: "Explore pricing tiers", href: "/pricing" }}
+        eyebrow="Ready for what's next"
+        title="Map your next sprint with our team"
+        description="Share goals for paid media, CRM, chat automation, web, Shopify, or integrations—we will respond with a roadmap."
+        primaryCta={{ label: "Book a consultation", href: "/contact" }}
+        secondaryCta={{ label: "See pricing", href: "/pricing" }}
       />
     </div>
   );

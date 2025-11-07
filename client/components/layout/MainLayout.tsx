@@ -133,10 +133,10 @@ export default function MainLayout() {
               <span className="text-lg font-semibold">DigitalFace Marketing</span>
             </Link>
             <p className="text-sm text-white/70">
-              Automation-first marketing studio delivering chatbots, high-velocity ads, and conversion design for brands across Colombia and Florida.
+              Automation-led marketing studio building paid media, CRM, chat automation, landing pages, Shopify stores, and custom integrations.
             </p>
             <p className="text-sm font-medium text-ocean-200">
-              Sin fricción. Siempre medible. Siempre humano.
+              Clarity first. Conversion focused.
             </p>
           </div>
           <div className="grid flex-1 gap-10 text-sm sm:grid-cols-2 lg:grid-cols-3">
@@ -160,16 +160,16 @@ export default function MainLayout() {
               </h3>
               <ul className="space-y-2 text-white/80">
                 <li>
-                  <span className="block font-semibold text-white">hello@digitalfacemarketing.com</span>
+                  <span className="block font-semibold text-white">sales@digitalfacemarketing.com</span>
                   <span>Email</span>
                 </li>
                 <li>
-                  <span className="block font-semibold text-white">+57 300 111 2233</span>
-                  <span>WhatsApp</span>
+                  <span className="block font-semibold text-white">&lt;24h response Monday-Friday</span>
+                  <span>Service window</span>
                 </li>
                 <li>
-                  <span className="block font-semibold text-white">+1 (305) 555-0134</span>
-                  <span>USA</span>
+                  <span className="block font-semibold text-white">Miami, FL + Cali, CO</span>
+                  <span>Locations</span>
                 </li>
               </ul>
             </div>
@@ -210,3 +210,7 @@ export default function MainLayout() {
     </div>
   );
 }
+
+
+
+

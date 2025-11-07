@@ -4,132 +4,132 @@ import { CheckCircle2 } from "lucide-react";
 
 const pillars = [
   {
-    title: "Value-driven",
+    title: "Outcome-based",
     copy:
-      "Pricing maps to outcomes like converted leads, time saved, or revenue recovered, not arbitrary hours.",
+      "We quote against pipeline lift, revenue impact, or ops hours saved—not arbitrary time blocks.",
   },
   {
-    title: "Transparent & flexible",
+    title: "Transparent",
     copy:
-      "Clear scopes, milestone billing, and retainers that scale as you do. No surprise fees, ever.",
+      "Milestone scopes, shared timelines, and weekly budget tracking remove surprises.",
   },
   {
-    title: "Customizable",
+    title: "Flexible",
     copy:
-      "Mix automation, ads, and web deliverables to match your goals, pacing, and team capacity.",
+      "Start with a sprint, expand into retainers, or pause with 30 days notice as priorities shift.",
   },
   {
-    title: "ROI mindset",
+    title: "Senior-led",
     copy:
-      "We quote using benchmarks like 5x automation ROI, 5.28x paid media return, and 2.5x conversion lifts.",
+      "Every package includes direct access to the strategists and builders doing the work.",
   },
 ];
 
 const packages = [
   {
-    name: "Automation Starter",
+    name: "Paid media sprint",
     description:
-      "One high-impact chatbot or workflow integrated with your CRM or ESP. Includes strategy and 30 days of optimization.",
-    idealFor: "Teams launching their first automation or customizing ManyChat templates.",
-    investment: "Projects from $2,500 USD",
+      "Four to six weeks to audit, rebuild, and relaunch Meta, TikTok, LinkedIn, and Google campaigns with new creative + reporting.",
+    idealFor: "Teams needing quick wins or a reset before scaling spend.",
+    investment: "Projects from ,500 USD",
     includes: [
-      "Discovery workshop and automation blueprint",
-      "Build plus QA across key scenarios",
-      "Team training and 30-day optimization",
+      "Channel and creative blueprint with testing roadmap",
+      "Full rebuild of campaigns, pixels, and conversion tracking",
+      "Daily optimization plus performance dashboard",
     ],
   },
   {
-    name: "Automation Pro",
+    name: "CRM + automation build",
     description:
-      "Multiple automations synchronized across channels with dashboards and ongoing iteration.",
-    idealFor: "Brands scaling nurture, sales, and ops flows in parallel.",
-    investment: "Projects $6,000 - $12,000 USD or retainers from $2,000/month",
+      "Implementation of HubSpot, Bitrix24, or GoHighLevel with pipelines, scoring, workflows, and training.",
+    idealFor: "Revenue teams upgrading from spreadsheets or messy legacy setups.",
+    investment: ",500 - ,000 USD depending on scope",
     includes: [
-      "Automation roadmap and KPI alignment",
-      "Chatbots, email, SMS, and CRM sync",
-      "Measurement, optimization, and support sprints",
+      "Architecture, migration, and data hygiene",
+      "Workflow, chatbot, and notification automation",
+      "Dashboards plus enablement sessions",
     ],
   },
   {
-    name: "Growth Ads",
+    name: "Web + landing system",
     description:
-      "Multi-platform ad strategy, creative, conversion tracking, and day-to-day management.",
-    idealFor: "Brands investing $3k - $50k/month in paid media who want better returns.",
-    investment: "Retainers from $2,500 USD/month (spend billed separately)",
+      "Conversion-focused landing pages or corporate sites with copy, design, development, and analytics.",
+    idealFor: "Companies that need faster storytelling and measurable UX.",
+    investment: ",000 - ,000 USD",
     includes: [
-      "Audience research and creative briefs",
-      "Campaign builds and daily optimization",
-      "Reporting and strategy calls each week",
+      "Messaging + UX workshop and wireframes",
+      "Custom design system and responsive build",
+      "Speed, SEO, and experiment setup",
     ],
   },
   {
-    name: "Conversion Website",
+    name: "Shopify growth studio",
     description:
-      "Conversion-led site or landing page with copy, design system, development, and analytics.",
-    idealFor: "Companies needing a high-performing site or campaign hub.",
-    investment: "Projects $5,500 - $18,000 USD depending on scope",
+      "Custom storefront or optimization sprint covering theme work, apps, CRO, and lifecycle flows.",
+    idealFor: "Ecommerce teams improving AOV, retention, or launch timelines.",
+    investment: "Projects from ,500 USD",
     includes: [
-      "Workshop, UX architecture, and copywriting",
-      "Custom design plus responsive build",
-      "SEO setup, analytics, QA, and launch support",
+      "Theme customization and merchandising support",
+      "App integrations, fulfillment, and automation",
+      "Post-launch optimization roadmap",
     ],
   },
 ];
 
 const retainers = [
   {
-    title: "Automation care plans",
+    title: "Automation care",
     description:
-      "Monitoring, seasonal updates, new flows, and performance tuning so bots keep delivering.",
-    investment: "From $1,200/month",
+      "Monitoring, seasonal updates, and net-new flows across CRM, ManyChat, Make.com, or n8n.",
+    investment: "From ,800/month",
   },
   {
     title: "Paid media management",
     description:
-      "Always-on optimization, creative refresh, and reporting across Meta, TikTok, Google, and LinkedIn.",
-    investment: "From $2,500/month",
+      "Always-on optimization, creative refresh, and reporting for social and search campaigns.",
+    investment: "From ,200/month (ad spend separate)",
   },
   {
-    title: "CRO & experimentation",
+    title: "Conversion lab",
     description:
-      "Testing roadmaps, heatmap reviews, and UX enhancements to keep conversions climbing.",
-    investment: "From $1,800/month",
+      "Landing page, website, and Shopify experimentation with CRO roadmaps.",
+    investment: "From ,400/month",
   },
   {
-    title: "Full growth partner",
+    title: "Full-stack growth partner",
     description:
-      "Automation plus ads plus web. We operate as your external growth team with shared KPIs.",
-    investment: "Custom retainers $6,000 - $12,000/month",
+      "Combined media, CRM, automation, and web support with shared KPIs.",
+    investment: ",000 - ,000/month",
   },
 ];
 
 const faq = [
   {
-    question: "Do you offer payment plans?",
+    question: "How do we start?",
     answer:
-      "Yes. Projects are billed by milestone and retainers monthly. Need a different cadence? Let us know.",
+      "We audit your current stack, share a roadmap within a week, and lock in scope plus milestones together.",
   },
   {
-    question: "Do you work with startups?",
+    question: "Can we mix services?",
     answer:
-      "Absolutely. We tailor scope to stage. Many start with a focused automation or ad sprint before expanding.",
+      "Yes. Most clients blend paid media, CRM, and automation or pair Shopify work with retention flows.",
   },
   {
-    question: "Can we start small and scale?",
+    question: "Do you offer short-term help?",
     answer:
-      "Yes. Launch with a single service and ramp into combined retainers once the data proves traction.",
+      "Project sprints are ideal for quick impact. We can extend into retainers once the foundation is live.",
   },
   {
-    question: "What industries do you serve?",
+    question: "What about internal handoff?",
     answer:
-      "Ecommerce, SaaS, services, healthcare, hospitality, education, and more. We adapt fast to new spaces.",
+      "Every engagement ends with documentation, training, and access to files so your team can continue operating.",
   },
 ];
 
 export default function Pricing() {
   usePageMetadata(
-    "Pricing | DigitalFace Marketing packages and retainers",
-    "Review pricing for DigitalFace Marketing automation systems, paid media management, and conversion-first web projects. Flexible packages and retainers."
+    "Pricing | DigitalFace Marketing",
+    "Review DigitalFace Marketing pricing for paid media, CRM, chat automation, web, Shopify, and automation retainers."
   );
 
   return (
@@ -140,10 +140,10 @@ export default function Pricing() {
             Pricing and packages
           </span>
           <h1 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
-            Flexible packages built around performance, not billable hours
+            Choose the engagement that fits your roadmap
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Choose a project sprint or an ongoing partnership. Either way, expect transparent scopes, ROI-focused deliverables, and collaboration that feels effortless.
+            Sprint-style projects handle focused builds. Retainers keep campaigns, automations, and websites improving every month.
           </p>
         </div>
         <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -153,9 +153,7 @@ export default function Pricing() {
                 key={pillar.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-6 text-left shadow-brand-card"
               >
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {pillar.title}
-                </h3>
+                <h3 className="text-lg font-semibold text-slate-900">{pillar.title}</h3>
                 <p className="mt-3 text-sm text-ink-500">{pillar.copy}</p>
               </div>
             ))}
@@ -172,24 +170,17 @@ export default function Pricing() {
                 className="flex flex-col rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card"
               >
                 <div className="space-y-3">
-                  <h2 className="text-2xl font-semibold text-slate-900">
-                    {pkg.name}
-                  </h2>
+                  <h2 className="text-2xl font-semibold text-slate-900">{pkg.name}</h2>
                   <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
                     {pkg.investment}
                   </p>
                   <p className="text-sm text-ink-500">{pkg.description}</p>
-                  <p className="text-xs uppercase tracking-wide text-ink-400">
-                    Ideal for
-                  </p>
+                  <p className="text-xs uppercase tracking-wide text-ink-400">Ideal for</p>
                   <p className="text-sm text-ink-500">{pkg.idealFor}</p>
                 </div>
                 <div className="mt-6 space-y-3">
                   {pkg.includes.map((item) => (
-                    <p
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-ink-500"
-                    >
+                    <p key={item} className="flex items-start gap-2 text-sm text-ink-500">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" />
                       {item}
                     </p>
@@ -211,7 +202,7 @@ export default function Pricing() {
               Stay in motion with ongoing support
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Monthly collaborations keep automations sharp, ad performance climbing, and websites converting. Scale up or down with a 30-day notice.
+              Monthly collaborations keep automations sharp, ad performance climbing, and websites converting. Scale up or pause with a 30-day notice.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -220,12 +211,8 @@ export default function Pricing() {
                 key={retainer.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
               >
-                <h3 className="text-xl font-semibold text-slate-900">
-                  {retainer.title}
-                </h3>
-                <p className="mt-3 text-sm text-ink-500">
-                  {retainer.description}
-                </p>
+                <h3 className="text-xl font-semibold text-slate-900">{retainer.title}</h3>
+                <p className="mt-3 text-sm text-ink-500">{retainer.description}</p>
                 <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600">
                   {retainer.investment}
                 </p>
@@ -250,12 +237,8 @@ export default function Pricing() {
                   key={item.question}
                   className="rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
                 >
-                  <p className="text-sm font-semibold text-slate-900">
-                    {item.question}
-                  </p>
-                  <p className="mt-2 text-sm text-ink-500">
-                    {item.answer}
-                  </p>
+                  <p className="text-sm font-semibold text-slate-900">{item.question}</p>
+                  <p className="mt-2 text-sm text-ink-500">{item.answer}</p>
                 </div>
               ))}
             </div>
@@ -266,9 +249,9 @@ export default function Pricing() {
       <CtaSection
         eyebrow="What happens next"
         title="Request a tailored quote and roadmap"
-        description="We will audit your current marketing, uncover opportunities, and build an investment range you can act on immediately."
+        description="Email sales@digitalfacemarketing.com or send the contact form. We will respond within one business day."
         primaryCta={{ label: "Book a discovery session", href: "/contact" }}
-        secondaryCta={{ label: "Review case studies", href: "/features" }}
+        secondaryCta={{ label: "Review services", href: "/features" }}
       />
     </div>
   );
