@@ -45,14 +45,14 @@ export function FeaturesSection({
             </p>
           ) : null}
         </div>
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 mx-auto grid w-full max-w-5xl grid-cols-1 gap-8 place-items-stretch sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group relative overflow-hidden rounded-3xl border border-ink-100 bg-white/90 p-8 shadow-brand-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-ink-100 bg-white/90 p-8 shadow-brand-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-glow-radial opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="relative">
+              <div className="relative flex flex-1 flex-col">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-ocean-500 text-white shadow-brand-soft">
                   {feature.icon}
                 </div>
