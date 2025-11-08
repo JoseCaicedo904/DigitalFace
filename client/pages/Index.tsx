@@ -254,8 +254,8 @@ export default function Index() {
       />
       <FeaturesSection
         eyebrow="What we deliver"
-        title="Six services, one integrated team"
-        description="Every engagement blends media, CRM, chat, web, Shopify, and automation so the entire funnel moves together."
+        title="Six services built for performance"
+        description="We deliver what drives growth today: Social media campaigns, SEO, CRM systems, chatbots, websites, shopify stores, and automation workflows. Everything connects, everything scales."
         features={features}
       />
       <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
