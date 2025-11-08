@@ -126,13 +126,19 @@ const testimonials = [
     quote:
       "Their automation work removed four manual handoffs. Sales now responds in under 10 minutes.",
     author: "Revenue Operations Lead",
-    role: "Professional services",
+    role: "Professional Services",
   },
   {
     quote:
       "Conversion rate jumped from 2% to 4.7% after they rebuilt our landing page system.",
     author: "Product Marketing Director",
     role: "Healthcare platform",
+  },
+  {
+    quote:
+      "We finally have shared dashboards connecting ad spend, pipeline, and workflow health in one view.",
+    author: "VP Marketing",
+    role: "Enterprise services",
   },
 ];
 
