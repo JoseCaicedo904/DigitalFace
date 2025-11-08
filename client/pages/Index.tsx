@@ -30,19 +30,19 @@ const heroMedia = (
       [IMAGE_PLACEHOLDER_HERO]
     </div>
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
-      <p className="font-semibold text-ink-600">Weekly operating rhythm</p>
+      <p className="font-semibold text-ink-600">30-day wins you’ll see</p>
       <ul className="mt-3 space-y-2 text-left">
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
-          Monday KPI review and sprint goals.
+          Tracking fixed and a clean dashboard for KPIs.
         </li>
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-ocean-400" />
-          Midweek creative, automation, and dev drops.
+          One high-impact campaign/flow launched end-to-end.
         </li>
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-slate-400" />
-          Friday results, learnings, and next tests.
+          Lead handling + CRM handoffs running without manual steps.
         </li>
       </ul>
     </div>
@@ -157,21 +157,31 @@ const valueMedia = (
       <Sparkles className="h-6 w-6 text-white/90" />
       <div>
         <p className="font-semibold text-white">Blueprints delivered fast</p>
-        <p>Audits, roadmaps, and production queues shipped in days�not months.</p>
+        <p>
+          Audits, roadmaps, and production queues shipped in days�not months.
+        </p>
       </div>
     </div>
     <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
       <LineChart className="h-6 w-6 text-white/90" />
       <div>
-        <p className="font-semibold text-white">Dashboards that tell the story</p>
-        <p>Live reporting ties spend, leads, and workflow health together for fast calls.</p>
+        <p className="font-semibold text-white">
+          Dashboards that tell the story
+        </p>
+        <p>
+          Live reporting ties spend, leads, and workflow health together for
+          fast calls.
+        </p>
       </div>
     </div>
     <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
       <ShieldCheck className="h-6 w-6 text-white/90" />
       <div>
         <p className="font-semibold text-white">Privacy and compliance ready</p>
-        <p>Consent, attribution, and data hygiene are handled from the very first sprint.</p>
+        <p>
+          Consent, attribution, and data hygiene are handled from the very first
+          sprint.
+        </p>
       </div>
     </div>
   </div>
@@ -201,7 +211,7 @@ const projects = [
 export default function Index() {
   usePageMetadata(
     "DigitalFace Marketing | Performance marketing built on automation",
-    "DigitalFace Marketing plans and ships paid media, CRM installs, chat automation, websites, Shopify builds, and integrations for revenue teams."
+    "DigitalFace Marketing plans and ships paid media, CRM installs, chat automation, websites, Shopify builds, and integrations for revenue teams.",
   );
 
   return (
@@ -236,7 +246,7 @@ export default function Index() {
       <Hero
         eyebrow="DigitalFace Marketing"
         title="Performance marketing that runs on automation."
-        description="We build paid media, CRM systems, chat automation, landing pages, Shopify stores, and Make.com or n8n workflows so your team scales with clarity."
+        description="We build paid media, CRM systems, chat automation, landing pages, Shopify stores, and automations workflows so your team scales with efficiency."
         primaryCta={{ label: "Book a strategy call", href: "/contact" }}
         secondaryCta={{ label: "View services", href: "/features" }}
         stats={heroStats}
@@ -258,7 +268,8 @@ export default function Index() {
               Projects ready for deeper walk-throughs
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Use these placeholders to drop in stills or video reels of live builds, campaigns, and automation stacks.
+              Use these placeholders to drop in stills or video reels of live
+              builds, campaigns, and automation stacks.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -276,7 +287,9 @@ export default function Index() {
                 <h3 className="mt-2 text-xl font-semibold text-slate-900">
                   {project.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm text-ink-500">{project.description}</p>
+                <p className="mt-3 flex-1 text-sm text-ink-500">
+                  {project.description}
+                </p>
                 <Link
                   to="/contact"
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
