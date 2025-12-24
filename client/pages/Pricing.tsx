@@ -1,135 +1,122 @@
-import { usePageMetadata } from "@/hooks/usePageMetadata";
+ï»¿import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { CtaSection } from "@/sections/CTA";
 import { CheckCircle2 } from "lucide-react";
 
 const pillars = [
   {
-    title: "Outcome-based",
-    copy:
-      "We quote against pipeline lift, revenue impact, or ops hours saved—not arbitrary time blocks.",
+    title: "Productized",
+    copy: "A proven sales system with clear deliverables and fast launch.",
   },
   {
-    title: "Transparent",
-    copy:
-      "Milestone scopes, shared timelines, and weekly budget tracking remove surprises.",
+    title: "Automation-first",
+    copy: "Instant follow-up and booking so speed-to-lead never slips.",
   },
   {
-    title: "Flexible",
-    copy:
-      "Start with a sprint, expand into retainers, or pause with 30 days notice as priorities shift.",
+    title: "Owner-friendly",
+    copy: "Built for small teams with minimal technical lift.",
   },
   {
-    title: "Senior-led",
-    copy:
-      "Every package includes direct access to the strategists and builders doing the work.",
+    title: "Visible",
+    copy: "Track every lead, appointment, and outcome in one pipeline.",
   },
 ];
 
 const packages = [
   {
-    name: "Paid media sprint",
+    name: "Basic",
     description:
-      "Four to six weeks to audit, rebuild, and relaunch Meta, TikTok, LinkedIn, and Google campaigns with new creative + reporting.",
-    idealFor: "Teams needing quick wins or a reset before scaling spend.",
-    investment: "Projects from ,500 USD",
+      "Core sales system installed and launched for your business.",
+    idealFor: "Solo owners and small teams who need follow-up on autopilot.",
+    investment: "Monthly subscription",
     includes: [
-      "Channel and creative blueprint with testing roadmap",
-      "Full rebuild of campaigns, pixels, and conversion tracking",
-      "Daily optimization plus performance dashboard",
+      "Multi-channel lead capture",
+      "Instant SMS/email response",
+      "Appointment booking with reminders",
+      "Visual pipeline setup",
     ],
   },
   {
-    name: "CRM + automation build",
+    name: "Pro",
     description:
-      "Implementation of HubSpot, Bitrix24, or GoHighLevel with pipelines, scoring, workflows, and training.",
-    idealFor: "Revenue teams upgrading from spreadsheets or messy legacy setups.",
-    investment: ",500 - ,000 USD depending on scope",
+      "Advanced automations and nurturing that increase show rates and conversions.",
+    idealFor: "Growing businesses with steady lead flow.",
+    investment: "Monthly subscription",
     includes: [
-      "Architecture, migration, and data hygiene",
-      "Workflow, chatbot, and notification automation",
-      "Dashboards plus enablement sessions",
+      "Everything in Basic",
+      "Long-term nurture and reactivation",
+      "No-show recovery and missed-call text back",
+      "Performance tuning and reporting",
     ],
   },
   {
-    name: "Web + landing system",
+    name: "Premium",
     description:
-      "Conversion-focused landing pages or corporate sites with copy, design, development, and analytics.",
-    idealFor: "Companies that need faster storytelling and measurable UX.",
-    investment: ",000 - ,000 USD",
+      "Full managed growth plus traffic for businesses that want hands-off scale.",
+    idealFor: "Teams that want the system and growth management handled for them.",
+    investment: "Custom monthly subscription",
     includes: [
-      "Messaging + UX workshop and wireframes",
-      "Custom design system and responsive build",
-      "Speed, SEO, and experiment setup",
-    ],
-  },
-  {
-    name: "Shopify growth studio",
-    description:
-      "Custom storefront or optimization sprint covering theme work, apps, CRO, and lifecycle flows.",
-    idealFor: "Ecommerce teams improving AOV, retention, or launch timelines.",
-    investment: "Projects from ,500 USD",
-    includes: [
-      "Theme customization and merchandising support",
-      "App integrations, fulfillment, and automation",
-      "Post-launch optimization roadmap",
+      "Everything in Pro",
+      "Managed traffic and funnel optimization",
+      "Monthly strategy and growth reviews",
+      "Priority support and ongoing improvements",
     ],
   },
 ];
 
-const retainers = [
+const planIncludes = [
   {
-    title: "Automation care",
+    title: "Done-for-you setup",
     description:
-      "Monitoring, seasonal updates, and net-new flows across CRM, ManyChat, Make.com, or n8n.",
-    investment: "From ,800/month",
+      "We install, test, and launch the system so you are live fast.",
+    investment: "Included",
   },
   {
-    title: "Paid media management",
+    title: "Branded client portal",
     description:
-      "Always-on optimization, creative refresh, and reporting for social and search campaigns.",
-    investment: "From ,200/month (ad spend separate)",
+      "Your own login with a simple inbox, calendar, and pipeline view.",
+    investment: "Included",
   },
   {
-    title: "Conversion lab",
+    title: "Team onboarding",
     description:
-      "Landing page, website, and Shopify experimentation with CRO roadmaps.",
-    investment: "From ,400/month",
+      "Short training so your team knows exactly how to use the system.",
+    investment: "Included",
   },
   {
-    title: "Full-stack growth partner",
+    title: "Ongoing support",
     description:
-      "Combined media, CRM, automation, and web support with shared KPIs.",
-    investment: ",000 - ,000/month",
+      "We handle updates, fixes, and improvements as your business grows.",
+    investment: "Included",
   },
 ];
 
 const faq = [
   {
-    question: "How do we start?",
+    question: "How fast can we launch?",
     answer:
-      "We audit your current stack, share a roadmap within a week, and lock in scope plus milestones together.",
+      "Most businesses go live within 5-7 business days once we have your info.",
   },
   {
-    question: "Can we mix services?",
+    question: "Do I need new software?",
     answer:
-      "Yes. Most clients blend paid media, CRM, and automation or pair Shopify work with retention flows.",
+      "No. We provide the system and your team gets a simple login and workflow.",
   },
   {
-    question: "Do you offer short-term help?",
+    question: "Is this just software?",
     answer:
-      "Project sprints are ideal for quick impact. We can extend into retainers once the foundation is live.",
+      "No. It is a done-for-you system we install, customize, and maintain.",
   },
   {
-    question: "What about internal handoff?",
+    question: "Can you drive traffic too?",
     answer:
-      "Every engagement ends with documentation, training, and access to files so your team can continue operating.",
+      "Yes. Premium includes managed growth and traffic into the system.",
   },
 ];
 
 export default function Pricing() {
   usePageMetadata(
-    "Pricing | DigitalFace Marketing",
-    "Review DigitalFace Marketing pricing for paid media, CRM, chat automation, web, Shopify, and automation retainers."
+    "Plans | DigitalFace Marketing",
+    "Explore Basic, Pro, and Premium plans for the DigitalFace Marketing Sales System."
   );
 
   return (
@@ -137,13 +124,13 @@ export default function Pricing() {
       <section className="bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-            Pricing and packages
+            Pricing and plans
           </span>
           <h1 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
-            Choose the engagement that fits your roadmap
+            Choose the sales system that fits your business
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Sprint-style projects handle focused builds. Retainers keep campaigns, automations, and websites improving every month.
+            Productized, automated, and built for local service businesses that need more bookings without more staff.
           </p>
         </div>
         <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -163,7 +150,7 @@ export default function Pricing() {
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-3">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
@@ -196,25 +183,25 @@ export default function Pricing() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              Retainers
+              Every plan includes
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Stay in motion with ongoing support
+              Everything you need to run the system
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Monthly collaborations keep automations sharp, ad performance climbing, and websites converting. Scale up or pause with a 30-day notice.
+              We install, train, and support your team so the system keeps working without extra stress.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {retainers.map((retainer) => (
+            {planIncludes.map((item) => (
               <div
-                key={retainer.title}
+                key={item.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
               >
-                <h3 className="text-xl font-semibold text-slate-900">{retainer.title}</h3>
-                <p className="mt-3 text-sm text-ink-500">{retainer.description}</p>
+                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+                <p className="mt-3 text-sm text-ink-500">{item.description}</p>
                 <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600">
-                  {retainer.investment}
+                  {item.investment}
                 </p>
               </div>
             ))}
@@ -229,7 +216,7 @@ export default function Pricing() {
               FAQ snapshot
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Answers before we hop on a call
+              Answers before you book a demo
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {faq.map((item) => (
@@ -248,10 +235,10 @@ export default function Pricing() {
 
       <CtaSection
         eyebrow="What happens next"
-        title="Request a tailored quote and roadmap"
-        description="Email sales@digitalfacemarketing.com or send the contact form. We will respond within one business day."
-        primaryCta={{ label: "Book a discovery session", href: "/contact" }}
-        secondaryCta={{ label: "Review services", href: "/features" }}
+        title="See the system built for your business"
+        description="Book a demo and we will recommend the best plan for your goals."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        secondaryCta={{ label: "View the system", href: "/features" }}
       />
     </div>
   );

@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
-  { label: "Features", to: "/features" },
+  { label: "Sales System", to: "/features" },
   { label: "Pricing", to: "/pricing" },
   { label: "Contact", to: "/contact" },
 ];
@@ -66,7 +66,7 @@ export default function MainLayout() {
               asChild
               className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
-              <Link to="/contact">Book a strategy session</Link>
+              <Link to="/contact">Book a demo</Link>
             </Button>
           </div>
           <button
@@ -112,7 +112,7 @@ export default function MainLayout() {
                 asChild
                 className="w-full rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft"
               >
-                <Link to="/contact">Book a strategy session</Link>
+                <Link to="/contact">Book a demo</Link>
               </Button>
             </div>
           </div>
@@ -133,10 +133,10 @@ export default function MainLayout() {
               <span className="text-lg font-semibold">DigitalFace Marketing</span>
             </Link>
             <p className="text-sm text-white/70">
-              Automation-led marketing studio building paid media, CRM, chat automation, landing pages, Shopify stores, and custom integrations.
+              The DigitalFace Marketing Sales System is a done-for-you automated sales engine for local service businesses.
             </p>
             <p className="text-sm font-medium text-ocean-200">
-              Clarity first. Conversion focused.
+              Never lose another lead.
             </p>
           </div>
           <div className="grid flex-1 gap-10 text-sm sm:grid-cols-2 lg:grid-cols-3">

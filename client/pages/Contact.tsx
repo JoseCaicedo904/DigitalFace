@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+ï»¿import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,7 +8,7 @@ import { Clock3, Mail, MapPin, Sparkles } from "lucide-react";
 export default function Contact() {
   usePageMetadata(
     "Contact DigitalFace Marketing",
-    "Talk with DigitalFace Marketing about paid media, CRM installs, chat automation, websites, Shopify, and integrations."
+    "Talk with DigitalFace Marketing about the Sales System and automated lead follow-up."
   );
 
   return (
@@ -19,10 +19,10 @@ export default function Contact() {
             Contact
           </span>
           <h1 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
-            Let’s talk about your goals.
+            See the system in action.
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Send us a quick message or schedule a consultation—we reply within one business day.
+            Send a quick message or book a demo. We reply within one business day.
           </p>
           <p className="mt-2 text-sm font-semibold text-brand-600">
             Prefer email? sales@digitalfacemarketing.com
@@ -48,7 +48,7 @@ export default function Contact() {
                       sales@digitalfacemarketing.com
                     </a>
                     <p className="text-xs text-ink-400">
-                      Share context, goals, timelines, and any must-have platforms—we’ll prep before the call.
+                      Share your business type, lead volume, and what you want automated.
                     </p>
                   </CardContent>
                 </Card>
@@ -60,9 +60,9 @@ export default function Contact() {
                     </div>
                     <p className="text-sm text-ink-500">Replies within one business day.</p>
                     <ol className="space-y-2 text-xs text-ink-400">
-                      <li>1. We audit your note and current stack.</li>
-                      <li>2. You receive recommended next steps.</li>
-                      <li>3. We hop on a 30-minute strategy call.</li>
+                      <li>1. We review your lead flow.</li>
+                      <li>2. We demo the system for your business.</li>
+                      <li>3. You receive a plan and timeline.</li>
                     </ol>
                   </CardContent>
                 </Card>
@@ -83,9 +83,9 @@ export default function Contact() {
                       <p className="text-sm font-semibold text-slate-900">What to include</p>
                     </div>
                     <ul className="space-y-2 text-xs text-ink-400">
-                      <li>Primary goals or KPIs.</li>
-                      <li>Services you’re interested in.</li>
-                      <li>Timelines, budgets, and stakeholders.</li>
+                      <li>Business type and services offered.</li>
+                      <li>Current lead sources and volume.</li>
+                      <li>How you handle follow-up today.</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -120,17 +120,17 @@ export default function Contact() {
                       </label>
                       <Textarea
                         rows={4}
-                        placeholder="Tell us about goals, timelines, and services of interest."
+                        placeholder="Tell us about your business, lead flow, and what you want automated."
                       />
                     </div>
                     <Button className="w-full rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-4 text-sm font-semibold text-white shadow-brand-soft">
-                      Submit message
+                      Send request
                     </Button>
                   </form>
                   <div className="space-y-3 rounded-2xl border border-dashed border-ink-200 bg-secondary/30 p-6 text-center text-sm font-semibold uppercase tracking-wide text-ink-400">
                     [CALENDAR_INTEGRATION_PLACEHOLDER]
                     <p className="text-xs font-normal normal-case text-ink-500">
-                      Embed Google Calendar or your scheduling tool here to let visitors book directly.
+                      Embed a booking calendar here to let visitors schedule directly.
                     </p>
                   </div>
                   <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
@@ -138,7 +138,7 @@ export default function Contact() {
                       <Sparkles className="h-5 w-5 text-brand-500" />
                       <p className="font-semibold">What happens next</p>
                     </div>
-                    <p>We review your note, outline opportunities, and come ready to your intro call with a draft roadmap.</p>
+                    <p>We review your note, map the automation flow, and bring a clear plan to your demo.</p>
                   </div>
                 </CardContent>
               </Card>

@@ -1,50 +1,50 @@
-import { usePageMetadata } from "@/hooks/usePageMetadata";
+ï»¿import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
 import { CtaSection } from "@/sections/CTA";
 import {
-  Bot,
-  CalendarDays,
   HeartHandshake,
+  LayoutDashboard,
+  MessageCircle,
   LineChart,
-  Users,
+  Settings,
 } from "lucide-react";
 
 const values = [
   {
     title: "Clarity",
     description:
-      "Every engagement starts with a shared roadmap covering goals, handoffs, and the metrics that prove success.",
+      "We keep the system simple, visible, and easy for small teams to run.",
   },
   {
-    title: "Momentum",
+    title: "Automation",
     description:
-      "Weekly sprints, Loom recaps, and live dashboards keep work moving without endless meetings.",
+      "We automate the busywork so you can focus on real conversations.",
   },
   {
-    title: "Accountability",
+    title: "Support",
     description:
-      "We own the results with you—documenting decisions, surfacing blockers early, and presenting the next best move.",
+      "We stay hands-on with updates, improvements, and training.",
   },
 ];
 
 const specialties = [
   {
-    icon: <Users className="h-6 w-6 text-brand-500" />,
-    title: "Paid media + search",
+    icon: <Settings className="h-6 w-6 text-brand-500" />,
+    title: "System implementation",
     description:
-      "Channel strategists and creatives who plan, launch, and optimize Meta, TikTok, LinkedIn, and Google campaigns tied to revenue KPIs.",
+      "We install the DigitalFace Marketing Sales System and tailor it to your business.",
   },
   {
-    icon: <Bot className="h-6 w-6 text-brand-500" />,
-    title: "Automation architects",
+    icon: <MessageCircle className="h-6 w-6 text-brand-500" />,
+    title: "Automation and follow-up",
     description:
-      "CRM, ManyChat, Make.com, and n8n specialists who turn manual handoffs into reliable flows and alerts.",
+      "Instant texts, emails, reminders, and nurturing keep leads warm.",
   },
   {
-    icon: <CalendarDays className="h-6 w-6 text-brand-500" />,
-    title: "UX + web leads",
+    icon: <LayoutDashboard className="h-6 w-6 text-brand-500" />,
+    title: "Pipeline visibility",
     description:
-      "Designers and developers focused on fast, conversion-first landing pages, corporate sites, and Shopify builds.",
+      "A clear pipeline and inbox so your team always knows what to do next.",
   },
 ];
 
@@ -56,7 +56,7 @@ const heroMedia = (
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
       <p className="font-semibold text-ink-600">How we show up</p>
       <p className="mt-2">
-        We act like an embedded growth team: co-planning with your leadership, sharing context in your tools, and documenting everything we build.
+        We act like your systems team. We build, launch, and keep your sales engine running.
       </p>
     </div>
   </div>
@@ -65,34 +65,34 @@ const heroMedia = (
 const offices = [
   {
     title: "Miami, Florida",
-    description: "Remote-first hub supporting North American clients across SaaS, services, and ecommerce.",
-    detail: "Strategy, paid media, and stakeholder enablement.",
+    description: "Client success and system strategy for North America.",
+    detail: "Onboarding, implementation, and growth planning.",
   },
   {
     title: "Cali, Colombia",
-    description: "Automation, creative, and engineering studio partnering with LATAM and global teams.",
-    detail: "Chatbots, CRM builds, UX, and integrations.",
+    description: "Automation and delivery hub for system updates.",
+    detail: "Workflows, messaging, and ongoing optimization.",
   },
 ];
 
 export default function About() {
   usePageMetadata(
     "About DigitalFace Marketing",
-    "Meet DigitalFace Marketing—an automation-led team in Miami and Cali delivering paid media, CRM, web, Shopify, and integration projects."
+    "Learn about the DigitalFace Marketing Sales System and the team that installs and supports it."
   );
 
   return (
     <div className="bg-white">
       <Hero
         eyebrow="About DigitalFace"
-        title="Automation-led partners for revenue, ops, and creative teams."
-        description="We align paid media, CRM, chat automation, web, Shopify, and integrations under one operating system so growth feels organized."
-        primaryCta={{ label: "Book a call", href: "/contact" }}
-        secondaryCta={{ label: "Explore services", href: "/features" }}
+        title="We build the DigitalFace Marketing Sales System."
+        description="A productized, done-for-you sales engine for local service businesses that want more bookings without more staff."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        secondaryCta={{ label: "See the system", href: "/features" }}
         stats={[
-          { label: "Team locations", value: "Miami + Cali" },
-          { label: "Average engagement", value: "18 months" },
-          { label: "Platforms certified", value: "15+" },
+          { label: "Typical launch", value: "5-7 days" },
+          { label: "Support response", value: "<1 day" },
+          { label: "Focus", value: "Local services" },
         ]}
         media={heroMedia}
       />
@@ -104,10 +104,10 @@ export default function About() {
               How we operate
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Principles that keep every project grounded
+              Principles that keep the system simple
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Simple language, accountable timelines, and proactive communication are non-negotiable. We keep the work human and the results measurable.
+              Clear communication, steady automation, and real support are non-negotiable.
             </p>
           </div>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -129,13 +129,13 @@ export default function About() {
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
             <div className="space-y-8">
               <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-                Leadership stack
+                Our focus
               </span>
               <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-                Specialists who keep automation, media, and web aligned
+                Specialists who keep your sales system running
               </h2>
               <p className="text-lg text-ink-500">
-                Strategy, creative, and engineering collaborate daily so launches happen fast and lessons are applied immediately. The same leads who scope the work stay through optimization.
+                We build, automate, and optimize the follow-up process so you can stay focused on clients.
               </p>
               <div className="grid gap-6 sm:grid-cols-2">
                 {specialties.map((specialty) => (
@@ -158,10 +158,10 @@ export default function About() {
                 <p className="font-semibold">Collaboration is the lever</p>
               </div>
               <p>
-                We plug into your Slack, PM tool, and dashboards so your team never wonders where work stands. Expect shared documentation, clear owners, and honest feedback.
+                We stay close to your team so the system stays tuned to your real-world workflow.
               </p>
               <p>
-                Average response time stays under 24 hours because we cap workloads and prioritize async updates over status meetings.
+                You get visibility and guidance without the complexity of a full agency stack.
               </p>
             </div>
           </div>
@@ -179,7 +179,7 @@ export default function About() {
                 Miami and Cali keep us close to your market
               </h2>
               <p className="text-lg text-white/70">
-                Bilingual collaboration, overlapping time zones, and cultural fluency mean faster launches for teams across the Americas.
+                Overlapping time zones and bilingual collaboration keep launches fast and support responsive.
               </p>
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
@@ -192,9 +192,9 @@ export default function About() {
               ))}
               <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
                 <p className="text-xs uppercase tracking-wide text-white/60">Reporting cadence</p>
-                <p className="mt-2 text-lg font-semibold text-white">Every Monday and Friday</p>
+                <p className="mt-2 text-lg font-semibold text-white">Weekly check-ins</p>
                 <p className="mt-3 text-sm text-white/70">
-                  <LineChart className="mr-2 inline h-4 w-4" />Recaps highlight impact, blockers, and next experiments.
+                  <LineChart className="mr-2 inline h-4 w-4" />Updates highlight wins, blockers, and next steps.
                 </p>
               </div>
             </div>
@@ -204,9 +204,9 @@ export default function About() {
 
       <CtaSection
         eyebrow="Join forces"
-        title="Let us craft your next growth sprint"
-        description="Email sales@digitalfacemarketing.com or book a session—we will reply within one business day."
-        primaryCta={{ label: "Start a conversation", href: "/contact" }}
+        title="Let us install your sales system"
+        description="Book a demo and we will show the system tailored to your business."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
         secondaryCta={{ label: "See pricing", href: "/pricing" }}
       />
     </div>

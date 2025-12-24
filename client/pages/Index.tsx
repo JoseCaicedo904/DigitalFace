@@ -7,21 +7,20 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
 import {
-  Bot,
-  Megaphone,
-  MonitorSmartphone,
-  Workflow,
+  CalendarCheck,
+  LayoutDashboard,
   LineChart,
+  Megaphone,
+  MessageCircle,
+  Repeat,
   ShieldCheck,
   Sparkles,
-  ShoppingBag,
-  Zap,
 } from "lucide-react";
 
 const heroStats = [
-  { label: "Average reply time", value: "<24h" },
-  { label: "Systems shipped", value: "280+" },
-  { label: "Managed ad spend", value: "+" },
+  { label: "Lead response", value: "Instant" },
+  { label: "Follow-up coverage", value: "24/7" },
+  { label: "Pipeline clarity", value: "Every lead" },
 ];
 
 const heroMedia = (
@@ -30,19 +29,19 @@ const heroMedia = (
       [IMAGE_PLACEHOLDER_HERO]
     </div>
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
-      <p className="font-semibold text-ink-600">30-day wins you’ll see</p>
+      <p className="font-semibold text-ink-600">What goes live fast</p>
       <ul className="mt-3 space-y-2 text-left">
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
-          Tracking fixed and a clean dashboard for KPIs.
+          Lead sources connected into one pipeline.
         </li>
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-ocean-400" />
-          One high-impact campaign/flow launched end-to-end.
+          Instant text/email replies with booking links.
         </li>
         <li className="flex items-start gap-2">
           <span className="mt-1 h-2 w-2 rounded-full bg-slate-400" />
-          Lead handling + CRM handoffs running without manual steps.
+          Dashboard visibility for every lead and stage.
         </li>
       </ul>
     </div>
@@ -51,110 +50,110 @@ const heroMedia = (
 
 const features = [
   {
-    title: "Social + search ads",
+    title: "Lead capture everywhere",
     description:
-      "Meta, TikTok, LinkedIn, and Google programs tuned to booked calls and qualified pipeline.",
+      "Website forms, funnels, chat, calls, and social leads all feed one system.",
     icon: <Megaphone className="h-6 w-6" />,
   },
   {
-    title: "CRM installation",
+    title: "Instant automated follow-up",
     description:
-      "HubSpot, Bitrix24, and GoHighLevel configured with scoring, automation, and reporting guardrails.",
-    icon: <Workflow className="h-6 w-6" />,
+      "Text and email replies fire in seconds so speed-to-lead never slips.",
+    icon: <MessageCircle className="h-6 w-6" />,
   },
   {
-    title: "Chatbots + scheduling",
+    title: "Self-booking appointments",
     description:
-      "ManyChat flows and calendar handoffs that capture, nurture, and confirm meetings 24/7.",
-    icon: <Bot className="h-6 w-6" />,
+      "Prospects book on your calendar with confirmations and reminders.",
+    icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
-    title: "Landing pages & corporate sites",
+    title: "CRM pipeline visibility",
     description:
-      "Conversion-first experiences with clear messaging, proof, and analytics baked in.",
-    icon: <MonitorSmartphone className="h-6 w-6" />,
+      "See every lead stage at a glance so nothing gets missed.",
+    icon: <LayoutDashboard className="h-6 w-6" />,
   },
   {
-    title: "Shopify builds",
+    title: "No-show recovery + nurture",
     description:
-      "Custom storefronts with optimized merchandising, checkout UX, and post-purchase automation.",
-    icon: <ShoppingBag className="h-6 w-6" />,
+      "Missed-call texts and long-term follow-up rescue lost revenue.",
+    icon: <Repeat className="h-6 w-6" />,
   },
   {
-    title: "Automations & integrations",
+    title: "Done-for-you installation",
     description:
-      "Make.com and n8n workflows syncing data, notifications, and reporting across your stack.",
-    icon: <Zap className="h-6 w-6" />,
+      "We deploy the proven system fast with zero technical burden.",
+    icon: <ShieldCheck className="h-6 w-6" />,
   },
 ];
 
 const valueProps = [
   {
-    badge: "CLARITY",
-    title: "One roadmap across ads, CRM, and product",
+    badge: "SPEED",
+    title: "Instant speed-to-lead",
     description:
-      "Strategy, production, and optimization run from a shared plan so every sprint compounds.",
+      "Every inquiry gets an immediate response so you never miss the first conversation.",
   },
   {
-    badge: "CADENCE",
-    title: "Operating rhythm you can trust",
+    badge: "AUTOPILOT",
+    title: "Follow-up that never stops",
     description:
-      "Weekly checkpoints, transparent dashboards, and proactive recommendations keep teams aligned.",
+      "Automations nurture leads until they book or opt out, without extra staff.",
   },
   {
-    badge: "ACCESS",
-    title: "Senior leads in every workstream",
+    badge: "VISIBILITY",
+    title: "Pipeline clarity in one place",
     description:
-      "Media strategists, automation architects, and UX leads stay in every meeting.",
+      "Know exactly who is new, booked, no-show, or closed at any moment.",
   },
   {
-    badge: "RESULTS",
-    title: "Decisions driven by measurable lift",
+    badge: "DONE-FOR-YOU",
+    title: "Productized and deployed fast",
     description:
-      "We anchor every test to qualified pipeline, CAC, LTV, and time saved inside your ops.",
+      "A proven system installed for your business without custom builds.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "DigitalFace rebuilt our paid media and CRM in six weeks and pushed demo volume up 41 percent.",
-    author: "Head of Growth",
-    role: "B2B SaaS",
+      "We started booking consultations within the first week. The follow-up is finally consistent.",
+    author: "Practice Owner",
+    role: "Dental Clinic",
   },
   {
     quote:
-      "Their automation work removed four manual handoffs. Sales now responds in under 10 minutes.",
-    author: "Revenue Operations Lead",
-    role: "Professional Services",
+      "The missed-call texts alone saved leads we used to lose every day.",
+    author: "General Manager",
+    role: "Home Services",
   },
   {
     quote:
-      "Conversion rate jumped from 2% to 4.7% after they rebuilt our landing page system.",
-    author: "Product Marketing Director",
-    role: "Healthcare platform",
+      "Our calendar fills itself now. We show up and close more without chasing leads.",
+    author: "Owner",
+    role: "Med Spa",
   },
   {
     quote:
-      "We finally have shared dashboards connecting ad spend, pipeline, and workflow health in one view.",
-    author: "VP Marketing",
-    role: "Enterprise services",
+      "The pipeline view keeps the whole team on the same page. Nothing falls through.",
+    author: "Sales Lead",
+    role: "Fitness Studio",
   },
 ];
 
 const integrations = [
-  "ManyChat",
-  "HubSpot",
-  "Make",
-  "Meta Ads",
-  "TikTok Ads",
+  "Website Forms",
+  "Funnels",
+  "Chat Widget",
+  "SMS & Phone",
+  "Facebook & Instagram",
   "Google Ads",
-  "Shopify",
-  "Klaviyo",
-  "Zapier",
-  "Slack",
-  "Webflow",
-  "Typeform",
+  "Google Business",
+  "Calendar Booking",
+  "Email",
+  "Messenger",
+  "Instagram DMs",
+  "CRM Pipeline",
 ];
 
 const valueMedia = (
@@ -162,62 +161,63 @@ const valueMedia = (
     <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
       <Sparkles className="h-6 w-6 text-white/90" />
       <div>
-        <p className="font-semibold text-white">Blueprints delivered fast</p>
-        <p>
-          Audits, roadmaps, and production queues shipped in days�not months.
-        </p>
+        <p className="font-semibold text-white">24/7 automated assistant</p>
+        <p>Leads get an instant reply and booking link even after hours.</p>
       </div>
     </div>
     <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
       <LineChart className="h-6 w-6 text-white/90" />
       <div>
-        <p className="font-semibold text-white">
-          Dashboards that tell the story
-        </p>
-        <p>
-          Live reporting ties spend, leads, and workflow health together for
-          fast calls.
-        </p>
+        <p className="font-semibold text-white">Show-up rates protected</p>
+        <p>Automated confirmations and reminders cut no-shows.</p>
       </div>
     </div>
     <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
       <ShieldCheck className="h-6 w-6 text-white/90" />
       <div>
-        <p className="font-semibold text-white">Privacy and compliance ready</p>
-        <p>
-          Consent, attribution, and data hygiene are handled from the very first
-          sprint.
-        </p>
+        <p className="font-semibold text-white">Lead loss prevention</p>
+        <p>Missed-call texts and long-term nurturing keep leads from going cold.</p>
       </div>
     </div>
   </div>
 );
-
-const projects = [
+const steps = [
   {
-    title: "Demand gen operating system",
+    title: "Leads come in from anywhere",
     description:
-      "Meta, LinkedIn, and Google rebuild plus HubSpot automation produced 42% more demos for a global SaaS team.",
-    placeholder: "[PROJECT_IMAGE_OR_VIDEO_1]",
+      "Website forms, chat, calls, ads, and social all feed one pipeline.",
+    placeholder: "Step 1",
   },
   {
-    title: "Commerce automation layer",
+    title: "The system responds instantly",
     description:
-      "Shopify, ManyChat, and Klaviyo flows recovered 18% of abandoned carts and simplified post-purchase ops.",
-    placeholder: "[PROJECT_IMAGE_OR_VIDEO_2]",
+      "Automated SMS and email replies go out in seconds.",
+    placeholder: "Step 2",
   },
   {
-    title: "Corporate site refresh",
+    title: "Appointments book themselves",
     description:
-      "New narrative, component library, and analytics stack doubled time on page for a professional services firm.",
-    placeholder: "[PROJECT_IMAGE_OR_VIDEO_3]",
+      "Prospects choose a time with confirmations and reminders.",
+    placeholder: "Step 3",
+  },
+  {
+    title: "Your team steps in when needed",
+    description:
+      "Handle real conversations only after the system warms the lead.",
+    placeholder: "Step 4",
+  },
+  {
+    title: "Deals are tracked and closed",
+    description:
+      "Every lead moves through a visual pipeline with clear next steps.",
+    placeholder: "Step 5",
   },
 ];
 
 export default function Index() {
   usePageMetadata(
-    "DigitalFace Marketing | Performance marketing built on automation",
-    "DigitalFace Marketing plans and ships paid media, CRM installs, chat automation, websites, Shopify builds, and integrations for revenue teams.",
+    "DigitalFace Marketing Sales System | Automated sales for local businesses",
+    "Done-for-you automated sales system that captures leads, follows up instantly, and books appointments for local service businesses.",
   );
 
   return (
@@ -233,16 +233,16 @@ export default function Index() {
             </div>
             <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
               <h1 className="text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight">
-                We Build Growth with Ads, CRM, and Automation
+                Never lose another lead.
               </h1>
               <p className="mt-4 text-base text-white/80 sm:text-lg">
-                Everything you need to attract, convert, and automate.
+                A done-for-you sales system that captures leads, follows up instantly, and books appointments on autopilot.
               </p>
               <Link
                 to="/contact"
                 className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-brand-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60"
               >
-                Book a strategy call
+                Book a demo
               </Link>
             </div>
           </div>
@@ -250,57 +250,56 @@ export default function Index() {
       </section>
 
       <Hero
-        eyebrow="DigitalFace Marketing"
-        title="Performance marketing that runs on automation."
-        description="We build paid media, CRM systems, chat automation, landing pages, Shopify stores, and automations workflows so your team scales with efficiency."
-        primaryCta={{ label: "Book a strategy call", href: "/contact" }}
-        secondaryCta={{ label: "View services", href: "/features" }}
+        eyebrow="DigitalFace Marketing Sales System"
+        title="A done-for-you automated sales engine for local service businesses."
+        description="We install a proven system that captures every lead, responds instantly by text and email, and books appointments while you work."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        secondaryCta={{ label: "See the system in action", href: "/features" }}
         stats={heroStats}
         media={heroMedia}
       />
       <FeaturesSection
-        eyebrow="What we deliver"
-        title="Six services built for performance"
-        description="We deliver what drives growth today: Social media campaigns, SEO, CRM systems, chatbots, websites, shopify stores, and automation workflows. Everything connects, everything scales."
+        eyebrow="System outcomes"
+        title="An automated sales system, installed for you"
+        description="Capture every inquiry, follow up instantly, and move leads to booked appointments without extra staff."
         features={features}
       />
       <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              Recent work
+              How it works
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Projects ready for deeper walk-throughs
+              Leads in. Appointments booked. Pipeline clear.
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Use these placeholders to drop in stills or video reels of live
-              builds, campaigns, and automation stacks.
+              A simple, repeatable flow that keeps your team focused on real conversations.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {steps.map((step, index) => (
               <div
-                key={project.title}
+                key={step.title}
                 className="flex flex-col rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card"
               >
                 <div className="mb-6 flex h-44 items-center justify-center rounded-2xl border border-dashed border-ink-200 bg-secondary/40 text-xs font-semibold uppercase tracking-wide text-ink-400">
-                  {project.placeholder}
+                  {step.placeholder}
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
-                  Case {index + 1}
+                  Step {index + 1}
                 </p>
                 <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                  {project.title}
+                  {step.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm text-ink-500">
-                  {project.description}
+                  {step.description}
                 </p>
                 <Link
                   to="/contact"
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
                 >
-                  Request full case
+                  See a live demo
                   <span aria-hidden="true">?</span>
                 </Link>
               </div>
@@ -309,31 +308,32 @@ export default function Index() {
         </div>
       </section>
       <ValuePropsSection
-        eyebrow="Why it works"
-        title="Workflow intelligence that scales with you"
-        description="Strategy, creative, and engineering sit on the same calls so nothing is lost between planning and launch."
+        eyebrow="Your sales system"
+        title="Automation that feels personal, runs nonstop"
+        description="Built for local service businesses that need consistent follow-up without hiring more staff."
         points={valueProps}
         media={valueMedia}
       />
       <TestimonialsSection
         eyebrow="Client snapshots"
-        title="Proof from teams who scale with us"
-        description="Leaders trust us to combine automation, media, and web so revenue teams keep moving."
+        title="Local businesses closing more leads"
+        description="Owners see faster response, more bookings, and a pipeline they can trust."
         items={testimonials}
       />
       <IntegrationsSection
-        eyebrow="Plugged into your stack"
-        title="Integrates with the platforms you already count on"
-        description="From ad platforms to CRMs and workflow builders, we connect the tools your company already runs on."
+        eyebrow="Lead sources"
+        title="Every channel feeds one system"
+        description="Website, chat, calls, ads, and social all route into a single pipeline."
         items={integrations.map((name) => ({ name }))}
       />
       <CtaSection
         eyebrow="Next steps"
-        title="Ready to launch your next sprint?"
-        description="Share your goals and we will bring back a plan covering media, systems, creative, and automation."
-        primaryCta={{ label: "Schedule my session", href: "/contact" }}
-        secondaryCta={{ label: "See pricing options", href: "/pricing" }}
+        title="See the system in action"
+        description="Book a quick demo and we will show how it captures leads and books appointments for your business."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        secondaryCta={{ label: "View plans", href: "/pricing" }}
       />
     </div>
   );
 }
+

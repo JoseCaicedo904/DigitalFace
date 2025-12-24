@@ -1,150 +1,156 @@
-import { Link } from "react-router-dom";
+ï»¿import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { FeaturesSection } from "@/sections/Features";
 import { ValuePropsSection } from "@/sections/ValueProps";
 import { CtaSection } from "@/sections/CTA";
 import {
-  BarChart3,
+  CalendarCheck,
   CheckCircle2,
-  Layers,
-  Target,
+  LayoutDashboard,
+  PhoneCall,
 } from "lucide-react";
 
 const overviewFeatures = [
   {
-    title: "Clarity first",
+    title: "Never lose a lead",
     description:
-      "We start with a single roadmap so ads, CRM, web, and automation roll out in sync.",
-    icon: <Target className="h-6 w-6" />,
+      "Every inquiry is captured and responded to instantly.",
+    icon: <PhoneCall className="h-6 w-6" />,
   },
   {
-    title: "Execution pods",
+    title: "Appointments on autopilot",
     description:
-      "Media, automation, UX, and dev leads sit in one Slack channel for faster feedback loops.",
-    icon: <Layers className="h-6 w-6" />,
+      "Self-booking with confirmations and reminders keeps your calendar full.",
+    icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
-    title: "Reporting that matters",
+    title: "Pipeline clarity",
     description:
-      "Dashboards show revenue impact, ops hours saved, and next tests—not vanity stats.",
-    icon: <BarChart3 className="h-6 w-6" />,
+      "See every lead stage in one simple dashboard.",
+    icon: <LayoutDashboard className="h-6 w-6" />,
   },
 ];
 
 const services = [
   {
     id: 1,
-    title: "Social media + Google Ads",
+    title: "Lead capture from every channel",
     description:
-      "Channel mixes across Meta, TikTok, LinkedIn, and Google focused on booked calls, qualified form fills, and tracked revenue.",
+      "Every inquiry flows into one system so you never miss a lead.",
     bullets: [
-      "Strategy sprints covering audiences, offers, and creative hooks",
-      "Daily pacing, bids, and routing leads straight into CRM",
-      "Creative refresh calendar with rapid variations",
-      "Source-of-truth reporting mapped to CAC and pipeline",
+      "Website forms, funnels, and surveys connected",
+      "Chat widget and two-way SMS conversations",
+      "Missed-call text back on your business number",
+      "Facebook, Instagram, and Google lead sync",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_1]",
+    placeholder: "[SYSTEM_MODULE_01]",
   },
   {
     id: 2,
-    title: "CRM installation + setup",
+    title: "Instant follow-up + nurture",
     description:
-      "HubSpot, Bitrix24, or GoHighLevel configured with custom pipelines, automation, notifications, and documentation.",
+      "Automated texts and emails respond in seconds and keep leads warm.",
     bullets: [
-      "Architecture workshop and data migration plan",
-      "Lifecycle stages, scoring, and handoff workflows",
-      "Dashboards for leadership, ops, and sales",
-      "Team onboarding with SOPs and loom walkthroughs",
+      "Immediate SMS and email replies",
+      "Multi-day follow-up that stops on response",
+      "Personalized messages that feel human",
+      "Long-term nurture for leads not ready yet",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_2]",
+    placeholder: "[SYSTEM_MODULE_02]",
   },
   {
     id: 3,
-    title: "Chatbots + auto-scheduling",
+    title: "Appointment booking + reminders",
     description:
-      "ManyChat experiences that capture interest on social, web, or SMS and route hot leads to your booking tool.",
+      "Prospects book themselves and show up more often.",
     bullets: [
-      "Persona-based flows with branching logic",
-      "Calendar and CRM sync plus notifications",
-      "Compliance-ready opt-ins and double confirmation",
-      "Live dashboards monitoring drop-off and conversion",
+      "Self-scheduling calendar links",
+      "Confirmation and reminder sequences",
+      "Reschedule links to reduce no-shows",
+      "Daily agenda notifications for your team",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_3]",
+    placeholder: "[SYSTEM_MODULE_03]",
   },
   {
     id: 4,
-    title: "Landing pages + corporate websites",
+    title: "CRM pipeline visibility",
     description:
-      "High-speed pages and multi-page sites that communicate value quickly and connect straight to analytics + CRM.",
+      "A simple visual pipeline shows every lead stage.",
     bullets: [
-      "Messaging hierarchy, UX wireframes, and component library",
-      "SEO and analytics baked in from day one",
-      "Performance budgets to keep load times sub-two seconds",
-      "Experiment backlog with copy and layout tests",
+      "Auto-created opportunities for every inquiry",
+      "Stages for New Lead, Booked, No-Show, Closed",
+      "Owner assignments and task prompts",
+      "Notes and history in one place",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_4]",
+    placeholder: "[SYSTEM_MODULE_04]",
   },
   {
     id: 5,
-    title: "Shopify e-commerce builds",
+    title: "Recovery + reactivation",
     description:
-      "Custom themes, apps, and merchandising strategy so every visit feels branded and ready to convert.",
+      "Win back leads that usually go cold.",
     bullets: [
-      "Theme customization and modular sections",
-      "App selection, fulfillment, and payment setup",
-      "Lifecycle automation with Klaviyo or similar",
-      "Conversion monitoring plus optimization roadmap",
+      "No-show recovery texts",
+      "Missed-call follow-up",
+      "Post-appointment follow-up sequences",
+      "Reactivation campaigns for older leads",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_5]",
+    placeholder: "[SYSTEM_MODULE_05]",
   },
   {
     id: 6,
-    title: "Automations + integrations",
+    title: "Ongoing optimization",
     description:
-      "Make.com and n8n workflows that pass data, trigger alerts, and remove repetitive manual steps.",
+      "We keep the system sharp as your business grows.",
     bullets: [
-      "System inventory and dependency mapping",
-      "Workflow diagrams plus monitoring and alerts",
-      "API, webhook, and database connections",
-      "Documentation so internal teams can extend",
+      "Monthly tuning of messages and workflows",
+      "Updates based on response data",
+      "New campaigns added as needed",
+      "Support for changes and questions",
     ],
-    placeholder: "[IMAGE_PLACEHOLDER_SERVICE_6]",
+    placeholder: "[SYSTEM_MODULE_06]",
   },
 ];
 
 const valuePoints = [
   {
-    badge: "PROCESS",
-    title: "Discovery to launch inside 4-6 weeks",
+    badge: "PRODUCTIZED",
+    title: "A proven system, not a custom project",
     description:
-      "We compress research, build, QA, and training into tight sprints so you see value fast.",
+      "We deploy a repeatable blueprint tailored to your business fast.",
   },
   {
-    badge: "OWNERSHIP",
-    title: "Your stack, not a black box",
+    badge: "DONE-FOR-YOU",
+    title: "We install and maintain it",
     description:
-      "Everything is documented, shared, and built to live inside your existing tools.",
+      "Setup, testing, and ongoing updates are handled by our team.",
   },
   {
-    badge: "PARTNERSHIP",
-    title: "Senior leads on every touchpoint",
+    badge: "POWERED",
+    title: "Powered by GoHighLevel",
     description:
-      "Strategists, creatives, and engineers stay on the project from kickoff through optimization.",
+      "Our proprietary system runs on a GoHighLevel backbone, branded for you.",
+  },
+  {
+    badge: "OWNER-FRIENDLY",
+    title: "Simple for small teams",
+    description:
+      "Your staff steps in only when a real conversation is needed.",
   },
 ];
 
 export default function Features() {
   usePageMetadata(
-    "Services | DigitalFace Marketing",
-    "Explore DigitalFace Marketing services covering paid media, CRM installs, chat automation, landing pages, Shopify builds, and custom integrations."
+    "Sales System | DigitalFace Marketing",
+    "Explore the DigitalFace Marketing Sales System, a done-for-you automated sales engine for local service businesses."
   );
 
   return (
     <div className="bg-white">
       <FeaturesSection
-        eyebrow="Services"
-        title="Marketing systems built for clarity"
-        description="Every engagement blends media, CRM, chat, web, Shopify, and automation so growth stays predictable."
+        eyebrow="Sales System"
+        title="The DigitalFace Marketing Sales System"
+        description="A done-for-you sales engine for local service businesses. Capture every lead, follow up instantly, and book more appointments."
         features={overviewFeatures}
       />
 
@@ -157,14 +163,12 @@ export default function Features() {
             >
               <div className="space-y-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
-                  Service 0{service.id}
+                  Module 0{service.id}
                 </p>
                 <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
                   {service.title}
                 </h2>
-                <p className="text-lg text-ink-500">
-                  {service.description}
-                </p>
+                <p className="text-lg text-ink-500">{service.description}</p>
                 <ul className="space-y-3 text-sm text-ink-500">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
@@ -177,7 +181,7 @@ export default function Features() {
                   to="/contact"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
                 >
-                  Discuss this service
+                  See the system in action
                   <span aria-hidden="true">?</span>
                 </Link>
               </div>
@@ -190,34 +194,34 @@ export default function Features() {
       </section>
 
       <ValuePropsSection
-        eyebrow="How we work"
-        title="Playbooks that keep teams in sync"
-        description="We maintain a calm cadence: plan together, build fast, share dashboards, and document everything."
+        eyebrow="Launch plan"
+        title="Productized setup with a clear timeline"
+        description="We handle the technical lift so your team can focus on conversations and conversions."
         points={valuePoints}
         media={
           <div className="space-y-6 text-sm text-white/85">
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Weekly standups</p>
-              <p>15-minute syncs or Loom updates keep decisions moving without clogging calendars.</p>
+              <p className="font-semibold text-white">Launch in days</p>
+              <p>Most businesses are live within 5-7 business days once we have your info.</p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Shared dashboards</p>
-              <p>Live metrics for media, automation, UX, and dev progress give stakeholders instant context.</p>
+              <p className="font-semibold text-white">Simple daily workflow</p>
+              <p>Check the inbox, review the pipeline, and show up to booked appointments.</p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Documentation dropbox</p>
-              <p>SOPs, scripts, and templates live in your workspace so internal teams can build on our work.</p>
+              <p className="font-semibold text-white">Support included</p>
+              <p>We monitor, tune, and update the system as your business grows.</p>
             </div>
           </div>
         }
       />
 
       <CtaSection
-        eyebrow="Ready for what's next"
-        title="Map your next sprint with our team"
-        description="Share goals for paid media, CRM, chat automation, web, Shopify, or integrations—we will respond with a roadmap."
-        primaryCta={{ label: "Book a consultation", href: "/contact" }}
-        secondaryCta={{ label: "See pricing", href: "/pricing" }}
+        eyebrow="See it live"
+        title="Ready to watch the system work?"
+        description="Book a quick demo and we will show the full lead capture, follow-up, and booking flow."
+        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        secondaryCta={{ label: "View plans", href: "/pricing" }}
       />
     </div>
   );
