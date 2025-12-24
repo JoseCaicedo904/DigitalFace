@@ -38,12 +38,22 @@ export function Hero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-32",
+        "relative flex min-h-[520px] items-center overflow-hidden bg-slate-950 py-20 sm:py-24 lg:min-h-[70vh] lg:py-32",
         className
       )}
     >
-      <div className="pointer-events-none absolute inset-x-0 top-[-32rem] mx-auto h-[48rem] w-[68rem] rounded-full bg-glow-conic opacity-70 blur-3xl" />
-      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/videos/digitalface-hero.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      />
+      <div className="absolute inset-0 bg-black/45" />
+      <div className="pointer-events-none absolute inset-x-0 top-[-32rem] mx-auto h-[48rem] w-[68rem] rounded-full bg-glow-conic opacity-40 blur-3xl" />
+      <div className="container relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
           <div className="space-y-8">
             {eyebrow ? (
@@ -51,10 +61,10 @@ export function Hero({
                 {eyebrow}
               </span>
             ) : null}
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl md:text-6xl md:leading-tight">
+            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl md:leading-tight">
               {title}
             </h1>
-            <p className="max-w-2xl text-lg text-ink-500 md:text-xl">
+            <p className="max-w-2xl text-lg text-white/80 md:text-xl">
               {description}
             </p>
             <div className="flex flex-wrap items-center gap-3">
@@ -68,7 +78,7 @@ export function Hero({
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-xl border border-ink-200 px-7 py-4 text-base font-semibold text-ink-600 transition hover:border-brand-200 hover:bg-white"
+                  className="rounded-xl border border-white/50 px-7 py-4 text-base font-semibold text-white transition hover:border-white/80 hover:bg-white/10"
                 >
                   <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
                 </Button>
@@ -79,12 +89,12 @@ export function Hero({
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-2xl border border-white/80 bg-white/70 px-5 py-4 text-left shadow-brand-card backdrop-blur"
+                    className="rounded-2xl border border-white/20 bg-white/10 px-5 py-4 text-left text-white shadow-brand-card backdrop-blur"
                   >
-                    <p className="text-3xl font-semibold text-brand-600">
+                    <p className="text-3xl font-semibold text-white">
                       {stat.value}
                     </p>
-                    <p className="text-sm font-medium uppercase tracking-wide text-ink-400">
+                    <p className="text-sm font-medium uppercase tracking-wide text-white/70">
                       {stat.label}
                     </p>
                   </div>
@@ -95,7 +105,7 @@ export function Hero({
           {media ? (
             <div className="relative">
               <div className="absolute inset-0 rounded-3xl bg-glow-radial opacity-80 blur-2xl" />
-              <div className="relative h-full overflow-hidden rounded-3xl border border-ink-100 bg-white/90 shadow-2xl shadow-brand-500/10">
+              <div className="relative h-full overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-2xl shadow-brand-500/10 backdrop-blur">
                 {media}
               </div>
             </div>
