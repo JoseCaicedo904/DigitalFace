@@ -222,33 +222,6 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <section className="bg-slate-950 text-white">
-        <div className="container mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="relative isolate flex flex-col items-center justify-center overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/70 px-6 py-20 text-center shadow-[0_30px_80px_rgba(15,23,42,0.35)] sm:px-12 sm:py-24">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 flex items-center justify-center text-xs font-semibold uppercase tracking-[0.45em] text-white/25"
-            >
-              [VIDEO_HERO_PLACEHOLDER]
-            </div>
-            <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
-              <h1 className="text-3xl font-semibold leading-tight sm:text-4xl sm:leading-tight">
-                Never lose another lead.
-              </h1>
-              <p className="mt-4 text-base text-white/80 sm:text-lg">
-                A done-for-you sales system that captures leads, follows up instantly, and books appointments on autopilot.
-              </p>
-              <Link
-                to="/contact"
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-brand-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/60"
-              >
-                Book a demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Hero
         eyebrow="DigitalFace Marketing Sales System"
         title="A done-for-you automated sales engine for local service businesses."
