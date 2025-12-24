@@ -38,7 +38,7 @@ export function Hero({
   return (
     <section
       className={cn(
-        "relative flex min-h-[520px] items-center overflow-hidden bg-slate-950 py-20 sm:py-24 lg:min-h-[70vh] lg:py-32",
+        "relative flex min-h-[480px] items-center overflow-hidden bg-slate-950 py-16 sm:py-20 lg:min-h-[60vh] lg:py-24",
         className
       )}
     >
