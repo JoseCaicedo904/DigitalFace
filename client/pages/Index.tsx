@@ -25,8 +25,12 @@ const heroStats = [
 
 const heroMedia = (
   <div className="flex h-full flex-col gap-6 p-8">
-    <div className="flex h-64 items-center justify-center rounded-3xl border border-dashed border-ink-200 bg-white/70 text-center text-sm font-semibold uppercase tracking-wide text-ink-400">
-      [IMAGE_PLACEHOLDER_HERO]
+    <div className="h-64 overflow-hidden rounded-3xl border border-white/15 bg-white/10">
+      <img
+        src="/images/digitalface-post.png"
+        alt="DigitalFace Marketing promotional banner"
+        className="h-full w-full object-cover"
+      />
     </div>
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
       <p className="font-semibold text-ink-600">What goes live fast</p>
