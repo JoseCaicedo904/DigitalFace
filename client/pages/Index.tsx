@@ -25,11 +25,17 @@ const heroStats = [
 
 const heroMedia = (
   <div className="flex h-full flex-col gap-6 p-8">
-    <div className="h-64 overflow-hidden rounded-3xl border border-white/15 bg-white/10">
+    <div className="relative h-64 overflow-hidden rounded-3xl border border-white/15 bg-white/10">
       <img
         src="/images/digitalface-post.png"
         alt="DigitalFace Marketing promotional banner"
         className="h-full w-full object-cover"
+      />
+      <a
+        href="#book"
+        aria-label="Get Started Today"
+        className="absolute z-10 block cursor-pointer rounded-full bg-white/0 transition hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.35)] focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30"
+        style={{ top: "77.8%", left: "62.5%", width: "30%", height: "8.5%" }}
       />
     </div>
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
@@ -304,6 +310,8 @@ export default function Index() {
         items={integrations.map((name) => ({ name }))}
       />
       <CtaSection
+        id="book"
+        className="scroll-mt-24"
         eyebrow="Next steps"
         title="See the system in action"
         description="Book a quick demo and we will show how it captures leads and books appointments for your business."

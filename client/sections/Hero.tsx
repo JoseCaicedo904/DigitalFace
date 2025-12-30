@@ -22,6 +22,7 @@ interface HeroProps {
   secondaryCta?: CtaLink;
   stats?: Stat[];
   media?: ReactNode;
+  showVideo?: boolean;
   className?: string;
 }
 
@@ -33,6 +34,7 @@ export function Hero({
   secondaryCta,
   stats,
   media,
+  showVideo = true,
   className,
 }: HeroProps) {
   return (
@@ -42,17 +44,23 @@ export function Hero({
         className
       )}
     >
-      <video
-        className="absolute inset-0 h-full w-full object-cover z-0"
-        src="/videos/digitalface-hero.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/images/hero-poster.jpg"
-      />
-      <div className="absolute inset-0 bg-black/50 z-10" />
+      {showVideo ? (
+        <>
+          <video
+            className="absolute inset-0 z-0 h-full w-full object-cover"
+            src="/videos/digitalface-hero.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/hero-poster.jpg"
+          />
+          <div className="absolute inset-0 z-10 bg-black/50" />
+        </>
+      ) : (
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+      )}
       <div className="pointer-events-none absolute inset-x-0 top-[-32rem] mx-auto h-[48rem] w-[68rem] rounded-full bg-glow-conic opacity-40 blur-3xl z-10" />
       <div className="container relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">

@@ -89,6 +89,7 @@ export default function About() {
         description="A productized, done-for-you sales engine for local service businesses that want more bookings without more staff."
         primaryCta={{ label: "Book a demo", href: "/contact" }}
         secondaryCta={{ label: "See the system", href: "/features" }}
+        showVideo={false}
         stats={[
           { label: "Typical launch", value: "5-7 days" },
           { label: "Support response", value: "<1 day" },

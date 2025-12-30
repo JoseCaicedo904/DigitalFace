@@ -8,6 +8,7 @@ type CtaLink = {
 };
 
 interface CtaSectionProps {
+  id?: string;
   eyebrow?: string;
   title: string;
   description?: string;
@@ -17,6 +18,7 @@ interface CtaSectionProps {
 }
 
 export function CtaSection({
+  id,
   eyebrow,
   title,
   description,
@@ -26,6 +28,7 @@ export function CtaSection({
 }: CtaSectionProps) {
   return (
     <section
+      id={id}
       className={cn(
         "relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-ocean-500 py-20 text-white sm:py-24 lg:py-28",
         className
