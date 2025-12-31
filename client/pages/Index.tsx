@@ -61,8 +61,7 @@ const heroMedia = (
 const features = [
   {
     title: "Lead generation campaigns",
-    description:
-      "Facebook, Instagram and Google Ads to bring leads every day.",
+    description: "Facebook, Instagram and Google Ads to bring leads every day.",
     icon: <Megaphone className="h-6 w-6" />,
   },
   {
@@ -73,8 +72,7 @@ const features = [
   },
   {
     title: "Instant automated follow up",
-    description:
-      "Text and email replies fire in seconds using AI automations.",
+    description: "Text and email replies fire in seconds using AI automations.",
     icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
@@ -91,8 +89,7 @@ const features = [
   },
   {
     title: "Done for you installation",
-    description:
-      "We set everything up fast, with zero technical burden.",
+    description: "We set everything up fast, with no technical burden for you.",
     icon: <ShieldCheck className="h-6 w-6" />,
   },
 ];
@@ -132,8 +129,7 @@ const testimonials = [
     role: "Dental Clinic",
   },
   {
-    quote:
-      "The missed-call texts alone saved leads we used to lose every day.",
+    quote: "The missed-call texts alone saved leads we used to lose every day.",
     author: "General Manager",
     role: "Home Services",
   },
@@ -186,7 +182,9 @@ const valueMedia = (
       <ShieldCheck className="h-6 w-6 text-white/90" />
       <div>
         <p className="font-semibold text-white">Lead loss prevention</p>
-        <p>Missed-call texts and long-term nurturing keep leads from going cold.</p>
+        <p>
+          Missed-call texts and long-term nurturing keep leads from going cold.
+        </p>
       </div>
     </div>
   </div>
@@ -200,14 +198,12 @@ const steps = [
   },
   {
     title: "The system responds instantly",
-    description:
-      "Automated SMS and email replies go out in seconds.",
+    description: "Automated SMS and email replies go out in seconds.",
     placeholder: "Step 2",
   },
   {
     title: "Appointments book themselves",
-    description:
-      "Prospects choose a time with confirmations and reminders.",
+    description: "Prospects choose a time with confirmations and reminders.",
     placeholder: "Step 3",
   },
   {
@@ -257,7 +253,8 @@ export default function Index() {
               Leads in. Appointments booked. Pipeline clear.
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              A simple, repeatable flow that keeps your team focused on real conversations.
+              A simple, repeatable flow that keeps your team focused on real
+              conversations.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -321,4 +318,3 @@ export default function Index() {
     </div>
   );
 }
-
