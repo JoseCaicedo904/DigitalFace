@@ -68,23 +68,23 @@ const features = [
   {
     title: "Lead capture everywhere",
     description:
-      "Website forms, funnels, chat, calls, and social leads all feed one system.",
+      "Website forms, funnels, chat, and social leads all feed one system.",
     icon: <MessageCircle className="h-6 w-6" />,
   },
   {
     title: "Instant automated follow up",
     description:
-      "Text and email replies fire in seconds (AI automations).",
+      "Text and email replies fire in seconds using AI automations.",
     icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
-    title: "Virtual receptionist",
+    title: "AI virtual receptionist",
     description:
-      "We answer and make calls, qualify leads, and book appointments for you.",
+      "AI answer and make calls, qualify leads, and book appointments for you.",
     icon: <LayoutDashboard className="h-6 w-6" />,
   },
   {
-    title: "GHL CRM and dashboards",
+    title: "CRM & Dashboards",
     description:
       "Pipeline visibility inside GHL, plus clean dashboards to track results.",
     icon: <Repeat className="h-6 w-6" />,
