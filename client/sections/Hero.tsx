@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
@@ -76,7 +77,7 @@ export function Hero({
             <p className="max-w-2xl text-lg text-white/80 md:text-xl">
               {description}
             </p>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
               <Button
                 asChild
                 className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-7 py-4 text-base font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
@@ -87,9 +88,15 @@ export function Hero({
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-xl border border-white/50 px-7 py-4 text-base font-semibold text-white transition hover:border-white/80 hover:bg-white/10"
+                  className="group cursor-pointer rounded-xl border border-brand-200/70 bg-brand-100/90 px-7 py-[18px] text-base font-bold text-brand-900 shadow-[0_12px_35px_-22px_rgba(124,58,237,0.6)] transition-all duration-300 hover:scale-[1.03] hover:bg-brand-50 hover:shadow-[0_20px_45px_-24px_rgba(14,165,233,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
-                  <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
+                  <Link to={secondaryCta.href}>
+                    {secondaryCta.label}
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                      aria-hidden="true"
+                    />
+                  </Link>
                 </Button>
               ) : null}
             </div>
