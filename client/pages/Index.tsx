@@ -60,39 +60,39 @@ const heroMedia = (
 
 const features = [
   {
-    title: "Lead capture everywhere",
+    title: "Lead generation campaigns",
     description:
-      "Website forms, funnels, chat, calls, and social leads all feed one system.",
+      "Facebook, Instagram and Google Ads to bring leads every day.",
     icon: <Megaphone className="h-6 w-6" />,
   },
   {
-    title: "Instant automated follow-up",
+    title: "Lead capture everywhere",
     description:
-      "Text and email replies fire in seconds so speed-to-lead never slips.",
+      "Website forms, funnels, chat, calls, and social leads all feed one system.",
     icon: <MessageCircle className="h-6 w-6" />,
   },
   {
-    title: "Self-booking appointments",
+    title: "Instant automated follow up",
     description:
-      "Prospects book on your calendar with confirmations and reminders.",
+      "Text and email replies fire in seconds (AI automations).",
     icon: <CalendarCheck className="h-6 w-6" />,
   },
   {
-    title: "CRM pipeline visibility",
+    title: "Virtual receptionist",
     description:
-      "See every lead stage at a glance so nothing gets missed.",
+      "We answer and make calls, qualify leads, and book appointments for you.",
     icon: <LayoutDashboard className="h-6 w-6" />,
   },
   {
-    title: "No-show recovery + nurture",
+    title: "GHL CRM and dashboards",
     description:
-      "Missed-call texts and long-term follow-up rescue lost revenue.",
+      "Pipeline visibility inside GHL, plus clean dashboards to track results.",
     icon: <Repeat className="h-6 w-6" />,
   },
   {
-    title: "Done-for-you installation",
+    title: "Done for you installation",
     description:
-      "We deploy the proven system fast with zero technical burden.",
+      "We set everything up fast, with zero technical burden.",
     icon: <ShieldCheck className="h-6 w-6" />,
   },
 ];
