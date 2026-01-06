@@ -13,17 +13,15 @@ const values = [
   {
     title: "Clarity",
     description:
-      "We keep the system simple, visible, and easy for small teams to run.",
+      "We keep the system simple, visible, and easy for small-to-middle teams to run.",
   },
   {
     title: "Automation",
-    description:
-      "We automate the busywork so you can focus on real conversations.",
+    description: "We automate the busywork so you can focus on real work.",
   },
   {
     title: "Support",
-    description:
-      "We stay hands-on with updates, improvements, and training.",
+    description: "We stay hands-on with updates, improvements, and training.",
   },
 ];
 
@@ -56,7 +54,8 @@ const heroMedia = (
     <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
       <p className="font-semibold text-ink-600">How we show up</p>
       <p className="mt-2">
-        We act like your systems team. We build, launch, and keep your sales engine running.
+        We act like your systems team. We build, launch, and keep your sales
+        engine running.
       </p>
     </div>
   </div>
@@ -78,20 +77,20 @@ const offices = [
 export default function About() {
   usePageMetadata(
     "About DigitalFace Marketing",
-    "Learn about the DigitalFace Marketing Sales System and the team that installs and supports it."
+    "Learn about the DigitalFace Marketing Sales System and the team that installs and supports it.",
   );
 
   return (
     <div className="bg-white">
       <Hero
         eyebrow="About DigitalFace"
-        title="We build the DigitalFace Marketing Sales System."
+        title="We build your Marketing Sales System."
         description="A productized, done-for-you sales engine for local service businesses that want more bookings without more staff."
         primaryCta={{ label: "Book a demo", href: "/contact" }}
         secondaryCta={{ label: "See the system", href: "/features" }}
         showVideo={false}
         stats={[
-          { label: "Typical launch", value: "5-7 days" },
+          { label: "Typical launch", value: "1-7 days" },
           { label: "Support response", value: "<1 day" },
           { label: "Focus", value: "Local services" },
         ]}
@@ -108,7 +107,8 @@ export default function About() {
               Principles that keep the system simple
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Clear communication, steady automation, and real support are non-negotiable.
+              Clear communication, steady automation, and real support are
+              non-negotiable.
             </p>
           </div>
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -117,7 +117,9 @@ export default function About() {
                 key={value.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
               >
-                <h3 className="text-xl font-semibold text-slate-900">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {value.title}
+                </h3>
                 <p className="mt-3 text-sm text-ink-500">{value.description}</p>
               </div>
             ))}
@@ -136,7 +138,8 @@ export default function About() {
                 Specialists who keep your sales system running
               </h2>
               <p className="text-lg text-ink-500">
-                We build, automate, and optimize the follow-up process so you can stay focused on clients.
+                We build, automate, and optimize the follow-up process so you
+                can stay focused on clients.
               </p>
               <div className="grid gap-6 sm:grid-cols-2">
                 {specialties.map((specialty) => (
@@ -144,10 +147,16 @@ export default function About() {
                     key={specialty.title}
                     className="flex items-start gap-4 rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
                   >
-                    <div className="rounded-xl bg-secondary px-3 py-2">{specialty.icon}</div>
+                    <div className="rounded-xl bg-secondary px-3 py-2">
+                      {specialty.icon}
+                    </div>
                     <div>
-                      <h3 className="text-base font-semibold text-slate-900">{specialty.title}</h3>
-                      <p className="mt-2 text-sm text-ink-500">{specialty.description}</p>
+                      <h3 className="text-base font-semibold text-slate-900">
+                        {specialty.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-ink-500">
+                        {specialty.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -159,10 +168,12 @@ export default function About() {
                 <p className="font-semibold">Collaboration is the lever</p>
               </div>
               <p>
-                We stay close to your team so the system stays tuned to your real-world workflow.
+                We stay close to your team so the system stays tuned to your
+                real-world workflow.
               </p>
               <p>
-                You get visibility and guidance without the complexity of a full agency stack.
+                You get visibility and guidance without the complexity of a full
+                agency stack.
               </p>
             </div>
           </div>
@@ -180,22 +191,35 @@ export default function About() {
                 Miami and Cali keep us close to your market
               </h2>
               <p className="text-lg text-white/70">
-                Overlapping time zones and bilingual collaboration keep launches fast and support responsive.
+                Overlapping time zones and bilingual collaboration keep launches
+                fast and support responsive.
               </p>
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
               {offices.map((office) => (
-                <div key={office.title} className="rounded-2xl border border-white/15 bg-white/10 p-6">
-                  <p className="text-xs uppercase tracking-wide text-white/60">{office.title}</p>
-                  <p className="mt-2 text-lg font-semibold text-white">{office.description}</p>
+                <div
+                  key={office.title}
+                  className="rounded-2xl border border-white/15 bg-white/10 p-6"
+                >
+                  <p className="text-xs uppercase tracking-wide text-white/60">
+                    {office.title}
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-white">
+                    {office.description}
+                  </p>
                   <p className="mt-3 text-sm text-white/70">{office.detail}</p>
                 </div>
               ))}
               <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
-                <p className="text-xs uppercase tracking-wide text-white/60">Reporting cadence</p>
-                <p className="mt-2 text-lg font-semibold text-white">Weekly check-ins</p>
+                <p className="text-xs uppercase tracking-wide text-white/60">
+                  Reporting cadence
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  Weekly check-ins
+                </p>
                 <p className="mt-3 text-sm text-white/70">
-                  <LineChart className="mr-2 inline h-4 w-4" />Updates highlight wins, blockers, and next steps.
+                  <LineChart className="mr-2 inline h-4 w-4" />
+                  Updates highlight wins, blockers, and next steps.
                 </p>
               </div>
             </div>
