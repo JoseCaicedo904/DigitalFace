@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { usePageMetadata } from "@/hooks/usePageMetadata";
+﻿import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
 import { FeaturesSection } from "@/sections/Features";
 import { ValuePropsSection } from "@/sections/ValueProps";
 import { TestimonialsSection } from "@/sections/Testimonials";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
+import { cn } from "@/lib/utils";
 import {
   CalendarCheck,
   LayoutDashboard,
@@ -15,6 +15,7 @@ import {
   Repeat,
   ShieldCheck,
   Sparkles,
+  UserCheck,
 } from "lucide-react";
 
 const heroStats = [
@@ -191,32 +192,34 @@ const valueMedia = (
 );
 const steps = [
   {
-    title: "Leads come in from anywhere",
+    title: "A prospect initiates contact",
     description:
-      "Website forms, chat, calls, ads, and social all feed one pipeline.",
-    placeholder: "Step 1",
+      "A potential customer reaches your business through ads, website forms, chat, calls, or social channels.",
+    icon: MessageCircle,
   },
   {
-    title: "The system responds instantly",
-    description: "Automated SMS and email replies go out in seconds.",
-    placeholder: "Step 2",
-  },
-  {
-    title: "Appointments book themselves",
-    description: "Prospects choose a time with confirmations and reminders.",
-    placeholder: "Step 3",
-  },
-  {
-    title: "Your team steps in when needed",
+    title: "The system engages immediately",
     description:
-      "Handle real conversations only after the system warms the lead.",
-    placeholder: "Step 4",
+      "Automated responses are triggered in real time via SMS, email, or messaging channels to acknowledge interest and guide next actions.",
+    icon: Sparkles,
   },
   {
-    title: "Deals are tracked and closed",
+    title: "Intent is converted into an appointment",
     description:
-      "Every lead moves through a visual pipeline with clear next steps.",
-    placeholder: "Step 5",
+      "Qualified prospects schedule appointments through automated booking flows with confirmations and reminders.",
+    icon: CalendarCheck,
+  },
+  {
+    title: "Human involvement when strategically required",
+    description:
+      "Sales teams or operators engage only when manual interaction improves conversion or deal quality.",
+    icon: UserCheck,
+  },
+  {
+    title: "Opportunities are tracked through to outcome",
+    description:
+      "Every interaction is logged in a centralized pipeline, providing visibility from first contact to close.",
+    icon: LineChart,
   },
 ];
 
@@ -247,43 +250,79 @@ export default function Index() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              How it works
+              Customer Journey
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Leads in. Appointments booked. Pipeline clear.
+              From first contact to closed opportunity — managed automatically
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              A simple, repeatable flow that keeps your team focused on real
-              conversations.
+              A structured journey where automation handles the heavy lifting,
+              and human interaction happens only when it adds value.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-                className="flex flex-col rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card"
-              >
-                <div className="mb-6 flex h-44 items-center justify-center rounded-2xl border border-dashed border-ink-200 bg-secondary/40 text-xs font-semibold uppercase tracking-wide text-ink-400">
-                  {step.placeholder}
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
-                  Step {index + 1}
-                </p>
-                <h3 className="mt-2 text-xl font-semibold text-slate-900">
-                  {step.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm text-ink-500">
-                  {step.description}
-                </p>
-                <Link
-                  to="/contact"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
-                >
-                  See a live demo
-                  <span aria-hidden="true">?</span>
-                </Link>
-              </div>
-            ))}
+          <div className="relative mt-12">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="absolute left-5 top-0 h-full w-px bg-ink-200/70 lg:left-1/2 lg:-translate-x-1/2" />
+              <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-brand-300/70 via-ocean-300/40 to-transparent opacity-80 lg:left-1/2 lg:-translate-x-1/2" />
+              <span className="absolute left-5 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-400 shadow-[0_0_18px_rgba(124,58,237,0.45)] motion-safe:animate-journey lg:left-1/2" />
+              <span className="absolute left-5 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_12px_rgba(14,165,233,0.45)] motion-safe:animate-journey-slow lg:left-1/2" />
+            </div>
+            <div className="space-y-10 lg:space-y-12">
+              {steps.map((step, index) => {
+                const Icon = step.icon;
+                const isFinal = index === steps.length - 1;
+                const isLeft = index % 2 === 0;
+                return (
+                  <div key={step.title} className="relative pl-12 lg:pl-0">
+                    <div
+                      className={cn(
+                        "relative",
+                        isFinal
+                          ? "lg:mx-auto lg:w-[70%] lg:max-w-[700px]"
+                          : isLeft
+                            ? "lg:mr-auto lg:w-[calc(50%-2.5rem)]"
+                            : "lg:ml-auto lg:w-[calc(50%-2.5rem)]",
+                      )}
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={cn(
+                          "absolute left-5 top-10 h-px w-6 bg-ink-200/80",
+                          isFinal
+                            ? "lg:left-1/2 lg:top-[-1.25rem] lg:h-5 lg:w-px lg:-translate-x-1/2"
+                            : isLeft
+                              ? "lg:left-auto lg:right-[-2.5rem] lg:w-10"
+                              : "lg:left-[-2.5rem] lg:w-10",
+                        )}
+                      />
+                      <div className="group relative overflow-hidden rounded-3xl border border-ink-100/80 bg-white/90 p-6 shadow-brand-card transition duration-300 hover:-translate-y-1 hover:border-brand-200/70 hover:shadow-brand-soft">
+                        <span
+                          aria-hidden="true"
+                          className="pointer-events-none absolute inset-0 bg-glow-radial opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        />
+                        <div className="relative z-10 flex items-start gap-4">
+                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-ink-100 bg-white text-brand-600 shadow-sm">
+                            <Icon className="h-5 w-5" />
+                          </span>
+                          <div>
+                            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
+                              Step {index + 1}
+                            </p>
+                            <h3 className="mt-2 min-h-[3.5rem] text-xl font-semibold leading-tight text-slate-900">
+                              {step.title}
+                            </h3>
+                          </div>
+                        </div>
+                        <p className="relative z-10 mt-4 text-sm text-ink-500">
+                          {step.description}
+                        </p>
+                        <div className="relative z-10 mt-5 h-px w-full bg-gradient-to-r from-brand-200/70 via-ink-200/50 to-transparent motion-safe:animate-shimmer" />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

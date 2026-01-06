@@ -128,10 +128,40 @@ export default {
             height: "0",
           },
         },
+        journey: {
+          "0%": {
+            top: "-8%",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "1",
+          },
+          "90%": {
+            opacity: "1",
+          },
+          "100%": {
+            top: "108%",
+            opacity: "0",
+          },
+        },
+        shimmer: {
+          "0%": {
+            opacity: "0.35",
+          },
+          "50%": {
+            opacity: "0.9",
+          },
+          "100%": {
+            opacity: "0.35",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        journey: "journey 7s linear infinite",
+        "journey-slow": "journey 11s linear infinite",
+        shimmer: "shimmer 4s ease-in-out infinite",
       },
       backgroundImage: {
         "glow-radial":
