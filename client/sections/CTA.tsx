@@ -52,7 +52,7 @@ export function CtaSection({
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button
             asChild
-            className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-brand-600 shadow-brand-soft transition hover:-translate-y-0.5 hover:shadow-2xl"
+            className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-brand-600 shadow-brand-soft transition-transform hover:-translate-y-0.5 hover:bg-white hover:text-brand-600"
           >
             <Link to={primaryCta.href}>{primaryCta.label}</Link>
           </Button>

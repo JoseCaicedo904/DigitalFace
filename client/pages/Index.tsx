@@ -164,28 +164,54 @@ const integrations = [
 ];
 
 const valueMedia = (
-  <div className="space-y-6 text-sm text-white/80">
-    <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
-      <Sparkles className="h-6 w-6 text-white/90" />
-      <div>
-        <p className="font-semibold text-white">24/7 automated assistant</p>
-        <p>Leads get an instant reply and booking link even after hours.</p>
-      </div>
+  <div className="relative text-sm text-white/75 lg:py-6">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+      <div className="absolute left-1/2 top-0 h-40 w-72 -translate-x-1/2 rounded-full bg-ocean-500/10 blur-3xl" />
+      <div className="absolute left-6 top-12 h-28 w-28 rounded-full bg-brand-500/10 blur-2xl" />
+      <div className="absolute right-8 top-20 h-28 w-28 rounded-full bg-ocean-500/10 blur-2xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:56px_56px] opacity-20" />
+      <span className="absolute left-[12%] top-[8.6rem] h-1.5 w-1.5 rounded-full bg-brand-400/70 shadow-[0_0_10px_rgba(124,58,237,0.45)]" />
+      <span className="absolute left-1/2 top-[6.9rem] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
+      <span className="absolute right-[12%] top-[10.6rem] h-1.5 w-1.5 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
     </div>
-    <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
-      <LineChart className="h-6 w-6 text-white/90" />
-      <div>
-        <p className="font-semibold text-white">Show-up rates protected</p>
-        <p>Automated confirmations and reminders cut no-shows.</p>
+    <div className="grid gap-5 lg:grid-cols-3 lg:gap-6">
+      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:translate-y-6">
+        <div className="flex items-start gap-4">
+          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
+            <Sparkles className="h-4 w-4" />
+          </span>
+          <div className="flex-1">
+            <p className="font-semibold text-white">24/7 automated assistant</p>
+            <p>Leads get an instant reply and booking link even after hours.</p>
+            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-5">
-      <ShieldCheck className="h-6 w-6 text-white/90" />
-      <div>
-        <p className="font-semibold text-white">Lead loss prevention</p>
-        <p>
-          Missed-call texts and long-term nurturing keep leads from going cold.
-        </p>
+      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:-translate-y-2">
+        <div className="flex items-start gap-4">
+          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
+            <LineChart className="h-4 w-4" />
+          </span>
+          <div className="flex-1">
+            <p className="font-semibold text-white">Show-up rates protected</p>
+            <p>Automated confirmations and reminders cut no-shows.</p>
+            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
+          </div>
+        </div>
+      </div>
+      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:translate-y-10">
+        <div className="flex items-start gap-4">
+          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
+            <ShieldCheck className="h-4 w-4" />
+          </span>
+          <div className="flex-1">
+            <p className="font-semibold text-white">Lead loss prevention</p>
+            <p>
+              Missed-call texts and long-term nurturing keep leads from going cold.
+            </p>
+            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -208,12 +234,6 @@ const steps = [
     description:
       "Qualified prospects schedule appointments through automated booking flows with confirmations and reminders.",
     icon: CalendarCheck,
-  },
-  {
-    title: "Human involvement when strategically required",
-    description:
-      "Sales teams or operators engage only when manual interaction improves conversion or deal quality.",
-    icon: UserCheck,
   },
   {
     title: "Opportunities are tracked through to outcome",
@@ -253,7 +273,7 @@ export default function Index() {
               Customer Journey
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              From first contact to closed opportunity — managed automatically
+              From first contact to closed opportunity managed automatically
             </h2>
             <p className="mt-4 text-lg text-ink-500">
               A structured journey where automation handles the heavy lifting,
@@ -267,13 +287,19 @@ export default function Index() {
               <span className="absolute left-5 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-400 shadow-[0_0_18px_rgba(124,58,237,0.45)] motion-safe:animate-journey lg:left-1/2" />
               <span className="absolute left-5 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_12px_rgba(14,165,233,0.45)] motion-safe:animate-journey-slow lg:left-1/2" />
             </div>
-            <div className="space-y-10 lg:space-y-12">
+            <div className="space-y-0">
               {steps.map((step, index) => {
                 const Icon = step.icon;
-                const isFinal = index === steps.length - 1;
+                const isFinal = steps.length % 2 === 1 && index === steps.length - 1;
                 const isLeft = index % 2 === 0;
                 return (
-                  <div key={step.title} className="relative pl-12 lg:pl-0">
+                  <div
+                    key={step.title}
+                    className={cn(
+                      "relative pl-12 lg:pl-0",
+                      index > 0 && "-mt-32 lg:-mt-36",
+                    )}
+                  >
                     <div
                       className={cn(
                         "relative",
@@ -295,7 +321,7 @@ export default function Index() {
                               : "lg:left-[-2.5rem] lg:w-10",
                         )}
                       />
-                      <div className="group relative overflow-hidden rounded-3xl border border-ink-100/80 bg-white/90 p-6 shadow-brand-card transition duration-300 hover:-translate-y-1 hover:border-brand-200/70 hover:shadow-brand-soft">
+                      <div className="group relative overflow-hidden rounded-3xl border border-ink-100/80 bg-white/90 p-7 shadow-brand-card transition duration-300 hover:-translate-y-1 hover:border-brand-200/70 hover:shadow-brand-soft">
                         <span
                           aria-hidden="true"
                           className="pointer-events-none absolute inset-0 bg-glow-radial opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -305,18 +331,18 @@ export default function Index() {
                             <Icon className="h-5 w-5" />
                           </span>
                           <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-brand-600">
                               Step {index + 1}
                             </p>
-                            <h3 className="mt-2 min-h-[3.5rem] text-xl font-semibold leading-tight text-slate-900">
+                            <h3 className="mt-2 min-h-[3rem] text-[1.3rem] font-semibold leading-snug text-slate-900">
                               {step.title}
                             </h3>
                           </div>
                         </div>
-                        <p className="relative z-10 mt-4 text-sm text-ink-500">
+                        <p className="relative z-10 mt-4 text-[0.95rem] leading-relaxed text-ink-500">
                           {step.description}
                         </p>
-                        <div className="relative z-10 mt-5 h-px w-full bg-gradient-to-r from-brand-200/70 via-ink-200/50 to-transparent motion-safe:animate-shimmer" />
+                        <div className="relative z-10 mt-4 h-px w-full bg-gradient-to-r from-brand-200/70 via-ink-200/50 to-transparent motion-safe:animate-shimmer" />
                       </div>
                     </div>
                   </div>
@@ -332,6 +358,7 @@ export default function Index() {
         description="Built for local service businesses that need consistent follow-up without hiring more staff."
         points={valueProps}
         media={valueMedia}
+        variant="system-flow"
       />
       <TestimonialsSection
         eyebrow="Client snapshots"
