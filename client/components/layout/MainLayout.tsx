@@ -13,6 +13,7 @@ const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Sales System", to: "/features" },
+  { label: "Pay per Service", to: "/pay-per-service" },
   { label: "Pricing", to: "/pricing" },
   { label: "Contact", to: "/contact" },
 ];

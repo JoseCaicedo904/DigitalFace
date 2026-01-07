@@ -10,6 +10,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Features from "./pages/Features";
+import PayPerService from "./pages/PayPerService";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -29,6 +30,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="about" element={<About />} />
             <Route path="features" element={<Features />} />
+            <Route path="pay-per-service" element={<PayPerService />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="contact" element={<Contact />} />
           </Route>

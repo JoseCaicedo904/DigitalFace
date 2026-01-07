@@ -34,6 +34,19 @@ const overviewFeatures = [
 const services = [
   {
     id: 1,
+    title: "Paid traffic to generate demand",
+    description:
+      "We launch and manage digital ad campaigns to bring qualified prospects into your system.",
+    bullets: [
+      "Facebook and Instagram ad campaigns (Meta)",
+      "Google Search, Display, and YouTube ads",
+      "TikTok ads for top-of-funnel awareness",
+      "Campaign setup, tracking, and optimization",
+    ],
+    placeholder: "[SYSTEM_MODULE_01]",
+  },
+  {
+    id: 2,
     title: "Lead capture from every channel",
     description:
       "Every inquiry flows into one system so you never miss a lead.",
@@ -43,10 +56,10 @@ const services = [
       "Missed-call text back on your business number",
       "Facebook, Instagram, and Google lead sync",
     ],
-    placeholder: "[SYSTEM_MODULE_01]",
+    placeholder: "[SYSTEM_MODULE_02]",
   },
   {
-    id: 2,
+    id: 3,
     title: "Instant follow-up + nurture",
     description:
       "Automated texts and emails respond in seconds and keep leads warm.",
@@ -56,10 +69,10 @@ const services = [
       "Personalized messages that feel human",
       "Long-term nurture for leads not ready yet",
     ],
-    placeholder: "[SYSTEM_MODULE_02]",
+    placeholder: "[SYSTEM_MODULE_03]",
   },
   {
-    id: 3,
+    id: 4,
     title: "Appointment booking + reminders",
     description:
       "Prospects book themselves and show up more often.",
@@ -69,10 +82,10 @@ const services = [
       "Reschedule links to reduce no-shows",
       "Daily agenda notifications for your team",
     ],
-    placeholder: "[SYSTEM_MODULE_03]",
+    placeholder: "[SYSTEM_MODULE_04]",
   },
   {
-    id: 4,
+    id: 5,
     title: "CRM pipeline visibility",
     description:
       "A simple visual pipeline shows every lead stage.",
@@ -82,10 +95,10 @@ const services = [
       "Owner assignments and task prompts",
       "Notes and history in one place",
     ],
-    placeholder: "[SYSTEM_MODULE_04]",
+    placeholder: "[SYSTEM_MODULE_05]",
   },
   {
-    id: 5,
+    id: 6,
     title: "Recovery + reactivation",
     description:
       "Win back leads that usually go cold.",
@@ -95,10 +108,10 @@ const services = [
       "Post-appointment follow-up sequences",
       "Reactivation campaigns for older leads",
     ],
-    placeholder: "[SYSTEM_MODULE_05]",
+    placeholder: "[SYSTEM_MODULE_06]",
   },
   {
-    id: 6,
+    id: 7,
     title: "Ongoing optimization",
     description:
       "We keep the system sharp as your business grows.",
@@ -108,7 +121,7 @@ const services = [
       "New campaigns added as needed",
       "Support for changes and questions",
     ],
-    placeholder: "[SYSTEM_MODULE_06]",
+    placeholder: "[SYSTEM_MODULE_07]",
   },
 ];
 
