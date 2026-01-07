@@ -86,11 +86,11 @@ export default function About() {
         eyebrow="About DigitalFace"
         title="We build your Marketing Sales System."
         description="A productized, done-for-you sales engine for local service businesses that want more bookings without more staff."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        primaryCta={{ label: "Get started", href: "/contact" }}
         secondaryCta={{ label: "See the system", href: "/features" }}
         showVideo={false}
         stats={[
-          { label: "Typical launch", value: "1-7 days" },
+          { label: "Typical launch", value: "3-7 days" },
           { label: "Support response", value: "<1 day" },
           { label: "Focus", value: "Local services" },
         ]}
@@ -162,19 +162,24 @@ export default function About() {
                 ))}
               </div>
             </div>
-            <div className="space-y-6 rounded-3xl border border-ink-100 bg-white/90 p-8 text-sm text-ink-500 shadow-brand-card">
-              <div className="flex items-center gap-3 text-ink-600">
-                <HeartHandshake className="h-6 w-6 text-brand-500" />
-                <p className="font-semibold">Collaboration is the lever</p>
+            <div className="flex flex-col gap-6 lg:h-full lg:min-h-0 lg:self-stretch">
+              <div className="space-y-6 rounded-3xl border border-ink-100 bg-white/90 p-8 text-sm text-ink-500 shadow-brand-card">
+                <div className="flex items-center gap-3 text-ink-600">
+                  <HeartHandshake className="h-6 w-6 text-brand-500" />
+                  <p className="font-semibold">Collaboration is the lever</p>
+                </div>
+                <p>
+                  We stay close to your team so the system stays tuned to your
+                  real-world workflow.
+                </p>
+                <p>
+                  You get visibility and guidance without the complexity of a
+                  full agency stack.
+                </p>
               </div>
-              <p>
-                We stay close to your team so the system stays tuned to your
-                real-world workflow.
-              </p>
-              <p>
-                You get visibility and guidance without the complexity of a full
-                agency stack.
-              </p>
+              <div className="flex w-full items-center justify-center overflow-hidden rounded-3xl border border-dashed border-ink-200 bg-slate-100/80 px-6 text-center text-xs font-semibold uppercase tracking-[0.3em] text-ink-400 shadow-brand-card aspect-[4/5] sm:aspect-[3/4] lg:flex-1 lg:aspect-auto lg:min-h-0">
+                [IMAGE_PLACEHOLDER_ABOUT]
+              </div>
             </div>
           </div>
         </div>
@@ -230,8 +235,8 @@ export default function About() {
       <CtaSection
         eyebrow="Join forces"
         title="Let us install your sales system"
-        description="Book a demo and we will show the system tailored to your business."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        description="Book an appointment and we’ll walk you through a system tailored to your business."
+        primaryCta={{ label: "Get started", href: "/contact" }}
         secondaryCta={{ label: "See pricing", href: "/pricing" }}
       />
     </div>

@@ -255,7 +255,7 @@ export default function Index() {
         eyebrow="DigitalFace Marketing Sales System"
         title="A done-for-you automated sales engine for local service businesses."
         description="We install a proven system that captures every lead, responds instantly by text and email, and books appointments while you work."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        primaryCta={{ label: "Book an appointment", href: "/contact" }}
         secondaryCta={{ label: "See the system in action", href: "/features" }}
         stats={heroStats}
         media={heroMedia}
@@ -378,7 +378,7 @@ export default function Index() {
         eyebrow="Next steps"
         title="See the system in action"
         description="Book a quick demo and we will show how it captures leads and books appointments for your business."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        primaryCta={{ label: "Talk to an expert", href: "/contact" }}
         secondaryCta={{ label: "View plans", href: "/pricing" }}
       />
     </div>
