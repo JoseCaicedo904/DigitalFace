@@ -1,7 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { FeaturesSection } from "@/sections/Features";
-import { ValuePropsSection } from "@/sections/ValueProps";
 import { CtaSection } from "@/sections/CTA";
 import {
   CalendarCheck,
@@ -119,31 +118,6 @@ const services = [
   },
 ];
 
-const valuePoints = [
-  {
-    badge: "PRODUCTIZED",
-    title: "A proven system, not a custom project",
-    description:
-      "We deploy a repeatable blueprint tailored to your business fast.",
-  },
-  {
-    badge: "DONE-FOR-YOU",
-    title: "We install and maintain it",
-    description: "Setup, testing, and ongoing updates are handled by our team.",
-  },
-  {
-    badge: "POWERED",
-    title: "Powered by GoHighLevel",
-    description:
-      "Our proprietary system runs on a GoHighLevel backbone, branded for you.",
-  },
-  {
-    badge: "OWNER-FRIENDLY",
-    title: "Simple for small teams",
-    description: "Your staff steps in only when a real conversation is needed.",
-  },
-];
-
 export default function Features() {
   usePageMetadata(
     "Sales System | DigitalFace Marketing",
@@ -198,36 +172,128 @@ export default function Features() {
         </div>
       </section>
 
-      <ValuePropsSection
-        eyebrow="Launch plan"
-        title="Productized setup with a clear timeline"
-        description="We handle the technical lift so your team can focus on conversations and conversions."
-        points={valuePoints}
-        media={
-          <div className="space-y-6 text-sm text-white/85">
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Launch in days</p>
-              <p>
-                Most businesses are live within 5-7 business days once we have
-                your info.
+      <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.18),transparent_60%)] opacity-70" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.18),transparent_55%)] opacity-50" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.08),transparent_60%)]" />
+        </div>
+        <div className="container relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-14 lg:flex-row lg:items-start lg:gap-16">
+            <div className="max-w-xl space-y-6">
+              <span className="inline-flex items-center rounded-full border border-white/25 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-200">
+                Launch plan
+              </span>
+              <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
+                Productized setup with a clear timeline
+              </h2>
+              <p className="text-lg text-white/70">
+                A repeatable system, delivered the same way every time. Clear
+                steps. Fast start.
               </p>
+              <div className="flex items-center gap-4 text-sm text-white/70">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+                  3-7
+                </span>
+                <div>
+                  <p className="text-sm text-white/80">
+                    Business days to launch for most teams.
+                  </p>
+                  <p className="text-xs text-white/50">
+                    You stay focused on customers while we build.
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-3 text-sm text-white/70">
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
+                  <p>Same proven playbook. Tailored to your business.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-brand-400/80" />
+                  <p>We run the setup. You step in only when needed.</p>
+                </div>
+              </div>
             </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Simple daily workflow</p>
-              <p>
-                Check the inbox, review the pipeline, and show up to booked
-                appointments.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
-              <p className="font-semibold text-white">Support included</p>
-              <p>
-                We monitor, tune, and update the system as your business grows.
-              </p>
+            <div className="flex-1 space-y-12">
+              <div className="relative pl-10">
+                <div className="absolute left-4 top-1 h-full w-px bg-gradient-to-b from-brand-400/80 via-ocean-400/50 to-white/10" />
+                <ol className="space-y-9">
+                  <li className="relative">
+                    <span className="absolute -left-10 top-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                      D1
+                    </span>
+                    <p className="text-sm font-semibold text-white">
+                      Day 1: Share your basics
+                    </p>
+                    <p className="mt-2 text-sm text-white/70">
+                      One short call and a quick form. We take it from there.
+                    </p>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-10 top-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                      D2
+                    </span>
+                    <p className="text-sm font-semibold text-white">
+                      Days 2-3: Build and test
+                    </p>
+                    <p className="mt-2 text-sm text-white/70">
+                      We set it up, run checks, and make sure it is ready.
+                    </p>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-10 top-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                      D4
+                    </span>
+                    <p className="text-sm font-semibold text-white">
+                      Days 4-7: Go live
+                    </p>
+                    <p className="mt-2 text-sm text-white/70">
+                      Your system turns on and appointments start coming in.
+                    </p>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-10 top-0.5 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-slate-900 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                      ON
+                    </span>
+                    <p className="text-sm font-semibold text-white">
+                      Ongoing: Support stays with you
+                    </p>
+                    <p className="mt-2 text-sm text-white/70">
+                      We keep it sharp, handle updates, and answer questions
+                      fast.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+              <div className="space-y-4 border-t border-white/10 pt-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
+                  Your simple daily flow
+                </p>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="flex items-center gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-brand-400" />
+                    <p className="text-sm text-white">Check new messages</p>
+                  </div>
+                  <div className="hidden sm:block h-px flex-1 bg-white/10" />
+                  <div className="flex items-center gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-ocean-400" />
+                    <p className="text-sm text-white">Confirm appointments</p>
+                  </div>
+                  <div className="hidden sm:block h-px flex-1 bg-white/10" />
+                  <div className="flex items-center gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-white/70" />
+                    <p className="text-sm text-white">Show up and serve</p>
+                  </div>
+                </div>
+                <p className="text-sm text-white/70">
+                  That is the routine. We handle the rest.
+                </p>
+              </div>
             </div>
           </div>
-        }
-      />
+        </div>
+      </section>
 
       <CtaSection
         eyebrow="See it live"
