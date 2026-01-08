@@ -13,8 +13,7 @@ import {
 const overviewFeatures = [
   {
     title: "Never lose a lead",
-    description:
-      "Every inquiry is captured and responded to instantly.",
+    description: "Every inquiry is captured and responded to instantly.",
     icon: <PhoneCall className="h-6 w-6" />,
   },
   {
@@ -25,8 +24,7 @@ const overviewFeatures = [
   },
   {
     title: "Pipeline clarity",
-    description:
-      "See every lead stage in one simple dashboard.",
+    description: "See every lead stage in one simple dashboard.",
     icon: <LayoutDashboard className="h-6 w-6" />,
   },
 ];
@@ -52,8 +50,8 @@ const services = [
       "Every inquiry flows into one system so you never miss a lead.",
     bullets: [
       "Website forms, funnels, and surveys connected",
-      "Chat widget and two-way SMS conversations",
-      "Missed-call text back on your business number",
+      "Chat widget and two-way text conversations",
+      "Every lead automatically recorded in your CRM",
       "Facebook, Instagram, and Google lead sync",
     ],
     placeholder: "[SYSTEM_MODULE_02]",
@@ -74,8 +72,7 @@ const services = [
   {
     id: 4,
     title: "Appointment booking + reminders",
-    description:
-      "Prospects book themselves and show up more often.",
+    description: "Prospects book themselves and show up more often.",
     bullets: [
       "Self-scheduling calendar links",
       "Confirmation and reminder sequences",
@@ -87,11 +84,10 @@ const services = [
   {
     id: 5,
     title: "CRM pipeline visibility",
-    description:
-      "A simple visual pipeline shows every lead stage.",
+    description: "A simple visual pipeline shows every lead stage.",
     bullets: [
       "Auto-created opportunities for every inquiry",
-      "Stages for New Lead, Booked, No-Show, Closed",
+      "Stages for New Lead, Booked, No-Show, Closed Client",
       "Owner assignments and task prompts",
       "Notes and history in one place",
     ],
@@ -100,8 +96,7 @@ const services = [
   {
     id: 6,
     title: "Recovery + reactivation",
-    description:
-      "Win back leads that usually go cold.",
+    description: "Win back leads that usually go cold.",
     bullets: [
       "No-show recovery texts",
       "Missed-call follow-up",
@@ -113,8 +108,7 @@ const services = [
   {
     id: 7,
     title: "Ongoing optimization",
-    description:
-      "We keep the system sharp as your business grows.",
+    description: "We keep the system sharp as your business grows.",
     bullets: [
       "Monthly tuning of messages and workflows",
       "Updates based on response data",
@@ -135,8 +129,7 @@ const valuePoints = [
   {
     badge: "DONE-FOR-YOU",
     title: "We install and maintain it",
-    description:
-      "Setup, testing, and ongoing updates are handled by our team.",
+    description: "Setup, testing, and ongoing updates are handled by our team.",
   },
   {
     badge: "POWERED",
@@ -147,15 +140,14 @@ const valuePoints = [
   {
     badge: "OWNER-FRIENDLY",
     title: "Simple for small teams",
-    description:
-      "Your staff steps in only when a real conversation is needed.",
+    description: "Your staff steps in only when a real conversation is needed.",
   },
 ];
 
 export default function Features() {
   usePageMetadata(
     "Sales System | DigitalFace Marketing",
-    "Explore the DigitalFace Marketing Sales System, a done-for-you automated sales engine for local service businesses."
+    "Explore the DigitalFace Marketing Sales System, a done-for-you automated sales engine for local service businesses.",
   );
 
   return (
@@ -215,15 +207,23 @@ export default function Features() {
           <div className="space-y-6 text-sm text-white/85">
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
               <p className="font-semibold text-white">Launch in days</p>
-              <p>Most businesses are live within 5-7 business days once we have your info.</p>
+              <p>
+                Most businesses are live within 5-7 business days once we have
+                your info.
+              </p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
               <p className="font-semibold text-white">Simple daily workflow</p>
-              <p>Check the inbox, review the pipeline, and show up to booked appointments.</p>
+              <p>
+                Check the inbox, review the pipeline, and show up to booked
+                appointments.
+              </p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/10 p-5">
               <p className="font-semibold text-white">Support included</p>
-              <p>We monitor, tune, and update the system as your business grows.</p>
+              <p>
+                We monitor, tune, and update the system as your business grows.
+              </p>
             </div>
           </div>
         }
@@ -231,9 +231,9 @@ export default function Features() {
 
       <CtaSection
         eyebrow="See it live"
-        title="Ready to watch the system work?"
-        description="Book a quick demo and we will show the full lead capture, follow-up, and booking flow."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        title="Ready to see how the system works?"
+        description="Book a quick call and we’ll walk you through it."
+        primaryCta={{ label: "Talk with us", href: "/contact" }}
         secondaryCta={{ label: "View plans", href: "/pricing" }}
       />
     </div>
