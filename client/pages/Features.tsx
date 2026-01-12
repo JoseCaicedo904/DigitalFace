@@ -160,8 +160,7 @@ export default function Features() {
                   to="/contact"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700"
                 >
-                  See the system in action
-                  <span aria-hidden="true">?</span>
+                  Start here
                 </Link>
               </div>
               <div className="flex h-full min-h-[240px] items-center justify-center rounded-3xl border border-dashed border-ink-200 bg-secondary/40 text-xs font-semibold uppercase tracking-wide text-ink-400">
