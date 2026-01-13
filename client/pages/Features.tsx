@@ -40,7 +40,8 @@ const services = [
       "TikTok ads for top-of-funnel awareness",
       "Campaign setup, tracking, and optimization",
     ],
-    placeholder: "[SYSTEM_MODULE_01]",
+    imageSrc: "/images/ML 01.png",
+    imageAlt: "Paid traffic to generate demand",
   },
   {
     id: 2,
@@ -53,7 +54,8 @@ const services = [
       "Every lead automatically recorded in your CRM",
       "Facebook, Instagram, and Google lead sync",
     ],
-    placeholder: "[SYSTEM_MODULE_02]",
+    imageSrc: "/images/ML 02.png",
+    imageAlt: "Lead capture from every channel",
   },
   {
     id: 3,
@@ -66,7 +68,8 @@ const services = [
       "Personalized messages that feel human",
       "Long-term nurture for leads not ready yet",
     ],
-    placeholder: "[SYSTEM_MODULE_03]",
+    imageSrc: "/images/ML 03.png",
+    imageAlt: "Instant follow-up and nurture",
   },
   {
     id: 4,
@@ -78,7 +81,8 @@ const services = [
       "Reschedule links to reduce no-shows",
       "Daily agenda notifications for your team",
     ],
-    placeholder: "[SYSTEM_MODULE_04]",
+    imageSrc: "/images/ML 04.png",
+    imageAlt: "Appointment booking and reminders",
   },
   {
     id: 5,
@@ -90,7 +94,8 @@ const services = [
       "Owner assignments and task prompts",
       "Notes and history in one place",
     ],
-    placeholder: "[SYSTEM_MODULE_05]",
+    imageSrc: "/images/ML 05.png",
+    imageAlt: "CRM pipeline visibility",
   },
   {
     id: 6,
@@ -102,7 +107,8 @@ const services = [
       "Post-appointment follow-up sequences",
       "Reactivation campaigns for older leads",
     ],
-    placeholder: "[SYSTEM_MODULE_06]",
+    imageSrc: "/images/ML 06.png",
+    imageAlt: "Recovery and reactivation",
   },
   {
     id: 7,
@@ -114,7 +120,8 @@ const services = [
       "New campaigns added as needed",
       "Support for changes and questions",
     ],
-    placeholder: "[SYSTEM_MODULE_07]",
+    imageSrc: "/images/ML 07.png",
+    imageAlt: "Ongoing optimization",
   },
 ];
 
@@ -163,8 +170,13 @@ export default function Features() {
                   Start here
                 </Link>
               </div>
-              <div className="flex h-full min-h-[240px] items-center justify-center rounded-3xl border border-dashed border-ink-200 bg-secondary/40 text-xs font-semibold uppercase tracking-wide text-ink-400">
-                {service.placeholder}
+              <div className="flex h-full min-h-[240px] items-center justify-center text-xs font-semibold uppercase tracking-wide text-ink-400">
+                <img
+                  src={service.imageSrc}
+                  alt={service.imageAlt}
+                  className="h-full w-full rounded-2xl object-contain"
+                  loading="lazy"
+                />
               </div>
             </div>
           ))}
