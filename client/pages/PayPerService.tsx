@@ -293,13 +293,13 @@ export default function PayPerService() {
                     {group.description}
                   </p>
                 </div>
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {group.services.map((service) => (
                     <div
                       key={service.title}
-                      className="flex h-full flex-col rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card"
+                      className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card"
                     >
-                      <div className="space-y-5">
+                      <div className="flex flex-1 flex-col space-y-5">
                         <div className="space-y-2">
                           <h4 className="text-xl font-semibold text-slate-900">
                             {service.title}
@@ -323,13 +323,15 @@ export default function PayPerService() {
                         </div>
                       </div>
                       {service.ctaLabel ? (
-                        <Link
-                          to={service.ctaHref}
-                          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:text-brand-700"
-                        >
-                          {service.ctaLabel}
-                          <span aria-hidden="true">-&gt;</span>
-                        </Link>
+                        <div className="mt-auto pt-6">
+                          <Link
+                            to={service.ctaHref}
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:text-brand-700"
+                          >
+                            {service.ctaLabel}
+                            <span aria-hidden="true">-&gt;</span>
+                          </Link>
+                        </div>
                       ) : null}
                     </div>
                   ))}
