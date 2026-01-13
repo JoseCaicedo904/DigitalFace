@@ -1,13 +1,200 @@
 ﻿import { Link } from "react-router-dom";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { FeaturesSection } from "@/sections/Features";
 import { CtaSection } from "@/sections/CTA";
 import {
+  ArrowUpRight,
   CalendarCheck,
   CheckCircle2,
   LayoutDashboard,
   PhoneCall,
+  X,
 } from "lucide-react";
+
+type ModuleImageProps = {
+  src: string;
+  alt: string;
+  title: string;
+};
+
+function ModuleImage({ src, alt, title }: ModuleImageProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const openModal = useCallback(() => {
+    if (closeTimeoutRef.current !== null) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsModalOpen(true);
+    requestAnimationFrame(() => setIsModalVisible(true));
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setIsModalVisible(false);
+    if (closeTimeoutRef.current !== null) {
+      window.clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = window.setTimeout(() => {
+      setIsModalOpen(false);
+      closeTimeoutRef.current = null;
+    }, 200);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current !== null) {
+        window.clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [closeModal, isModalOpen]);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      closeButtonRef.current?.focus();
+    }
+  }, [isModalOpen]);
+
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const revealClassName = isVisible
+    ? "opacity-100 translate-y-0 scale-100"
+    : "opacity-0 translate-y-6 scale-[0.98] motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:scale-100";
+
+  return (
+    <>
+      <div
+        ref={containerRef}
+        className={`relative transition duration-500 ease-out ${revealClassName}`}
+      >
+        <button
+          type="button"
+          onClick={openModal}
+          aria-label={`View ${title}`}
+          aria-haspopup="dialog"
+          aria-expanded={isModalOpen}
+          className="group relative w-full cursor-zoom-in rounded-2xl transition-shadow duration-300 ease-out hover:shadow-[0_20px_50px_rgba(15,23,42,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
+        >
+          <div className="relative aspect-[4/3] min-h-[240px] w-full overflow-hidden rounded-2xl">
+            <img
+              src={src}
+              alt={alt}
+              className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04] group-focus-visible:scale-[1.02] motion-reduce:transform-none"
+              loading="lazy"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/20 group-focus-visible:bg-slate-900/20" />
+            <div className="pointer-events-none absolute inset-0 flex items-end justify-between p-4 opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
+                  {title}
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">
+                  View more
+                </p>
+              </div>
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white">
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      {isModalOpen ? (
+        <div
+          className={`fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 px-4 py-8 backdrop-blur-sm transition-opacity duration-300 ${
+            isModalVisible ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${title} preview`}
+        >
+          <div
+            className={`relative w-full max-w-5xl transition-transform duration-300 ${
+              isModalVisible ? "scale-100" : "scale-95"
+            }`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+              <img
+                src={src}
+                alt={alt}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <button
+              ref={closeButtonRef}
+              type="button"
+              onClick={closeModal}
+              className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-950/70 text-white transition hover:bg-slate-950/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              aria-label="Close image preview"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
 
 const overviewFeatures = [
   {
@@ -170,14 +357,11 @@ export default function Features() {
                   Start here
                 </Link>
               </div>
-              <div className="flex h-full min-h-[240px] items-center justify-center text-xs font-semibold uppercase tracking-wide text-ink-400">
-                <img
-                  src={service.imageSrc}
-                  alt={service.imageAlt}
-                  className="h-full w-full rounded-2xl object-contain"
-                  loading="lazy"
-                />
-              </div>
+              <ModuleImage
+                src={service.imageSrc}
+                alt={service.imageAlt}
+                title={service.title}
+              />
             </div>
           ))}
         </div>
