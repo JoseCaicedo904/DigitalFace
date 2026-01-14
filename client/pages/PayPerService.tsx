@@ -199,9 +199,9 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
-        title: "E-commerce storefronts",
+        title: "E-commerce storefronts (Websites and Funnels)",
         description:
-          "Shopify and WooCommerce builds optimized for product discovery and conversion.",
+          "Shopify builds optimized for product discovery and conversion.",
         outcomes: [
           "Improve cart performance",
           "Increase repeat purchases",
@@ -211,7 +211,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
-        title: "Campaign landing pages",
+        title: "Campaign landing pages (conversion-focused design)",
         description:
           "High-converting landing pages for ads, launches, or webinars.",
         outcomes: [
