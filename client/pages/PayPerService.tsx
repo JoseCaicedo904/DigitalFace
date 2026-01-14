@@ -53,9 +53,9 @@ const serviceGroups = [
       "Always-on systems that handle conversations, nurture leads, and keep your team focused on high-value work.",
     services: [
       {
-        title: "Chatbot development (ManyChat)",
+        title: "Chatbot development (AI and Rule-based)",
         description:
-          "Custom ManyChat flows for Messenger, Instagram DM, WhatsApp, Telegram, and web widgets.",
+          "Classic or Custom AI chatbot for Messenger, Instagram DM, WhatsApp, Telegram, and web widgets.",
         outcomes: [
           "Respond instantly 24/7",
           "Capture and qualify leads",
@@ -67,7 +67,7 @@ const serviceGroups = [
       {
         title: "Workflow automation and drip campaigns",
         description:
-          "Email and SMS sequences, lead scoring, and task automation across HubSpot, ActiveCampaign, Klaviyo, Mailchimp, or custom stacks.",
+          "Email-SMS sequences, lead scoring, & task automation across GHL, Klaviyo, Mailchimp, ActiveCampaign, or custom stacks.",
         outcomes: [
           "Never miss a follow-up",
           "Nurture leads over time",
@@ -77,19 +77,19 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
-        title: "E-commerce automations",
+        title: "E-commerce automations (Shopify-WooCommerce)",
         description:
-          "Abandoned cart triggers, post-purchase nurture, loyalty loops, and product recommendations for Shopify and WooCommerce.",
+          "Abandoned cart triggers, post-purchase nurture, loyalty loops, and product recommendations automations.",
         outcomes: [
           "Recover lost revenue",
           "Increase lifetime value",
-          "Delight customers with timely offers",
+          "Delight customers with timely offers, and save time on manual outreach",
         ],
         ctaLabel: "Ask about e-commerce automations",
         ctaHref: "/contact",
       },
       {
-        title: "Done-for-you ManyChat templates",
+        title: "Done-for-you Custom Templates",
         description:
           "Plug-and-play templates for lead gen, appointment scheduling, e-commerce follow-up, and event sign-ups.",
         outcomes: [
@@ -253,7 +253,7 @@ const serviceGroups = [
 export default function PayPerService() {
   usePageMetadata(
     "Pay Per Service | DigitalFace Marketing",
-    "Choose individual DigitalFace Marketing services for ads, automation, CRM, and websites without committing to a bundled system."
+    "Choose individual DigitalFace Marketing services for ads, automation, CRM, and websites without committing to a bundled system.",
   );
 
   return (
@@ -277,8 +277,8 @@ export default function PayPerService() {
               Build a custom stack, one service at a time.
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              Choose one service or stack a few. Each engagement is scoped as a focused project with clear deliverables
-              and outcomes.
+              Choose one service or stack a few. Each engagement is scoped as a
+              focused project with clear deliverables and outcomes.
             </p>
           </div>
 
@@ -314,7 +314,10 @@ export default function PayPerService() {
                           </p>
                           <ul className="mt-3 space-y-2 text-sm text-ink-500">
                             {service.outcomes.map((outcome) => (
-                              <li key={outcome} className="flex items-start gap-2">
+                              <li
+                                key={outcome}
+                                className="flex items-start gap-2"
+                              >
                                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-brand-500" />
                                 <span>{outcome}</span>
                               </li>
