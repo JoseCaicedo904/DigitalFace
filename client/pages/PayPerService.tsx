@@ -77,13 +77,25 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        title: "Appointment & Calendar Automations",
+        description:
+          "Automated booking, confirmations, reminders, rescheduling, and no-show recovery across SMS, WhatsApp, and email.",
+        outcomes: [
+          "Instant booking confirmations",
+          "24h and 2h automated reminders",
+          "Rescheduling and cancellation flows for your clients and team",
+        ],
+        ctaLabel: "Automate appointments",
+        ctaHref: "/contact",
+      },
+      {
         title: "E-commerce automations (Shopify-WooCommerce)",
         description:
           "Abandoned cart triggers, post-purchase nurture, loyalty loops, and product recommendations automations.",
         outcomes: [
           "Recover lost revenue",
           "Increase lifetime value",
-          "Delight customers with timely offers, and save time on manual outreach",
+          "Timely offers. Less manual outreach",
         ],
         ctaLabel: "Ask about e-commerce automations",
         ctaHref: "/contact",
