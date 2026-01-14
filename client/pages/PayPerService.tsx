@@ -132,21 +132,9 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
-        title: "Instant follow-up and nurture",
-        description:
-          "Automated SMS and email replies that respond in seconds and continue until you get a response.",
-        outcomes: [
-          "Speed-to-lead without extra staff",
-          "Consistent nurture over days or weeks",
-          "Higher booking rates",
-        ],
-        ctaLabel: "Launch follow-up automations",
-        ctaHref: "/contact",
-      },
-      {
         title: "Appointment booking and reminders",
         description:
-          "Self-scheduling calendars with confirmation and reminder sequences.",
+          "Self-scheduling calendars with built-in confirmation and reminder sequences embedded in your website.",
         outcomes: [
           "Reduce no-shows",
           "Fill calendars faster",
@@ -158,11 +146,11 @@ const serviceGroups = [
       {
         title: "CRM pipeline setup (GoHighLevel)",
         description:
-          "GoHighLevel-based pipeline visibility with stages, assignments, and a simple inbox.",
+          "GoHighLevel-based pipeline visibility with clear stages, lead assignments, and a unified inbox.",
         outcomes: [
           "See every lead stage clearly",
           "Assign ownership and tasks",
-          "Stay organized without a complex CRM",
+          "CRM-level organization",
         ],
         ctaLabel: "Configure my pipeline",
         ctaHref: "/contact",
@@ -182,7 +170,7 @@ const serviceGroups = [
       {
         title: "Reporting and performance dashboards",
         description:
-          "Dashboards that connect ad spend, automation activity, and closed revenue.",
+          "Dashboards that connect ad spend, automation activity, and closed revenue across your entire funnel.",
         outcomes: [
           "Know which channels drive growth",
           "Spot bottlenecks in the pipeline",
