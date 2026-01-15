@@ -24,8 +24,7 @@ const pillars = [
 const packages = [
   {
     name: "Basic",
-    description:
-      "Core sales system installed and launched for your business.",
+    description: "Core sales system installed and launched for your business.",
     idealFor: "Solo owners and small teams who need follow-up on autopilot.",
     investment: "Monthly subscription",
     includes: [
@@ -52,7 +51,8 @@ const packages = [
     name: "Premium",
     description:
       "Full managed growth plus traffic for businesses that want hands-off scale.",
-    idealFor: "Teams that want the system and growth management handled for them.",
+    idealFor:
+      "Teams that want the system and growth management handled for them.",
     investment: "Custom monthly subscription",
     includes: [
       "Everything in Pro",
@@ -108,15 +108,14 @@ const faq = [
   },
   {
     question: "Can you drive traffic too?",
-    answer:
-      "Yes. Premium includes managed growth and traffic into the system.",
+    answer: "Yes. Premium includes managed growth and traffic into the system.",
   },
 ];
 
 export default function Pricing() {
   usePageMetadata(
     "Plans | DigitalFace Marketing",
-    "Explore Basic, Pro, and Premium plans for the DigitalFace Marketing Sales System."
+    "Explore Basic, Pro, and Premium plans for the DigitalFace Marketing Sales System.",
   );
 
   return (
@@ -130,7 +129,8 @@ export default function Pricing() {
             Choose the sales system that fits your business
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Productized, automated, and built for local service businesses that need more bookings without more staff.
+            Productized, automated, and built for local service businesses that
+            need more bookings without more staff.
           </p>
         </div>
         <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -140,7 +140,9 @@ export default function Pricing() {
                 key={pillar.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-6 text-left shadow-brand-card"
               >
-                <h3 className="text-lg font-semibold text-slate-900">{pillar.title}</h3>
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {pillar.title}
+                </h3>
                 <p className="mt-3 text-sm text-ink-500">{pillar.copy}</p>
               </div>
             ))}
@@ -157,17 +159,24 @@ export default function Pricing() {
                 className="flex flex-col rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card"
               >
                 <div className="space-y-3">
-                  <h2 className="text-2xl font-semibold text-slate-900">{pkg.name}</h2>
+                  <h2 className="text-2xl font-semibold text-slate-900">
+                    {pkg.name}
+                  </h2>
                   <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
                     {pkg.investment}
                   </p>
                   <p className="text-sm text-ink-500">{pkg.description}</p>
-                  <p className="text-xs uppercase tracking-wide text-ink-400">Ideal for</p>
+                  <p className="text-xs uppercase tracking-wide text-ink-400">
+                    Ideal for
+                  </p>
                   <p className="text-sm text-ink-500">{pkg.idealFor}</p>
                 </div>
                 <div className="mt-6 space-y-3">
                   {pkg.includes.map((item) => (
-                    <p key={item} className="flex items-start gap-2 text-sm text-ink-500">
+                    <p
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-ink-500"
+                    >
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" />
                       {item}
                     </p>
@@ -189,7 +198,8 @@ export default function Pricing() {
               Everything you need to run the system
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              We install, train, and support your team so the system keeps working without extra stress.
+              We install, train, and support your team so the system keeps
+              working without extra stress.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -198,7 +208,9 @@ export default function Pricing() {
                 key={item.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
               >
-                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-sm text-ink-500">{item.description}</p>
                 <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600">
                   {item.investment}
@@ -224,7 +236,9 @@ export default function Pricing() {
                   key={item.question}
                   className="rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
                 >
-                  <p className="text-sm font-semibold text-slate-900">{item.question}</p>
+                  <p className="text-sm font-semibold text-slate-900">
+                    {item.question}
+                  </p>
                   <p className="mt-2 text-sm text-ink-500">{item.answer}</p>
                 </div>
               ))}
@@ -236,8 +250,8 @@ export default function Pricing() {
       <CtaSection
         eyebrow="What happens next"
         title="See the system built for your business"
-        description="Book a demo and we will recommend the best plan for your goals."
-        primaryCta={{ label: "Book a demo", href: "/contact" }}
+        description="Start a conversation and we’ll recommend the best setup for your goals."
+        primaryCta={{ label: "Contact us", href: "/contact" }}
         secondaryCta={{ label: "View the system", href: "/features" }}
       />
     </div>
