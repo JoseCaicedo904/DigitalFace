@@ -70,6 +70,11 @@ const getMeta = (routePath) => {
     return { changefreq: "weekly", priority: "1.0" };
   }
 
+  const legalPages = new Set(["/privacy", "/terms"]);
+  if (legalPages.has(routePath)) {
+    return { changefreq: "yearly", priority: "0.3" };
+  }
+
   const priorityMap = {
     "/features": "0.8",
     "/pay-per-service": "0.7",

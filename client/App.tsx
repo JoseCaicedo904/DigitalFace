@@ -13,6 +13,8 @@ import Features from "./pages/Features";
 import PayPerService from "./pages/PayPerService";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="pay-per-service" element={<PayPerService />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="terms" element={<Terms />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
