@@ -158,13 +158,13 @@ const serviceGroups = [
     services: [
       {
         id: "lead-capture",
-        title: "Lead capture and channel sync",
+        title: "Lead capture & CRM sync",
         description:
-          "Connect website forms, funnels, surveys, chat, missed-call text back, and social lead forms into one system.",
+          "Connect all your lead sources directly to your CRM, so every form, message, call, and ad inquiry is captured in one place.",
         outcomes: [
-          "Capture every inquiry",
-          "Route leads to the right team",
-          "Keep data clean across channels",
+          "Capture every lead inside your CRM",
+          "Automatically route leads to the right team",
+          "Keep your CRM clean and up to date",
         ],
         ctaLabel: "Set up lead capture",
         ctaHref: "/contact",
@@ -266,32 +266,6 @@ const serviceGroups = [
           "Capture leads cleanly",
         ],
         ctaLabel: "Build a landing page",
-        ctaHref: "/contact",
-      },
-      {
-        id: "content-hubs",
-        title: "Content hubs and blogs",
-        description:
-          "SEO-friendly layouts and content workflows that help you publish consistently.",
-        outcomes: [
-          "Grow organic traffic",
-          "Educate prospects",
-          "Support long-term demand",
-        ],
-        ctaLabel: "Design a content hub",
-        ctaHref: "/contact",
-      },
-      {
-        id: "custom-digital-experiences",
-        title: "Custom digital experiences",
-        description:
-          "Membership portals, resource centers, interactive microsites, and bespoke builds.",
-        outcomes: [
-          "Deliver premium experiences",
-          "Support unique user journeys",
-          "Stand out in your market",
-        ],
-        ctaLabel: "Explore custom builds",
         ctaHref: "/contact",
       },
     ],
