@@ -48,7 +48,7 @@ const megaNav = {
           to: "/pay-per-service#chatbot-development",
         },
         {
-          label: "Workflow automation and drip campaigns",
+          label: "Specialized workflow automations",
           to: "/pay-per-service#workflow-automation",
         },
         {
@@ -59,6 +59,10 @@ const megaNav = {
           label: "E-commerce automations",
           to: "/pay-per-service#ecommerce-automation",
         },
+        {
+          label: "Auto-reply for Facebook & Instagram comments",
+          to: "/pay-per-service#comment-auto-reply",
+        },
       ],
       allTo: "/pay-per-service#automation-and-chatbots",
     },
@@ -68,7 +72,7 @@ const megaNav = {
       to: "/pay-per-service#lead-ops-crm",
       links: [
         {
-          label: "Lead capture and channel sync",
+          label: "Lead capture & CRM sync across all channels",
           to: "/pay-per-service#lead-capture",
         },
         {
@@ -80,7 +84,7 @@ const megaNav = {
           to: "/pay-per-service#crm-pipeline",
         },
         {
-          label: "CRM integration and data sync",
+          label: "CRM integration & unified data sync",
           to: "/pay-per-service#crm-integration",
         },
         {
@@ -192,12 +196,6 @@ export default function MainLayout() {
                                   </li>
                                 ))}
                               </ul>
-                              <Link
-                                to={category.allTo}
-                                className="inline-flex items-center text-sm font-semibold text-brand-600 transition hover:text-brand-700 cursor-pointer"
-                              >
-                                {`All ${category.title} services ->`}
-                              </Link>
                             </div>
                           );
                         })}
