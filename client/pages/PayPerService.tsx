@@ -158,7 +158,7 @@ const serviceGroups = [
     services: [
       {
         id: "lead-capture",
-        title: "Lead capture & CRM sync",
+        title: "Lead capture & CRM sync across all channels",
         description:
           "Connect all your lead sources directly to your CRM, so every form, message, call, and ad inquiry is captured in one place.",
         outcomes: [
@@ -197,12 +197,12 @@ const serviceGroups = [
       },
       {
         id: "crm-integration",
-        title: "CRM integration and data sync",
+        title: "CRM integration & unified data sync",
         description:
-          "Integrate Salesforce, HubSpot, Zoho, Pipedrive, and custom CRMs with your marketing stack.",
+          "Integrate CRMs like GHL, HubSpot, Zoho, Pipedrive or custom systems with your marketing stack.",
         outcomes: [
-          "Single source of truth",
-          "Bi-directional sync and field mapping",
+          "One central place for all your data",
+          "Two-way data sync across systems",
           "Automations triggered by real data",
         ],
         ctaLabel: "Schedule a CRM consult",
