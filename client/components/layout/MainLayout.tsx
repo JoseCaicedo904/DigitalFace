@@ -32,10 +32,9 @@ const megaNav = {
           to: "/pay-per-service#meta-ads",
         },
         { label: "TikTok ads", to: "/pay-per-service#tiktok-ads" },
-        {
-          label: "Google and YouTube ads",
-          to: "/pay-per-service#google-and-youtube-ads",
-        },
+        { label: "Google ads", to: "/pay-per-service#google-ads" },
+        { label: "SEO strategy", to: "/pay-per-service#seo-strategy" },
+        { label: "Content creation", to: "/pay-per-service#content-creation" },
       ],
       allTo: "/pay-per-service#paid-media",
     },

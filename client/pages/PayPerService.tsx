@@ -37,16 +37,42 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
-        id: "google-and-youtube-ads",
-        title: "Google and YouTube ads",
+        id: "google-ads",
+        title: "Google ads",
         description:
-          "Intent-driven search, Performance Max, display retargeting, and YouTube storytelling.",
+          "Intent-driven search, display campaigns, and retargeting built to capture demand when customers are actively looking.",
         outcomes: [
-          "Capture high-intent demand",
-          "Stay top of mind with retargeting",
-          "Support launches with video ads",
+          "Capture high-intent demand at the moment of search",
+          "Drive consistent traffic through search and display",
+          "Stay top of mind with smart retargeting",
         ],
-        ctaLabel: "Plan a Google and YouTube campaign",
+        ctaLabel: "Plan a Google ads campaign",
+        ctaHref: "/contact",
+      },
+      {
+        id: "seo-strategy",
+        title: "SEO strategy",
+        description:
+          "Search engine optimization designed to grow organic visibility, attract qualified traffic, and support long-term demand.",
+        outcomes: [
+          "Increase visibility for high-value keywords",
+          "Attract qualified organic traffic over time",
+          "Support paid media with stronger landing relevance",
+        ],
+        ctaLabel: "Request an SEO strategy",
+        ctaHref: "/contact",
+      },
+      {
+        id: "content-creation",
+        title: "Content creation",
+        description:
+          "Strategic content designed to educate, build trust, and convert across paid, organic, and owned channels.",
+        outcomes: [
+          "Create clear messaging aligned to buyer intent",
+          "Support campaigns with conversion-focused content",
+          "Build brand authority across channels",
+        ],
+        ctaLabel: "Plan content creation",
         ctaHref: "/contact",
       },
     ],
