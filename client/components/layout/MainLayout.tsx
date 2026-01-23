@@ -379,7 +379,11 @@ export default function MainLayout() {
               <Link className="transition hover:text-white" to="/terms">
                 Terms of Service
               </Link>
-              <Link className="transition hover:text-white" to="/sitemap">
+              <Link
+                className="transition hover:text-white"
+                to="/sitemap.xml"
+                reloadDocument
+              >
                 Sitemap
               </Link>
             </div>
