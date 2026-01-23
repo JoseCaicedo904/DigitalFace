@@ -360,7 +360,7 @@ export default function MainLayout() {
                   <span className="block font-semibold text-white">
                     Cali, Colombia
                   </span>
-                  <span>Zona Rosa innovation hub</span>
+                  <span> Calle 70 # 1-00, La 14 de Calima, Cali, Colombia</span>
                 </li>
               </ul>
             </div>
