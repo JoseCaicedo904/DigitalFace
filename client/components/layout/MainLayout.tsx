@@ -28,7 +28,7 @@ const megaNav = {
       to: "/pay-per-service#paid-media",
       links: [
         {
-          label: "Meta (Facebook and Instagram) ads",
+          label: "Meta ads",
           to: "/pay-per-service#meta-ads",
         },
         { label: "TikTok ads", to: "/pay-per-service#tiktok-ads" },
