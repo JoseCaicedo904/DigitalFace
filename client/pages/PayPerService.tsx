@@ -5,11 +5,13 @@ import { CtaSection } from "@/sections/CTA";
 
 const serviceGroups = [
   {
+    id: "paid-media",
     title: "Paid media and social advertising",
     description:
       "Full-funnel campaigns built to create demand, capture leads, and prove ROI across the channels your customers use most.",
     services: [
       {
+        id: "meta-ads",
         title: "Meta (Facebook and Instagram) ads",
         description:
           "Audience research, creative production, and full-funnel campaign management from awareness to retargeting.",
@@ -22,6 +24,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "tiktok-ads",
         title: "TikTok ads",
         description:
           "Native short-form video, spark ads, and creator collaborations built for the TikTok feed.",
@@ -34,6 +37,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "google-and-youtube-ads",
         title: "Google and YouTube ads",
         description:
           "Intent-driven search, Performance Max, display retargeting, and YouTube storytelling.",
@@ -48,11 +52,13 @@ const serviceGroups = [
     ],
   },
   {
+    id: "automation-and-chatbots",
     title: "Automation and chatbots",
     description:
       "Always-on systems that handle conversations, nurture leads, and keep your team focused on high-value work.",
     services: [
       {
+        id: "chatbot-development",
         title: "Chatbot development (AI and Rule-based)",
         description:
           "Classic or Custom AI chatbot for Messenger, Instagram DM, WhatsApp, Telegram, and web widgets.",
@@ -65,6 +71,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "workflow-automation",
         title: "Workflow automation and drip campaigns",
         description:
           "Email-SMS sequences, lead scoring, & task automation across GHL, Klaviyo, Mailchimp, ActiveCampaign, or custom stacks.",
@@ -77,6 +84,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "appointment-automation",
         title: "Appointment & Calendar Automations",
         description:
           "Automated booking, confirmations, reminders, rescheduling, and no-show recovery across SMS, WhatsApp, and email.",
@@ -89,6 +97,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "ecommerce-automation",
         title: "E-commerce automations (Shopify-WooCommerce)",
         description:
           "Abandoned cart triggers, post-purchase nurture, loyalty loops, and product recommendations automations.",
@@ -101,6 +110,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "automation-templates",
         title: "Done-for-you Custom Templates",
         description:
           "Plug-and-play templates for lead gen, appointment scheduling, e-commerce follow-up, and event sign-ups.",
@@ -115,11 +125,13 @@ const serviceGroups = [
     ],
   },
   {
+    id: "lead-ops-crm",
     title: "Lead ops and CRM systems",
     description:
       "Connected pipelines, instant follow-up, and clean data so every lead gets handled the right way.",
     services: [
       {
+        id: "lead-capture",
         title: "Lead capture and channel sync",
         description:
           "Connect website forms, funnels, surveys, chat, missed-call text back, and social lead forms into one system.",
@@ -132,6 +144,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "appointment-booking",
         title: "Appointment booking and reminders",
         description:
           "Self-scheduling calendars with built-in confirmation and reminder sequences embedded in your website.",
@@ -144,6 +157,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "crm-pipeline",
         title: "CRM pipeline setup (GoHighLevel)",
         description:
           "GoHighLevel-based pipeline visibility with clear stages, lead assignments, and a unified inbox.",
@@ -156,6 +170,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "crm-integration",
         title: "CRM integration and data sync",
         description:
           "Integrate Salesforce, HubSpot, Zoho, Pipedrive, and custom CRMs with your marketing stack.",
@@ -168,6 +183,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "reporting-dashboards",
         title: "Reporting and performance dashboards",
         description:
           "Dashboards that connect ad spend, automation activity, and closed revenue across your entire funnel.",
@@ -182,11 +198,13 @@ const serviceGroups = [
     ],
   },
   {
+    id: "websites-and-funnels",
     title: "Websites and funnels",
     description:
       "Conversion-first digital experiences that turn traffic into leads and customers.",
     services: [
       {
+        id: "corporate-websites",
         title: "Corporate and business websites",
         description:
           "Multi-page websites that showcase your services, team, and proof.",
@@ -199,6 +217,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "ecommerce-storefronts",
         title: "E-commerce storefronts (Websites and Funnels)",
         description:
           "Shopify builds optimized for product discovery and conversion.",
@@ -211,6 +230,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "campaign-landing-pages",
         title: "Campaign landing pages (conversion-focused design)",
         description:
           "High-converting landing pages for ads, launches, or webinars.",
@@ -223,6 +243,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "content-hubs",
         title: "Content hubs and blogs",
         description:
           "SEO-friendly layouts and content workflows that help you publish consistently.",
@@ -235,6 +256,7 @@ const serviceGroups = [
         ctaHref: "/contact",
       },
       {
+        id: "custom-digital-experiences",
         title: "Custom digital experiences",
         description:
           "Membership portals, resource centers, interactive microsites, and bespoke builds.",
@@ -284,7 +306,11 @@ export default function PayPerService() {
 
           <div className="mt-16 space-y-16">
             {serviceGroups.map((group) => (
-              <div key={group.title} className="space-y-8">
+              <div
+                key={group.title}
+                id={group.id}
+                className="space-y-8 scroll-mt-28"
+              >
                 <div className="space-y-3">
                   <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
                     {group.title}
@@ -297,7 +323,8 @@ export default function PayPerService() {
                   {group.services.map((service) => (
                     <div
                       key={service.title}
-                      className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card"
+                      id={service.id}
+                      className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card scroll-mt-28"
                     >
                       <div className="flex flex-1 flex-col space-y-5">
                         <div className="space-y-2">

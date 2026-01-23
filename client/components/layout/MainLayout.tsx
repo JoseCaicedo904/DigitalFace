@@ -25,67 +25,100 @@ const megaNav = {
     {
       title: "Paid media and social advertising",
       icon: Megaphone,
-      to: "/pay-per-service",
+      to: "/pay-per-service#paid-media",
       links: [
-        { label: "Meta (Facebook and Instagram) ads", to: "/pay-per-service" },
-        { label: "TikTok ads", to: "/pay-per-service" },
-        { label: "Google and YouTube ads", to: "/pay-per-service" },
+        {
+          label: "Meta (Facebook and Instagram) ads",
+          to: "/pay-per-service#meta-ads",
+        },
+        { label: "TikTok ads", to: "/pay-per-service#tiktok-ads" },
+        {
+          label: "Google and YouTube ads",
+          to: "/pay-per-service#google-and-youtube-ads",
+        },
       ],
-      allTo: "/pay-per-service",
+      allTo: "/pay-per-service#paid-media",
     },
     {
       title: "Automation and chatbots",
       icon: Sparkles,
-      to: "/pay-per-service",
+      to: "/pay-per-service#automation-and-chatbots",
       links: [
         {
           label: "Chatbot development (AI and Rule-based)",
-          to: "/pay-per-service",
+          to: "/pay-per-service#chatbot-development",
         },
         {
           label: "Workflow automation and drip campaigns",
-          to: "/pay-per-service",
+          to: "/pay-per-service#workflow-automation",
         },
-        { label: "Appointment & Calendar Automations", to: "/pay-per-service" },
+        {
+          label: "Appointment & Calendar Automations",
+          to: "/pay-per-service#appointment-automation",
+        },
         {
           label: "E-commerce automations (Shopify-WooCommerce)",
-          to: "/pay-per-service",
+          to: "/pay-per-service#ecommerce-automation",
         },
-        { label: "Done-for-you Custom Templates", to: "/pay-per-service" },
+        {
+          label: "Done-for-you Custom Templates",
+          to: "/pay-per-service#automation-templates",
+        },
       ],
-      allTo: "/pay-per-service",
+      allTo: "/pay-per-service#automation-and-chatbots",
     },
     {
       title: "Lead ops and CRM systems",
       icon: BarChart3,
-      to: "/pay-per-service",
+      to: "/pay-per-service#lead-ops-crm",
       links: [
-        { label: "Lead capture and channel sync", to: "/pay-per-service" },
-        { label: "Appointment booking and reminders", to: "/pay-per-service" },
-        { label: "CRM pipeline setup (GoHighLevel)", to: "/pay-per-service" },
-        { label: "CRM integration and data sync", to: "/pay-per-service" },
-        { label: "Reporting and performance dashboards", to: "/pay-per-service" },
+        {
+          label: "Lead capture and channel sync",
+          to: "/pay-per-service#lead-capture",
+        },
+        {
+          label: "Appointment booking and reminders",
+          to: "/pay-per-service#appointment-booking",
+        },
+        {
+          label: "CRM pipeline setup (GoHighLevel)",
+          to: "/pay-per-service#crm-pipeline",
+        },
+        {
+          label: "CRM integration and data sync",
+          to: "/pay-per-service#crm-integration",
+        },
+        {
+          label: "Reporting and performance dashboards",
+          to: "/pay-per-service#reporting-dashboards",
+        },
       ],
-      allTo: "/pay-per-service",
+      allTo: "/pay-per-service#lead-ops-crm",
     },
     {
       title: "Websites and funnels",
       icon: Search,
-      to: "/pay-per-service",
+      to: "/pay-per-service#websites-and-funnels",
       links: [
-        { label: "Corporate and business websites", to: "/pay-per-service" },
+        {
+          label: "Corporate and business websites",
+          to: "/pay-per-service#corporate-websites",
+        },
         {
           label: "E-commerce storefronts (Websites and Funnels)",
-          to: "/pay-per-service",
+          to: "/pay-per-service#ecommerce-storefronts",
         },
         {
           label: "Campaign landing pages (conversion-focused design)",
-          to: "/pay-per-service",
+          to: "/pay-per-service#campaign-landing-pages",
         },
-        { label: "Content hubs and blogs", to: "/pay-per-service" },
-        { label: "Custom digital experiences", to: "/pay-per-service" },
+        { label: "Content hubs and blogs", to: "/pay-per-service#content-hubs" },
+        {
+          label: "Custom digital experiences",
+          to: "/pay-per-service#custom-digital-experiences",
+        },
       ],
-      allTo: "/pay-per-service",
+      allTo: "/pay-per-service#websites-and-funnels",
     },
   ],
 };
@@ -126,7 +159,10 @@ export default function MainLayout() {
           <nav className="hidden items-center gap-6 md:flex">
             {navItems.map((item) =>
               item.label === megaNav.label ? (
-                <div key={item.to} className="group">
+                <div
+                  key={item.to}
+                  className="group -my-4 flex items-center py-4"
+                >
                   <NavLink
                     to={item.to}
                     end={item.to === "/"}
@@ -134,7 +170,11 @@ export default function MainLayout() {
                   >
                     {item.label}
                   </NavLink>
-                  <div className="absolute left-0 top-full z-40 hidden w-full translate-y-2 pt-4 opacity-0 transition duration-200 ease-out pointer-events-none lg:block lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto">
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 lg:block lg:pointer-events-none lg:group-hover:pointer-events-auto lg:group-hover:opacity-100"
+                  />
+                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out lg:block lg:invisible lg:pointer-events-none lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                     <div className="rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card backdrop-blur-xl">
                       <div className="grid gap-8 lg:grid-cols-4">
                         {megaNav.categories.map((category) => {
@@ -143,7 +183,7 @@ export default function MainLayout() {
                             <div key={category.title} className="space-y-4">
                               <Link
                                 to={category.to}
-                                className="flex items-center gap-3 text-sm font-semibold text-ink-900 transition hover:text-brand-600"
+                                className="flex items-center gap-3 text-sm font-semibold text-ink-900 transition hover:text-brand-600 cursor-pointer"
                               >
                                 <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
                                   <Icon className="h-4 w-4" aria-hidden="true" />
@@ -155,7 +195,7 @@ export default function MainLayout() {
                                   <li key={link.to}>
                                     <Link
                                       to={link.to}
-                                      className="transition hover:text-brand-600"
+                                      className="transition hover:text-brand-600 cursor-pointer"
                                     >
                                       {link.label}
                                     </Link>
@@ -164,7 +204,7 @@ export default function MainLayout() {
                               </ul>
                               <Link
                                 to={category.allTo}
-                                className="inline-flex items-center text-sm font-semibold text-brand-600 transition hover:text-brand-700"
+                                className="inline-flex items-center text-sm font-semibold text-brand-600 transition hover:text-brand-700 cursor-pointer"
                               >
                                 {`All ${category.title} services ->`}
                               </Link>
