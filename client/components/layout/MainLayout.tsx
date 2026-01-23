@@ -44,7 +44,7 @@ const megaNav = {
       to: "/pay-per-service#automation-and-chatbots",
       links: [
         {
-          label: "Chatbot development (AI and Rule-based)",
+          label: "Chatbot development",
           to: "/pay-per-service#chatbot-development",
         },
         {
@@ -56,12 +56,8 @@ const megaNav = {
           to: "/pay-per-service#appointment-automation",
         },
         {
-          label: "E-commerce automations (Shopify-WooCommerce)",
+          label: "E-commerce automations",
           to: "/pay-per-service#ecommerce-automation",
-        },
-        {
-          label: "Done-for-you Custom Templates",
-          to: "/pay-per-service#automation-templates",
         },
       ],
       allTo: "/pay-per-service#automation-and-chatbots",
@@ -80,7 +76,7 @@ const megaNav = {
           to: "/pay-per-service#appointment-booking",
         },
         {
-          label: "CRM pipeline setup (GoHighLevel)",
+          label: "CRM pipeline setup",
           to: "/pay-per-service#crm-pipeline",
         },
         {
@@ -104,17 +100,12 @@ const megaNav = {
           to: "/pay-per-service#corporate-websites",
         },
         {
-          label: "E-commerce storefronts (Websites and Funnels)",
+          label: "E-commerce storefronts",
           to: "/pay-per-service#ecommerce-storefronts",
         },
         {
-          label: "Campaign landing pages (conversion-focused design)",
+          label: "Campaign landing pages",
           to: "/pay-per-service#campaign-landing-pages",
-        },
-        { label: "Content hubs and blogs", to: "/pay-per-service#content-hubs" },
-        {
-          label: "Custom digital experiences",
-          to: "/pay-per-service#custom-digital-experiences",
         },
       ],
       allTo: "/pay-per-service#websites-and-funnels",

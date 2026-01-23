@@ -25,7 +25,7 @@ const serviceGroups = [
       },
       {
         id: "tiktok-ads",
-        title: "TikTok ads",
+        title: (<> <br /> TikTok ads </>),
         description:
           "Native short-form video, spark ads, and creator collaborations built for the TikTok feed.",
         outcomes: [
@@ -38,7 +38,7 @@ const serviceGroups = [
       },
       {
         id: "google-ads",
-        title: "Google ads",
+        title: (<> <br /> Google ads </>),
         description:
           "Intent-driven search, display campaigns, and retargeting built to capture demand when customers are actively looking.",
         outcomes: [
