@@ -8,7 +8,7 @@ import { Clock3, Mail, MapPin, Sparkles } from "lucide-react";
 export default function Contact() {
   usePageMetadata(
     "Contact DigitalFace Marketing",
-    "Talk with DigitalFace Marketing about the Sales System and automated lead follow-up."
+    "Talk with DigitalFace Marketing about the Sales System and automated lead follow-up.",
   );
 
   return (
@@ -22,10 +22,11 @@ export default function Contact() {
             See the system in action.
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Send a quick message or book a demo. We reply within one business day.
+            Send a quick message or book a demo. We reply within one business
+            day.
           </p>
           <p className="mt-2 text-sm font-semibold text-brand-600">
-            Prefer email? sales@digitalfacemarketing.com
+            Let's Talk
           </p>
         </div>
       </section>
@@ -38,7 +39,9 @@ export default function Contact() {
                 <CardContent className="space-y-3 p-6">
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-brand-500" />
-                    <p className="text-sm font-semibold text-slate-900">Email</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Email
+                    </p>
                   </div>
                   <a
                     href="mailto:sales@digitalfacemarketing.com"
@@ -47,7 +50,8 @@ export default function Contact() {
                     sales@digitalfacemarketing.com
                   </a>
                   <p className="text-xs text-ink-400">
-                    Share your business type, lead volume, and what you want automated.
+                    Share your business type, lead volume, and what you want
+                    automated.
                   </p>
                 </CardContent>
               </Card>
@@ -55,9 +59,13 @@ export default function Contact() {
                 <CardContent className="space-y-3 p-6">
                   <div className="flex items-center gap-3">
                     <Clock3 className="h-5 w-5 text-brand-500" />
-                    <p className="text-sm font-semibold text-slate-900">Response time</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Response time
+                    </p>
                   </div>
-                  <p className="text-sm text-ink-500">Replies within one business day.</p>
+                  <p className="text-sm text-ink-500">
+                    Replies within one business day.
+                  </p>
                   <ol className="space-y-2 text-xs text-ink-400">
                     <li>1. We review your lead flow.</li>
                     <li>2. We demo the system for your business.</li>
@@ -69,12 +77,16 @@ export default function Contact() {
                 <CardContent className="space-y-3 p-6">
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-brand-500" />
-                    <p className="text-sm font-semibold text-slate-900">Where we work</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Where we work
+                    </p>
                   </div>
-                  <p className="text-sm text-ink-500">Miami, Florida + Cali, Colombia.</p>
+                  <p className="text-sm text-ink-500">
+                    Miami, Florida + Cali, Colombia.
+                  </p>
                   <p className="text-xs text-ink-400">
-                    Overlapping time zones keep communication smooth for North and South
-                    America.
+                    Overlapping time zones keep communication smooth for North
+                    and South America.
                   </p>
                 </CardContent>
               </Card>
@@ -82,7 +94,9 @@ export default function Contact() {
                 <CardContent className="space-y-3 p-6">
                   <div className="flex items-center gap-3">
                     <Sparkles className="h-5 w-5 text-brand-500" />
-                    <p className="text-sm font-semibold text-slate-900">What to include</p>
+                    <p className="text-sm font-semibold text-slate-900">
+                      What to include
+                    </p>
                   </div>
                   <ul className="space-y-2 text-xs text-ink-400">
                     <li>Business type and services offered.</li>
@@ -132,7 +146,8 @@ export default function Contact() {
                 <div className="space-y-3 rounded-2xl border border-dashed border-ink-200 bg-secondary/30 p-6 text-center text-sm font-semibold uppercase tracking-wide text-ink-400">
                   [CALENDAR_INTEGRATION_PLACEHOLDER]
                   <p className="text-xs font-normal normal-case text-ink-500">
-                    Embed a booking calendar here to let visitors schedule directly.
+                    Embed a booking calendar here to let visitors schedule
+                    directly.
                   </p>
                 </div>
                 <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
@@ -140,7 +155,10 @@ export default function Contact() {
                     <Sparkles className="h-5 w-5 text-brand-500" />
                     <p className="font-semibold">What happens next</p>
                   </div>
-                  <p>We review your note, map the automation flow, and bring a clear plan to your demo.</p>
+                  <p>
+                    We review your note, map the automation flow, and bring a
+                    clear plan to your demo.
+                  </p>
                 </div>
               </CardContent>
             </Card>
