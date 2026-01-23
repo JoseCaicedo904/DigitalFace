@@ -138,9 +138,13 @@ export default function MainLayout() {
       <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8 relative">
           <Link to="/" className="flex items-center gap-3">
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-ocean-500 text-white shadow-brand-soft">
-              <span className="text-lg font-semibold">DF</span>
-            </div>
+            <img
+              src="/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png"
+              alt="DigitalFace Marketing logo"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-2xl object-contain shadow-brand-soft"
+            />
             <div className="flex flex-col">
               <span className="text-lg font-semibold leading-tight">
                 DigitalFace Marketing
