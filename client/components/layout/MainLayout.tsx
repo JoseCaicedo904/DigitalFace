@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { BarChart3, Megaphone, Menu, Search, Sparkles, X } from "lucide-react";
 import {
   Link,
   NavLink,
@@ -18,6 +18,86 @@ const navItems = [
   { label: "Contact", to: "/contact" },
 ];
 
+const megaNav = {
+  label: "Pay per Service",
+  to: "/pay-per-service",
+  categories: [
+    {
+      title: "Paid media and social advertising",
+      icon: Megaphone,
+      to: "/pay-per-service",
+      links: [
+        { label: "Meta (Facebook and Instagram) ads", to: "/pay-per-service" },
+        { label: "TikTok ads", to: "/pay-per-service" },
+        { label: "Google and YouTube ads", to: "/pay-per-service" },
+      ],
+      allTo: "/pay-per-service",
+    },
+    {
+      title: "Automation and chatbots",
+      icon: Sparkles,
+      to: "/pay-per-service",
+      links: [
+        {
+          label: "Chatbot development (AI and Rule-based)",
+          to: "/pay-per-service",
+        },
+        {
+          label: "Workflow automation and drip campaigns",
+          to: "/pay-per-service",
+        },
+        { label: "Appointment & Calendar Automations", to: "/pay-per-service" },
+        {
+          label: "E-commerce automations (Shopify-WooCommerce)",
+          to: "/pay-per-service",
+        },
+        { label: "Done-for-you Custom Templates", to: "/pay-per-service" },
+      ],
+      allTo: "/pay-per-service",
+    },
+    {
+      title: "Lead ops and CRM systems",
+      icon: BarChart3,
+      to: "/pay-per-service",
+      links: [
+        { label: "Lead capture and channel sync", to: "/pay-per-service" },
+        { label: "Appointment booking and reminders", to: "/pay-per-service" },
+        { label: "CRM pipeline setup (GoHighLevel)", to: "/pay-per-service" },
+        { label: "CRM integration and data sync", to: "/pay-per-service" },
+        { label: "Reporting and performance dashboards", to: "/pay-per-service" },
+      ],
+      allTo: "/pay-per-service",
+    },
+    {
+      title: "Websites and funnels",
+      icon: Search,
+      to: "/pay-per-service",
+      links: [
+        { label: "Corporate and business websites", to: "/pay-per-service" },
+        {
+          label: "E-commerce storefronts (Websites and Funnels)",
+          to: "/pay-per-service",
+        },
+        {
+          label: "Campaign landing pages (conversion-focused design)",
+          to: "/pay-per-service",
+        },
+        { label: "Content hubs and blogs", to: "/pay-per-service" },
+        { label: "Custom digital experiences", to: "/pay-per-service" },
+      ],
+      allTo: "/pay-per-service",
+    },
+  ],
+};
+
+const desktopNavLinkClass = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    "relative text-sm font-medium text-ink-500 transition hover:text-brand-600",
+    isActive
+      ? "text-brand-600 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-brand-500"
+      : "after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-full after:bg-brand-500 after:transition-transform after:duration-300 hover:after:scale-x-100"
+  );
+
 export default function MainLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -29,7 +109,7 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.08),transparent_55%)] text-foreground">
       <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8 relative">
           <Link to="/" className="flex items-center gap-3">
             <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-ocean-500 text-white shadow-brand-soft">
               <span className="text-lg font-semibold">DF</span>
@@ -44,23 +124,68 @@ export default function MainLayout() {
             </div>
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === "/"}
-                className={({ isActive }) =>
-                  cn(
-                    "relative text-sm font-medium text-ink-500 transition hover:text-brand-600",
-                    isActive
-                      ? "text-brand-600 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-brand-500"
-                      : "after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-full after:bg-brand-500 after:transition-transform after:duration-300 hover:after:scale-x-100"
-                  )
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            {navItems.map((item) =>
+              item.label === megaNav.label ? (
+                <div key={item.to} className="group">
+                  <NavLink
+                    to={item.to}
+                    end={item.to === "/"}
+                    className={desktopNavLinkClass}
+                  >
+                    {item.label}
+                  </NavLink>
+                  <div className="absolute left-0 top-full z-40 hidden w-full translate-y-2 pt-4 opacity-0 transition duration-200 ease-out pointer-events-none lg:block lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-hover:pointer-events-auto">
+                    <div className="rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card backdrop-blur-xl">
+                      <div className="grid gap-8 lg:grid-cols-4">
+                        {megaNav.categories.map((category) => {
+                          const Icon = category.icon;
+                          return (
+                            <div key={category.title} className="space-y-4">
+                              <Link
+                                to={category.to}
+                                className="flex items-center gap-3 text-sm font-semibold text-ink-900 transition hover:text-brand-600"
+                              >
+                                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                                  <Icon className="h-4 w-4" aria-hidden="true" />
+                                </span>
+                                {category.title}
+                              </Link>
+                              <ul className="space-y-2 text-sm text-ink-500">
+                                {category.links.map((link) => (
+                                  <li key={link.to}>
+                                    <Link
+                                      to={link.to}
+                                      className="transition hover:text-brand-600"
+                                    >
+                                      {link.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                              <Link
+                                to={category.allTo}
+                                className="inline-flex items-center text-sm font-semibold text-brand-600 transition hover:text-brand-700"
+                              >
+                                {`All ${category.title} services ->`}
+                              </Link>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === "/"}
+                  className={desktopNavLinkClass}
+                >
+                  {item.label}
+                </NavLink>
+              )
+            )}
           </nav>
           <div className="hidden items-center gap-3 md:flex">
             <Button
