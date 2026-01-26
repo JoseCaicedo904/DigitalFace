@@ -215,6 +215,22 @@ const overviewFeatures = [
   },
 ];
 
+const values = [
+  {
+    title: "Clarity",
+    description:
+      "We keep the system simple, visible, and easy for small-to-middle teams to run.",
+  },
+  {
+    title: "Automation",
+    description: "We automate the busywork so you can focus on real work.",
+  },
+  {
+    title: "Support",
+    description: "We stay hands-on with updates, improvements, and training.",
+  },
+];
+
 const services = [
   {
     id: 1,
@@ -364,6 +380,36 @@ export default function Features() {
               />
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
+              How we operate
+            </span>
+            <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
+              Principles that keep the system simple
+            </h2>
+            <p className="mt-4 text-lg text-ink-500">
+              Clear communication, steady automation, and real support are
+              non-negotiable.
+            </p>
+          </div>
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
+              >
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {value.title}
+                </h3>
+                <p className="mt-3 text-sm text-ink-500">{value.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
