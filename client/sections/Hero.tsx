@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { corporateMedia } from "@/data/mediaSlots";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
@@ -42,20 +43,22 @@ export function Hero({
     <section
       className={cn(
         "relative flex min-h-[480px] items-center overflow-hidden bg-slate-950 py-16 sm:py-20 lg:min-h-[60vh] lg:py-24",
-        className
+        className,
       )}
     >
       {showVideo ? (
         <>
           <video
+            data-media-slot={corporateMedia.hero.id}
             className="absolute inset-0 z-0 h-full w-full object-cover"
-            src="/videos/digitalface-hero.mp4"
+            src={corporateMedia.hero.src}
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            poster="/images/hero-poster.jpg"
+            poster={corporateMedia.hero.poster}
+            aria-label={corporateMedia.hero.alt}
           />
           <div className="absolute inset-0 z-10 bg-black/50" />
         </>

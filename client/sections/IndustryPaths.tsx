@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, HeartPulse, Smile, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MediaSlot } from "@/components/media/MediaSlot";
+import { corporateMedia } from "@/data/mediaSlots";
 
 const industries = [
   {
@@ -12,6 +14,7 @@ const industries = [
     href: "/industries/dental-practices",
     icon: Smile,
     accent: "from-brand-600 to-violet-500",
+    media: corporateMedia.industryCards.dental,
   },
   {
     title: "Aesthetic Medicine",
@@ -22,6 +25,7 @@ const industries = [
     href: "/industries/aesthetic-medicine",
     icon: HeartPulse,
     accent: "from-fuchsia-500 to-brand-600",
+    media: corporateMedia.industryCards.aesthetic,
   },
   {
     title: "Med Spas",
@@ -32,6 +36,7 @@ const industries = [
     href: "/industries/med-spas",
     icon: Sparkles,
     accent: "from-ocean-500 to-cyan-400",
+    media: corporateMedia.industryCards.medSpa,
   },
 ];
 
@@ -78,7 +83,13 @@ export function IndustryPathsSection() {
                 <div
                   className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${industry.accent}`}
                 />
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white">
+                <MediaSlot
+                  spec={industry.media}
+                  aspectClassName="aspect-[16/9]"
+                  className="-mx-2 border-white/10 shadow-none"
+                  compact
+                />
+                <span className="mt-6 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white">
                   <Icon className="h-5 w-5" />
                 </span>
                 <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-ocean-200">

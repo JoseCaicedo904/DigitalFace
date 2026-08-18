@@ -6,6 +6,7 @@ import { TestimonialsSection } from "@/sections/Testimonials";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
 import { IndustryPathsSection } from "@/sections/IndustryPaths";
+import { SystemMediaSection } from "@/sections/SystemMedia";
 import { cn } from "@/lib/utils";
 import {
   CalendarCheck,
@@ -273,6 +274,7 @@ export default function Index() {
         description="Capture every inquiry, follow up instantly, and move leads to booked appointments without extra staff."
         features={features}
       />
+      <SystemMediaSection />
       <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">

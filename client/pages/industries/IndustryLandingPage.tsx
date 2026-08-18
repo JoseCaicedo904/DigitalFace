@@ -6,6 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
+import { MediaSlot } from "@/components/media/MediaSlot";
+import { clientMedia, industryMedia } from "@/data/mediaSlots";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import {
@@ -330,6 +332,7 @@ export default function IndustryLandingPage({
   const primaryStory = clientStories[data.proofLead];
   const secondaryStory =
     clientStories[data.proofLead === "diego" ? "jennifer" : "diego"];
+  const pageMedia = industryMedia[data.slug];
 
   usePageMetadata(data.metadata.title, data.metadata.description);
 
@@ -491,6 +494,29 @@ export default function IndustryLandingPage({
           </div>
         </section>
 
+        <section className="bg-slate-950 pb-12 sm:pb-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <MediaSlot
+              spec={pageMedia.hero}
+              aspectClassName="aspect-[16/10] sm:aspect-[21/8]"
+              className="border-white/15 shadow-2xl"
+              overlay={
+                <div className="flex h-full items-end bg-gradient-to-t from-slate-950/85 via-slate-950/5 to-transparent p-6 sm:p-9">
+                  <div className="max-w-2xl text-white">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
+                      {data.navLabel} · trust before conversion
+                    </p>
+                    <p className="mt-3 text-xl font-semibold sm:text-3xl">
+                      A premium visual moment designed around the real client
+                      journey.
+                    </p>
+                  </div>
+                </div>
+              }
+            />
+          </div>
+        </section>
+
         <section className="bg-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
@@ -556,6 +582,21 @@ export default function IndustryLandingPage({
                 ))}
               </div>
             </div>
+            <Reveal reducedMotion={reducedMotion} className="mt-14">
+              <MediaSlot
+                spec={pageMedia.workflow}
+                aspectClassName="aspect-[16/10] sm:aspect-[21/8]"
+                className="border-ink-100 shadow-brand-soft"
+                overlay={
+                  <div className="flex h-full items-end bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-6 sm:p-8">
+                    <p className="max-w-2xl text-lg font-semibold text-white sm:text-2xl">
+                      Technology organizes the opportunity. Your team owns the
+                      human relationship.
+                    </p>
+                  </div>
+                }
+              />
+            </Reveal>
           </div>
         </section>
 
@@ -685,6 +726,12 @@ export default function IndustryLandingPage({
                   delay={index * 0.08}
                 >
                   <article className="h-full rounded-3xl border border-brand-100 bg-white p-7 shadow-brand-card sm:p-8">
+                    <MediaSlot
+                      spec={clientMedia[story.id]}
+                      aspectClassName="aspect-[16/8]"
+                      className="mb-7 border-ink-100 shadow-none"
+                      compact
+                    />
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-700">
                         Success client
