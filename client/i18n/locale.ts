@@ -1,8 +1,29 @@
-export const LOCALES = ["en", "es"] as const;
+import {
+  LOCALE_COOKIE_KEY,
+  LOCALE_COOKIE_MAX_AGE,
+  isLocale,
+  localePath,
+  normalizePathname,
+  readCookieValue,
+  type Locale,
+} from "./geo";
 
-export type Locale = (typeof LOCALES)[number];
-
-export const DEFAULT_LOCALE: Locale = "en";
+/**
+ * Locale primitives live in `./geo` because the Vercel Edge Middleware imports them
+ * and cannot touch `import.meta.env` or the DOM. They are re-exported here so the
+ * rest of the app keeps importing from `@/i18n/locale` as before.
+ */
+export {
+  DEFAULT_LOCALE,
+  LOCALE_COOKIE_KEY,
+  LOCALE_COOKIE_MAX_AGE,
+  LOCALES,
+  getLocaleFromPathname,
+  isLocale,
+  localePath,
+  stripLocaleFromPathname,
+} from "./geo";
+export type { Locale } from "./geo";
 
 /** Only written after the visitor explicitly changes the language. */
 export const LOCALE_STORAGE_KEY = "digitalface.locale";
@@ -35,42 +56,6 @@ export const LOCALE_PREFIX: Record<Locale, string> = {
   es: "/es",
 };
 
-function normalize(pathname: string): string {
-  if (!pathname) return "/";
-  const withSlash = pathname.startsWith("/") ? pathname : `/${pathname}`;
-  if (withSlash.length > 1 && withSlash.endsWith("/")) {
-    return withSlash.slice(0, -1);
-  }
-  return withSlash;
-}
-
-export function isLocale(value: string): value is Locale {
-  return (LOCALES as readonly string[]).includes(value);
-}
-
-/** Reads the active locale from the URL. The URL is always the source of truth. */
-export function getLocaleFromPathname(pathname: string): Locale {
-  const [, first] = normalize(pathname).split("/");
-  return first === "es" ? "es" : DEFAULT_LOCALE;
-}
-
-/** "/es/pricing" -> "/pricing", "/es" -> "/", "/pricing" -> "/pricing" */
-export function stripLocaleFromPathname(pathname: string): string {
-  const normalized = normalize(pathname);
-  if (normalized === "/es") return "/";
-  if (normalized.startsWith("/es/")) {
-    return normalize(normalized.slice(3));
-  }
-  return normalized;
-}
-
-/** Builds a locale-aware href from a canonical (English) path. */
-export function localePath(locale: Locale, path: string): string {
-  const base = stripLocaleFromPathname(path || "/");
-  if (locale === DEFAULT_LOCALE) return base;
-  return base === "/" ? "/es" : `/es${base}`;
-}
-
 /**
  * Keeps the visitor on the equivalent page when switching languages,
  * preserving query string and hash.
@@ -85,14 +70,37 @@ export function swapLocaleInPath(
 }
 
 export function absoluteUrl(path: string): string {
-  return `${SITE_URL}${normalize(path)}`;
+  return `${SITE_URL}${normalizePathname(path)}`;
+}
+
+/**
+ * The middleware runs before any JavaScript exists, so it can only read cookies.
+ * Every write therefore lands in both stores and `readStoredLocale` reads them back
+ * in the same priority order, so the two can never drift apart.
+ */
+export function readLocaleCookie(): Locale | null {
+  if (typeof document === "undefined") return null;
+  const value = readCookieValue(document.cookie, LOCALE_COOKIE_KEY);
+  return isLocale(value) ? value : null;
+}
+
+export function writeLocaleCookie(locale: Locale): void {
+  if (typeof document === "undefined") return;
+  const secure =
+    typeof location !== "undefined" && location.protocol === "https:"
+      ? "; Secure"
+      : "";
+  document.cookie = `${LOCALE_COOKIE_KEY}=${locale}; Path=/; Max-Age=${LOCALE_COOKIE_MAX_AGE}; SameSite=Lax${secure}`;
 }
 
 export function readStoredLocale(): Locale | null {
+  const fromCookie = readLocaleCookie();
+  if (fromCookie) return fromCookie;
+
   if (typeof window === "undefined") return null;
   try {
     const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-    return stored && isLocale(stored) ? stored : null;
+    return isLocale(stored) ? stored : null;
   } catch {
     return null;
   }
@@ -100,6 +108,9 @@ export function readStoredLocale(): Locale | null {
 
 export function storeLocale(locale: Locale): void {
   if (typeof window === "undefined") return;
+
+  writeLocaleCookie(locale);
+
   try {
     window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   } catch {

@@ -36,6 +36,8 @@
     "client/**/*",
     "server/**/*",
     "shared/**/*",
+    "middleware.ts",
+    "middleware.test.ts",
     "vite.config.ts",
     "vite.config.server.ts"
   ],
