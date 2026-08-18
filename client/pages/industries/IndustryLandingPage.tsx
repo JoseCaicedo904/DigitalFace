@@ -7,7 +7,9 @@ import {
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
+import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { clientMedia, industryMedia } from "@/data/mediaSlots";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import {
@@ -27,7 +29,17 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import type { IndustryLandingData, IndustryPackage } from "./industryData";
+import {
+  getClientStories,
+  getIndustryData,
+  getIndustryUi,
+} from "./industryData";
+import type {
+  IndustryLandingData,
+  IndustryPackage,
+  IndustrySlug,
+  IndustryUiCopy,
+} from "./industryTypes";
 
 type RevealProps = {
   children: ReactNode;
@@ -38,15 +50,8 @@ type RevealProps = {
 
 type PackageCardProps = {
   plan: IndustryPackage;
+  ui: IndustryUiCopy;
   reducedMotion: boolean;
-};
-
-type ClientStory = {
-  id: "diego" | "jennifer";
-  name: string;
-  sector: string;
-  summary: string;
-  delivered: string[];
 };
 
 const revealVariants: Variants = {
@@ -55,35 +60,6 @@ const revealVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.55, ease: "easeOut" },
-  },
-};
-
-const clientStories: Record<ClientStory["id"], ClientStory> = {
-  diego: {
-    id: "diego",
-    name: "Dr. Diego Sinisterra",
-    sector: "Aesthetic Medicine",
-    summary:
-      "A connected patient-communication and appointment system designed around aesthetic consultation workflows.",
-    delivered: [
-      "Bilingual AI patient communication",
-      "Appointment booking and lifecycle automation",
-      "Facebook and Instagram comment-response engine",
-      "CRM ownership, error handling, and human takeover",
-    ],
-  },
-  jennifer: {
-    id: "jennifer",
-    name: "Dra. Jennifer Sinisterra",
-    sector: "Cosmetic Dentistry & International Patients",
-    summary:
-      "A bilingual patient-intake system connecting WhatsApp communication, CRM visibility, media intake, and human review.",
-    delivered: [
-      "English and Spanish AI communication",
-      "Patient photo and document intake",
-      "Chatwoot, CRM, and Drive synchronization",
-      "Human review tasks and controlled AI handoff",
-    ],
   },
 };
 
@@ -150,7 +126,7 @@ function SectionHeading({
   );
 }
 
-function PackageCard({ plan, reducedMotion }: PackageCardProps) {
+function PackageCard({ plan, ui, reducedMotion }: PackageCardProps) {
   return (
     <motion.article
       whileHover={reducedMotion ? undefined : { y: -8 }}
@@ -164,11 +140,11 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
     >
       {plan.featured ? (
         <span className="absolute right-6 top-0 rounded-b-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
-          Most popular
+          {ui.packages.mostPopular}
         </span>
       ) : null}
 
-      <div className="pr-20">
+      <div className="pr-24">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
           {plan.name}
         </p>
@@ -181,7 +157,9 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
         <span className="text-4xl font-semibold tracking-tight text-slate-900">
           {plan.price}
         </span>
-        <span className="text-sm font-medium text-ink-500">/month</span>
+        <span className="text-sm font-medium text-ink-500">
+          {ui.packages.perMonth}
+        </span>
       </div>
       <p className="mt-1 text-xs font-medium text-ink-400">+ {plan.setup}</p>
       <p className="mt-5 min-h-[4.5rem] text-sm leading-relaxed text-ink-500">
@@ -202,7 +180,7 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
 
       <div className="mt-6">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400">
-          Expand every inclusion
+          {ui.packages.expandLabel}
         </p>
         <Accordion type="single" collapsible className="mt-2">
           {plan.details.map((detail, index) => (
@@ -224,7 +202,7 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
 
       <div className="mt-6 border-t border-ink-100 pt-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400">
-          Ideal for
+          {ui.packages.idealFor}
         </p>
         <p className="mt-2 text-sm leading-relaxed text-ink-500">
           {plan.idealFor}
@@ -235,7 +213,7 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
         <Button
           asChild
           className={cn(
-            "w-full rounded-xl px-5 py-4 text-sm font-semibold",
+            "h-auto w-full whitespace-normal rounded-xl px-5 py-4 text-center text-sm font-semibold leading-snug",
             plan.featured
               ? "bg-gradient-to-r from-brand-600 to-ocean-500 text-white shadow-brand-soft"
               : "bg-slate-950 text-white hover:bg-slate-800",
@@ -248,24 +226,30 @@ function PackageCard({ plan, reducedMotion }: PackageCardProps) {
         </Button>
         <a
           href="#custom-proposal"
-          className="flex items-center justify-center gap-2 rounded-xl border border-ink-200 px-5 py-3 text-sm font-semibold text-ink-600 transition hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700"
+          className="flex items-center justify-center gap-2 rounded-xl border border-ink-200 px-5 py-3 text-center text-sm font-semibold text-ink-600 transition hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700"
         >
-          Request a custom proposal
-          <FileText className="h-4 w-4" />
+          {ui.packages.customProposal}
+          <FileText className="h-4 w-4 shrink-0" />
         </a>
       </div>
     </motion.article>
   );
 }
 
-function ClosedLandingHeader({ data }: { data: IndustryLandingData }) {
+function ClosedLandingHeader({
+  data,
+  ui,
+}: {
+  data: IndustryLandingData;
+  ui: IndustryUiCopy;
+}) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/70 bg-white/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3">
           <img
             src="/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png"
-            alt="DigitalFace Marketing"
+            alt={ui.header.logoAlt}
             width={42}
             height={42}
             className="h-10 w-10 shrink-0 rounded-xl object-contain shadow-brand-soft"
@@ -279,19 +263,30 @@ function ClosedLandingHeader({ data }: { data: IndustryLandingData }) {
             </p>
           </div>
         </div>
-        <a
-          href="#book-assessment"
-          className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-4 py-2.5 text-xs font-semibold text-white shadow-brand-soft transition hover:-translate-y-0.5 sm:px-5 sm:text-sm"
-        >
-          Book assessment
-          <ArrowRight className="hidden h-4 w-4 sm:block" />
-        </a>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <LanguageSwitcher showIcon={false} className="p-0.5" />
+          <a
+            href="#book-assessment"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-3.5 py-2.5 text-xs font-semibold text-white shadow-brand-soft transition hover:-translate-y-0.5 sm:px-5 sm:text-sm"
+          >
+            {ui.header.bookAssessment}
+            <ArrowRight className="hidden h-4 w-4 sm:block" />
+          </a>
+        </div>
       </div>
     </header>
   );
 }
 
-function ClosedLandingFooter({ data }: { data: IndustryLandingData }) {
+function ClosedLandingFooter({
+  data,
+  ui,
+}: {
+  data: IndustryLandingData;
+  ui: IndustryUiCopy;
+}) {
+  const { path } = useLocale();
+
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-28 pt-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 md:py-10 lg:px-8">
@@ -310,35 +305,37 @@ function ClosedLandingFooter({ data }: { data: IndustryLandingData }) {
         </div>
         <div className="flex flex-wrap items-center gap-5 text-xs text-white/60">
           <span>© {new Date().getFullYear()} DigitalFace Marketing</span>
-          <Link className="transition hover:text-white" to="/privacy">
-            Privacy
+          <Link className="transition hover:text-white" to={path("/privacy")}>
+            {ui.footer.privacy}
           </Link>
-          <Link className="transition hover:text-white" to="/terms">
-            Terms
+          <Link className="transition hover:text-white" to={path("/terms")}>
+            {ui.footer.terms}
           </Link>
+          <LanguageSwitcher tone="dark" showIcon={false} className="p-0.5" />
         </div>
       </div>
     </footer>
   );
 }
 
-export default function IndustryLandingPage({
-  data,
-}: {
-  data: IndustryLandingData;
-}) {
+export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
+  const { locale } = useLocale();
   const prefersReducedMotion = useReducedMotion();
   const reducedMotion = Boolean(prefersReducedMotion);
-  const primaryStory = clientStories[data.proofLead];
+
+  const data = getIndustryData(locale, slug);
+  const ui = getIndustryUi(locale);
+  const stories = getClientStories(locale);
+  const primaryStory = stories[data.proofLead];
   const secondaryStory =
-    clientStories[data.proofLead === "diego" ? "jennifer" : "diego"];
+    stories[data.proofLead === "diego" ? "jennifer" : "diego"];
   const pageMedia = industryMedia[data.slug];
 
   usePageMetadata(data.metadata.title, data.metadata.description);
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <ClosedLandingHeader data={data} />
+      <ClosedLandingHeader data={data} ui={ui} />
 
       <main>
         <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
@@ -373,17 +370,17 @@ export default function IndustryLandingPage({
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Button
                   asChild
-                  className="rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-7 py-4 text-base font-semibold text-white shadow-brand-soft transition hover:-translate-y-0.5"
+                  className="h-auto whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-7 py-4 text-center text-base font-semibold leading-snug text-white shadow-brand-soft transition hover:-translate-y-0.5"
                 >
                   <a href="#book-assessment">
                     {data.hero.primaryCta}
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </a>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-xl border-white/25 bg-white/5 px-7 py-4 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
+                  className="h-auto whitespace-normal rounded-xl border-white/25 bg-white/5 px-7 py-4 text-center text-base font-semibold leading-snug text-white hover:bg-white/10 hover:text-white"
                 >
                   <a href="#system">{data.hero.secondaryCta}</a>
                 </Button>
@@ -419,13 +416,13 @@ export default function IndustryLandingPage({
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                      Live system view
+                      {ui.heroVisual.label}
                     </p>
                     <h2 className="mt-2 text-xl font-semibold text-white">
                       {data.hero.visualTitle}
                     </h2>
                   </div>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-ocean-200">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-ocean-200">
                     <LineChart className="h-5 w-5" />
                   </span>
                 </div>
@@ -471,7 +468,7 @@ export default function IndustryLandingPage({
                           {stage}
                         </p>
                         <p className="mt-1 text-xs text-white/50">
-                          Stage {index + 1} synchronized
+                          {ui.heroVisual.stage} {index + 1}
                         </p>
                       </div>
                       <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-300" />
@@ -482,11 +479,11 @@ export default function IndustryLandingPage({
                 <div className="mt-6 grid grid-cols-2 gap-3 text-xs text-white/65">
                   <div className="rounded-xl border border-white/10 bg-white/5 p-3">
                     <Languages className="mb-2 h-4 w-4 text-ocean-200" />
-                    English + Spanish
+                    {ui.heroVisual.bilingual}
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-3">
                     <HeartHandshake className="mb-2 h-4 w-4 text-brand-200" />
-                    Human takeover ready
+                    {ui.heroVisual.handover}
                   </div>
                 </div>
               </div>
@@ -504,11 +501,10 @@ export default function IndustryLandingPage({
                 <div className="flex h-full items-end bg-gradient-to-t from-slate-950/85 via-slate-950/5 to-transparent p-6 sm:p-9">
                   <div className="max-w-2xl text-white">
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                      {data.navLabel} · trust before conversion
+                      {data.navLabel} · {ui.heroMedia.eyebrow}
                     </p>
                     <p className="mt-3 text-xl font-semibold sm:text-3xl">
-                      A premium visual moment designed around the real client
-                      journey.
+                      {ui.heroMedia.title}
                     </p>
                   </div>
                 </div>
@@ -520,7 +516,11 @@ export default function IndustryLandingPage({
         <section className="bg-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading {...data.problem} />
+              <SectionHeading
+                eyebrow={data.problem.eyebrow}
+                title={data.problem.title}
+                description={data.problem.description}
+              />
             </Reveal>
             <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {data.problem.items.map((item, index) => {
@@ -555,7 +555,11 @@ export default function IndustryLandingPage({
         <section className="overflow-hidden bg-gradient-to-b from-secondary/35 via-white to-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading {...data.journey} />
+              <SectionHeading
+                eyebrow={data.journey.eyebrow}
+                title={data.journey.title}
+                description={data.journey.description}
+              />
             </Reveal>
             <div className="relative mt-16">
               <div className="absolute bottom-0 left-6 top-0 w-px bg-gradient-to-b from-brand-300 via-ocean-300 to-emerald-300 lg:bottom-auto lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-auto" />
@@ -590,8 +594,7 @@ export default function IndustryLandingPage({
                 overlay={
                   <div className="flex h-full items-end bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-6 sm:p-8">
                     <p className="max-w-2xl text-lg font-semibold text-white sm:text-2xl">
-                      Technology organizes the opportunity. Your team owns the
-                      human relationship.
+                      {ui.workflowOverlay}
                     </p>
                   </div>
                 }
@@ -606,7 +609,12 @@ export default function IndustryLandingPage({
         >
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading {...data.capabilities} inverted />
+              <SectionHeading
+                eyebrow={data.capabilities.eyebrow}
+                title={data.capabilities.title}
+                description={data.capabilities.description}
+                inverted
+              />
             </Reveal>
             <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {data.capabilities.items.map((item, index) => {
@@ -642,8 +650,7 @@ export default function IndustryLandingPage({
               className="mt-10 rounded-2xl border border-ocean-300/20 bg-ocean-400/10 p-5 text-center text-sm text-white/75"
             >
               <ShieldCheck className="mr-2 inline h-5 w-5 text-ocean-200" />
-              DigitalFace automates administrative communication and business
-              workflows. Licensed professionals retain clinical responsibility.
+              {ui.capabilitiesDisclaimer}
             </Reveal>
           </div>
         </section>
@@ -655,20 +662,24 @@ export default function IndustryLandingPage({
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
               <SectionHeading
-                eyebrow="Three growth levels"
-                title={`Choose the ${data.industryLabel.toLowerCase()} that fits where you are today.`}
-                description="Every package is implemented and managed by DigitalFace. Expand each inclusion to see the operating scope behind the headline."
+                eyebrow={ui.packages.eyebrow}
+                title={data.packagesTitle}
+                description={ui.packages.description}
               />
             </Reveal>
             <div className="mt-14 grid items-stretch gap-7 lg:grid-cols-3">
               {data.packages.map((plan, index) => (
                 <Reveal
-                  key={plan.name}
+                  key={plan.nicheName}
                   reducedMotion={reducedMotion}
                   delay={index * 0.08}
                   className="h-full"
                 >
-                  <PackageCard plan={plan} reducedMotion={reducedMotion} />
+                  <PackageCard
+                    plan={plan}
+                    ui={ui}
+                    reducedMotion={reducedMotion}
+                  />
                 </Reveal>
               ))}
             </div>
@@ -676,10 +687,7 @@ export default function IndustryLandingPage({
               reducedMotion={reducedMotion}
               className="mt-10 rounded-3xl border border-ink-100 bg-ink-50/70 p-6 text-center text-sm leading-relaxed text-ink-500"
             >
-              Advertising budget is paid directly by the client. Messaging, AI,
-              telephony, and unusual third-party consumption may be billed
-              separately according to the approved scope. Professional photo and
-              video production is not included.
+              {ui.packages.footnote}
             </Reveal>
           </div>
         </section>
@@ -688,7 +696,7 @@ export default function IndustryLandingPage({
           <div className="mx-auto flex max-w-6xl flex-col gap-7 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <Reveal reducedMotion={reducedMotion} className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
-                Beyond the standard package
+                {ui.proposalBand.eyebrow}
               </p>
               <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
                 {data.booking.proposalTitle}
@@ -703,7 +711,7 @@ export default function IndustryLandingPage({
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-sm font-semibold text-brand-700 shadow-xl transition hover:-translate-y-0.5"
               >
                 {data.booking.proposalCta}
-                <FileText className="h-4 w-4" />
+                <FileText className="h-4 w-4 shrink-0" />
               </a>
             </Reveal>
           </div>
@@ -713,9 +721,9 @@ export default function IndustryLandingPage({
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
               <SectionHeading
-                eyebrow="Systems delivered"
-                title="Real operating experience behind the DigitalFace system."
-                description="Two active client systems demonstrate the communication, appointment, CRM, and human-handoff capabilities used across these growth packages."
+                eyebrow={ui.proof.eyebrow}
+                title={ui.proof.title}
+                description={ui.proof.description}
               />
             </Reveal>
             <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -734,7 +742,7 @@ export default function IndustryLandingPage({
                     />
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-700">
-                        Success client
+                        {ui.proof.activeLabel}
                       </span>
                       <span className="text-xs font-medium text-ink-400">
                         {story.sector}
@@ -772,14 +780,13 @@ export default function IndustryLandingPage({
                       <UserRoundCheck className="h-5 w-5" />
                     </span>
                     <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
-                      Client success slot {slot}
+                      {ui.proof.slotLabel} {slot}
                     </p>
                     <h3 className="mt-3 text-xl font-semibold text-slate-900">
-                      Reserved for the next growth story
+                      {ui.proof.slotTitle}
                     </h3>
                     <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-500">
-                      This space is ready for a verified client result, system
-                      summary, and approved proof as DigitalFace expands.
+                      {ui.proof.slotDescription}
                     </p>
                   </article>
                 </Reveal>
@@ -792,9 +799,9 @@ export default function IndustryLandingPage({
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
               <SectionHeading
-                eyebrow="Questions before you book"
-                title={`What ${data.navLabel.toLowerCase()} usually ask us.`}
-                description="Clear answers about how DigitalFace fits your team, patient journey, and operating boundaries."
+                eyebrow={ui.faq.eyebrow}
+                title={data.faqTitle}
+                description={data.booking.description}
               />
             </Reveal>
             <Reveal reducedMotion={reducedMotion} className="mt-12">
@@ -829,7 +836,7 @@ export default function IndustryLandingPage({
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
               <SectionHeading
-                eyebrow="Choose your next step"
+                eyebrow={ui.booking.eyebrow}
                 title={data.booking.title}
                 description={data.booking.description}
                 inverted
@@ -842,28 +849,27 @@ export default function IndustryLandingPage({
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                        Growth assessment
+                        {ui.booking.assessmentLabel}
                       </p>
                       <h3 className="mt-3 text-2xl font-semibold text-white">
                         {data.booking.assessmentCta}
                       </h3>
                     </div>
-                    <CalendarDays className="h-7 w-7 text-ocean-200" />
+                    <CalendarDays className="h-7 w-7 shrink-0 text-ocean-200" />
                   </div>
                   <div
                     data-embed-slot={data.booking.calendlySlot}
-                    aria-label="Calendly embed placeholder"
+                    aria-label={ui.booking.calendlyAria}
                     className="mt-7 flex min-h-[360px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-white/20 bg-slate-950/35 p-8 text-center"
                   >
                     <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ocean-400/15 text-ocean-200">
                       <Clock3 className="h-6 w-6" />
                     </span>
                     <p className="mt-5 text-sm font-semibold text-white">
-                      Calendly embed slot ready
+                      {ui.booking.calendlyTitle}
                     </p>
                     <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/55">
-                      Replace this block with the approved Calendly embed to
-                      keep scheduling inside this landing page.
+                      {ui.booking.calendlyHint}
                     </p>
                     <code className="mt-5 rounded-lg bg-white/10 px-3 py-2 text-[11px] text-ocean-100">
                       {data.booking.calendlySlot}
@@ -880,20 +886,20 @@ export default function IndustryLandingPage({
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
-                        Custom scope
+                        {ui.booking.customScopeLabel}
                       </p>
                       <h3 className="mt-3 text-2xl font-semibold text-white">
                         {data.booking.proposalTitle}
                       </h3>
                     </div>
-                    <FileText className="h-7 w-7 text-brand-200" />
+                    <FileText className="h-7 w-7 shrink-0 text-brand-200" />
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-white/65">
                     {data.booking.proposalDescription}
                   </p>
                   <div
                     data-form-slot={data.booking.formSlot}
-                    aria-label="Custom proposal form placeholder"
+                    aria-label={ui.booking.formAria}
                     className="mt-7 min-h-[300px] rounded-2xl border-2 border-dashed border-white/20 bg-slate-950/35 p-6"
                   >
                     <div className="space-y-4" aria-hidden="true">
@@ -907,11 +913,10 @@ export default function IndustryLandingPage({
                     </div>
                     <div className="mt-5 text-center">
                       <p className="text-sm font-semibold text-white">
-                        Custom proposal form slot ready
+                        {ui.booking.formTitle}
                       </p>
                       <p className="mt-2 text-xs leading-relaxed text-white/50">
-                        Replace this block with the approved form embed or
-                        connected submission component.
+                        {ui.booking.formHint}
                       </p>
                       <code className="mt-4 inline-block rounded-lg bg-white/10 px-3 py-2 text-[11px] text-brand-100">
                         {data.booking.formSlot}
@@ -920,9 +925,7 @@ export default function IndustryLandingPage({
                   </div>
                   <div className="mt-6 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/55">
                     <LockKeyhole className="mt-0.5 h-4 w-4 shrink-0 text-brand-200" />
-                    The final form should collect only the information required
-                    to scope the request and link to the published privacy
-                    policy.
+                    {ui.booking.privacyNote}
                   </div>
                 </article>
               </Reveal>
@@ -931,14 +934,14 @@ export default function IndustryLandingPage({
         </section>
       </main>
 
-      <ClosedLandingFooter data={data} />
+      <ClosedLandingFooter data={data} ui={ui} />
 
       <a
         href="#book-assessment"
         className="fixed bottom-4 left-4 right-4 z-40 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-5 py-4 text-sm font-semibold text-white shadow-2xl md:hidden"
       >
-        Book growth assessment
-        <ArrowRight className="h-4 w-4" />
+        {ui.mobileCta}
+        <ArrowRight className="h-4 w-4 shrink-0" />
       </a>
     </div>
   );

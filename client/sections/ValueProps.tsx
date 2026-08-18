@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+type ValuePropsLabels = {
+  status: string;
+  stage: string;
+  outputs: string;
+  live: string;
+};
+
 type ValuePoint = {
   title: string;
   description: string;
@@ -15,7 +22,15 @@ interface ValueProps {
   media?: ReactNode;
   className?: string;
   variant?: "default" | "system-flow";
+  labels?: ValuePropsLabels;
 }
+
+const fallbackLabels: ValuePropsLabels = {
+  status: "System status: live and optimizing",
+  stage: "Stage",
+  outputs: "System outputs",
+  live: "Live",
+};
 
 export function ValuePropsSection({
   eyebrow,
@@ -25,13 +40,16 @@ export function ValuePropsSection({
   media,
   className,
   variant = "default",
+  labels,
 }: ValueProps) {
+  const text = labels ?? fallbackLabels;
+
   if (variant === "system-flow") {
     return (
       <section
         className={cn(
           "relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28",
-          className
+          className,
         )}
       >
         <div className="pointer-events-none absolute inset-0">
@@ -60,8 +78,8 @@ export function ValuePropsSection({
                 <span className="absolute inset-0 rounded-full bg-brand-400/70 motion-safe:animate-ping" />
                 <span className="relative h-2.5 w-2.5 rounded-full bg-brand-400" />
               </span>
-                System status: live and optimizing
-              </div>
+              {text.status}
+            </div>
             <div className="relative">
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute left-5 top-0 h-full w-px bg-white/15 lg:hidden" />
@@ -72,14 +90,17 @@ export function ValuePropsSection({
               </div>
               <ol className="grid gap-10 lg:grid-cols-4 lg:gap-8">
                 {points.map((point, index) => (
-                  <li key={point.title} className="relative pl-14 lg:pl-0 lg:pt-12">
+                  <li
+                    key={point.title}
+                    className="relative pl-14 lg:pl-0 lg:pt-12"
+                  >
                     <span className="absolute left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xs font-semibold text-white/80 lg:left-1/2 lg:-translate-x-1/2">
                       0{index + 1}
                     </span>
                     <div className="space-y-4">
                       <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
                         <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[10px] text-white/70">
-                          {point.badge ?? `Stage 0${index + 1}`}
+                          {point.badge ?? `${text.stage} 0${index + 1}`}
                         </span>
                         <div className="h-px flex-1 bg-gradient-to-r from-white/30 via-white/10 to-transparent motion-safe:animate-shimmer" />
                       </div>
@@ -99,12 +120,12 @@ export function ValuePropsSection({
                   <li className="relative pl-14 lg:col-span-4 lg:pl-0 lg:pt-10 lg:before:absolute lg:before:left-1/2 lg:before:-top-5 lg:before:h-8 lg:before:w-px lg:before:bg-white/15 lg:before:content-['']">
                     <div className="flex items-start gap-5">
                       <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70">
-                        Live
+                        {text.live}
                       </span>
                       <div className="flex-1 space-y-5">
                         <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-white/60">
                           <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[10px] text-white/70">
-                            System outputs
+                            {text.outputs}
                           </span>
                           <div className="h-px flex-1 bg-gradient-to-r from-white/30 via-white/10 to-transparent motion-safe:animate-shimmer" />
                         </div>
@@ -125,7 +146,7 @@ export function ValuePropsSection({
     <section
       className={cn(
         "relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28",
-        className
+        className,
       )}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.18),transparent_60%)] opacity-70" />

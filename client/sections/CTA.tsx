@@ -31,7 +31,7 @@ export function CtaSection({
       id={id}
       className={cn(
         "relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-ocean-500 py-20 text-white sm:py-24 lg:py-28",
-        className
+        className,
       )}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.25),transparent_55%)] opacity-70" />
@@ -41,9 +41,7 @@ export function CtaSection({
             {eyebrow}
           </span>
         ) : null}
-        <h2 className="mt-6 text-3xl font-semibold sm:text-4xl">
-          {title}
-        </h2>
+        <h2 className="mt-6 text-3xl font-semibold sm:text-4xl">{title}</h2>
         {description ? (
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/85">
             {description}
@@ -52,7 +50,7 @@ export function CtaSection({
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button
             asChild
-            className="rounded-xl bg-white px-8 py-4 text-base font-semibold text-brand-600 shadow-brand-soft transition-transform hover:-translate-y-0.5 hover:bg-white hover:text-brand-600"
+            className="h-auto whitespace-normal rounded-xl bg-white px-8 py-4 text-center text-base font-semibold leading-snug text-brand-600 shadow-brand-soft transition-transform hover:-translate-y-0.5 hover:bg-white hover:text-brand-600"
           >
             <Link to={primaryCta.href}>{primaryCta.label}</Link>
           </Button>
@@ -60,7 +58,7 @@ export function CtaSection({
             <Button
               asChild
               variant="outline"
-              className="rounded-xl border border-white/60 bg-transparent px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10"
+              className="h-auto whitespace-normal rounded-xl border border-white/60 bg-transparent px-8 py-4 text-center text-base font-semibold leading-snug text-white transition hover:bg-white/10"
             >
               <Link to={secondaryCta.href}>{secondaryCta.label}</Link>
             </Button>

@@ -2,9 +2,13 @@ import { MediaSlot } from "@/components/media/MediaSlot";
 import { corporateMedia } from "@/data/mediaSlots";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { homeContent } from "@/i18n/content/home";
 
 export function SystemMediaSection() {
   const prefersReducedMotion = useReducedMotion();
+  const { locale } = useLocale();
+  const t = homeContent[locale].systemMedia;
 
   return (
     <section className="bg-white py-20 sm:py-24 lg:py-28">
@@ -16,14 +20,13 @@ export function SystemMediaSection() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="inline-flex rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-            One connected operating system
+            {t.eyebrow}
           </span>
           <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Show the journey. Make the system feel tangible.
+            {t.title}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-ink-500 sm:text-lg">
-            This media position is designed for a concise visual story—from
-            first inquiry to response, booking, and pipeline visibility.
+            {t.description}
           </p>
         </motion.div>
 
@@ -44,11 +47,10 @@ export function SystemMediaSection() {
               <div className="flex h-full items-end bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent p-6 sm:p-9">
                 <div className="max-w-2xl text-white">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                    Inquiry → response → booking → visibility
+                    {t.overlayEyebrow}
                   </p>
                   <p className="mt-3 text-xl font-semibold sm:text-3xl">
-                    Every opportunity moves through one connected DigitalFace
-                    journey.
+                    {t.overlayTitle}
                   </p>
                 </div>
                 <ArrowDownRight className="ml-auto hidden h-8 w-8 text-white/70 sm:block" />

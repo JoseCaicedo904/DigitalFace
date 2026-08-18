@@ -3,45 +3,38 @@ import { ArrowRight, HeartPulse, Smile, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { MediaSlot } from "@/components/media/MediaSlot";
 import { corporateMedia } from "@/data/mediaSlots";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { homeContent } from "@/i18n/content/home";
+import { industryHref } from "@/pages/industries/industryData";
 
-const industries = [
+const industryLayout = [
   {
-    title: "Dental Practices",
-    eyebrow: "Implants · Veneers · Smile design",
-    description:
-      "A patient-acquisition and consultation system built around high-value dental treatment journeys.",
-    outcome: "Convert more treatment inquiries into organized consultations.",
-    href: "/industries/dental-practices",
+    key: "dental",
+    slug: "dental-practices",
     icon: Smile,
     accent: "from-brand-600 to-violet-500",
     media: corporateMedia.industryCards.dental,
   },
   {
-    title: "Aesthetic Medicine",
-    eyebrow: "Injectables · Body · Skin",
-    description:
-      "A bilingual lead-to-consultation experience for physicians and aesthetic treatment teams.",
-    outcome: "Respond faster while keeping clinical decisions with your team.",
-    href: "/industries/aesthetic-medicine",
+    key: "aesthetic",
+    slug: "aesthetic-medicine",
     icon: HeartPulse,
     accent: "from-fuchsia-500 to-brand-600",
     media: corporateMedia.industryCards.aesthetic,
   },
   {
-    title: "Med Spas",
-    eyebrow: "Memberships · Packages · Reactivation",
-    description:
-      "An always-on booking and nurture system for recurring services, promotions, and client reactivation.",
-    outcome: "Turn inquiries and dormant contacts into booked opportunities.",
-    href: "/industries/med-spas",
+    key: "medSpa",
+    slug: "med-spas",
     icon: Sparkles,
     accent: "from-ocean-500 to-cyan-400",
     media: corporateMedia.industryCards.medSpa,
   },
-];
+] as const;
 
 export function IndustryPathsSection() {
   const prefersReducedMotion = useReducedMotion();
+  const { locale, path } = useLocale();
+  const t = homeContent[locale].industryPaths;
 
   return (
     <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
@@ -54,23 +47,24 @@ export function IndustryPathsSection() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-200">
-            Industry growth systems
+            {t.eyebrow}
           </span>
           <h2 className="mt-6 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Start with the DigitalFace system built for your patient journey.
+            {t.title}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/65 sm:text-lg">
-            The same DigitalFace operating core, translated into the language,
-            workflows, and conversion points of three patient-driven markets.
+            {t.description}
           </p>
         </motion.div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {industries.map((industry, index) => {
+          {industryLayout.map((industry, index) => {
             const Icon = industry.icon;
+            const card = t.cards[industry.key];
+            const href = path(industryHref(industry.slug));
             return (
               <motion.article
-                key={industry.href}
+                key={industry.slug}
                 initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
                 whileInView={
                   prefersReducedMotion ? undefined : { opacity: 1, y: 0 }
@@ -93,23 +87,23 @@ export function IndustryPathsSection() {
                   <Icon className="h-5 w-5" />
                 </span>
                 <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                  {industry.eyebrow}
+                  {card.eyebrow}
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-white">
-                  {industry.title}
+                  {card.title}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-white/65">
-                  {industry.description}
+                  {card.description}
                 </p>
                 <p className="mt-5 border-l-2 border-brand-400/70 pl-4 text-sm font-medium leading-relaxed text-white/85">
-                  {industry.outcome}
+                  {card.outcome}
                 </p>
                 <Link
-                  to={industry.href}
+                  to={href}
                   className="mt-auto inline-flex items-center gap-2 pt-8 text-sm font-semibold text-white transition group-hover:text-ocean-200"
                 >
-                  Explore the closed growth page
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                  {t.linkLabel}
+                  <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-1" />
                 </Link>
               </motion.article>
             );

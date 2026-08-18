@@ -1,193 +1,36 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { CtaSection } from "@/sections/CTA";
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
 import { CheckCircle2 } from "lucide-react";
 
-const pillars = [
-  {
-    title: "Productized",
-    copy: "A proven sales system with clear deliverables and fast launch.",
-  },
-  {
-    title: "Automation-first",
-    copy: "Instant follow-up and booking so speed-to-lead never slips.",
-  },
-  {
-    title: "Owner-friendly",
-    copy: "Built for small teams with minimal technical lift.",
-  },
-  {
-    title: "Visible",
-    copy: "Track every lead, appointment, and outcome in one pipeline.",
-  },
-];
-
-const packages = [
-  {
-    name: "DigitalFace Capture",
-    featured: false,
-    price: "$790",
-    setup: "$597 one-time setup",
-    description:
-      "Build the acquisition and response foundation with one priority channel, connected lead capture, and a clear path to booking.",
-    idealFor:
-      "Practices establishing a reliable lead and follow-up foundation.",
-    adPlatforms: ["1 priority acquisition channel", "Lead capture + booking"],
-    adSpend:
-      "Recommended media budget from $500/mo, paid by you directly to the selected platform.",
-    includes: [
-      "One priority paid acquisition channel managed",
-      "4 ad creatives adapted per month",
-      "Connected lead-capture experience",
-      "Instant SMS/email response",
-      "Appointment booking with reminders",
-      "Visual pipeline setup",
-      "Bilingual English / Spanish setup",
-    ],
-    ctaLabel: "Start with Capture",
-  },
-  {
-    name: "DigitalFace AI",
-    featured: true,
-    price: "$1,200",
-    setup: "$1,097 one-time setup",
-    description:
-      "Adds a bilingual AI conversion layer that qualifies, nurtures, and routes each opportunity toward the right next step.",
-    idealFor: "Growing practices that need 24/7 coverage and qualification.",
-    adPlatforms: ["Everything in Capture", "Bilingual AI conversion"],
-    adSpend:
-      "Recommended media budget from $1,000/mo, paid by you directly to the selected platform.",
-    includes: [
-      "Everything in DigitalFace Capture",
-      "One priority paid acquisition channel managed",
-      "8 ad creatives adapted per month",
-      "AI assistant answering 24/7 in English and Spanish",
-      "2,000 AI conversations included each month",
-      "Long-term nurture and reactivation",
-      "No-show recovery, missed-call text back, and human handoff",
-    ],
-    ctaLabel: "Start with AI",
-  },
-  {
-    name: "DigitalFace Full Growth",
-    featured: false,
-    price: "$1,800",
-    setup: "$1,597 one-time setup",
-    description:
-      "Combines acquisition, AI conversion, reactivation, funnel optimization, and growth oversight into one managed system.",
-    idealFor:
-      "Established practices ready to scale multiple campaigns and patient journeys.",
-    adPlatforms: ["Everything in AI", "Up to 2 acquisition channels"],
-    adSpend:
-      "Recommended media budget from $2,000/mo, paid by you directly to the selected platforms.",
-    includes: [
-      "Everything in DigitalFace AI",
-      "Up to 2 priority acquisition channels managed",
-      "12 ad creatives adapted per month",
-      "4,000 AI conversations included each month",
-      "Landing pages and funnel optimization",
-      "Reactivation campaigns and monthly growth reviews",
-      "Priority support and ongoing improvements",
-    ],
-    ctaLabel: "Start with Full Growth",
-  },
-];
-
-const planNotes = [
-  {
-    title: "Ad spend is separate, and it stays yours",
-    body: "The recommended media budgets above are paid by you directly to the selected advertising platforms through your own accounts. We never hold or mark up your ad budget, and you keep ownership of the accounts, tracking assets, and audiences.",
-  },
-  {
-    title: "AI conversations",
-    body: "DigitalFace AI includes 2,000 and Full Growth includes 4,000 AI-handled conversations per month. Additional conversations are $0.06 each. We alert you at 80% of your allowance, so you are never billed by surprise.",
-  },
-  {
-    title: "Hosting and infrastructure",
-    body: "Where a site or landing page is part of your plan, managed hosting is included with 100 GB bandwidth and 1,000 build minutes per month, plus SSL and backups. Anything above that is quoted to you before it changes.",
-  },
-  {
-    title: "Creative and terms",
-    body: "Extra creatives beyond your monthly allowance are $45 each; you supply raw photos and video, and we handle adaptation and copy in both languages. Capture is month to month. AI and Full Growth begin with a 3-month term so acquisition and conversion systems have enough time to stabilize.",
-  },
-];
-
-const planIncludes = [
-  {
-    title: "Done-for-you setup",
-    description:
-      "We install, test, and launch the system so you are live fast.",
-    investment: "Included",
-  },
-  {
-    title: "Branded client portal",
-    description:
-      "Your own login with a simple inbox, calendar, and pipeline view.",
-    investment: "Included",
-  },
-  {
-    title: "Team onboarding",
-    description:
-      "Short training so your team knows exactly how to use the system.",
-    investment: "Included",
-  },
-  {
-    title: "Ongoing support",
-    description:
-      "We handle updates, fixes, and improvements as your business grows.",
-    investment: "Included",
-  },
-];
-
-const faq = [
-  {
-    question: "How fast can we launch?",
-    answer:
-      "Most businesses go live within 5-7 business days once we have your info.",
-  },
-  {
-    question: "Do I need new software?",
-    answer:
-      "No. We provide the system and your team gets a simple login and workflow.",
-  },
-  {
-    question: "Is this just software?",
-    answer:
-      "No. It is a done-for-you system we install, customize, and maintain.",
-  },
-  {
-    question: "Can you drive traffic too?",
-    answer:
-      "Yes. Every plan includes managed acquisition. We select the priority channel or channel mix according to your audience, offer, market, and approved media budget.",
-  },
-];
+/** The middle plan is the highlighted one in every locale. */
+const FEATURED_INDEX = 1;
 
 export default function Pricing() {
-  usePageMetadata(
-    "Plans | DigitalFace Marketing",
-    "Explore DigitalFace Capture, DigitalFace AI, and DigitalFace Full Growth plans.",
-  );
+  const { locale, path } = useLocale();
+  const t = pricingContent[locale];
+
+  usePageMetadata(t.metadata.title, t.metadata.description);
 
   return (
     <div className="bg-white">
       <section className="bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
           <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-            Pricing and plans
+            {t.hero.eyebrow}
           </span>
           <h1 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl md:text-5xl">
-            Choose the sales system that fits your business
+            {t.hero.title}
           </h1>
-          <p className="mt-4 text-lg text-ink-500">
-            Productized, automated, and ready to adapt to dental, aesthetic
-            medicine, and med-spa patient journeys.
-          </p>
+          <p className="mt-4 text-lg text-ink-500">{t.hero.description}</p>
         </div>
         <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((pillar) => (
+            {t.pillars.map((pillar) => (
               <div
                 key={pillar.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-6 text-left shadow-brand-card"
@@ -206,109 +49,110 @@ export default function Pricing() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              Founding pricing
+              {t.packages.eyebrow}
             </span>
-            <p className="mt-4 text-base text-ink-500">
-              Available to our first 10 clients and locked for 12 months. Every
-              plan includes managed acquisition, so you get the traffic and the
-              conversion system at the right growth level.
-            </p>
+            <p className="mt-4 text-base text-ink-500">{t.packages.intro}</p>
           </div>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-3">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={cn(
-                  "relative flex h-full flex-col rounded-3xl bg-white/95 p-8 shadow-brand-card",
-                  pkg.featured
-                    ? "border-2 border-brand-500 shadow-brand-soft"
-                    : "border border-ink-100",
-                )}
-              >
-                {pkg.featured ? (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
-                    Most popular
-                  </span>
-                ) : null}
+            {t.packages.items.map((pkg, index) => {
+              const featured = index === FEATURED_INDEX;
+              return (
+                <div
+                  key={pkg.name}
+                  className={cn(
+                    "relative flex h-full flex-col rounded-3xl bg-white/95 p-8 shadow-brand-card",
+                    featured
+                      ? "border-2 border-brand-500 shadow-brand-soft"
+                      : "border border-ink-100",
+                  )}
+                >
+                  {featured ? (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
+                      {t.packages.mostPopular}
+                    </span>
+                  ) : null}
 
-                <h2 className="text-2xl font-semibold text-slate-900">
-                  {pkg.name}
-                </h2>
+                  <h2 className="text-2xl font-semibold text-slate-900">
+                    {pkg.name}
+                  </h2>
 
-                <div className="mt-4 flex items-baseline gap-1.5">
-                  <span className="text-4xl font-semibold tracking-tight text-slate-900">
-                    {pkg.price}
-                  </span>
-                  <span className="text-sm font-medium text-ink-500">
-                    /month
-                  </span>
-                </div>
-                <p className="mt-1.5 text-xs text-ink-400">+ {pkg.setup}</p>
+                  <div className="mt-4 flex items-baseline gap-1.5">
+                    <span className="text-4xl font-semibold tracking-tight text-slate-900">
+                      {pkg.price}
+                    </span>
+                    <span className="text-sm font-medium text-ink-500">
+                      {t.packages.perMonth}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-xs text-ink-400">+ {pkg.setup}</p>
 
-                <p className="mt-4 text-sm text-ink-500">{pkg.description}</p>
+                  <p className="mt-4 text-sm text-ink-500">{pkg.description}</p>
 
-                <div className="mt-6 rounded-2xl border border-ink-100 bg-ink-50/70 p-4">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                    Growth system scope
-                  </p>
-                  <div className="mt-2.5 flex flex-wrap gap-1.5">
-                    {pkg.adPlatforms.map((platform) => (
-                      <span
-                        key={platform}
-                        className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-600 ring-1 ring-brand-100"
+                  <div className="mt-6 rounded-2xl border border-ink-100 bg-ink-50/70 p-4">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+                      {t.packages.scopeLabel}
+                    </p>
+                    <div className="mt-2.5 flex flex-wrap gap-1.5">
+                      {pkg.scope.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-600 ring-1 ring-brand-100"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-xs leading-relaxed text-ink-500">
+                      {pkg.adSpend}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 space-y-3">
+                    {pkg.includes.map((item) => (
+                      <p
+                        key={item}
+                        className="flex items-start gap-2 text-sm text-ink-500"
                       >
-                        {platform}
-                      </span>
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" />
+                        {item}
+                      </p>
                     ))}
                   </div>
-                  <p className="mt-3 text-xs leading-relaxed text-ink-500">
-                    {pkg.adSpend}
-                  </p>
-                </div>
 
-                <div className="mt-6 space-y-3">
-                  {pkg.includes.map((item) => (
-                    <p
-                      key={item}
-                      className="flex items-start gap-2 text-sm text-ink-500"
-                    >
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" />
-                      {item}
+                  <div className="mt-6 border-t border-ink-100 pt-5">
+                    <p className="text-xs uppercase tracking-wide text-ink-400">
+                      {t.packages.idealForLabel}
                     </p>
-                  ))}
-                </div>
+                    <p className="mt-1.5 text-sm text-ink-500">
+                      {pkg.idealFor}
+                    </p>
+                  </div>
 
-                <div className="mt-6 border-t border-ink-100 pt-5">
-                  <p className="text-xs uppercase tracking-wide text-ink-400">
-                    Ideal for
-                  </p>
-                  <p className="mt-1.5 text-sm text-ink-500">{pkg.idealFor}</p>
+                  <div className="mt-auto pt-8">
+                    <Button
+                      asChild
+                      className={cn(
+                        "h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug transition-transform hover:-translate-y-0.5",
+                        featured
+                          ? "bg-brand-600 text-white shadow-brand-soft hover:bg-brand-700"
+                          : "border border-brand-200 bg-white text-brand-600 hover:bg-brand-50",
+                      )}
+                    >
+                      <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
+                    </Button>
+                  </div>
                 </div>
-
-                <div className="mt-8 pt-1">
-                  <Button
-                    asChild
-                    className={cn(
-                      "w-full rounded-xl px-6 py-4 text-sm font-semibold transition-transform hover:-translate-y-0.5",
-                      pkg.featured
-                        ? "bg-brand-600 text-white shadow-brand-soft hover:bg-brand-700"
-                        : "border border-brand-200 bg-white text-brand-600 hover:bg-brand-50",
-                    )}
-                  >
-                    <Link to="/contact">{pkg.ctaLabel}</Link>
-                  </Button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 rounded-3xl border border-ink-100 bg-ink-50/60 p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
-              What the price covers, and what it does not
+              {t.notes.title}
             </p>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
-              {planNotes.map((note) => (
+              {t.notes.items.map((note) => (
                 <div key={note.title}>
                   <p className="text-sm font-semibold text-slate-900">
                     {note.title}
@@ -320,10 +164,7 @@ export default function Pricing() {
               ))}
             </div>
             <p className="mt-6 border-t border-ink-200 pt-5 text-xs leading-relaxed text-ink-500">
-              Every plan is backed in writing: 30 days money-back on the setup
-              fee, live within 7 business days or the setup is free, no
-              long-term lock-in, and you own every asset, account and automation
-              we build for you.
+              {t.notes.guarantee}
             </p>
           </div>
         </div>
@@ -333,18 +174,17 @@ export default function Pricing() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              Every plan includes
+              {t.includes.eyebrow}
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Everything you need to run the system
+              {t.includes.title}
             </h2>
             <p className="mt-4 text-lg text-ink-500">
-              We install, train, and support your team so the system keeps
-              working without extra stress.
+              {t.includes.description}
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {planIncludes.map((item) => (
+            {t.includes.items.map((item) => (
               <div
                 key={item.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
@@ -354,7 +194,7 @@ export default function Pricing() {
                 </h3>
                 <p className="mt-3 text-sm text-ink-500">{item.description}</p>
                 <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-600">
-                  {item.investment}
+                  {t.includes.investmentLabel}
                 </p>
               </div>
             ))}
@@ -366,13 +206,13 @@ export default function Pricing() {
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              FAQ snapshot
+              {t.faq.eyebrow}
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              Answers before you book a demo
+              {t.faq.title}
             </h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {faq.map((item) => (
+              {t.faq.items.map((item) => (
                 <div
                   key={item.question}
                   className="rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
@@ -389,11 +229,11 @@ export default function Pricing() {
       </section>
 
       <CtaSection
-        eyebrow="What happens next"
-        title="See the system built for your business"
-        description="Start a conversation and we’ll recommend the best setup for your goals."
-        primaryCta={{ label: "Contact us", href: "/contact" }}
-        secondaryCta={{ label: "View the system", href: "/features" }}
+        eyebrow={t.cta.eyebrow}
+        title={t.cta.title}
+        description={t.cta.description}
+        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
+        secondaryCta={{ label: t.cta.secondaryCta, href: path("/features") }}
       />
     </div>
   );

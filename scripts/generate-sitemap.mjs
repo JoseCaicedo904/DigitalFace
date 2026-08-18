@@ -1,124 +1,102 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const appPath = path.resolve(process.cwd(), "client", "App.tsx");
 const sitemapPath = path.resolve(process.cwd(), "public", "sitemap.xml");
-const siteUrl =
+const siteUrl = (
   process.env.SITE_URL ||
   process.env.VITE_SITE_URL ||
-  "https://digitalfacemarketing.com";
+  "https://digitalfacemarketing.com"
+).replace(/\/$/, "");
 
-const content = fs.readFileSync(appPath, "utf8");
-const tokenRegex = /<\/Route>|<Route\b[^>]*?>/g;
-const paths = new Set();
-const stack = [];
-
-const normalizePath = (value) => {
-  if (!value) return "/";
-  let next = value.startsWith("/") ? value : `/${value}`;
-  if (next.length > 1 && next.endsWith("/")) {
-    next = next.slice(0, -1);
-  }
-  return next;
-};
-
-const joinPaths = (base, segment) => {
-  if (!segment) return base || "/";
-  if (segment.startsWith("/")) return normalizePath(segment);
-  if (!base || base === "/") return normalizePath(`/${segment}`);
-  return normalizePath(`${base}/${segment}`);
-};
-
-const addPath = (value) => {
-  if (!value || value.includes("*")) return;
-  paths.add(normalizePath(value));
-};
-
-for (const match of content.matchAll(tokenRegex)) {
-  const token = match[0];
-  if (token.startsWith("</Route")) {
-    stack.pop();
-    continue;
-  }
-
-  const isSelfClosing = /\/>\s*$/.test(token);
-  const isIndex = /\bindex\b/.test(token);
-  const pathMatch = token.match(/\bpath\s*=\s*"([^"]+)"/);
-  const rawPath = pathMatch ? pathMatch[1] : null;
-  const parentPath = stack.length ? stack[stack.length - 1] : "";
-  const resolvedPath = isIndex
-    ? parentPath || "/"
-    : rawPath
-      ? joinPaths(parentPath, rawPath)
-      : null;
-
-  if (isIndex || (isSelfClosing && rawPath)) {
-    addPath(resolvedPath);
-  }
-
-  if (!isSelfClosing) {
-    if (rawPath && !rawPath.includes("*")) {
-      stack.push(joinPaths(parentPath, rawPath));
-    } else {
-      stack.push(parentPath || "/");
-    }
-  }
-}
-
-const getMeta = (routePath) => {
-  if (routePath === "/") {
-    return { changefreq: "weekly", priority: "1.0" };
-  }
-
-  const legalPages = new Set(["/privacy", "/terms"]);
-  if (legalPages.has(routePath)) {
-    return { changefreq: "yearly", priority: "0.3" };
-  }
-
-  const priorityMap = {
-    "/features": "0.8",
-    "/pay-per-service": "0.7",
-    "/pricing": "0.7",
-    "/about": "0.7",
-    "/contact": "0.6",
-    "/industries/dental-practices": "0.8",
-    "/industries/aesthetic-medicine": "0.8",
-    "/industries/med-spas": "0.8",
-  };
-
-  return {
+/**
+ * Canonical (English) routes. Spanish lives at the same slugs under /es,
+ * so every entry below is emitted twice with hreflang alternates.
+ * Keep in sync with the routes declared in client/App.tsx.
+ */
+const routes = [
+  { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/features", changefreq: "monthly", priority: "0.8" },
+  {
+    path: "/industries/dental-practices",
     changefreq: "monthly",
-    priority: priorityMap[routePath] || "0.6",
-  };
+    priority: "0.8",
+  },
+  {
+    path: "/industries/aesthetic-medicine",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  { path: "/industries/med-spas", changefreq: "monthly", priority: "0.8" },
+  { path: "/pay-per-service", changefreq: "monthly", priority: "0.7" },
+  { path: "/pricing", changefreq: "monthly", priority: "0.7" },
+  { path: "/about", changefreq: "monthly", priority: "0.7" },
+  { path: "/contact", changefreq: "monthly", priority: "0.6" },
+  { path: "/privacy", changefreq: "yearly", priority: "0.3" },
+  { path: "/terms", changefreq: "yearly", priority: "0.3" },
+];
+
+const localePath = (locale, routePath) => {
+  if (locale === "en") return routePath;
+  return routePath === "/" ? "/es" : `/es${routePath}`;
 };
 
-const orderedPaths = [...paths].sort((a, b) => {
-  if (a === "/") return -1;
-  if (b === "/") return 1;
-  return a.localeCompare(b);
-});
+const verifyAgainstApp = () => {
+  const appPath = path.resolve(process.cwd(), "client", "App.tsx");
+  if (!fs.existsSync(appPath)) return;
 
-const urlEntries = orderedPaths
-  .map((routePath) => {
-    const { changefreq, priority } = getMeta(routePath);
-    const loc = `${siteUrl}${routePath}`;
-    return [
-      "  <url>",
-      `    <loc>${loc}</loc>`,
-      `    <changefreq>${changefreq}</changefreq>`,
-      `    <priority>${priority}</priority>`,
-      "  </url>",
-    ].join("\n");
-  })
+  const source = fs.readFileSync(appPath, "utf8");
+  const missing = routes
+    .filter(({ path: routePath }) => routePath !== "/")
+    .filter(({ path: routePath }) => {
+      const segment = routePath.replace(/^\//, "");
+      return (
+        !source.includes(`path="${segment}"`) &&
+        !source.includes(`path="${routePath}"`)
+      );
+    });
+
+  if (missing.length > 0) {
+    console.warn(
+      `Sitemap warning: these routes are not declared in App.tsx -> ${missing
+        .map((route) => route.path)
+        .join(", ")}`,
+    );
+  }
+};
+
+const buildUrlEntry = ({ path: routePath, changefreq, priority }, locale) => {
+  const loc = `${siteUrl}${localePath(locale, routePath)}`;
+  const alternates = [
+    `    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}${localePath("en", routePath)}" />`,
+    `    <xhtml:link rel="alternate" hreflang="es" href="${siteUrl}${localePath("es", routePath)}" />`,
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}${localePath("en", routePath)}" />`,
+  ];
+
+  return [
+    "  <url>",
+    `    <loc>${loc}</loc>`,
+    ...alternates,
+    `    <changefreq>${changefreq}</changefreq>`,
+    `    <priority>${priority}</priority>`,
+    "  </url>",
+  ].join("\n");
+};
+
+verifyAgainstApp();
+
+const urlEntries = ["en", "es"]
+  .flatMap((locale) => routes.map((route) => buildUrlEntry(route, locale)))
   .join("\n");
 
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
   urlEntries,
   "</urlset>",
   "",
 ].join("\n");
 
 fs.writeFileSync(sitemapPath, xml, "utf8");
-console.log(`Sitemap written to ${sitemapPath}`);
+console.log(
+  `Sitemap written to ${sitemapPath} (${routes.length * 2} URLs across 2 locales)`,
+);

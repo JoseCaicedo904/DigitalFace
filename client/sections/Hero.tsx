@@ -83,7 +83,7 @@ export function Hero({
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
               <Button
                 asChild
-                className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-7 py-4 text-base font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                className="h-auto whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-7 py-4 text-center text-base font-semibold leading-snug text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
               >
                 <Link to={primaryCta.href}>{primaryCta.label}</Link>
               </Button>
@@ -91,7 +91,7 @@ export function Hero({
                 <Button
                   asChild
                   variant="outline"
-                  className="group cursor-pointer rounded-xl border border-brand-200/70 bg-brand-100/90 px-7 py-[18px] text-base font-bold text-brand-900 shadow-[0_12px_35px_-22px_rgba(124,58,237,0.6)] transition-all duration-300 hover:scale-[1.03] hover:bg-brand-50 hover:shadow-[0_20px_45px_-24px_rgba(14,165,233,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                  className="group h-auto cursor-pointer whitespace-normal rounded-xl border border-brand-200/70 bg-brand-100/90 px-7 py-[18px] text-center text-base font-bold leading-snug text-brand-900 shadow-[0_12px_35px_-22px_rgba(124,58,237,0.6)] transition-all duration-300 hover:scale-[1.03] hover:bg-brand-50 hover:shadow-[0_20px_45px_-24px_rgba(14,165,233,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
                   <Link to={secondaryCta.href}>
                     {secondaryCta.label}

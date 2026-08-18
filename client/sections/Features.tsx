@@ -13,6 +13,8 @@ interface FeaturesProps {
   description?: string;
   features: Feature[];
   className?: string;
+  /** Use "h1" when this section opens the page and no hero precedes it. */
+  titleAs?: "h1" | "h2";
 }
 
 export function FeaturesSection({
@@ -21,14 +23,12 @@ export function FeaturesSection({
   description,
   features,
   className,
+  titleAs = "h2",
 }: FeaturesProps) {
+  const Title = titleAs;
+
   return (
-    <section
-      className={cn(
-        "bg-white py-20 sm:py-24 lg:py-28",
-        className
-      )}
-    >
+    <section className={cn("bg-white py-20 sm:py-24 lg:py-28", className)}>
       <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           {eyebrow ? (
@@ -36,13 +36,11 @@ export function FeaturesSection({
               {eyebrow}
             </span>
           ) : null}
-          <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
+          <Title className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
             {title}
-          </h2>
+          </Title>
           {description ? (
-            <p className="mt-4 text-lg text-ink-500">
-              {description}
-            </p>
+            <p className="mt-4 text-lg text-ink-500">{description}</p>
           ) : null}
         </div>
         <div className="mt-16 mx-auto grid w-full max-w-5xl grid-cols-1 gap-8 place-items-stretch sm:grid-cols-2 lg:grid-cols-3">

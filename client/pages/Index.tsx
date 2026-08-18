@@ -1,12 +1,14 @@
-﻿import { usePageMetadata } from "@/hooks/usePageMetadata";
+import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
 import { FeaturesSection } from "@/sections/Features";
 import { ValuePropsSection } from "@/sections/ValueProps";
-import { TestimonialsSection } from "@/sections/Testimonials";
+import { ClientSystemsSection } from "@/sections/ClientSystems";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
 import { IndustryPathsSection } from "@/sections/IndustryPaths";
 import { SystemMediaSection } from "@/sections/SystemMedia";
+import { useLocale } from "@/i18n/LocaleProvider";
+import { homeContent } from "@/i18n/content/home";
 import { cn } from "@/lib/utils";
 import {
   CalendarCheck,
@@ -17,277 +19,142 @@ import {
   Repeat,
   ShieldCheck,
   Sparkles,
-  UserCheck,
 } from "lucide-react";
 
-const heroStats = [
-  { label: "Lead response", value: "Instant" },
-  { label: "Follow-up coverage", value: "24/7" },
-  { label: "Pipeline clarity", value: "Every lead" },
+const featureIcons = [
+  <Megaphone className="h-6 w-6" />,
+  <MessageCircle className="h-6 w-6" />,
+  <CalendarCheck className="h-6 w-6" />,
+  <LayoutDashboard className="h-6 w-6" />,
+  <Repeat className="h-6 w-6" />,
+  <ShieldCheck className="h-6 w-6" />,
 ];
 
-const heroMedia = (
-  <div className="flex h-full flex-col gap-6 p-8">
-    <div className="relative h-64 overflow-hidden rounded-3xl border border-white/15 bg-white/10">
-      <img
-        src="/images/digitalface-post.png"
-        alt="DigitalFace Marketing promotional banner"
-        className="h-full w-full object-cover"
-      />
-      <a
-        href="#book"
-        aria-label="Get Started Today"
-        className="absolute z-10 block cursor-pointer rounded-full bg-white/0 transition hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.35)] focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30"
-        style={{ top: "77.8%", left: "62.5%", width: "30%", height: "8.5%" }}
-      />
-    </div>
-    <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
-      <p className="font-semibold text-ink-600">What goes live fast</p>
-      <ul className="mt-3 space-y-2 text-left">
-        <li className="flex items-start gap-2">
-          <span className="mt-1 h-2 w-2 rounded-full bg-brand-400" />
-          Lead sources connected into one pipeline.
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="mt-1 h-2 w-2 rounded-full bg-ocean-400" />
-          Instant text/email replies with booking links.
-        </li>
-        <li className="flex items-start gap-2">
-          <span className="mt-1 h-2 w-2 rounded-full bg-slate-400" />
-          Dashboard visibility for every lead and stage.
-        </li>
-      </ul>
-    </div>
-  </div>
-);
-
-const features = [
-  {
-    title: "Lead generation campaigns",
-    description:
-      "The right paid channel mix for your market, treatment, and growth stage.",
-    icon: <Megaphone className="h-6 w-6" />,
-  },
-  {
-    title: "Lead capture everywhere",
-    description:
-      "Website forms, funnels, chat, and social leads all feed one system.",
-    icon: <MessageCircle className="h-6 w-6" />,
-  },
-  {
-    title: "Instant automated follow up",
-    description: "Text and email replies fire in seconds using AI automations.",
-    icon: <CalendarCheck className="h-6 w-6" />,
-  },
-  {
-    title: "AI virtual receptionist",
-    description:
-      "AI answer and make calls, qualify leads, and book appointments for you.",
-    icon: <LayoutDashboard className="h-6 w-6" />,
-  },
-  {
-    title: "CRM & Dashboards",
-    description:
-      "Pipeline visibility inside GHL, plus clean dashboards to track results.",
-    icon: <Repeat className="h-6 w-6" />,
-  },
-  {
-    title: "Done for you installation",
-    description: "We set everything up fast, with no technical burden for you.",
-    icon: <ShieldCheck className="h-6 w-6" />,
-  },
-];
-
-const valueProps = [
-  {
-    badge: "SPEED",
-    title: "Instant speed-to-lead",
-    description:
-      "Every inquiry gets an immediate response so you never miss the first conversation.",
-  },
-  {
-    badge: "AUTOPILOT",
-    title: "Follow-up that never stops",
-    description:
-      "Automations nurture leads until they book or opt out, without extra staff.",
-  },
-  {
-    badge: "VISIBILITY",
-    title: "Pipeline clarity in one place",
-    description:
-      "Know exactly who is new, booked, no-show, or closed at any moment.",
-  },
-  {
-    badge: "DONE-FOR-YOU",
-    title: "Productized and deployed fast",
-    description:
-      "A proven system installed for your business without custom builds.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "We started booking consultations within the first week. The follow-up is finally consistent.",
-    author: "Practice Owner",
-    role: "Dental Clinic",
-  },
-  {
-    quote: "The missed-call texts alone saved leads we used to lose every day.",
-    author: "General Manager",
-    role: "Home Services",
-  },
-  {
-    quote:
-      "Our calendar fills itself now. We show up and close more without chasing leads.",
-    author: "Owner",
-    role: "Med Spa",
-  },
-  {
-    quote:
-      "The pipeline view keeps the whole team on the same page. Nothing falls through.",
-    author: "Sales Lead",
-    role: "Fitness Studio",
-  },
-];
-
-const integrations = [
-  "Website Forms",
-  "Funnels",
-  "Chat Widget",
-  "SMS & Phone",
-  "Facebook & Instagram",
-  "Google Ads",
-  "Google Business",
-  "Calendar Booking",
-  "Email",
-  "Messenger",
-  "Instagram DMs",
-  "CRM Pipeline",
-];
-
-const valueMedia = (
-  <div className="relative text-sm text-white/75 lg:py-6">
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 hidden lg:block"
-    >
-      <div className="absolute left-1/2 top-0 h-40 w-72 -translate-x-1/2 rounded-full bg-ocean-500/10 blur-3xl" />
-      <div className="absolute left-6 top-12 h-28 w-28 rounded-full bg-brand-500/10 blur-2xl" />
-      <div className="absolute right-8 top-20 h-28 w-28 rounded-full bg-ocean-500/10 blur-2xl" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:56px_56px] opacity-20" />
-      <span className="absolute left-[12%] top-[8.6rem] h-1.5 w-1.5 rounded-full bg-brand-400/70 shadow-[0_0_10px_rgba(124,58,237,0.45)]" />
-      <span className="absolute left-1/2 top-[6.9rem] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
-      <span className="absolute right-[12%] top-[10.6rem] h-1.5 w-1.5 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
-    </div>
-    <div className="grid gap-5 lg:grid-cols-3 lg:gap-6">
-      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:translate-y-6">
-        <div className="flex items-start gap-4">
-          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
-            <Sparkles className="h-4 w-4" />
-          </span>
-          <div className="flex-1">
-            <p className="font-semibold text-white">24/7 automated assistant</p>
-            <p>Leads get an instant reply and booking link even after hours.</p>
-            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
-          </div>
-        </div>
-      </div>
-      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:-translate-y-2">
-        <div className="flex items-start gap-4">
-          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
-            <LineChart className="h-4 w-4" />
-          </span>
-          <div className="flex-1">
-            <p className="font-semibold text-white">Show-up rates protected</p>
-            <p>Automated confirmations and reminders cut no-shows.</p>
-            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
-          </div>
-        </div>
-      </div>
-      <div className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10 lg:translate-y-10">
-        <div className="flex items-start gap-4">
-          <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
-            <ShieldCheck className="h-4 w-4" />
-          </span>
-          <div className="flex-1">
-            <p className="font-semibold text-white">Lead loss prevention</p>
-            <p>
-              Missed-call texts and long-term nurturing keep leads from going
-              cold.
-            </p>
-            <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-const steps = [
-  {
-    title: "A prospect initiates contact",
-    description:
-      "A potential customer reaches your business through ads, website forms, chat, calls, or social channels.",
-    icon: MessageCircle,
-  },
-  {
-    title: "The system engages immediately",
-    description:
-      "Automated responses are triggered in real time via SMS, email, or messaging channels to acknowledge interest and guide next actions.",
-    icon: Sparkles,
-  },
-  {
-    title: "Intent is converted into an appointment",
-    description:
-      "Qualified prospects schedule appointments through automated booking flows with confirmations and reminders.",
-    icon: CalendarCheck,
-  },
-  {
-    title: "Opportunities are tracked through to outcome",
-    description:
-      "Every interaction is logged in a centralized pipeline, providing visibility from first contact to close.",
-    icon: LineChart,
-  },
-];
+const journeyIcons = [MessageCircle, Sparkles, CalendarCheck, LineChart];
+const valueMediaIcons = [Sparkles, LineChart, ShieldCheck];
 
 export default function Index() {
-  usePageMetadata(
-    "DigitalFace Marketing | Patient acquisition and conversion systems",
-    "Done-for-you acquisition, AI follow-up, and booking systems for dental practices, aesthetic medicine, and med spas.",
+  const { locale, path } = useLocale();
+  const t = homeContent[locale];
+
+  usePageMetadata(t.metadata.title, t.metadata.description);
+
+  const heroMedia = (
+    <div className="flex h-full flex-col gap-6 p-8">
+      <div className="relative h-64 overflow-hidden rounded-3xl border border-white/15 bg-white/10">
+        <img
+          src="/images/digitalface-post.png"
+          alt={t.hero.bannerAlt}
+          className="h-full w-full object-cover"
+        />
+        <a
+          href="#book"
+          aria-label={t.hero.bannerCtaLabel}
+          className="absolute z-10 block cursor-pointer rounded-full bg-white/0 transition hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.35)] focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30"
+          style={{ top: "77.8%", left: "62.5%", width: "30%", height: "8.5%" }}
+        />
+      </div>
+      <div className="rounded-2xl border border-ink-100 bg-white/85 p-6 text-sm text-ink-500 shadow-brand-card">
+        <p className="font-semibold text-ink-600">{t.hero.liveTitle}</p>
+        <ul className="mt-3 space-y-2 text-left">
+          {t.hero.liveItems.map((item, index) => (
+            <li key={item} className="flex items-start gap-2">
+              <span
+                className={cn(
+                  "mt-1 h-2 w-2 shrink-0 rounded-full",
+                  index === 0
+                    ? "bg-brand-400"
+                    : index === 1
+                      ? "bg-ocean-400"
+                      : "bg-slate-400",
+                )}
+              />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+
+  const valueMedia = (
+    <div className="relative text-sm text-white/75 lg:py-6">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+      >
+        <div className="absolute left-1/2 top-0 h-40 w-72 -translate-x-1/2 rounded-full bg-ocean-500/10 blur-3xl" />
+        <div className="absolute left-6 top-12 h-28 w-28 rounded-full bg-brand-500/10 blur-2xl" />
+        <div className="absolute right-8 top-20 h-28 w-28 rounded-full bg-ocean-500/10 blur-2xl" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:56px_56px] opacity-20" />
+        <span className="absolute left-[12%] top-[8.6rem] h-1.5 w-1.5 rounded-full bg-brand-400/70 shadow-[0_0_10px_rgba(124,58,237,0.45)]" />
+        <span className="absolute left-1/2 top-[6.9rem] h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
+        <span className="absolute right-[12%] top-[10.6rem] h-1.5 w-1.5 rounded-full bg-ocean-400/70 shadow-[0_0_10px_rgba(14,165,233,0.45)]" />
+      </div>
+      <div className="grid gap-5 lg:grid-cols-3 lg:gap-6">
+        {t.valueProps.mediaCards.map((card, index) => {
+          const Icon = valueMediaIcons[index];
+          return (
+            <div
+              key={card.title}
+              className={cn(
+                "group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-brand-card transition hover:border-white/20 hover:bg-white/10",
+                index === 0
+                  ? "lg:translate-y-6"
+                  : index === 1
+                    ? "lg:-translate-y-2"
+                    : "lg:translate-y-10",
+              )}
+            >
+              <div className="flex items-start gap-4">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/90">
+                  <Icon className="h-4 w-4" />
+                </span>
+                <div className="flex-1">
+                  <p className="font-semibold text-white">{card.title}</p>
+                  <p>{card.description}</p>
+                  <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 
   return (
     <div className="bg-white">
       <Hero
-        eyebrow="DigitalFace Marketing Sales System"
-        title="A done-for-you growth engine for patient-driven practices."
-        description="We connect acquisition, bilingual follow-up, appointment booking, and pipeline visibility so dental, aesthetic, and med-spa teams can convert more opportunities."
-        primaryCta={{ label: "Book an appointment", href: "/contact" }}
-        secondaryCta={{ label: "See the system in action", href: "/features" }}
-        stats={heroStats}
+        eyebrow={t.hero.eyebrow}
+        title={t.hero.title}
+        description={t.hero.description}
+        primaryCta={{ label: t.hero.primaryCta, href: path("/contact") }}
+        secondaryCta={{ label: t.hero.secondaryCta, href: path("/features") }}
+        stats={t.hero.stats}
         media={heroMedia}
       />
       <IndustryPathsSection />
       <FeaturesSection
-        eyebrow="System outcomes"
-        title="An automated sales system, installed for you"
-        description="Capture every inquiry, follow up instantly, and move leads to booked appointments without extra staff."
-        features={features}
+        eyebrow={t.features.eyebrow}
+        title={t.features.title}
+        description={t.features.description}
+        features={t.features.items.map((item, index) => ({
+          ...item,
+          icon: featureIcons[index],
+        }))}
       />
       <SystemMediaSection />
       <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              Customer Journey
+              {t.journey.eyebrow}
             </span>
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              From first contact to closed opportunity managed automatically
+              {t.journey.title}
             </h2>
-            <p className="mt-4 text-lg text-ink-500">
-              A structured journey where automation handles the heavy lifting,
-              and human interaction happens only when it adds value.
-            </p>
+            <p className="mt-4 text-lg text-ink-500">{t.journey.description}</p>
           </div>
           <div className="relative mt-12">
             <div
@@ -300,10 +167,11 @@ export default function Index() {
               <span className="absolute left-5 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-ocean-400/70 shadow-[0_0_12px_rgba(14,165,233,0.45)] motion-safe:animate-journey-slow lg:left-1/2" />
             </div>
             <div className="space-y-0">
-              {steps.map((step, index) => {
-                const Icon = step.icon;
+              {t.journey.steps.map((step, index) => {
+                const Icon = journeyIcons[index];
                 const isFinal =
-                  steps.length % 2 === 1 && index === steps.length - 1;
+                  t.journey.steps.length % 2 === 1 &&
+                  index === t.journey.steps.length - 1;
                 const isLeft = index % 2 === 0;
                 return (
                   <div
@@ -340,12 +208,12 @@ export default function Index() {
                           className="pointer-events-none absolute inset-0 bg-glow-radial opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         />
                         <div className="relative z-10 flex items-start gap-4">
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-ink-100 bg-white text-brand-600 shadow-sm">
+                          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-ink-100 bg-white text-brand-600 shadow-sm">
                             <Icon className="h-5 w-5" />
                           </span>
                           <div>
                             <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-brand-600">
-                              Step {index + 1}
+                              {t.journey.stepLabel} {index + 1}
                             </p>
                             <h3 className="mt-2 min-h-[3rem] text-[1.3rem] font-semibold leading-snug text-slate-900">
                               {step.title}
@@ -366,33 +234,34 @@ export default function Index() {
         </div>
       </section>
       <ValuePropsSection
-        eyebrow="Your sales system"
-        title="Automation that feels personal, runs nonstop"
-        description="Built for patient-driven practices that need consistent follow-up without adding administrative pressure."
-        points={valueProps}
+        eyebrow={t.valueProps.eyebrow}
+        title={t.valueProps.title}
+        description={t.valueProps.description}
+        points={t.valueProps.points}
         media={valueMedia}
         variant="system-flow"
+        labels={{
+          status: t.valueProps.statusLabel,
+          stage: t.valueProps.stageLabel,
+          outputs: t.valueProps.outputsLabel,
+          live: t.valueProps.liveLabel,
+        }}
       />
-      <TestimonialsSection
-        eyebrow="Client snapshots"
-        title="Local businesses closing more leads"
-        description="Owners see faster response, more bookings, and a pipeline they can trust."
-        items={testimonials}
-      />
+      <ClientSystemsSection content={t.clientSystems} />
       <IntegrationsSection
-        eyebrow="Lead sources"
-        title="Every channel feeds one system"
-        description="Website, chat, calls, ads, and social all route into a single pipeline."
-        items={integrations.map((name) => ({ name }))}
+        eyebrow={t.integrations.eyebrow}
+        title={t.integrations.title}
+        description={t.integrations.description}
+        items={t.integrations.items.map((name) => ({ name }))}
       />
       <CtaSection
         id="book"
         className="scroll-mt-24"
-        eyebrow="Next steps"
-        title="See the system in action"
-        description="Book a quick demo and we will map how DigitalFace can capture, nurture, and book opportunities for your practice."
-        primaryCta={{ label: "Talk to an expert", href: "/contact" }}
-        secondaryCta={{ label: "View plans", href: "/pricing" }}
+        eyebrow={t.cta.eyebrow}
+        title={t.cta.title}
+        description={t.cta.description}
+        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
+        secondaryCta={{ label: t.cta.secondaryCta, href: path("/pricing") }}
       />
     </div>
   );

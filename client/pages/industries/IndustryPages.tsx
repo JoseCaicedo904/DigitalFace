@@ -1,14 +1,13 @@
 import IndustryLandingPage from "./IndustryLandingPage";
-import { aestheticData, dentalData, medSpaData } from "./industryData";
 
 export function DentalPracticesPage() {
-  return <IndustryLandingPage data={dentalData} />;
+  return <IndustryLandingPage slug="dental-practices" />;
 }
 
 export function AestheticMedicinePage() {
-  return <IndustryLandingPage data={aestheticData} />;
+  return <IndustryLandingPage slug="aesthetic-medicine" />;
 }
 
 export function MedSpasPage() {
-  return <IndustryLandingPage data={medSpaData} />;
+  return <IndustryLandingPage slug="med-spas" />;
 }
