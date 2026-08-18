@@ -64,6 +64,12 @@ const verifyAgainstApp = () => {
   }
 };
 
+/**
+ * Build date, not a per-page timestamp. It is the only date this script can state
+ * truthfully: every route is rendered from source that ships with the build.
+ */
+const lastmod = new Date().toISOString().slice(0, 10);
+
 const buildUrlEntry = ({ path: routePath, changefreq, priority }, locale) => {
   const loc = `${siteUrl}${localePath(locale, routePath)}`;
   const alternates = [
@@ -75,6 +81,7 @@ const buildUrlEntry = ({ path: routePath, changefreq, priority }, locale) => {
   return [
     "  <url>",
     `    <loc>${loc}</loc>`,
+    `    <lastmod>${lastmod}</lastmod>`,
     ...alternates,
     `    <changefreq>${changefreq}</changefreq>`,
     `    <priority>${priority}</priority>`,

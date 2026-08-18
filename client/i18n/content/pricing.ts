@@ -6,9 +6,9 @@ import type { Locale } from "../locale";
  */
 const en = {
   metadata: {
-    title: "Plans | DigitalFace Marketing",
+    title: "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
     description:
-      "DigitalFace Capture, DigitalFace AI and DigitalFace Full Growth: what each plan includes, what it costs and what is billed separately.",
+      "DigitalFace Capture, DigitalFace AI and DigitalFace Full Growth for dental, aesthetic and med spa practices: what each plan includes, what it costs and what is billed separately.",
   },
   hero: {
     eyebrow: "Plans and pricing",
@@ -201,9 +201,9 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title: "Planes | DigitalFace Marketing",
+    title: "Planes y Precios para Clínicas | DigitalFace Marketing",
     description:
-      "DigitalFace Capture, DigitalFace AI y DigitalFace Full Growth: qué incluye cada plan, cuánto cuesta y qué se factura aparte.",
+      "DigitalFace Capture, DigitalFace AI y DigitalFace Full Growth para clínicas odontológicas, de medicina estética y med spas: qué incluye cada plan, cuánto cuesta y qué se factura aparte.",
   },
   hero: {
     eyebrow: "Planes y precios",

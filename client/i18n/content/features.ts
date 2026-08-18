@@ -2,13 +2,14 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title: "Sales System | DigitalFace Marketing",
+    title: "Patient Acquisition & Follow-Up System | DigitalFace Marketing",
     description:
-      "The seven modules of the DigitalFace Sales System: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
+      "How the DigitalFace system captures every patient inquiry and turns it into a booked appointment: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
   },
   overview: {
     eyebrow: "Sales System",
-    title: "The DigitalFace Sales System",
+    title:
+      "The DigitalFace Sales System: from patient inquiry to booked appointment",
     description:
       "One managed engine for practices that live on their calendar. Capture every inquiry, answer it instantly and book more appointments.",
     items: [
@@ -199,13 +200,15 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title: "Sistema de Ventas | DigitalFace Marketing",
+    title:
+      "Sistema de Captación y Seguimiento de Pacientes | DigitalFace Marketing",
     description:
-      "Los siete módulos del Sistema de Ventas DigitalFace: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
+      "Cómo el sistema DigitalFace captura cada consulta de paciente y la convierte en una cita agendada: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
   },
   overview: {
     eyebrow: "Sistema de Ventas",
-    title: "El Sistema de Ventas DigitalFace",
+    title:
+      "El Sistema de Ventas DigitalFace: de la consulta del paciente a la cita agendada",
     description:
       "Un solo motor administrado para negocios que viven de su calendario. Captura cada consulta, respóndela al instante y agenda más citas.",
     items: [

@@ -2,9 +2,10 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title: "DigitalFace Marketing | Patient acquisition and booking systems",
+    title:
+      "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
     description:
-      "DigitalFace installs and manages the advertising, follow-up, bilingual AI conversations and booking system behind dental practices, aesthetic medicine and med spas.",
+      "DigitalFace installs and runs the advertising, instant follow-up, bilingual AI conversations and booking system behind dental practices, aesthetic medicine clinics and med spas in the US and Latin America. Book a call to see it on your numbers.",
   },
   hero: {
     eyebrow: "The DigitalFace Sales System",
@@ -244,9 +245,9 @@ const en = {
 const es: typeof en = {
   metadata: {
     title:
-      "DigitalFace Marketing | Sistemas de captación y agendamiento de pacientes",
+      "Captación de Pacientes y Agendamiento para Clínicas | DigitalFace Marketing",
     description:
-      "DigitalFace instala y administra la pauta, el seguimiento inmediato, las conversaciones bilingües con IA y el agendamiento de clínicas odontológicas, medicina estética y med spas.",
+      "DigitalFace instala y opera la pauta, el seguimiento inmediato, las conversaciones bilingües con IA y el agendamiento de clínicas odontológicas, medicina estética y med spas en Estados Unidos y Latinoamérica. Agenda una llamada y míralo con tus números.",
   },
   hero: {
     eyebrow: "El Sistema de Ventas DigitalFace",

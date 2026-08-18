@@ -9,6 +9,11 @@ export const industryContentEs: IndustryLocaleBundle = {
     footer: {
       privacy: "Privacidad",
       terms: "Términos",
+      moreLabel: "Más de DigitalFace",
+      homeLink: "Sistemas de captación de pacientes para clínicas",
+      systemLink: "Cómo funciona el sistema de captación de pacientes",
+      plansLink: "Planes y precios",
+      otherIndustriesLabel: "Otros tipos de clínica",
     },
     heroVisual: {
       label: "Vista del sistema en vivo",
@@ -106,9 +111,10 @@ export const industryContentEs: IndustryLocaleBundle = {
       navLabel: "Clínicas Odontológicas",
       industryLabel: "Sistema de Crecimiento Odontológico",
       metadata: {
-        title: "Sistema de crecimiento para clínicas dentales | DigitalFace",
+        title:
+          "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
         description:
-          "Convierte consultas de implantes, carillas y tratamientos en valoraciones organizadas con captación administrada, seguimiento bilingüe con IA y agendamiento.",
+          "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones agendadas. DigitalFace opera la pauta, el seguimiento bilingüe con IA y el agendamiento de clínicas odontológicas en Estados Unidos y Latinoamérica.",
       },
       hero: {
         eyebrow: "DigitalFace para clínicas odontológicas",
@@ -446,9 +452,10 @@ export const industryContentEs: IndustryLocaleBundle = {
       navLabel: "Medicina Estética",
       industryLabel: "Sistema de Crecimiento en Medicina Estética",
       metadata: {
-        title: "Sistema de crecimiento en medicina estética | DigitalFace",
+        title:
+          "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
         description:
-          "Convierte el interés por un procedimiento en valoraciones calificadas con captación administrada, comunicación bilingüe con IA y gestión de citas.",
+          "Convierte el interés por un procedimiento en valoraciones calificadas. DigitalFace opera la pauta, la comunicación bilingüe con IA y la gestión de citas de centros de medicina estética y cirugía plástica, mientras las decisiones clínicas siguen en tu equipo.",
       },
       hero: {
         eyebrow: "DigitalFace para medicina estética y cirugía plástica",
@@ -788,9 +795,10 @@ export const industryContentEs: IndustryLocaleBundle = {
       navLabel: "Med Spas",
       industryLabel: "Sistema de Crecimiento para Med Spas",
       metadata: {
-        title: "Sistema de crecimiento para med spas | DigitalFace",
+        title:
+          "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
         description:
-          "Convierte el interés por un tratamiento en clientes que agendan y regresan, con pauta administrada, agendamiento con IA, reactivación y reseñas.",
+          "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera la pauta, el agendamiento con IA, la reactivación de membresías y las reseñas de med spas en Estados Unidos y Latinoamérica.",
       },
       hero: {
         eyebrow: "DigitalFace para med spas",

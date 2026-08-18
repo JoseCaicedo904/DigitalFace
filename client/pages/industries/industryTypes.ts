@@ -144,6 +144,12 @@ export type IndustryUiCopy = {
   footer: {
     privacy: string;
     terms: string;
+    /** Contextual links back into the main site. Descriptive anchors only. */
+    moreLabel: string;
+    homeLink: string;
+    systemLink: string;
+    plansLink: string;
+    otherIndustriesLabel: string;
   };
   heroVisual: {
     label: string;

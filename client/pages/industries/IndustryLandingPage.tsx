@@ -7,6 +7,14 @@ import {
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
+import { StructuredData } from "@/components/seo/StructuredData";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/structuredData";
+import { commonContent } from "@/i18n/content/common";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { clientMedia, industryMedia } from "@/data/mediaSlots";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -32,7 +40,9 @@ import { Link } from "react-router-dom";
 import {
   getClientStories,
   getIndustryData,
+  getIndustryNavLabels,
   getIndustryUi,
+  industryHref,
 } from "./industryData";
 import type {
   IndustryLandingData,
@@ -285,11 +295,70 @@ function ClosedLandingFooter({
   data: IndustryLandingData;
   ui: IndustryUiCopy;
 }) {
-  const { path } = useLocale();
+  const { locale, path } = useLocale();
+
+  // Until now these funnels only linked out to /privacy and /terms, which left them
+  // close to orphaned: crawlers could reach them but could not leave, and no link
+  // equity flowed back to the pages that rank. The body of the funnel is unchanged.
+  const siblingIndustries = getIndustryNavLabels(locale).filter(
+    (industry) => industry.slug !== data.slug,
+  );
 
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-28 pt-10 sm:flex-row sm:items-center sm:justify-between sm:px-6 md:py-10 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 sm:grid-cols-2">
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+              {ui.footer.moreLabel}
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <Link
+                  className="text-white/75 transition hover:text-white"
+                  to={path("/")}
+                >
+                  {ui.footer.homeLink}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-white/75 transition hover:text-white"
+                  to={path("/features")}
+                >
+                  {ui.footer.systemLink}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-white/75 transition hover:text-white"
+                  to={path("/pricing")}
+                >
+                  {ui.footer.plansLink}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+              {ui.footer.otherIndustriesLabel}
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm">
+              {siblingIndustries.map((industry) => (
+                <li key={industry.slug}>
+                  <Link
+                    className="text-white/75 transition hover:text-white"
+                    to={path(industryHref(industry.slug))}
+                  >
+                    {industry.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-10 flex max-w-6xl flex-col gap-6 border-t border-white/10 px-4 pb-28 pt-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 md:pb-10 lg:px-8">
         <div className="flex items-center gap-3">
           <img
             src="/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png"
@@ -335,6 +404,20 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      {/* These funnels render outside MainLayout, so they carry their own schema.
+          The FAQ block below is built from the same entries the page renders. */}
+      <StructuredData
+        id={`industry-${slug}`}
+        data={[
+          organizationSchema(locale),
+          websiteSchema(locale),
+          breadcrumbSchema(locale, [
+            { name: commonContent[locale].nav.home, path: "/" },
+            { name: data.navLabel, path: `/industries/${slug}` },
+          ]),
+          faqSchema(data.faq),
+        ]}
+      />
       <ClosedLandingHeader data={data} ui={ui} />
 
       <main>

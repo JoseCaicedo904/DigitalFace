@@ -2,9 +2,9 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title: "Contact DigitalFace Marketing",
+    title: "Contact DigitalFace Marketing | Book a Patient Growth Call",
     description:
-      "Tell us about your practice and your current lead flow. We reply within one business day.",
+      "Tell us about your practice and how patient inquiries reach you today. We map your follow-up flow and bring a plan to the call, and we reply within one business day.",
   },
   hero: {
     eyebrow: "Contact",
@@ -63,9 +63,9 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title: "Contacta a DigitalFace Marketing",
+    title: "Contacto | Agenda una Llamada con DigitalFace Marketing",
     description:
-      "Cuéntanos sobre tu clínica y cómo llegan tus consultas hoy. Respondemos en un día hábil.",
+      "Cuéntanos sobre tu clínica y cómo llegan tus consultas de pacientes hoy. Mapeamos tu flujo de seguimiento y llegamos a la llamada con un plan. Respondemos en un día hábil.",
   },
   hero: {
     eyebrow: "Contacto",

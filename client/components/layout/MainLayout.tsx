@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
+import { StructuredData } from "@/components/seo/StructuredData";
+import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { commonContent } from "@/i18n/content/common";
@@ -193,6 +195,12 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.08),transparent_55%)] text-foreground">
+      {/* Declared once for the whole corporate tree; the industry funnels render
+          their own copy because they sit outside this layout. */}
+      <StructuredData
+        id="organization"
+        data={[organizationSchema(locale), websiteSchema(locale)]}
+      />
       <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8 relative">
           <Link to={homePath} className="flex items-center gap-3">

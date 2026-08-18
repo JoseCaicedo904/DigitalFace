@@ -2,9 +2,9 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title: "About DigitalFace Marketing",
+    title: "About DigitalFace Marketing | Bilingual Patient Growth Team",
     description:
-      "Who we are, how we install the DigitalFace Sales System, and how we support the practices that run on it.",
+      "A bilingual team working from Miami and Cali that installs and runs patient acquisition, follow-up and booking systems for dental, aesthetic medicine and med spa practices.",
   },
   hero: {
     eyebrow: "About DigitalFace",
@@ -88,9 +88,9 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title: "Sobre DigitalFace Marketing",
+    title: "Sobre DigitalFace Marketing | Equipo Bilingüe de Crecimiento",
     description:
-      "Quiénes somos, cómo instalamos el Sistema de Ventas DigitalFace y cómo acompañamos a las clínicas que lo usan.",
+      "Un equipo bilingüe entre Miami y Cali que instala y opera sistemas de captación, seguimiento y agendamiento de pacientes para clínicas odontológicas, de medicina estética y med spas.",
   },
   hero: {
     eyebrow: "Sobre DigitalFace",

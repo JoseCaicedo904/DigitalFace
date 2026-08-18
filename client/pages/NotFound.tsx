@@ -9,7 +9,9 @@ const NotFound = () => {
   const { locale, path } = useLocale();
   const t = notFoundContent[locale];
 
-  usePageMetadata(t.metadata.title, t.metadata.description);
+  // The SPA answers every unknown URL with a 200, so the noindex directive is the
+  // only thing stopping a mistyped or stale link from being indexed as a real page.
+  usePageMetadata(t.metadata.title, t.metadata.description, { noindex: true });
 
   useEffect(() => {
     console.error(

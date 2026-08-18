@@ -9,6 +9,11 @@ export const industryContentEn: IndustryLocaleBundle = {
     footer: {
       privacy: "Privacy",
       terms: "Terms",
+      moreLabel: "More from DigitalFace",
+      homeLink: "Patient acquisition systems for clinics",
+      systemLink: "How the patient acquisition system works",
+      plansLink: "Plans and pricing",
+      otherIndustriesLabel: "Other practice types",
     },
     heroVisual: {
       label: "Live system view",
@@ -105,9 +110,9 @@ export const industryContentEn: IndustryLocaleBundle = {
       navLabel: "Dental Practices",
       industryLabel: "Dental Growth System",
       metadata: {
-        title: "Dental Practice Growth System | DigitalFace Marketing",
+        title: "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
         description:
-          "Turn implant, veneer and treatment inquiries into organized consultations with managed acquisition, bilingual AI follow-up and booking workflows.",
+          "Turn implant, veneer and smile-design inquiries into booked consultations. DigitalFace runs the advertising, bilingual AI follow-up and booking workflow for dental practices in the US and Latin America.",
       },
       hero: {
         eyebrow: "DigitalFace for Dental Practices",
@@ -442,9 +447,10 @@ export const industryContentEn: IndustryLocaleBundle = {
       navLabel: "Aesthetic Medicine",
       industryLabel: "Aesthetic Practice Growth System",
       metadata: {
-        title: "Aesthetic Medicine Growth System | DigitalFace Marketing",
+        title:
+          "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
         description:
-          "Turn procedure interest into qualified consultations with managed acquisition, bilingual AI communication and appointment workflows.",
+          "Turn procedure interest into qualified consultations. DigitalFace runs the advertising, bilingual AI communication and appointment workflow for aesthetic medicine and plastic surgery practices, while clinical decisions stay with your team.",
       },
       hero: {
         eyebrow: "DigitalFace for Aesthetic Medicine and Plastic Surgery",
@@ -782,9 +788,9 @@ export const industryContentEn: IndustryLocaleBundle = {
       navLabel: "Med Spas",
       industryLabel: "Med Spa Growth System",
       metadata: {
-        title: "Med Spa Growth System | DigitalFace Marketing",
+        title: "Med Spa Marketing & Booking System | DigitalFace Marketing",
         description:
-          "Turn treatment interest into booked and returning clients with managed advertising, AI booking, reactivation and review workflows.",
+          "Turn treatment interest into booked and returning clients. DigitalFace runs the advertising, AI booking, membership reactivation and review workflow for med spas in the US and Latin America.",
       },
       hero: {
         eyebrow: "DigitalFace for Med Spas",
