@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { BarChart3, Megaphone, Menu, Search, Sparkles, X } from "lucide-react";
+import {
+  BarChart3,
+  ChevronDown,
+  HeartPulse,
+  Megaphone,
+  Menu,
+  Search,
+  Smile,
+  Sparkles,
+  X,
+} from "lucide-react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -8,9 +18,31 @@ const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Sales System", to: "/features" },
+  { label: "Industries", to: "/industries/dental-practices" },
   { label: "Pay per Service", to: "/pay-per-service" },
   { label: "Pricing", to: "/pricing" },
   { label: "Contact", to: "/contact" },
+];
+
+const industryNav = [
+  {
+    label: "Dental Practices",
+    description: "Implants, veneers, and high-value treatment inquiries",
+    to: "/industries/dental-practices",
+    icon: Smile,
+  },
+  {
+    label: "Aesthetic Medicine",
+    description: "Consultation growth for physicians and aesthetic teams",
+    to: "/industries/aesthetic-medicine",
+    icon: HeartPulse,
+  },
+  {
+    label: "Med Spas",
+    description: "Bookings, packages, memberships, and reactivation",
+    to: "/industries/med-spas",
+    icon: Sparkles,
+  },
 ];
 
 const megaNav = {
@@ -147,9 +179,56 @@ export default function MainLayout() {
               <span className="text-sm text-ink-500">Colombia - Florida</span>
             </div>
           </Link>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) =>
-              item.label === megaNav.label ? (
+              item.label === "Industries" ? (
+                <div
+                  key={item.label}
+                  className="group relative -my-4 flex items-center py-4"
+                >
+                  <button
+                    type="button"
+                    aria-haspopup="true"
+                    className={cn(
+                      "flex items-center gap-1.5 text-sm font-medium text-ink-500 transition hover:text-brand-600 group-focus-within:text-brand-600 group-hover:text-brand-600",
+                      location.pathname.startsWith("/industries/") &&
+                        "text-brand-600",
+                    )}
+                  >
+                    Industries
+                    <ChevronDown className="h-3.5 w-3.5 transition duration-200 group-hover:rotate-180" />
+                  </button>
+                  <div className="invisible pointer-events-none absolute left-1/2 top-full z-[80] w-[25rem] -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition duration-200 group-focus-within:visible group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="rounded-3xl border border-ink-100 bg-white/95 p-3 shadow-brand-card backdrop-blur-xl">
+                      <p className="px-4 pb-2 pt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-400">
+                        Choose your patient-growth system
+                      </p>
+                      {industryNav.map((industry) => {
+                        const Icon = industry.icon;
+                        return (
+                          <Link
+                            key={industry.to}
+                            to={industry.to}
+                            className="group/item flex gap-4 rounded-2xl px-4 py-3 transition hover:bg-brand-50"
+                          >
+                            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition group-hover/item:bg-brand-600 group-hover/item:text-white">
+                              <Icon className="h-4 w-4" />
+                            </span>
+                            <span>
+                              <span className="block text-sm font-semibold text-slate-900 group-hover/item:text-brand-700">
+                                {industry.label}
+                              </span>
+                              <span className="mt-1 block text-xs leading-relaxed text-ink-500">
+                                {industry.description}
+                              </span>
+                            </span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              ) : item.label === megaNav.label ? (
                 <div
                   key={item.to}
                   className="group -my-4 flex items-center py-4"
@@ -215,7 +294,7 @@ export default function MainLayout() {
               ),
             )}
           </nav>
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <Button
               asChild
               className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
@@ -225,7 +304,7 @@ export default function MainLayout() {
           </div>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-ink-200 text-ink-600 transition hover:border-brand-200 hover:text-brand-600 md:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-ink-200 text-ink-600 transition hover:border-brand-200 hover:text-brand-600 lg:hidden"
             aria-label="Toggle navigation menu"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
@@ -238,30 +317,50 @@ export default function MainLayout() {
         </div>
         <div
           className={cn(
-            "md:hidden",
+            "lg:hidden",
             menuOpen
-              ? "max-h-[22rem] opacity-100"
+              ? "max-h-[42rem] opacity-100"
               : "pointer-events-none max-h-0 opacity-0",
           )}
         >
           <div className="mx-4 mb-4 rounded-2xl border border-ink-200 bg-white/90 shadow-brand-card backdrop-blur">
             <nav className="flex flex-col divide-y divide-ink-100">
-              {navItems.map((item) => (
-                <NavLink
-                  key={`mobile-${item.to}`}
-                  to={item.to}
-                  end={item.to === "/"}
-                  className={({ isActive }) =>
-                    cn(
-                      "flex items-center justify-between px-5 py-4 text-sm font-semibold text-ink-500 transition hover:text-brand-600",
-                      isActive && "text-brand-600",
-                    )
-                  }
-                >
-                  {item.label}
-                  <span className="text-xs font-medium text-ink-300">→</span>
-                </NavLink>
-              ))}
+              {navItems.map((item) =>
+                item.label === "Industries" ? (
+                  <details key="mobile-industries" className="group/details">
+                    <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-sm font-semibold text-ink-500 transition hover:text-brand-600">
+                      Industries
+                      <ChevronDown className="h-4 w-4 transition group-open/details:rotate-180" />
+                    </summary>
+                    <div className="border-t border-ink-100 bg-ink-50/60 px-3 py-2">
+                      {industryNav.map((industry) => (
+                        <Link
+                          key={`mobile-${industry.to}`}
+                          to={industry.to}
+                          className="block rounded-xl px-3 py-3 text-sm font-medium text-ink-500 transition hover:bg-white hover:text-brand-600"
+                        >
+                          {industry.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : (
+                  <NavLink
+                    key={`mobile-${item.to}`}
+                    to={item.to}
+                    end={item.to === "/"}
+                    className={({ isActive }) =>
+                      cn(
+                        "flex items-center justify-between px-5 py-4 text-sm font-semibold text-ink-500 transition hover:text-brand-600",
+                        isActive && "text-brand-600",
+                      )
+                    }
+                  >
+                    {item.label}
+                    <span className="text-xs font-medium text-ink-300">→</span>
+                  </NavLink>
+                ),
+              )}
             </nav>
             <div className="px-5 py-4">
               <Button
@@ -296,7 +395,8 @@ export default function MainLayout() {
             </Link>
             <p className="text-sm text-white/70">
               The DigitalFace Marketing Sales System is a done-for-you automated
-              sales engine for local service businesses.
+              growth engine for dental, aesthetic medicine, and med-spa
+              practices.
             </p>
             <p className="text-sm font-medium text-ocean-200">
               Never lose another lead.
@@ -308,13 +408,28 @@ export default function MainLayout() {
                 Navigate
               </h3>
               <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={`footer-${item.to}`}>
+                {navItems
+                  .filter((item) => item.label !== "Industries")
+                  .map((item) => (
+                    <li key={`footer-${item.to}`}>
+                      <Link
+                        className="text-white/80 transition hover:text-white"
+                        to={item.to}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                <li className="pt-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/45">
+                  Industries
+                </li>
+                {industryNav.map((industry) => (
+                  <li key={`footer-${industry.to}`}>
                     <Link
                       className="text-white/80 transition hover:text-white"
-                      to={item.to}
+                      to={industry.to}
                     >
-                      {item.label}
+                      {industry.label}
                     </Link>
                   </li>
                 ))}

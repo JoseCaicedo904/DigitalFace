@@ -322,7 +322,7 @@ export default function PayPerService() {
                 <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {group.services.map((service) => (
                     <div
-                      key={service.title}
+                      key={service.id}
                       id={service.id}
                       className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card scroll-mt-28"
                     >

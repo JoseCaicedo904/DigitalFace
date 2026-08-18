@@ -26,79 +26,83 @@ const pillars = [
 
 const packages = [
   {
-    name: "Basic",
+    name: "DigitalFace Capture",
     featured: false,
     price: "$790",
     setup: "$597 one-time setup",
     description:
-      "Meta ads that bring the leads in, plus the system that answers them instantly.",
-    idealFor: "Solo owners and small teams who need follow-up on autopilot.",
-    adPlatforms: ["Meta ads"],
-    adSpend: "From $500/mo in ad spend, paid by you directly to Meta.",
+      "Build the acquisition and response foundation with one priority channel, connected lead capture, and a clear path to booking.",
+    idealFor:
+      "Practices establishing a reliable lead and follow-up foundation.",
+    adPlatforms: ["1 priority acquisition channel", "Lead capture + booking"],
+    adSpend:
+      "Recommended media budget from $500/mo, paid by you directly to the selected platform.",
     includes: [
-      "Meta (Facebook + Instagram) ads fully managed",
+      "One priority paid acquisition channel managed",
       "4 ad creatives adapted per month",
-      "Multi-channel lead capture",
+      "Connected lead-capture experience",
       "Instant SMS/email response",
       "Appointment booking with reminders",
       "Visual pipeline setup",
       "Bilingual English / Spanish setup",
     ],
-    ctaLabel: "Start with Basic",
+    ctaLabel: "Start with Capture",
   },
   {
-    name: "Pro",
+    name: "DigitalFace AI",
     featured: true,
     price: "$1,200",
     setup: "$1,097 one-time setup",
     description:
-      "Adds TikTok, plus a bilingual AI assistant so no enquiry goes unanswered.",
-    idealFor: "Growing businesses with steady lead flow.",
-    adPlatforms: ["Meta ads", "TikTok ads"],
-    adSpend: "From $1,000/mo in ad spend, paid by you directly to the platforms.",
+      "Adds a bilingual AI conversion layer that qualifies, nurtures, and routes each opportunity toward the right next step.",
+    idealFor: "Growing practices that need 24/7 coverage and qualification.",
+    adPlatforms: ["Everything in Capture", "Bilingual AI conversion"],
+    adSpend:
+      "Recommended media budget from $1,000/mo, paid by you directly to the selected platform.",
     includes: [
-      "Everything in Basic",
-      "TikTok ads added and managed",
+      "Everything in DigitalFace Capture",
+      "One priority paid acquisition channel managed",
       "8 ad creatives adapted per month",
       "AI assistant answering 24/7 in English and Spanish",
       "2,000 AI conversations included each month",
       "Long-term nurture and reactivation",
-      "No-show recovery and missed-call text back",
+      "No-show recovery, missed-call text back, and human handoff",
     ],
-    ctaLabel: "Start with Pro",
+    ctaLabel: "Start with AI",
   },
   {
-    name: "Premium",
+    name: "DigitalFace Full Growth",
     featured: false,
     price: "$1,800",
     setup: "$1,597 one-time setup",
     description:
-      "Adds Google, so you also capture the people already searching for you.",
+      "Combines acquisition, AI conversion, reactivation, funnel optimization, and growth oversight into one managed system.",
     idealFor:
-      "Teams that want the system and growth management handled for them.",
-    adPlatforms: ["Meta ads", "TikTok ads", "Google ads"],
-    adSpend: "From $2,000/mo in ad spend, paid by you directly to the platforms.",
+      "Established practices ready to scale multiple campaigns and patient journeys.",
+    adPlatforms: ["Everything in AI", "Up to 2 acquisition channels"],
+    adSpend:
+      "Recommended media budget from $2,000/mo, paid by you directly to the selected platforms.",
     includes: [
-      "Everything in Pro",
-      "Google Search and retargeting ads managed",
+      "Everything in DigitalFace AI",
+      "Up to 2 priority acquisition channels managed",
       "12 ad creatives adapted per month",
       "4,000 AI conversations included each month",
       "Landing pages and funnel optimization",
-      "Monthly strategy and growth reviews",
+      "Reactivation campaigns and monthly growth reviews",
       "Priority support and ongoing improvements",
     ],
-    ctaLabel: "Start with Premium",
+    ctaLabel: "Start with Full Growth",
   },
 ];
 
 const planNotes = [
   {
     title: "Ad spend is separate, and it stays yours",
-    body: "The minimums above are paid by you directly to Meta, TikTok and Google, on your own card inside your own Business Manager. We never hold or mark up a dollar of your ad budget, and you keep ownership of the ad account, pixel and audiences.",
+    body: "The recommended media budgets above are paid by you directly to the selected advertising platforms through your own accounts. We never hold or mark up your ad budget, and you keep ownership of the accounts, tracking assets, and audiences.",
   },
   {
     title: "AI conversations",
-    body: "Pro includes 2,000 and Premium includes 4,000 AI-handled conversations per month. Additional conversations are $0.06 each. We alert you at 80% of your allowance, so you are never billed by surprise.",
+    body: "DigitalFace AI includes 2,000 and Full Growth includes 4,000 AI-handled conversations per month. Additional conversations are $0.06 each. We alert you at 80% of your allowance, so you are never billed by surprise.",
   },
   {
     title: "Hosting and infrastructure",
@@ -106,7 +110,7 @@ const planNotes = [
   },
   {
     title: "Creative and terms",
-    body: "Extra creatives beyond your monthly allowance are $45 each; you supply raw photos and video, we handle adaptation and copy in both languages. Basic is month to month. Pro and Premium start on a 3-month term because paid campaigns need 4-6 weeks to exit the learning phase.",
+    body: "Extra creatives beyond your monthly allowance are $45 each; you supply raw photos and video, and we handle adaptation and copy in both languages. Capture is month to month. AI and Full Growth begin with a 3-month term so acquisition and conversion systems have enough time to stabilize.",
   },
 ];
 
@@ -156,14 +160,14 @@ const faq = [
   {
     question: "Can you drive traffic too?",
     answer:
-      "Yes. Every plan includes managed ads: Meta on Basic, Meta and TikTok on Pro, and Google added on Premium.",
+      "Yes. Every plan includes managed acquisition. We select the priority channel or channel mix according to your audience, offer, market, and approved media budget.",
   },
 ];
 
 export default function Pricing() {
   usePageMetadata(
     "Plans | DigitalFace Marketing",
-    "Explore Basic, Pro, and Premium plans for the DigitalFace Marketing Sales System.",
+    "Explore DigitalFace Capture, DigitalFace AI, and DigitalFace Full Growth plans.",
   );
 
   return (
@@ -177,8 +181,8 @@ export default function Pricing() {
             Choose the sales system that fits your business
           </h1>
           <p className="mt-4 text-lg text-ink-500">
-            Productized, automated, and built for local service businesses that
-            need more bookings without more staff.
+            Productized, automated, and ready to adapt to dental, aesthetic
+            medicine, and med-spa patient journeys.
           </p>
         </div>
         <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -206,8 +210,8 @@ export default function Pricing() {
             </span>
             <p className="mt-4 text-base text-ink-500">
               Available to our first 10 clients and locked for 12 months. Every
-              plan includes managed advertising, so you get traffic and the
-              system that converts it.
+              plan includes managed acquisition, so you get the traffic and the
+              conversion system at the right growth level.
             </p>
           </div>
 
@@ -246,7 +250,7 @@ export default function Pricing() {
 
                 <div className="mt-6 rounded-2xl border border-ink-100 bg-ink-50/70 p-4">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                    Advertising included
+                    Growth system scope
                   </p>
                   <div className="mt-2.5 flex flex-wrap gap-1.5">
                     {pkg.adPlatforms.map((platform) => (

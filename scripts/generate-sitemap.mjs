@@ -81,6 +81,9 @@ const getMeta = (routePath) => {
     "/pricing": "0.7",
     "/about": "0.7",
     "/contact": "0.6",
+    "/industries/dental-practices": "0.8",
+    "/industries/aesthetic-medicine": "0.8",
+    "/industries/med-spas": "0.8",
   };
 
   return {

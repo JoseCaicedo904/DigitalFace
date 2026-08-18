@@ -21,6 +21,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://digitalfacemarketing.com/industries/aesthetic-medicine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digitalfacemarketing.com/industries/dental-practices</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://digitalfacemarketing.com/industries/med-spas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://digitalfacemarketing.com/pay-per-service</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

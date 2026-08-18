@@ -5,6 +5,7 @@ import { ValuePropsSection } from "@/sections/ValueProps";
 import { TestimonialsSection } from "@/sections/Testimonials";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
+import { IndustryPathsSection } from "@/sections/IndustryPaths";
 import { cn } from "@/lib/utils";
 import {
   CalendarCheck,
@@ -62,7 +63,8 @@ const heroMedia = (
 const features = [
   {
     title: "Lead generation campaigns",
-    description: "Facebook, Instagram and Google Ads to bring leads every day.",
+    description:
+      "The right paid channel mix for your market, treatment, and growth stage.",
     icon: <Megaphone className="h-6 w-6" />,
   },
   {
@@ -165,7 +167,10 @@ const integrations = [
 
 const valueMedia = (
   <div className="relative text-sm text-white/75 lg:py-6">
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 hidden lg:block"
+    >
       <div className="absolute left-1/2 top-0 h-40 w-72 -translate-x-1/2 rounded-full bg-ocean-500/10 blur-3xl" />
       <div className="absolute left-6 top-12 h-28 w-28 rounded-full bg-brand-500/10 blur-2xl" />
       <div className="absolute right-8 top-20 h-28 w-28 rounded-full bg-ocean-500/10 blur-2xl" />
@@ -207,7 +212,8 @@ const valueMedia = (
           <div className="flex-1">
             <p className="font-semibold text-white">Lead loss prevention</p>
             <p>
-              Missed-call texts and long-term nurturing keep leads from going cold.
+              Missed-call texts and long-term nurturing keep leads from going
+              cold.
             </p>
             <div className="mt-3 h-px w-full bg-gradient-to-r from-brand-400/60 via-white/10 to-transparent motion-safe:animate-shimmer" />
           </div>
@@ -245,21 +251,22 @@ const steps = [
 
 export default function Index() {
   usePageMetadata(
-    "DigitalFace Marketing Sales System | Automated sales for local businesses",
-    "Done-for-you automated sales system that captures leads, follows up instantly, and books appointments for local service businesses.",
+    "DigitalFace Marketing | Patient acquisition and conversion systems",
+    "Done-for-you acquisition, AI follow-up, and booking systems for dental practices, aesthetic medicine, and med spas.",
   );
 
   return (
     <div className="bg-white">
       <Hero
         eyebrow="DigitalFace Marketing Sales System"
-        title="A done-for-you automated sales engine for local service businesses."
-        description="We install a proven system that captures every lead, responds instantly by text and email, and books appointments while you work."
+        title="A done-for-you growth engine for patient-driven practices."
+        description="We connect acquisition, bilingual follow-up, appointment booking, and pipeline visibility so dental, aesthetic, and med-spa teams can convert more opportunities."
         primaryCta={{ label: "Book an appointment", href: "/contact" }}
         secondaryCta={{ label: "See the system in action", href: "/features" }}
         stats={heroStats}
         media={heroMedia}
       />
+      <IndustryPathsSection />
       <FeaturesSection
         eyebrow="System outcomes"
         title="An automated sales system, installed for you"
@@ -281,7 +288,10 @@ export default function Index() {
             </p>
           </div>
           <div className="relative mt-12">
-            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0"
+            >
               <div className="absolute left-5 top-0 h-full w-px bg-ink-200/70 lg:left-1/2 lg:-translate-x-1/2" />
               <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-brand-300/70 via-ocean-300/40 to-transparent opacity-80 lg:left-1/2 lg:-translate-x-1/2" />
               <span className="absolute left-5 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-brand-400 shadow-[0_0_18px_rgba(124,58,237,0.45)] motion-safe:animate-journey lg:left-1/2" />
@@ -290,7 +300,8 @@ export default function Index() {
             <div className="space-y-0">
               {steps.map((step, index) => {
                 const Icon = step.icon;
-                const isFinal = steps.length % 2 === 1 && index === steps.length - 1;
+                const isFinal =
+                  steps.length % 2 === 1 && index === steps.length - 1;
                 const isLeft = index % 2 === 0;
                 return (
                   <div
@@ -355,7 +366,7 @@ export default function Index() {
       <ValuePropsSection
         eyebrow="Your sales system"
         title="Automation that feels personal, runs nonstop"
-        description="Built for local service businesses that need consistent follow-up without hiring more staff."
+        description="Built for patient-driven practices that need consistent follow-up without adding administrative pressure."
         points={valueProps}
         media={valueMedia}
         variant="system-flow"
@@ -377,7 +388,7 @@ export default function Index() {
         className="scroll-mt-24"
         eyebrow="Next steps"
         title="See the system in action"
-        description="Book a quick demo and we will show how it captures leads and books appointments for your business."
+        description="Book a quick demo and we will map how DigitalFace can capture, nurture, and book opportunities for your practice."
         primaryCta={{ label: "Talk to an expert", href: "/contact" }}
         secondaryCta={{ label: "View plans", href: "/pricing" }}
       />
