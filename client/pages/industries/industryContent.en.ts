@@ -245,8 +245,39 @@ export const industryContentEn: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "One connected patient system",
+        title: "Getting the inquiry is only the beginning.",
+        description:
+          "A practice fills its chairs when three parts stay connected: reach people already considering treatment, answer them while the interest is real, and keep every consultation opportunity visible until it is on the schedule.",
+        closing:
+          "Create treatment inquiries. Move them toward consultations. Keep the patient journey visible.",
+        stages: [
+          {
+            number: "01",
+            label: "Attract",
+            title: "Create treatment inquiries",
+            description:
+              "Reach people already researching implants, veneers and smile design, and turn that attention into a real inquiry.",
+          },
+          {
+            number: "02",
+            label: "Convert",
+            title: "Move them toward the consultation",
+            description:
+              "Answer in seconds, organize what the patient is asking for and guide them to a consultation time.",
+          },
+          {
+            number: "03",
+            label: "Manage",
+            title: "Keep the practice in control",
+            description:
+              "Source, treatment interest, history, status and the next step stay together for your front desk.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "Where the inquiry comes from",
+        eyebrow: "01 · Attract",
         title: "Watch a veneer ad become a consultation request.",
         description:
           "A dental campaign is easy to judge by clicks. What decides the month is the minute after the click: whether the person gets a reason to answer, and whether what they say arrives somewhere your team can actually work it.",
@@ -346,7 +377,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "A dental inquiry, start to finish",
+        eyebrow: "02 · Convert",
         title:
           "A Saturday morning implant question, on the schedule before Monday.",
         description:
@@ -439,6 +470,100 @@ export const industryContentEn: IndustryLocaleBundle = {
               note: "Your photo and your financing question are already on the file, so the doctor reviews your case before you arrive.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Manage",
+        title: "Know where every treatment inquiry stands.",
+        description:
+          "Once the inquiry is answered, your team still needs to see it. The source, the treatment, the photo, the financing question and the requested time stay on one card, so nobody rebuilds the story from a message thread.",
+        ctaLabel: "Book a Dental Growth Assessment",
+        boardCaption: "Sample patient journey",
+        bridge:
+          "Attract, convert and manage: one connected patient journey with a clear next step at every stage.",
+        stages: [
+          {
+            title: "New inquiry",
+            description:
+              "The opportunity appears the moment the patient writes, weekends included.",
+          },
+          {
+            title: "Contacted",
+            description:
+              "The first reply is visible to the front desk without opening the chat.",
+          },
+          {
+            title: "Treatment interest",
+            description:
+              "What the patient wants, and what they sent, stays attached to the record.",
+          },
+          {
+            title: "Consultation requested",
+            description:
+              "The team can see the requested time and exactly what to confirm.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Patient opportunities",
+          liveLabel: "Organized",
+          boardLabel: "Inquiry progress",
+          detailsLabel: "What your team knows",
+          activityLabel: "Activity",
+          nextStepLabel: "Next step",
+          movedLabel: "Moved forward",
+          stageLabel: "Stage",
+          ofLabel: "of",
+          lead: {
+            name: "Jorge Medina",
+            initials: "JM",
+            summary: "New treatment inquiry",
+            channel: "WhatsApp inquiry",
+          },
+          stages: [
+            {
+              label: "New inquiry",
+              cardStatus: "Just received",
+              activity: "Inquiry received on Saturday",
+              nextStep: "Send the first reply",
+              details: [{ label: "Source", value: "Meta Ads" }],
+            },
+            {
+              label: "Contacted",
+              cardStatus: "Conversation started",
+              activity: "Answered while the practice was closed",
+              nextStep: "Confirm what the patient needs",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Channel", value: "WhatsApp" },
+              ],
+            },
+            {
+              label: "Treatment interest",
+              cardStatus: "Interest identified",
+              activity: "Treatment interest and photo saved",
+              nextStep: "Offer consultation times",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Channel", value: "WhatsApp" },
+                { label: "Interest", value: "Dental implant" },
+                { label: "Attached", value: "Patient photo" },
+              ],
+            },
+            {
+              label: "Consultation requested",
+              cardStatus: "Ready to confirm",
+              activity: "Consultation time requested",
+              nextStep: "Confirm Tuesday at 4:30 and send the reminder",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Interest", value: "Dental implant" },
+                { label: "Asked about", value: "Payment options" },
+                { label: "Requested", value: "Tuesday 4:30 PM" },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Sample patient journey showing one dental inquiry becoming an organized consultation opportunity with a clear next step.",
         },
       },
       packagesTitle: "Choose the dental growth level that fits you today.",
@@ -780,15 +905,46 @@ export const industryContentEn: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "One connected consultation system",
+        title: "The inquiry is the easy part. Keeping it moving is not.",
+        description:
+          "Procedure interest becomes a consultation when three parts stay connected: reach patients who are already comparing, answer the administrative questions immediately, and keep every case visible so nothing waits on someone who is in surgery.",
+        closing:
+          "Create procedure inquiries. Move them toward consultations. Keep clinical decisions with your team.",
+        stages: [
+          {
+            number: "01",
+            label: "Attract",
+            title: "Create procedure inquiries",
+            description:
+              "Reach patients researching the procedures you want to grow, and turn that interest into a real inquiry.",
+          },
+          {
+            number: "02",
+            label: "Convert",
+            title: "Move them toward a consultation",
+            description:
+              "Answer what is administrative right away, hand a clinical question to a person, and still offer a time.",
+          },
+          {
+            number: "03",
+            label: "Manage",
+            title: "Keep every case visible",
+            description:
+              "Source, procedure interest, history, status and the next step stay together for your coordinators.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "Before the first message",
+        eyebrow: "01 · Attract",
         title: "Watch a procedure ad arrive as an organized inquiry.",
         description:
           "Someone weighing a procedure rarely calls. They tap, they ask and they compare. When the campaign and the follow-up belong to the same system, that interest is captured with the procedure attached, before anyone at the practice has typed a word.",
         ctaLabel: "Book an Aesthetic Growth Assessment",
         phoneCaption: "Sample ad and consultation request",
         bridge:
-          "That is how the inquiry is created. The journey below is what the practice does with it next.",
+          "That is how the inquiry is created. What happens in the next few minutes decides whether it becomes a consultation.",
         stages: [
           {
             title: "It reaches someone already comparing",
@@ -881,7 +1037,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "Where automation stops",
+        eyebrow: "02 · Convert",
         title:
           "Watch the system answer what it should, and hand over what it should not.",
         description:
@@ -980,6 +1136,100 @@ export const industryContentEn: IndustryLocaleBundle = {
               note: "Your question is saved on the surgeon's notes for the visit, and a reminder goes out the day before.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Manage",
+        title: "See every case, and who it is waiting on.",
+        description:
+          "Coordinators lose time reconstructing what a patient already asked. Here the source, the procedure interest, the question that needs a clinician and the requested consultation stay on one card, so the practice always knows whose turn it is.",
+        ctaLabel: "Book an Aesthetic Growth Assessment",
+        boardCaption: "Sample patient journey",
+        bridge:
+          "Attract, convert and manage: one connected patient journey where clinical judgment always stays with your team.",
+        stages: [
+          {
+            title: "New inquiry",
+            description:
+              "The opportunity is created the moment the patient asks, day or night.",
+          },
+          {
+            title: "Answered",
+            description:
+              "The administrative questions are handled and the reply is on the record.",
+          },
+          {
+            title: "Sent to the doctor",
+            description:
+              "A clinical question is flagged for a person instead of being answered by software.",
+          },
+          {
+            title: "Consultation requested",
+            description:
+              "The requested time is visible while the clinical review is still open.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Patient opportunities",
+          liveLabel: "Organized",
+          boardLabel: "Case progress",
+          detailsLabel: "What your team knows",
+          activityLabel: "Activity",
+          nextStepLabel: "Next step",
+          movedLabel: "Moved forward",
+          stageLabel: "Stage",
+          ofLabel: "of",
+          lead: {
+            name: "Daniela Ortiz",
+            initials: "DO",
+            summary: "New procedure inquiry",
+            channel: "WhatsApp inquiry",
+          },
+          stages: [
+            {
+              label: "New inquiry",
+              cardStatus: "Just received",
+              activity: "Inquiry received after hours",
+              nextStep: "Send the first reply",
+              details: [{ label: "Source", value: "Meta Ads" }],
+            },
+            {
+              label: "Answered",
+              cardStatus: "Questions answered",
+              activity: "Consultation process explained",
+              nextStep: "Confirm the procedure of interest",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Language", value: "Spanish" },
+              ],
+            },
+            {
+              label: "Sent to the doctor",
+              cardStatus: "Waiting on the doctor",
+              activity: "Clinical question passed to a person",
+              nextStep: "Doctor reviews the question before the reply goes out",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Language", value: "Spanish" },
+                { label: "Interest", value: "Injectables" },
+                { label: "For review", value: "Clinical question" },
+              ],
+            },
+            {
+              label: "Consultation requested",
+              cardStatus: "Ready to confirm",
+              activity: "Consultation time requested",
+              nextStep: "Confirm Thursday at 10:00 once the doctor replies",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Interest", value: "Injectables" },
+                { label: "Reviewed by", value: "Dr. on call" },
+                { label: "Requested", value: "Thursday 10:00 AM" },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Sample patient journey showing one procedure inquiry becoming an organized consultation opportunity, with the clinical question routed to a person.",
         },
       },
       packagesTitle: "Choose the aesthetic growth level that fits you today.",
@@ -1320,15 +1570,46 @@ export const industryContentEn: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "One connected booking system",
+        title: "Getting the message is only the beginning.",
+        description:
+          "A med spa fills its calendar when three parts stay connected: put the right offer in front of people nearby, answer them before the interest fades, and keep every request visible so the front desk always knows who is still waiting.",
+        closing:
+          "Create treatment interest. Turn it into appointments. Keep the calendar under control.",
+        stages: [
+          {
+            number: "01",
+            label: "Attract",
+            title: "Create treatment interest",
+            description:
+              "Put memberships, packages and treatments in front of people close enough to walk in this month.",
+          },
+          {
+            number: "02",
+            label: "Convert",
+            title: "Turn it into an appointment",
+            description:
+              "Answer while the offer is still fresh, confirm what they want and guide them to a time that works.",
+          },
+          {
+            number: "03",
+            label: "Manage",
+            title: "Keep the calendar in view",
+            description:
+              "Every request, its offer, its status and the next step in one place instead of five inboxes.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "Where the demand comes from",
+        eyebrow: "01 · Attract",
         title: "Watch an offer turn into a booking request.",
         description:
           "A med spa ad creates a spike of interest in a few hours, usually while your team is with clients. This is what happens to that interest when the campaign is connected to the booking system instead of ending in a comment thread.",
         ctaLabel: "Book a Med Spa Growth Assessment",
         phoneCaption: "Sample ad and booking request",
         bridge:
-          "Every response arrives in one place instead of five inboxes. The journey below turns it into an appointment and a return visit.",
+          "Every response arrives in one place instead of five inboxes. Now it needs an answer while the offer is still fresh.",
         stages: [
           {
             title: "It reaches people close enough to come in",
@@ -1425,7 +1706,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "A promotion, answered in seconds",
+        eyebrow: "02 · Convert",
         title: "A story reply at lunchtime, on the schedule for Wednesday.",
         description:
           "A promotion creates a spike of messages at exactly the hour your team is with clients. This is what one of them looks like when the system picks it up: the offer confirmed, a time chosen, and the follow-up already set before anyone at the front desk opens the inbox.",
@@ -1517,6 +1798,100 @@ export const industryContentEn: IndustryLocaleBundle = {
               note: "A reminder goes out the day before. After your visit we check in and help you book the next one.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Manage",
+        title: "One place to see who is waiting on a time.",
+        description:
+          "A promotion can bring in more messages in an afternoon than the front desk can track. Here every request keeps its offer, its channel, its status and its next step, so nothing is lost between a story reply and the appointment book.",
+        ctaLabel: "Book a Med Spa Growth Assessment",
+        boardCaption: "Sample client journey",
+        bridge:
+          "Attract, convert and manage: one connected client journey that keeps working after the first visit.",
+        stages: [
+          {
+            title: "New request",
+            description:
+              "Story replies, comments and messages become one visible request.",
+          },
+          {
+            title: "Answered",
+            description:
+              "The offer is confirmed while your team is still with clients.",
+          },
+          {
+            title: "Treatment chosen",
+            description:
+              "What the client wants to book stays attached to the request.",
+          },
+          {
+            title: "Appointment requested",
+            description:
+              "The front desk sees the time to confirm and the follow-up already set.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Client opportunities",
+          liveLabel: "Organized",
+          boardLabel: "Request progress",
+          detailsLabel: "What your team knows",
+          activityLabel: "Activity",
+          nextStepLabel: "Next step",
+          movedLabel: "Moved forward",
+          stageLabel: "Stage",
+          ofLabel: "of",
+          lead: {
+            name: "Marcela Ríos",
+            initials: "MR",
+            summary: "New booking request",
+            channel: "Instagram message",
+          },
+          stages: [
+            {
+              label: "New request",
+              cardStatus: "Just received",
+              activity: "Message received at lunchtime",
+              nextStep: "Send the first reply",
+              details: [{ label: "Source", value: "Meta Ads" }],
+            },
+            {
+              label: "Answered",
+              cardStatus: "Offer confirmed",
+              activity: "Promotion details confirmed",
+              nextStep: "Confirm which treatment she wants",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Channel", value: "Instagram" },
+              ],
+            },
+            {
+              label: "Treatment chosen",
+              cardStatus: "Treatment selected",
+              activity: "Membership facial selected",
+              nextStep: "Offer times for this week",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Channel", value: "Instagram" },
+                { label: "Interest", value: "Monthly facial" },
+                { label: "Offer", value: "Membership" },
+              ],
+            },
+            {
+              label: "Appointment requested",
+              cardStatus: "Ready to confirm",
+              activity: "Wednesday appointment requested",
+              nextStep: "Confirm Wednesday at 5:00 and set the reminder",
+              details: [
+                { label: "Source", value: "Meta Ads" },
+                { label: "Interest", value: "Monthly facial" },
+                { label: "Requested", value: "Wednesday 5:00 PM" },
+                { label: "Follow-up", value: "Rebooking reminder" },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Sample client journey showing one promotion message becoming an organized booking request with a clear next step.",
         },
       },
       packagesTitle: "Choose the med spa growth level that fits you today.",

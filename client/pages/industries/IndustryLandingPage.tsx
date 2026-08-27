@@ -9,6 +9,8 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
+import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
+import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
   breadcrumbSchema,
@@ -637,14 +639,27 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        {data.adDemoSlot === "after-problem" ? (
-          <AdCampaignDemoSection
-            content={data.adCampaignDemo}
-            ctaHref="#book-assessment"
-          />
-        ) : null}
+        <SystemJourneyIntro
+          content={data.systemIntro}
+          className="bg-gradient-to-b from-secondary/40 via-white to-white"
+        />
 
-        <section className="overflow-hidden bg-gradient-to-b from-secondary/35 via-white to-white py-20 sm:py-24 lg:py-28">
+        <AdCampaignDemoSection
+          content={data.adCampaignDemo}
+          ctaHref="#book-assessment"
+        />
+
+        <ConversationDemoSection
+          content={data.conversationDemo}
+          ctaHref="#book-assessment"
+        />
+
+        <CrmPipelineDemoSection
+          content={data.crmPipelineDemo}
+          ctaHref="#book-assessment"
+        />
+
+        <section className="overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
               <SectionHeading
@@ -695,20 +710,8 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        {data.adDemoSlot === "before-conversation" ? (
-          <AdCampaignDemoSection
-            content={data.adCampaignDemo}
-            ctaHref="#book-assessment"
-          />
-        ) : null}
-
-        <ConversationDemoSection
-          content={data.conversationDemo}
-          ctaHref="#book-assessment"
-        />
-
         <section
-          id="system"
+          id="capabilities"
           className="scroll-mt-24 bg-slate-950 py-20 text-white sm:py-24 lg:py-28"
         >
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

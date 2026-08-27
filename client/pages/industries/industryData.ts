@@ -1,6 +1,5 @@
 import type { Locale } from "@/i18n/locale";
 import {
-  industryAdDemoSlot,
   industryEmbedSlots,
   industryIcons,
   industryProofLead,
@@ -58,7 +57,6 @@ function buildIndustry(
     ...text,
     slug,
     proofLead: industryProofLead[slug],
-    adDemoSlot: industryAdDemoSlot[slug],
     problem: {
       ...text.problem,
       items: attachIcons(text.problem.items, icons.problem),

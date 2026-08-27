@@ -5,11 +5,28 @@ import {
   Megaphone,
   MessageCircle,
 } from "lucide-react";
-import type { HomeContent } from "@/i18n/content/home";
 import { cn } from "@/lib/utils";
 
+/**
+ * The three-stage model every DigitalFace page is built around. Declared here
+ * rather than derived from the homepage content so the industry funnels can
+ * describe the same journey in their own language.
+ */
+export type SystemJourneyContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  closing: string;
+  stages: {
+    number: string;
+    label: string;
+    title: string;
+    description: string;
+  }[];
+};
+
 type SystemJourneyIntroProps = {
-  content: HomeContent["systemIntro"];
+  content: SystemJourneyContent;
   className?: string;
 };
 

@@ -247,8 +247,39 @@ export const industryContentEs: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "Un sistema de pacientes conectado",
+        title: "Recibir la consulta es apenas el comienzo.",
+        description:
+          "Una clínica llena sus sillas cuando tres partes siguen conectadas: llegar a personas que ya están evaluando un tratamiento, responderles mientras el interés está vivo y mantener visible cada oportunidad de valoración hasta que quede agendada.",
+        closing:
+          "Genera consultas de tratamiento. Llévalas hasta la valoración. Mantén visible el recorrido del paciente.",
+        stages: [
+          {
+            number: "01",
+            label: "Atraer",
+            title: "Genera consultas de tratamiento",
+            description:
+              "Llega a personas que ya están investigando implantes, carillas y diseño de sonrisa, y convierte esa atención en una consulta real.",
+          },
+          {
+            number: "02",
+            label: "Convertir",
+            title: "Llévalas hasta la valoración",
+            description:
+              "Responde en segundos, organiza lo que el paciente está pidiendo y guíalo hacia un horario de valoración.",
+          },
+          {
+            number: "03",
+            label: "Gestionar",
+            title: "Mantén el control de la clínica",
+            description:
+              "Origen, interés de tratamiento, historial, estado y siguiente paso quedan juntos para tu recepción.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "De dónde sale la consulta",
+        eyebrow: "01 · Atraer",
         title:
           "Mira cómo un anuncio de carillas se vuelve una solicitud de valoración.",
         description:
@@ -349,7 +380,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "Una consulta dental, de principio a fin",
+        eyebrow: "02 · Convertir",
         title:
           "Una pregunta por implantes un sábado en la mañana, agendada antes del lunes.",
         description:
@@ -446,6 +477,101 @@ export const industryContentEs: IndustryLocaleBundle = {
               note: "Tu foto y tu pregunta de financiación ya están en la ficha, así el doctor revisa tu caso antes de que llegues.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Gestionar",
+        title: "Ten claro en qué punto está cada consulta de tratamiento.",
+        description:
+          "Después de responder, tu equipo todavía necesita ver el caso. El origen, el tratamiento, la foto, la pregunta de pago y el horario solicitado quedan en una sola ficha, así nadie tiene que reconstruir la historia leyendo el chat.",
+        ctaLabel: "Agenda tu diagnóstico odontológico",
+        boardCaption: "Recorrido de paciente de ejemplo",
+        bridge:
+          "Atraer, convertir y gestionar: un solo recorrido del paciente con un siguiente paso claro en cada etapa.",
+        stages: [
+          {
+            title: "Consulta nueva",
+            description:
+              "La oportunidad aparece apenas el paciente escribe, también el fin de semana.",
+          },
+          {
+            title: "Contactado",
+            description:
+              "La primera respuesta queda a la vista de recepción sin abrir el chat.",
+          },
+          {
+            title: "Interés de tratamiento",
+            description:
+              "Lo que el paciente quiere, y lo que envió, queda anotado en la ficha.",
+          },
+          {
+            title: "Valoración solicitada",
+            description:
+              "El equipo ve el horario pedido y sabe exactamente qué confirmar.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Oportunidades de pacientes",
+          liveLabel: "Organizado",
+          boardLabel: "Avance de la consulta",
+          detailsLabel: "Lo que tu equipo ya sabe",
+          activityLabel: "Actividad",
+          nextStepLabel: "Siguiente paso",
+          movedLabel: "Avanzó",
+          stageLabel: "Etapa",
+          ofLabel: "de",
+          lead: {
+            name: "Jorge Medina",
+            initials: "JM",
+            summary: "Nueva consulta de tratamiento",
+            channel: "Consulta por WhatsApp",
+          },
+          stages: [
+            {
+              label: "Consulta nueva",
+              cardStatus: "Recién recibida",
+              activity: "Consulta recibida un sábado",
+              nextStep: "Enviar la primera respuesta",
+              details: [{ label: "Origen", value: "Meta Ads" }],
+            },
+            {
+              label: "Contactado",
+              cardStatus: "Conversación iniciada",
+              activity: "Respondida con la clínica cerrada",
+              nextStep: "Confirmar qué necesita el paciente",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Canal", value: "WhatsApp" },
+              ],
+            },
+            {
+              label: "Interés de tratamiento",
+              cardStatus: "Interés identificado",
+              activity: "Interés y foto guardados",
+              nextStep: "Ofrecer horarios de valoración",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Canal", value: "WhatsApp" },
+                { label: "Interés", value: "Implante dental" },
+                { label: "Adjunto", value: "Foto del paciente" },
+              ],
+            },
+            {
+              label: "Valoración solicitada",
+              cardStatus: "Lista para confirmar",
+              activity: "Horario de valoración solicitado",
+              nextStep:
+                "Confirmar el martes a las 4:30 y enviar el recordatorio",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Interés", value: "Implante dental" },
+                { label: "Preguntó por", value: "Formas de pago" },
+                { label: "Solicitó", value: "Martes 4:30 p. m." },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Recorrido de paciente de ejemplo: una consulta odontológica se convierte en una oportunidad de valoración organizada con un siguiente paso claro.",
         },
       },
       packagesTitle:
@@ -790,15 +916,46 @@ export const industryContentEs: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "Un sistema de valoraciones conectado",
+        title: "Recibir la consulta es lo fácil. Sostenerla no lo es.",
+        description:
+          "El interés en un procedimiento se convierte en valoración cuando tres partes siguen conectadas: llegar a pacientes que ya están comparando, responder de inmediato lo administrativo y mantener cada caso visible para que nada quede esperando a alguien que está en cirugía.",
+        closing:
+          "Genera consultas de procedimientos. Llévalas hasta la valoración. Deja las decisiones clínicas en tu equipo.",
+        stages: [
+          {
+            number: "01",
+            label: "Atraer",
+            title: "Genera consultas de procedimientos",
+            description:
+              "Llega a pacientes que están investigando los procedimientos que quieres crecer y convierte ese interés en una consulta real.",
+          },
+          {
+            number: "02",
+            label: "Convertir",
+            title: "Llévalas hasta la valoración",
+            description:
+              "Responde de inmediato lo administrativo, pasa la pregunta clínica a una persona y aun así ofrece un horario.",
+          },
+          {
+            number: "03",
+            label: "Gestionar",
+            title: "Mantén cada caso visible",
+            description:
+              "Origen, interés, historial, estado y siguiente paso quedan juntos para tus coordinadoras.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "Antes del primer mensaje",
+        eyebrow: "01 · Atraer",
         title: "Mira cómo un anuncio de un procedimiento llega ya organizado.",
         description:
           "Quien está evaluando un procedimiento casi nunca llama. Toca el anuncio, pregunta y compara. Cuando la pauta y el seguimiento viven en el mismo sistema, ese interés queda registrado con el procedimiento anotado, antes de que alguien en la clínica escriba una sola palabra.",
         ctaLabel: "Agenda tu diagnóstico estético",
         phoneCaption: "Anuncio y solicitud de ejemplo",
         bridge:
-          "Así nace la consulta. El recorrido de abajo es lo que la clínica hace con ella después.",
+          "Así nace la consulta. Lo que pase en los siguientes minutos decide si termina en una valoración.",
         stages: [
           {
             title: "Llega a alguien que ya está comparando",
@@ -895,7 +1052,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "Donde la automatización se detiene",
+        eyebrow: "02 · Convertir",
         title:
           "Mira al sistema responder lo que le corresponde y ceder lo que no.",
         description:
@@ -998,6 +1155,101 @@ export const industryContentEs: IndustryLocaleBundle = {
               note: "Tu pregunta queda en las notas del cirujano para la cita, y el recordatorio sale el día anterior.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Gestionar",
+        title: "Mira cada caso y de quién está esperando respuesta.",
+        description:
+          "Las coordinadoras pierden tiempo reconstruyendo lo que el paciente ya preguntó. Aquí el origen, el interés, la pregunta que necesita a un médico y el horario solicitado quedan en una sola ficha, así la clínica siempre sabe a quién le toca.",
+        ctaLabel: "Agenda tu diagnóstico estético",
+        boardCaption: "Recorrido de paciente de ejemplo",
+        bridge:
+          "Atraer, convertir y gestionar: un solo recorrido del paciente donde el criterio clínico siempre queda en tu equipo.",
+        stages: [
+          {
+            title: "Consulta nueva",
+            description:
+              "La oportunidad se crea apenas el paciente pregunta, de día o de noche.",
+          },
+          {
+            title: "Respondida",
+            description:
+              "Lo administrativo queda resuelto y la respuesta queda registrada.",
+          },
+          {
+            title: "Pasada al médico",
+            description:
+              "La pregunta clínica queda marcada para una persona en lugar de responderla el sistema.",
+          },
+          {
+            title: "Valoración solicitada",
+            description:
+              "El horario pedido queda visible mientras la revisión clínica sigue abierta.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Oportunidades de pacientes",
+          liveLabel: "Organizado",
+          boardLabel: "Avance del caso",
+          detailsLabel: "Lo que tu equipo ya sabe",
+          activityLabel: "Actividad",
+          nextStepLabel: "Siguiente paso",
+          movedLabel: "Avanzó",
+          stageLabel: "Etapa",
+          ofLabel: "de",
+          lead: {
+            name: "Daniela Ortiz",
+            initials: "DO",
+            summary: "Nueva consulta de procedimiento",
+            channel: "Consulta por WhatsApp",
+          },
+          stages: [
+            {
+              label: "Consulta nueva",
+              cardStatus: "Recién recibida",
+              activity: "Consulta recibida fuera de horario",
+              nextStep: "Enviar la primera respuesta",
+              details: [{ label: "Origen", value: "Meta Ads" }],
+            },
+            {
+              label: "Respondida",
+              cardStatus: "Preguntas resueltas",
+              activity: "Proceso de valoración explicado",
+              nextStep: "Confirmar el procedimiento de interés",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Idioma", value: "Español" },
+              ],
+            },
+            {
+              label: "Pasada al médico",
+              cardStatus: "Esperando al médico",
+              activity: "Pregunta clínica enviada a una persona",
+              nextStep: "El médico revisa la pregunta antes de responder",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Idioma", value: "Español" },
+                { label: "Interés", value: "Inyectables" },
+                { label: "Para revisar", value: "Pregunta clínica" },
+              ],
+            },
+            {
+              label: "Valoración solicitada",
+              cardStatus: "Lista para confirmar",
+              activity: "Horario de valoración solicitado",
+              nextStep:
+                "Confirmar el jueves a las 10:00 cuando responda el médico",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Interés", value: "Inyectables" },
+                { label: "Revisado por", value: "Médico de turno" },
+                { label: "Solicitó", value: "Jueves 10:00 a. m." },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Recorrido de paciente de ejemplo: una consulta de procedimiento se convierte en una oportunidad de valoración organizada, con la pregunta clínica enviada a una persona.",
         },
       },
       packagesTitle:
@@ -1342,15 +1594,46 @@ export const industryContentEs: IndustryLocaleBundle = {
           },
         ],
       },
+      systemIntro: {
+        eyebrow: "Un sistema de agendamiento conectado",
+        title: "Recibir el mensaje es apenas el comienzo.",
+        description:
+          "Un med spa llena su agenda cuando tres partes siguen conectadas: poner la oferta correcta frente a personas que viven cerca, responderles antes de que se enfríe el interés y mantener visible cada solicitud para que recepción sepa siempre quién sigue esperando.",
+        closing:
+          "Genera interés en tus tratamientos. Conviértelo en citas. Mantén la agenda bajo control.",
+        stages: [
+          {
+            number: "01",
+            label: "Atraer",
+            title: "Genera interés en tus tratamientos",
+            description:
+              "Pon membresías, paquetes y tratamientos frente a personas que están lo bastante cerca para venir este mes.",
+          },
+          {
+            number: "02",
+            label: "Convertir",
+            title: "Conviértelo en una cita",
+            description:
+              "Responde mientras la oferta sigue fresca, confirma qué quiere la persona y guíala a un horario que le sirva.",
+          },
+          {
+            number: "03",
+            label: "Gestionar",
+            title: "Mantén la agenda a la vista",
+            description:
+              "Cada solicitud, su oferta, su estado y su siguiente paso en un solo lugar y no en cinco bandejas.",
+          },
+        ],
+      },
       adCampaignDemo: {
-        eyebrow: "De dónde sale la demanda",
+        eyebrow: "01 · Atraer",
         title: "Mira cómo una promoción se vuelve una solicitud de cita.",
         description:
           "Un anuncio de med spa genera un pico de interés en pocas horas, casi siempre mientras tu equipo está atendiendo. Esto es lo que pasa con ese interés cuando la pauta está conectada al agendamiento y no termina en un hilo de comentarios.",
         ctaLabel: "Agenda tu diagnóstico para med spa",
         phoneCaption: "Anuncio y solicitud de ejemplo",
         bridge:
-          "Todas las respuestas llegan a un solo lugar y no a cinco bandejas. El recorrido de abajo las convierte en cita y en una próxima visita.",
+          "Todas las respuestas llegan a un solo lugar y no a cinco bandejas. Ahora necesita respuesta mientras la oferta sigue fresca.",
         stages: [
           {
             title: "Llega a gente que vive cerca y quiere agendar",
@@ -1448,7 +1731,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       conversationDemo: {
-        eyebrow: "Una promoción, respondida en segundos",
+        eyebrow: "02 · Convertir",
         title: "Un mensaje al mediodía, agendado para el miércoles.",
         description:
           "Una promoción genera un pico de mensajes justo a la hora en que tu equipo está atendiendo. Así se ve uno de ellos cuando el sistema lo toma: la oferta confirmada, un horario elegido y el seguimiento ya listo antes de que alguien en recepción abra la bandeja.",
@@ -1544,6 +1827,101 @@ export const industryContentEs: IndustryLocaleBundle = {
               note: "El recordatorio sale el día anterior. Después de tu cita te escribimos y te ayudamos a agendar la siguiente.",
             },
           ],
+        },
+      },
+      crmPipelineDemo: {
+        eyebrow: "03 · Gestionar",
+        title: "Un solo lugar para ver quién está esperando un horario.",
+        description:
+          "Una promoción puede traer más mensajes en una tarde de los que recepción alcanza a seguir. Aquí cada solicitud conserva su oferta, su canal, su estado y su siguiente paso, así nada se pierde entre una respuesta de historia y la agenda.",
+        ctaLabel: "Agenda tu diagnóstico para med spa",
+        boardCaption: "Recorrido de cliente de ejemplo",
+        bridge:
+          "Atraer, convertir y gestionar: un solo recorrido del cliente que sigue funcionando después de la primera visita.",
+        stages: [
+          {
+            title: "Solicitud nueva",
+            description:
+              "Respuestas de historias, comentarios y mensajes se vuelven una sola solicitud visible.",
+          },
+          {
+            title: "Respondida",
+            description:
+              "La oferta queda confirmada mientras tu equipo sigue atendiendo.",
+          },
+          {
+            title: "Tratamiento elegido",
+            description:
+              "Lo que la clienta quiere agendar queda anotado en la solicitud.",
+          },
+          {
+            title: "Cita solicitada",
+            description:
+              "Recepción ve el horario por confirmar y el seguimiento ya programado.",
+          },
+        ],
+        script: {
+          workspaceLabel: "Oportunidades de clientes",
+          liveLabel: "Organizado",
+          boardLabel: "Avance de la solicitud",
+          detailsLabel: "Lo que tu equipo ya sabe",
+          activityLabel: "Actividad",
+          nextStepLabel: "Siguiente paso",
+          movedLabel: "Avanzó",
+          stageLabel: "Etapa",
+          ofLabel: "de",
+          lead: {
+            name: "Marcela Ríos",
+            initials: "MR",
+            summary: "Nueva solicitud de cita",
+            channel: "Mensaje de Instagram",
+          },
+          stages: [
+            {
+              label: "Solicitud nueva",
+              cardStatus: "Recién recibida",
+              activity: "Mensaje recibido a la hora del almuerzo",
+              nextStep: "Enviar la primera respuesta",
+              details: [{ label: "Origen", value: "Meta Ads" }],
+            },
+            {
+              label: "Respondida",
+              cardStatus: "Oferta confirmada",
+              activity: "Detalles de la promoción confirmados",
+              nextStep: "Confirmar qué tratamiento quiere",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Canal", value: "Instagram" },
+              ],
+            },
+            {
+              label: "Tratamiento elegido",
+              cardStatus: "Tratamiento seleccionado",
+              activity: "Facial de membresía seleccionado",
+              nextStep: "Ofrecer horarios de esta semana",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Canal", value: "Instagram" },
+                { label: "Interés", value: "Facial mensual" },
+                { label: "Oferta", value: "Membresía" },
+              ],
+            },
+            {
+              label: "Cita solicitada",
+              cardStatus: "Lista para confirmar",
+              activity: "Cita del miércoles solicitada",
+              nextStep:
+                "Confirmar el miércoles a las 5:00 y programar el recordatorio",
+              details: [
+                { label: "Origen", value: "Meta Ads" },
+                { label: "Interés", value: "Facial mensual" },
+                { label: "Solicitó", value: "Miércoles 5:00 p. m." },
+                { label: "Seguimiento", value: "Recordatorio de reagenda" },
+              ],
+            },
+          ],
+          transcriptLabel:
+            "Recorrido de cliente de ejemplo: un mensaje desde una promoción se convierte en una solicitud de cita organizada con un siguiente paso claro.",
         },
       },
       packagesTitle:
