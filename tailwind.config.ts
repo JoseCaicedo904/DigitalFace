@@ -155,6 +155,16 @@ export default {
             opacity: "0.35",
           },
         },
+        "typing-dot": {
+          "0%, 60%, 100%": {
+            transform: "translateY(0)",
+            opacity: "0.35",
+          },
+          "30%": {
+            transform: "translateY(-3px)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -162,6 +172,7 @@ export default {
         journey: "journey 7s linear infinite",
         "journey-slow": "journey 11s linear infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
+        "typing-dot": "typing-dot 1.2s ease-in-out infinite",
       },
       backgroundImage: {
         "glow-radial":

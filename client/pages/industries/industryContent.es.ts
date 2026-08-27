@@ -247,6 +247,207 @@ export const industryContentEs: IndustryLocaleBundle = {
           },
         ],
       },
+      adCampaignDemo: {
+        eyebrow: "De dónde sale la consulta",
+        title:
+          "Mira cómo un anuncio de carillas se vuelve una solicitud de valoración.",
+        description:
+          "Una campaña dental es fácil de juzgar por los clics. Lo que define el mes es el minuto siguiente: si la persona recibe una razón para responder y si lo que dice llega a un lugar donde tu equipo pueda trabajarlo.",
+        ctaLabel: "Agenda tu diagnóstico odontológico",
+        phoneCaption: "Anuncio y solicitud de ejemplo",
+        bridge:
+          "La solicitud queda en tu proceso con el tratamiento anotado. Abajo, esa misma consulta recibe respuesta y termina agendada.",
+        stages: [
+          {
+            title: "Llega a alguien que ya está evaluando el tratamiento",
+            description:
+              "Implantes, carillas y diseño de sonrisa aparecen frente a personas que ya los estaban buscando, en inglés o en español.",
+          },
+          {
+            title: "La oferta da un motivo para tocar el anuncio",
+            description:
+              "Una valoración que el paciente puede imaginar, en lugar de un teléfono para llamar después, cuando el interés ya se enfrió.",
+          },
+          {
+            title: "El interés de tratamiento viene incluido",
+            description:
+              "El paciente dice qué está evaluando y dónde ubicarlo, así nadie empieza la conversación desde cero.",
+          },
+          {
+            title: "La solicitud queda lista para tu equipo",
+            description:
+              "Entra al mismo proceso que el resto de las consultas, con el tratamiento, el idioma y el contacto ya anotados.",
+          },
+        ],
+        script: {
+          clockLabel: "8:12",
+          sponsoredLabel: "Publicidad",
+          posts: [
+            {
+              author: "Sofía L.",
+              meta: "1 h",
+              caption: "Por fin pinté la cocina. Solo me tomó un año.",
+            },
+            {
+              author: "Martín R.",
+              meta: "3 h",
+              caption: "Otra noche de juegos. Seguimos invictos.",
+            },
+            {
+              author: "Lucía T.",
+              meta: "5 h",
+              caption: "Día de playa con los primos.",
+            },
+          ],
+          form: {
+            subtitle: "Solicitud de valoración",
+            intentQuestion: "¿Qué estás evaluando?",
+            contactQuestion: "¿Dónde te contacta la clínica?",
+            nameLabel: "Nombre",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Enviar",
+            sentTitle: "Solicitud enviada",
+            sentNote:
+              "La clínica ya tiene tus datos y te escribe en un momento.",
+            systemLabel: "En tu sistema DigitalFace",
+            statuses: [
+              "Nueva solicitud de valoración",
+              "Interés de tratamiento guardado",
+              "Listo para seguimiento",
+            ],
+          },
+          ads: [
+            {
+              market: "dental",
+              business: "Lumina Dental Studio",
+              caption:
+                "Llevas tiempo pensándolo. Ven y descubre qué necesitaría realmente tu sonrisa.",
+              offer: "Estudio de sonrisa con el doctor",
+              ctaLabel: "Agendar",
+              creativeEyebrow: "Diseño de sonrisa",
+              creativeTitle: "Conoce el plan antes de empezar",
+              options: ["Carillas", "Blanqueamiento", "Todavía no lo sé"],
+              choice: 0,
+              lead: { name: "Camila Restrepo", phone: "+57 320 555 0142" },
+            },
+            {
+              market: "dental",
+              business: "Lumina Dental Studio",
+              caption:
+                "Un diente que falta cambia cómo comes y cómo sonríes. Pregunta qué implicaría un implante en tu caso.",
+              offer: "Valoración de implantes",
+              ctaLabel: "Más información",
+              creativeEyebrow: "Implantes dentales",
+              creativeTitle: "Vuelve a morder y a sonreír igual",
+              options: ["Un diente", "Varios dientes", "Arcada completa"],
+              choice: 1,
+              lead: { name: "Jorge Medina", phone: "+57 315 555 0164" },
+            },
+          ],
+          transcriptLabel:
+            "Anuncio odontológico y solicitud de valoración de ejemplo, mostrados como ilustración.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "Una consulta dental, de principio a fin",
+        title:
+          "Una pregunta por implantes un sábado en la mañana, agendada antes del lunes.",
+        description:
+          "Las decisiones dentales casi nunca se cierran en un mensaje. Esta es la misma consulta dentro del sistema dental: respondida con la clínica cerrada, con la foto, el interés de tratamiento y la pregunta de financiación ya organizados antes de que alguien de tu equipo la abra.",
+        ctaLabel: "Agenda tu diagnóstico odontológico",
+        phoneCaption: "Conversación de ejemplo",
+        stages: [
+          {
+            title: "El interés de tratamiento recibe respuesta",
+            description:
+              "Las consultas por implantes, carillas y diseño de sonrisa quedan atendidas aunque tu equipo esté en el sillón.",
+          },
+          {
+            title: "La foto y los datos quedan juntos",
+            description:
+              "Imágenes, interés de tratamiento y notas de admisión llegan a una sola ficha, no a tres bandejas de entrada.",
+          },
+          {
+            title: "Las preguntas administrativas se responden igual siempre",
+            description:
+              "Financiación, proceso y disponibilidad salen desde lo que tu clínica aprobó, cada vez.",
+          },
+          {
+            title: "Al doctor le llega el caso, no el trabajo repetitivo",
+            description:
+              "Las preguntas clínicas y las de cada caso llegan a tu equipo con la valoración ya agendada.",
+          },
+        ],
+        script: {
+          contact: "Tu Clínica",
+          status: "Responde en segundos",
+          typingStatus: "escribiendo…",
+          clockLabel: "8:27",
+          dayLabel: "Sábado · 8:24 a. m.",
+          composerPlaceholder: "Mensaje",
+          transcriptLabel:
+            "Conversación de ejemplo entre un paciente potencial y el asistente automatizado de una clínica odontológica.",
+          patientLabel: "Paciente",
+          clinicLabel: "Clínica",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "8:24 a. m.",
+              pauseMs: 700,
+              text: "¡Buenos días! Me faltan dos molares abajo. ¿Ustedes hacen implantes?",
+            },
+            {
+              kind: "assistant",
+              stage: 0,
+              time: "8:24 a. m.",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Buenos días, Andrés. Sí, los implantes son uno de nuestros tratamientos principales. Si nos envías una foto de la zona, la dejo en tu ficha para que el doctor la vea antes de tu cita.",
+            },
+            {
+              kind: "patient",
+              stage: 1,
+              time: "8:25 a. m.",
+              pauseMs: 2400,
+              attachment: "molares-inferiores.jpg",
+              text: "Aquí está. ¿También manejan planes de pago?",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "8:26 a. m.",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Ya quedó en tu ficha, gracias. Sí manejamos financiación, y el doctor revisa contigo el plan para tu caso en la valoración. Estos horarios están libres:",
+              options: [
+                "Lun · 9:00 a. m.",
+                "Mar · 4:30 p. m.",
+                "Mié · 11:15 a. m.",
+              ],
+            },
+            {
+              kind: "choice",
+              stage: 2,
+              time: "8:27 a. m.",
+              pauseMs: 2500,
+              option: 1,
+              text: "El martes a las 4:30, por favor.",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "8:27 a. m.",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Valoración agendada",
+              when: "Martes, 4:30 p. m.",
+              service: "Valoración de implantes · 45 min",
+              note: "Tu foto y tu pregunta de financiación ya están en la ficha, así el doctor revisa tu caso antes de que llegues.",
+            },
+          ],
+        },
+      },
       packagesTitle:
         "Elige el nivel de crecimiento odontológico que corresponde a tu clínica hoy.",
       packages: [
@@ -589,6 +790,216 @@ export const industryContentEs: IndustryLocaleBundle = {
           },
         ],
       },
+      adCampaignDemo: {
+        eyebrow: "Antes del primer mensaje",
+        title: "Mira cómo un anuncio de un procedimiento llega ya organizado.",
+        description:
+          "Quien está evaluando un procedimiento casi nunca llama. Toca el anuncio, pregunta y compara. Cuando la pauta y el seguimiento viven en el mismo sistema, ese interés queda registrado con el procedimiento anotado, antes de que alguien en la clínica escriba una sola palabra.",
+        ctaLabel: "Agenda tu diagnóstico estético",
+        phoneCaption: "Anuncio y solicitud de ejemplo",
+        bridge:
+          "Así nace la consulta. El recorrido de abajo es lo que la clínica hace con ella después.",
+        stages: [
+          {
+            title: "Llega a alguien que ya está comparando",
+            description:
+              "Tus procedimientos aparecen frente a personas que los están investigando ahora, no ante un público que nunca lo ha pensado.",
+          },
+          {
+            title: "El anuncio ofrece una valoración, no un procedimiento",
+            description:
+              "El siguiente paso es hablar con tu equipo, que es el compromiso que sí acepta un paciente serio.",
+          },
+          {
+            title: "El interés queda registrado",
+            description:
+              "Lo que el paciente pregunta, y en qué idioma, llega anotado en el registro y no perdido en un hilo de mensajes.",
+          },
+          {
+            title: "La consulta queda lista para revisión",
+            description:
+              "Entra al proceso que usan tus coordinadoras, así la primera respuesta ya tiene contexto y las preguntas clínicas llegan a una persona.",
+          },
+        ],
+        script: {
+          clockLabel: "9:24",
+          sponsoredLabel: "Publicidad",
+          posts: [
+            {
+              author: "Renata C.",
+              meta: "2 h",
+              caption: "Tres días de lluvia y el perro ya tiene su opinión.",
+            },
+            {
+              author: "Emilio F.",
+              meta: "4 h",
+              caption: "Café nuevo en el centro. Voy a volver.",
+            },
+            {
+              author: "Paola G.",
+              meta: "7 h",
+              caption: "Atardecer desde el balcón, sin filtro.",
+            },
+          ],
+          form: {
+            subtitle: "Solicitud de valoración",
+            intentQuestion: "¿Qué te interesa?",
+            contactQuestion: "¿Dónde te contacta la clínica?",
+            nameLabel: "Nombre",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Enviar",
+            sentTitle: "Solicitud enviada",
+            sentNote:
+              "La clínica ya tiene tus datos y una coordinadora te responde.",
+            systemLabel: "En tu sistema DigitalFace",
+            statuses: [
+              "Nueva solicitud de valoración",
+              "Interés de procedimiento guardado",
+              "Listo para el equipo",
+            ],
+          },
+          ads: [
+            {
+              market: "aesthetic",
+              business: "Nova Aesthetic Clinic",
+              caption:
+                "Empieza por la valoración. El médico te dice con calma qué vale la pena hacer y qué no.",
+              offer: "Valoración con el médico",
+              ctaLabel: "Pedir valoración",
+              creativeEyebrow: "Medicina estética",
+              creativeTitle: "Un plan honesto antes de todo",
+              options: ["Inyectables", "Tratamientos de piel", "Otra cosa"],
+              choice: 0,
+              lead: { name: "Daniela Ortiz", phone: "+57 320 555 0119" },
+            },
+            {
+              market: "aesthetic",
+              business: "Nova Aesthetic Clinic",
+              caption:
+                "Ya hiciste la dieta y el gimnasio. Pregunta qué es realista para esa zona que no cede.",
+              offer: "Valoración corporal",
+              ctaLabel: "Ver más",
+              creativeEyebrow: "Cuerpo y piel",
+              creativeTitle: "Qué es realista en tu caso",
+              options: [
+                "Contorno corporal",
+                "Firmeza de piel",
+                "Todavía no lo sé",
+              ],
+              choice: 1,
+              lead: { name: "Paula Vega", phone: "+57 310 555 0186" },
+            },
+          ],
+          transcriptLabel:
+            "Anuncio de medicina estética y solicitud de valoración de ejemplo, mostrados como ilustración.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "Donde la automatización se detiene",
+        title:
+          "Mira al sistema responder lo que le corresponde y ceder lo que no.",
+        description:
+          "El valor de la automatización en medicina estética no es que responda todo. Es que responde lo administrativo al instante, reconoce una pregunta clínica y la pone frente a una persona mientras la valoración igual queda agendada.",
+        ctaLabel: "Agenda tu diagnóstico estético",
+        phoneCaption: "Conversación de ejemplo",
+        stages: [
+          {
+            title: "La consulta no espera al horario de oficina",
+            description:
+              "Una pregunta por un procedimiento un domingo en la noche recibe la misma respuesta inmediata que una llamada un martes.",
+          },
+          {
+            title: "Información aprobada, entregada igual dos veces",
+            description:
+              "El proceso de valoración, la preparación y las políticas salen desde lo que tu práctica autorizó.",
+          },
+          {
+            title: "Las preguntas clínicas van a una persona",
+            description:
+              "Seguridad, candidatura y temas propios de cada caso se escalan a tu equipo en lugar de responderse con automatización.",
+          },
+          {
+            title: "La valoración queda protegida",
+            description:
+              "La cita, el recordatorio y la pregunta pendiente de la paciente llegan a tu equipo antes de la visita.",
+          },
+        ],
+        script: {
+          contact: "Tu Práctica",
+          status: "Responde en segundos",
+          typingStatus: "escribiendo…",
+          clockLabel: "6:45",
+          dayLabel: "Domingo · 6:40 p. m.",
+          composerPlaceholder: "Mensaje",
+          transcriptLabel:
+            "Conversación de ejemplo entre una paciente potencial y una práctica de medicina estética, con traspaso al equipo clínico.",
+          patientLabel: "Paciente",
+          clinicLabel: "Práctica",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "6:40 p. m.",
+              pauseMs: 700,
+              text: "Hola, me interesa un mommy makeover. ¿Cómo funciona la primera cita?",
+            },
+            {
+              kind: "assistant",
+              stage: 1,
+              time: "6:40 p. m.",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Hola Daniela. Empieza con una valoración con el cirujano, de unos 45 minutos, donde revisan tus objetivos, las opciones y la recuperación.",
+            },
+            {
+              kind: "patient",
+              stage: 2,
+              time: "6:41 p. m.",
+              pauseMs: 2400,
+              text: "¿Es seguro hacerlo si todavía estoy lactando?",
+            },
+            {
+              kind: "note",
+              stage: 2,
+              pauseMs: 1500,
+              text: "Valentina, del equipo clínico, entró a la conversación",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "6:43 p. m.",
+              pauseMs: 700,
+              typingMs: 1600,
+              author: "Valentina · Coordinadora de pacientes",
+              text: "Hola Daniela, esa la responde el cirujano según tu caso y la revisa contigo en persona. Estos horarios de valoración están libres:",
+              options: [
+                "Jue · 3:00 p. m.",
+                "Vie · 5:45 p. m.",
+                "Lun · 10:30 a. m.",
+              ],
+            },
+            {
+              kind: "choice",
+              stage: 3,
+              time: "6:44 p. m.",
+              pauseMs: 2500,
+              option: 1,
+              text: "El viernes a las 5:45 me sirve.",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "6:45 p. m.",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Valoración confirmada",
+              when: "Viernes, 5:45 p. m.",
+              service: "Valoración quirúrgica · 45 min",
+              note: "Tu pregunta queda en las notas del cirujano para la cita, y el recordatorio sale el día anterior.",
+            },
+          ],
+        },
+      },
       packagesTitle:
         "Elige el nivel de crecimiento estético que corresponde a tu centro hoy.",
       packages: [
@@ -930,6 +1341,210 @@ export const industryContentEs: IndustryLocaleBundle = {
               "Los recorridos posteriores a la visita piden opinión, impulsan la siguiente cita y mantienen visible el historial.",
           },
         ],
+      },
+      adCampaignDemo: {
+        eyebrow: "De dónde sale la demanda",
+        title: "Mira cómo una promoción se vuelve una solicitud de cita.",
+        description:
+          "Un anuncio de med spa genera un pico de interés en pocas horas, casi siempre mientras tu equipo está atendiendo. Esto es lo que pasa con ese interés cuando la pauta está conectada al agendamiento y no termina en un hilo de comentarios.",
+        ctaLabel: "Agenda tu diagnóstico para med spa",
+        phoneCaption: "Anuncio y solicitud de ejemplo",
+        bridge:
+          "Todas las respuestas llegan a un solo lugar y no a cinco bandejas. El recorrido de abajo las convierte en cita y en una próxima visita.",
+        stages: [
+          {
+            title: "Llega a gente que vive cerca y quiere agendar",
+            description:
+              "Tus tratamientos y membresías aparecen para personas que están cerca del spa y listas para reservar algo este mes.",
+          },
+          {
+            title: "La oferta es fácil de aceptar",
+            description:
+              "Un paso claro en lugar de un hilo de comentarios que la recepción tiene que responder mensaje por mensaje.",
+          },
+          {
+            title: "La solicitud dice qué quiere",
+            description:
+              "Tratamiento, idioma y contacto llegan juntos, así la respuesta puede ser un horario en vez de otra pregunta.",
+          },
+          {
+            title: "Nada se queda en una bandeja",
+            description:
+              "Cada respuesta cae en un solo proceso con la oferta anotada, lista para agendar, recordar y preparar la visita siguiente.",
+          },
+        ],
+        script: {
+          clockLabel: "1:47",
+          sponsoredLabel: "Publicidad",
+          posts: [
+            {
+              author: "Tania M.",
+              meta: "45 min",
+              caption:
+                "Nueve kilómetros antes del trabajo. Todavía no lo creo.",
+            },
+            {
+              author: "Caro V.",
+              meta: "2 h",
+              caption: "La pasta me quedó mejor que la del restaurante.",
+            },
+            {
+              author: "Nadia R.",
+              meta: "6 h",
+              caption: "Brunch de cumpleaños con las amigas.",
+            },
+          ],
+          form: {
+            subtitle: "Solicitud de cita",
+            intentQuestion: "¿Qué te gustaría agendar?",
+            contactQuestion: "¿A dónde te escribimos?",
+            nameLabel: "Nombre",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Enviar",
+            sentTitle: "Solicitud enviada",
+            sentNote:
+              "El spa ya tiene tus datos y te manda los horarios en un momento.",
+            systemLabel: "En tu sistema DigitalFace",
+            statuses: [
+              "Nueva solicitud de cita",
+              "Interés de tratamiento guardado",
+              "Listo para seguimiento",
+            ],
+          },
+          ads: [
+            {
+              market: "medSpa",
+              business: "Solene Med Spa",
+              caption:
+                "Un facial al mes, un precio que no cambia y un horario que sí te sirve.",
+              offer: "Membresía mensual de faciales",
+              ctaLabel: "Más información",
+              creativeEyebrow: "Membresías",
+              creativeTitle: "El cuidado de piel que sí mantienes",
+              options: [
+                "Facial mensual",
+                "Sumar tratamientos",
+                "Solo la información",
+              ],
+              choice: 0,
+              lead: { name: "Marcela Ríos", phone: "+57 310 555 0173" },
+            },
+            {
+              market: "medSpa",
+              business: "Solene Med Spa",
+              caption:
+                "Deja de organizar tu semana alrededor de la afeitada. Pregunta por empezar tus sesiones antes del verano.",
+              offer: "Valoración de paquete láser",
+              ctaLabel: "Agendar",
+              creativeEyebrow: "Depilación láser",
+              creativeTitle: "Empieza las sesiones antes del verano",
+              options: ["Piernas", "Axilas", "Cuerpo completo"],
+              choice: 2,
+              lead: { name: "Andrea Salas", phone: "+57 320 555 0198" },
+            },
+          ],
+          transcriptLabel:
+            "Anuncio de med spa y solicitud de cita de ejemplo, mostrados como ilustración.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "Una promoción, respondida en segundos",
+        title: "Un mensaje al mediodía, agendado para el miércoles.",
+        description:
+          "Una promoción genera un pico de mensajes justo a la hora en que tu equipo está atendiendo. Así se ve uno de ellos cuando el sistema lo toma: la oferta confirmada, un horario elegido y el seguimiento ya listo antes de que alguien en recepción abra la bandeja.",
+        ctaLabel: "Agenda tu diagnóstico para med spa",
+        phoneCaption: "Conversación de ejemplo",
+        stages: [
+          {
+            title: "Todos los canales llegan a un solo lugar",
+            description:
+              "Respuestas a historias, comentarios, mensajes directos, formularios y llamadas dejan de vivir en cinco bandejas distintas.",
+          },
+          {
+            title: "La oferta se responde mientras hay interés",
+            description:
+              "Los datos aprobados de la promoción salen en segundos, no cuando se va la última clienta del día.",
+          },
+          {
+            title: "La cita se agenda dentro de la conversación",
+            description:
+              "Sin perseguir un enlace, sin ir y venir por horarios y sin nadie esperando una llamada que no llega.",
+          },
+          {
+            title: "La relación continúa",
+            description:
+              "Los recordatorios protegen la cita, y el seguimiento trae de vuelta a la clienta para la siguiente.",
+          },
+        ],
+        script: {
+          contact: "Tu Med Spa",
+          channelLabel: "Instagram",
+          status: "Responde en segundos",
+          typingStatus: "escribiendo…",
+          clockLabel: "1:14",
+          dayLabel: "Hoy · 1:12 p. m.",
+          composerPlaceholder: "Mensaje",
+          transcriptLabel:
+            "Conversación de ejemplo por Instagram entre una clienta potencial y el asistente automatizado de un med spa.",
+          patientLabel: "Clienta",
+          clinicLabel: "Med spa",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "1:12 p. m.",
+              pauseMs: 700,
+              text: "hola! sigue la promo de relleno de labios de la historia?",
+            },
+            {
+              kind: "assistant",
+              stage: 1,
+              time: "1:12 p. m.",
+              pauseMs: 600,
+              typingMs: 1300,
+              text: "¡Hola Marcela! Sí, va hasta el domingo. Al mismo precio de la historia, y la cita toma unos 30 minutos.",
+            },
+            {
+              kind: "patient",
+              stage: 2,
+              time: "1:13 p. m.",
+              pauseMs: 2200,
+              text: "perfecto, tienen algo esta semana? salgo de trabajar a las 6",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "1:13 p. m.",
+              pauseMs: 600,
+              typingMs: 1300,
+              text: "Sí. Estos son los espacios de la tarde que quedan esta semana:",
+              options: [
+                "Mié · 6:15 p. m.",
+                "Jue · 6:45 p. m.",
+                "Vie · 7:00 p. m.",
+              ],
+            },
+            {
+              kind: "choice",
+              stage: 2,
+              time: "1:14 p. m.",
+              pauseMs: 2500,
+              option: 0,
+              text: "el miércoles me queda!",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "1:14 p. m.",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Cita agendada",
+              when: "Miércoles, 6:15 p. m.",
+              service: "Relleno de labios · 30 min",
+              note: "El recordatorio sale el día anterior. Después de tu cita te escribimos y te ayudamos a agendar la siguiente.",
+            },
+          ],
+        },
       },
       packagesTitle:
         "Elige el nivel de crecimiento que corresponde a tu med spa hoy.",

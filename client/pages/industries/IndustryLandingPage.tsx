@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
+import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
+import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
   breadcrumbSchema,
@@ -635,6 +637,13 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
+        {data.adDemoSlot === "after-problem" ? (
+          <AdCampaignDemoSection
+            content={data.adCampaignDemo}
+            ctaHref="#book-assessment"
+          />
+        ) : null}
+
         <section className="overflow-hidden bg-gradient-to-b from-secondary/35 via-white to-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
@@ -685,6 +694,18 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
             </Reveal>
           </div>
         </section>
+
+        {data.adDemoSlot === "before-conversation" ? (
+          <AdCampaignDemoSection
+            content={data.adCampaignDemo}
+            ctaHref="#book-assessment"
+          />
+        ) : null}
+
+        <ConversationDemoSection
+          content={data.conversationDemo}
+          ctaHref="#book-assessment"
+        />
 
         <section
           id="system"

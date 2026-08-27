@@ -17,7 +17,7 @@ import {
   Star,
   UserCheck,
 } from "lucide-react";
-import type { IndustrySlug } from "./industryTypes";
+import type { IndustryAdDemoSlot, IndustrySlug } from "./industryTypes";
 
 /**
  * Icons live outside the translated content so both locales stay visually
@@ -100,4 +100,19 @@ export const industryProofLead: Record<IndustrySlug, "diego" | "jennifer"> = {
   "dental-practices": "jennifer",
   "aesthetic-medicine": "diego",
   "med-spas": "diego",
+};
+
+/**
+ * Placement of the advertising demonstration inside each funnel.
+ *
+ * Dental argues that the practice needs a better path rather than more leads,
+ * so its campaign story runs after the journey and hands straight into the
+ * conversation. The other two answer a gap named in their problem section, and
+ * the med spa page keeps its ad away from the promotion story its conversation
+ * demo already tells.
+ */
+export const industryAdDemoSlot: Record<IndustrySlug, IndustryAdDemoSlot> = {
+  "dental-practices": "before-conversation",
+  "aesthetic-medicine": "after-problem",
+  "med-spas": "after-problem",
 };

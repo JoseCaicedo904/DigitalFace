@@ -1,4 +1,6 @@
 import type { LucideIcon } from "lucide-react";
+import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
+import type { ConversationDemoContent } from "@/components/demo/conversation";
 
 export type IndustrySlug =
   | "dental-practices"
@@ -10,6 +12,12 @@ export const INDUSTRY_SLUGS: IndustrySlug[] = [
   "aesthetic-medicine",
   "med-spas",
 ];
+
+/**
+ * Where a funnel tells its advertising story. Chosen per page from the
+ * argument that page is making, not applied uniformly.
+ */
+export type IndustryAdDemoSlot = "after-problem" | "before-conversation";
 
 export type IndustryStat = {
   value: string;
@@ -91,6 +99,10 @@ export type IndustryLandingText = {
     description: string;
     items: IndustryTextItem[];
   };
+  /** The scripted advertising demonstration, in this funnel's own campaign. */
+  adCampaignDemo: AdCampaignDemoContent;
+  /** The scripted phone demonstration, tailored to this funnel's audience. */
+  conversationDemo: ConversationDemoContent;
   packagesTitle: string;
   packages: IndustryPackage[];
   faqTitle: string;
@@ -112,6 +124,7 @@ export type IndustryLandingData = Omit<
 > & {
   slug: IndustrySlug;
   proofLead: ClientStoryId;
+  adDemoSlot: IndustryAdDemoSlot;
   problem: Omit<IndustryLandingText["problem"], "items"> & {
     items: IndustryItem[];
   };

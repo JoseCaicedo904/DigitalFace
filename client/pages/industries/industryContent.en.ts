@@ -245,6 +245,202 @@ export const industryContentEn: IndustryLocaleBundle = {
           },
         ],
       },
+      adCampaignDemo: {
+        eyebrow: "Where the inquiry comes from",
+        title: "Watch a veneer ad become a consultation request.",
+        description:
+          "A dental campaign is easy to judge by clicks. What decides the month is the minute after the click: whether the person gets a reason to answer, and whether what they say arrives somewhere your team can actually work it.",
+        ctaLabel: "Book a Dental Growth Assessment",
+        phoneCaption: "Sample ad and consultation request",
+        bridge:
+          "The request is in your pipeline with the treatment attached. Below, that same inquiry gets answered and booked.",
+        stages: [
+          {
+            title: "It reaches someone weighing the treatment",
+            description:
+              "Implants, veneers and smile design appear in front of people who have already been looking them up, in English or Spanish.",
+          },
+          {
+            title: "The offer gives a reason to tap",
+            description:
+              "A consultation the patient can picture, instead of a phone number to call back later when the interest has cooled.",
+          },
+          {
+            title: "The treatment interest comes with it",
+            description:
+              "The patient says what they are considering and where to reach them, so nobody starts the conversation from zero.",
+          },
+          {
+            title: "The request is ready for your team",
+            description:
+              "It lands in the same pipeline as every other inquiry, with the treatment, the language and the contact already attached.",
+          },
+        ],
+        script: {
+          clockLabel: "8:12",
+          sponsoredLabel: "Sponsored",
+          posts: [
+            {
+              author: "Sofía L.",
+              meta: "1h",
+              caption: "Finally repainted the kitchen. Only took a year.",
+            },
+            {
+              author: "Martín R.",
+              meta: "3h",
+              caption: "Game night again. Still undefeated.",
+            },
+            {
+              author: "Lucía T.",
+              meta: "5h",
+              caption: "Beach day with the cousins.",
+            },
+          ],
+          form: {
+            subtitle: "Consultation request",
+            intentQuestion: "What are you considering?",
+            contactQuestion: "Where can the practice reach you?",
+            nameLabel: "Name",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Send",
+            sentTitle: "Request sent",
+            sentNote:
+              "The practice has your details and will write back shortly.",
+            systemLabel: "In your DigitalFace system",
+            statuses: [
+              "New consultation request",
+              "Treatment interest saved",
+              "Ready for follow-up",
+            ],
+          },
+          ads: [
+            {
+              market: "dental",
+              business: "Lumina Dental Studio",
+              caption:
+                "You have been thinking about it for a while. Come find out what your smile would actually need.",
+              offer: "Smile study with the doctor",
+              ctaLabel: "Book now",
+              creativeEyebrow: "Smile design",
+              creativeTitle: "Know the plan before you start",
+              options: ["Veneers", "Whitening", "Not sure yet"],
+              choice: 0,
+              lead: { name: "Camila Restrepo", phone: "+1 (305) 555 0142" },
+            },
+            {
+              market: "dental",
+              business: "Lumina Dental Studio",
+              caption:
+                "A missing tooth changes how you eat and how you smile. Ask what an implant would involve in your case.",
+              offer: "Implant consultation",
+              ctaLabel: "Get info",
+              creativeEyebrow: "Dental implants",
+              creativeTitle: "Chew and smile like before",
+              options: ["One tooth", "Several teeth", "Full arch"],
+              choice: 1,
+              lead: { name: "Jorge Medina", phone: "+1 (786) 555 0164" },
+            },
+          ],
+          transcriptLabel:
+            "Sample dental advertisement and consultation request, shown as an illustration.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "A dental inquiry, start to finish",
+        title:
+          "A Saturday morning implant question, on the schedule before Monday.",
+        description:
+          "Dental decisions rarely close in one message. This is the same inquiry inside the dental growth system: answered while the practice is closed, with the photo, the treatment interest and the financing question already organized before anyone on your team opens it.",
+        ctaLabel: "Book a Dental Growth Assessment",
+        phoneCaption: "Sample conversation",
+        stages: [
+          {
+            title: "Treatment interest gets an answer",
+            description:
+              "Implant, veneer and smile-design inquiries are acknowledged whether or not your team is chairside.",
+          },
+          {
+            title: "The photo and the details stay together",
+            description:
+              "Images, treatment interest and intake notes land on one patient record instead of three inboxes.",
+          },
+          {
+            title: "Administrative questions answered consistently",
+            description:
+              "Financing, process and availability questions come from what your practice approved, every time.",
+          },
+          {
+            title: "The doctor gets the case, not the busywork",
+            description:
+              "Case-specific and clinical questions reach your team with the consultation already booked.",
+          },
+        ],
+        script: {
+          contact: "Your Practice",
+          status: "Replies in seconds",
+          typingStatus: "typing…",
+          clockLabel: "8:27",
+          dayLabel: "Saturday · 8:24 AM",
+          composerPlaceholder: "Message",
+          transcriptLabel:
+            "Sample conversation between a prospective dental patient and an automated practice assistant.",
+          patientLabel: "Patient",
+          clinicLabel: "Practice",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "8:24 AM",
+              pauseMs: 700,
+              text: "Good morning! I am missing two lower molars. Do you place implants?",
+            },
+            {
+              kind: "assistant",
+              stage: 0,
+              time: "8:24 AM",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Good morning, Andrés. Yes, implants are one of our main treatments. If you send a photo of the area, I will attach it to your file so the doctor sees it before your visit.",
+            },
+            {
+              kind: "patient",
+              stage: 1,
+              time: "8:25 AM",
+              pauseMs: 2400,
+              attachment: "lower-molars.jpg",
+              text: "Here it is. Do you also have payment plans?",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "8:26 AM",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Saved to your file, thank you. We do offer financing, and the doctor reviews the plan for your case at the consultation. These times are open:",
+              options: ["Mon · 9:00 AM", "Tue · 4:30 PM", "Wed · 11:15 AM"],
+            },
+            {
+              kind: "choice",
+              stage: 2,
+              time: "8:27 AM",
+              pauseMs: 2500,
+              option: 1,
+              text: "Tuesday at 4:30, please.",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "8:27 AM",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Consultation booked",
+              when: "Tuesday, 4:30 PM",
+              service: "Implant consultation · 45 min",
+              note: "Your photo and your financing question are already on the file, so the doctor reviews your case before you arrive.",
+            },
+          ],
+        },
+      },
       packagesTitle: "Choose the dental growth level that fits you today.",
       packages: [
         {
@@ -584,6 +780,208 @@ export const industryContentEn: IndustryLocaleBundle = {
           },
         ],
       },
+      adCampaignDemo: {
+        eyebrow: "Before the first message",
+        title: "Watch a procedure ad arrive as an organized inquiry.",
+        description:
+          "Someone weighing a procedure rarely calls. They tap, they ask and they compare. When the campaign and the follow-up belong to the same system, that interest is captured with the procedure attached, before anyone at the practice has typed a word.",
+        ctaLabel: "Book an Aesthetic Growth Assessment",
+        phoneCaption: "Sample ad and consultation request",
+        bridge:
+          "That is how the inquiry is created. The journey below is what the practice does with it next.",
+        stages: [
+          {
+            title: "It reaches someone already comparing",
+            description:
+              "Your procedures appear in front of people researching them now, not an audience that has never thought about it.",
+          },
+          {
+            title: "The ad offers a consultation, not a procedure",
+            description:
+              "The next step is a conversation with your team, which is the commitment a serious patient is willing to make.",
+          },
+          {
+            title: "The procedure interest is captured",
+            description:
+              "What the patient is asking about, and in which language, arrives attached to the record instead of buried in a thread.",
+          },
+          {
+            title: "The inquiry is ready for review",
+            description:
+              "It enters the pipeline your coordinators work from, so the first reply already has context and clinical questions reach a person.",
+          },
+        ],
+        script: {
+          clockLabel: "9:24",
+          sponsoredLabel: "Sponsored",
+          posts: [
+            {
+              author: "Renata C.",
+              meta: "2h",
+              caption: "Three days of rain and the dog has opinions about it.",
+            },
+            {
+              author: "Emilio F.",
+              meta: "4h",
+              caption: "New coffee place downtown. I will be back.",
+            },
+            {
+              author: "Paola G.",
+              meta: "7h",
+              caption: "Sunset from the balcony, no filter needed.",
+            },
+          ],
+          form: {
+            subtitle: "Consultation request",
+            intentQuestion: "What are you interested in?",
+            contactQuestion: "Where can the clinic reach you?",
+            nameLabel: "Name",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Send",
+            sentTitle: "Request sent",
+            sentNote:
+              "The clinic has your details and a coordinator will reply.",
+            systemLabel: "In your DigitalFace system",
+            statuses: [
+              "New consultation request",
+              "Procedure interest saved",
+              "Ready for the team",
+            ],
+          },
+          ads: [
+            {
+              market: "aesthetic",
+              business: "Nova Aesthetic Clinic",
+              caption:
+                "Start with the consultation. The doctor will tell you what is worth doing and what is not.",
+              offer: "Consultation with the doctor",
+              ctaLabel: "Request consultation",
+              creativeEyebrow: "Aesthetic medicine",
+              creativeTitle: "An honest plan before anything else",
+              options: ["Injectables", "Skin treatments", "Something else"],
+              choice: 0,
+              lead: { name: "Daniela Ortiz", phone: "+1 (786) 555 0119" },
+            },
+            {
+              market: "aesthetic",
+              business: "Nova Aesthetic Clinic",
+              caption:
+                "You have done the diet and the gym. Ask what is realistic for the part that has not moved.",
+              offer: "Body assessment",
+              ctaLabel: "Learn more",
+              creativeEyebrow: "Body and skin",
+              creativeTitle: "What is realistic for your case",
+              options: ["Body contouring", "Skin tightening", "Not sure yet"],
+              choice: 1,
+              lead: { name: "Paula Vega", phone: "+1 (954) 555 0186" },
+            },
+          ],
+          transcriptLabel:
+            "Sample aesthetic medicine advertisement and consultation request, shown as an illustration.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "Where automation stops",
+        title:
+          "Watch the system answer what it should, and hand over what it should not.",
+        description:
+          "The point of automation in aesthetic medicine is not that it answers everything. It is that it answers the administrative questions instantly, recognizes a clinical one, and puts it in front of a person while the consultation still gets booked.",
+        ctaLabel: "Book an Aesthetic Growth Assessment",
+        phoneCaption: "Sample conversation",
+        stages: [
+          {
+            title: "The inquiry never waits for office hours",
+            description:
+              "A Sunday evening question about a procedure gets the same immediate answer as a Tuesday morning call.",
+          },
+          {
+            title: "Approved information, delivered the same way twice",
+            description:
+              "Consultation process, preparation and policy answers come from what your practice signed off on.",
+          },
+          {
+            title: "Clinical questions go to a person",
+            description:
+              "Safety, candidacy and case-specific questions are escalated to your team instead of answered by automation.",
+          },
+          {
+            title: "The consultation is protected",
+            description:
+              "The booking, the reminder and the patient's open question all reach your team before the visit.",
+          },
+        ],
+        script: {
+          contact: "Your Practice",
+          status: "Replies in seconds",
+          typingStatus: "typing…",
+          clockLabel: "6:45",
+          dayLabel: "Sunday · 6:40 PM",
+          composerPlaceholder: "Message",
+          transcriptLabel:
+            "Sample conversation between a prospective patient and an aesthetic practice, including a handover to the clinical team.",
+          patientLabel: "Patient",
+          clinicLabel: "Practice",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "6:40 PM",
+              pauseMs: 700,
+              text: "Hi, I am interested in a mommy makeover. How does the first appointment work?",
+            },
+            {
+              kind: "assistant",
+              stage: 1,
+              time: "6:40 PM",
+              pauseMs: 600,
+              typingMs: 1400,
+              text: "Hi Daniela. It starts with a consultation with the surgeon, around 45 minutes, where you go through your goals, the options and the recovery.",
+            },
+            {
+              kind: "patient",
+              stage: 2,
+              time: "6:41 PM",
+              pauseMs: 2400,
+              text: "Is it safe to do it while I am still breastfeeding?",
+            },
+            {
+              kind: "note",
+              stage: 2,
+              pauseMs: 1500,
+              text: "Valentina from the clinical team joined the chat",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "6:43 PM",
+              pauseMs: 700,
+              typingMs: 1600,
+              author: "Valentina · Patient coordinator",
+              text: "Hi Daniela, that one the surgeon needs to answer for your case, and he will go through it with you in person. These consultation times are open:",
+              options: ["Thu · 3:00 PM", "Fri · 5:45 PM", "Mon · 10:30 AM"],
+            },
+            {
+              kind: "choice",
+              stage: 3,
+              time: "6:44 PM",
+              pauseMs: 2500,
+              option: 1,
+              text: "Friday at 5:45 works for me.",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "6:45 PM",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Consultation confirmed",
+              when: "Friday, 5:45 PM",
+              service: "Surgical consultation · 45 min",
+              note: "Your question is saved on the surgeon's notes for the visit, and a reminder goes out the day before.",
+            },
+          ],
+        },
+      },
       packagesTitle: "Choose the aesthetic growth level that fits you today.",
       packages: [
         {
@@ -921,6 +1319,205 @@ export const industryContentEn: IndustryLocaleBundle = {
               "Configured post-visit journeys request feedback, support rebooking and keep client history visible.",
           },
         ],
+      },
+      adCampaignDemo: {
+        eyebrow: "Where the demand comes from",
+        title: "Watch an offer turn into a booking request.",
+        description:
+          "A med spa ad creates a spike of interest in a few hours, usually while your team is with clients. This is what happens to that interest when the campaign is connected to the booking system instead of ending in a comment thread.",
+        ctaLabel: "Book a Med Spa Growth Assessment",
+        phoneCaption: "Sample ad and booking request",
+        bridge:
+          "Every response arrives in one place instead of five inboxes. The journey below turns it into an appointment and a return visit.",
+        stages: [
+          {
+            title: "It reaches people close enough to come in",
+            description:
+              "Your treatments and memberships show up for people who live near the spa and are ready to book something this month.",
+          },
+          {
+            title: "The offer is easy to say yes to",
+            description:
+              "One clear step instead of a comment thread the front desk has to answer message by message.",
+          },
+          {
+            title: "The request says what they want",
+            description:
+              "Treatment, language and contact arrive together, so the reply can be about a time instead of a question.",
+          },
+          {
+            title: "Nothing sits in an inbox",
+            description:
+              "Every response lands in one pipeline with the offer attached, ready for booking, reminders and the visit after this one.",
+          },
+        ],
+        script: {
+          clockLabel: "1:47",
+          sponsoredLabel: "Sponsored",
+          posts: [
+            {
+              author: "Tania M.",
+              meta: "45m",
+              caption: "Nine kilometers before work. Still can't believe it.",
+            },
+            {
+              author: "Caro V.",
+              meta: "2h",
+              caption: "The pasta turned out better than the restaurant one.",
+            },
+            {
+              author: "Nadia R.",
+              meta: "6h",
+              caption: "Birthday brunch with the girls.",
+            },
+          ],
+          form: {
+            subtitle: "Booking request",
+            intentQuestion: "What would you like to book?",
+            contactQuestion: "Where can we text you?",
+            nameLabel: "Name",
+            phoneLabel: "WhatsApp",
+            submitLabel: "Send",
+            sentTitle: "Request sent",
+            sentNote:
+              "The spa has your details and will send you times shortly.",
+            systemLabel: "In your DigitalFace system",
+            statuses: [
+              "New booking request",
+              "Treatment interest saved",
+              "Ready for follow-up",
+            ],
+          },
+          ads: [
+            {
+              market: "medSpa",
+              business: "Solene Med Spa",
+              caption:
+                "One facial a month, a price that stays the same, and a time that fits your week.",
+              offer: "Monthly facial membership",
+              ctaLabel: "Get info",
+              creativeEyebrow: "Memberships",
+              creativeTitle: "Skin care you actually keep up with",
+              options: [
+                "Monthly facial",
+                "Adding treatments",
+                "Just the details",
+              ],
+              choice: 0,
+              lead: { name: "Marcela Ríos", phone: "+1 (954) 555 0173" },
+            },
+            {
+              market: "medSpa",
+              business: "Solene Med Spa",
+              caption:
+                "Stop planning your week around shaving. Ask about starting your sessions before the summer.",
+              offer: "Laser package consultation",
+              ctaLabel: "Book now",
+              creativeEyebrow: "Laser hair removal",
+              creativeTitle: "Start the sessions before summer",
+              options: ["Legs", "Underarms", "Full body"],
+              choice: 2,
+              lead: { name: "Andrea Salas", phone: "+1 (305) 555 0198" },
+            },
+          ],
+          transcriptLabel:
+            "Sample med spa advertisement and booking request, shown as an illustration.",
+        },
+      },
+      conversationDemo: {
+        eyebrow: "A promotion, answered in seconds",
+        title: "A story reply at lunchtime, on the schedule for Wednesday.",
+        description:
+          "A promotion creates a spike of messages at exactly the hour your team is with clients. This is what one of them looks like when the system picks it up: the offer confirmed, a time chosen, and the follow-up already set before anyone at the front desk opens the inbox.",
+        ctaLabel: "Book a Med Spa Growth Assessment",
+        phoneCaption: "Sample conversation",
+        stages: [
+          {
+            title: "Every channel lands in one place",
+            description:
+              "Story replies, comments, direct messages, forms and calls stop living in five separate inboxes.",
+          },
+          {
+            title: "The offer gets answered while interest is hot",
+            description:
+              "Approved promotion details go out in seconds instead of after your last client of the day leaves.",
+          },
+          {
+            title: "The booking happens inside the conversation",
+            description:
+              "No link to chase, no back and forth about times, nobody waiting on a callback that never comes.",
+          },
+          {
+            title: "The relationship keeps going",
+            description:
+              "Reminders protect the appointment, and the follow-up brings the client back for the next one.",
+          },
+        ],
+        script: {
+          contact: "Your Med Spa",
+          channelLabel: "Instagram",
+          status: "Replies in seconds",
+          typingStatus: "typing…",
+          clockLabel: "1:14",
+          dayLabel: "Today · 1:12 PM",
+          composerPlaceholder: "Message",
+          transcriptLabel:
+            "Sample Instagram conversation between a prospective client and an automated med spa assistant.",
+          patientLabel: "Client",
+          clinicLabel: "Med spa",
+          steps: [
+            {
+              kind: "patient",
+              stage: 0,
+              time: "1:12 PM",
+              pauseMs: 700,
+              text: "hey! is the lip filler promo from your story still on?",
+            },
+            {
+              kind: "assistant",
+              stage: 1,
+              time: "1:12 PM",
+              pauseMs: 600,
+              typingMs: 1300,
+              text: "Hi Marcela! Yes, it runs through Sunday. Same price as the story, and the appointment takes about 30 minutes.",
+            },
+            {
+              kind: "patient",
+              stage: 2,
+              time: "1:13 PM",
+              pauseMs: 2200,
+              text: "perfect, anything this week? i finish work at 6",
+            },
+            {
+              kind: "slots",
+              stage: 2,
+              time: "1:13 PM",
+              pauseMs: 600,
+              typingMs: 1300,
+              text: "We do. These are the evening spots left this week:",
+              options: ["Wed · 6:15 PM", "Thu · 6:45 PM", "Fri · 7:00 PM"],
+            },
+            {
+              kind: "choice",
+              stage: 2,
+              time: "1:14 PM",
+              pauseMs: 2500,
+              option: 0,
+              text: "wednesday works!",
+            },
+            {
+              kind: "confirmation",
+              stage: 3,
+              time: "1:14 PM",
+              pauseMs: 600,
+              typingMs: 1200,
+              title: "Appointment booked",
+              when: "Wednesday, 6:15 PM",
+              service: "Lip filler appointment · 30 min",
+              note: "A reminder goes out the day before. After your visit we check in and help you book the next one.",
+            },
+          ],
+        },
       },
       packagesTitle: "Choose the med spa growth level that fits you today.",
       packages: [

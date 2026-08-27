@@ -5,6 +5,8 @@ import { ValuePropsSection } from "@/sections/ValueProps";
 import { ClientSystemsSection } from "@/sections/ClientSystems";
 import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
+import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
+import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { IndustryPathsSection } from "@/sections/IndustryPaths";
 import { SystemMediaSection } from "@/sections/SystemMedia";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -233,6 +235,14 @@ export default function Index() {
           </div>
         </div>
       </section>
+      <AdCampaignDemoSection
+        content={t.adCampaignDemo}
+        ctaHref={path("/contact")}
+      />
+      <ConversationDemoSection
+        content={t.conversationDemo}
+        ctaHref={path("/contact")}
+      />
       <ValuePropsSection
         eyebrow={t.valueProps.eyebrow}
         title={t.valueProps.title}
