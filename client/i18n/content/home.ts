@@ -1,5 +1,6 @@
 import type { ConversationDemoContent } from "@/components/demo/conversation";
 import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
+import type { CrmPipelineDemoContent } from "@/components/demo/crmPipeline";
 import type { Locale } from "../locale";
 
 /**
@@ -430,6 +431,192 @@ const adCampaignDemoEs: AdCampaignDemoContent = {
   },
 };
 
+/**
+ * The same fictional lead shown in the advertising and conversation stories,
+ * now presented as an organized opportunity. This is a controlled illustration,
+ * not a real patient record or a claim about measured performance.
+ */
+const crmPipelineDemoEn: CrmPipelineDemoContent = {
+  eyebrow: "After the lead arrives",
+  title: "Know exactly where every opportunity stands.",
+  description:
+    "When someone contacts your business, their source, interest and progress stay together. Your team can see who needs attention and what should happen next, without searching through WhatsApp or email, or relying on someone's memory.",
+  ctaLabel: "See how your inquiries would stay organized",
+  boardCaption: "Sample lead journey",
+  bridge:
+    "The opportunity now has a clear status, useful context and a next step. Your team can take over without searching through past messages.",
+  stages: [
+    {
+      title: "New inquiry",
+      description: "The opportunity appears as soon as the contact arrives.",
+    },
+    {
+      title: "Contacted",
+      description: "The first conversation is visible to the whole team.",
+    },
+    {
+      title: "Interested",
+      description: "The source and treatment interest stay with the lead.",
+    },
+    {
+      title: "Appointment requested",
+      description: "The team can see exactly what needs to be confirmed next.",
+    },
+  ],
+  script: {
+    workspaceLabel: "Opportunity workspace",
+    liveLabel: "Organized",
+    boardLabel: "Lead progress",
+    detailsLabel: "What your team knows",
+    activityLabel: "Activity",
+    nextStepLabel: "Next step",
+    movedLabel: "Moved forward",
+    stageLabel: "Stage",
+    ofLabel: "of",
+    lead: {
+      name: "Camila Restrepo",
+      initials: "CR",
+      summary: "New patient inquiry",
+      channel: "WhatsApp inquiry",
+    },
+    stages: [
+      {
+        label: "New inquiry",
+        cardStatus: "Just received",
+        activity: "Inquiry received",
+        nextStep: "Send the first reply",
+        details: [{ label: "Source", value: "Meta Ads" }],
+      },
+      {
+        label: "Contacted",
+        cardStatus: "Conversation started",
+        activity: "Conversation started",
+        nextStep: "Confirm treatment interest",
+        details: [
+          { label: "Source", value: "Meta Ads" },
+          { label: "Channel", value: "WhatsApp" },
+        ],
+      },
+      {
+        label: "Interested",
+        cardStatus: "Interest identified",
+        activity: "Treatment interest identified",
+        nextStep: "Offer consultation times",
+        details: [
+          { label: "Source", value: "Meta Ads" },
+          { label: "Channel", value: "WhatsApp" },
+          { label: "Interest", value: "Porcelain veneers" },
+        ],
+      },
+      {
+        label: "Appointment requested",
+        cardStatus: "Ready to confirm",
+        activity: "Consultation requested",
+        nextStep: "Confirm the requested time",
+        details: [
+          { label: "Source", value: "Meta Ads" },
+          { label: "Channel", value: "WhatsApp" },
+          { label: "Interest", value: "Porcelain veneers" },
+          { label: "Status", value: "Consultation requested" },
+        ],
+      },
+    ],
+    transcriptLabel:
+      "Sample lead journey showing one inquiry becoming an organized opportunity with a clear next step.",
+  },
+};
+
+const crmPipelineDemoEs: CrmPipelineDemoContent = {
+  eyebrow: "Cuando llega el contacto",
+  title: "Ten claro en qué punto está cada oportunidad.",
+  description:
+    "Cuando alguien se comunica con tu negocio, sus datos, su interés y la etapa en la que está quedan organizados en un solo lugar. Tu equipo ve quién necesita atención y qué debe pasar después, sin depender de conversaciones sueltas en WhatsApp, correos ni la memoria del equipo.",
+  ctaLabel: "Mira cómo quedarían organizadas tus consultas",
+  boardCaption: "Ejemplo del recorrido de un contacto",
+  bridge:
+    "La oportunidad ya tiene un estado claro, contexto útil y un siguiente paso. Tu equipo puede continuar el seguimiento sin buscar información en conversaciones anteriores.",
+  stages: [
+    {
+      title: "Consulta nueva",
+      description: "La oportunidad aparece apenas llega el contacto.",
+    },
+    {
+      title: "En conversación",
+      description: "Todo el equipo puede ver que la conversación ya comenzó.",
+    },
+    {
+      title: "Interés confirmado",
+      description:
+        "El origen y el tratamiento de interés quedan unidos al contacto.",
+    },
+    {
+      title: "Cita solicitada",
+      description: "El equipo ve exactamente qué falta por confirmar.",
+    },
+  ],
+  script: {
+    workspaceLabel: "Oportunidades",
+    liveLabel: "Organizado",
+    boardLabel: "Etapas de la oportunidad",
+    detailsLabel: "Lo que sabe tu equipo",
+    activityLabel: "Actividad",
+    nextStepLabel: "Siguiente paso",
+    movedLabel: "Avanzó",
+    stageLabel: "Etapa",
+    ofLabel: "de",
+    lead: {
+      name: "Camila Restrepo",
+      initials: "CR",
+      summary: "Consulta nueva",
+      channel: "Consulta por WhatsApp",
+    },
+    stages: [
+      {
+        label: "Consulta nueva",
+        cardStatus: "Acaba de llegar",
+        activity: "Consulta recibida",
+        nextStep: "Enviar la primera respuesta",
+        details: [{ label: "Origen", value: "Pauta en Meta" }],
+      },
+      {
+        label: "En conversación",
+        cardStatus: "Conversación iniciada",
+        activity: "Conversación iniciada",
+        nextStep: "Confirmar qué tratamiento le interesa",
+        details: [
+          { label: "Origen", value: "Pauta en Meta" },
+          { label: "Canal", value: "WhatsApp" },
+        ],
+      },
+      {
+        label: "Interés confirmado",
+        cardStatus: "Interés identificado",
+        activity: "Tratamiento de interés identificado",
+        nextStep: "Ofrecer horarios de valoración",
+        details: [
+          { label: "Origen", value: "Pauta en Meta" },
+          { label: "Canal", value: "WhatsApp" },
+          { label: "Interés", value: "Carillas" },
+        ],
+      },
+      {
+        label: "Cita solicitada",
+        cardStatus: "Pendiente de confirmación",
+        activity: "Valoración solicitada",
+        nextStep: "Confirmar el horario solicitado",
+        details: [
+          { label: "Origen", value: "Pauta en Meta" },
+          { label: "Canal", value: "WhatsApp" },
+          { label: "Interés", value: "Carillas" },
+          { label: "Estado", value: "Valoración solicitada" },
+        ],
+      },
+    ],
+    transcriptLabel:
+      "Recorrido de ejemplo que muestra cómo una consulta se convierte en una oportunidad organizada con un siguiente paso claro.",
+  },
+};
+
 const en = {
   metadata: {
     title:
@@ -566,6 +753,7 @@ const en = {
   },
   adCampaignDemo: adCampaignDemoEn,
   conversationDemo: conversationDemoEn,
+  crmPipelineDemo: crmPipelineDemoEn,
   valueProps: {
     eyebrow: "Your sales system",
     title: "Automation that feels personal and never takes a day off",
@@ -812,6 +1000,7 @@ const es: typeof en = {
   },
   adCampaignDemo: adCampaignDemoEs,
   conversationDemo: conversationDemoEs,
+  crmPipelineDemo: crmPipelineDemoEs,
   valueProps: {
     eyebrow: "Tu sistema de ventas",
     title: "Automatización que se siente cercana y nunca descansa",

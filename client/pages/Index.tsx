@@ -7,6 +7,7 @@ import { IntegrationsSection } from "@/sections/Integrations";
 import { CtaSection } from "@/sections/CTA";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
+import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { IndustryPathsSection } from "@/sections/IndustryPaths";
 import { SystemMediaSection } from "@/sections/SystemMedia";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -241,6 +242,10 @@ export default function Index() {
       />
       <ConversationDemoSection
         content={t.conversationDemo}
+        ctaHref={path("/contact")}
+      />
+      <CrmPipelineDemoSection
+        content={t.crmPipelineDemo}
         ctaHref={path("/contact")}
       />
       <ValuePropsSection
