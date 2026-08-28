@@ -1024,7 +1024,7 @@ const en = {
     eyebrow: "Technology ecosystem",
     title: "Built to work with your stack.",
     description:
-      "We connect the platforms your business already uses across marketing, CRM, messaging, automation and customer management—so they work together as one system.",
+      "We connect the platforms your business already uses across marketing, CRM, messaging, automation and customer management so they work together as one system.",
     categories: "CRM · Messaging · Advertising · AI · Automation · Scheduling",
     /** Screen-reader name for the scrollable rail. */
     railLabel: "Platforms DigitalFace works with",
@@ -1343,7 +1343,7 @@ const es: typeof en = {
     eyebrow: "Ecosistema tecnológico",
     title: "Funciona con las herramientas que ya usas.",
     description:
-      "Conectamos las plataformas que tu negocio ya utiliza en marketing, CRM, mensajería, automatización y gestión de clientes—para que trabajen juntas como un solo sistema.",
+      "Conectamos las plataformas que tu negocio ya utiliza en marketing, CRM, mensajería, automatización y gestión de clientes para que trabajen juntas como un solo sistema.",
     categories: "CRM · Mensajería · Pauta · IA · Automatización · Agendamiento",
     railLabel: "Plataformas con las que trabaja DigitalFace",
     previousLabel: "Desplazar tecnologías a la izquierda",
