@@ -60,9 +60,8 @@ export const industryContentEs: IndustryLocaleBundle = {
       eyebrow: "Antes de agendar",
     },
     booking: {
-      eyebrow: "Hablemos",
-      calendarHint: "Elige abajo tu fecha y hora preferidas.",
-      calendarAria: "Agenda una consulta con DigitalFace",
+      eyebrow: "¿Hablamos?",
+      ctaLabel: "Elige un horario",
       customScopeLabel: "Alcance a la medida",
       privacyNote:
         "El formulario final debe pedir solo lo necesario para definir el alcance y enlazar a la política de privacidad publicada.",

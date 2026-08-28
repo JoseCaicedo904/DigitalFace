@@ -21,6 +21,13 @@ import ScrollToTop from "./components/ScrollToTop";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { captureAttribution } from "./lib/attribution";
 
+/**
+ * Lazy on purpose, not for weight alone: this is the only route that touches
+ * GoHighLevel, and importing it lazily is what keeps the booking iframe and
+ * LeadConnector's script out of every other page's bundle.
+ */
+const BookPage = lazy(() => import("./pages/Book"));
+
 const DentalPracticesPage = lazy(() =>
   import("./pages/industries/IndustryPages").then((module) => ({
     default: module.DentalPracticesPage,
@@ -51,6 +58,7 @@ const corporateRoutes = (
     <Route path="pay-per-service" element={<PayPerService />} />
     <Route path="pricing" element={<Pricing />} />
     <Route path="contact" element={<Contact />} />
+    <Route path="book" element={<BookPage />} />
     <Route path="privacy" element={<Privacy />} />
     <Route path="terms" element={<Terms />} />
   </>

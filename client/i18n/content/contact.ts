@@ -56,14 +56,13 @@ const en = {
     nextBody:
       "We read your message, map the follow-up flow and bring a clear plan to the call.",
   },
-  /** Copy around the embedded booking calendar. Kept deliberately short. */
+  /** The closing conversion block. One button, no second sales pitch. */
   booking: {
-    eyebrow: "Let's talk",
+    eyebrow: "Ready when you are",
     title: "Choose a time that works for you.",
     description:
       "Book a short DigitalFace consultation, or use the form below if you would rather we came back to you in writing.",
-    hint: "Choose your preferred date and time below.",
-    calendarTitle: "Book a DigitalFace consultation",
+    ctaLabel: "Choose a time",
   },
 } satisfies Record<string, unknown>;
 
@@ -124,12 +123,11 @@ const es: typeof en = {
       "Leemos tu mensaje, mapeamos el flujo de seguimiento y llegamos a la llamada con un plan claro.",
   },
   booking: {
-    eyebrow: "Hablemos",
+    eyebrow: "Cuando quieras",
     title: "Elige el horario que mejor te funcione.",
     description:
       "Agenda una consulta corta con DigitalFace, o usa el formulario de abajo si prefieres que te respondamos por escrito.",
-    hint: "Elige abajo tu fecha y hora preferidas.",
-    calendarTitle: "Agenda una consulta con DigitalFace",
+    ctaLabel: "Elige un horario",
   },
 };
 

@@ -59,9 +59,8 @@ export const industryContentEn: IndustryLocaleBundle = {
       eyebrow: "Questions before you book",
     },
     booking: {
-      eyebrow: "Let's talk",
-      calendarHint: "Choose your preferred date and time below.",
-      calendarAria: "Book a DigitalFace consultation",
+      eyebrow: "Ready to talk?",
+      ctaLabel: "Choose a time",
       customScopeLabel: "Custom scope",
       privacyNote:
         "The final form should collect only what is needed to scope the request, and link to the published privacy policy.",

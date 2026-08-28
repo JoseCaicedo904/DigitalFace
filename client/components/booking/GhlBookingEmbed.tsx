@@ -1,12 +1,13 @@
-import { CalendarDays } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * The one DigitalFace booking calendar. The homepage and all three industry
- * funnels embed this same GoHighLevel widget, so the calendar id, the widget
- * URL, the embed script and every sizing rule live here and nowhere else.
+ * The one DigitalFace booking calendar.
+ *
+ * This module is imported by the /book page alone. That is load-bearing rather
+ * than tidiness: it is what keeps the iframe and LeadConnector's script out of
+ * the main bundle, so the marketing pages never touch an external widget while
+ * a visitor is only browsing.
  *
  * The calendar is a Personal Appointment calendar internally, but the public
  * experience is deliberately company-first: visitors book DigitalFace, not a
@@ -19,23 +20,16 @@ const BOOKING_WIDGET_ORIGIN = "https://api.leadconnectorhq.com";
 const EMBED_SCRIPT_SRC = "https://link.msgsndr.com/js/form_embed.js";
 
 /**
- * Where the corporate tree's consultation CTAs scroll to. The three industry
- * funnels keep their own long-standing `#book-assessment` anchor.
- */
-export const HOME_BOOKING_ANCHOR = "book";
-export const HOME_BOOKING_HREF = `#${HOME_BOOKING_ANCHOR}`;
-
-/**
  * LeadConnector's embed script binds the widget iframes that exist when it
- * runs, and forwards query parameters and known contacts into them. Four routes
- * render this component and a SPA never reloads between them, so it is fetched
- * once per session and then left in the document rather than added and removed
- * per mount: a second copy would answer every message twice.
+ * runs, and forwards query parameters and known contacts into them. It is
+ * fetched once per session and then left in the document rather than added and
+ * removed per mount: a second copy would answer every message twice, and a
+ * visitor may well arrive at this route more than once.
  *
  * Height is deliberately not left to it. It only ever sees the iframes present
- * at load time, so on a client-side navigation to another of these four pages
- * the new calendar would never be bound — which is why the component sizes
- * itself from the widget's own messages below.
+ * at load time, so a client-side navigation into this route leaves the new
+ * calendar unbound — which is why the component sizes itself from the widget's
+ * own messages below.
  */
 let embedScriptPromise: Promise<void> | null = null;
 
@@ -154,21 +148,21 @@ function readReportedHeight(payload: unknown): ReportedHeight | null {
   return null;
 }
 
-export type BookingCalendarProps = {
+export type GhlBookingEmbedProps = {
   /** Accessible name for the embedded widget. */
   title: string;
   className?: string;
 };
 
-/** The framed calendar panel on its own, without the surrounding section copy. */
-export function BookingCalendar({ title, className }: BookingCalendarProps) {
+/** The framed calendar panel. The page around it supplies the copy. */
+export function GhlBookingEmbed({ title, className }: GhlBookingEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const hasAuthoritativeHeight = useRef(false);
   const [sizing, setSizing] = useState<"pending" | "measured" | "unmanaged">(
     "pending",
   );
   // LeadConnector's own convention is `<calendarId>_<timestamp>`; a fresh
-  // suffix per mount keeps the id unique if a page ever shows two calendars.
+  // suffix per mount keeps the id unique across repeat visits to this route.
   const [frameId] = useState(() => `${BOOKING_CALENDAR_ID}_${Date.now()}`);
 
   useEffect(() => {
@@ -260,88 +254,5 @@ export function BookingCalendar({ title, className }: BookingCalendarProps) {
         />
       </div>
     </div>
-  );
-}
-
-export type BookingSectionProps = {
-  /** Anchor the page's consultation CTAs scroll to. */
-  id: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  /** Short instruction directly above the calendar. */
-  hint?: string;
-  calendarTitle: string;
-  className?: string;
-};
-
-/**
- * The complete booking section: a short headline, one supporting line and the
- * calendar. Nothing else belongs here — every page that renders it has already
- * made its case above, and this is where the visitor acts.
- */
-export function BookingSection({
-  id,
-  eyebrow,
-  title,
-  description,
-  hint,
-  calendarTitle,
-  className,
-}: BookingSectionProps) {
-  const reducedMotion = Boolean(useReducedMotion());
-
-  return (
-    <section
-      id={id}
-      className={cn(
-        "relative isolate scroll-mt-20 overflow-hidden border-t border-white/10 bg-slate-950 py-20 text-white sm:py-24 lg:py-28",
-        className,
-      )}
-    >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(124,58,237,0.3),transparent_55%),radial-gradient(circle_at_85%_100%,rgba(14,165,233,0.18),transparent_45%)]"
-      />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Only the copy animates. The iframe is left out of any transformed
-            container so a repaint cannot disturb the widget mid-booking. */}
-        <motion.div
-          className="mx-auto max-w-3xl text-center"
-          initial={reducedMotion ? false : { opacity: 0, y: 24 }}
-          whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
-        >
-          <span className="inline-flex rounded-full border border-white/20 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-200">
-            {eyebrow}
-          </span>
-          <h2 className="mt-6 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
-            {description}
-          </p>
-        </motion.div>
-
-        {hint ? (
-          <p className="mx-auto mt-9 flex max-w-xl items-center justify-center gap-2 text-center text-sm font-medium text-white/60">
-            <CalendarDays
-              className="h-4 w-4 shrink-0 text-ocean-200"
-              aria-hidden="true"
-            />
-            {hint}
-          </p>
-        ) : null}
-
-        <BookingCalendar
-          title={calendarTitle}
-          className={cn(
-            "mx-auto w-full max-w-[64rem]",
-            hint ? "mt-8" : "mt-12",
-          )}
-        />
-      </div>
-    </section>
   );
 }

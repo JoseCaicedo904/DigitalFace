@@ -1,16 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { LeadForm } from "@/components/forms/LeadForm";
-import {
-  BookingSection,
-  HOME_BOOKING_ANCHOR,
-} from "@/components/booking/BookingCalendar";
+import { BookingCTA } from "@/components/booking/BookingCTA";
+import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { contactContent } from "@/i18n/content/contact";
 import { Clock3, Mail, MapPin, Sparkles } from "lucide-react";
 
 export default function Contact() {
-  const { locale } = useLocale();
+  const { locale, path } = useLocale();
   const t = contactContent[locale];
 
   usePageMetadata(t.metadata.title, t.metadata.description);
@@ -33,15 +31,14 @@ export default function Contact() {
       </section>
 
       {/* Scheduling comes first; the form below stays for anyone who would
-          rather write than book a time. Same component as the homepage and the
-          three industry funnels. */}
-      <BookingSection
-        id={HOME_BOOKING_ANCHOR}
+          rather write than book a time. */}
+      <BookingCTA
+        id="book"
         eyebrow={t.booking.eyebrow}
         title={t.booking.title}
         description={t.booking.description}
-        hint={t.booking.hint}
-        calendarTitle={t.booking.calendarTitle}
+        ctaLabel={t.booking.ctaLabel}
+        href={bookingHref(path(BOOKING_ROUTE), "contact")}
       />
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">

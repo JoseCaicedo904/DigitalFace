@@ -1034,14 +1034,13 @@ const en = {
       "CRM pipeline",
     ],
   },
-  /** Copy around the embedded booking calendar. Kept deliberately short. */
+  /** The closing conversion block. One button, no second sales pitch. */
   booking: {
-    eyebrow: "Let's talk",
-    title: "Choose a time that works for you.",
+    eyebrow: "Ready when you are",
+    title: "Let's talk about what your business needs next.",
     description:
-      "Book a short DigitalFace consultation and tell us what you are trying to improve — lead generation, follow-up, CRM, automation, AI, or the complete system.",
-    hint: "Choose your preferred date and time below.",
-    calendarTitle: "Book a DigitalFace consultation",
+      "Choose a convenient time to discuss your lead generation, conversion, CRM, automation or complete growth system.",
+    ctaLabel: "Choose a time",
   },
   cta: {
     eyebrow: "Build your connected system",
@@ -1340,12 +1339,11 @@ const es: typeof en = {
     ],
   },
   booking: {
-    eyebrow: "Hablemos",
-    title: "Elige el horario que mejor te funcione.",
+    eyebrow: "Cuando quieras",
+    title: "Hablemos de lo que tu negocio necesita ahora.",
     description:
-      "Agenda una consulta corta con DigitalFace y cuéntanos qué quieres mejorar: generación de leads, seguimiento, CRM, automatización, IA o el sistema completo.",
-    hint: "Elige abajo tu fecha y hora preferidas.",
-    calendarTitle: "Agenda una consulta con DigitalFace",
+      "Elige un horario para conversar sobre tu generación de leads, conversión, CRM, automatización o el sistema de crecimiento completo.",
+    ctaLabel: "Elige un horario",
   },
   cta: {
     eyebrow: "Construye tu sistema conectado",

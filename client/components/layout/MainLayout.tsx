@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { CtaLink } from "@/components/ui/cta-link";
-import { HOME_BOOKING_HREF } from "@/components/booking/BookingCalendar";
+import { BOOKING_ROUTE } from "@/components/booking/bookingRoute";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { stripLocaleFromPathname } from "@/i18n/locale";
 import { commonContent } from "@/i18n/content/common";
 import {
   getIndustryNavLabels,
@@ -311,17 +309,11 @@ export default function MainLayout() {
   const homePath = path("/");
 
   /**
-   * The homepage and the contact page both carry the booking calendar, so on
-   * those the header CTA scrolls down to it rather than routing somewhere the
-   * visitor has to start over. Everywhere else it still points at /contact,
-   * which is now where the calendar lives too. The three industry funnels
-   * render their own header.
+   * One destination from everywhere. The header CTA used to scroll to a
+   * calendar embedded in the current page; the calendar now lives on its own
+   * route, so it navigates there instead.
    */
-  const currentPath = stripLocaleFromPathname(location.pathname);
-  const bookingHref =
-    currentPath === "/" || currentPath === "/contact"
-      ? HOME_BOOKING_HREF
-      : path("/contact");
+  const bookingHref = path(BOOKING_ROUTE);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.08),transparent_55%)] text-foreground">
@@ -495,7 +487,7 @@ export default function MainLayout() {
               asChild
               className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-4 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg xl:px-5 2xl:px-6"
             >
-              <CtaLink href={bookingHref}>{t.nav.bookCall}</CtaLink>
+              <Link to={bookingHref}>{t.nav.bookCall}</Link>
             </Button>
           </div>
           <div
@@ -581,7 +573,7 @@ export default function MainLayout() {
                 asChild
                 className="w-full rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft"
               >
-                <CtaLink href={bookingHref}>{t.nav.bookDemo}</CtaLink>
+                <Link to={bookingHref}>{t.nav.bookDemo}</Link>
               </Button>
             </div>
           </div>

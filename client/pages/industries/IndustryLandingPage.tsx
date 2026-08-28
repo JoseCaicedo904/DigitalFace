@@ -12,7 +12,8 @@ import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
-import { BookingSection } from "@/components/booking/BookingCalendar";
+import { BookingCTA } from "@/components/booking/BookingCTA";
+import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
   breadcrumbSchema,
@@ -68,6 +69,7 @@ type PackageCardProps = {
   plan: IndustryPackage;
   ui: IndustryUiCopy;
   reducedMotion: boolean;
+  bookHref: string;
 };
 
 const revealVariants: Variants = {
@@ -142,7 +144,7 @@ function SectionHeading({
   );
 }
 
-function PackageCard({ plan, ui, reducedMotion }: PackageCardProps) {
+function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
   return (
     <motion.article
       whileHover={reducedMotion ? undefined : { y: -8 }}
@@ -235,10 +237,10 @@ function PackageCard({ plan, ui, reducedMotion }: PackageCardProps) {
               : "bg-slate-950 text-white hover:bg-slate-800",
           )}
         >
-          <a href="#book-assessment">
+          <Link to={bookHref}>
             {plan.cta}
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
         </Button>
         <a
           href="#custom-proposal"
@@ -255,9 +257,11 @@ function PackageCard({ plan, ui, reducedMotion }: PackageCardProps) {
 function ClosedLandingHeader({
   data,
   ui,
+  bookHref,
 }: {
   data: IndustryLandingData;
   ui: IndustryUiCopy;
+  bookHref: string;
 }) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/70 bg-white/85 backdrop-blur-xl">
@@ -281,13 +285,13 @@ function ClosedLandingHeader({
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <LanguageSwitcher showIcon={false} className="p-0.5" />
-          <a
-            href="#book-assessment"
+          <Link
+            to={bookHref}
             className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-3.5 py-2.5 text-xs font-semibold text-white shadow-brand-soft transition hover:-translate-y-0.5 sm:px-5 sm:text-sm"
           >
             {ui.header.bookAssessment}
             <ArrowRight className="hidden h-4 w-4 sm:block" />
-          </a>
+          </Link>
         </div>
       </div>
     </header>
@@ -401,7 +405,10 @@ const LEAD_PAGE_SOURCE_BY_SLUG: Record<IndustrySlug, LeadPageSource> = {
 };
 
 export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
-  const { locale } = useLocale();
+  const { locale, path } = useLocale();
+  // One scheduling destination for the whole site; `from` records which funnel
+  // the visitor came through.
+  const bookHref = bookingHref(path(BOOKING_ROUTE), slug);
   const prefersReducedMotion = useReducedMotion();
   const reducedMotion = Boolean(prefersReducedMotion);
 
@@ -431,7 +438,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           faqSchema(data.faq),
         ]}
       />
-      <ClosedLandingHeader data={data} ui={ui} />
+      <ClosedLandingHeader data={data} ui={ui} bookHref={bookHref} />
 
       <main>
         <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
@@ -468,10 +475,10 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                   asChild
                   className="h-auto whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-7 py-4 text-center text-base font-semibold leading-snug text-white shadow-brand-soft transition hover:-translate-y-0.5"
                 >
-                  <a href="#book-assessment">
+                  <Link to={bookHref}>
                     {data.hero.primaryCta}
                     <ArrowRight className="h-4 w-4 shrink-0" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button
                   asChild
@@ -655,17 +662,17 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
 
         <AdCampaignDemoSection
           content={data.adCampaignDemo}
-          ctaHref="#book-assessment"
+          ctaHref={bookHref}
         />
 
         <ConversationDemoSection
           content={data.conversationDemo}
-          ctaHref="#book-assessment"
+          ctaHref={bookHref}
         />
 
         <CrmPipelineDemoSection
           content={data.crmPipelineDemo}
-          ctaHref="#book-assessment"
+          ctaHref={bookHref}
         />
 
         <section className="overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
@@ -795,6 +802,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                     plan={plan}
                     ui={ui}
                     reducedMotion={reducedMotion}
+                    bookHref={bookHref}
                   />
                 </Reveal>
               ))}
@@ -945,16 +953,16 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        {/* The same booking component the homepage renders. Only the copy
-            around it is specific to this funnel; the calendar, its sizing and
-            its script handling stay in one place. */}
-        <BookingSection
+        {/* The funnel closes on one button rather than an embedded calendar.
+            The long-standing `book-assessment` anchor is kept so older links
+            into this page still land on the conversion block. */}
+        <BookingCTA
           id="book-assessment"
           eyebrow={ui.booking.eyebrow}
           title={data.booking.title}
           description={data.booking.description}
-          hint={ui.booking.calendarHint}
-          calendarTitle={ui.booking.calendarAria}
+          ctaLabel={ui.booking.ctaLabel}
+          href={bookHref}
         />
 
         {/* Scheduling a call and asking for a scoped proposal are different
@@ -989,13 +997,13 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
 
       <ClosedLandingFooter data={data} ui={ui} />
 
-      <a
-        href="#book-assessment"
+      <Link
+        to={bookHref}
         className="fixed bottom-4 left-4 right-4 z-40 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-5 py-4 text-sm font-semibold text-white shadow-2xl md:hidden"
       >
         {ui.mobileCta}
         <ArrowRight className="h-4 w-4 shrink-0" />
-      </a>
+      </Link>
     </div>
   );
 }

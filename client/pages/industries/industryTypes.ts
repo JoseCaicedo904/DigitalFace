@@ -199,10 +199,8 @@ export type IndustryUiCopy = {
   };
   booking: {
     eyebrow: string;
-    /** One-line instruction directly above the calendar. */
-    calendarHint: string;
-    /** Accessible name for the embedded booking widget. */
-    calendarAria: string;
+    /** Label on the button that leads to the scheduling page. */
+    ctaLabel: string;
     customScopeLabel: string;
     privacyNote: string;
   };
