@@ -77,25 +77,6 @@ export const industryIcons: Record<
   },
 };
 
-/** Calendly and form embed keys. Technical identifiers, never translated. */
-export const industryEmbedSlots: Record<
-  IndustrySlug,
-  { calendlySlot: string; formSlot: string }
-> = {
-  "dental-practices": {
-    calendlySlot: "CALENDLY_EMBED_DENTAL",
-    formSlot: "CUSTOM_PROPOSAL_FORM_DENTAL",
-  },
-  "aesthetic-medicine": {
-    calendlySlot: "CALENDLY_EMBED_AESTHETIC",
-    formSlot: "CUSTOM_PROPOSAL_FORM_AESTHETIC",
-  },
-  "med-spas": {
-    calendlySlot: "CALENDLY_EMBED_MED_SPA",
-    formSlot: "CUSTOM_PROPOSAL_FORM_MED_SPA",
-  },
-};
-
 export const industryProofLead: Record<IndustrySlug, "diego" | "jennifer"> = {
   "dental-practices": "jennifer",
   "aesthetic-medicine": "diego",

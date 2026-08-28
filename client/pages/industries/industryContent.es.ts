@@ -60,19 +60,12 @@ export const industryContentEs: IndustryLocaleBundle = {
       eyebrow: "Antes de agendar",
     },
     booking: {
-      eyebrow: "Elige tu siguiente paso",
-      assessmentLabel: "Diagnóstico de crecimiento",
-      calendlyTitle: "Espacio del calendario listo",
-      calendlyHint:
-        "Reemplaza este bloque con el calendario aprobado para que el agendamiento ocurra dentro de esta página.",
+      eyebrow: "Hablemos",
+      calendarHint: "Elige abajo tu fecha y hora preferidas.",
+      calendarAria: "Agenda una consulta con DigitalFace",
       customScopeLabel: "Alcance a la medida",
-      formTitle: "Espacio del formulario de propuesta listo",
-      formHint:
-        "Reemplaza este bloque con el formulario aprobado o un componente de envío conectado.",
       privacyNote:
         "El formulario final debe pedir solo lo necesario para definir el alcance y enlazar a la política de privacidad publicada.",
-      calendlyAria: "Espacio reservado para el calendario de agendamiento",
-      formAria: "Espacio reservado para el formulario de propuesta",
     },
     mobileCta: "Agendar diagnóstico",
   },
@@ -734,6 +727,8 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "Lo que más nos preguntan las clínicas odontológicas",
+      faqDescription:
+        "Revisamos tus canales de captación, tu proceso de respuesta, el flujo de valoraciones y el seguimiento antes de recomendarte un paquete.",
       faq: [
         {
           question: "¿El sistema puede comunicarse en inglés y español?",
@@ -764,10 +759,9 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title: "Descubre dónde está perdiendo pacientes tu clínica.",
+        title: "Hablemos de tu sistema de captación de pacientes.",
         description:
-          "Revisamos tus canales de captación, tu proceso de respuesta, el flujo de valoraciones y el seguimiento antes de recomendarte un paquete.",
-        assessmentCta: "Agenda tu diagnóstico odontológico",
+          "Elige un horario que te acomode para revisar cómo tu clínica odontológica atrae, convierte y gestiona hoy sus oportunidades de pacientes.",
         proposalTitle: "¿Necesitas un flujo dental a la medida?",
         proposalDescription:
           "Pide una propuesta para recepción de fotos, pacientes internacionales, migración de CRM, sedes adicionales u otro proceso propio de tu clínica.",
@@ -1412,6 +1406,8 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "Lo que más nos preguntan los centros de medicina estética",
+      faqDescription:
+        "Revisamos tus canales de captación, tu proceso de respuesta, el recorrido de valoración, las reglas de traspaso y el seguimiento antes de recomendarte un paquete.",
       faq: [
         {
           question:
@@ -1442,11 +1438,9 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title:
-          "Encuentra los vacíos entre el interés por un procedimiento y la valoración agendada.",
+        title: "Hablemos de tu sistema de crecimiento de pacientes.",
         description:
-          "Revisamos tus canales de captación, tu proceso de respuesta, el recorrido de valoración, las reglas de traspaso y el seguimiento antes de recomendarte un paquete.",
-        assessmentCta: "Agenda tu diagnóstico estético",
+          "Elige un horario para revisar cómo tu centro puede mejorar la generación de leads, la respuesta, el seguimiento, las citas y la visibilidad de ventas.",
         proposalTitle: "¿Necesitas un flujo estético a la medida?",
         proposalDescription:
           "Pide una propuesta para varias sedes, pacientes internacionales, admisión por procedimiento, automatización en redes u otro proceso de tu centro.",
@@ -2084,6 +2078,8 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "Lo que más nos preguntan los med spas",
+      faqDescription:
+        "Revisamos tus promociones, el flujo de consultas en redes, tu proceso de respuesta, la agenda, la reactivación y el seguimiento antes de recomendarte un paquete.",
       faq: [
         {
           question:
@@ -2113,11 +2109,9 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title:
-          "Encuentra los vacíos entre el interés por un tratamiento, la reserva y las visitas repetidas.",
+        title: "Hablemos de tu sistema de crecimiento.",
         description:
-          "Revisamos tus promociones, el flujo de consultas en redes, tu proceso de respuesta, la agenda, la reactivación y el seguimiento antes de recomendarte un paquete.",
-        assessmentCta: "Agenda tu diagnóstico para med spa",
+          "Elige un horario que te acomode para revisar cómo DigitalFace puede ayudar a tu med spa a atraer, convertir y gestionar más oportunidades de pacientes.",
         proposalTitle: "¿Necesitas un flujo a la medida para tu med spa?",
         proposalDescription:
           "Pide una propuesta para membresías, varias sedes, automatización de reseñas, admisión por tratamiento u otro proceso propio.",

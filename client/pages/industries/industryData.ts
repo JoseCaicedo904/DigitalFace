@@ -1,9 +1,5 @@
 import type { Locale } from "@/i18n/locale";
-import {
-  industryEmbedSlots,
-  industryIcons,
-  industryProofLead,
-} from "./industryIcons";
+import { industryIcons, industryProofLead } from "./industryIcons";
 import { industryContentEn } from "./industryContent.en";
 import { industryContentEs } from "./industryContent.es";
 import type {
@@ -64,10 +60,6 @@ function buildIndustry(
     capabilities: {
       ...text.capabilities,
       items: attachIcons(text.capabilities.items, icons.capabilities),
-    },
-    booking: {
-      ...text.booking,
-      ...industryEmbedSlots[slug],
     },
   };
 }

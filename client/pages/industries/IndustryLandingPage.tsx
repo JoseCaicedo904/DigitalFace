@@ -12,6 +12,7 @@ import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
+import { BookingSection } from "@/components/booking/BookingCalendar";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
   breadcrumbSchema,
@@ -29,7 +30,6 @@ import {
   ArrowRight,
   CalendarDays,
   CheckCircle2,
-  Clock3,
   FileText,
   HeartHandshake,
   Languages,
@@ -917,7 +917,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
               <SectionHeading
                 eyebrow={ui.faq.eyebrow}
                 title={data.faqTitle}
-                description={data.booking.description}
+                description={data.faqDescription}
               />
             </Reveal>
             <Reveal reducedMotion={reducedMotion} className="mt-12">
@@ -945,77 +945,44 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        <section
+        {/* The same booking component the homepage renders. Only the copy
+            around it is specific to this funnel; the calendar, its sizing and
+            its script handling stay in one place. */}
+        <BookingSection
           id="book-assessment"
-          className="scroll-mt-20 bg-slate-950 py-20 text-white sm:py-24 lg:py-28"
+          eyebrow={ui.booking.eyebrow}
+          title={data.booking.title}
+          description={data.booking.description}
+          hint={ui.booking.calendarHint}
+          calendarTitle={ui.booking.calendarAria}
+        />
+
+        {/* Scheduling a call and asking for a scoped proposal are different
+            requests, so the form keeps its own anchor and its own lead routing
+            below the calendar rather than competing with it beside one. */}
+        <section
+          id="custom-proposal"
+          className="scroll-mt-24 border-t border-white/10 bg-slate-950 py-20 text-white sm:py-24 lg:py-28"
         >
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading
-                eyebrow={ui.booking.eyebrow}
-                title={data.booking.title}
-                description={data.booking.description}
-                inverted
-              />
+              <article className="rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8">
+                {/* Same shared form as the homepage and contact page; only the
+                    surrounding industry context differs. */}
+                <LeadForm
+                  tone="dark"
+                  pageSource={LEAD_PAGE_SOURCE_BY_SLUG[slug]}
+                  eyebrow={ui.booking.customScopeLabel}
+                  title={data.booking.proposalTitle}
+                  description={data.booking.proposalDescription}
+                  className="border-0 bg-transparent p-0 sm:p-0 lg:p-0"
+                />
+                <div className="mt-6 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/55">
+                  <LockKeyhole className="mt-0.5 h-4 w-4 shrink-0 text-brand-200" />
+                  {ui.booking.privacyNote}
+                </div>
+              </article>
             </Reveal>
-
-            <div className="mt-14 grid gap-7 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-              <Reveal reducedMotion={reducedMotion}>
-                <article className="h-full rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                        {ui.booking.assessmentLabel}
-                      </p>
-                      <h3 className="mt-3 text-2xl font-semibold text-white">
-                        {data.booking.assessmentCta}
-                      </h3>
-                    </div>
-                    <CalendarDays className="h-7 w-7 shrink-0 text-ocean-200" />
-                  </div>
-                  <div
-                    data-embed-slot={data.booking.calendlySlot}
-                    aria-label={ui.booking.calendlyAria}
-                    className="mt-7 flex min-h-[360px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-white/20 bg-slate-950/35 p-8 text-center"
-                  >
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ocean-400/15 text-ocean-200">
-                      <Clock3 className="h-6 w-6" />
-                    </span>
-                    <p className="mt-5 text-sm font-semibold text-white">
-                      {ui.booking.calendlyTitle}
-                    </p>
-                    <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/55">
-                      {ui.booking.calendlyHint}
-                    </p>
-                    <code className="mt-5 rounded-lg bg-white/10 px-3 py-2 text-[11px] text-ocean-100">
-                      {data.booking.calendlySlot}
-                    </code>
-                  </div>
-                </article>
-              </Reveal>
-
-              <Reveal reducedMotion={reducedMotion} delay={0.08}>
-                <article
-                  id="custom-proposal"
-                  className="h-full scroll-mt-24 rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8"
-                >
-                  {/* Same shared form as the homepage and contact page; only the
-                      surrounding industry context differs. */}
-                  <LeadForm
-                    tone="dark"
-                    pageSource={LEAD_PAGE_SOURCE_BY_SLUG[slug]}
-                    eyebrow={ui.booking.customScopeLabel}
-                    title={data.booking.proposalTitle}
-                    description={data.booking.proposalDescription}
-                    className="border-0 bg-transparent p-0 sm:p-0 lg:p-0"
-                  />
-                  <div className="mt-6 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/55">
-                    <LockKeyhole className="mt-0.5 h-4 w-4 shrink-0 text-brand-200" />
-                    {ui.booking.privacyNote}
-                  </div>
-                </article>
-              </Reveal>
-            </div>
           </div>
         </section>
       </main>

@@ -106,11 +106,13 @@ export type IndustryLandingText = {
   packagesTitle: string;
   packages: IndustryPackage[];
   faqTitle: string;
+  /** Subtitle for the FAQ block. Used to lean on the booking copy. */
+  faqDescription: string;
   faq: IndustryFaq[];
+  /** Copy around the embedded booking calendar. Kept deliberately short. */
   booking: {
     title: string;
     description: string;
-    assessmentCta: string;
     proposalTitle: string;
     proposalDescription: string;
     proposalCta: string;
@@ -129,11 +131,6 @@ export type IndustryLandingData = Omit<
   };
   capabilities: Omit<IndustryLandingText["capabilities"], "items"> & {
     items: IndustryItem[];
-  };
-  /** Technical integration keys. Never translated. */
-  booking: IndustryLandingText["booking"] & {
-    calendlySlot: string;
-    formSlot: string;
   };
 };
 
@@ -202,15 +199,12 @@ export type IndustryUiCopy = {
   };
   booking: {
     eyebrow: string;
-    assessmentLabel: string;
-    calendlyTitle: string;
-    calendlyHint: string;
+    /** One-line instruction directly above the calendar. */
+    calendarHint: string;
+    /** Accessible name for the embedded booking widget. */
+    calendarAria: string;
     customScopeLabel: string;
-    formTitle: string;
-    formHint: string;
     privacyNote: string;
-    calendlyAria: string;
-    formAria: string;
   };
   mobileCta: string;
 };
