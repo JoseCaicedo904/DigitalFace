@@ -26,7 +26,7 @@ const en = {
     eyebrow: "About DigitalFace",
     title: "Specialized expertise. One DigitalFace.",
     description:
-      "DigitalFace brings strategy, technology and specialized expertise together under one accountable relationship. When an engagement needs deeper specialization, we bring the right professionals into the work — while DigitalFace stays responsible for direction, coordination and quality.",
+      "DigitalFace brings strategy, technology and specialized expertise together under one accountable relationship. When an engagement needs deeper specialization, we bring the right professionals into the work while DigitalFace stays responsible for direction, coordination and quality.",
     meta: [
       "Based in Colombia",
       "Working remotely across markets",
@@ -124,7 +124,7 @@ const en = {
     ],
     closingTitle: "Built around the work.",
     closingBody:
-      "DigitalFace brings the strategy, specialists and systems an objective needs — and keeps one company accountable for how the pieces work together.",
+      "DigitalFace brings the strategy, specialists and systems an objective needs and keeps one company accountable for how the pieces work together.",
     closingCta: "Talk to DigitalFace",
   },
 } satisfies Record<string, unknown>;
