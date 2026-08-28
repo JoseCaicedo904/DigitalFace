@@ -15,7 +15,13 @@ import {
   type LeadResponse,
   type LeadSubmission,
 } from "@shared/lead";
-import { AlertCircle, CheckCircle2, Loader2, Sparkles } from "lucide-react";
+import {
+  AlertCircle,
+  CheckCircle2,
+  ChevronDown,
+  Loader2,
+  Sparkles,
+} from "lucide-react";
 import { useId, useMemo, useState, type FormEvent } from "react";
 
 /**
@@ -97,28 +103,44 @@ export function LeadForm({
 
   /* ---------------------------------------------------------------- styles */
 
+  /*
+   * Contrast is the whole point of this layer. Each value is picked against the
+   * surface it actually sits on, not for subtlety. Labels, placeholders and
+   * microcopy previously used ink-300/ink-400 — roughly 1.5:1 and 2.6:1 on
+   * white, which reads as a disabled field. Nothing informative is lighter
+   * than ink-500 (4.8:1) now, and nothing important is smaller than 13px.
+   */
   const labelClass = cn(
-    "block text-xs font-semibold uppercase tracking-[0.14em]",
-    dark ? "text-white/60" : "text-ink-400",
+    "block text-sm font-bold uppercase tracking-[0.08em]",
+    dark ? "text-white/90" : "text-ink-700",
   );
   const optionalClass = cn(
-    "ml-2 text-[10px] font-medium normal-case tracking-normal",
-    dark ? "text-white/35" : "text-ink-300",
+    "ml-2 text-xs font-semibold normal-case tracking-normal",
+    dark ? "text-white/60" : "text-ink-500",
   );
+  /*
+   * 16px input text is deliberate twice over: it is comfortably readable, and
+   * anything under 16px makes iOS Safari zoom the page on focus.
+   * `focus:` rather than `focus-visible:` so a mouse click on a select shows
+   * the ring too — every browser agrees on :focus for form controls.
+   */
   const controlClass = cn(
-    "w-full rounded-xl border px-4 py-3 text-sm transition outline-none",
-    "focus-visible:ring-2 focus-visible:ring-offset-2",
+    "w-full rounded-xl border px-4 py-3.5 text-base leading-6 outline-none",
+    "transition-[color,border-color,background-color,box-shadow] duration-200",
+    "focus:ring-2",
     dark
-      ? "border-white/15 bg-white/[0.06] text-white placeholder:text-white/35 focus-visible:border-ocean-300/60 focus-visible:ring-ocean-400/40 focus-visible:ring-offset-slate-950"
-      : "border-ink-200 bg-white text-slate-900 placeholder:text-ink-300 focus-visible:border-brand-300 focus-visible:ring-brand-200 focus-visible:ring-offset-white",
+      ? "border-white/25 bg-white/[0.09] text-white placeholder:text-white/55 hover:border-white/40 focus:border-ocean-300 focus:bg-white/[0.12] focus:ring-ocean-400/35"
+      : "border-ink-300 bg-ink-50 text-ink-900 placeholder:text-ink-500 hover:border-ink-400 hover:bg-white focus:border-brand-500 focus:bg-white focus:ring-brand-500/25",
   );
   const invalidClass = dark
-    ? "border-red-400/70 focus-visible:ring-red-400/40"
-    : "border-red-400 focus-visible:ring-red-200";
+    ? "border-red-400 focus:border-red-400 focus:ring-red-400/35"
+    : "border-red-500 bg-red-50/50 focus:border-red-500 focus:ring-red-500/25";
   const errorTextClass = cn(
-    "text-xs font-medium",
+    "text-sm font-semibold",
     dark ? "text-red-300" : "text-red-600",
   );
+  /** Keeps an unchosen select visibly a prompt rather than a filled answer. */
+  const placeholderTone = dark ? "text-white/55" : "text-ink-500";
 
   const control = (key: FieldKey) =>
     cn(controlClass, errors[key] && invalidClass);
@@ -238,8 +260,8 @@ export function LeadForm({
         className={cn(
           "rounded-3xl border p-8 sm:p-10",
           dark
-            ? "border-white/15 bg-white/[0.06]"
-            : "border-ink-100 bg-white shadow-brand-card",
+            ? "border-white/20 bg-white/[0.09]"
+            : "border-ink-200 bg-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]",
           className,
         )}
       >
@@ -260,15 +282,15 @@ export function LeadForm({
           </span>
           <p
             className={cn(
-              "mt-6 text-xs font-semibold uppercase tracking-[0.24em]",
-              dark ? "text-ocean-200" : "text-brand-600",
+              "mt-6 text-sm font-bold uppercase tracking-[0.18em]",
+              dark ? "text-ocean-100" : "text-brand-700",
             )}
           >
             {t.successLabel}
           </p>
           <h3
             className={cn(
-              "mt-4 text-2xl font-semibold tracking-tight sm:text-3xl",
+              "mt-4 text-[1.75rem] font-semibold leading-tight tracking-tight sm:text-4xl",
               dark ? "text-white" : "text-slate-900",
             )}
           >
@@ -276,16 +298,16 @@ export function LeadForm({
           </h3>
           <p
             className={cn(
-              "mt-4 text-base leading-relaxed",
-              dark ? "text-white/70" : "text-ink-500",
+              "mt-5 text-lg leading-relaxed",
+              dark ? "text-white/85" : "text-ink-700",
             )}
           >
             {t.successBody}
           </p>
           <p
             className={cn(
-              "mt-3 text-sm leading-relaxed",
-              dark ? "text-white/55" : "text-ink-500",
+              "mt-3 text-base leading-relaxed",
+              dark ? "text-white/75" : "text-ink-600",
             )}
           >
             {t.successEmailNote}
@@ -302,27 +324,27 @@ export function LeadForm({
   return (
     <div
       className={cn(
-        "rounded-3xl border p-6 sm:p-8 lg:p-10",
+        "rounded-3xl border p-7 sm:p-9 lg:p-11",
         dark
-          ? "border-white/15 bg-white/[0.06]"
-          : "border-ink-100 bg-white shadow-brand-card",
+          ? "border-white/20 bg-white/[0.09]"
+          : "border-ink-200 bg-white shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)]",
         className,
       )}
     >
       <div className="max-w-2xl">
         <span
           className={cn(
-            "inline-flex items-center justify-center rounded-full border px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em]",
+            "inline-flex items-center justify-center rounded-full border px-4 py-1.5 text-[13px] font-bold uppercase tracking-[0.16em]",
             dark
-              ? "border-white/20 bg-white/5 text-ocean-200"
-              : "border-brand-100 bg-brand-50 text-brand-600",
+              ? "border-white/25 bg-white/10 text-ocean-100"
+              : "border-brand-200 bg-brand-50 text-brand-700",
           )}
         >
           {eyebrow ?? t.eyebrow}
         </span>
         <h2
           className={cn(
-            "mt-5 text-balance text-2xl font-semibold tracking-tight sm:text-3xl",
+            "mt-6 text-balance text-[1.75rem] font-semibold leading-tight tracking-tight sm:text-4xl",
             dark ? "text-white" : "text-slate-900",
           )}
         >
@@ -330,8 +352,8 @@ export function LeadForm({
         </h2>
         <p
           className={cn(
-            "mt-4 text-sm leading-relaxed sm:text-base",
-            dark ? "text-white/65" : "text-ink-500",
+            "mt-5 text-base leading-relaxed sm:text-lg",
+            dark ? "text-white/80" : "text-ink-600",
           )}
         >
           {description ?? t.description}
@@ -341,11 +363,11 @@ export function LeadForm({
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="relative mt-8 space-y-5"
+        className="relative mt-10 space-y-6"
       >
         {/* Row 1 */}
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div id={id("name-field")} className="space-y-2">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div id={id("name-field")} className="space-y-2.5">
             <label htmlFor={id("name")} className={labelClass}>
               {t.nameLabel}
             </label>
@@ -369,7 +391,7 @@ export function LeadForm({
             ) : null}
           </div>
 
-          <div id={id("business-field")} className="space-y-2">
+          <div id={id("business-field")} className="space-y-2.5">
             <label htmlFor={id("business")} className={labelClass}>
               {t.businessLabel}
             </label>
@@ -395,8 +417,8 @@ export function LeadForm({
         </div>
 
         {/* Row 2 */}
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div id={id("email-field")} className="space-y-2">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div id={id("email-field")} className="space-y-2.5">
             <label htmlFor={id("email")} className={labelClass}>
               {t.emailLabel}
             </label>
@@ -421,7 +443,7 @@ export function LeadForm({
             ) : null}
           </div>
 
-          <div id={id("phone-field")} className="space-y-2">
+          <div id={id("phone-field")} className="space-y-2.5">
             <label htmlFor={id("phone")} className={labelClass}>
               {t.phoneLabel}
             </label>
@@ -448,40 +470,55 @@ export function LeadForm({
         </div>
 
         {/* Row 3 */}
-        <div className="grid gap-5 sm:grid-cols-2">
-          <div id={id("country-field")} className="space-y-2">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div id={id("country-field")} className="space-y-2.5">
             <label htmlFor={id("country")} className={labelClass}>
               {t.countryLabel}
             </label>
             {/* Native select: best mobile picker for a 200-entry list, full
                 keyboard type-ahead on desktop, and no extra dependency. */}
-            <select
-              id={id("country")}
-              name="country"
-              autoComplete="country"
-              required
-              aria-invalid={Boolean(errors.country)}
-              aria-describedby={describedBy("country")}
-              className={cn(control("country"), "appearance-none pr-10")}
-              value={values.country}
-              onChange={(event) => setValue("country", event.target.value)}
-            >
-              <option value="">{t.countryPlaceholder}</option>
-              <optgroup label={t.countryPriorityGroup}>
-                {countries.priority.map((option) => (
-                  <option key={option.code} value={option.code}>
-                    {option.name}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label={t.countryAllGroup}>
-                {countries.rest.map((option) => (
-                  <option key={option.code} value={option.code}>
-                    {option.name}
-                  </option>
-                ))}
-              </optgroup>
-            </select>
+            {/* `appearance-none` removes the native arrow, so one has to be
+                drawn back in or the control reads as a plain text field. */}
+            <div className="relative">
+              <select
+                id={id("country")}
+                name="country"
+                autoComplete="country"
+                required
+                aria-invalid={Boolean(errors.country)}
+                aria-describedby={describedBy("country")}
+                className={cn(
+                  control("country"),
+                  "cursor-pointer appearance-none pr-11",
+                  !values.country && placeholderTone,
+                )}
+                value={values.country}
+                onChange={(event) => setValue("country", event.target.value)}
+              >
+                <option value="">{t.countryPlaceholder}</option>
+                <optgroup label={t.countryPriorityGroup}>
+                  {countries.priority.map((option) => (
+                    <option key={option.code} value={option.code}>
+                      {option.name}
+                    </option>
+                  ))}
+                </optgroup>
+                <optgroup label={t.countryAllGroup}>
+                  {countries.rest.map((option) => (
+                    <option key={option.code} value={option.code}>
+                      {option.name}
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
+              <ChevronDown
+                aria-hidden="true"
+                className={cn(
+                  "pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2",
+                  dark ? "text-white/70" : "text-ink-600",
+                )}
+              />
+            </div>
             {errors.country ? (
               <p id={id("country-error")} className={errorTextClass}>
                 {errors.country}
@@ -489,7 +526,7 @@ export function LeadForm({
             ) : null}
           </div>
 
-          <div id={id("website-field")} className="space-y-2">
+          <div id={id("website-field")} className="space-y-2.5">
             <label htmlFor={id("website")} className={labelClass}>
               {t.websiteLabel}
               <span className={optionalClass}>{t.websiteOptional}</span>
@@ -516,29 +553,42 @@ export function LeadForm({
         </div>
 
         {/* Row 4 — business outcomes, never product or platform names */}
-        <div id={id("goal-field")} className="space-y-2">
+        <div id={id("goal-field")} className="space-y-2.5">
           <label htmlFor={id("goal")} className={labelClass}>
             {t.goalLabel}
           </label>
-          <select
-            id={id("goal")}
-            name="goal"
-            required
-            aria-invalid={Boolean(errors.goal)}
-            aria-describedby={describedBy("goal")}
-            className={cn(control("goal"), "appearance-none pr-10")}
-            value={values.goal}
-            onChange={(event) =>
-              setValue("goal", event.target.value as Values["goal"])
-            }
-          >
-            <option value="">{t.goalPlaceholder}</option>
-            {LEAD_GOALS.map((goal) => (
-              <option key={goal} value={goal}>
-                {t.goals[goal]}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              id={id("goal")}
+              name="goal"
+              required
+              aria-invalid={Boolean(errors.goal)}
+              aria-describedby={describedBy("goal")}
+              className={cn(
+                control("goal"),
+                "cursor-pointer appearance-none pr-11",
+                !values.goal && placeholderTone,
+              )}
+              value={values.goal}
+              onChange={(event) =>
+                setValue("goal", event.target.value as Values["goal"])
+              }
+            >
+              <option value="">{t.goalPlaceholder}</option>
+              {LEAD_GOALS.map((goal) => (
+                <option key={goal} value={goal}>
+                  {t.goals[goal]}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              aria-hidden="true"
+              className={cn(
+                "pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2",
+                dark ? "text-white/70" : "text-ink-600",
+              )}
+            />
+          </div>
           {errors.goal ? (
             <p id={id("goal-error")} className={errorTextClass}>
               {errors.goal}
@@ -547,7 +597,7 @@ export function LeadForm({
         </div>
 
         {/* Row 5 */}
-        <div className="space-y-2">
+        <div className="space-y-2.5">
           <label htmlFor={id("message")} className={labelClass}>
             {t.messageLabel}
             <span className={optionalClass}>{t.messageOptional}</span>
@@ -559,7 +609,7 @@ export function LeadForm({
             placeholder={t.messagePlaceholder}
             className={cn(
               controlClass,
-              "min-h-[96px] resize-y leading-relaxed",
+              "min-h-[120px] resize-y leading-relaxed",
             )}
             value={values.message}
             onChange={(event) => setValue("message", event.target.value)}
@@ -586,33 +636,35 @@ export function LeadForm({
         {/* Offer — a benefit, not a coupon */}
         <div
           className={cn(
-            "rounded-2xl border p-5 sm:p-6",
+            "rounded-2xl border p-6 sm:p-7",
             dark
-              ? "border-ocean-300/25 bg-gradient-to-br from-brand-500/15 to-ocean-500/10"
-              : "border-brand-100 bg-gradient-to-br from-brand-50 to-ocean-50/60",
+              ? "border-ocean-300/40 bg-gradient-to-br from-brand-500/20 to-ocean-500/15"
+              : "border-brand-200 bg-gradient-to-br from-brand-50 to-ocean-50/70 shadow-sm",
           )}
         >
           <div className="flex items-start gap-3">
             <span
               className={cn(
-                "mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl",
-                dark ? "bg-white/10 text-ocean-200" : "bg-white text-brand-600",
+                "mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl",
+                dark
+                  ? "bg-white/15 text-ocean-100"
+                  : "bg-white text-brand-600 shadow-sm",
               )}
             >
-              <Sparkles className="h-4 w-4" aria-hidden="true" />
+              <Sparkles className="h-5 w-5" aria-hidden="true" />
             </span>
             <div className="min-w-0">
               <p
                 className={cn(
-                  "text-[11px] font-semibold uppercase tracking-[0.2em]",
-                  dark ? "text-ocean-200" : "text-brand-600",
+                  "text-xs font-bold uppercase tracking-[0.18em]",
+                  dark ? "text-ocean-100" : "text-brand-700",
                 )}
               >
                 {t.offerLabel}
               </p>
               <p
                 className={cn(
-                  "mt-2 text-base font-semibold leading-snug sm:text-lg",
+                  "mt-2.5 text-lg font-bold leading-snug sm:text-xl",
                   dark ? "text-white" : "text-slate-900",
                 )}
               >
@@ -620,8 +672,8 @@ export function LeadForm({
               </p>
               <p
                 className={cn(
-                  "mt-2 text-sm leading-relaxed",
-                  dark ? "text-white/60" : "text-ink-500",
+                  "mt-2.5 text-sm leading-relaxed sm:text-base",
+                  dark ? "text-white/75" : "text-ink-600",
                 )}
               >
                 {t.offerBody}
@@ -634,14 +686,14 @@ export function LeadForm({
           <div
             role="alert"
             className={cn(
-              "flex items-start gap-3 rounded-2xl border p-4 text-sm",
+              "flex items-start gap-3 rounded-2xl border p-5 text-sm sm:text-base",
               dark
-                ? "border-red-400/30 bg-red-500/10 text-red-100"
-                : "border-red-200 bg-red-50 text-red-700",
+                ? "border-red-400/50 bg-red-500/15 text-red-100"
+                : "border-red-300 bg-red-50 text-red-800",
             )}
           >
             <AlertCircle
-              className="mt-0.5 h-4 w-4 shrink-0"
+              className="mt-0.5 h-5 w-5 shrink-0"
               aria-hidden="true"
             />
             <div>
@@ -661,11 +713,11 @@ export function LeadForm({
           type="submit"
           disabled={submitting}
           aria-busy={submitting}
-          className="h-auto w-full whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-4 text-center text-sm font-semibold leading-snug text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg disabled:translate-y-0 disabled:opacity-70 sm:text-base"
+          className="h-auto w-full whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-5 text-center text-base font-bold leading-snug text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0 disabled:translate-y-0 disabled:opacity-80 disabled:hover:translate-y-0 sm:text-lg"
         >
           {submitting ? (
             <>
-              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+              <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
               {t.submitting}
             </>
           ) : status === "error" ? (
@@ -681,8 +733,10 @@ export function LeadForm({
 
         <p
           className={cn(
-            "text-[11px] leading-relaxed",
-            dark ? "text-white/40" : "text-ink-400",
+            "border-t pt-5 text-xs leading-relaxed",
+            dark
+              ? "border-white/10 text-white/65"
+              : "border-ink-100 text-ink-500",
           )}
         >
           {t.offerTerms}
