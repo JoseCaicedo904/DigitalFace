@@ -37,7 +37,9 @@ const INDUSTRY_DESCRIPTION_KEYS = {
 
 const desktopNavLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
-    "relative text-sm font-medium text-ink-500 transition hover:text-brand-600",
+    // whitespace-nowrap keeps every label on one line, so the nav reads as a
+    // single horizontal system and no word can ever be split.
+    "relative whitespace-nowrap text-sm font-medium text-ink-500 transition hover:text-brand-600",
     isActive
       ? "text-brand-600 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-brand-500"
       : "after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:rounded-full after:bg-brand-500 after:transition-transform after:duration-300 hover:after:scale-x-100",
@@ -202,23 +204,31 @@ export default function MainLayout() {
         data={[organizationSchema(locale), websiteSchema(locale)]}
       />
       <header className="sticky top-0 z-50 border-b border-white/40 bg-white/70 backdrop-blur-xl">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8 relative">
-          <Link to={homePath} className="flex items-center gap-3">
+        {/* The header bar is deliberately wider than the max-w-6xl content
+            column below it: brand, seven nav labels, the language switcher and
+            the CTA need more room than page copy does. */}
+        <div className="relative mx-auto flex w-full max-w-[92rem] items-center gap-4 px-4 py-4 sm:px-6 2xl:gap-6 2xl:px-8">
+          <Link to={homePath} className="flex shrink-0 items-center gap-3">
             <img
               src="/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png"
               alt={t.footer.logoAlt}
               width={44}
               height={44}
-              className="h-11 w-11 rounded-2xl object-contain shadow-brand-soft"
+              className="h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
             />
             <div className="flex flex-col">
-              <span className="text-lg font-semibold leading-tight">
+              <span className="whitespace-nowrap text-lg font-semibold leading-tight nav:text-base 2xl:text-lg">
                 DigitalFace Marketing
               </span>
-              <span className="text-sm text-ink-500">{t.footer.region}</span>
+              <span className="whitespace-nowrap text-sm text-ink-500 nav:text-xs 2xl:text-sm">
+                {t.footer.region}
+              </span>
             </div>
           </Link>
-          <nav className="hidden items-center gap-5 lg:flex">
+          {/* flex-1 + justify-center centres the nav in whatever room is left
+              between brand and controls; the fluid gap keeps it spacious on
+              wide screens and tightens gracefully near the breakpoint. */}
+          <nav className="hidden flex-1 items-center justify-center gap-[clamp(0.875rem,1.15vw,1.25rem)] nav:flex">
             {navItems.map((item) =>
               item.key === "industries" ? (
                 <div
@@ -229,7 +239,7 @@ export default function MainLayout() {
                     type="button"
                     aria-haspopup="true"
                     className={cn(
-                      "flex items-center gap-1.5 text-sm font-medium text-ink-500 transition hover:text-brand-600 group-focus-within:text-brand-600 group-hover:text-brand-600",
+                      "flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-ink-500 transition hover:text-brand-600 group-focus-within:text-brand-600 group-hover:text-brand-600",
                       location.pathname.includes("/industries/") &&
                         "text-brand-600",
                     )}
@@ -277,9 +287,9 @@ export default function MainLayout() {
                   </NavLink>
                   <span
                     aria-hidden="true"
-                    className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 lg:block lg:pointer-events-none lg:group-hover:pointer-events-auto lg:group-hover:opacity-100"
+                    className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 nav:block nav:pointer-events-none nav:group-hover:pointer-events-auto nav:group-hover:opacity-100"
                   />
-                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out lg:block lg:invisible lg:pointer-events-none lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out nav:block nav:invisible nav:pointer-events-none nav:group-hover:visible nav:group-hover:pointer-events-auto nav:group-hover:translate-y-0 nav:group-hover:opacity-100">
                     <div className="rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card backdrop-blur-xl">
                       <div className="grid gap-8 lg:grid-cols-4">
                         {megaNav.categories.map((category) => {
@@ -329,16 +339,16 @@ export default function MainLayout() {
               ),
             )}
           </nav>
-          <div className="hidden items-center gap-3 lg:flex">
-            <LanguageSwitcher />
+          <div className="hidden shrink-0 items-center gap-2.5 nav:flex 2xl:gap-3">
+            <LanguageSwitcher iconClassName="hidden 2xl:block" />
             <Button
               asChild
-              className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-5 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg 2xl:px-6"
             >
               <Link to={path("/contact")}>{t.nav.bookCall}</Link>
             </Button>
           </div>
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="ml-auto flex items-center gap-2 nav:hidden">
             <LanguageSwitcher showIcon={false} className="p-0.5" />
             <button
               type="button"
@@ -357,13 +367,16 @@ export default function MainLayout() {
         </div>
         <div
           className={cn(
-            "lg:hidden",
+            "nav:hidden",
             menuOpen
               ? "max-h-[42rem] opacity-100"
               : "pointer-events-none max-h-0 opacity-0",
           )}
         >
-          <div className="mx-4 mb-4 rounded-2xl border border-ink-200 bg-white/90 shadow-brand-card backdrop-blur">
+          {/* Margins track the header padding so the panel lines up with the
+              toggle. From lg up the drawer now also covers small laptops, so it
+              becomes a right-aligned panel rather than a full-bleed bar. */}
+          <div className="mx-4 mb-4 rounded-2xl border border-ink-200 bg-white/90 shadow-brand-card backdrop-blur sm:mx-6 lg:ml-auto lg:max-w-md">
             <nav className="flex flex-col divide-y divide-ink-100">
               {navItems.map((item) =>
                 item.key === "industries" ? (

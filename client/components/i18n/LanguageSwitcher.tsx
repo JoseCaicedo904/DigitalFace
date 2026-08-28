@@ -19,12 +19,15 @@ type LanguageSwitcherProps = {
   tone?: "light" | "dark";
   className?: string;
   showIcon?: boolean;
+  /** Extra classes for the globe, so callers can drop it at tight widths. */
+  iconClassName?: string;
 };
 
 export function LanguageSwitcher({
   tone = "light",
   className,
   showIcon = true,
+  iconClassName,
 }: LanguageSwitcherProps) {
   const { locale } = useLocale();
   const { pathname, search, hash } = useLocation();
@@ -48,6 +51,7 @@ export function LanguageSwitcher({
           className={cn(
             "ml-1.5 h-3.5 w-3.5",
             tone === "dark" ? "text-white/60" : "text-ink-400",
+            iconClassName,
           )}
         />
       ) : null}

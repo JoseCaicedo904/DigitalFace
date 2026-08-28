@@ -120,6 +120,20 @@
     word-break: break-word;
   }
 
+  /**
+   * Navigation chrome is layout, not prose.
+   * `overflow-wrap: anywhere` above does two things: it allows a break between
+   * any two characters, and it collapses an element's min-content width down to
+   * a single glyph. That second effect let flexbox squeeze header links below
+   * their own word width, which is what chopped labels into "Hom / e" and
+   * "Contac / t". Inside the header and any nav, labels may only ever wrap at a
+   * space. `:where()` keeps specificity at 0 so Tailwind utilities still win.
+   */
+  :where(header, nav) :where(a, button, span, li, label, summary) {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
   pre,
   code {
     overflow-x: auto;
