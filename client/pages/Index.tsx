@@ -2,6 +2,11 @@ import { LayoutDashboard, Megaphone, MessageCircle } from "lucide-react";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { homeContent, type HomeContent } from "@/i18n/content/home";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
+import {
+  BookingSection,
+  HOME_BOOKING_ANCHOR,
+  HOME_BOOKING_HREF,
+} from "@/components/booking/BookingCalendar";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ClientSystemsSection } from "@/sections/ClientSystems";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
@@ -60,7 +65,7 @@ function HeroSystemPreview({
 }
 
 export default function Index() {
-  const { locale, path } = useLocale();
+  const { locale } = useLocale();
   const t = homeContent[locale];
 
   usePageMetadata(t.metadata.title, t.metadata.description);
@@ -71,28 +76,42 @@ export default function Index() {
         eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         description={t.hero.description}
-        primaryCta={{ label: t.hero.primaryCta, href: path("/contact") }}
+        primaryCta={{ label: t.hero.primaryCta, href: HOME_BOOKING_HREF }}
         media={<HeroSystemPreview content={t.systemIntro} />}
       />
       <SystemJourneyIntro content={t.systemIntro} />
+      {/* Every consultation CTA on this page now lands on the calendar below
+          rather than sending the visitor off to /contact to start again. */}
       <AdCampaignDemoSection
         content={t.adCampaignDemo}
-        ctaHref={path("/contact")}
+        ctaHref={HOME_BOOKING_HREF}
       />
       <ConversationDemoSection
         content={t.conversationDemo}
-        ctaHref={path("/contact")}
+        ctaHref={HOME_BOOKING_HREF}
       />
       <CrmPipelineDemoSection
         content={t.crmPipelineDemo}
-        ctaHref={path("/contact")}
+        ctaHref={HOME_BOOKING_HREF}
       />
       <ClientSystemsSection content={t.clientSystems} />
       <WebsitePortfolioSection content={t.websitePortfolio} />
-      {/* The homepage now converts in place: the lead form replaces the old
-          generic CTA block and keeps the same #book anchor. */}
+      {/* The conversion point, and the destination of every consultation CTA
+          above it: by here the visitor has seen attract, convert, manage, the
+          three interactive demonstrations and the delivered work. */}
+      <BookingSection
+        id={HOME_BOOKING_ANCHOR}
+        eyebrow={t.booking.eyebrow}
+        title={t.booking.title}
+        description={t.booking.description}
+        hint={t.booking.hint}
+        calendarTitle={t.booking.calendarTitle}
+      />
+      {/* Kept, but now clearly secondary to the calendar: the form is the route
+          for people who want a scoped reply rather than a scheduled call, and it
+          carries its own lead routing. */}
       <section
-        id="book"
+        id="custom-proposal"
         className="scroll-mt-24 bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-28"
       >
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">

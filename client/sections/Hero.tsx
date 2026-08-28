@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { CtaLink } from "@/components/ui/cta-link";
 import { cn } from "@/lib/utils";
 import { corporateMedia } from "@/data/mediaSlots";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
 
-type CtaLink = {
+type HeroCta = {
   label: string;
   href: string;
   variant?: "primary" | "secondary";
@@ -20,8 +20,8 @@ interface HeroProps {
   eyebrow?: string;
   title: string;
   description: string;
-  primaryCta: CtaLink;
-  secondaryCta?: CtaLink;
+  primaryCta: HeroCta;
+  secondaryCta?: HeroCta;
   stats?: Stat[];
   media?: ReactNode;
   showVideo?: boolean;
@@ -85,7 +85,7 @@ export function Hero({
                 asChild
                 className="h-auto whitespace-normal rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-7 py-4 text-center text-base font-semibold leading-snug text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
               >
-                <Link to={primaryCta.href}>{primaryCta.label}</Link>
+                <CtaLink href={primaryCta.href}>{primaryCta.label}</CtaLink>
               </Button>
               {secondaryCta ? (
                 <Button
@@ -93,13 +93,13 @@ export function Hero({
                   variant="outline"
                   className="group h-auto cursor-pointer whitespace-normal rounded-xl border border-brand-200/70 bg-brand-100/90 px-7 py-[18px] text-center text-base font-bold leading-snug text-brand-900 shadow-[0_12px_35px_-22px_rgba(124,58,237,0.6)] transition-all duration-300 hover:scale-[1.03] hover:bg-brand-50 hover:shadow-[0_20px_45px_-24px_rgba(14,165,233,0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
-                  <Link to={secondaryCta.href}>
+                  <CtaLink href={secondaryCta.href}>
                     {secondaryCta.label}
                     <ArrowRight
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
                       aria-hidden="true"
                     />
-                  </Link>
+                  </CtaLink>
                 </Button>
               ) : null}
             </div>

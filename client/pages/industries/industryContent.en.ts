@@ -59,19 +59,12 @@ export const industryContentEn: IndustryLocaleBundle = {
       eyebrow: "Questions before you book",
     },
     booking: {
-      eyebrow: "Choose your next step",
-      assessmentLabel: "Growth assessment",
-      calendlyTitle: "Booking calendar slot ready",
-      calendlyHint:
-        "Replace this block with the approved Calendly embed to keep scheduling inside this page.",
+      eyebrow: "Let's talk",
+      calendarHint: "Choose your preferred date and time below.",
+      calendarAria: "Book a DigitalFace consultation",
       customScopeLabel: "Custom scope",
-      formTitle: "Custom proposal form slot ready",
-      formHint:
-        "Replace this block with the approved form embed or a connected submission component.",
       privacyNote:
         "The final form should collect only what is needed to scope the request, and link to the published privacy policy.",
-      calendlyAria: "Booking calendar placeholder",
-      formAria: "Custom proposal form placeholder",
     },
     mobileCta: "Book growth assessment",
   },
@@ -725,6 +718,8 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "What dental practices usually ask us",
+      faqDescription:
+        "We review your acquisition channels, response process, consultation workflow and follow-up before recommending a package.",
       faq: [
         {
           question: "Can the system communicate in English and Spanish?",
@@ -753,10 +748,9 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title: "See where your practice is losing patient opportunities.",
+        title: "Let's talk about your patient acquisition system.",
         description:
-          "We review your acquisition channels, response process, consultation workflow and follow-up before recommending a package.",
-        assessmentCta: "Book a Dental Growth Assessment",
+          "Choose a convenient time to discuss how your dental practice currently attracts, converts and manages patient opportunities.",
         proposalTitle: "Need a custom dental workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering photo intake, international patients, a CRM migration, extra locations or another process specific to your practice.",
@@ -1391,6 +1385,8 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "What aesthetic practices usually ask us",
+      faqDescription:
+        "We review your acquisition channels, response process, consultation journey, handoff rules and follow-up before recommending a package.",
       faq: [
         {
           question:
@@ -1420,11 +1416,9 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title:
-          "Find the gaps between procedure interest and a booked consultation.",
+        title: "Let's talk about your patient growth system.",
         description:
-          "We review your acquisition channels, response process, consultation journey, handoff rules and follow-up before recommending a package.",
-        assessmentCta: "Book an Aesthetic Growth Assessment",
+          "Choose a time to discuss how your practice can improve lead generation, response, follow-up, appointments and sales visibility.",
         proposalTitle: "Need a custom aesthetic workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering multiple locations, international patients, procedure-specific intake, social automation or another process in your practice.",
@@ -2053,6 +2047,8 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       faqTitle: "What med spas usually ask us",
+      faqDescription:
+        "We review your promotions, social inquiry flow, response process, calendar, reactivation and client follow-up before recommending a package.",
       faq: [
         {
           question:
@@ -2082,11 +2078,9 @@ export const industryContentEn: IndustryLocaleBundle = {
         },
       ],
       booking: {
-        title:
-          "Find the gaps between treatment interest, booking and repeat visits.",
+        title: "Let's talk about your growth system.",
         description:
-          "We review your promotions, social inquiry flow, response process, calendar, reactivation and client follow-up before recommending a package.",
-        assessmentCta: "Book a Med Spa Growth Assessment",
+          "Choose a convenient time to discuss how DigitalFace can help your med spa attract, convert and manage more patient opportunities.",
         proposalTitle: "Need a custom med spa workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering memberships, multiple locations, review automation, treatment-specific intake or another custom process.",

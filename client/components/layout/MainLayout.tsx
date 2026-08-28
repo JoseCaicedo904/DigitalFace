@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { CtaLink } from "@/components/ui/cta-link";
+import { HOME_BOOKING_HREF } from "@/components/booking/BookingCalendar";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleProvider";
+import { stripLocaleFromPathname } from "@/i18n/locale";
 import { commonContent } from "@/i18n/content/common";
 import {
   getIndustryNavLabels,
@@ -311,6 +314,17 @@ export default function MainLayout() {
 
   const homePath = path("/");
 
+  /**
+   * The homepage carries the booking calendar itself, so its header CTA scrolls
+   * the visitor down to it rather than sending them to the contact form to start
+   * over. Every other corporate route still has no calendar of its own and keeps
+   * pointing at /contact. The three industry funnels render their own header.
+   */
+  const bookingHref =
+    stripLocaleFromPathname(location.pathname) === "/"
+      ? HOME_BOOKING_HREF
+      : path("/contact");
+
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(124,58,237,0.08),transparent_55%)] text-foreground">
       {/* Declared once for the whole corporate tree; the industry funnels render
@@ -483,7 +497,7 @@ export default function MainLayout() {
               asChild
               className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-4 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg xl:px-5 2xl:px-6"
             >
-              <Link to={path("/contact")}>{t.nav.bookCall}</Link>
+              <CtaLink href={bookingHref}>{t.nav.bookCall}</CtaLink>
             </Button>
           </div>
           <div
@@ -569,7 +583,7 @@ export default function MainLayout() {
                 asChild
                 className="w-full rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-3 text-sm font-semibold text-white shadow-brand-soft"
               >
-                <Link to={path("/contact")}>{t.nav.bookDemo}</Link>
+                <CtaLink href={bookingHref}>{t.nav.bookDemo}</CtaLink>
               </Button>
             </div>
           </div>

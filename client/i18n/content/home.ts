@@ -915,6 +915,15 @@ const en = {
       "CRM pipeline",
     ],
   },
+  /** Copy around the embedded booking calendar. Kept deliberately short. */
+  booking: {
+    eyebrow: "Let's talk",
+    title: "Choose a time that works for you.",
+    description:
+      "Book a short DigitalFace consultation and tell us what you are trying to improve — lead generation, follow-up, CRM, automation, AI, or the complete system.",
+    hint: "Choose your preferred date and time below.",
+    calendarTitle: "Book a DigitalFace consultation",
+  },
   cta: {
     eyebrow: "Build your connected system",
     title: "Bring more opportunities in—and give each one a clear next step.",
@@ -1228,6 +1237,14 @@ const es: typeof en = {
       "DM de Instagram",
       "Proceso en el CRM",
     ],
+  },
+  booking: {
+    eyebrow: "Hablemos",
+    title: "Elige el horario que mejor te funcione.",
+    description:
+      "Agenda una consulta corta con DigitalFace y cuéntanos qué quieres mejorar: generación de leads, seguimiento, CRM, automatización, IA o el sistema completo.",
+    hint: "Elige abajo tu fecha y hora preferidas.",
+    calendarTitle: "Agenda una consulta con DigitalFace",
   },
   cta: {
     eyebrow: "Construye tu sistema conectado",
