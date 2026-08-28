@@ -21,7 +21,25 @@ import {
   X,
 } from "lucide-react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { useEffect, useMemo, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+
+/**
+ * Below this the header always uses the drawer — a phone or tablet can never
+ * hold the full bar, so there is nothing to measure.
+ */
+const DESKTOP_NAV_FLOOR = 1024;
+/**
+ * Slack required before re-expanding a collapsed nav, so a window dragged
+ * across the threshold cannot flip back and forth on every pixel.
+ */
+const NAV_EXPAND_BUFFER = 24;
 
 const INDUSTRY_ICONS = {
   "dental-practices": Smile,
@@ -51,9 +69,103 @@ export default function MainLayout() {
   const { locale, path } = useLocale();
   const t = commonContent[locale];
 
+  /**
+   * Whether the desktop nav fits is measured, not guessed at a breakpoint. Label
+   * widths depend on the language, the zoom level and whether the webfont has
+   * swapped in, so any fixed pixel threshold is wrong for most of those
+   * combinations — it either breaks the labels or hides a nav that had room.
+   * The row reports its own overflow instead, and the width it needed is
+   * remembered so a collapsed nav knows when it can come back.
+   */
+  const headerRowRef = useRef<HTMLDivElement>(null);
+  const [navCollapsed, setNavCollapsed] = useState(false);
+  const navCollapsedRef = useRef(false);
+  const navRequiredWidthRef = useRef(0);
+  const [measuredLocale, setMeasuredLocale] = useState(locale);
+
+  // Spanish labels are far wider than English, so a language switch invalidates
+  // the remembered requirement and the nav has to earn its space again. Adjusted
+  // during render rather than in an effect: an effect would also fire on mount
+  // and cancel the first measurement before it could take effect.
+  if (measuredLocale !== locale) {
+    setMeasuredLocale(locale);
+    navRequiredWidthRef.current = 0;
+    navCollapsedRef.current = false;
+    setNavCollapsed(false);
+  }
+
+  const evaluateNavFit = useCallback(() => {
+    const row = headerRowRef.current;
+    if (!row) return;
+
+    const available = row.clientWidth;
+
+    if (available < DESKTOP_NAV_FLOOR) {
+      // CSS already hides the nav here, so there is no overflow to read.
+      return;
+    }
+
+    if (navCollapsedRef.current) {
+      if (available >= navRequiredWidthRef.current + NAV_EXPAND_BUFFER) {
+        navCollapsedRef.current = false;
+        setNavCollapsed(false);
+      }
+      return;
+    }
+
+    const required = row.scrollWidth;
+    if (required > available + 1) {
+      navRequiredWidthRef.current = required;
+      navCollapsedRef.current = true;
+      setNavCollapsed(true);
+    }
+  }, []);
+
+  // Re-measure after every commit: expanding the nav changes the very width
+  // this decision depends on, and only a fresh read can confirm it still fits.
+  useLayoutEffect(() => {
+    evaluateNavFit();
+  });
+
+  useLayoutEffect(() => {
+    const row = headerRowRef.current;
+    if (!row) return;
+
+    const observer = new ResizeObserver(() => evaluateNavFit());
+    observer.observe(row);
+
+    // Belt and braces: a few environments resize the viewport without notifying
+    // an observer, and a nav stuck in the wrong state is very visible.
+    const onResize = () => evaluateNavFit();
+    window.addEventListener("resize", onResize);
+
+    // The nav is measured in whatever font is loaded at the time; Inter arrives
+    // late and is wider than the fallback, so the first read has to be redone.
+    let cancelled = false;
+    document.fonts?.ready
+      .then(() => {
+        if (!cancelled) evaluateNavFit();
+      })
+      .catch(() => undefined);
+
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+      window.removeEventListener("resize", onResize);
+    };
+  }, [evaluateNavFit]);
+
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
+
+  // A drawer left open while the window grows would otherwise hang below the
+  // restored desktop nav.
+  useEffect(() => {
+    if (!navCollapsed) {
+      setMenuOpen(false);
+    }
+  }, [navCollapsed]);
 
   const navItems = useMemo(
     () => [
@@ -207,8 +319,17 @@ export default function MainLayout() {
         {/* The header bar is deliberately wider than the max-w-6xl content
             column below it: brand, seven nav labels, the language switcher and
             the CTA need more room than page copy does. */}
-        <div className="relative mx-auto flex w-full max-w-[92rem] items-center gap-4 px-4 py-4 sm:px-6 2xl:gap-6 2xl:px-8">
-          <Link to={homePath} className="flex shrink-0 items-center gap-3">
+        <div
+          ref={headerRowRef}
+          className="relative mx-auto flex w-full max-w-[92rem] items-center gap-3 px-4 py-4 sm:px-6 xl:gap-4 2xl:gap-6 2xl:px-8"
+        >
+          {/* shrink-0 only from lg. Below that the brand must be able to give up
+              width and let the wordmark wrap, otherwise the row pushes the whole
+              page sideways on a phone. */}
+          <Link
+            to={homePath}
+            className="flex min-w-0 items-center gap-3 lg:shrink-0"
+          >
             <img
               src="/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png"
               alt={t.footer.logoAlt}
@@ -216,11 +337,14 @@ export default function MainLayout() {
               height={44}
               className="h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
             />
-            <div className="flex flex-col">
-              <span className="whitespace-nowrap text-lg font-semibold leading-tight nav:text-base 2xl:text-lg">
+            <div className="flex min-w-0 flex-col">
+              {/* Only pinned to one line from lg, where the wordmark competes
+                  with the nav for width. On a phone it must stay free to wrap
+                  at its space, or the header pushes the page sideways. */}
+              <span className="text-lg font-semibold leading-tight lg:whitespace-nowrap lg:text-base 2xl:text-lg">
                 DigitalFace Marketing
               </span>
-              <span className="whitespace-nowrap text-sm text-ink-500 nav:text-xs 2xl:text-sm">
+              <span className="text-sm text-ink-500 lg:whitespace-nowrap lg:text-xs 2xl:text-sm">
                 {t.footer.region}
               </span>
             </div>
@@ -228,7 +352,12 @@ export default function MainLayout() {
           {/* flex-1 + justify-center centres the nav in whatever room is left
               between brand and controls; the fluid gap keeps it spacious on
               wide screens and tightens gracefully near the breakpoint. */}
-          <nav className="hidden flex-1 items-center justify-center gap-[clamp(0.875rem,1.15vw,1.25rem)] nav:flex">
+          <nav
+            className={cn(
+              "hidden flex-1 items-center justify-center gap-[clamp(0.75rem,1.1vw,1.25rem)]",
+              !navCollapsed && "lg:flex",
+            )}
+          >
             {navItems.map((item) =>
               item.key === "industries" ? (
                 <div
@@ -287,9 +416,9 @@ export default function MainLayout() {
                   </NavLink>
                   <span
                     aria-hidden="true"
-                    className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 nav:block nav:pointer-events-none nav:group-hover:pointer-events-auto nav:group-hover:opacity-100"
+                    className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 lg:block lg:pointer-events-none lg:group-hover:pointer-events-auto lg:group-hover:opacity-100"
                   />
-                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out nav:block nav:invisible nav:pointer-events-none nav:group-hover:visible nav:group-hover:pointer-events-auto nav:group-hover:translate-y-0 nav:group-hover:opacity-100">
+                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out lg:block lg:invisible lg:pointer-events-none lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                     <div className="rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card backdrop-blur-xl">
                       <div className="grid gap-8 lg:grid-cols-4">
                         {megaNav.categories.map((category) => {
@@ -339,16 +468,26 @@ export default function MainLayout() {
               ),
             )}
           </nav>
-          <div className="hidden shrink-0 items-center gap-2.5 nav:flex 2xl:gap-3">
+          <div
+            className={cn(
+              "hidden shrink-0 items-center gap-2 2xl:gap-3",
+              !navCollapsed && "lg:flex",
+            )}
+          >
             <LanguageSwitcher iconClassName="hidden 2xl:block" />
             <Button
               asChild
-              className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-5 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg 2xl:px-6"
+              className="rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-4 py-3 text-sm font-semibold text-white shadow-brand-soft transition duration-300 hover:-translate-y-0.5 hover:shadow-lg xl:px-5 2xl:px-6"
             >
               <Link to={path("/contact")}>{t.nav.bookCall}</Link>
             </Button>
           </div>
-          <div className="ml-auto flex items-center gap-2 nav:hidden">
+          <div
+            className={cn(
+              "ml-auto flex items-center gap-2",
+              !navCollapsed && "lg:hidden",
+            )}
+          >
             <LanguageSwitcher showIcon={false} className="p-0.5" />
             <button
               type="button"
@@ -367,15 +506,16 @@ export default function MainLayout() {
         </div>
         <div
           className={cn(
-            "nav:hidden",
+            !navCollapsed && "lg:hidden",
             menuOpen
               ? "max-h-[42rem] opacity-100"
               : "pointer-events-none max-h-0 opacity-0",
           )}
         >
           {/* Margins track the header padding so the panel lines up with the
-              toggle. From lg up the drawer now also covers small laptops, so it
-              becomes a right-aligned panel rather than a full-bleed bar. */}
+              toggle. From lg up the drawer only appears when the measured nav
+              did not fit, so it becomes a right-aligned panel rather than a
+              full-bleed bar. */}
           <div className="mx-4 mb-4 rounded-2xl border border-ink-200 bg-white/90 shadow-brand-card backdrop-blur sm:mx-6 lg:ml-auto lg:max-w-md">
             <nav className="flex flex-col divide-y divide-ink-100">
               {navItems.map((item) =>

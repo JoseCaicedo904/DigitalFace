@@ -12,20 +12,6 @@ export default {
         "2xl": "1400px",
       },
     },
-    // Tailwind's defaults, plus `nav` — the width from which the full desktop
-    // header (brand + 7 labels + language switcher + CTA) actually fits on one
-    // line. Spanish labels run ~25% wider than English, so `lg`/`xl` are far too
-    // early; below `nav` the header uses the compact drawer instead. Declared
-    // here rather than in `extend` so `nav` sorts between `xl` and `2xl` and
-    // `2xl:` utilities keep winning over `nav:` ones.
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      nav: "1340px",
-      "2xl": "1536px",
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
