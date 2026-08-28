@@ -19,6 +19,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { LocaleProvider } from "./i18n/LocaleProvider";
+import { captureAttribution } from "./lib/attribution";
 
 const DentalPracticesPage = lazy(() =>
   import("./pages/industries/IndustryPages").then((module) => ({
@@ -107,5 +108,10 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+// Read the landing URL's campaign parameters before any internal navigation
+// can strip them, so a lead submitted three pages later still credits the
+// campaign that paid for the visit.
+captureAttribution();
 
 createRoot(document.getElementById("root")!).render(<App />);

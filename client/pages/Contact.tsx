@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { LeadForm } from "@/components/forms/LeadForm";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { contactContent } from "@/i18n/content/contact";
@@ -102,92 +100,27 @@ export default function Contact() {
               </Card>
             </div>
 
-            <Card className="border-ink-100 bg-white/95 shadow-brand-card">
-              <CardContent className="space-y-4 p-8">
-                <form className="space-y-4">
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="contact-name"
-                        className="text-xs font-semibold uppercase tracking-wide text-ink-400"
-                      >
-                        {t.form.nameLabel}
-                      </label>
-                      <Input
-                        id="contact-name"
-                        name="name"
-                        autoComplete="name"
-                        placeholder={t.form.namePlaceholder}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="contact-company"
-                        className="text-xs font-semibold uppercase tracking-wide text-ink-400"
-                      >
-                        {t.form.companyLabel}
-                      </label>
-                      <Input
-                        id="contact-company"
-                        name="company"
-                        autoComplete="organization"
-                        placeholder={t.form.companyPlaceholder}
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="contact-email"
-                      className="text-xs font-semibold uppercase tracking-wide text-ink-400"
-                    >
-                      {t.form.emailLabel}
-                    </label>
-                    <Input
-                      id="contact-email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      placeholder={t.form.emailPlaceholder}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="contact-message"
-                      className="text-xs font-semibold uppercase tracking-wide text-ink-400"
-                    >
-                      {t.form.messageLabel}
-                    </label>
-                    <Textarea
-                      id="contact-message"
-                      name="message"
-                      rows={4}
-                      placeholder={t.form.messagePlaceholder}
-                    />
-                  </div>
-                  <Button className="w-full rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-6 py-4 text-sm font-semibold text-white shadow-brand-soft">
-                    {t.form.submit}
-                  </Button>
-                </form>
-                <div
-                  data-embed-slot="CALENDLY_EMBED_CONTACT"
-                  className="space-y-2 rounded-2xl border border-dashed border-ink-200 bg-secondary/30 p-6 text-center"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-wide text-ink-400">
-                    {t.form.calendarSlotTitle}
-                  </p>
-                  <p className="text-xs font-normal normal-case text-ink-500">
-                    {t.form.calendarSlotHint}
-                  </p>
-                </div>
-                <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
-                  <div className="flex items-center gap-3 text-ink-600">
-                    <Sparkles className="h-5 w-5 shrink-0 text-brand-500" />
-                    <p className="font-semibold">{t.form.nextTitle}</p>
-                  </div>
-                  <p>{t.form.nextBody}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <LeadForm pageSource="contact" />
+
+            <div
+              data-embed-slot="CALENDLY_EMBED_CONTACT"
+              className="space-y-2 rounded-2xl border border-dashed border-ink-200 bg-secondary/30 p-6 text-center"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-ink-400">
+                {t.form.calendarSlotTitle}
+              </p>
+              <p className="text-xs font-normal normal-case text-ink-500">
+                {t.form.calendarSlotHint}
+              </p>
+            </div>
+
+            <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
+              <div className="flex items-center gap-3 text-ink-600">
+                <Sparkles className="h-5 w-5 shrink-0 text-brand-500" />
+                <p className="font-semibold">{t.form.nextTitle}</p>
+              </div>
+              <p>{t.form.nextBody}</p>
+            </div>
           </div>
         </div>
       </section>

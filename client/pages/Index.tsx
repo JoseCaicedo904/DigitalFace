@@ -6,7 +6,7 @@ import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ClientSystemsSection } from "@/sections/ClientSystems";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
-import { CtaSection } from "@/sections/CTA";
+import { LeadForm } from "@/components/forms/LeadForm";
 import { Hero } from "@/sections/Hero";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
 import { WebsitePortfolioSection } from "@/sections/WebsitePortfolio";
@@ -89,14 +89,16 @@ export default function Index() {
       />
       <ClientSystemsSection content={t.clientSystems} />
       <WebsitePortfolioSection content={t.websitePortfolio} />
-      <CtaSection
+      {/* The homepage now converts in place: the lead form replaces the old
+          generic CTA block and keeps the same #book anchor. */}
+      <section
         id="book"
-        className="scroll-mt-24"
-        eyebrow={t.cta.eyebrow}
-        title={t.cta.title}
-        description={t.cta.description}
-        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
-      />
+        className="scroll-mt-24 bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-28"
+      >
+        <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <LeadForm pageSource="homepage" />
+        </div>
+      </section>
     </div>
   );
 }

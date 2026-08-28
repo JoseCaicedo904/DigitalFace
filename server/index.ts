@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleLeadIntake } from "./routes/lead";
 
 export function createServer() {
   const app = express();
@@ -18,6 +19,10 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Website lead form to the DigitalFace lead intake. Keeps the intake URL server
+  // side; the browser only ever talks to this route.
+  app.post("/api/lead", handleLeadIntake);
 
   return app;
 }

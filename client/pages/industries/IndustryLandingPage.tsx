@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
+import { LeadForm } from "@/components/forms/LeadForm";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
@@ -54,6 +55,7 @@ import type {
   IndustrySlug,
   IndustryUiCopy,
 } from "./industryTypes";
+import type { LeadPageSource } from "@shared/lead";
 
 type RevealProps = {
   children: ReactNode;
@@ -390,6 +392,13 @@ function ClosedLandingFooter({
     </footer>
   );
 }
+
+/** Keeps each landing page distinguishable in lead reporting. */
+const LEAD_PAGE_SOURCE_BY_SLUG: Record<IndustrySlug, LeadPageSource> = {
+  "dental-practices": "landing_dental_practices",
+  "aesthetic-medicine": "landing_aesthetic_medicine",
+  "med-spas": "landing_med_spas",
+};
 
 export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
   const { locale } = useLocale();
@@ -950,7 +959,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
               />
             </Reveal>
 
-            <div className="mt-14 grid gap-7 lg:grid-cols-2">
+            <div className="mt-14 grid gap-7 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
               <Reveal reducedMotion={reducedMotion}>
                 <article className="h-full rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8">
                   <div className="flex items-start justify-between gap-4">
@@ -990,46 +999,16 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                   id="custom-proposal"
                   className="h-full scroll-mt-24 rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
-                        {ui.booking.customScopeLabel}
-                      </p>
-                      <h3 className="mt-3 text-2xl font-semibold text-white">
-                        {data.booking.proposalTitle}
-                      </h3>
-                    </div>
-                    <FileText className="h-7 w-7 shrink-0 text-brand-200" />
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed text-white/65">
-                    {data.booking.proposalDescription}
-                  </p>
-                  <div
-                    data-form-slot={data.booking.formSlot}
-                    aria-label={ui.booking.formAria}
-                    className="mt-7 min-h-[300px] rounded-2xl border-2 border-dashed border-white/20 bg-slate-950/35 p-6"
-                  >
-                    <div className="space-y-4" aria-hidden="true">
-                      <div className="h-12 rounded-xl border border-white/10 bg-white/5" />
-                      <div className="grid gap-4 sm:grid-cols-2">
-                        <div className="h-12 rounded-xl border border-white/10 bg-white/5" />
-                        <div className="h-12 rounded-xl border border-white/10 bg-white/5" />
-                      </div>
-                      <div className="h-24 rounded-xl border border-white/10 bg-white/5" />
-                      <div className="h-12 rounded-xl bg-gradient-to-r from-brand-600/45 to-ocean-500/45" />
-                    </div>
-                    <div className="mt-5 text-center">
-                      <p className="text-sm font-semibold text-white">
-                        {ui.booking.formTitle}
-                      </p>
-                      <p className="mt-2 text-xs leading-relaxed text-white/50">
-                        {ui.booking.formHint}
-                      </p>
-                      <code className="mt-4 inline-block rounded-lg bg-white/10 px-3 py-2 text-[11px] text-brand-100">
-                        {data.booking.formSlot}
-                      </code>
-                    </div>
-                  </div>
+                  {/* Same shared form as the homepage and contact page; only the
+                      surrounding industry context differs. */}
+                  <LeadForm
+                    tone="dark"
+                    pageSource={LEAD_PAGE_SOURCE_BY_SLUG[slug]}
+                    eyebrow={ui.booking.customScopeLabel}
+                    title={data.booking.proposalTitle}
+                    description={data.booking.proposalDescription}
+                    className="border-0 bg-transparent p-0 sm:p-0 lg:p-0"
+                  />
                   <div className="mt-6 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/55">
                     <LockKeyhole className="mt-0.5 h-4 w-4 shrink-0 text-brand-200" />
                     {ui.booking.privacyNote}
