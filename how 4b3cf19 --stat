@@ -1,0 +1,64 @@
+[33mcommit 4b3cf199ba68b652f01091a730709ddaedb1f99c[m
+Author: Jose Caicedo <jdcaicedoga@outlook.com>
+Date:   Thu Aug 27 22:28:49 2026 -0500
+
+    Typography
+
+ client/components/demo/AdFeedPhone.tsx          |  50 [32m+++[m[31m---[m
+ client/components/demo/ConversationPhone.tsx    |  48 [32m+++[m[31m---[m
+ client/components/demo/CrmPipelineBoard.tsx     |  24 [32m+[m[31m--[m
+ client/components/demo/PhoneFrame.tsx           |  10 [32m+[m[31m-[m
+ client/components/forms/LeadForm.tsx            |  76 [32m++++[m[31m-----[m
+ client/components/i18n/LanguageSwitcher.tsx     |   8 [32m+[m[31m-[m
+ client/components/layout/MainLayout.tsx         |  85 [32m+++++[m[31m-----[m
+ client/components/legal/LegalDocument.tsx       |  24 [32m+[m[31m--[m
+ client/components/media/MediaSlot.tsx           |  12 [32m+[m[31m-[m
+ client/components/ui/accordion.tsx              |  10 [32m+[m[31m-[m
+ client/components/ui/badge.tsx                  |   5 [32m+[m[31m-[m
+ client/components/ui/button.tsx                 |  16 [32m+[m[31m-[m
+ client/components/ui/calendar.tsx               |   3 [32m+[m[31m-[m
+ client/components/ui/card.tsx                   |   4 [32m+[m[31m-[m
+ client/components/ui/dialog.tsx                 |   4 [32m+[m[31m-[m
+ client/components/ui/form.tsx                   |   2 [32m+[m[31m-[m
+ client/components/ui/input.tsx                  |   5 [32m+[m[31m-[m
+ client/components/ui/label.tsx                  |   2 [32m+[m[31m-[m
+ client/components/ui/select.tsx                 |   9 [32m+[m[31m-[m
+ client/components/ui/sheet.tsx                  |   7 [32m+[m[31m-[m
+ client/components/ui/table.tsx                  |   2 [32m+[m[31m-[m
+ client/components/ui/tabs.tsx                   |   2 [32m+[m[31m-[m
+ client/components/ui/textarea.tsx               |   5 [32m+[m[31m-[m
+ client/components/ui/toast.tsx                  |   8 [32m+[m[31m-[m
+ client/global.css                               |  60 [32m++++++[m[31m-[m
+ client/pages/About.tsx                          |  88 [32m+++++[m[31m------[m
+ client/pages/Automations.tsx                    | 188 [32m++++++++++++++[m[31m--------[m
+ client/pages/AutomationsChatbots.tsx            | 191 [32m+++++++++++++[m[31m---------[m
+ client/pages/AutomationsCrm.tsx                 | 191 [32m+++++++++++++[m[31m---------[m
+ client/pages/AutomationsWorkflows.tsx           | 179 [32m++++++++++++[m[31m---------[m
+ client/pages/Blog.tsx                           |  74 [32m++++++[m[31m---[m
+ client/pages/Contact.tsx                        | 198 [32m+++++++++++++[m[31m----------[m
+ client/pages/Features.tsx                       |  72 [32m+++++[m[31m----[m
+ client/pages/Index.tsx                          |  18 [32m+[m[31m--[m
+ client/pages/ManyChatTemplates.tsx              | 201 [32m++++++++++++++[m[31m----------[m
+ client/pages/NotFound.tsx                       |  14 [32m+[m[31m-[m
+ client/pages/PayPerService.tsx                  |  30 [32m++[m[31m--[m
+ client/pages/Portfolio.tsx                      | 120 [32m++++++++[m[31m------[m
+ client/pages/Pricing.tsx                        | 107 [32m+++++++[m[31m------[m
+ client/pages/Services.tsx                       | 130 [32m+++++++++[m[31m------[m
+ client/pages/SocialMediaAds.tsx                 | 175 [32m+++++++++++++[m[31m--------[m
+ client/pages/Websites.tsx                       | 144 [32m++++++++++[m[31m-------[m
+ client/pages/industries/IndustryLandingPage.tsx | 172 [32m++++++++++[m[31m----------[m
+ client/sections/AdCampaignDemo.tsx              |  28 [32m++[m[31m--[m
+ client/sections/CTA.tsx                         |  10 [32m+[m[31m-[m
+ client/sections/ClientSystems.tsx               |  38 [32m++[m[31m---[m
+ client/sections/ConversationDemo.tsx            |  22 [32m+[m[31m--[m
+ client/sections/CrmPipelineDemo.tsx             |  22 [32m+[m[31m--[m
+ client/sections/Features.tsx                    |  12 [32m+[m[31m-[m
+ client/sections/Hero.tsx                        |  23 [32m+[m[31m--[m
+ client/sections/IndustryPaths.tsx               |  18 [32m+[m[31m--[m
+ client/sections/Integrations.tsx                |  15 [32m+[m[31m-[m
+ client/sections/SystemJourneyIntro.tsx          |  18 [32m+[m[31m--[m
+ client/sections/SystemMedia.tsx                 |  12 [32m+[m[31m-[m
+ client/sections/ValueProps.tsx                  |  40 [32m++[m[31m---[m
+ client/sections/WebsitePortfolio.tsx            |  18 [32m+[m[31m--[m
+ tailwind.config.ts                              |  89 [32m++++++++++[m[31m-[m
+ 57 files changed, 1838 insertions(+), 1300 deletions(-)
