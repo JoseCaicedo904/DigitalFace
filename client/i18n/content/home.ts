@@ -615,6 +615,122 @@ const crmPipelineDemoEs: CrmPipelineDemoContent = {
   },
 };
 
+/**
+ * Translatable copy for the Selected Work section, keyed by the client ids in
+ * `client/data/clients.ts`. A client with no key here renders as a name and a
+ * logo slot only: nothing is written on a client's behalf before it is approved.
+ *
+ * `description` states what the business does. `highlight` — reserved for the
+ * featured stories — states what DigitalFace supported. Neither claims a result,
+ * a metric or a timeframe.
+ */
+type SelectedWorkEntry = {
+  category?: string;
+  description?: string;
+  highlight?: string;
+};
+
+const selectedWorkEntriesEn: Record<string, SelectedWorkEntry> = {
+  jennifer: {
+    category: "Aesthetic Dentistry · Cali, Colombia",
+    description:
+      "Cosmetic and restorative dental practice specializing in smile design, veneers, implants and international patient care.",
+    highlight:
+      "Digital ecosystem built around patient acquisition, qualification and follow-up.",
+  },
+  diego: {
+    category: "Aesthetic Medicine · Cali, Colombia",
+    description:
+      "Medical aesthetics practice focused on personalized treatments, natural-looking results and patient follow-up.",
+    highlight:
+      "A connected digital journey from campaign and website to appointment and CRM.",
+  },
+  braveros: {
+    category: "Sports & Events · Bugalagrande, Colombia",
+    description:
+      "Fitness community behind Neon Race, a multi-edition nighttime running event combining sport, entertainment and regional participation.",
+    highlight:
+      "Digital acquisition and online conversion supporting a growing regional running event.",
+  },
+  saboreo: {
+    category: "Food & Hospitality · Bugalagrande, Colombia",
+    description:
+      "Local fast-food brand known especially for its salchipapas, delivery and casual dining experience. Public listings currently show very strong customer reviews.",
+    highlight:
+      "Digital marketing built around a local food brand and its customer acquisition.",
+  },
+  igrafit: {
+    category: "Branding & Visual Production · New Jersey, USA",
+    description:
+      "Branding and production company specializing in vehicle wraps, signage, printing and custom visual solutions for businesses.",
+  },
+  traffic: {
+    category: "Advertising & Production · Cali, Colombia",
+    description:
+      "Established advertising company working across graphic design, photography, printing and commercial visual production.",
+  },
+  "motos-occidente": {
+    category: "Automotive · Pereira, Colombia",
+    description:
+      "Motorcycle business specializing in motorcycles, parts, accessories, maintenance and repair services.",
+  },
+  "magic-soul": {
+    category: "Events & Furniture Rental",
+    description:
+      "Furniture and event setup brand providing decorative rental solutions for social and commercial events.",
+  },
+};
+
+const selectedWorkEntriesEs: Record<string, SelectedWorkEntry> = {
+  jennifer: {
+    category: "Odontología estética · Cali, Colombia",
+    description:
+      "Consultorio de odontología estética y restaurativa especializado en diseño de sonrisa, carillas, implantes y atención a pacientes internacionales.",
+    highlight:
+      "Ecosistema digital construido alrededor de la captación, la calificación y el seguimiento de pacientes.",
+  },
+  diego: {
+    category: "Medicina estética · Cali, Colombia",
+    description:
+      "Consultorio de medicina estética enfocado en tratamientos personalizados, resultados de apariencia natural y seguimiento al paciente.",
+    highlight:
+      "Un recorrido digital conectado, desde la campaña y el sitio web hasta la cita y el CRM.",
+  },
+  braveros: {
+    category: "Deporte y eventos · Bugalagrande, Colombia",
+    description:
+      "Comunidad fitness detrás de Neon Race, una carrera nocturna de varias ediciones que combina deporte, entretenimiento y participación regional.",
+    highlight:
+      "Captación digital y conversión en línea para una carrera regional en crecimiento.",
+  },
+  saboreo: {
+    category: "Gastronomía · Bugalagrande, Colombia",
+    description:
+      "Marca local de comida rápida reconocida sobre todo por sus salchipapas, su servicio a domicilio y su experiencia de mesa informal. Sus perfiles públicos muestran hoy reseñas muy positivas.",
+    highlight:
+      "Marketing digital construido alrededor de una marca local de comida y su captación de clientes.",
+  },
+  igrafit: {
+    category: "Branding y producción visual · Nueva Jersey, EE. UU.",
+    description:
+      "Empresa de branding y producción especializada en rotulación vehicular, señalética, impresión y soluciones visuales a la medida para negocios.",
+  },
+  traffic: {
+    category: "Publicidad y producción · Cali, Colombia",
+    description:
+      "Empresa de publicidad con trayectoria en diseño gráfico, fotografía, impresión y producción visual comercial.",
+  },
+  "motos-occidente": {
+    category: "Automotriz · Pereira, Colombia",
+    description:
+      "Negocio de motos especializado en motocicletas, repuestos, accesorios, mantenimiento y servicios de reparación.",
+  },
+  "magic-soul": {
+    category: "Eventos y alquiler de mobiliario",
+    description:
+      "Marca de mobiliario y montaje de eventos que ofrece soluciones decorativas en alquiler para eventos sociales y comerciales.",
+  },
+};
 const en = {
   metadata: {
     title: "Connected Customer Acquisition Systems | DigitalFace Marketing",
@@ -836,39 +952,22 @@ const en = {
       },
     ],
   },
-  clientSystems: {
-    eyebrow: "Client trust",
-    title:
-      "Businesses that have trusted DigitalFace with their customer journey.",
+  /**
+   * Proof of work, not another pitch: which businesses DigitalFace has worked
+   * with, and what each of them does. The roster itself (order, names, logo
+   * files) lives in `client/data/clients.ts`.
+   */
+  selectedWork: {
+    eyebrow: "Selected work",
+    title: "Built across different industries.",
     description:
-      "These are confirmed client systems. Images, testimonials and Google reviews will appear only after the corresponding assets and words are approved.",
-    confirmedLabel: "Confirmed client system",
-    systemLabel: "What DigitalFace delivered",
-    imagePlaceholderLabel: "Client image placeholder",
-    imagePlaceholderDescription:
-      "Reserved for an approved portrait, clinic, team or brand image.",
-    testimonialPlaceholderLabel: "Testimonial placeholder",
-    testimonialPlaceholderDescription:
-      "Reserved for the client's approved words.",
-    reviewPlaceholderLabel: "Google review placeholder",
-    reviewPlaceholderDescription:
-      "A rating and review will appear only after verification and approval.",
-    items: [
-      {
-        id: "diego",
-        name: "Dr. Diego Sinisterra",
-        sector: "Aesthetic Medicine",
-        summary:
-          "A bilingual patient communication and appointment system, with a Facebook and Instagram comment engine and human takeover built in.",
-      },
-      {
-        id: "jennifer",
-        name: "Dra. Jennifer Sinisterra",
-        sector: "Cosmetic dentistry and international patients",
-        summary:
-          "A bilingual WhatsApp intake system connecting patient media, CRM visibility and human review.",
-      },
-    ],
+      "From healthcare and professional services to events, automotive, branding and food businesses.",
+    featuredGroupLabel: "Featured success stories",
+    selectedGroupLabel: "Selected clients",
+    rosterGroupLabel: "More businesses we have worked with",
+    featuredBadge: "Success story",
+    contributionLabel: "What DigitalFace supported",
+    entries: selectedWorkEntriesEn,
   },
   websitePortfolio: {
     eyebrow: "Digital experiences",
@@ -1158,39 +1257,17 @@ const es: typeof en = {
       },
     ],
   },
-  clientSystems: {
-    eyebrow: "Confianza de clientes",
-    title:
-      "Negocios que han confiado en DigitalFace para su recorrido de clientes.",
+  selectedWork: {
+    eyebrow: "Trabajos seleccionados",
+    title: "Construido para diferentes industrias.",
     description:
-      "Estos sistemas de clientes están confirmados. Las imágenes, los testimonios y las reseñas de Google solo aparecerán cuando los recursos y las palabras correspondientes estén aprobados.",
-    confirmedLabel: "Sistema de cliente confirmado",
-    systemLabel: "Lo que entregó DigitalFace",
-    imagePlaceholderLabel: "Espacio para imagen del cliente",
-    imagePlaceholderDescription:
-      "Reservado para un retrato, una clínica, un equipo o una imagen de marca aprobada.",
-    testimonialPlaceholderLabel: "Espacio para testimonio",
-    testimonialPlaceholderDescription:
-      "Reservado para las palabras aprobadas del cliente.",
-    reviewPlaceholderLabel: "Espacio para reseña de Google",
-    reviewPlaceholderDescription:
-      "La calificación y la reseña aparecerán únicamente después de su verificación y aprobación.",
-    items: [
-      {
-        id: "diego",
-        name: "Dr. Diego Sinisterra",
-        sector: "Medicina estética",
-        summary:
-          "Un sistema bilingüe de comunicación con pacientes y gestión de citas, con motor de respuesta a comentarios en Facebook e Instagram y traspaso a una persona del equipo.",
-      },
-      {
-        id: "jennifer",
-        name: "Dra. Jennifer Sinisterra",
-        sector: "Odontología estética y pacientes internacionales",
-        summary:
-          "Un sistema bilingüe de admisión por WhatsApp que conecta el material del paciente, la visibilidad en el CRM y la revisión humana.",
-      },
-    ],
+      "Desde salud y servicios profesionales hasta eventos, automotriz, branding y gastronomía.",
+    featuredGroupLabel: "Casos destacados",
+    selectedGroupLabel: "Clientes seleccionados",
+    rosterGroupLabel: "Otros negocios con los que hemos trabajado",
+    featuredBadge: "Caso destacado",
+    contributionLabel: "Lo que acompañó DigitalFace",
+    entries: selectedWorkEntriesEs,
   },
   websitePortfolio: {
     eyebrow: "Experiencias digitales",

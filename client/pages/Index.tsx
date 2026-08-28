@@ -8,7 +8,7 @@ import {
   HOME_BOOKING_HREF,
 } from "@/components/booking/BookingCalendar";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
-import { ClientSystemsSection } from "@/sections/ClientSystems";
+import { SelectedWorkSection } from "@/sections/SelectedWork";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { LeadForm } from "@/components/forms/LeadForm";
@@ -94,7 +94,7 @@ export default function Index() {
         content={t.crmPipelineDemo}
         ctaHref={HOME_BOOKING_HREF}
       />
-      <ClientSystemsSection content={t.clientSystems} />
+      <SelectedWorkSection content={t.selectedWork} />
       <WebsitePortfolioSection content={t.websitePortfolio} />
       {/* The conversion point, and the destination of every consultation CTA
           above it: by here the visitor has seen attract, convert, manage, the
