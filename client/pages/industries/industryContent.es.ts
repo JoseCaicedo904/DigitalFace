@@ -351,7 +351,7 @@ export const industryContentEs: IndustryLocaleBundle = {
               creativeTitle: "Conoce el plan antes de empezar",
               options: ["Carillas", "Blanqueamiento", "Todavía no lo sé"],
               choice: 0,
-              lead: { name: "Camila Restrepo", phone: "+57 320 555 0142" },
+              lead: { name: "Emily Carter", phone: "+57 320 555 0142" },
             },
             {
               market: "dental",

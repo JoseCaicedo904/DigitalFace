@@ -62,7 +62,7 @@ const conversationDemoEn: ConversationDemoContent = {
         time: "9:41 PM",
         pauseMs: 600,
         typingMs: 1400,
-        text: "Hi Camila, yes we are. The first step is a 30-minute smile design consultation with the doctor.",
+        text: "Hi Emily, yes we are. The first step is a 30-minute smile design consultation with the doctor.",
       },
       {
         kind: "patient",
@@ -157,7 +157,7 @@ const conversationDemoEs: ConversationDemoContent = {
         time: "9:41 p. m.",
         pauseMs: 600,
         typingMs: 1400,
-        text: "Hola Camila, sí. El primer paso es una valoración de diseño de sonrisa de 30 minutos con el doctor.",
+        text: "Hola Emily, sí. El primer paso es una valoración de diseño de sonrisa de 30 minutos con el doctor.",
       },
       {
         kind: "patient",
@@ -282,7 +282,7 @@ const adCampaignDemoEn: AdCampaignDemoContent = {
         creativeTitle: "Veneers planned with the doctor",
         options: ["Porcelain veneers", "Dental implants", "Smile consultation"],
         choice: 0,
-        lead: { name: "Camila Restrepo", phone: "+1 (305) 555 0142" },
+        lead: { name: "Emily Carter", phone: "+1 (305) 555 0142" },
       },
       {
         market: "aesthetic",
@@ -395,7 +395,7 @@ const adCampaignDemoEs: AdCampaignDemoContent = {
         creativeTitle: "Carillas planeadas con el doctor",
         options: ["Carillas", "Implantes", "Valoración de sonrisa"],
         choice: 0,
-        lead: { name: "Camila Restrepo", phone: "+57 320 555 0142" },
+        lead: { name: "Emily Carter", phone: "+57 320 555 0142" },
       },
       {
         market: "aesthetic",
@@ -472,8 +472,8 @@ const crmPipelineDemoEn: CrmPipelineDemoContent = {
     stageLabel: "Stage",
     ofLabel: "of",
     lead: {
-      name: "Camila Restrepo",
-      initials: "CR",
+      name: "Emily Carter",
+      initials: "EC",
       summary: "New patient inquiry",
       channel: "WhatsApp inquiry",
     },
@@ -563,8 +563,8 @@ const crmPipelineDemoEs: CrmPipelineDemoContent = {
     stageLabel: "Etapa",
     ofLabel: "de",
     lead: {
-      name: "Camila Restrepo",
-      initials: "CR",
+      name: "Emily Carter",
+      initials: "EC",
       summary: "Consulta nueva",
       channel: "Consulta por WhatsApp",
     },
@@ -1014,6 +1014,27 @@ const en = {
       }
     >,
   },
+  /**
+   * The reassurance beat between the system demonstrations and the proof of
+   * work. Deliberately never "partners": a logo means the platform can be wired
+   * into a DigitalFace build, which is what the footnote spells out. The roster
+   * and its order live in `client/data/techEcosystem.ts`.
+   */
+  techEcosystem: {
+    eyebrow: "Technology ecosystem",
+    title: "Built to work with your stack.",
+    description:
+      "We connect the platforms your business already uses across marketing, CRM, messaging, automation and customer management—so they work together as one system.",
+    categories: "CRM · Messaging · Advertising · AI · Automation · Scheduling",
+    /** Screen-reader name for the scrollable rail. */
+    railLabel: "Platforms DigitalFace works with",
+    previousLabel: "Scroll technologies left",
+    nextLabel: "Scroll technologies right",
+    /** `{name}` is replaced with the brand name. */
+    logoAlt: "{name} logo",
+    footnote:
+      "Product names and logos are trademarks of their respective owners, shown to indicate compatibility only.",
+  },
   integrations: {
     eyebrow: "Lead sources",
     title: "Every channel feeds one system",
@@ -1317,6 +1338,19 @@ const es: typeof en = {
         alt: "Página de inicio del sitio web de medicina estética del Dr. Diego Sinisterra",
       },
     },
+  },
+  techEcosystem: {
+    eyebrow: "Ecosistema tecnológico",
+    title: "Funciona con las herramientas que ya usas.",
+    description:
+      "Conectamos las plataformas que tu negocio ya utiliza en marketing, CRM, mensajería, automatización y gestión de clientes—para que trabajen juntas como un solo sistema.",
+    categories: "CRM · Mensajería · Pauta · IA · Automatización · Agendamiento",
+    railLabel: "Plataformas con las que trabaja DigitalFace",
+    previousLabel: "Desplazar tecnologías a la izquierda",
+    nextLabel: "Desplazar tecnologías a la derecha",
+    logoAlt: "Logo de {name}",
+    footnote:
+      "Los nombres y logotipos son marcas de sus respectivos propietarios y se muestran únicamente para indicar compatibilidad.",
   },
   integrations: {
     eyebrow: "Fuentes de contacto",

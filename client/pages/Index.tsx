@@ -11,6 +11,7 @@ import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Hero } from "@/sections/Hero";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
+import { TechEcosystemSection } from "@/sections/TechEcosystem";
 import { WebsitePortfolioSection } from "@/sections/WebsitePortfolio";
 
 const heroStageIcons = [Megaphone, MessageCircle, LayoutDashboard];
@@ -86,6 +87,12 @@ export default function Index() {
         ctaHref={bookHref}
       />
       <CrmPipelineDemoSection content={t.crmPipelineDemo} ctaHref={bookHref} />
+      {/* Attract, convert and manage have just been shown, and the CRM board
+          immediately above is the moment the objection arrives: "we already run
+          our own tools." So the answer sits here rather than earlier, where it
+          would have competed with the business result, or later, where the
+          visitor is already being asked to book. */}
+      <TechEcosystemSection content={t.techEcosystem} />
       <SelectedWorkSection content={t.selectedWork} />
       <WebsitePortfolioSection content={t.websitePortfolio} />
       {/* The conversion point. By here the visitor has seen attract, convert,
