@@ -225,17 +225,6 @@ const en = {
           ],
           ctaLabel: "Start a web project",
         },
-        ecommerce: {
-          title: "E-commerce storefronts",
-          description:
-            "Shopify builds optimized for product discovery and checkout conversion.",
-          outcomes: [
-            "Improve cart performance",
-            "Increase repeat purchases",
-            "Connect the store to your automation flows",
-          ],
-          ctaLabel: "Plan my storefront",
-        },
         landing: {
           title: "Campaign landing pages",
           description:
@@ -484,17 +473,6 @@ const es: typeof en = {
             "Convertir visitantes en consultas",
           ],
           ctaLabel: "Empieza tu proyecto web",
-        },
-        ecommerce: {
-          title: "Tiendas de e-commerce",
-          description:
-            "Desarrollos en Shopify optimizados para el descubrimiento de producto y la conversión en el checkout.",
-          outcomes: [
-            "Mejorar el rendimiento del carrito",
-            "Aumentar la recompra",
-            "Conectar la tienda con tus automatizaciones",
-          ],
-          ctaLabel: "Planea tu tienda",
         },
         landing: {
           title: "Landing pages para campañas",

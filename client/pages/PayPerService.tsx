@@ -55,7 +55,6 @@ const groupStructure: {
     id: "websites-and-funnels",
     services: [
       { key: "corporate", id: "corporate-websites" },
-      { key: "ecommerce", id: "ecommerce-storefronts" },
       { key: "landing", id: "campaign-landing-pages" },
     ],
   },

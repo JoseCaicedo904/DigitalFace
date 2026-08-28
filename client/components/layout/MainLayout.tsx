@@ -298,10 +298,6 @@ export default function MainLayout() {
               to: path("/pay-per-service#corporate-websites"),
             },
             {
-              label: t.megaNav.websites.links.ecommerce,
-              to: path("/pay-per-service#ecommerce-storefronts"),
-            },
-            {
               label: t.megaNav.websites.links.landing,
               to: path("/pay-per-service#campaign-landing-pages"),
             },

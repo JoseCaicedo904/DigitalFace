@@ -65,7 +65,6 @@ const en = {
       title: "Websites and funnels",
       links: {
         corporate: "Corporate and business websites",
-        ecommerce: "E-commerce storefronts",
         landing: "Campaign landing pages",
       },
     },
@@ -157,7 +156,6 @@ const es: typeof en = {
       title: "Sitios web y embudos",
       links: {
         corporate: "Sitios web corporativos y de negocio",
-        ecommerce: "Tiendas de e-commerce",
         landing: "Landing pages para campañas",
       },
     },
