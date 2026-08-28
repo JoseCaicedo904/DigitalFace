@@ -969,30 +969,50 @@ const en = {
     contributionLabel: "What DigitalFace supported",
     entries: selectedWorkEntriesEn,
   },
+  /**
+   * The delivered websites, one large browser preview at a time. Which
+   * projects appear, where they link and which screenshot they use lives in
+   * `client/data/websiteProjects.ts`; `projects` below is keyed by the same id.
+   */
   websitePortfolio: {
     eyebrow: "Digital experiences",
-    title: "The customer journey also needs a strong place to begin.",
+    title: "Web experiences built to turn attention into action.",
     description:
-      "This gallery is ready for approved DigitalFace website projects. Each large frame is reserved for a real homepage screenshot and verified project details.",
-    screenshotPlaceholder: "Website homepage screenshot placeholder",
-    slots: [
-      {
-        id: "project-01",
-        slotLabel: "Website project 01",
-        projectName: "Client / project name",
-        category: "Business type",
-        description: "Project description placeholder",
-        linkPlaceholder: "Website link placeholder",
+      "Selected DigitalFace website projects designed around clarity, trust and conversion.",
+    projectLabel: "DigitalFace website project",
+    visitCta: "Visit live website",
+    /** Screen-reader name for the whole showcase. */
+    carouselLabel: "DigitalFace website projects",
+    previousLabel: "Previous project",
+    nextLabel: "Next project",
+    /** `{current}` and `{total}` are replaced with the project numbers. */
+    positionLabel: "Project {current} of {total}",
+    panHint: "Hover to scroll the homepage",
+    openHint: "Opens in a new tab",
+    projects: {
+      jennifer: {
+        category: "Aesthetic Dentistry",
+        location: "Cali, Colombia",
+        description:
+          "Premium digital experience for an aesthetic dentistry practice, designed to present treatments clearly and convert local and international patient interest into enquiries.",
+        alt: "Dra. Jennifer Sinisterra aesthetic dentistry website homepage",
       },
-      {
-        id: "project-02",
-        slotLabel: "Website project 02",
-        projectName: "Client / project name",
-        category: "Business type",
-        description: "Project description placeholder",
-        linkPlaceholder: "Website link placeholder",
+      diego: {
+        category: "Aesthetic Medicine",
+        location: "Cali, Colombia",
+        description:
+          "Conversion-focused digital experience for an aesthetic medicine practice, connecting treatment discovery with patient enquiries and appointment intent.",
+        alt: "Dr. Diego Sinisterra aesthetic medicine website homepage",
       },
-    ],
+    } as Record<
+      string,
+      {
+        category: string;
+        location: string;
+        description: string;
+        alt: string;
+      }
+    >,
   },
   integrations: {
     eyebrow: "Lead sources",
@@ -1271,29 +1291,33 @@ const es: typeof en = {
   },
   websitePortfolio: {
     eyebrow: "Experiencias digitales",
-    title:
-      "El recorrido del cliente también necesita un lugar sólido donde comenzar.",
+    title: "Experiencias web creadas para convertir la atención en acción.",
     description:
-      "Esta galería está lista para proyectos web aprobados de DigitalFace. Cada marco grande queda reservado para una captura real de la página de inicio y datos verificados del proyecto.",
-    screenshotPlaceholder: "Espacio para captura de la página de inicio",
-    slots: [
-      {
-        id: "project-01",
-        slotLabel: "Proyecto web 01",
-        projectName: "Nombre del cliente / proyecto",
-        category: "Tipo de negocio",
-        description: "Espacio para descripción del proyecto",
-        linkPlaceholder: "Espacio para enlace del sitio web",
+      "Proyectos web seleccionados de DigitalFace, diseñados alrededor de la claridad, la confianza y la conversión.",
+    projectLabel: "Proyecto web de DigitalFace",
+    visitCta: "Ver el sitio en vivo",
+    carouselLabel: "Proyectos web de DigitalFace",
+    previousLabel: "Proyecto anterior",
+    nextLabel: "Proyecto siguiente",
+    positionLabel: "Proyecto {current} de {total}",
+    panHint: "Pasa el cursor para recorrer la página",
+    openHint: "Se abre en una pestaña nueva",
+    projects: {
+      jennifer: {
+        category: "Odontología estética",
+        location: "Cali, Colombia",
+        description:
+          "Experiencia digital premium para una consulta de odontología estética, diseñada para presentar los tratamientos con claridad y convertir el interés de pacientes locales e internacionales en consultas.",
+        alt: "Página de inicio del sitio web de odontología estética de la Dra. Jennifer Sinisterra",
       },
-      {
-        id: "project-02",
-        slotLabel: "Proyecto web 02",
-        projectName: "Nombre del cliente / proyecto",
-        category: "Tipo de negocio",
-        description: "Espacio para descripción del proyecto",
-        linkPlaceholder: "Espacio para enlace del sitio web",
+      diego: {
+        category: "Medicina estética",
+        location: "Cali, Colombia",
+        description:
+          "Experiencia digital enfocada en conversión para una consulta de medicina estética, que conecta el descubrimiento de tratamientos con las consultas y la intención de agendar cita.",
+        alt: "Página de inicio del sitio web de medicina estética del Dr. Diego Sinisterra",
       },
-    ],
+    },
   },
   integrations: {
     eyebrow: "Fuentes de contacto",
