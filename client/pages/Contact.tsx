@@ -1,5 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { LeadForm } from "@/components/forms/LeadForm";
+import {
+  BookingSection,
+  HOME_BOOKING_ANCHOR,
+} from "@/components/booking/BookingCalendar";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { contactContent } from "@/i18n/content/contact";
@@ -28,7 +32,19 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-white pb-20 sm:pb-24 lg:pb-28">
+      {/* Scheduling comes first; the form below stays for anyone who would
+          rather write than book a time. Same component as the homepage and the
+          three industry funnels. */}
+      <BookingSection
+        id={HOME_BOOKING_ANCHOR}
+        eyebrow={t.booking.eyebrow}
+        title={t.booking.title}
+        description={t.booking.description}
+        hint={t.booking.hint}
+        calendarTitle={t.booking.calendarTitle}
+      />
+
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
@@ -101,18 +117,6 @@ export default function Contact() {
             </div>
 
             <LeadForm pageSource="contact" />
-
-            <div
-              data-embed-slot="CALENDLY_EMBED_CONTACT"
-              className="space-y-2 rounded-2xl border border-dashed border-ink-200 bg-secondary/30 p-6 text-center"
-            >
-              <p className="text-sm font-semibold uppercase tracking-wide text-ink-400">
-                {t.form.calendarSlotTitle}
-              </p>
-              <p className="text-xs font-normal normal-case text-ink-500">
-                {t.form.calendarSlotHint}
-              </p>
-            </div>
 
             <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
               <div className="flex items-center gap-3 text-ink-600">

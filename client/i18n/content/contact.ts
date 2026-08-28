@@ -52,12 +52,18 @@ const en = {
     messagePlaceholder:
       "Tell us about your practice, where your inquiries come from and what you want automated.",
     submit: "Send request",
-    calendarSlotTitle: "Booking calendar slot",
-    calendarSlotHint:
-      "Reserved for the approved booking embed, so visitors can schedule without leaving this page.",
     nextTitle: "What happens next",
     nextBody:
       "We read your message, map the follow-up flow and bring a clear plan to the call.",
+  },
+  /** Copy around the embedded booking calendar. Kept deliberately short. */
+  booking: {
+    eyebrow: "Let's talk",
+    title: "Choose a time that works for you.",
+    description:
+      "Book a short DigitalFace consultation, or use the form below if you would rather we came back to you in writing.",
+    hint: "Choose your preferred date and time below.",
+    calendarTitle: "Book a DigitalFace consultation",
   },
 } satisfies Record<string, unknown>;
 
@@ -113,12 +119,17 @@ const es: typeof en = {
     messagePlaceholder:
       "Cuéntanos sobre tu clínica, de dónde llegan tus consultas y qué quieres automatizar.",
     submit: "Enviar solicitud",
-    calendarSlotTitle: "Espacio para el calendario de agendamiento",
-    calendarSlotHint:
-      "Reservado para el calendario aprobado, para que las personas agenden sin salir de esta página.",
     nextTitle: "Qué sigue",
     nextBody:
       "Leemos tu mensaje, mapeamos el flujo de seguimiento y llegamos a la llamada con un plan claro.",
+  },
+  booking: {
+    eyebrow: "Hablemos",
+    title: "Elige el horario que mejor te funcione.",
+    description:
+      "Agenda una consulta corta con DigitalFace, o usa el formulario de abajo si prefieres que te respondamos por escrito.",
+    hint: "Elige abajo tu fecha y hora preferidas.",
+    calendarTitle: "Agenda una consulta con DigitalFace",
   },
 };
 

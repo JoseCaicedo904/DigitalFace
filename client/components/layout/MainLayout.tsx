@@ -311,13 +311,15 @@ export default function MainLayout() {
   const homePath = path("/");
 
   /**
-   * The homepage carries the booking calendar itself, so its header CTA scrolls
-   * the visitor down to it rather than sending them to the contact form to start
-   * over. Every other corporate route still has no calendar of its own and keeps
-   * pointing at /contact. The three industry funnels render their own header.
+   * The homepage and the contact page both carry the booking calendar, so on
+   * those the header CTA scrolls down to it rather than routing somewhere the
+   * visitor has to start over. Everywhere else it still points at /contact,
+   * which is now where the calendar lives too. The three industry funnels
+   * render their own header.
    */
+  const currentPath = stripLocaleFromPathname(location.pathname);
   const bookingHref =
-    stripLocaleFromPathname(location.pathname) === "/"
+    currentPath === "/" || currentPath === "/contact"
       ? HOME_BOOKING_HREF
       : path("/contact");
 
