@@ -32,9 +32,13 @@ import {
 
 /**
  * Below this the header always uses the drawer — a phone or tablet can never
- * hold the full bar, so there is nothing to measure.
+ * hold the full bar, so there is nothing to measure. Expressed as the same
+ * media query the `lg:` classes compile to, and asked via matchMedia rather
+ * than compared against the row's own width: the row is narrower than the
+ * viewport by the scrollbar, so a numeric comparison leaves a band where CSS
+ * has already shown the nav but the measurement declines to look at it.
  */
-const DESKTOP_NAV_FLOOR = 1024;
+const DESKTOP_NAV_QUERY = "(min-width: 1024px)";
 /**
  * Slack required before re-expanding a collapsed nav, so a window dragged
  * across the threshold cannot flip back and forth on every pixel.
@@ -98,12 +102,12 @@ export default function MainLayout() {
     const row = headerRowRef.current;
     if (!row) return;
 
-    const available = row.clientWidth;
-
-    if (available < DESKTOP_NAV_FLOOR) {
+    if (!window.matchMedia(DESKTOP_NAV_QUERY).matches) {
       // CSS already hides the nav here, so there is no overflow to read.
       return;
     }
+
+    const available = row.clientWidth;
 
     if (navCollapsedRef.current) {
       if (available >= navRequiredWidthRef.current + NAV_EXPAND_BUFFER) {

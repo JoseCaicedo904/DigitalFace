@@ -1,164 +1,114 @@
 import type { Locale } from "../locale";
 
 /**
- * The About page is company narrative, not product narrative. Nothing here may
- * describe the ATTRACT → CONVERT → MANAGE system, restate the service catalogue
- * or invent credentials. Only two facts about the founders are published:
- * Nicolás has 10+ years in marketing, José has 5+ years plus two master's
- * degrees in quantitative and marketing-oriented fields. No universities, no
- * degree titles, no employers, no client counts.
+ * The About page describes the COMPANY, not the founders and not the product.
+ *
+ * Three standing rules for this file:
+ * 1. DigitalFace is the protagonist. Founder names appear exactly once, as
+ *    company history — no biographies, credentials, years of experience or
+ *    individual timelines.
+ * 2. No invented scale. DigitalFace has no departments, employees or offices
+ *    beyond what is published elsewhere on the site. Specialists are partners
+ *    brought into an engagement, and the copy must keep saying so.
+ * 3. No outcome guarantee. `legal.ts` states that DigitalFace does not
+ *    guarantee specific results; the outcome copy here expresses how the work
+ *    is judged, never a promise. The written commercial commitments live on the
+ *    Pricing page and stay there.
  */
 
 const en = {
   metadata: {
-    title: "About DigitalFace Marketing | Company Story and Structure",
+    title: "About DigitalFace Marketing | How the Company Works",
     description:
-      "How DigitalFace began in Cali, Colombia, how the company thinks about the work, and how its core leadership works alongside a network of specialists in marketing, development and technology.",
+      "DigitalFace brings strategy, technology and specialist expertise together under one accountable relationship. How the company is organized, what it takes responsibility for, and where it operates from.",
   },
   hero: {
     eyebrow: "About DigitalFace",
-    title: "We're DigitalFace.",
+    title: "Specialized expertise. One DigitalFace.",
     description:
-      "A digital company born in Cali, Colombia, from two complementary professional perspectives — one shaped by marketing and commercial work, the other by marketing, data and technology. What started between two brothers now runs as core leadership supported by a broader network of specialists.",
+      "DigitalFace brings strategy, technology and specialized expertise together under one accountable relationship. When an engagement needs deeper specialization, we bring the right professionals into the work — while DigitalFace stays responsible for direction, coordination and quality.",
     meta: [
-      "Born in Cali, Colombia",
-      "Operating from Valle del Cauca",
-      "Remote presence in Miami",
+      "Based in Colombia",
+      "Working remotely across markets",
+      "English and Spanish",
     ],
   },
-  story: {
-    eyebrow: "Our story",
-    title: "It started with two brothers and two different perspectives.",
-    paragraphs: [
-      "DigitalFace began in Cali, Colombia, through the work of two brothers, Nicolás and José Caicedo.",
-      "Nicolás brought more than a decade of marketing experience: advertising, audiences, communication, campaigns and the commercial side of growing a business.",
-      "José brought more than five years of professional experience, two master's degrees in quantitative and marketing-oriented fields, and a growing specialization in analytics, automation, CRM and software development.",
-      "Their perspectives were different. They turned out to be complementary.",
-      "As the work got harder, it stopped fitting inside one discipline. Marketing connected to websites. Websites connected to how customers were answered. Answering customers required follow-up. Follow-up required measurement. Repetitive work became worth automating. Some projects needed technical or creative depth that no single person should claim to cover alone.",
-      "DigitalFace grew in that direction.",
-    ],
-    foundersLabel: "The founders",
-    founders: [
-      {
-        initials: "NC",
-        name: "Nicolás Caicedo",
-        role: "Co-Founder · Marketing & Growth",
-        detail: "10+ years in marketing, advertising and client relationships.",
-      },
-      {
-        initials: "JC",
-        name: "José Caicedo",
-        role: "Co-Founder · Strategy & Technology",
-        detail: "Marketing, quantitative analysis, automation and technology.",
-      },
-    ],
-    timelineLabel: "How it moved",
-    timeline: [
-      {
-        step: "01",
-        title: "Beginning",
-        description: "Marketing, campaigns and direct client work.",
-      },
-      {
-        step: "02",
-        title: "Expansion",
-        description:
-          "Projects started asking for capabilities that did not fit inside one discipline.",
-      },
-      {
-        step: "03",
-        title: "Specialization",
-        description:
-          "Technology, automation, analytics and development became part of the work.",
-      },
-      {
-        step: "04",
-        title: "DigitalFace today",
-        description:
-          "Core leadership, supported by a broader network of specialist expertise.",
-      },
-    ],
-  },
-  beliefs: {
-    eyebrow: "How we think",
-    title: "A few things we believe.",
-    items: [
-      {
-        title: "Understand before building",
-        body: "We want to understand the business and the real problem before recommending marketing or technology. Tools should support a strategy, not become one.",
-      },
-      {
-        title: "Useful over impressive",
-        body: "Something is not valuable because it looks sophisticated. It is valuable when the business can actually use it.",
-      },
-      {
-        title: "Specialists over pretending",
-        body: "Nobody is excellent at every discipline. When work needs deeper expertise, we bring in the right person instead of improvising.",
-      },
-      {
-        title: "Clarity over jargon",
-        body: "Clients should understand what is happening inside their own business. Marketing and technology should make an operation clearer, not harder to follow.",
-      },
-      {
-        title: "Someone stays accountable",
-        body: "If DigitalFace takes responsibility for an engagement, someone stays responsible for its direction, coordination and quality.",
-      },
-      {
-        title: "Keep learning",
-        body: "Marketing and technology keep moving. We would rather keep testing and measuring than assume today's answer stays right forever.",
-      },
-    ],
-  },
-  structure: {
+  network: {
     eyebrow: "How DigitalFace works",
     title: "A core team. A broader circle of expertise.",
     description:
-      "DigitalFace keeps strategy, direction, client relationships and accountability close to its leadership. When an engagement needs deeper specialization, other professionals and trusted partners become part of the work.",
+      "Different problems require different expertise. DigitalFace keeps strategy, direction, communication and accountability close to the core.",
     secondary:
-      "Different problems need different expertise. We prefer that over pretending one person should solve all of them.",
+      "When deeper specialization is needed, trusted specialists and partners become part of the engagement, and DigitalFace stays responsible for keeping the work connected.",
     coreName: "DigitalFace",
-    coreLabel: "Core leadership",
-    responsibilitiesLabel: "Held by the core",
-    responsibilities: [
-      "Direction",
-      "Strategy",
-      "Client relationship",
-      "Coordination",
-      "Accountability",
-    ],
+    coreLabel: "Strategic core",
     disciplinesLabel: "Specialist expertise around an engagement",
     disciplines: [
       "Strategy",
       "Paid media",
-      "Development",
-      "Automation",
-      "CRM",
-      "AI",
-      "Data",
-      "Creative",
-      "Production",
+      "Web & development",
+      "Automation & AI",
+      "CRM & data",
+      "Creative & production",
     ],
-    note: "Specialists and trusted partners join an engagement according to what that engagement actually requires.",
+    note: "Specialists join an engagement according to what it requires. The client's relationship stays with DigitalFace.",
   },
-  today: {
-    eyebrow: "DigitalFace today",
-    title: "Built beyond the founders.",
-    quote: "DigitalFace has founders. It is not only its founders.",
-    paragraphs: [
-      "Nicolás and José stay at the core of DigitalFace's direction and client relationships. The company is deliberately built so the expertise around an engagement can expand when it needs to.",
-      "Depending on the project, DigitalFace works alongside specialists and trusted partners across media, development, automation, analytics, creative and production.",
-      "That structure keeps the company agile without pretending every problem should be handled internally by the same two people.",
+  standard: {
+    eyebrow: "Our standard",
+    title: "One relationship. Clear accountability.",
+    items: [
+      {
+        title: "Direction",
+        body: "DigitalFace holds the strategic view of the engagement and keeps priorities tied to the business objective.",
+      },
+      {
+        title: "Specialization",
+        body: "When a problem needs deeper expertise, the right specialist joins the work instead of every discipline being forced through one person.",
+      },
+      {
+        title: "Coordination",
+        body: "The parts of an engagement run as one piece of work, not as a set of disconnected suppliers you have to manage.",
+      },
+      {
+        title: "Accountability",
+        body: "DigitalFace stays responsible for the quality, coordination and progress of the work we take on.",
+      },
+    ],
+    outcomeTitle: "The work is only valuable if it moves the business forward.",
+    outcomeBody:
+      "We don't measure an engagement by how many campaigns, automations or dashboards it produced. We measure it by whether it moved the objective we agreed to pursue. Strategy, specialists and technology are means. The business outcome is the point.",
+  },
+  principles: {
+    eyebrow: "How we think",
+    title: "Four things that guide the work.",
+    items: [
+      {
+        title: "Business before tools",
+        body: "Technology earns its place when it improves the business, not because it is fashionable.",
+      },
+      {
+        title: "Specialists when specialization matters",
+        body: "We bring deeper expertise into the work when the problem genuinely calls for it.",
+      },
+      {
+        title: "Clarity and accountability",
+        body: "You should understand what is happening and know who is responsible for moving it forward.",
+      },
+      {
+        title: "Results over activity",
+        body: "More campaigns, meetings and dashboards are not better work. Progress toward the objective is.",
+      },
     ],
   },
-  future: {
-    eyebrow: "What we're building",
-    title: "We're still building DigitalFace.",
+  roots: {
+    eyebrow: "Our roots",
+    title: "Built in Colombia. Working beyond borders.",
     paragraphs: [
-      "DigitalFace is becoming a more specialized, more technical company without losing the close client relationships it started with.",
-      "We want to handle harder digital problems while staying close enough to understand how each client's business actually runs.",
-      "Growth here is not only about adding people. It is about deeper capabilities, better ways of working, stronger specialist relationships and higher quality in what we deliver.",
-      "Our roots stay in Colombia, and remote work keeps letting us work beyond it.",
+      "DigitalFace originated in Cali, Valle del Cauca, and operates today from Colombia while collaborating remotely across markets, including Miami.",
+      "The company grew out of complementary backgrounds in marketing, quantitative thinking and technology, and has kept expanding through specialist partnerships as client requirements became more demanding.",
     ],
+    foundersNote:
+      "DigitalFace was founded by brothers Nicolás and José Caicedo, whose complementary backgrounds in marketing, quantitative analysis and technology shaped the company's early direction.",
     detailsLabel: "Company details",
     details: [
       { label: "Origin", lines: ["Cali, Valle del Cauca", "Colombia"] },
@@ -166,174 +116,112 @@ const en = {
         label: "Operations",
         lines: ["Bugalagrande, Valle del Cauca", "Colombia"],
       },
-      {
-        label: "Remote presence",
-        lines: ["Miami, Florida", "United States"],
-      },
+      { label: "Remote presence", lines: ["Miami, Florida", "United States"] },
       {
         label: "Client attention",
         lines: ["Monday – Saturday", "8:00 AM – 8:00 PM"],
       },
     ],
-    closingTitle: "That's DigitalFace.",
+    closingTitle: "Built around the work.",
     closingBody:
-      "A company built from complementary perspectives, strengthened by specialist expertise, and still changing with the businesses and the technology around it.",
-    closingCta: "Talk to us",
+      "DigitalFace brings the strategy, specialists and systems an objective needs — and keeps one company accountable for how the pieces work together.",
+    closingCta: "Talk to DigitalFace",
   },
 } satisfies Record<string, unknown>;
 
 const es: typeof en = {
   metadata: {
-    title: "Sobre DigitalFace Marketing | Historia y estructura de la compañía",
+    title: "Sobre DigitalFace Marketing | Cómo funciona la compañía",
     description:
-      "Cómo nació DigitalFace en Cali, Colombia, cómo pensamos el trabajo y cómo el liderazgo interno se apoya en una red de especialistas en marketing, desarrollo y tecnología.",
+      "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cómo está organizada la compañía, de qué responde y desde dónde opera.",
   },
   hero: {
     eyebrow: "Sobre DigitalFace",
-    title: "Somos DigitalFace.",
+    title: "Experiencia especializada. Un solo DigitalFace.",
     description:
-      "Una compañía digital que nació en Cali, Colombia, desde dos perspectivas profesionales complementarias: una formada en marketing y trabajo comercial, otra en marketing, datos y tecnología. Lo que empezó entre dos hermanos hoy funciona como un liderazgo interno apoyado en una red más amplia de especialistas.",
+      "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cuando un proyecto necesita mayor especialización, sumamos a los profesionales indicados, y DigitalFace sigue respondiendo por la dirección, la coordinación y la calidad.",
     meta: [
-      "Nacimos en Cali, Colombia",
-      "Operamos desde el Valle del Cauca",
-      "Presencia remota en Miami",
+      "Con base en Colombia",
+      "Trabajo remoto en varios mercados",
+      "Español e inglés",
     ],
   },
-  story: {
-    eyebrow: "Nuestra historia",
-    title: "Empezó con dos hermanos y dos formas distintas de ver el trabajo.",
-    paragraphs: [
-      "DigitalFace empezó en Cali, Colombia, con el trabajo de dos hermanos: Nicolás y José Caicedo.",
-      "Nicolás llegó con más de diez años de experiencia en marketing: publicidad, audiencias, comunicación, campañas y el lado comercial del crecimiento de un negocio.",
-      "José llegó con más de cinco años de experiencia profesional, dos maestrías en áreas cuantitativas y de marketing, y una especialización creciente en analítica, automatización, CRM y desarrollo de software.",
-      "Sus perspectivas eran distintas. Resultaron complementarias.",
-      "A medida que el trabajo se volvió más exigente, dejó de caber en una sola disciplina. El marketing se conectó con los sitios web. Los sitios web, con la forma de responderle a cada persona. Responder exigía seguimiento. El seguimiento exigía medición. Lo repetitivo empezó a valer la pena automatizarlo. Y algunos proyectos pedían una profundidad técnica o creativa que nadie debería decir que cubre solo.",
-      "DigitalFace creció en esa dirección.",
-    ],
-    foundersLabel: "Los fundadores",
-    founders: [
-      {
-        initials: "NC",
-        name: "Nicolás Caicedo",
-        role: "Cofundador · Marketing y crecimiento",
-        detail:
-          "Más de 10 años en marketing, publicidad y relación con clientes.",
-      },
-      {
-        initials: "JC",
-        name: "José Caicedo",
-        role: "Cofundador · Estrategia y tecnología",
-        detail:
-          "Marketing, análisis cuantitativo, automatización y tecnología.",
-      },
-    ],
-    timelineLabel: "Cómo avanzó",
-    timeline: [
-      {
-        step: "01",
-        title: "Inicio",
-        description: "Marketing, campañas y trabajo directo con clientes.",
-      },
-      {
-        step: "02",
-        title: "Expansión",
-        description:
-          "Los proyectos empezaron a pedir capacidades que no cabían en una sola disciplina.",
-      },
-      {
-        step: "03",
-        title: "Especialización",
-        description:
-          "Tecnología, automatización, analítica y desarrollo pasaron a ser parte del trabajo.",
-      },
-      {
-        step: "04",
-        title: "DigitalFace hoy",
-        description:
-          "Liderazgo interno, apoyado en una red más amplia de especialistas.",
-      },
-    ],
-  },
-  beliefs: {
-    eyebrow: "Cómo pensamos",
-    title: "Algunas cosas en las que creemos.",
-    items: [
-      {
-        title: "Entender antes de construir",
-        body: "Queremos entender el negocio y el problema real antes de recomendar marketing o tecnología. Las herramientas deben sostener una estrategia, no reemplazarla.",
-      },
-      {
-        title: "Útil antes que impresionante",
-        body: "Algo no vale por verse sofisticado. Vale cuando el negocio de verdad puede usarlo.",
-      },
-      {
-        title: "Especialistas en vez de aparentar",
-        body: "Nadie es excelente en todas las disciplinas. Cuando el trabajo pide más profundidad, traemos a la persona indicada en vez de improvisar.",
-      },
-      {
-        title: "Claridad antes que tecnicismos",
-        body: "El cliente debería entender qué está pasando dentro de su propio negocio. El marketing y la tecnología deben aclarar la operación, no complicarla.",
-      },
-      {
-        title: "Siempre hay un responsable",
-        body: "Si DigitalFace asume un proyecto, alguien queda a cargo de su dirección, su coordinación y su calidad.",
-      },
-      {
-        title: "Seguir aprendiendo",
-        body: "El marketing y la tecnología no se quedan quietos. Preferimos seguir probando y midiendo antes que asumir que la respuesta de hoy sirve para siempre.",
-      },
-    ],
-  },
-  structure: {
+  network: {
     eyebrow: "Cómo trabaja DigitalFace",
     title: "Un equipo base. Un círculo más amplio de especialistas.",
     description:
-      "DigitalFace mantiene cerca del liderazgo la estrategia, la dirección, la relación con el cliente y la responsabilidad por el resultado. Cuando un proyecto pide mayor especialización, otros profesionales y aliados de confianza entran al trabajo.",
+      "Problemas distintos piden experiencia distinta. DigitalFace mantiene cerca del núcleo la estrategia, la dirección, la comunicación y la responsabilidad por el resultado.",
     secondary:
-      "Problemas distintos piden experiencia distinta. Preferimos eso antes que aparentar que una sola persona debería resolverlos todos.",
+      "Cuando hace falta mayor especialización, especialistas y aliados de confianza entran al proyecto, y DigitalFace sigue a cargo de mantener el trabajo conectado.",
     coreName: "DigitalFace",
-    coreLabel: "Liderazgo interno",
-    responsibilitiesLabel: "Lo que sostiene el equipo base",
-    responsibilities: [
-      "Dirección",
-      "Estrategia",
-      "Relación con el cliente",
-      "Coordinación",
-      "Responsabilidad",
-    ],
+    coreLabel: "Núcleo estratégico",
     disciplinesLabel: "Especialistas alrededor de un proyecto",
     disciplines: [
       "Estrategia",
       "Pauta",
-      "Desarrollo",
-      "Automatización",
-      "CRM",
-      "IA",
-      "Datos",
-      "Creatividad",
-      "Producción",
+      "Web y desarrollo",
+      "Automatización e IA",
+      "CRM y datos",
+      "Creativo y producción",
     ],
-    note: "Los especialistas y aliados de confianza entran a un proyecto según lo que ese proyecto realmente necesita.",
+    note: "Los especialistas entran a un proyecto según lo que ese proyecto necesita. La relación del cliente sigue siendo con DigitalFace.",
   },
-  today: {
-    eyebrow: "DigitalFace hoy",
-    title: "Construida más allá de sus fundadores.",
-    quote: "DigitalFace tiene fundadores. No es solo sus fundadores.",
-    paragraphs: [
-      "Nicolás y José siguen en el centro de la dirección de DigitalFace y de la relación con los clientes. La compañía está armada a propósito para que la experiencia alrededor de un proyecto pueda ampliarse cuando hace falta.",
-      "Según el proyecto, DigitalFace trabaja junto a especialistas y aliados de confianza en pauta, desarrollo, automatización, analítica, creatividad y producción.",
-      "Esa estructura mantiene ágil a la compañía sin aparentar que todo problema debería resolverse internamente entre las mismas dos personas.",
+  standard: {
+    eyebrow: "Nuestro estándar",
+    title: "Una sola relación. Responsabilidad clara.",
+    items: [
+      {
+        title: "Dirección",
+        body: "DigitalFace mantiene la visión estratégica del proyecto y conecta las prioridades con el objetivo del negocio.",
+      },
+      {
+        title: "Especialización",
+        body: "Cuando un problema pide más profundidad, entra el especialista indicado en vez de forzar todas las disciplinas por una sola persona.",
+      },
+      {
+        title: "Coordinación",
+        body: "Las partes de un proyecto funcionan como un solo trabajo, no como proveedores sueltos que tú tienes que administrar.",
+      },
+      {
+        title: "Responsabilidad",
+        body: "DigitalFace responde por la calidad, la coordinación y el avance del trabajo que asume.",
+      },
+    ],
+    outcomeTitle: "El trabajo solo vale si mueve el negocio.",
+    outcomeBody:
+      "No medimos un proyecto por cuántas campañas, automatizaciones o tableros produjo. Lo medimos por si movió el objetivo que acordamos perseguir. La estrategia, los especialistas y la tecnología son medios. El resultado del negocio es el punto.",
+  },
+  principles: {
+    eyebrow: "Cómo pensamos",
+    title: "Cuatro cosas que guían el trabajo.",
+    items: [
+      {
+        title: "El negocio antes que las herramientas",
+        body: "La tecnología se gana su lugar cuando mejora el negocio, no por estar de moda.",
+      },
+      {
+        title: "Especialistas cuando la especialización importa",
+        body: "Sumamos experiencia más profunda cuando el problema realmente lo pide.",
+      },
+      {
+        title: "Claridad y responsabilidad",
+        body: "Debes entender qué está pasando y saber quién responde por hacerlo avanzar.",
+      },
+      {
+        title: "Resultados antes que actividad",
+        body: "Más campañas, reuniones y tableros no significan mejor trabajo. El avance hacia el objetivo sí.",
+      },
     ],
   },
-  future: {
-    eyebrow: "Lo que estamos construyendo",
-    title: "Seguimos construyendo DigitalFace.",
+  roots: {
+    eyebrow: "Nuestro origen",
+    title: "Construida en Colombia. Trabajando más allá de las fronteras.",
     paragraphs: [
-      "DigitalFace se está volviendo una compañía más especializada y más técnica, sin perder la cercanía con los clientes que la formó.",
-      "Queremos resolver problemas digitales más difíciles y seguir lo bastante cerca para entender cómo funciona de verdad el negocio de cada cliente.",
-      "Crecer, para nosotros, no es solo sumar personas. Es desarrollar mejores capacidades, mejorar la forma de trabajar, construir relaciones más sólidas con especialistas y subir la calidad de lo que entregamos.",
-      "Nuestras raíces siguen en Colombia, y el trabajo remoto nos permite cada vez más trabajar más allá de la geografía.",
+      "DigitalFace nació en Cali, Valle del Cauca, y hoy opera desde Colombia mientras colabora de forma remota en varios mercados, incluido Miami.",
+      "La compañía creció desde formaciones complementarias en marketing, pensamiento cuantitativo y tecnología, y ha seguido ampliándose con alianzas de especialistas a medida que los proyectos se volvieron más exigentes.",
     ],
+    foundersNote:
+      "DigitalFace fue fundada por los hermanos Nicolás y José Caicedo, cuyas formaciones complementarias en marketing, análisis cuantitativo y tecnología marcaron la dirección inicial de la compañía.",
     detailsLabel: "Datos de la compañía",
     details: [
       { label: "Origen", lines: ["Cali, Valle del Cauca", "Colombia"] },
@@ -350,10 +238,10 @@ const es: typeof en = {
         lines: ["Lunes a sábado", "8:00 a. m. – 8:00 p. m."],
       },
     ],
-    closingTitle: "Eso es DigitalFace.",
+    closingTitle: "Construida alrededor del trabajo.",
     closingBody:
-      "Una compañía construida desde perspectivas complementarias, fortalecida con especialistas y todavía cambiando junto a los negocios y la tecnología que la rodean.",
-    closingCta: "Hablemos",
+      "DigitalFace reúne la estrategia, los especialistas y los sistemas que un objetivo necesita, y mantiene a una sola compañía respondiendo por cómo encajan las piezas.",
+    closingCta: "Habla con DigitalFace",
   },
 };
 
