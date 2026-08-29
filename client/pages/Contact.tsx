@@ -30,17 +30,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Scheduling comes first; the form below stays for anyone who would
-          rather write than book a time. */}
-      <BookingCTA
-        id="book"
-        eyebrow={t.booking.eyebrow}
-        title={t.booking.title}
-        description={t.booking.description}
-        ctaLabel={t.booking.ctaLabel}
-        href={bookingHref(path(BOOKING_ROUTE), "contact")}
-      />
-
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
@@ -125,6 +114,17 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* Scheduling closes the page for anyone who would rather book a time
+          than write. */}
+      <BookingCTA
+        id="book"
+        eyebrow={t.booking.eyebrow}
+        title={t.booking.title}
+        description={t.booking.description}
+        ctaLabel={t.booking.ctaLabel}
+        href={bookingHref(path(BOOKING_ROUTE), "contact")}
+      />
     </div>
   );
 }

@@ -61,7 +61,7 @@ const en = {
     eyebrow: "Ready when you are",
     title: "Choose a time that works for you.",
     description:
-      "Book a short DigitalFace consultation, or use the form below if you would rather we came back to you in writing.",
+      "Book a short DigitalFace consultation, or use the form above if you would rather we came back to you in writing.",
     ctaLabel: "Choose a time",
   },
 } satisfies Record<string, unknown>;
@@ -126,7 +126,7 @@ const es: typeof en = {
     eyebrow: "Cuando quieras",
     title: "Elige el horario que mejor te funcione.",
     description:
-      "Agenda una consulta corta con DigitalFace, o usa el formulario de abajo si prefieres que te respondamos por escrito.",
+      "Agenda una consulta corta con DigitalFace, o usa el formulario de arriba si prefieres que te respondamos por escrito.",
     ctaLabel: "Elige un horario",
   },
 };
