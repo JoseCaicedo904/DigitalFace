@@ -26,7 +26,7 @@ const en = {
     eyebrow: "About DigitalFace",
     title: "Specialized expertise. One DigitalFace.",
     description:
-      "DigitalFace brings strategy, technology and specialized expertise together under one accountable relationship. When an engagement needs deeper specialization, we bring the right professionals into the work while DigitalFace stays responsible for direction, coordination and quality.",
+      "DigitalFace brings strategy, technology and specialized expertise together under one accountable relationship. We connect the essential parts of business growth into a coordinated approach that gives our clients greater clarity, stronger execution and a more effective path from opportunity to customer.",
     meta: [
       "Based in Colombia",
       "Working remotely across markets",
@@ -139,7 +139,7 @@ const es: typeof en = {
     eyebrow: "Sobre DigitalFace",
     title: "Experiencia especializada. Un solo DigitalFace.",
     description:
-      "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cuando un proyecto necesita mayor especialización, sumamos a los profesionales indicados, y DigitalFace sigue respondiendo por la dirección, la coordinación y la calidad.",
+      "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Conectamos las piezas esenciales del crecimiento en un enfoque coordinado que le da a nuestros clientes mayor claridad, mejor ejecución y un camino más efectivo de la oportunidad al cliente.",
     meta: [
       "Con base en Colombia",
       "Trabajo remoto en varios mercados",
