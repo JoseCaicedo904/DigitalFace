@@ -35,11 +35,11 @@ const en = {
   },
   network: {
     eyebrow: "How DigitalFace works",
-    title: "A core team. A broader circle of expertise.",
+    title: "One direction. Specialized depth.",
     description:
-      "Different problems require different expertise. DigitalFace keeps strategy, direction, communication and accountability close to the core.",
+      "Different challenges require different strengths. DigitalFace keeps strategy, communication and accountability at the center.",
     secondary:
-      "When deeper specialization is needed, trusted specialists and partners become part of the engagement, and DigitalFace stays responsible for keeping the work connected.",
+      "For our clients, that means one relationship, one standard of execution and the expertise needed to move with confidence.",
     coreName: "DigitalFace",
     coreLabel: "Strategic core",
     disciplinesLabel: "Specialist expertise around an engagement",
@@ -148,11 +148,11 @@ const es: typeof en = {
   },
   network: {
     eyebrow: "Cómo trabaja DigitalFace",
-    title: "Un equipo base. Un círculo más amplio de especialistas.",
+    title: "Una sola dirección. Experiencia especializada.",
     description:
-      "Problemas distintos piden experiencia distinta. DigitalFace mantiene cerca del núcleo la estrategia, la dirección, la comunicación y la responsabilidad por el resultado.",
+      "Cada desafío requiere fortalezas distintas. DigitalFace mantiene la estrategia, la comunicación y la responsabilidad en el centro.",
     secondary:
-      "Cuando hace falta mayor especialización, especialistas y aliados de confianza entran al proyecto, y DigitalFace sigue a cargo de mantener el trabajo conectado.",
+      "Para nuestros clientes, eso significa una sola relación, un mismo estándar de ejecución y la experiencia necesaria para avanzar con confianza.",
     coreName: "DigitalFace",
     coreLabel: "Núcleo estratégico",
     disciplinesLabel: "Especialistas alrededor de un proyecto",
