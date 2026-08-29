@@ -17,6 +17,9 @@ const LOGO_SRC = "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png";
 
 const eyebrowLight =
   "inline-flex items-center justify-center rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600";
+/** The same pill on the page's dark bands — the site's established dark-surface variant. */
+const eyebrowDark =
+  "inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-ocean-200";
 /** Matches the pill the shared Hero uses, so the About opening reads as the same site. */
 const eyebrowHero =
   "inline-flex items-center justify-center rounded-full border border-brand-100 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600 shadow-sm";
@@ -293,8 +296,12 @@ export default function About() {
       </section>
 
       {/* 02 — How DigitalFace works */}
-      <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-ink-50 py-20 sm:py-24 lg:py-28">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_0%,rgba(124,58,237,0.08),transparent_55%)]"
+        />
+        <div className="container relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center lg:gap-16">
             <Reveal>
               <span className={eyebrowLight}>{t.network.eyebrow}</span>
@@ -322,7 +329,7 @@ export default function About() {
       </section>
 
       {approvedWorkspaceImage ? (
-        <section className="bg-white pb-20 sm:pb-24 lg:pb-28">
+        <section className="bg-ink-50 pb-20 sm:pb-24 lg:pb-28">
           <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <figure
               data-media-slot="A_ABOUT_WORKSPACE"
@@ -341,21 +348,25 @@ export default function About() {
       ) : null}
 
       {/* 04 — How we think */}
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(124,58,237,0.22),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(14,165,233,0.14),transparent_55%)]" />
+        </div>
+        <div className="container relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal className="max-w-2xl">
-            <span className={eyebrowLight}>{t.principles.eyebrow}</span>
-            <h2 className="mt-6 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            <span className={eyebrowDark}>{t.principles.eyebrow}</span>
+            <h2 className="mt-6 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
               {t.principles.title}
             </h2>
           </Reveal>
-          <div className="mt-14 grid gap-x-14 gap-y-10 border-t border-ink-200/70 pt-11 sm:grid-cols-2 lg:mt-16">
+          <div className="mt-14 grid gap-x-14 gap-y-10 border-t border-white/10 pt-11 sm:grid-cols-2 lg:mt-16">
             {t.principles.items.map((item, index) => (
               <Reveal key={item.title} delay={(index % 2) * 0.06}>
-                <h3 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+                <h3 className="text-balance text-xl font-semibold tracking-tight text-white sm:text-2xl">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-500 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-white/65 sm:text-base">
                   {item.body}
                 </p>
               </Reveal>
@@ -365,7 +376,7 @@ export default function About() {
       </section>
 
       {/* 05 — Roots, company details and the close */}
-      <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
+      <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-5">
