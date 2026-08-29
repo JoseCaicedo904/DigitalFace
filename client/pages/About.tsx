@@ -342,63 +342,6 @@ export default function About() {
         </section>
       ) : null}
 
-      {/* 03 — Our standard, closing on the outcome statement */}
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-2xl">
-            <span className={eyebrowLight}>{t.standard.eyebrow}</span>
-            <h2 className="mt-6 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              {t.standard.title}
-            </h2>
-          </Reveal>
-
-          {/* One connected run rather than four separate cards: the layout is
-              the argument — these are parts of a single engagement. */}
-          <div className="relative mt-14 lg:mt-16">
-            <div
-              aria-hidden="true"
-              className="absolute left-[12.5%] right-[12.5%] top-5 hidden h-px bg-gradient-to-r from-brand-200 via-ocean-300 to-brand-200 lg:block"
-            />
-            <ol className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-              {t.standard.items.map((item, index) => (
-                <Reveal key={item.title} delay={index * 0.07}>
-                  <li className="relative">
-                    <span className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-brand-100 bg-white text-xs font-bold text-brand-600 shadow-sm">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="mt-5 text-lg font-semibold tracking-tight text-slate-900 sm:text-xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-500">
-                      {item.body}
-                    </p>
-                  </li>
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* The outcome statement earns its own dark band — it is the page's
-          strongest claim and should not read as one more card. */}
-      <section className="relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.22),transparent_60%)]"
-        />
-        <div className="container relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <p className="text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl lg:text-[2.5rem] lg:leading-[1.15]">
-              {t.standard.outcomeTitle}
-            </p>
-            <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
-              {t.standard.outcomeBody}
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* 04 — How we think */}
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

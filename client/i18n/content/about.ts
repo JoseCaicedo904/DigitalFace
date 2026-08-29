@@ -52,31 +52,6 @@ const en = {
       "Creative & production",
     ],
   },
-  standard: {
-    eyebrow: "Our standard",
-    title: "One relationship. Clear accountability.",
-    items: [
-      {
-        title: "Direction",
-        body: "DigitalFace holds the strategic view of the engagement and keeps priorities tied to the business objective.",
-      },
-      {
-        title: "Specialization",
-        body: "When a problem needs deeper expertise, the right specialist joins the work instead of every discipline being forced through one person.",
-      },
-      {
-        title: "Coordination",
-        body: "The parts of an engagement run as one piece of work, not as a set of disconnected suppliers you have to manage.",
-      },
-      {
-        title: "Accountability",
-        body: "DigitalFace stays responsible for the quality, coordination and progress of the work we take on.",
-      },
-    ],
-    outcomeTitle: "The work is only valuable if it moves the business forward.",
-    outcomeBody:
-      "We don't measure an engagement by how many campaigns, automations or dashboards it produced. We measure it by whether it moved the objective we agreed to pursue. Strategy, specialists and technology are means. The business outcome is the point.",
-  },
   principles: {
     eyebrow: "How we think",
     title: "Four things that guide the work.",
@@ -163,31 +138,6 @@ const es: typeof en = {
       "CRM y datos",
       "Creativo y producción",
     ],
-  },
-  standard: {
-    eyebrow: "Nuestro estándar",
-    title: "Una sola relación. Responsabilidad clara.",
-    items: [
-      {
-        title: "Dirección",
-        body: "DigitalFace mantiene la visión estratégica del proyecto y conecta las prioridades con el objetivo del negocio.",
-      },
-      {
-        title: "Especialización",
-        body: "Cuando un problema pide más profundidad, entra el especialista indicado en vez de forzar todas las disciplinas por una sola persona.",
-      },
-      {
-        title: "Coordinación",
-        body: "Las partes de un proyecto funcionan como un solo trabajo, no como proveedores sueltos que tú tienes que administrar.",
-      },
-      {
-        title: "Responsabilidad",
-        body: "DigitalFace responde por la calidad, la coordinación y el avance del trabajo que asume.",
-      },
-    ],
-    outcomeTitle: "El trabajo solo vale si mueve el negocio.",
-    outcomeBody:
-      "No medimos un proyecto por cuántas campañas, automatizaciones o tableros produjo. Lo medimos por si movió el objetivo que acordamos perseguir. La estrategia, los especialistas y la tecnología son medios. El resultado del negocio es el punto.",
   },
   principles: {
     eyebrow: "Cómo pensamos",
