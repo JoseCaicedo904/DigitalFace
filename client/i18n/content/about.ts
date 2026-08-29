@@ -51,7 +51,6 @@ const en = {
       "CRM & data",
       "Creative & production",
     ],
-    note: "Specialists join an engagement according to what it requires. The client's relationship stays with DigitalFace.",
   },
   standard: {
     eyebrow: "Our standard",
@@ -164,7 +163,6 @@ const es: typeof en = {
       "CRM y datos",
       "Creativo y producción",
     ],
-    note: "Los especialistas entran a un proyecto según lo que ese proyecto necesita. La relación del cliente sigue siendo con DigitalFace.",
   },
   standard: {
     eyebrow: "Nuestro estándar",

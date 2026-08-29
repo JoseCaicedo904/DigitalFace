@@ -320,10 +320,6 @@ export default function About() {
               />
             </Reveal>
           </div>
-
-          <p className="mx-auto mt-14 max-w-2xl text-center text-sm leading-relaxed text-ink-400 lg:mt-16">
-            {t.network.note}
-          </p>
         </div>
       </section>
 
