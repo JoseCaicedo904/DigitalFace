@@ -13,6 +13,7 @@ export const BOOKING_ROUTE = "/book";
 /** Where a booking CTA was pressed. Carried through for context and analytics. */
 export type BookingSource =
   | "homepage"
+  | "about"
   | "contact"
   | "dental-practices"
   | "aesthetic-medicine"

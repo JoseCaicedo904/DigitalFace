@@ -97,6 +97,13 @@ const en = {
       },
     ],
   },
+  booking: {
+    eyebrow: "Work with DigitalFace",
+    title: "Ready to attract, convert and manage opportunities better?",
+    description:
+      "Tell us the objective. In one conversation we cover what it would take, what DigitalFace would be responsible for and how progress gets measured.",
+    ctaLabel: "Book a call",
+  },
 } satisfies Record<string, unknown>;
 
 const es: typeof en = {
@@ -182,6 +189,13 @@ const es: typeof en = {
         lines: ["Lunes a sábado", "8:00 a. m. – 8:00 p. m."],
       },
     ],
+  },
+  booking: {
+    eyebrow: "Trabaja con DigitalFace",
+    title: "¿Listo para atraer, convertir y gestionar mejor tus oportunidades?",
+    description:
+      "Cuéntanos el objetivo. En una sola conversación vemos qué implica, de qué responde DigitalFace y cómo se mide el avance.",
+    ctaLabel: "Agenda una llamada",
   },
 };
 

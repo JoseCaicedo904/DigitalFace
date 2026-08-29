@@ -1,3 +1,5 @@
+import { BookingCTA } from "@/components/booking/BookingCTA";
+import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { aboutContent } from "@/i18n/content/about";
@@ -434,6 +436,23 @@ export default function About() {
 
         </div>
       </section>
+
+      {/* 06 — The conversion moment. The page has said what DigitalFace is and
+          what it answers for, so it closes on the same shared block the
+          homepage and the funnels use: one button, pointed at scheduling. */}
+      <BookingCTA
+        id="book"
+        eyebrow={t.booking.eyebrow}
+        title={t.booking.title}
+        description={t.booking.description}
+        ctaLabel={t.booking.ctaLabel}
+        href={bookingHref(path(BOOKING_ROUTE), "about")}
+        /* This is the last block on the page, so the layout's 6rem footer
+           offset would otherwise cut a white stripe between two dark
+           surfaces. Cancelling it lets the CTA run straight into the footer,
+           with a hairline keeping the two readable as separate things. */
+        className="mb-[-6rem] border-b border-white/10"
+      />
     </div>
   );
 }
