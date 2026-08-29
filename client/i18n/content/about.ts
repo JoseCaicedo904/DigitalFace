@@ -96,10 +96,6 @@ const en = {
         lines: ["Monday – Saturday", "8:00 AM – 8:00 PM"],
       },
     ],
-    closingTitle: "Built around the work.",
-    closingBody:
-      "DigitalFace brings the strategy, specialists and systems an objective needs and keeps one company accountable for how the pieces work together.",
-    closingCta: "Talk to DigitalFace",
   },
 } satisfies Record<string, unknown>;
 
@@ -186,10 +182,6 @@ const es: typeof en = {
         lines: ["Lunes a sábado", "8:00 a. m. – 8:00 p. m."],
       },
     ],
-    closingTitle: "Construida alrededor del trabajo.",
-    closingBody:
-      "DigitalFace reúne la estrategia, los especialistas y los sistemas que un objetivo necesita, y mantiene a una sola compañía respondiendo por cómo encajan las piezas.",
-    closingCta: "Habla con DigitalFace",
   },
 };
 

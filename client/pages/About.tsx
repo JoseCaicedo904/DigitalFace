@@ -4,8 +4,6 @@ import { aboutContent } from "@/i18n/content/about";
 import type { Locale } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 
 /**
@@ -423,24 +421,6 @@ export default function About() {
             </dl>
           </Reveal>
 
-          <Reveal className="mt-16 border-t border-ink-200/70 pt-12 lg:mt-20">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              {t.roots.closingTitle}
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-500 sm:text-lg">
-              {t.roots.closingBody}
-            </p>
-            <Link
-              to={path("/contact")}
-              className="group mt-8 inline-flex items-center gap-2 text-base font-semibold text-brand-600 transition hover:text-brand-700"
-            >
-              {t.roots.closingCta}
-              <ArrowRight
-                aria-hidden="true"
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-          </Reveal>
         </div>
       </section>
     </div>
