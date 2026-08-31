@@ -289,33 +289,31 @@ const PRINCIPLE_ACCENTS: readonly PrincipleAccent[] = [
 ];
 
 /**
- * One tile. `tall` is what makes this a bento and not a card grid: the first
- * and last principles get the taller surface, so the block reads as a composed
- * shape. The grid is `items-start`, so a shorter tile stays short instead of
- * being stretched to its row.
+ * One tile. Icon, title and body are one group at the top of the surface on a
+ * fixed rhythm, so the three read as belonging together and a two-line title
+ * shifts nothing above it. Height comes from the row rather than a minimum on
+ * the tile: the taller card in a row sets it, and its neighbour matches, which
+ * keeps the pair aligned without opening a gap under the icon.
  */
 function PrincipleTile({
   title,
   body,
   accent,
-  tall,
 }: {
   title: string;
   body: string;
   accent: PrincipleAccent;
-  tall: boolean;
 }) {
   const Icon = accent.icon;
 
   return (
     <article
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.08] bg-[#12131f] p-8 sm:p-9 lg:h-auto lg:p-10",
+        "group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.08] bg-[#12131f] p-8 sm:p-9 lg:p-10",
         /* 200ms and a 2% scale: enough to acknowledge the pointer, not enough
            to read as an animation. */
         "transition duration-200 ease-out hover:border-white/[0.16] hover:shadow-[0_34px_70px_-30px_rgba(0,0,0,0.95)]",
         "hover:-translate-y-0.5 hover:scale-[1.02] motion-reduce:transform-none motion-reduce:transition-none",
-        tall ? "lg:min-h-[23rem]" : "lg:min-h-[18.5rem]",
       )}
     >
       {/* The tile's only colour, and it stays in the corner. */}
@@ -346,9 +344,9 @@ function PrincipleTile({
         />
       </span>
 
-      {/* Copy sits at the foot of the tile, so the taller surfaces read as
-          deliberate rather than padded out. */}
-      <div className="relative mt-auto pt-12">
+      {/* Fixed gap under the icon — never `mt-auto`, which is what pushed the
+          copy to the floor and opened the dead area in the middle. */}
+      <div className="relative mt-7 sm:mt-8">
         <h3 className="text-balance text-2xl font-semibold leading-snug tracking-tight text-white sm:text-[1.75rem]">
           {title}
         </h3>
@@ -485,27 +483,23 @@ export default function About() {
             className="mt-12 h-px w-full bg-gradient-to-r from-white/25 via-white/[0.08] to-transparent sm:mt-14"
           />
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:items-start lg:gap-6 lg:pb-14">
+          {/* Rows stretch (the grid default), so the two tiles in a row end at
+              the same line whichever title wraps. The stagger stays; the height
+              difference now comes from the copy, not from a minimum. */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6 lg:pb-14">
             {t.principles.items.map((item, index) => (
               /* The offset lives on a plain wrapper. Put it on the Reveal and
                  framer-motion writes its own inline transform, silently
                  dropping it — the same trap as the network diagram above. */
               <div
                 key={item.title}
-                className={cn(
-                  "h-full lg:h-auto",
-                  index % 2 === 1 && "lg:translate-y-14",
-                )}
+                className={cn("h-full", index % 2 === 1 && "lg:translate-y-14")}
               >
-                <Reveal
-                  delay={index * 0.07}
-                  className="h-full [&>*]:h-full lg:h-auto lg:[&>*]:h-auto"
-                >
+                <Reveal delay={index * 0.07} className="h-full [&>*]:h-full">
                   <PrincipleTile
                     title={item.title}
                     body={item.body}
                     accent={PRINCIPLE_ACCENTS[index % PRINCIPLE_ACCENTS.length]}
-                    tall={index === 0 || index === 3}
                   />
                 </Reveal>
               </div>
