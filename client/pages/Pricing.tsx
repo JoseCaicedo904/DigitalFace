@@ -60,11 +60,10 @@ export default function Pricing() {
               return (
                 <div
                   key={pkg.name}
+                  data-featured={featured ? "true" : undefined}
                   className={cn(
-                    "relative flex h-full flex-col rounded-3xl bg-white/95 p-8 shadow-brand-card",
-                    featured
-                      ? "border-2 border-brand-500 shadow-brand-soft"
-                      : "border border-ink-100",
+                    "pricing-card relative flex h-full flex-col rounded-3xl bg-white/95 p-8",
+                    featured ? "border-2" : "border",
                   )}
                 >
                   {featured ? (
@@ -97,7 +96,7 @@ export default function Pricing() {
                       {pkg.scope.map((item) => (
                         <span
                           key={item}
-                          className="rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-600 ring-1 ring-brand-100"
+                          className="pricing-chip rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-600 ring-1"
                         >
                           {item}
                         </span>
@@ -114,7 +113,7 @@ export default function Pricing() {
                         key={item}
                         className="flex items-start gap-2 text-sm text-ink-500"
                       >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500" />
+                        <CheckCircle2 className="pricing-check mt-0.5 h-4 w-4 flex-shrink-0" />
                         {item}
                       </p>
                     ))}
@@ -133,10 +132,11 @@ export default function Pricing() {
                     <Button
                       asChild
                       className={cn(
-                        "h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug transition-transform hover:-translate-y-0.5",
-                        featured
-                          ? "bg-brand-600 text-white shadow-brand-soft hover:bg-brand-700"
-                          : "border border-brand-200 bg-white text-brand-600 hover:bg-brand-50",
+                        // `hover:bg-[…]` only restates the card-driven colour so
+                        // the Button variant's own hover background cannot win
+                        // when the cursor sits directly on the CTA.
+                        "pricing-cta h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
+                        featured ? null : "border",
                       )}
                     >
                       <Link to={path("/contact")}>{pkg.ctaLabel}</Link>

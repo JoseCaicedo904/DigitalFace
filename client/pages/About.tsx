@@ -18,7 +18,7 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
-import { useId, type ReactNode } from "react";
+import { useEffect, useId, useRef, type ReactNode } from "react";
 
 /**
  * The company page. DigitalFace is the protagonist throughout: the specialist
@@ -540,24 +540,293 @@ function RootsIcon({
 /** Matched to the details by position, so the content file stays copy-only. */
 const DETAIL_ICONS: readonly LucideIcon[] = [MapPin, Globe, Clock];
 
+/* --------------------------------------------------------------------------
+ * Hero atmosphere — the About opening.
+ *
+ * Specialists, systems and markets connected under one company, said with
+ * geometry instead of a diagram: sparse nodes around the edges, curved links
+ * between them, and two long arcs crossing the frame with a light travelling
+ * each one. Everything is SVG and CSS — no canvas, no WebGL, no new dependency.
+ *
+ * Two rules keep it subordinate to the headline. The network never renders over
+ * a bright field, because a radial scrim sits above it and darkens the middle
+ * of the section; and every clock is slow — 22s drifts, 28–36s traces, 6s
+ * pulses — so the band reads as a dark hero first and a moving one second.
+ * -------------------------------------------------------------------------- */
+
+/* Deliberately hugging the edges of the frame: the centre belongs to the copy. */
+const HERO_NODES = [
+  { x: 118, y: 148 },
+  { x: 252, y: 302 },
+  { x: 96, y: 436 },
+  { x: 214, y: 598 },
+  { x: 332, y: 722 },
+  { x: 1332, y: 168 },
+  { x: 1178, y: 312 },
+  { x: 1372, y: 452 },
+  { x: 1228, y: 618 },
+  { x: 1088, y: 732 },
+  { x: 562, y: 96 },
+  { x: 902, y: 78 },
+  { x: 704, y: 758 },
+  { x: 1012, y: 688 },
+] as const;
+
+/**
+ * A link bowed off the straight line between two nodes. Perpendicular offset
+ * rather than a hand-written control point, so every curve leans the same way
+ * relative to its own segment and the field stays coherent.
+ */
+function heroLink(from: number, to: number, bow: number) {
+  const a = HERO_NODES[from];
+  const b = HERO_NODES[to];
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  const length = Math.hypot(dx, dy) || 1;
+  const controlX = (a.x + b.x) / 2 - (dy / length) * bow;
+  const controlY = (a.y + b.y) / 2 + (dx / length) * bow;
+
+  return `M${a.x} ${a.y} Q${controlX.toFixed(1)} ${controlY.toFixed(1)} ${b.x} ${b.y}`;
+}
+
+/** Always drawn — the quiet skeleton of the field. */
+const HERO_LINKS_CORE = [
+  { d: heroLink(0, 1, 52), opacity: 0.16 },
+  { d: heroLink(1, 2, -58), opacity: 0.13 },
+  { d: heroLink(2, 3, 44), opacity: 0.15 },
+  { d: heroLink(10, 11, -46), opacity: 0.14 },
+  { d: heroLink(5, 6, 56), opacity: 0.16 },
+  { d: heroLink(6, 7, -50), opacity: 0.13 },
+  { d: heroLink(7, 8, 48), opacity: 0.15 },
+];
+
+/** Added from `sm` up, where there is room for the density. */
+const HERO_LINKS_EXTRA = [
+  { d: heroLink(3, 4, -38), opacity: 0.12 },
+  { d: heroLink(4, 12, 40), opacity: 0.1 },
+  { d: heroLink(12, 13, -34), opacity: 0.12 },
+  { d: heroLink(13, 9, 36), opacity: 0.1 },
+  { d: heroLink(8, 9, -42), opacity: 0.13 },
+  { d: heroLink(1, 10, 70), opacity: 0.09 },
+  { d: heroLink(11, 5, -64), opacity: 0.09 },
+];
+
+/**
+ * The cross-market signal: long arcs running the full width, one over the top
+ * and one under the copy. Abstract on purpose — no coastline, no labels.
+ */
+const HERO_ARCS = [
+  { d: "M-80 232 Q720 40 1520 176", duration: 28, delay: 0 },
+  { d: "M-80 664 Q720 830 1520 596", duration: 36, delay: -14 },
+];
+
+/** Static, and fainter still — depth behind everything else. */
+const HERO_MERIDIANS = [
+  "M-80 470 Q720 706 1520 392",
+  "M-80 318 Q720 150 1520 268",
+];
+
+/**
+ * Pointer parallax, desktop only. Writes two unitless custom properties on the
+ * section; the layers below multiply them by their own depth, so one listener
+ * drives every plane. Skipped entirely for reduced motion and for coarse
+ * pointers, where there is no cursor to answer and the work is pure battery.
+ */
+function useHeroParallax(enabled: boolean) {
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || !enabled) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    let frame = 0;
+
+    function handleMove(event: PointerEvent) {
+      if (frame || !section) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const bounds = section.getBoundingClientRect();
+        section.style.setProperty(
+          "--hero-x",
+          ((event.clientX - bounds.left) / bounds.width - 0.5).toFixed(3),
+        );
+        section.style.setProperty(
+          "--hero-y",
+          ((event.clientY - bounds.top) / bounds.height - 0.5).toFixed(3),
+        );
+      });
+    }
+
+    function handleLeave() {
+      if (!section) return;
+      section.style.setProperty("--hero-x", "0");
+      section.style.setProperty("--hero-y", "0");
+    }
+
+    section.addEventListener("pointermove", handleMove);
+    section.addEventListener("pointerleave", handleLeave);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      section.removeEventListener("pointermove", handleMove);
+      section.removeEventListener("pointerleave", handleLeave);
+    };
+  }, [enabled]);
+
+  return sectionRef;
+}
+
+/** Depth planes read their shift from the section's two custom properties. */
+function parallaxLayer(depthX: number, depthY: number) {
+  return {
+    transform: `translate3d(calc(var(--hero-x, 0) * ${depthX}px), calc(var(--hero-y, 0) * ${depthY}px), 0)`,
+    transition: "transform 700ms cubic-bezier(0.22, 1, 0.36, 1)",
+  };
+}
+
+function AboutHeroAtmosphere() {
+  const glowId = useId();
+  const nodeId = useId();
+  const traceId = useId();
+
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+
+      {/* Violet upper left, ocean lower right, each on its own clock. */}
+      <div className="absolute inset-0" style={parallaxLayer(14, 11)}>
+        <div className="absolute -left-40 -top-56 h-[46rem] w-[46rem] animate-hero-drift rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.3),transparent_68%)] blur-3xl motion-reduce:animate-none" />
+      </div>
+      <div className="absolute inset-0" style={parallaxLayer(-11, -8)}>
+        <div
+          className="absolute -bottom-64 -right-40 h-[42rem] w-[42rem] animate-hero-drift rounded-full bg-[radial-gradient(circle,rgba(14,165,233,0.24),transparent_68%)] blur-3xl motion-reduce:animate-none"
+          style={{ animationDirection: "reverse", animationDuration: "27s" }}
+        />
+      </div>
+
+      <div className="absolute inset-0" style={parallaxLayer(7, 5)}>
+        <svg
+          viewBox="0 0 1440 800"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+          className="absolute inset-0 h-full w-full"
+        >
+          <defs>
+            <linearGradient id={glowId} x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stopColor="#a78bfa" />
+              <stop offset="0.55" stopColor="#818cf8" />
+              <stop offset="1" stopColor="#38bdf8" />
+            </linearGradient>
+            <radialGradient id={nodeId} cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stopColor="#c4b5fd" stopOpacity="0.85" />
+              <stop offset="1" stopColor="#c4b5fd" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+
+          <g stroke={`url(#${glowId})`} strokeWidth="0.9">
+            {HERO_MERIDIANS.map((d) => (
+              <path key={d} d={d} opacity="0.09" />
+            ))}
+          </g>
+
+          <g stroke={`url(#${glowId})`} strokeWidth="1.1" strokeLinecap="round">
+            {HERO_LINKS_CORE.map((link) => (
+              <path key={link.d} d={link.d} opacity={link.opacity} />
+            ))}
+          </g>
+
+          <g
+            stroke={`url(#${glowId})`}
+            strokeWidth="1.1"
+            strokeLinecap="round"
+            className="hidden sm:block"
+          >
+            {HERO_LINKS_EXTRA.map((link) => (
+              <path key={link.d} d={link.d} opacity={link.opacity} />
+            ))}
+          </g>
+
+          {/* The arcs, then the light running along each of them. */}
+          <g stroke={`url(#${glowId})`} strokeWidth="1.2">
+            {HERO_ARCS.map((arc) => (
+              <path key={arc.d} d={arc.d} opacity="0.14" />
+            ))}
+          </g>
+          <g className="hidden sm:block">
+            {HERO_ARCS.map((arc) => (
+              <path
+                key={arc.d}
+                d={arc.d}
+                stroke="#c4b5fd"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeDasharray="10 2200"
+                className="animate-hero-trace motion-reduce:animate-none"
+                style={{
+                  animationDuration: `${arc.duration}s`,
+                  animationDelay: `${arc.delay}s`,
+                  filter: "drop-shadow(0 0 7px rgba(167,139,250,0.85))",
+                }}
+              />
+            ))}
+          </g>
+
+          {HERO_NODES.map((node, index) => (
+            <g
+              key={`${node.x}-${node.y}`}
+              className={cn(index > 8 && "hidden sm:block")}
+            >
+              <circle
+                cx={node.x}
+                cy={node.y}
+                r="13"
+                fill={`url(#${nodeId})`}
+                className="animate-hero-pulse motion-reduce:animate-none"
+                style={{
+                  animationDuration: `${5 + (index % 4)}s`,
+                  animationDelay: `${-index * 0.7}s`,
+                }}
+              />
+              <circle
+                cx={node.x}
+                cy={node.y}
+                r="2.1"
+                fill="#ddd6fe"
+                opacity="0.45"
+              />
+            </g>
+          ))}
+        </svg>
+      </div>
+
+      {/* The scrim. Everything above is atmosphere; this is what guarantees the
+          headline never competes with it. */}
+      <div className="absolute inset-0 bg-[radial-gradient(62%_58%_at_50%_46%,rgba(2,6,23,0.94),rgba(2,6,23,0.7)_44%,transparent_78%)]" />
+      <div className="absolute inset-x-0 top-[-30rem] mx-auto h-[46rem] w-[64rem] rounded-full bg-glow-conic opacity-40 blur-3xl" />
+    </div>
+  );
+}
+
 export default function About() {
   const { locale, path } = useLocale();
   const t = aboutContent[locale];
+  const prefersReducedMotion = useReducedMotion();
+  const heroRef = useHeroParallax(!prefersReducedMotion);
 
   usePageMetadata(t.metadata.title, t.metadata.description);
 
   return (
     <div className="bg-white">
       {/* 01 — About DigitalFace */}
-      <section className="relative overflow-hidden bg-slate-950 py-24 sm:py-28 lg:py-36">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-[-30rem] mx-auto h-[46rem] w-[64rem] rounded-full bg-glow-conic opacity-40 blur-3xl"
-        />
+      <section
+        ref={heroRef}
+        className="relative overflow-hidden bg-slate-950 py-24 sm:py-28 lg:py-36"
+      >
+        <AboutHeroAtmosphere />
         <div className="container relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <Reveal>
             <span className={eyebrowHero}>{t.hero.eyebrow}</span>

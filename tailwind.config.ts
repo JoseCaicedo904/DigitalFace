@@ -165,6 +165,34 @@ export default {
             opacity: "1",
           },
         },
+        /* About hero atmosphere. Every clock here is deliberately slow: the
+           band has to read as a dark hero first and a moving one second. */
+        "hero-drift": {
+          "0%, 100%": {
+            transform: "translate3d(0, 0, 0) scale(1)",
+          },
+          "50%": {
+            transform: "translate3d(26px, -20px, 0) scale(1.06)",
+          },
+        },
+        "hero-pulse": {
+          "0%, 100%": {
+            opacity: "0.12",
+          },
+          "50%": {
+            opacity: "0.5",
+          },
+        },
+        /* Matches `stroke-dasharray: 10 2200` — one period, so a single dash
+           travels the whole path per cycle. */
+        "hero-trace": {
+          "0%": {
+            strokeDashoffset: "2210",
+          },
+          "100%": {
+            strokeDashoffset: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -173,6 +201,9 @@ export default {
         "journey-slow": "journey 11s linear infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
         "typing-dot": "typing-dot 1.2s ease-in-out infinite",
+        "hero-drift": "hero-drift 22s ease-in-out infinite",
+        "hero-pulse": "hero-pulse 6s ease-in-out infinite",
+        "hero-trace": "hero-trace 28s linear infinite",
       },
       backgroundImage: {
         "glow-radial":

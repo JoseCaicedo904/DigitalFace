@@ -103,7 +103,11 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+    font-family:
+      "Inter",
+      -apple-system,
+      "Segoe UI",
+      sans-serif;
   }
 
   h1,
@@ -112,7 +116,12 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", "Inter", -apple-system, "Segoe UI", sans-serif;
+    font-family:
+      "Montserrat",
+      "Inter",
+      -apple-system,
+      "Segoe UI",
+      sans-serif;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -138,5 +147,157 @@
   code {
     overflow-x: auto;
     white-space: pre;
+  }
+}
+
+/**
+ * Pricing package cards — the "turn on" state.
+ *
+ * Every visual difference between the resting card and the activated card is
+ * expressed as a custom property on `.pricing-card`. The two triggers (pointer
+ * hover and `:focus-within`) only reassign those properties; the rules that
+ * consume them — border, glow, lift, CTA, accents — are written once. That is
+ * why hovering anywhere on the card lights up the CTA and the check icons
+ * without a single mouse handler.
+ *
+ * Hover is gated behind `(hover: hover) and (pointer: fine)` so touch devices
+ * never latch a sticky activated state after a tap.
+ */
+.pricing-card {
+  /* Resting values = the card's original appearance. */
+  --pc-border: theme(colors.ink.100);
+  --pc-shadow:
+    0 25px 55px -35px rgba(15, 23, 42, 0.35), 0 0 0 0 rgba(124, 58, 237, 0),
+    0 0 0 0 rgba(124, 58, 237, 0), inset 0 0 0 0 rgba(124, 58, 237, 0);
+  --pc-lift: 0px;
+  --pc-scale: 1;
+  --pc-accent: theme(colors.brand.500);
+  --pc-chip-ring: theme(colors.brand.100);
+  --pc-cta-bg: #ffffff;
+  --pc-cta-fg: theme(colors.brand.600);
+  --pc-cta-border: theme(colors.brand.200);
+  --pc-cta-shadow: 0 0 0 0 rgba(124, 58, 237, 0);
+
+  border-color: var(--pc-border);
+  box-shadow: var(--pc-shadow);
+  transform: translateY(var(--pc-lift)) scale(var(--pc-scale));
+  transition:
+    border-color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* The "Most Popular" card keeps its permanent purple distinction at rest. */
+.pricing-card[data-featured="true"] {
+  --pc-border: theme(colors.brand.500);
+  --pc-shadow:
+    0 25px 70px -30px rgba(124, 58, 237, 0.45), 0 0 0 0 rgba(124, 58, 237, 0),
+    0 0 0 0 rgba(124, 58, 237, 0), inset 0 0 0 0 rgba(124, 58, 237, 0);
+  --pc-cta-bg: theme(colors.brand.600);
+  --pc-cta-fg: #ffffff;
+  --pc-cta-border: theme(colors.brand.600);
+  --pc-cta-shadow: 0 25px 70px -30px rgba(124, 58, 237, 0.45);
+}
+
+.pricing-card .pricing-cta {
+  background-color: var(--pc-cta-bg);
+  color: var(--pc-cta-fg);
+  border-color: var(--pc-cta-border);
+  /**
+   * The glow is handed to Tailwind's own `--tw-shadow` slot and composed the
+   * way Tailwind composes it. That way the CTA keeps its glow and its
+   * `focus-visible` ring at the same time, whichever of the two rules wins.
+   */
+  --tw-shadow: var(--pc-cta-shadow);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
+  transition:
+    background-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pricing-card .pricing-check {
+  color: var(--pc-accent);
+  transition: color 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pricing-card .pricing-chip {
+  --tw-ring-color: var(--pc-chip-ring);
+  transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Activated values, applied by pointer hover... */
+@media (hover: hover) and (pointer: fine) {
+  .pricing-card:hover {
+    --pc-border: theme(colors.brand.500);
+    --pc-shadow:
+      0 28px 58px -34px rgba(15, 23, 42, 0.32),
+      0 18px 42px -24px rgba(124, 58, 237, 0.38),
+      0 0 20px -6px rgba(124, 58, 237, 0.22),
+      inset 0 0 28px -14px rgba(124, 58, 237, 0.28);
+    --pc-lift: -4px;
+    --pc-scale: 1.005;
+    --pc-accent: theme(colors.brand.600);
+    --pc-chip-ring: theme(colors.brand.300);
+    --pc-cta-bg: theme(colors.brand.600);
+    --pc-cta-fg: #ffffff;
+    --pc-cta-border: theme(colors.brand.600);
+    --pc-cta-shadow: 0 14px 30px -14px rgba(124, 58, 237, 0.55);
+  }
+
+  .pricing-card[data-featured="true"]:hover {
+    --pc-border: theme(colors.brand.600);
+    --pc-shadow:
+      0 30px 70px -32px rgba(124, 58, 237, 0.5),
+      0 20px 48px -24px rgba(124, 58, 237, 0.45),
+      0 0 26px -6px rgba(124, 58, 237, 0.3),
+      inset 0 0 30px -14px rgba(124, 58, 237, 0.32);
+    --pc-cta-bg: theme(colors.brand.700);
+    --pc-cta-shadow: 0 16px 34px -14px rgba(124, 58, 237, 0.6);
+  }
+}
+
+/* ...and by keyboard focus landing anywhere inside the card. */
+.pricing-card:focus-within {
+  --pc-border: theme(colors.brand.500);
+  --pc-shadow:
+    0 28px 58px -34px rgba(15, 23, 42, 0.32),
+    0 18px 42px -24px rgba(124, 58, 237, 0.38),
+    0 0 20px -6px rgba(124, 58, 237, 0.22),
+    inset 0 0 28px -14px rgba(124, 58, 237, 0.28);
+  --pc-lift: -4px;
+  --pc-scale: 1.005;
+  --pc-accent: theme(colors.brand.600);
+  --pc-chip-ring: theme(colors.brand.300);
+  --pc-cta-bg: theme(colors.brand.600);
+  --pc-cta-fg: #ffffff;
+  --pc-cta-border: theme(colors.brand.600);
+  --pc-cta-shadow: 0 14px 30px -14px rgba(124, 58, 237, 0.55);
+}
+
+.pricing-card[data-featured="true"]:focus-within {
+  --pc-border: theme(colors.brand.600);
+  --pc-shadow:
+    0 30px 70px -32px rgba(124, 58, 237, 0.5),
+    0 20px 48px -24px rgba(124, 58, 237, 0.45),
+    0 0 26px -6px rgba(124, 58, 237, 0.3),
+    inset 0 0 30px -14px rgba(124, 58, 237, 0.32);
+  --pc-cta-bg: theme(colors.brand.700);
+  --pc-cta-shadow: 0 16px 34px -14px rgba(124, 58, 237, 0.6);
+}
+
+/* Reduced motion keeps the purple activation, drops the movement. */
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card,
+  .pricing-card:hover,
+  .pricing-card:focus-within,
+  .pricing-card[data-featured="true"],
+  .pricing-card[data-featured="true"]:hover,
+  .pricing-card[data-featured="true"]:focus-within {
+    --pc-lift: 0px;
+    --pc-scale: 1;
   }
 }
