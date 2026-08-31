@@ -172,7 +172,9 @@
   --pc-lift: 0px;
   --pc-scale: 1;
   --pc-accent: theme(colors.brand.500);
-  --pc-chip-ring: theme(colors.brand.100);
+  --pc-level-fg: theme(colors.ink.400);
+  --pc-inherit-bg: theme(colors.brand.50);
+  --pc-inherit-fg: theme(colors.brand.700);
   --pc-cta-bg: #ffffff;
   --pc-cta-fg: theme(colors.brand.600);
   --pc-cta-border: theme(colors.brand.200);
@@ -197,6 +199,8 @@
   --pc-cta-fg: #ffffff;
   --pc-cta-border: theme(colors.brand.600);
   --pc-cta-shadow: 0 25px 70px -30px rgba(124, 58, 237, 0.45);
+  --pc-level-fg: theme(colors.brand.600);
+  --pc-inherit-bg: theme(colors.brand.100);
 }
 
 .pricing-card .pricing-cta {
@@ -224,11 +228,6 @@
   transition: color 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.pricing-card .pricing-chip {
-  --tw-ring-color: var(--pc-chip-ring);
-  transition: box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 /* Activated values, applied by pointer hover... */
 @media (hover: hover) and (pointer: fine) {
   .pricing-card:hover {
@@ -241,7 +240,8 @@
     --pc-lift: -4px;
     --pc-scale: 1.005;
     --pc-accent: theme(colors.brand.600);
-    --pc-chip-ring: theme(colors.brand.300);
+    --pc-level-fg: theme(colors.brand.600);
+    --pc-inherit-bg: theme(colors.brand.100);
     --pc-cta-bg: theme(colors.brand.600);
     --pc-cta-fg: #ffffff;
     --pc-cta-border: theme(colors.brand.600);
@@ -271,7 +271,8 @@
   --pc-lift: -4px;
   --pc-scale: 1.005;
   --pc-accent: theme(colors.brand.600);
-  --pc-chip-ring: theme(colors.brand.300);
+  --pc-level-fg: theme(colors.brand.600);
+  --pc-inherit-bg: theme(colors.brand.100);
   --pc-cta-bg: theme(colors.brand.600);
   --pc-cta-fg: #ffffff;
   --pc-cta-border: theme(colors.brand.600);
@@ -300,4 +301,26 @@
     --pc-lift: 0px;
     --pc-scale: 1;
   }
+}
+
+/* Card sub-parts that follow the same activation tokens as the card itself. */
+.pricing-card .pricing-level {
+  color: var(--pc-level-fg);
+  transition: color 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pricing-card .pricing-group-title {
+  color: var(--pc-accent);
+  transition: color 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pricing-card .pricing-allowance-value {
+  color: theme(colors.slate.900);
+}
+
+/* "Everything in <previous plan>, plus" — the inherited-scope banner. */
+.pricing-card .pricing-inherit {
+  background-color: var(--pc-inherit-bg);
+  color: var(--pc-inherit-fg);
+  transition: background-color 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }

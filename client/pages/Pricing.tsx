@@ -3,9 +3,9 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { CtaSection } from "@/sections/CTA";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { pricingContent } from "@/i18n/content/pricing";
+import { ALLOWANCE_NOT_INCLUDED, pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
-import { CheckCircle2 } from "lucide-react";
+import { Check, Megaphone, Plus } from "lucide-react";
 
 /** The middle plan is the highlighted one in every locale. */
 const FEATURED_INDEX = 1;
@@ -54,15 +54,15 @@ export default function Pricing() {
             <p className="mt-4 text-base text-ink-500">{t.packages.intro}</p>
           </div>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-7">
             {t.packages.items.map((pkg, index) => {
               const featured = index === FEATURED_INDEX;
               return (
-                <div
+                <article
                   key={pkg.name}
                   data-featured={featured ? "true" : undefined}
                   className={cn(
-                    "pricing-card relative flex h-full flex-col rounded-3xl bg-white/95 p-8",
+                    "pricing-card relative flex h-full flex-col rounded-3xl bg-white/95 p-7 sm:p-8",
                     featured ? "border-2" : "border",
                   )}
                 >
@@ -72,77 +72,141 @@ export default function Pricing() {
                     </span>
                   ) : null}
 
-                  <h2 className="text-2xl font-semibold text-slate-900">
+                  <p className="pricing-level text-[11px] font-semibold uppercase tracking-[0.18em]">
+                    {pkg.level}
+                  </p>
+                  <h2 className="mt-3 text-2xl font-semibold leading-tight text-slate-900 lg:min-h-[62px]">
                     {pkg.name}
                   </h2>
+                  {/*
+                    The min-height is an alignment device, not a layout rule: it
+                    keeps the price block, the CTA and the allowance list of the
+                    three cards on the same baseline for the copy lengths we
+                    ship. A longer translation simply pushes the card taller.
+                  */}
+                  <p className="mt-3 text-sm leading-relaxed text-ink-500 lg:min-h-[88px]">
+                    {pkg.description}
+                  </p>
 
-                  <div className="mt-4 flex items-baseline gap-1.5">
-                    <span className="text-4xl font-semibold tracking-tight text-slate-900">
+                  <div className="mt-6 flex items-baseline gap-1.5">
+                    <span className="text-[2.75rem] font-semibold leading-none tracking-tight text-slate-900 tabular-nums">
                       {pkg.price}
                     </span>
                     <span className="text-sm font-medium text-ink-500">
                       {t.packages.perMonth}
                     </span>
                   </div>
-                  <p className="mt-1.5 text-xs text-ink-400">+ {pkg.setup}</p>
+                  <p className="mt-2 text-xs text-ink-400">
+                    + {pkg.setup} · {pkg.term}
+                  </p>
 
-                  <p className="mt-4 text-sm text-ink-500">{pkg.description}</p>
+                  <Button
+                    asChild
+                    className={cn(
+                      // `hover:bg-[…]` only restates the card-driven colour so
+                      // the Button variant's own hover background cannot win
+                      // when the cursor sits directly on the CTA.
+                      "pricing-cta mt-6 h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
+                      featured ? null : "border",
+                    )}
+                  >
+                    <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
+                  </Button>
 
-                  <div className="mt-6 rounded-2xl border border-ink-100 bg-ink-50/70 p-4">
+                  {/*
+                    Same rows, same order, in all three cards. That is what lets
+                    a visitor compare the plans by reading across, without a
+                    separate comparison table.
+                  */}
+                  <div className="pricing-allowances mt-7 rounded-2xl border border-ink-100 bg-ink-50/60 p-5">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+                      {t.packages.allowancesLabel}
+                    </p>
+                    <dl className="mt-3">
+                      {pkg.allowances.map((allowance) => {
+                        const included =
+                          allowance.value !== ALLOWANCE_NOT_INCLUDED;
+                        return (
+                          <div
+                            key={allowance.label}
+                            className="flex items-baseline justify-between gap-3 border-b border-dashed border-ink-200/70 py-2 last:border-b-0 last:pb-0"
+                          >
+                            <dt
+                              className={cn(
+                                "text-xs",
+                                included ? "text-ink-500" : "text-ink-400",
+                              )}
+                            >
+                              {allowance.label}
+                            </dt>
+                            <dd
+                              className={cn(
+                                "shrink-0 text-right text-[13px] font-semibold tabular-nums",
+                                included
+                                  ? "pricing-allowance-value"
+                                  : "text-ink-300",
+                              )}
+                            >
+                              {allowance.value}
+                            </dd>
+                          </div>
+                        );
+                      })}
+                    </dl>
+                    <p className="mt-4 flex items-start gap-2 border-t border-ink-200/70 pt-3 text-[11px] leading-relaxed text-ink-500">
+                      <Megaphone className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
+                      <span>
+                        <span className="font-semibold text-ink-600">
+                          {t.packages.adSpendLabel}:
+                        </span>{" "}
+                        {pkg.adSpend}
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className="mt-7">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
                       {t.packages.scopeLabel}
                     </p>
-                    <div className="mt-2.5 flex flex-wrap gap-1.5">
-                      {pkg.scope.map((item) => (
-                        <span
-                          key={item}
-                          className="pricing-chip rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-brand-600 ring-1"
-                        >
-                          {item}
-                        </span>
+
+                    {pkg.inherits ? (
+                      <p className="pricing-inherit mt-3 flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold">
+                        <Plus className="h-3.5 w-3.5 flex-shrink-0" />
+                        {pkg.inherits}
+                      </p>
+                    ) : null}
+
+                    <div className="mt-4 space-y-5">
+                      {pkg.groups.map((group) => (
+                        <div key={group.title}>
+                          <p className="pricing-group-title text-[11px] font-semibold uppercase tracking-[0.14em]">
+                            {group.title}
+                          </p>
+                          <ul className="mt-2 space-y-2">
+                            {group.items.map((item) => (
+                              <li
+                                key={item}
+                                className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-500"
+                              >
+                                <Check className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       ))}
                     </div>
-                    <p className="mt-3 text-xs leading-relaxed text-ink-500">
-                      {pkg.adSpend}
-                    </p>
                   </div>
 
-                  <div className="mt-6 space-y-3">
-                    {pkg.includes.map((item) => (
-                      <p
-                        key={item}
-                        className="flex items-start gap-2 text-sm text-ink-500"
-                      >
-                        <CheckCircle2 className="pricing-check mt-0.5 h-4 w-4 flex-shrink-0" />
-                        {item}
-                      </p>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 border-t border-ink-100 pt-5">
-                    <p className="text-xs uppercase tracking-wide text-ink-400">
+                  <div className="mt-auto border-t border-ink-100 pt-5 text-left">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
                       {t.packages.idealForLabel}
                     </p>
                     <p className="mt-1.5 text-sm text-ink-500">
                       {pkg.idealFor}
                     </p>
                   </div>
-
-                  <div className="mt-auto pt-8">
-                    <Button
-                      asChild
-                      className={cn(
-                        // `hover:bg-[…]` only restates the card-driven colour so
-                        // the Button variant's own hover background cannot win
-                        // when the cursor sits directly on the CTA.
-                        "pricing-cta h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
-                        featured ? null : "border",
-                      )}
-                    >
-                      <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
-                    </Button>
-                  </div>
-                </div>
+                </article>
               );
             })}
           </div>
@@ -151,7 +215,7 @@ export default function Pricing() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
               {t.notes.title}
             </p>
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {t.notes.items.map((note) => (
                 <div key={note.title}>
                   <p className="text-sm font-semibold text-slate-900">
