@@ -165,32 +165,6 @@ export default {
             opacity: "1",
           },
         },
-        /* Translate only: an SVG <g> would need `transform-box` before any
-           origin-dependent transform behaved the way it reads here. */
-        "aurora-drift": {
-          "0%, 100%": {
-            transform: "translate3d(0, 0, 0)",
-          },
-          "50%": {
-            transform: "translate3d(-34px, 12px, 0)",
-          },
-        },
-        "rail-trace": {
-          "0%": {
-            left: "-8rem",
-            opacity: "0",
-          },
-          "12%": {
-            opacity: "1",
-          },
-          "72%": {
-            opacity: "0.55",
-          },
-          "100%": {
-            left: "100%",
-            opacity: "0",
-          },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -199,8 +173,6 @@ export default {
         "journey-slow": "journey 11s linear infinite",
         shimmer: "shimmer 4s ease-in-out infinite",
         "typing-dot": "typing-dot 1.2s ease-in-out infinite",
-        "aurora-drift": "aurora-drift 26s ease-in-out infinite",
-        "rail-trace": "rail-trace 9s linear infinite",
       },
       backgroundImage: {
         "glow-radial":
