@@ -4,6 +4,7 @@ import { Hero } from "@/sections/Hero";
 import { CtaSection } from "@/sections/CTA";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { payPerServiceContent } from "@/i18n/content/payPerService";
+import { payPerServiceOutcomeIcons } from "./payPerServiceIcons";
 import type { PayPerServiceContent } from "@/i18n/content/payPerService";
 
 type GroupKey = keyof PayPerServiceContent["groups"];
@@ -22,6 +23,7 @@ const groupStructure: {
     id: "paid-media",
     services: [
       { key: "meta", id: "meta-ads" },
+      { key: "tracking", id: "conversion-tracking" },
       { key: "tiktok", id: "tiktok-ads" },
       { key: "google", id: "google-ads" },
       { key: "seo", id: "seo-strategy" },
@@ -97,6 +99,7 @@ export default function PayPerService() {
                 {
                   title: string;
                   description: string;
+                  outcomesLabel?: string;
                   outcomes: string[];
                   ctaLabel: string;
                 }
@@ -119,6 +122,8 @@ export default function PayPerService() {
                   <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {group.services.map((service) => {
                       const copy = services[service.key];
+                      const outcomeIcons =
+                        payPerServiceOutcomeIcons[service.id];
                       return (
                         <div
                           key={service.id}
@@ -136,18 +141,25 @@ export default function PayPerService() {
                             </div>
                             <div className="rounded-2xl border border-ink-100 bg-secondary/40 p-4">
                               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-600">
-                                {t.catalog.helpsWith}
+                                {copy.outcomesLabel ?? t.catalog.helpsWith}
                               </p>
                               <ul className="mt-3 space-y-2 text-sm text-ink-500">
-                                {copy.outcomes.map((outcome) => (
-                                  <li
-                                    key={outcome}
-                                    className="flex items-start gap-2"
-                                  >
-                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
-                                    <span>{outcome}</span>
-                                  </li>
-                                ))}
+                                {copy.outcomes.map((outcome, index) => {
+                                  const OutcomeIcon = outcomeIcons?.[index];
+                                  return (
+                                    <li
+                                      key={outcome}
+                                      className="flex items-start gap-2"
+                                    >
+                                      {OutcomeIcon ? (
+                                        <OutcomeIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                                      ) : (
+                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+                                      )}
+                                      <span>{outcome}</span>
+                                    </li>
+                                  );
+                                })}
                               </ul>
                             </div>
                           </div>

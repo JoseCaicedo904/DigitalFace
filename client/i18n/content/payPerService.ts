@@ -24,7 +24,7 @@ const en = {
   },
   groups: {
     paidMedia: {
-      title: "Paid media and social advertising",
+      title: "Paid media & tracking",
       description:
         "Full-funnel campaigns built to create demand, capture inquiries and show you where the return comes from.",
       services: {
@@ -38,6 +38,19 @@ const en = {
             "Track spend and return in one dashboard",
           ],
           ctaLabel: "Request an ad strategy call",
+        },
+        tracking: {
+          title: "Conversion Tracking & Analytics",
+          description:
+            "Set up the measurement behind your marketing so you can see which campaigns, clicks and actions are actually producing results.",
+          outcomesLabel: "Includes",
+          outcomes: [
+            "Meta Pixel setup",
+            "TikTok Pixel setup",
+            "Google Ads conversion tracking",
+            "Google Analytics 4 setup",
+          ],
+          ctaLabel: "Set up my tracking",
         },
         tiktok: {
           title: "TikTok ads",
@@ -273,7 +286,7 @@ const es: typeof en = {
   },
   groups: {
     paidMedia: {
-      title: "Pauta digital y publicidad en redes",
+      title: "Publicidad y medición",
       description:
         "Campañas de embudo completo para generar demanda, capturar consultas y mostrarte de dónde viene el retorno.",
       services: {
@@ -287,6 +300,19 @@ const es: typeof en = {
             "Ver inversión y retorno en un solo tablero",
           ],
           ctaLabel: "Agenda una asesoría de pauta",
+        },
+        tracking: {
+          title: "Tracking de Conversiones y Analítica",
+          description:
+            "Configuramos la medición detrás de tu marketing para que puedas identificar qué campañas, clics y acciones realmente están generando resultados.",
+          outcomesLabel: "Incluye",
+          outcomes: [
+            "Configuración de Meta Pixel",
+            "Configuración de TikTok Pixel",
+            "Seguimiento de conversiones de Google Ads",
+            "Configuración de Google Analytics 4",
+          ],
+          ctaLabel: "Configura mi medición",
         },
         tiktok: {
           title: "Anuncios en TikTok",
