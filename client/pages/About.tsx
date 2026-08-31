@@ -13,7 +13,7 @@ import {
   UserRoundCheck,
   type LucideIcon,
 } from "lucide-react";
-import { useId, type ReactNode } from "react";
+import { useId, type PointerEvent, type ReactNode } from "react";
 
 /**
  * The company page. DigitalFace is the protagonist throughout: the specialist
@@ -263,56 +263,134 @@ function SpecialistNetwork({
  * Principles — the "how we think" band.
  *
  * The four principles are the page's argument, so they get a composed frame
- * instead of a text list: one clipped header panel, four illuminated cards, and
- * a light atmosphere behind them. Every effect is CSS/SVG — no raster art — and
- * the copy is untouched, which is why the icons are matched to the items here
- * by position rather than being added to the content file.
+ * rather than a text list: a light field generated from sine curves, a clipped
+ * header slab, and four beveled glass cards that answer to the pointer. Every
+ * effect is CSS/SVG — no raster art — and the copy is untouched, which is why
+ * the icons are matched to the items here by position instead of being added to
+ * the content file.
  * -------------------------------------------------------------------------- */
 
-/** Top-right corner cut shared by the header panel and the four cards. */
-const PRINCIPLE_CLIP =
-  "polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%)";
+/**
+ * Catmull-Rom through the sampled points, converted to cubic Béziers. Joining
+ * a coarsely sampled sine with straight lines would show every corner; this
+ * keeps the ribbons genuinely smooth at a fraction of the path data.
+ */
+function smoothPath(points: readonly [number, number][]) {
+  let d = `M${points[0][0].toFixed(1)} ${points[0][1].toFixed(1)}`;
 
-type PrincipleAccent = {
-  icon: LucideIcon;
-  /** Stroke colour for the hexagon and the corner bracket. */
-  line: string;
-  /** `r,g,b` triplet reused by every glow and wash on the card. */
-  glow: string;
-};
+  for (let i = 0; i < points.length - 1; i += 1) {
+    const [p0x, p0y] = points[i - 1] ?? points[i];
+    const [p1x, p1y] = points[i];
+    const [p2x, p2y] = points[i + 1];
+    const [p3x, p3y] = points[i + 2] ?? points[i + 1];
 
-/** Left column reads violet, right column reads ocean — the site's two accents. */
-const PRINCIPLE_ACCENTS: PrincipleAccent[] = [
-  { icon: Briefcase, line: "#a78bfa", glow: "124,58,237" },
-  { icon: UserRoundCheck, line: "#22d3ee", glow: "14,165,233" },
-  { icon: Target, line: "#a78bfa", glow: "124,58,237" },
-  { icon: TrendingUp, line: "#22d3ee", glow: "14,165,233" },
-];
+    d +=
+      ` C${(p1x + (p2x - p0x) / 6).toFixed(1)} ${(p1y + (p2y - p0y) / 6).toFixed(1)}` +
+      `, ${(p2x - (p3x - p1x) / 6).toFixed(1)} ${(p2y - (p3y - p1y) / 6).toFixed(1)}` +
+      `, ${p2x.toFixed(1)} ${p2y.toFixed(1)}`;
+  }
+
+  return d;
+}
 
 /**
- * The lit edge that traces the clipped corner. Drawn at a fixed 120px so the
- * diagonal always lands exactly on the 28px cut, whatever the card's width.
+ * The band's atmosphere: one bundle of ribbons sweeping up to the right, each a
+ * pair of detuned sines so the bundle breathes instead of running parallel.
+ * Built once at module scope — the geometry is deterministic, so it costs
+ * nothing per render.
  */
-function CornerBracket({ accent }: { accent: PrincipleAccent }) {
+const AURORA_RIBBONS = Array.from({ length: 24 }, (_, index) => {
+  const t = index / 23;
+  const phase = t * 2.6;
+  const amplitude = 38 + t * 104;
+  const base = 150 + t * 640;
+  const points: [number, number][] = [];
+
+  for (let x = -120; x <= 1560; x += 145) {
+    const u = x / 1440;
+    points.push([
+      x,
+      base +
+        Math.sin(u * Math.PI * 1.55 + phase) * amplitude +
+        Math.sin(u * Math.PI * 3.2 + phase * 1.9) * amplitude * 0.28 -
+        u * 235,
+    ]);
+  }
+
+  return {
+    d: smoothPath(points),
+    /* Every sixth ribbon carries the light; the rest are the falloff. */
+    opacity: (index % 6 === 2 ? 0.5 : 0.24) - t * 0.14,
+    width: index % 6 === 2 ? 1.35 : 0.85,
+  };
+});
+
+function PrinciplesLightField() {
   const gradientId = useId();
 
   return (
     <svg
       aria-hidden="true"
-      viewBox="0 0 120 120"
+      viewBox="0 0 1440 900"
+      preserveAspectRatio="xMidYMid slice"
       fill="none"
-      className="pointer-events-none absolute right-0 top-0 h-[120px] w-[120px] opacity-75 transition-opacity duration-300 group-hover:opacity-100"
-      style={{ filter: `drop-shadow(0 0 6px rgba(${accent.glow},0.5))` }}
+      className="absolute inset-0 h-full w-full"
     >
       <defs>
-        <linearGradient id={gradientId} x1="0" y1="0" x2="0.85" y2="1">
-          <stop offset="0" stopColor={accent.line} stopOpacity="0" />
-          <stop offset="0.42" stopColor={accent.line} stopOpacity="0.95" />
-          <stop offset="1" stopColor={accent.line} stopOpacity="0" />
+        <linearGradient id={gradientId} x1="0" y1="0.85" x2="1" y2="0.1">
+          <stop offset="0" stopColor="#7c3aed" stopOpacity="0" />
+          <stop offset="0.22" stopColor="#a78bfa" stopOpacity="0.85" />
+          <stop offset="0.58" stopColor="#38bdf8" stopOpacity="0.6" />
+          <stop offset="1" stopColor="#22d3ee" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+
+      <g
+        stroke={`url(#${gradientId})`}
+        className="motion-reduce:animate-none sm:animate-aurora-drift"
+      >
+        {AURORA_RIBBONS.map((ribbon) => (
+          <path
+            key={ribbon.d}
+            d={ribbon.d}
+            strokeWidth={ribbon.width}
+            opacity={ribbon.opacity}
+          />
+        ))}
+      </g>
+    </svg>
+  );
+}
+
+/**
+ * The bevel is a fixed 40px, so the geometry decorating it is fixed too —
+ * scaling that with the card would only bend the 45° cut off the corner.
+ */
+const BEVEL = 40;
+const BEVEL_CLIP = `polygon(0 0, calc(100% - ${BEVEL}px) 0, 100% ${BEVEL}px, 100% 100%, 0 100%)`;
+
+/** The lit edge tracing the cut corner: in along the top, down the bevel, away. */
+function BevelLight({ color, glow }: { color: string; glow: string }) {
+  const gradientId = useId();
+
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 200 200"
+      fill="none"
+      className="pointer-events-none absolute right-0 top-0 h-[200px] w-[200px] opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+      style={{ filter: `drop-shadow(0 0 7px rgba(${glow},0.55))` }}
+    >
+      <defs>
+        <linearGradient id={gradientId} x1="0.1" y1="0" x2="0.95" y2="1">
+          <stop offset="0" stopColor={color} stopOpacity="0" />
+          <stop offset="0.4" stopColor={color} stopOpacity="1" />
+          <stop offset="0.62" stopColor={color} stopOpacity="0.85" />
+          <stop offset="1" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
       <path
-        d="M4 1.25 H91 L118.75 29 V116"
+        d={`M40 1 H${200 - BEVEL - 1} L199 ${BEVEL + 1} V190`}
         stroke={`url(#${gradientId})`}
         strokeWidth="1.5"
       />
@@ -320,17 +398,34 @@ function CornerBracket({ accent }: { accent: PrincipleAccent }) {
   );
 }
 
-/** Hexagonal icon holder: outline, soft interior, and a glow that lifts on hover. */
+type PrincipleAccent = {
+  icon: LucideIcon;
+  /** Stroke colour for the hexagon and the bevel light. */
+  line: string;
+  /** `r,g,b` triplet reused by every glow, wash and spotlight on the card. */
+  glow: string;
+};
+
+/** Left column reads violet, right column ocean — the site's two accents. */
+const PRINCIPLE_ACCENTS: readonly PrincipleAccent[] = [
+  { icon: Briefcase, line: "#c4b5fd", glow: "139,92,246" },
+  { icon: UserRoundCheck, line: "#7dd3fc", glow: "14,165,233" },
+  { icon: Target, line: "#c4b5fd", glow: "139,92,246" },
+  { icon: TrendingUp, line: "#7dd3fc", glow: "14,165,233" },
+];
+
+/** Hexagonal icon holder: outline, echo ring, and a glow that lifts on hover. */
 function PrincipleIcon({ accent }: { accent: PrincipleAccent }) {
   const Icon = accent.icon;
+  const gradientId = useId();
 
   return (
-    <span className="relative flex h-16 w-16 shrink-0 items-center justify-center sm:h-[4.5rem] sm:w-[4.5rem]">
+    <span className="relative flex h-[4.25rem] w-[4.25rem] shrink-0 items-center justify-center sm:h-20 sm:w-20">
       <span
         aria-hidden="true"
-        className="absolute inset-1 rounded-full opacity-55 blur-lg transition-opacity duration-300 group-hover:opacity-100 motion-reduce:transition-none"
+        className="absolute inset-1 rounded-full opacity-60 blur-xl transition-opacity duration-500 group-hover:opacity-100 motion-reduce:transition-none"
         style={{
-          background: `radial-gradient(circle, rgba(${accent.glow},0.5), transparent 70%)`,
+          background: `radial-gradient(circle, rgba(${accent.glow},0.55), transparent 70%)`,
         }}
       />
       <svg
@@ -339,19 +434,32 @@ function PrincipleIcon({ accent }: { accent: PrincipleAccent }) {
         fill="none"
         className="absolute inset-0 h-full w-full"
       >
+        <defs>
+          <linearGradient id={gradientId} x1="0.15" y1="0" x2="0.85" y2="1">
+            <stop offset="0" stopColor={accent.line} stopOpacity="0.95" />
+            <stop offset="0.55" stopColor={accent.line} stopOpacity="0.45" />
+            <stop offset="1" stopColor={accent.line} stopOpacity="0.2" />
+          </linearGradient>
+        </defs>
+        {/* Echo ring — depth without a second hard outline. */}
         <polygon
-          points="50,4 90,27 90,73 50,96 10,73 10,27"
-          fill="rgba(255,255,255,0.04)"
+          points="50,1 92,25 92,75 50,99 8,75 8,25"
           stroke={accent.line}
-          strokeWidth="2"
+          strokeOpacity="0.14"
+          strokeWidth="1"
+        />
+        <polygon
+          points="50,7 86,28 86,72 50,93 14,72 14,28"
+          fill="rgba(255,255,255,0.045)"
+          stroke={`url(#${gradientId})`}
+          strokeWidth="1.75"
           strokeLinejoin="round"
-          className="[stroke-opacity:0.5] transition-[stroke-opacity] duration-300 group-hover:[stroke-opacity:0.9] motion-reduce:transition-none"
         />
       </svg>
       <Icon
         aria-hidden="true"
-        strokeWidth={1.5}
-        className="relative h-7 w-7 sm:h-8 sm:w-8"
+        strokeWidth={1.4}
+        className="relative h-8 w-8 transition-transform duration-500 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none sm:h-9 sm:w-9"
         style={{ color: accent.line }}
       />
     </span>
@@ -359,9 +467,10 @@ function PrincipleIcon({ accent }: { accent: PrincipleAccent }) {
 }
 
 /**
- * One principle. The hairline border is a 1px gradient underlay clipped to the
- * same polygon as the surface, which is the only way to keep a lit edge on a
- * cut corner — `border` follows the box, not the clip.
+ * One principle. The hairline is a 1px gradient underlay clipped to the same
+ * polygon as the surface — the only way to keep a lit edge on a cut corner,
+ * since `border` follows the box and not the clip. The spotlight is written
+ * straight to CSS custom properties, so tracking the pointer never re-renders.
  */
 function PrincipleCard({
   title,
@@ -372,99 +481,84 @@ function PrincipleCard({
   body: string;
   accent: PrincipleAccent;
 }) {
+  function trackPointer(event: PointerEvent<HTMLDivElement>) {
+    const bounds = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty(
+      "--df-x",
+      `${event.clientX - bounds.left}px`,
+    );
+    event.currentTarget.style.setProperty(
+      "--df-y",
+      `${event.clientY - bounds.top}px`,
+    );
+  }
+
   return (
-    <div className="group relative h-full transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none">
+    <div
+      onPointerMove={trackPointer}
+      className="group relative h-full transition-transform duration-500 ease-out hover:-translate-y-1.5 motion-reduce:transform-none motion-reduce:transition-none"
+    >
       <div
         className="h-full p-px"
         style={{
-          clipPath: PRINCIPLE_CLIP,
-          background: `linear-gradient(135deg, rgba(${accent.glow},0.6), rgba(255,255,255,0.12) 45%, rgba(255,255,255,0.05))`,
+          clipPath: BEVEL_CLIP,
+          background: `linear-gradient(140deg, rgba(${accent.glow},0.65), rgba(255,255,255,0.13) 42%, rgba(255,255,255,0.04) 72%, rgba(${accent.glow},0.28))`,
         }}
       >
         <div
-          className="relative h-full px-7 py-8 backdrop-blur-[2px] sm:px-9 sm:py-10"
+          className="relative h-full px-7 py-8 backdrop-blur-[3px] sm:px-9 sm:py-10 lg:px-10 lg:py-11"
           style={{
-            clipPath: PRINCIPLE_CLIP,
+            clipPath: BEVEL_CLIP,
             background:
-              "linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015) 45%, rgba(2,6,23,0.4))",
+              "linear-gradient(155deg, rgba(255,255,255,0.07), rgba(255,255,255,0.018) 44%, rgba(3,7,26,0.5))",
           }}
         >
+          {/* Corner wash, then the pointer spotlight over it. */}
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-300 group-hover:opacity-100 motion-reduce:transition-none"
+            className="pointer-events-none absolute inset-0 opacity-80 transition-opacity duration-500 group-hover:opacity-100 motion-reduce:transition-none"
             style={{
-              background: `radial-gradient(120% 90% at 100% 0%, rgba(${accent.glow},0.2), transparent 62%)`,
+              background: `radial-gradient(130% 95% at 100% 0%, rgba(${accent.glow},0.22), transparent 62%)`,
             }}
           />
-          <CornerBracket accent={accent} />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 motion-reduce:transition-none"
+            style={{
+              background: `radial-gradient(16rem circle at var(--df-x, 50%) var(--df-y, 0px), rgba(${accent.glow},0.3), transparent 68%)`,
+            }}
+          />
+          {/* Glass catches the light along its top edge. */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-white/25 via-white/10 to-transparent"
+          />
+          <BevelLight color={accent.line} glow={accent.glow} />
 
           <div className="relative flex items-start gap-5 sm:gap-6">
             <PrincipleIcon accent={accent} />
             <div className="min-w-0">
-              <h3 className="text-balance text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              <h3 className="text-balance text-[1.375rem] font-semibold leading-snug tracking-tight text-white sm:text-2xl">
                 {title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-white/70 sm:mt-4 sm:text-lg">
+              <p className="mt-3.5 text-base leading-relaxed text-white/70 sm:mt-4 sm:text-[1.0625rem]">
                 {body}
               </p>
             </div>
           </div>
+
+          {/* The seam that extends on hover — the card's only moving part. */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 left-0 h-px w-16 transition-[width] duration-500 ease-out group-hover:w-40 motion-reduce:transition-none"
+            style={{
+              background: `linear-gradient(90deg, rgba(${accent.glow},0.9), transparent)`,
+              boxShadow: `0 0 12px rgba(${accent.glow},0.6)`,
+            }}
+          />
         </div>
       </div>
     </div>
-  );
-}
-
-/**
- * The flowing light behind the band: two fans of hairlines, one ocean from the
- * top right and one violet from the bottom left. Hidden below `sm`, where the
- * cards fill the viewport and the lines would only cost paint time.
- */
-function PrinciplesLightField() {
-  const oceanId = useId();
-  const violetId = useId();
-  const strands = Array.from({ length: 14 }, (_, index) => index);
-
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 1440 900"
-      preserveAspectRatio="xMidYMid slice"
-      fill="none"
-      className="absolute inset-0 hidden h-full w-full sm:block"
-    >
-      <defs>
-        <linearGradient id={oceanId} x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#22d3ee" stopOpacity="0.55" />
-          <stop offset="0.55" stopColor="#0ea5e9" stopOpacity="0.22" />
-          <stop offset="1" stopColor="#0ea5e9" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id={violetId} x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0" stopColor="#a78bfa" stopOpacity="0.45" />
-          <stop offset="0.55" stopColor="#7c3aed" stopOpacity="0.2" />
-          <stop offset="1" stopColor="#7c3aed" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-
-      <g strokeWidth="1">
-        {strands.map((index) => (
-          <path
-            key={`ocean-${index}`}
-            d={`M1520 ${-70 + index * 24} C 1190 ${110 + index * 30}, 990 ${230 + index * 26}, 700 ${500 + index * 18}`}
-            stroke={`url(#${oceanId})`}
-            opacity={0.5 - index * 0.025}
-          />
-        ))}
-        {strands.map((index) => (
-          <path
-            key={`violet-${index}`}
-            d={`M-90 ${880 - index * 24} C 250 ${930 - index * 28}, 440 ${790 - index * 24}, 720 ${430 - index * 16}`}
-            stroke={`url(#${violetId})`}
-            opacity={0.42 - index * 0.022}
-          />
-        ))}
-      </g>
-    </svg>
   );
 }
 
@@ -566,62 +660,77 @@ export default function About() {
       ) : null}
 
       {/* 04 — How we think */}
-      <section className="relative overflow-hidden bg-[#080b1c] py-24 text-white sm:py-28 lg:py-36">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0c0a24] via-[#0a0f28] to-[#070a1a]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_10%,rgba(124,58,237,0.3),transparent_58%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_88%_6%,rgba(14,165,233,0.2),transparent_55%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_118%,rgba(124,58,237,0.2),transparent_62%)]" />
+      <section className="relative overflow-hidden bg-[#05070f] py-24 text-white sm:py-28 lg:py-36">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+        >
+          <div className="absolute inset-0 bg-[linear-gradient(160deg,#0d0a26_0%,#080d24_46%,#05060f_100%)]" />
           <PrinciplesLightField />
+          {/* Bloom. The ribbons draw the shape of the light; these give it mass,
+              and the closing vignette keeps the copy off the brightest areas. */}
+          <div className="absolute -left-40 -top-24 h-[34rem] w-[34rem] rounded-full bg-brand-600/25 blur-[130px]" />
+          <div className="absolute -right-28 top-4 h-[30rem] w-[30rem] rounded-full bg-ocean-500/20 blur-[120px]" />
+          <div className="absolute -bottom-56 left-1/4 h-[32rem] w-[38rem] rounded-full bg-brand-700/20 blur-[130px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(75%_55%_at_45%_42%,transparent,rgba(3,5,14,0.72))]" />
         </div>
 
         <div className="container relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="relative max-w-3xl">
-              {/* Lit bracket on the outer corner — a sibling of the panel so the
-                  panel's own clip cannot cut it off. */}
+              {/* The lit corner sits outside the slab's clip, which is why it is
+                  a sibling and not a child. */}
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute -left-px -top-px h-14 w-14 border-l-2 border-t-2 border-brand-400/80 shadow-[0_0_16px_-2px_rgba(124,58,237,0.75)] sm:h-16 sm:w-16"
+                className="pointer-events-none absolute -left-px -top-px h-14 w-14 border-l-2 border-t-2 border-brand-300/80 shadow-[0_0_22px_-4px_rgba(139,92,246,0.95)] sm:h-16 sm:w-16"
               />
               <div
                 className="p-px"
                 style={{
-                  clipPath: PRINCIPLE_CLIP,
+                  clipPath: BEVEL_CLIP,
                   background:
-                    "linear-gradient(135deg, rgba(167,139,250,0.6), rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.04))",
+                    "linear-gradient(135deg, rgba(196,181,253,0.7), rgba(255,255,255,0.12) 48%, rgba(255,255,255,0.04) 76%, rgba(125,211,252,0.4))",
                 }}
               >
                 <div
-                  className="px-7 py-9 backdrop-blur-[2px] sm:px-10 sm:py-11"
+                  className="relative px-7 py-9 backdrop-blur-[3px] sm:px-11 sm:py-12"
                   style={{
-                    clipPath: PRINCIPLE_CLIP,
+                    clipPath: BEVEL_CLIP,
                     background:
-                      "linear-gradient(150deg, rgba(255,255,255,0.07), rgba(2,6,23,0.45))",
+                      "linear-gradient(150deg, rgba(255,255,255,0.075), rgba(3,7,26,0.5))",
                   }}
                 >
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-white/30 via-white/10 to-transparent"
+                  />
                   <span className={eyebrowDark}>{t.principles.eyebrow}</span>
-                  <h2 className="mt-6 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  <h2 className="mt-6 text-balance bg-gradient-to-br from-white via-white to-brand-200 bg-clip-text text-4xl font-semibold leading-[1.06] tracking-tight text-transparent sm:text-5xl lg:text-[3.5rem]">
                     {t.principles.title}
                   </h2>
                 </div>
               </div>
-              {/* The light runs past the panel's edge, which is what ties the
-                  header to the grid below instead of leaving it floating. */}
-              <div
-                aria-hidden="true"
-                className="relative h-px w-[130%] max-w-[42rem] bg-gradient-to-r from-brand-400/70 via-ocean-400/60 to-transparent"
-              >
-                <span className="absolute right-[26%] top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-ocean-200 shadow-[0_0_10px_2px_rgba(34,211,238,0.7)]" />
-              </div>
             </div>
           </Reveal>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:gap-8">
+          {/* The rail runs the full column, past the slab, and carries a slow
+              pulse — the one thing on the band that keeps moving. */}
+          <div
+            aria-hidden="true"
+            /* No `overflow-hidden` here: the rail is 1px tall, so clipping it
+               would cut the node's glow and the pulse down to a hairline. The
+               section's own clip is what keeps the travel off the page edge. */
+            className="relative h-px w-full bg-gradient-to-r from-brand-300/70 via-ocean-400/40 to-transparent"
+          >
+            <span className="absolute left-0 top-1/2 h-[3px] w-[3px] -translate-y-1/2 rounded-full bg-white shadow-[0_0_12px_3px_rgba(167,139,250,0.85)]" />
+            <span className="absolute top-1/2 h-px w-28 -translate-y-1/2 animate-rail-trace bg-gradient-to-r from-transparent via-white/90 to-transparent motion-reduce:animate-none" />
+          </div>
+
+          <div className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:mt-20 lg:gap-8">
             {t.principles.items.map((item, index) => (
               <Reveal
                 key={item.title}
-                delay={index * 0.06}
+                delay={index * 0.07}
                 className="h-full [&>*]:h-full"
               >
                 <PrincipleCard
@@ -691,7 +800,6 @@ export default function About() {
               ))}
             </dl>
           </Reveal>
-
         </div>
       </section>
 
