@@ -547,7 +547,7 @@ export default function About() {
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-400">
               {t.roots.detailsLabel}
             </p>
-            <dl className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {t.roots.details.map((detail) => (
                 <div key={detail.label}>
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-600">

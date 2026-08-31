@@ -85,10 +85,9 @@ const en = {
       "DigitalFace was founded by brothers Nicolás and José Caicedo, whose complementary backgrounds in marketing, quantitative analysis and technology shaped the company's early direction.",
     detailsLabel: "Company details",
     details: [
-      { label: "Origin", lines: ["Cali, Valle del Cauca", "Colombia"] },
       {
-        label: "Operations",
-        lines: ["Bugalagrande, Valle del Cauca", "Colombia"],
+        label: "Origin & operations",
+        lines: ["Cali, Valle del Cauca", "Colombia"],
       },
       { label: "Remote presence", lines: ["Miami, Florida", "United States"] },
       {
@@ -175,10 +174,9 @@ const es: typeof en = {
       "DigitalFace fue fundada por los hermanos Nicolás y José Caicedo, cuyas formaciones complementarias en marketing, análisis cuantitativo y tecnología marcaron la dirección inicial de la compañía.",
     detailsLabel: "Datos de la compañía",
     details: [
-      { label: "Origen", lines: ["Cali, Valle del Cauca", "Colombia"] },
       {
-        label: "Operación",
-        lines: ["Bugalagrande, Valle del Cauca", "Colombia"],
+        label: "Origen y operación",
+        lines: ["Cali, Valle del Cauca", "Colombia"],
       },
       {
         label: "Presencia remota",
