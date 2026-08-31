@@ -8,12 +8,17 @@ import { cn } from "@/lib/utils";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   Briefcase,
+  Building2,
+  Clock,
+  Globe,
+  MapPin,
   Target,
   TrendingUp,
   UserRoundCheck,
+  Users,
   type LucideIcon,
 } from "lucide-react";
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
 
 /**
  * The company page. DigitalFace is the protagonist throughout: the specialist
@@ -358,6 +363,183 @@ function PrincipleTile({
   );
 }
 
+/* --------------------------------------------------------------------------
+ * Roots — the company card.
+ *
+ * The band is one elevated white panel on a cool grey ground: an editorial two
+ * column top, then the company details along the foot. The map under the
+ * headline is generated from a coarse bitmap rather than traced or imported —
+ * it is decorative, so a 24 × 30 silhouette reads as the Americas at a glance
+ * and costs a few hundred bytes instead of a coastline path.
+ * -------------------------------------------------------------------------- */
+
+/** One character per dot, north to south, `#` for land. */
+const AMERICAS = [
+  ".....####..........###..",
+  "..##..######......####..",
+  "..####.########...####..",
+  "...###.##########..###..",
+  "....#############..##...",
+  ".....############.......",
+  "......###########.......",
+  ".......##########.......",
+  ".......##########.......",
+  ".......#########........",
+  "........#######.........",
+  ".........#####.##.......",
+  "..........####..##......",
+  "...........###.###......",
+  "............####........",
+  ".............#####......",
+  ".............######.....",
+  ".............######.....",
+  "..............######....",
+  "..............######....",
+  "..............######....",
+  "..............#####.....",
+  "..............#####.....",
+  "...............####.....",
+  "...............####.....",
+  "...............###......",
+  "...............###......",
+  "...............##.......",
+  "...............##.......",
+  "...............#........",
+];
+
+/* Dots are spaced wider than tall: the Americas are a portrait shape, and the
+   squeeze brings the visual closer to the square the column wants. */
+const DOT_X = 16;
+const DOT_Y = 11.5;
+
+function mapPoint(col: number, row: number) {
+  return { x: 10 + col * DOT_X, y: 8 + row * DOT_Y };
+}
+
+/** Grid positions of the two cities the copy names, from their real degrees. */
+const CALI = mapPoint(15.78, 16.32);
+const MIAMI = mapPoint(15.14, 11.0);
+
+const MAP_DOTS = AMERICAS.flatMap((line, row) =>
+  [...line].flatMap((cell, col) => {
+    if (cell !== "#") return [];
+    const { x, y } = mapPoint(col, row);
+    /* A deterministic wobble in the alpha keeps the field from reading as
+       graph paper. */
+    return [{ x, y, opacity: 0.16 + ((col * 7 + row * 13) % 5) * 0.028 }];
+  }),
+);
+
+/** A marker whose tip sits on the origin, so it can be dropped on a city. */
+function MapMarker({ x, y }: { x: number; y: number }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <ellipse rx="24" ry="9" fill="#7c3aed" opacity="0.06" />
+      <ellipse rx="16" ry="6" fill="#7c3aed" opacity="0.08" />
+      <ellipse
+        rx="9"
+        ry="3.4"
+        fill="none"
+        stroke="#7c3aed"
+        strokeOpacity="0.3"
+        strokeWidth="1"
+      />
+      <path
+        d="M0 -2 C-3.2 -8 -11 -13.6 -11 -20.4 A11 11 0 1 1 11 -20.4 C11 -13.6 3.2 -8 0 -2 Z"
+        fill="#7c3aed"
+      />
+      <circle cy="-20.4" r="4.3" fill="#ffffff" />
+    </g>
+  );
+}
+
+function RootsMap() {
+  const glowId = useId();
+  const arcId = useId();
+
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 388 352"
+      fill="none"
+      className="h-auto w-full"
+    >
+      <defs>
+        <radialGradient id={glowId} cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stopColor="#a78bfa" stopOpacity="0.16" />
+          <stop offset="1" stopColor="#a78bfa" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient
+          id={arcId}
+          x1={CALI.x}
+          y1={CALI.y}
+          x2={MIAMI.x}
+          y2={MIAMI.y}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#7c3aed" stopOpacity="0.7" />
+          <stop offset="1" stopColor="#0ea5e9" stopOpacity="0.55" />
+        </linearGradient>
+      </defs>
+
+      <ellipse cx="220" cy="180" rx="200" ry="180" fill={`url(#${glowId})`} />
+      {/* A single horizon curve is all the globe this needs. */}
+      <path
+        d="M4 152 Q196 44 384 152"
+        stroke="#94a3b8"
+        strokeOpacity="0.22"
+        strokeWidth="1"
+      />
+
+      {MAP_DOTS.map((dot) => (
+        <circle
+          key={`${dot.x}-${dot.y}`}
+          cx={dot.x}
+          cy={dot.y}
+          r="2.15"
+          fill="#4c1d95"
+          opacity={dot.opacity}
+        />
+      ))}
+
+      {/* Cali to Miami, bowed east so the line clears the landmass. */}
+      <path
+        d={`M${CALI.x} ${CALI.y} Q330 166 ${MIAMI.x} ${MIAMI.y}`}
+        stroke={`url(#${arcId})`}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeDasharray="3 5.5"
+      />
+
+      <MapMarker x={CALI.x} y={CALI.y} />
+      <MapMarker x={MIAMI.x} y={MIAMI.y} />
+    </svg>
+  );
+}
+
+/** The lavender disc that carries every icon on this card. */
+function RootsIcon({
+  icon: Icon,
+  className,
+}: {
+  icon: LucideIcon;
+  className?: string;
+}) {
+  return (
+    <span
+      className={cn(
+        "flex shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600 ring-1 ring-brand-100",
+        className,
+      )}
+    >
+      <Icon aria-hidden="true" strokeWidth={1.6} className="h-5 w-5" />
+    </span>
+  );
+}
+
+/** Matched to the details by position, so the content file stays copy-only. */
+const DETAIL_ICONS: readonly LucideIcon[] = [MapPin, Globe, Clock];
+
 export default function About() {
   const { locale, path } = useLocale();
   const t = aboutContent[locale];
@@ -509,60 +691,94 @@ export default function About() {
       </section>
 
       {/* 05 — Roots, company details and the close */}
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
+      <section className="bg-ink-50 py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-            <Reveal className="lg:col-span-5">
-              <span className={eyebrowLight}>{t.roots.eyebrow}</span>
-              <h2 className="mt-6 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-[2.5rem] lg:leading-[1.12]">
-                {t.roots.title}
-              </h2>
-            </Reveal>
-            <Reveal delay={0.08} className="lg:col-span-7">
-              <div className="space-y-5">
-                {t.roots.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="text-base leading-relaxed text-ink-500 sm:text-lg"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              {/* The founders get one line of company history and no more:
-                  the visitor's relationship is with DigitalFace. */}
-              <p className="mt-7 border-l-2 border-brand-200 pl-5 text-sm leading-relaxed text-ink-400">
-                {t.roots.foundersNote}
-              </p>
-            </Reveal>
-          </div>
-
-          <Reveal className="mt-16 border-t border-ink-200/70 pt-10 lg:mt-20">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-400">
-              {t.roots.detailsLabel}
-            </p>
-            <dl className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {t.roots.details.map((detail) => (
-                <div key={detail.label}>
-                  <dt className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-600">
-                    {detail.label}
-                  </dt>
-                  <dd className="mt-3 text-sm leading-relaxed text-ink-500">
-                    {detail.lines.map((line, index) => (
-                      <span
-                        key={line}
-                        className={cn(
-                          "block",
-                          index === 0 && "font-semibold text-slate-900",
-                        )}
-                      >
-                        {line}
-                      </span>
-                    ))}
-                  </dd>
+          <Reveal>
+            <div className="overflow-hidden rounded-[1.75rem] border border-ink-200/70 bg-white shadow-[0_44px_90px_-64px_rgba(15,23,42,0.4)] sm:rounded-[2.25rem]">
+              {/* Editorial top: the claim on the left, the account on the
+                  right, a hairline between them from lg up. */}
+              <div className="grid gap-11 p-6 sm:gap-12 sm:p-10 lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] lg:gap-0 lg:p-14">
+                <div className="lg:pr-14">
+                  <span className={eyebrowLight}>{t.roots.eyebrow}</span>
+                  <h2 className="mt-7 text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem]">
+                    {t.roots.title}
+                  </h2>
+                  <div className="mt-10 max-w-[26rem] lg:mt-12">
+                    <RootsMap />
+                  </div>
                 </div>
-              ))}
-            </dl>
+
+                <div className="lg:border-l lg:border-ink-200/70 lg:pl-14">
+                  <div className="space-y-6">
+                    {t.roots.paragraphs.map((paragraph) => (
+                      <p
+                        key={paragraph}
+                        className="text-base leading-relaxed text-ink-600 sm:text-lg"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  {/* The founders get one line of company history and no more:
+                      the visitor's relationship is with DigitalFace. An
+                      annotation, deliberately not a second card. */}
+                  <div className="mt-9 flex items-start gap-5 sm:mt-10">
+                    <RootsIcon icon={Users} className="mt-1 h-12 w-12" />
+                    <p className="border-l-2 border-brand-200 pl-5 text-[15px] leading-relaxed text-ink-500 sm:text-base">
+                      {t.roots.foundersNote}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-ink-200/70 p-6 sm:p-10 lg:px-14 lg:py-12">
+                <div className="flex items-center gap-3.5">
+                  <RootsIcon icon={Building2} className="h-10 w-10" />
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-900 sm:text-[13px]">
+                    {t.roots.detailsLabel}
+                  </p>
+                </div>
+
+                <dl className="mt-9 grid gap-9 sm:grid-cols-2 lg:grid-cols-3 lg:gap-0">
+                  {t.roots.details.map((detail, index, all) => (
+                    <div
+                      key={detail.label}
+                      className={cn(
+                        "flex gap-4",
+                        /* Hairlines between the columns rather than three
+                           separate surfaces — this stays one card. */
+                        index > 0 && "lg:border-l lg:border-ink-200/70 lg:pl-9",
+                        index < all.length - 1 && "lg:pr-9",
+                      )}
+                    >
+                      <RootsIcon
+                        icon={DETAIL_ICONS[index % DETAIL_ICONS.length]}
+                        className="mt-0.5 h-11 w-11"
+                      />
+                      <div className="min-w-0">
+                        <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-600 sm:text-xs">
+                          {detail.label}
+                        </dt>
+                        <dd className="mt-2.5 text-base leading-relaxed text-ink-500">
+                          {detail.lines.map((line, lineIndex) => (
+                            <span
+                              key={line}
+                              className={cn(
+                                "block",
+                                lineIndex === 0 &&
+                                  "font-semibold text-slate-900",
+                              )}
+                            >
+                              {line}
+                            </span>
+                          ))}
+                        </dd>
+                      </div>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
