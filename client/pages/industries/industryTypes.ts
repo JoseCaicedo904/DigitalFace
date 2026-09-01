@@ -44,13 +44,27 @@ export type IndustryPackage = {
   /** Brand name. Identical in every locale. */
   name: string;
   nicheName: string;
+  /** A money amount on the fixed plans, a word ("Custom") on the custom plan. */
   price: string;
-  setup: string;
+  /** Fixed plans only. Its absence is what marks a plan as quoted, not priced. */
+  setup?: string;
+  /** Custom plan only: replaces the "/month" and setup lines under the price. */
+  priceCaption?: string;
   description: string;
   idealFor: string;
   featured?: boolean;
   highlights: string[];
+  /** Custom plan only: says the highlights are examples, not inclusions. */
+  scopeNote?: string;
   details: PackageDetail[];
+  /**
+   * The commercial guardrail, shown on the card rather than hidden in the
+   * accordion: the media-budget ceiling on the fixed plans, and what a quote is
+   * built from on the custom plan.
+   */
+  note: { title: string; body: string };
+  /** Usage-based billing small print, shown under the inclusions. */
+  footnotes?: string[];
   cta: string;
 };
 
@@ -180,6 +194,8 @@ export type IndustryUiCopy = {
     expandLabel: string;
     idealFor: string;
     customProposal: string;
+    /** Commitment answer, stated above the cards rather than in small print. */
+    noContract: string;
     footnote: string;
   };
   proposalBand: {

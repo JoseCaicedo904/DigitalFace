@@ -30,16 +30,18 @@ export const industryContentEn: IndustryLocaleBundle = {
     capabilitiesDisclaimer:
       "DigitalFace automates administrative communication and business workflows. Licensed professionals keep full clinical responsibility.",
     packages: {
-      eyebrow: "Three growth levels",
+      eyebrow: "Two growth levels and a custom plan",
       description:
-        "Every package is implemented and managed by DigitalFace. Open any inclusion to see the operating scope behind the headline.",
+        "Every package is implemented and managed by DigitalFace, with CRM included. Open any inclusion to see the operating scope behind the headline.",
       mostPopular: "Most popular",
       perMonth: "/month",
       expandLabel: "Open any inclusion",
       idealFor: "Ideal for",
       customProposal: "Request a custom proposal",
+      noContract:
+        "No annual contract required. Every plan runs on a month-to-month basis.",
       footnote:
-        "Advertising budget is paid directly by you. Messaging, AI usage, telephony and unusual third-party consumption may be billed separately according to the approved scope. Professional photo and video production is not included.",
+        "Advertising budget is paid directly by you to the platforms, and each plan states the budget it manages; higher budgets require an adjusted management fee. AI usage beyond the included balance, email delivery, messaging, telephony and unusual third-party consumption are billed according to the approved scope. Professional photo and video production is not included.",
     },
     proposalBand: {
       eyebrow: "Beyond the standard package",
@@ -563,157 +565,170 @@ export const industryContentEn: IndustryLocaleBundle = {
         {
           name: "DigitalFace Capture",
           nicheName: "Dental Patient Capture",
-          price: "$790",
+          price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate dental inquiries, organize every opportunity and follow up automatically.",
+            "Generate dental inquiries, capture every one of them in your CRM and answer automatically.",
           idealFor:
-            "Practices that need a dependable acquisition and follow-up foundation before adding AI.",
+            "Practices that need a dependable way to bring dental inquiries in and stop losing them.",
           highlights: [
             "One priority acquisition channel",
-            "Dental conversion page or lead form",
-            "CRM, follow-up, booking and reminders",
+            "CRM included for lead capture and follow-up",
+            "Automatic first response, booking and reminders",
           ],
           details: [
             {
               title: "Managed dental acquisition",
               description:
-                "We select and manage one priority channel, usually Meta or Google, based on the treatment, market, offer and patient intent.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real treatment demand.",
             },
             {
-              title: "Treatment-focused conversion path",
+              title: "CRM included",
               description:
-                "One landing page or lead form aligned to the selected dental service and the promise made in the ad.",
+                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
             },
             {
-              title: "One patient-opportunity pipeline",
+              title: "Automatic first response",
               description:
-                "Every form, ad inquiry and connected channel creates an organized opportunity with visible source and stage.",
-            },
-            {
-              title: "Immediate automated follow-up",
-              description:
-                "Rule-based SMS, email or WhatsApp messages acknowledge the inquiry and guide the patient to the next step.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient to the next step, day or night.",
             },
             {
               title: "Consultation calendar and reminders",
               description:
-                "Booking links, confirmation sequences, reminders and rescheduling instructions cut manual coordination.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
             },
             {
               title: "Monthly performance review",
               description:
-                "We review lead sources, response activity, consultation opportunities and the next campaign decisions.",
+                "We review inquiry sources, response activity, booked consultations and cost per booked consultation, then agree the next campaign move.",
             },
           ],
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $1,000/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
           cta: "Start Dental Patient Capture",
         },
         {
           name: "DigitalFace AI",
-          nicheName: "AI Dental Concierge",
-          price: "$1,200",
+          nicheName: "Complete Dental Growth System",
+          price: "$1,490",
           setup: "$1,097 one-time setup",
           description:
-            "Answer around the clock, organize patient intent and move more inquiries toward a consultation.",
+            "Two acquisition channels, a conversion website, AI communication and campaign infrastructure, managed as one system.",
           idealFor:
-            "Dental teams with steady inquiry volume, repetitive questions or bilingual patient communication.",
+            "Practices ready to run the full acquisition and conversion system, with AI answering around the clock.",
           featured: true,
           highlights: [
             "Everything in DigitalFace Capture",
-            "Bilingual AI patient communication",
-            "Qualification, booking and human handoff",
+            "Conversion website + up to 2 forms",
+            "AI communication with a $20 monthly usage balance",
           ],
           details: [
             {
               title: "Everything in DigitalFace Capture",
               description:
-                "The full acquisition, conversion page, CRM, follow-up, calendar, reminder and reporting foundation stays included.",
+                "The acquisition, CRM, first-response, calendar and reporting foundation stays included, with a second channel added on top.",
             },
             {
-              title: "Approved dental knowledge",
+              title: "Two priority acquisition channels",
               description:
-                "The assistant answers only from practice-approved information about services, location, hours, policies and administrative questions.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked consultations.",
             },
             {
-              title: "English and Spanish conversations",
+              title: "Conversion website with up to 2 forms",
               description:
-                "The assistant follows the patient's language and keeps the conversation consistent from start to finish.",
+                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
-              title: "Treatment-interest organization",
+              title: "Bilingual AI communication",
               description:
-                "Interest in implants, veneers, smile design or any configured service is captured and synced to the CRM.",
-            },
-            {
-              title: "Consultation assistance",
-              description:
-                "The assistant guides patients toward available consultation times and supports the configured booking workflow.",
+                "The assistant answers in English and Spanish, using only information you approve: treatments, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
             },
             {
               title: "Clinical and exception handoff",
               description:
-                "Diagnosis, eligibility, case-specific treatment, financing exceptions, complaints and urgent concerns go to people.",
+                "Diagnosis, treatment eligibility, financing exceptions, complaints and urgent concerns go to your team, never to the assistant.",
             },
             {
-              title: "AI monitoring and improvement",
+              title: "Email marketing setup and automation",
               description:
-                "We review conversation patterns and safe fallbacks so the assistant improves without crossing clinical boundaries.",
+                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
+            },
+            {
+              title: "Up to 4 static ad creatives per month",
+              description:
+                "Static photo and graphic ad pieces, adapted with copy in English and Spanish. Video production is not included.",
             },
           ],
-          cta: "Add an AI Dental Concierge",
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $2,500/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
+          footnotes: [
+            "AI usage after the included $20 balance is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens.",
+            "Email delivery is billed at $1.35 per 1,000 emails sent.",
+            "Video production is not included. We can connect you with an external production partner when needed.",
+          ],
+          cta: "Start the Complete Dental System",
         },
         {
-          name: "DigitalFace Full Growth",
-          nicheName: "Complete Dental Growth System",
-          price: "$1,800",
-          setup: "$1,597 one-time setup",
+          name: "The DigitalFace Sales System",
+          nicheName: "Custom Dental Growth Plan",
+          price: "Custom",
+          priceCaption: "Scoped and quoted around your requirements",
           description:
-            "Connect multichannel acquisition, AI conversion, reactivation and growth management.",
-          idealFor:
-            "Established practices ready to grow several treatments and manage the full patient-acquisition journey.",
+            "For practices with larger budgets, several locations, advanced acquisition, complex automation or custom integrations.",
+          idealFor: "Practices whose requirements go beyond a fixed package.",
+          scopeNote:
+            "These are available capabilities, not a fixed inclusion list. We scope and quote only what your practice actually needs.",
           highlights: [
-            "Everything in DigitalFace AI",
-            "Up to two acquisition channels",
-            "Reactivation, attribution and growth strategy",
+            "Multiple acquisition channels and larger budgets",
+            "Advanced CRM, AI and custom integrations",
+            "Additional locations, languages and priority support",
           ],
           details: [
             {
-              title: "Everything in DigitalFace AI",
+              title: "Multiple acquisition channels",
               description:
-                "The complete acquisition, CRM, automation, AI communication, appointment, handoff and reporting system stays included.",
+                "More than two channels working together, with the mix built around your treatment priorities, your market and your budget.",
             },
             {
-              title: "Multichannel patient acquisition",
+              title: "Larger advertising budgets",
               description:
-                "Up to two channels selected from Meta, Google or another justified platform, based on treatment demand and budget.",
+                "Media budgets above the ceilings managed by the fixed plans, with the management fee adjusted to the scope we agree.",
             },
             {
-              title: "Multiple treatment campaigns",
+              title: "Additional locations and languages",
               description:
-                "Campaigns and conversion paths can support more than one priority treatment or patient segment within the agreed scope.",
+                "Separate campaigns, calendars, pipelines and conversations per location, and communication beyond English and Spanish.",
             },
             {
-              title: "Patient database reactivation",
+              title: "Advanced CRM architecture",
               description:
-                "Approved segments of older inquiries or patients receive structured campaigns tied to relevant practice offers.",
+                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
             },
             {
-              title: "No-show and lost-lead recovery",
+              title: "Advanced AI communication",
               description:
-                "Configured sequences recover missed consultations and inquiries that went quiet before booking.",
+                "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
             },
             {
-              title: "Conversion and attribution review",
+              title: "Custom integrations and automations",
               description:
-                "We follow the path from source to consultation opportunity and improve campaigns, pages and follow-up logic.",
+                "Connections to your practice management, billing or internal tools, and automations designed for your specific operation.",
             },
             {
-              title: "Monthly dental growth strategy",
+              title: "Reactivation, reporting and priority support",
               description:
-                "A working session on treatment priorities, campaign decisions, conversion performance and the next optimization cycle.",
+                "Structured reactivation of your existing patients, attribution across the full journey, and a support level agreed with you.",
             },
           ],
-          cta: "Build My Dental Growth System",
+          note: {
+            title: "How the price is built",
+            body: "Your requirements, advertising budget, channels, locations, integrations, AI usage, automation complexity and support level. We map the scope with you before quoting anything.",
+          },
+          cta: "Build a Custom Dental Plan",
         },
       ],
       faqTitle: "What dental practices usually ask us",
@@ -1230,157 +1245,170 @@ export const industryContentEn: IndustryLocaleBundle = {
         {
           name: "DigitalFace Capture",
           nicheName: "Aesthetic Consultation Capture",
-          price: "$790",
+          price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate procedure inquiries, organize every opportunity and automate the first follow-up.",
+            "Generate procedure inquiries, capture every one of them in your CRM and answer automatically.",
           idealFor:
-            "Aesthetic practices that need a dependable acquisition and consultation follow-up foundation.",
+            "Practices that need a dependable way to bring procedure inquiries in and stop losing them.",
           highlights: [
             "One priority acquisition channel",
-            "Procedure-focused conversion path",
-            "CRM, follow-up, booking and reminders",
+            "CRM included for lead capture and follow-up",
+            "Automatic first response, booking and reminders",
           ],
           details: [
             {
               title: "Managed aesthetic acquisition",
               description:
-                "We select and manage one priority channel based on the procedure, market demand, creative assets and patient intent.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real procedure demand.",
             },
             {
-              title: "Procedure-focused conversion page",
+              title: "CRM included",
               description:
-                "One landing page or lead form presenting the consultation opportunity with clear expectations and next steps.",
+                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
             },
             {
-              title: "One centralized inquiry pipeline",
+              title: "Automatic first response",
               description:
-                "Every connected form and ad inquiry becomes a visible opportunity with source, stage, owner and history.",
-            },
-            {
-              title: "Immediate administrative follow-up",
-              description:
-                "Rule-based messages acknowledge the inquiry and point patients to approved consultation information.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient to the next step, day or night.",
             },
             {
               title: "Consultation calendar and reminders",
               description:
-                "Booking links, confirmations, reminders, rescheduling and cancellation instructions reduce manual work.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
             },
             {
-              title: "Monthly campaign review",
+              title: "Monthly performance review",
               description:
-                "We review lead sources, response activity, consultation opportunities and the next optimization decisions.",
+                "We review inquiry sources, response activity, booked consultations and cost per booked consultation, then agree the next campaign move.",
             },
           ],
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $1,000/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
           cta: "Start Consultation Capture",
         },
         {
           name: "DigitalFace AI",
-          nicheName: "AI Patient Concierge",
-          price: "$1,200",
+          nicheName: "Complete Aesthetic Growth System",
+          price: "$1,490",
           setup: "$1,097 one-time setup",
           description:
-            "Answer around the clock, organize patient intent, support booking and hand sensitive conversations to your team.",
+            "Two acquisition channels, a conversion website, AI communication and campaign infrastructure, managed as one system.",
           idealFor:
-            "Practices with steady procedure inquiries or a heavy load of repetitive bilingual conversations.",
+            "Practices ready to run the full acquisition and conversion system, with AI answering around the clock.",
           featured: true,
           highlights: [
             "Everything in DigitalFace Capture",
-            "Bilingual AI patient communication",
-            "Consultation support and clinical handoff",
+            "Conversion website + up to 2 forms",
+            "AI communication with a $20 monthly usage balance",
           ],
           details: [
             {
               title: "Everything in DigitalFace Capture",
               description:
-                "The acquisition, conversion page, CRM, automated follow-up, calendar, reminder and reporting foundation stays included.",
+                "The acquisition, CRM, first-response, calendar and reporting foundation stays included, with a second channel added on top.",
             },
             {
-              title: "Approved practice knowledge",
+              title: "Two priority acquisition channels",
               description:
-                "The assistant uses approved information about the practice, procedures, consultation process, location and policies.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked consultations.",
             },
             {
-              title: "English and Spanish responses",
+              title: "Conversion website with up to 2 forms",
               description:
-                "The conversation follows the patient's language without switching unpredictably or mixing the two.",
+                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
-              title: "Procedure-interest capture",
+              title: "Bilingual AI communication",
               description:
-                "Configured procedure categories, consultation intent and safe administrative facts sync with the CRM.",
+                "The assistant answers in English and Spanish, using only information you approve: procedures, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
             },
             {
-              title: "Consultation booking support",
+              title: "Clinical and exception handoff",
               description:
-                "The assistant guides interested patients toward configured availability and booking workflows.",
+                "Clinical suitability, contraindications, diagnosis, personalized medical advice and complaints are escalated to qualified providers.",
             },
             {
-              title: "Human clinical escalation",
+              title: "Email marketing setup and automation",
               description:
-                "Safety, symptoms, candidacy, medical advice, complaints and unusual cases go to authorized team members.",
+                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
             },
             {
-              title: "Conversation improvement",
+              title: "Up to 4 static ad creatives per month",
               description:
-                "We review safe fallbacks, common questions and handoff reasons to keep the experience clear and reliable.",
+                "Static photo and graphic ad pieces, adapted with copy in English and Spanish. Video production is not included.",
             },
           ],
-          cta: "Add an AI Patient Concierge",
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $2,500/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
+          footnotes: [
+            "AI usage after the included $20 balance is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens.",
+            "Email delivery is billed at $1.35 per 1,000 emails sent.",
+            "Video production is not included. We can connect you with an external production partner when needed.",
+          ],
+          cta: "Start the Complete Aesthetic System",
         },
         {
-          name: "DigitalFace Full Growth",
-          nicheName: "Aesthetic Practice Growth System",
-          price: "$1,800",
-          setup: "$1,597 one-time setup",
+          name: "The DigitalFace Sales System",
+          nicheName: "Custom Aesthetic Growth Plan",
+          price: "Custom",
+          priceCaption: "Scoped and quoted around your requirements",
           description:
-            "Combine multichannel acquisition, AI conversion, reactivation and growth management.",
-          idealFor:
-            "Established aesthetic practices ready to scale procedure campaigns and the full consultation journey.",
+            "For practices with larger budgets, several locations, advanced acquisition, complex automation or custom integrations.",
+          idealFor: "Practices whose requirements go beyond a fixed package.",
+          scopeNote:
+            "These are available capabilities, not a fixed inclusion list. We scope and quote only what your practice actually needs.",
           highlights: [
-            "Everything in DigitalFace AI",
-            "Up to two acquisition channels",
-            "Reactivation, attribution and growth strategy",
+            "Multiple acquisition channels and larger budgets",
+            "Advanced CRM, AI and custom integrations",
+            "Additional locations, languages and priority support",
           ],
           details: [
             {
-              title: "Everything in DigitalFace AI",
+              title: "Multiple acquisition channels",
               description:
-                "The complete acquisition, CRM, automation, AI communication, appointment, clinical handoff and reporting system stays included.",
+                "More than two channels working together, with the mix built around your procedure priorities, your market and your budget.",
             },
             {
-              title: "Multichannel acquisition",
+              title: "Larger advertising budgets",
               description:
-                "Up to two justified channels selected according to procedure demand, patient intent, geography, creative and budget.",
+                "Media budgets above the ceilings managed by the fixed plans, with the management fee adjusted to the scope we agree.",
             },
             {
-              title: "Multiple consultation campaigns",
+              title: "Additional locations and languages",
               description:
-                "Campaigns and conversion paths can support more than one approved procedure priority within the agreed scope.",
+                "Separate campaigns, calendars, pipelines and conversations per location, and communication beyond English and Spanish.",
             },
             {
-              title: "Patient-interest reactivation",
+              title: "Advanced CRM architecture",
               description:
-                "Older inquiries can be segmented and re-engaged with practice-approved consultation opportunities.",
+                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
             },
             {
-              title: "Comment-to-conversation flows",
+              title: "Advanced AI communication",
               description:
-                "Selected Facebook and Instagram engagement enters controlled reply, direct-message and capture workflows.",
+                "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
             },
             {
-              title: "Conversion and attribution review",
+              title: "Custom integrations and automations",
               description:
-                "We connect campaign sources to consultation stages and improve pages, messages and follow-up logic.",
+                "Connections to your practice management, billing or internal tools, and automations designed for your specific operation.",
             },
             {
-              title: "Monthly aesthetic growth strategy",
+              title: "Reactivation, reporting and priority support",
               description:
-                "Procedure priorities, campaign performance, consultation flow and the next optimization cycle, reviewed together.",
+                "Structured reactivation of your existing patients, attribution across the full journey, and a support level agreed with you.",
             },
           ],
-          cta: "Build My Aesthetic Growth System",
+          note: {
+            title: "How the price is built",
+            body: "Your requirements, advertising budget, channels, locations, integrations, AI usage, automation complexity and support level. We map the scope with you before quoting anything.",
+          },
+          cta: "Build a Custom Aesthetic Plan",
         },
       ],
       faqTitle: "What aesthetic practices usually ask us",
@@ -1892,157 +1920,170 @@ export const industryContentEn: IndustryLocaleBundle = {
         {
           name: "DigitalFace Capture",
           nicheName: "Med Spa Client Capture",
-          price: "$790",
+          price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate treatment inquiries, organize every contact and automate the path to a booking.",
+            "Generate treatment inquiries, capture every one of them in your CRM and answer automatically.",
           idealFor:
-            "Med spas that need a dependable promotion, capture and appointment follow-up foundation.",
+            "Med spas that need a dependable way to bring client inquiries in and stop losing them.",
           highlights: [
             "One priority acquisition channel",
-            "Treatment promotion landing path",
-            "CRM, follow-up, booking and reminders",
+            "CRM included for lead capture and follow-up",
+            "Automatic first response, booking and reminders",
           ],
           details: [
             {
               title: "Managed med spa acquisition",
               description:
-                "We select and manage one priority channel, often Meta or Google, based on the offer, local demand, assets and budget.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real treatment demand.",
             },
             {
-              title: "Treatment promotion conversion path",
+              title: "CRM included",
               description:
-                "One landing page or lead form aligned to the selected treatment, the offer and the booking expectation.",
+                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
             },
             {
-              title: "One client-opportunity pipeline",
+              title: "Automatic first response",
               description:
-                "Connected ad and form inquiries enter one visible pipeline with source, treatment interest and status.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the client to the next step, day or night.",
             },
             {
-              title: "Immediate automated follow-up",
+              title: "Appointment calendar and reminders",
               description:
-                "Rule-based messages acknowledge the inquiry and point people to approved information and booking.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
             },
             {
-              title: "Confirmations and reminders",
+              title: "Monthly performance review",
               description:
-                "Booking links, confirmations, reminders, rescheduling and cancellation instructions reduce calendar friction.",
-            },
-            {
-              title: "Monthly promotion review",
-              description:
-                "We review acquisition sources, booking opportunities, response activity and the next campaign decisions.",
+                "We review inquiry sources, response activity, booked appointments and cost per booked appointment, then agree the next campaign move.",
             },
           ],
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $1,000/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
           cta: "Start Med Spa Client Capture",
         },
         {
           name: "DigitalFace AI",
-          nicheName: "AI Booking Concierge",
-          price: "$1,200",
+          nicheName: "Complete Med Spa Growth System",
+          price: "$1,490",
           setup: "$1,097 one-time setup",
           description:
-            "Answer approved treatment questions, organize intent, support booking and pass conversations to your team.",
+            "Two acquisition channels, a conversion website, AI communication and campaign infrastructure, managed as one system.",
           idealFor:
-            "Med spas with steady social inquiry volume, repetitive questions or an overloaded front desk.",
+            "Med spas ready to run the full acquisition and conversion system, with AI answering around the clock.",
           featured: true,
           highlights: [
             "Everything in DigitalFace Capture",
-            "Bilingual AI booking communication",
-            "Treatment interest, booking and handoff",
+            "Conversion website + up to 2 forms",
+            "AI communication with a $20 monthly usage balance",
           ],
           details: [
             {
               title: "Everything in DigitalFace Capture",
               description:
-                "The acquisition, promotion page, CRM, automated follow-up, calendar, reminder and reporting foundation stays included.",
+                "The acquisition, CRM, first-response, calendar and reporting foundation stays included, with a second channel added on top.",
             },
             {
-              title: "Approved med spa knowledge",
+              title: "Two priority acquisition channels",
               description:
-                "The assistant uses configured information about treatments, promotions, location, hours, pricing policies and availability.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked appointments.",
             },
             {
-              title: "English and Spanish conversations",
+              title: "Conversion website with up to 2 forms",
               description:
-                "The assistant answers in the client's language and keeps the conversation consistent throughout.",
+                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
-              title: "Treatment-interest capture",
+              title: "Bilingual AI communication",
               description:
-                "Configured treatment categories, offer interest, language and booking intent are organized in the CRM.",
+                "The assistant answers in English and Spanish, using only information you approve: treatments, promotions, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
             },
             {
-              title: "Appointment assistance",
+              title: "Medical and exception handoff",
               description:
-                "The assistant guides interested clients toward configured availability and booking workflows.",
+                "Medical questions, contraindications, symptoms, complaints and staff requests are escalated to your team, never answered by the assistant.",
             },
             {
-              title: "Human and clinical handoff",
+              title: "Email marketing setup and automation",
               description:
-                "Medical questions, contraindications, symptoms, complaints, exceptions and staff requests are escalated.",
+                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
             },
             {
-              title: "AI monitoring and improvement",
+              title: "Up to 4 static ad creatives per month",
               description:
-                "We review common questions, safe fallbacks and handoff patterns to keep improving the client experience.",
+                "Static photo and graphic ad pieces, adapted with copy in English and Spanish. Video production is not included.",
             },
           ],
-          cta: "Add an AI Booking Concierge",
+          note: {
+            title: "Advertising budget",
+            body: "Management includes advertising budgets up to $2,500/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
+          },
+          footnotes: [
+            "AI usage after the included $20 balance is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens.",
+            "Email delivery is billed at $1.35 per 1,000 emails sent.",
+            "Video production is not included. We can connect you with an external production partner when needed.",
+          ],
+          cta: "Start the Complete Med Spa System",
         },
         {
-          name: "DigitalFace Full Growth",
-          nicheName: "Complete Med Spa Growth System",
-          price: "$1,800",
-          setup: "$1,597 one-time setup",
+          name: "The DigitalFace Sales System",
+          nicheName: "Custom Med Spa Growth Plan",
+          price: "Custom",
+          priceCaption: "Scoped and quoted around your requirements",
           description:
-            "Connect multichannel promotion, AI booking, reactivation, reviews and growth management.",
-          idealFor:
-            "Established med spas ready to scale several treatments and work on acquisition and retention together.",
+            "For med spas with larger budgets, several locations, advanced acquisition, complex automation or custom integrations.",
+          idealFor: "Med spas whose requirements go beyond a fixed package.",
+          scopeNote:
+            "These are available capabilities, not a fixed inclusion list. We scope and quote only what your med spa actually needs.",
           highlights: [
-            "Everything in DigitalFace AI",
-            "Up to two acquisition channels",
-            "Reactivation, reviews and growth strategy",
+            "Multiple acquisition channels and larger budgets",
+            "Advanced CRM, AI and custom integrations",
+            "Additional locations, languages and priority support",
           ],
           details: [
             {
-              title: "Everything in DigitalFace AI",
+              title: "Multiple acquisition channels",
               description:
-                "The complete acquisition, CRM, automation, AI communication, appointment, handoff and reporting system stays included.",
+                "More than two channels working together, with the mix built around your treatment priorities, your market and your budget.",
             },
             {
-              title: "Multichannel treatment acquisition",
+              title: "Larger advertising budgets",
               description:
-                "Up to two justified channels selected according to the treatment mix, local market, creative assets and budget.",
+                "Media budgets above the ceilings managed by the fixed plans, with the management fee adjusted to the scope we agree.",
             },
             {
-              title: "Multiple treatment campaigns",
+              title: "Additional locations and languages",
               description:
-                "Campaigns and conversion paths can support more than one approved treatment or promotion within the agreed scope.",
+                "Separate campaigns, calendars, pipelines and conversations per location, and communication beyond English and Spanish.",
             },
             {
-              title: "Client database reactivation",
+              title: "Advanced CRM architecture",
               description:
-                "Older contacts and past clients are segmented for relevant treatment, seasonal, membership or rebooking campaigns.",
+                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
             },
             {
-              title: "Review and rebooking workflows",
+              title: "Advanced AI communication",
               description:
-                "Post-visit journeys request feedback, encourage the right next appointment and preserve client history.",
+                "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
             },
             {
-              title: "Comment-to-conversation flows",
+              title: "Custom integrations and automations",
               description:
-                "Selected Facebook and Instagram engagement enters controlled reply, direct-message and capture paths.",
+                "Connections to your practice management, billing or internal tools, and automations designed for your specific operation.",
             },
             {
-              title: "Monthly med spa growth strategy",
+              title: "Reactivation, reporting and priority support",
               description:
-                "Treatment priorities, campaign performance, booking conversion, retention and the next optimization cycle, reviewed together.",
+                "Structured reactivation of your existing clients, attribution across the full journey, and a support level agreed with you.",
             },
           ],
-          cta: "Build My Med Spa Growth System",
+          note: {
+            title: "How the price is built",
+            body: "Your requirements, advertising budget, channels, locations, integrations, AI usage, automation complexity and support level. We map the scope with you before quoting anything.",
+          },
+          cta: "Build a Custom Med Spa Plan",
         },
       ],
       faqTitle: "What med spas usually ask us",

@@ -36,7 +36,9 @@ import {
   Languages,
   LineChart,
   LockKeyhole,
+  Megaphone,
   MessageSquareText,
+  Plus,
   ShieldCheck,
   Sparkles,
   UserRoundCheck,
@@ -175,25 +177,58 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
         <span className="text-4xl font-semibold tracking-tight text-slate-900">
           {plan.price}
         </span>
-        <span className="text-sm font-medium text-ink-500">
-          {ui.packages.perMonth}
-        </span>
+        {plan.setup ? (
+          <span className="text-sm font-medium text-ink-500">
+            {ui.packages.perMonth}
+          </span>
+        ) : null}
       </div>
-      <p className="mt-1 text-xs font-medium text-ink-400">+ {plan.setup}</p>
+      <p className="mt-1 text-xs font-medium text-ink-400">
+        {plan.setup ? `+ ${plan.setup}` : plan.priceCaption}
+      </p>
       <p className="mt-5 min-h-[4.5rem] text-sm leading-relaxed text-ink-500">
         {plan.description}
       </p>
 
-      <div className="mt-6 space-y-3 rounded-2xl border border-brand-100 bg-brand-50/70 p-5">
-        {plan.highlights.map((item) => (
-          <p
-            key={item}
-            className="flex items-start gap-2.5 text-sm text-ink-600"
-          >
-            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
-            <span>{item}</span>
-          </p>
-        ))}
+      {plan.scopeNote ? (
+        <p className="mt-5 text-xs leading-relaxed text-ink-400">
+          {plan.scopeNote}
+        </p>
+      ) : null}
+
+      <div
+        className={cn(
+          "space-y-3 rounded-2xl border border-brand-100 bg-brand-50/70 p-5",
+          plan.scopeNote ? "mt-3" : "mt-6",
+        )}
+      >
+        {plan.highlights.map((item) => {
+          /* A tick would read as "included" on a plan that promises nothing. */
+          const Marker = plan.scopeNote ? Plus : CheckCircle2;
+          return (
+            <p
+              key={item}
+              className="flex items-start gap-2.5 text-sm text-ink-600"
+            >
+              <Marker className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+              <span>{item}</span>
+            </p>
+          );
+        })}
+      </div>
+
+      <div className="mt-4 rounded-2xl border border-ink-100 bg-ink-50/70 p-5">
+        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+          {plan.setup ? (
+            <Megaphone className="h-3.5 w-3.5 shrink-0 text-brand-600" />
+          ) : (
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-brand-600" />
+          )}
+          {plan.note.title}
+        </p>
+        <p className="mt-2 text-[11px] leading-relaxed text-ink-500">
+          {plan.note.body}
+        </p>
       </div>
 
       <div className="mt-6">
@@ -217,6 +252,19 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
           ))}
         </Accordion>
       </div>
+
+      {plan.footnotes?.length ? (
+        <div className="mt-6 space-y-1.5 border-t border-ink-100 pt-4">
+          {plan.footnotes.map((footnote) => (
+            <p
+              key={footnote}
+              className="text-[11px] leading-relaxed text-ink-400"
+            >
+              {footnote}
+            </p>
+          ))}
+        </div>
+      ) : null}
 
       <div className="mt-6 border-t border-ink-100 pt-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400">
@@ -789,6 +837,12 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                 title={data.packagesTitle}
                 description={ui.packages.description}
               />
+            </Reveal>
+            <Reveal reducedMotion={reducedMotion} className="mt-6 text-center">
+              <p className="inline-flex items-start gap-2 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-3 text-left text-sm font-semibold text-brand-700 sm:items-center sm:rounded-full sm:py-2 sm:text-center">
+                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 sm:mt-0" />
+                {ui.packages.noContract}
+              </p>
             </Reveal>
             <div className="mt-14 grid items-stretch gap-7 lg:grid-cols-3">
               {data.packages.map((plan, index) => (

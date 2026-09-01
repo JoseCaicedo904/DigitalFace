@@ -65,7 +65,7 @@ const en = {
   metadata: {
     title: "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
     description:
-      "DigitalFace Capture, DigitalFace AI and DigitalFace Custom: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
+      "DigitalFace Capture, DigitalFace AI and The DigitalFace Sales System: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
   },
   hero: {
     eyebrow: "Plans and pricing",
@@ -221,7 +221,7 @@ const en = {
       },
       {
         level: "Custom",
-        name: "DigitalFace Custom",
+        name: "The DigitalFace Sales System",
         price: "Custom",
         perMonth: false,
         setup: null,
@@ -388,7 +388,7 @@ const es: typeof en = {
   metadata: {
     title: "Planes y Precios para Clínicas | DigitalFace Marketing",
     description:
-      "DigitalFace Capture, DigitalFace AI y DigitalFace Custom: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
+      "DigitalFace Capture, DigitalFace AI y The DigitalFace Sales System: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
   },
   hero: {
     eyebrow: "Planes y precios",
@@ -544,7 +544,7 @@ const es: typeof en = {
       },
       {
         level: "A medida",
-        name: "DigitalFace Custom",
+        name: "The DigitalFace Sales System",
         price: "A medida",
         perMonth: false,
         setup: null,
