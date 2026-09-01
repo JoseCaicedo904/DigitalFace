@@ -63,6 +63,20 @@ const en = {
     description:
       "Book a short DigitalFace consultation, or use the form above if you would rather we came back to you in writing.",
     ctaLabel: "Choose a time",
+    /* The scheduler preview needs its own labels: it is a real interface, so
+       it has to speak the visitor's language before the calendar loads. */
+    highlights: [
+      "A short consultation, not a sales pitch",
+      "Pick the time that suits you",
+      "Prefer to write? The form gets a reply within one business day",
+    ],
+    panel: {
+      label: "DigitalFace consultation",
+      duration: "30 min",
+      timezone: "Times shown in ET",
+      slotsLabel: "Available times",
+    },
+    secondaryLabel: "Use the form instead",
   },
 } satisfies Record<string, unknown>;
 
@@ -128,6 +142,18 @@ const es: typeof en = {
     description:
       "Agenda una consulta corta con DigitalFace, o usa el formulario de arriba si prefieres que te respondamos por escrito.",
     ctaLabel: "Elige un horario",
+    highlights: [
+      "Una consulta corta, no una llamada de ventas",
+      "Eliges el horario que te sirva",
+      "¿Prefieres escribir? El formulario recibe respuesta en un día hábil",
+    ],
+    panel: {
+      label: "Consulta DigitalFace",
+      duration: "30 min",
+      timezone: "Horarios en ET",
+      slotsLabel: "Horarios disponibles",
+    },
+    secondaryLabel: "Prefiero el formulario",
   },
 };
 

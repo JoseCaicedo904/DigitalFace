@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { LeadForm } from "@/components/forms/LeadForm";
-import { BookingCTA } from "@/components/booking/BookingCTA";
+import { SchedulingPanel } from "@/components/booking/SchedulingPanel";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { SignalFieldBackdrop } from "@/sections/SignalFieldBackdrop";
@@ -32,7 +32,10 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
+      <section
+        id="contact-form"
+        className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28"
+      >
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             <LeadForm pageSource="contact" />
@@ -50,13 +53,18 @@ export default function Contact() {
 
       {/* Scheduling closes the page for anyone who would rather book a time
           than write. */}
-      <BookingCTA
+      <SchedulingPanel
         id="book"
+        locale={locale}
         eyebrow={t.booking.eyebrow}
         title={t.booking.title}
         description={t.booking.description}
         ctaLabel={t.booking.ctaLabel}
+        highlights={t.booking.highlights}
+        panel={t.booking.panel}
+        secondaryLabel={t.booking.secondaryLabel}
         href={bookingHref(path(BOOKING_ROUTE), "contact")}
+        formHref="#contact-form"
       />
 
       {/* The reference details close the page. Everything above asks for the
