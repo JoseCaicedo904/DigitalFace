@@ -171,7 +171,7 @@ const en = {
         idealFor:
           "Businesses that want the full acquisition and conversion system running for them.",
         allowances: [
-          { label: "Paid acquisition", value: "1 priority channel" },
+          { label: "Paid acquisition", value: "2 priority channels" },
           { label: "Ad budget managed", value: "Up to $2,500 / mo" },
           { label: "CRM for lead management", value: "Included" },
           { label: "Conversion website", value: "Site + 2 forms" },
@@ -201,6 +201,7 @@ const en = {
           {
             title: "Campaign infrastructure",
             items: [
+              "Two priority paid channels — Meta, Google or TikTok — managed together",
               "Email marketing campaign setup and automation",
               "Up to 4 static photo/graphic ad creatives per month",
               "Automated follow-up and reminders across the journey",
@@ -493,7 +494,7 @@ const es: typeof en = {
         idealFor:
           "Negocios que quieren todo el sistema de captación y conversión funcionando por ellos.",
         allowances: [
-          { label: "Captación paga", value: "1 canal prioritario" },
+          { label: "Captación paga", value: "2 canales prioritarios" },
           { label: "Pauta gestionada", value: "Hasta $2,500 / mes" },
           { label: "CRM para gestión de leads", value: "Incluido" },
           { label: "Sitio web de conversión", value: "Sitio + 2 formularios" },
@@ -523,6 +524,7 @@ const es: typeof en = {
           {
             title: "Infraestructura de campañas",
             items: [
+              "Dos canales pagos prioritarios — Meta, Google o TikTok — administrados en conjunto",
               "Configuración y automatización de campañas de email marketing",
               "Hasta 4 piezas publicitarias estáticas (foto o gráfica) al mes",
               "Seguimiento y recordatorios automáticos a lo largo del recorrido",
