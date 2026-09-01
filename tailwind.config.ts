@@ -230,6 +230,60 @@ export default {
             opacity: "0",
           },
         },
+        /* Contact backdrop. The ring starts small and transparent so it is born
+           behind the copy and only reads once it has cleared it. */
+        "signal-ping": {
+          "0%": {
+            transform: "scale(0.2)",
+            opacity: "0",
+          },
+          "14%": {
+            opacity: "0.5",
+          },
+          "100%": {
+            transform: "scale(1.9)",
+            opacity: "0",
+          },
+        },
+        /* Travels the viewport, not its own width, so one keyframe serves
+           streaks of any length. */
+        "signal-stream": {
+          "0%": {
+            transform: "translate3d(-26rem, 0, 0)",
+            opacity: "0",
+          },
+          "9%, 82%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate3d(100vw, 0, 0)",
+            opacity: "0",
+          },
+        },
+        "signal-sweep": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+        /* An arc rather than a line, so the two ambient bodies never look like
+           they are sliding on rails. */
+        "signal-orb": {
+          "0%, 100%": {
+            transform: "translate3d(0, 0, 0)",
+          },
+          "25%": {
+            transform: "translate3d(22px, -16px, 0)",
+          },
+          "50%": {
+            transform: "translate3d(0, -28px, 0)",
+          },
+          "75%": {
+            transform: "translate3d(-22px, -16px, 0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -245,6 +299,10 @@ export default {
         "module-assemble":
           "module-assemble 26s cubic-bezier(0.4, 0, 0.2, 1) infinite",
         "module-activate": "module-activate 42s linear infinite",
+        "signal-ping": "signal-ping 17s cubic-bezier(0.16, 1, 0.3, 1) infinite",
+        "signal-stream": "signal-stream 26s linear infinite",
+        "signal-sweep": "signal-sweep 60s linear infinite",
+        "signal-orb": "signal-orb 34s ease-in-out infinite",
       },
       backgroundImage: {
         "glow-radial":
