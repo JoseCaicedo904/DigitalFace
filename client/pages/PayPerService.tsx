@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
+import { ModularCapabilityBackdrop } from "@/sections/ModularCapabilityBackdrop";
 import { CtaSection } from "@/sections/CTA";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { payPerServiceContent } from "@/i18n/content/payPerService";
@@ -77,6 +78,7 @@ export default function PayPerService() {
         primaryCta={{ label: t.hero.primaryCta, href: path("/contact") }}
         secondaryCta={{ label: t.hero.secondaryCta, href: path("/features") }}
         showVideo={false}
+        background={<ModularCapabilityBackdrop />}
       />
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">

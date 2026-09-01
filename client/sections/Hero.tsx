@@ -25,6 +25,11 @@ interface HeroProps {
   stats?: Stat[];
   media?: ReactNode;
   showVideo?: boolean;
+  /**
+   * Replaces the default backdrop for a page that wants its own atmosphere.
+   * Omitted everywhere else, so the video and gradient behaviour is unchanged.
+   */
+  background?: ReactNode;
   className?: string;
 }
 
@@ -37,6 +42,7 @@ export function Hero({
   stats,
   media,
   showVideo = true,
+  background,
   className,
 }: HeroProps) {
   return (
@@ -46,7 +52,9 @@ export function Hero({
         className,
       )}
     >
-      {showVideo ? (
+      {background ? (
+        background
+      ) : showVideo ? (
         <>
           <video
             data-media-slot={corporateMedia.hero.id}

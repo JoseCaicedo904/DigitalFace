@@ -193,6 +193,43 @@ export default {
             strokeDashoffset: "0",
           },
         },
+        /* Pay per Service backdrop. Each tile breathes on its own duration; the
+           rotation is a degree and a half so it reads as float, not spin. */
+        "module-float": {
+          "0%, 100%": {
+            transform: "translate3d(0, 0, 0) rotate(0deg)",
+          },
+          "50%": {
+            transform: "translate3d(0, -14px, 0) rotate(1.4deg)",
+          },
+        },
+        /* The offsets are per-tile custom properties, so three tiles share one
+           keyframe and still converge on the same point. */
+        "module-assemble": {
+          "0%, 28%": {
+            transform: "translate3d(0, 0, 0)",
+          },
+          "46%, 64%": {
+            transform:
+              "translate3d(var(--assemble-x, 0px), var(--assemble-y, 0px), 0)",
+          },
+          "82%, 100%": {
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+        /* One 42s rotation shared by seven tiles at -6s intervals: the lit
+           window is ~6s, so exactly one is active at a time. */
+        "module-activate": {
+          "0%, 2%": {
+            opacity: "0",
+          },
+          "6%, 12%": {
+            opacity: "1",
+          },
+          "16%, 100%": {
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -204,6 +241,10 @@ export default {
         "hero-drift": "hero-drift 22s ease-in-out infinite",
         "hero-pulse": "hero-pulse 6s ease-in-out infinite",
         "hero-trace": "hero-trace 28s linear infinite",
+        "module-float": "module-float 18s ease-in-out infinite",
+        "module-assemble":
+          "module-assemble 26s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        "module-activate": "module-activate 42s linear infinite",
       },
       backgroundImage: {
         "glow-radial":
