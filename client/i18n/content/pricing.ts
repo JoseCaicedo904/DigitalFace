@@ -99,6 +99,8 @@ const en = {
     perMonth: "/month",
     allowancesLabel: "What is included",
     idealForLabel: "Best for",
+    noContract:
+      "No annual contract required. Every plan runs on a month-to-month basis.",
     items: [
       {
         level: "Level 1 · Foundation",
@@ -162,7 +164,7 @@ const en = {
         price: "$1,490",
         perMonth: true,
         setup: "$1,097 one-time setup",
-        term: "3-month initial term",
+        term: "Month to month",
         priceCaption: null,
         description:
           "The complete growth setup: acquisition, CRM, conversion website, AI communication and campaign infrastructure in one managed system.",
@@ -294,12 +296,12 @@ const en = {
         body: "CRM is included for lead capture, pipeline management and follow-up — not for unlimited custom CRM development. The website is a conversion site with up to 2 lead capture forms, not unlimited pages, revisions or custom development. Managed hosting, SSL and backups are included with it.",
       },
       {
-        title: "Terms and plan changes",
-        body: "Capture runs month to month. DigitalFace AI starts with a 3-month term so the acquisition and conversion systems have time to stabilize. Custom engagements are scoped and agreed individually. You can move up a level at any time and we adjust the scope with you.",
+        title: "No annual contract",
+        body: "Every plan runs on a month-to-month basis. There is no annual contract and no minimum term, on Capture, on DigitalFace AI and on Custom engagements. The setup fee is charged once, at the start. You can move up a level at any time and we adjust the scope with you.",
       },
     ],
     guarantee:
-      "Every plan is backed in writing: 30 days money back on the setup fee, live within 7 business days or the setup is free, no commitment beyond the initial term stated above, and you own every account, asset and automation we build for you.",
+      "Every plan is backed in writing: 30 days money back on the setup fee, live within 7 business days or the setup is free, no annual contract and no minimum term, and you own every account, asset and automation we build for you.",
   },
   includes: {
     eyebrow: "Included in every plan",
@@ -338,6 +340,11 @@ const en = {
         question: "How fast can we launch?",
         answer:
           "Most practices go live within 5 to 7 business days once we have your information and access.",
+      },
+      {
+        question: "Do we sign an annual contract?",
+        answer:
+          "No. Every plan runs on a month-to-month basis, with no annual contract and no minimum term. The setup fee is charged once, at the start.",
       },
       {
         question: "Do we need to buy new software?",
@@ -414,6 +421,8 @@ const es: typeof en = {
     perMonth: "/mes",
     allowancesLabel: "Qué incluye",
     idealForLabel: "Ideal para",
+    noContract:
+      "No se requiere contrato anual. Todos los planes funcionan mes a mes.",
     items: [
       {
         level: "Nivel 1 · Base",
@@ -477,7 +486,7 @@ const es: typeof en = {
         price: "$1,490",
         perMonth: true,
         setup: "$1,097 de implementación única",
-        term: "Periodo inicial de 3 meses",
+        term: "Mes a mes",
         priceCaption: null,
         description:
           "El sistema de crecimiento completo: captación, CRM, sitio web de conversión, comunicación con IA e infraestructura de campañas en un solo lugar.",
@@ -610,12 +619,12 @@ const es: typeof en = {
         body: "El CRM está incluido para captura de leads, gestión del proceso comercial y seguimiento, no para desarrollo de CRM a medida sin límite. El sitio web es un sitio de conversión con hasta 2 formularios de captura, no páginas, ajustes o desarrollo ilimitados. El hosting administrado, el SSL y los respaldos van incluidos con él.",
       },
       {
-        title: "Condiciones y cambios de plan",
-        body: "Capture es mes a mes. DigitalFace AI arranca con un periodo inicial de 3 meses para que los sistemas de captación y conversión alcancen a estabilizarse. Los proyectos a medida se definen y se acuerdan de forma individual. Puedes subir de nivel cuando quieras y ajustamos el alcance contigo.",
+        title: "Sin contrato anual",
+        body: "Todos los planes funcionan mes a mes. No hay contrato anual ni permanencia mínima, ni en Capture, ni en DigitalFace AI, ni en los proyectos a medida. La implementación se cobra una sola vez, al inicio. Puedes subir de nivel cuando quieras y ajustamos el alcance contigo.",
       },
     ],
     guarantee:
-      "Todos los planes quedan por escrito: 30 días de devolución sobre el valor de implementación, salida en vivo en 7 días hábiles o la implementación no se cobra, sin compromiso más allá del periodo inicial indicado arriba, y todas las cuentas, activos y automatizaciones que construimos quedan a tu nombre.",
+      "Todos los planes quedan por escrito: 30 días de devolución sobre el valor de implementación, salida en vivo en 7 días hábiles o la implementación no se cobra, sin contrato anual ni permanencia mínima, y todas las cuentas, activos y automatizaciones que construimos quedan a tu nombre.",
   },
   includes: {
     eyebrow: "Incluido en todos los planes",
@@ -654,6 +663,11 @@ const es: typeof en = {
         question: "¿Qué tan rápido podemos salir en vivo?",
         answer:
           "La mayoría de clínicas queda activa en 5 a 7 días hábiles desde que tenemos la información y los accesos.",
+      },
+      {
+        question: "¿Se firma un contrato anual?",
+        answer:
+          "No. Todos los planes funcionan mes a mes, sin contrato anual ni permanencia mínima. La implementación se cobra una sola vez, al inicio.",
       },
       {
         question: "¿Tenemos que comprar software nuevo?",

@@ -3,6 +3,8 @@ import { getCountryOptions } from "@/data/countries";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { leadFormContent } from "@/i18n/content/leadForm";
 import { readAttribution } from "@/lib/attribution";
+import { RequestedServicesField } from "@/components/request/RequestedServicesField";
+import { useServiceRequest } from "@/components/request/ServiceRequestProvider";
 import { cn } from "@/lib/utils";
 import {
   LEAD_FORM_SOURCE,
@@ -91,6 +93,10 @@ export function LeadForm({
   const { locale } = useLocale();
   const t = leadFormContent[locale];
   const fieldId = useId();
+  // The services the visitor picked while browsing. Read here so they travel
+  // with the submission and stay editable inside the form.
+  const { services: selectedServices, clear: clearRequest } =
+    useServiceRequest();
   const countries = useMemo(() => getCountryOptions(locale), [locale]);
 
   const [values, setValues] = useState<Values>(EMPTY_VALUES);
@@ -220,6 +226,7 @@ export function LeadForm({
       primaryGoal: goal,
       primaryGoalLabel: t.goals[goal],
       message: values.message.trim(),
+      selectedServices: selectedServices.map(({ id, name }) => ({ id, name })),
       locale,
       formSource: LEAD_FORM_SOURCE,
       pageSource,
@@ -246,6 +253,9 @@ export function LeadForm({
       }
 
       setSubmittedName(values.name.trim().split(/\s+/)[0] ?? "");
+      // The request has been sent, so it is no longer pending: leaving it in
+      // place would follow the visitor around and prefill the next form.
+      clearRequest();
       setStatus("success");
     } catch {
       setStatus("error");
@@ -365,6 +375,11 @@ export function LeadForm({
         noValidate
         className="relative mt-10 space-y-6"
       >
+        {/* What they want help with comes first: it is the context every other
+            answer hangs off, and it is already filled in for anyone who
+            arrived from the service catalog. */}
+        <RequestedServicesField dark={dark} />
+
         {/* Row 1 */}
         <div className="grid gap-6 sm:grid-cols-2">
           <div id={id("name-field")} className="space-y-2.5">

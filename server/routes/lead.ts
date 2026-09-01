@@ -3,6 +3,8 @@ import { z } from "zod";
 import {
   LEAD_GOALS,
   LEAD_PAGE_SOURCES,
+  MAX_SELECTED_SERVICES,
+  SELECTED_SERVICE_ID_PATTERN,
   isPlausiblePhone,
   type LeadResponse,
 } from "../../shared/lead";
@@ -37,6 +39,22 @@ const leadSchema = z.object({
   primaryGoal: z.enum(LEAD_GOALS),
   primaryGoalLabel: optionalText(120),
   message: optionalText(4000),
+  /*
+   * The services the visitor added to their request. Optional so an older
+   * cached bundle, or any placement that never shows the catalog, still
+   * submits cleanly. Ids are checked for shape only — which services exist is
+   * the website's business, and n8n owns the mapping downstream.
+   */
+  selectedServices: z
+    .array(
+      z.object({
+        id: z.string().trim().min(1).max(80).regex(SELECTED_SERVICE_ID_PATTERN),
+        name: z.string().trim().min(1).max(200),
+      }),
+    )
+    .max(MAX_SELECTED_SERVICES)
+    .optional()
+    .default([]),
   locale: z.string().trim().max(10).optional().default("en"),
   formSource: z.string().trim().min(1).max(80),
   pageSource: z.enum(LEAD_PAGE_SOURCES),

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { ALLOWANCE_NOT_INCLUDED, pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
-import { Check, Megaphone, Plus, Sparkles } from "lucide-react";
+import { Check, Megaphone, Plus, ShieldCheck, Sparkles } from "lucide-react";
 
 /** The middle plan is the highlighted one in every locale. */
 const FEATURED_INDEX = 1;
@@ -52,6 +52,15 @@ export default function Pricing() {
               {t.packages.eyebrow}
             </span>
             <p className="mt-4 text-base text-ink-500">{t.packages.intro}</p>
+            {/*
+              The commitment answer, given before the prices rather than in the
+              small print under them. It reads as one line on desktop and as a
+              short block on a phone, which is why the radius changes.
+            */}
+            <p className="mt-6 inline-flex items-start gap-2 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-3 text-left text-sm font-semibold text-brand-700 sm:items-center sm:rounded-full sm:py-2 sm:text-center">
+              <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 sm:mt-0" />
+              {t.packages.noContract}
+            </p>
           </div>
 
           <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-7">

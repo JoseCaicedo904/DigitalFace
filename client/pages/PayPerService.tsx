@@ -3,65 +3,17 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
 import { ModularCapabilityBackdrop } from "@/sections/ModularCapabilityBackdrop";
 import { CtaSection } from "@/sections/CTA";
+import { AddToRequestButton } from "@/components/request/AddToRequestButton";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { payPerServiceContent } from "@/i18n/content/payPerService";
 import { payPerServiceOutcomeIcons } from "./payPerServiceIcons";
-import type { PayPerServiceContent } from "@/i18n/content/payPerService";
-
-type GroupKey = keyof PayPerServiceContent["groups"];
+import { serviceCatalog } from "@/data/serviceCatalog";
 
 /**
- * Anchor ids are technical: the header mega menu links to them and campaigns
- * may deep-link to them. They are identical in every locale.
+ * The catalog itself now lives in `@/data/serviceCatalog`: the anchor ids are
+ * also the ids the request builder stores and sends, so the page and the
+ * request cannot drift apart.
  */
-const groupStructure: {
-  key: GroupKey;
-  id: string;
-  services: { key: string; id: string }[];
-}[] = [
-  {
-    key: "paidMedia",
-    id: "paid-media",
-    services: [
-      { key: "meta", id: "meta-ads" },
-      { key: "tracking", id: "conversion-tracking" },
-      { key: "tiktok", id: "tiktok-ads" },
-      { key: "google", id: "google-ads" },
-      { key: "seo", id: "seo-strategy" },
-      { key: "content", id: "content-creation" },
-    ],
-  },
-  {
-    key: "automation",
-    id: "automation-and-chatbots",
-    services: [
-      { key: "chatbot", id: "chatbot-development" },
-      { key: "workflow", id: "workflow-automation" },
-      { key: "appointment", id: "appointment-automation" },
-      { key: "ecommerce", id: "ecommerce-automation" },
-      { key: "comments", id: "comment-auto-reply" },
-    ],
-  },
-  {
-    key: "leadOps",
-    id: "lead-ops-crm",
-    services: [
-      { key: "capture", id: "lead-capture" },
-      { key: "booking", id: "appointment-booking" },
-      { key: "pipeline", id: "crm-pipeline" },
-      { key: "integration", id: "crm-integration" },
-      { key: "reporting", id: "reporting-dashboards" },
-    ],
-  },
-  {
-    key: "websites",
-    id: "websites-and-funnels",
-    services: [
-      { key: "corporate", id: "corporate-websites" },
-      { key: "landing", id: "campaign-landing-pages" },
-    ],
-  },
-];
 
 export default function PayPerService() {
   const { locale, path } = useLocale();
@@ -94,7 +46,7 @@ export default function PayPerService() {
           </div>
 
           <div className="mt-16 space-y-16">
-            {groupStructure.map((group) => {
+            {serviceCatalog.map((group) => {
               const groupCopy = t.groups[group.key];
               const services = groupCopy.services as Record<
                 string,
@@ -123,7 +75,7 @@ export default function PayPerService() {
                   </div>
                   <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {group.services.map((service) => {
-                      const copy = services[service.key];
+                      const copy = services[service.contentKey];
                       const outcomeIcons =
                         payPerServiceOutcomeIcons[service.id];
                       return (
@@ -165,7 +117,14 @@ export default function PayPerService() {
                               </ul>
                             </div>
                           </div>
-                          <div className="mt-auto pt-6">
+                          {/* Add first, ask second: the button builds the
+                              request without leaving the page, and the original
+                              link still goes straight to the conversation. */}
+                          <div className="mt-auto flex flex-col items-start gap-3 pt-6">
+                            <AddToRequestButton
+                              serviceId={service.id}
+                              serviceName={copy.title}
+                            />
                             <Link
                               to={path("/contact")}
                               className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:text-brand-700"

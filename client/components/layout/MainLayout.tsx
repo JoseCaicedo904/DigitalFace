@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { BOOKING_ROUTE } from "@/components/booking/bookingRoute";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
+import { ServiceRequestLauncher } from "@/components/request/ServiceRequestLauncher";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 import { cn } from "@/lib/utils";
@@ -583,6 +584,10 @@ export default function MainLayout() {
       <main className="relative flex-1">
         <Outlet />
       </main>
+
+      {/* Floats above the page once the visitor has picked a service, and
+          renders nothing until then. */}
+      <ServiceRequestLauncher />
 
       <footer className="mt-24 bg-slate-950 text-white">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-16 sm:px-6 lg:flex-row lg:justify-between lg:px-8">

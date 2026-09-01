@@ -19,6 +19,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { LocaleProvider } from "./i18n/LocaleProvider";
+import { ServiceRequestProvider } from "./components/request/ServiceRequestProvider";
 import { captureAttribution } from "./lib/attribution";
 
 /**
@@ -71,46 +72,53 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <LocaleProvider>
-          <ScrollToTop />
-          <Suspense
-            fallback={
-              <div className="flex min-h-screen items-center justify-center bg-slate-950 text-sm font-semibold text-white">
-                DigitalFace…
-              </div>
-            }
-          >
-            <Routes>
-              <Route path="/" element={<MainLayout />}>
-                {corporateRoutes}
-              </Route>
-              <Route path="/es" element={<MainLayout />}>
-                {corporateRoutes}
-              </Route>
+          {/* Inside the locale provider: the request stores language-independent
+              service ids and resolves their names against the active locale. */}
+          <ServiceRequestProvider>
+            <ScrollToTop />
+            <Suspense
+              fallback={
+                <div className="flex min-h-screen items-center justify-center bg-slate-950 text-sm font-semibold text-white">
+                  DigitalFace…
+                </div>
+              }
+            >
+              <Routes>
+                <Route path="/" element={<MainLayout />}>
+                  {corporateRoutes}
+                </Route>
+                <Route path="/es" element={<MainLayout />}>
+                  {corporateRoutes}
+                </Route>
 
-              <Route
-                path="/industries/dental-practices"
-                element={<DentalPracticesPage />}
-              />
-              <Route
-                path="/industries/aesthetic-medicine"
-                element={<AestheticMedicinePage />}
-              />
-              <Route path="/industries/med-spas" element={<MedSpasPage />} />
+                <Route
+                  path="/industries/dental-practices"
+                  element={<DentalPracticesPage />}
+                />
+                <Route
+                  path="/industries/aesthetic-medicine"
+                  element={<AestheticMedicinePage />}
+                />
+                <Route path="/industries/med-spas" element={<MedSpasPage />} />
 
-              <Route
-                path="/es/industries/dental-practices"
-                element={<DentalPracticesPage />}
-              />
-              <Route
-                path="/es/industries/aesthetic-medicine"
-                element={<AestheticMedicinePage />}
-              />
-              <Route path="/es/industries/med-spas" element={<MedSpasPage />} />
+                <Route
+                  path="/es/industries/dental-practices"
+                  element={<DentalPracticesPage />}
+                />
+                <Route
+                  path="/es/industries/aesthetic-medicine"
+                  element={<AestheticMedicinePage />}
+                />
+                <Route
+                  path="/es/industries/med-spas"
+                  element={<MedSpasPage />}
+                />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </ServiceRequestProvider>
         </LocaleProvider>
       </BrowserRouter>
     </TooltipProvider>

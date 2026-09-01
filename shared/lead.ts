@@ -49,6 +49,23 @@ export interface LeadAttribution {
   utmTerm: string;
 }
 
+/**
+ * One service the visitor added to their request, as picked from the website's
+ * service catalog. The id is stable and language-independent; the name is the
+ * label they actually saw, in the language they were reading, so n8n can write
+ * a human-readable summary without owning a translation table.
+ */
+export interface LeadSelectedService {
+  id: string;
+  name: string;
+}
+
+/** Ids are slugs by construction, and this is what the server enforces. */
+export const SELECTED_SERVICE_ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+/** A request is a shortlist for a conversation, never an order of any size. */
+export const MAX_SELECTED_SERVICES = 40;
+
 export interface LeadSubmission extends LeadAttribution {
   name: string;
   business: string;
@@ -61,6 +78,8 @@ export interface LeadSubmission extends LeadAttribution {
   primaryGoal: LeadGoal;
   primaryGoalLabel: string;
   message: string;
+  /** Empty when the visitor came straight to the form without browsing. */
+  selectedServices: LeadSelectedService[];
   locale: string;
   formSource: string;
   pageSource: LeadPageSource;
