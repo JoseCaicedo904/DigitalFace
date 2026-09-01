@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { ALLOWANCE_NOT_INCLUDED, pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
-import { Check, Megaphone, Plus } from "lucide-react";
+import { Check, Megaphone, Plus, Sparkles } from "lucide-react";
 
 /** The middle plan is the highlighted one in every locale. */
 const FEATURED_INDEX = 1;
@@ -57,6 +57,11 @@ export default function Pricing() {
           <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-7">
             {t.packages.items.map((pkg, index) => {
               const featured = index === FEATURED_INDEX;
+              /**
+               * The fixed plans lead with a media-budget rule, so the note gets
+               * the megaphone. Custom leads with what a quote is built from.
+               */
+              const NoteIcon = pkg.perMonth ? Megaphone : Sparkles;
               return (
                 <article
                   key={pkg.name}
@@ -80,9 +85,9 @@ export default function Pricing() {
                   </h2>
                   {/*
                     The min-height is an alignment device, not a layout rule: it
-                    keeps the price block, the CTA and the allowance list of the
-                    three cards on the same baseline for the copy lengths we
-                    ship. A longer translation simply pushes the card taller.
+                    keeps the price block, the CTA and the block below them on
+                    the same baseline for the copy lengths we ship. A longer
+                    translation simply pushes the card taller.
                   */}
                   <p className="mt-3 text-sm leading-relaxed text-ink-500 lg:min-h-[88px]">
                     {pkg.description}
@@ -92,12 +97,16 @@ export default function Pricing() {
                     <span className="text-[2.75rem] font-semibold leading-none tracking-tight text-slate-900 tabular-nums">
                       {pkg.price}
                     </span>
-                    <span className="text-sm font-medium text-ink-500">
-                      {t.packages.perMonth}
-                    </span>
+                    {pkg.perMonth ? (
+                      <span className="text-sm font-medium text-ink-500">
+                        {t.packages.perMonth}
+                      </span>
+                    ) : null}
                   </div>
                   <p className="mt-2 text-xs text-ink-400">
-                    + {pkg.setup} · {pkg.term}
+                    {pkg.setup && pkg.term
+                      ? `+ ${pkg.setup} · ${pkg.term}`
+                      : pkg.priceCaption}
                   </p>
 
                   <Button
@@ -114,60 +123,81 @@ export default function Pricing() {
                   </Button>
 
                   {/*
-                    Same rows, same order, in all three cards. That is what lets
-                    a visitor compare the plans by reading across, without a
-                    separate comparison table.
+                    Capture and AI carry the same rows in the same order, so the
+                    two fixed plans compare by reading across. Custom has no
+                    fixed quantities, so it has no table — by design.
                   */}
-                  <div className="pricing-allowances mt-7 rounded-2xl border border-ink-100 bg-ink-50/60 p-5">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                      {t.packages.allowancesLabel}
+                  {pkg.allowances.length > 0 ? (
+                    <div className="mt-7 rounded-2xl border border-ink-100 bg-ink-50/60 p-5">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+                        {t.packages.allowancesLabel}
+                      </p>
+                      <dl className="mt-3">
+                        {pkg.allowances.map((allowance) => {
+                          const included =
+                            allowance.value !== ALLOWANCE_NOT_INCLUDED;
+                          return (
+                            <div
+                              key={allowance.label}
+                              className="flex items-baseline justify-between gap-3 border-b border-dashed border-ink-200/70 py-2 last:border-b-0 last:pb-0"
+                            >
+                              <dt
+                                className={cn(
+                                  "text-xs",
+                                  included ? "text-ink-500" : "text-ink-400",
+                                )}
+                              >
+                                {allowance.label}
+                              </dt>
+                              <dd
+                                className={cn(
+                                  "shrink-0 text-right text-[13px] font-semibold tabular-nums",
+                                  included
+                                    ? "pricing-allowance-value"
+                                    : "text-ink-300",
+                                )}
+                              >
+                                {allowance.value}
+                              </dd>
+                            </div>
+                          );
+                        })}
+                      </dl>
+                    </div>
+                  ) : null}
+
+                  {/*
+                    The commercial guardrail: the media-budget ceiling on the
+                    fixed plans, and what a Custom quote is built from. It is a
+                    panel of its own so it cannot be skimmed past.
+                  */}
+                  <div
+                    className={cn(
+                      "rounded-2xl border border-ink-100 bg-ink-50/60 p-5",
+                      // Sits directly under the CTA on Custom, which has no
+                      // allowance table above it.
+                      pkg.allowances.length > 0 ? "mt-4" : "mt-7",
+                    )}
+                  >
+                    <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
+                      <NoteIcon className="pricing-check h-3.5 w-3.5 flex-shrink-0" />
+                      {pkg.note.title}
                     </p>
-                    <dl className="mt-3">
-                      {pkg.allowances.map((allowance) => {
-                        const included =
-                          allowance.value !== ALLOWANCE_NOT_INCLUDED;
-                        return (
-                          <div
-                            key={allowance.label}
-                            className="flex items-baseline justify-between gap-3 border-b border-dashed border-ink-200/70 py-2 last:border-b-0 last:pb-0"
-                          >
-                            <dt
-                              className={cn(
-                                "text-xs",
-                                included ? "text-ink-500" : "text-ink-400",
-                              )}
-                            >
-                              {allowance.label}
-                            </dt>
-                            <dd
-                              className={cn(
-                                "shrink-0 text-right text-[13px] font-semibold tabular-nums",
-                                included
-                                  ? "pricing-allowance-value"
-                                  : "text-ink-300",
-                              )}
-                            >
-                              {allowance.value}
-                            </dd>
-                          </div>
-                        );
-                      })}
-                    </dl>
-                    <p className="mt-4 flex items-start gap-2 border-t border-ink-200/70 pt-3 text-[11px] leading-relaxed text-ink-500">
-                      <Megaphone className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
-                      <span>
-                        <span className="font-semibold text-ink-600">
-                          {t.packages.adSpendLabel}:
-                        </span>{" "}
-                        {pkg.adSpend}
-                      </span>
+                    <p className="mt-2 text-[11px] leading-relaxed text-ink-500">
+                      {pkg.note.body}
                     </p>
                   </div>
 
                   <div className="mt-7">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                      {t.packages.scopeLabel}
+                      {pkg.scopeLabel}
                     </p>
+
+                    {pkg.scopeNote ? (
+                      <p className="mt-2 text-[11px] leading-relaxed text-ink-400">
+                        {pkg.scopeNote}
+                      </p>
+                    ) : null}
 
                     {pkg.inherits ? (
                       <p className="pricing-inherit mt-3 flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold">
@@ -197,6 +227,20 @@ export default function Pricing() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Usage-based billing, kept small and kept on the card. */}
+                  {pkg.footnotes.length > 0 ? (
+                    <div className="mt-6 space-y-1.5 border-t border-ink-100 pt-4">
+                      {pkg.footnotes.map((footnote) => (
+                        <p
+                          key={footnote}
+                          className="text-[11px] leading-relaxed text-ink-400"
+                        >
+                          {footnote}
+                        </p>
+                      ))}
+                    </div>
+                  ) : null}
 
                   <div className="mt-auto border-t border-ink-100 pt-5 text-left">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
