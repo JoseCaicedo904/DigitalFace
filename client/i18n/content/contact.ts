@@ -74,14 +74,14 @@ const en = {
     eyebrow: "Ready when you are",
     title: "Choose a time that works for you.",
     description:
-      "Book a short DigitalFace consultation, or use the form above if you would rather we came back to you in writing.",
+      "Book a short DigitalFace consultation, or use the form below if you'd rather hear back from us in writing.",
     ctaLabel: "Choose a time",
     /* The scheduler preview needs its own labels: it is a real interface, so
        it has to speak the visitor's language before the calendar loads. */
     highlights: [
       "A short consultation, not a sales pitch",
       "Pick the time that suits you",
-      "Prefer to write? The form gets a reply within one business day",
+      "Prefer to write? Send us a message below and we'll reply within one business day",
     ],
     panel: {
       label: "DigitalFace consultation",
@@ -163,12 +163,12 @@ const es: typeof en = {
     eyebrow: "Cuando quieras",
     title: "Elige el horario que mejor te funcione.",
     description:
-      "Agenda una consulta corta con DigitalFace, o usa el formulario de arriba si prefieres que te respondamos por escrito.",
+      "Agenda una consulta corta con DigitalFace, o usa el formulario de abajo si prefieres que te respondamos por escrito.",
     ctaLabel: "Elige un horario",
     highlights: [
       "Una consulta corta, no una llamada de ventas",
       "Eliges el horario que te sirva",
-      "¿Prefieres escribir? El formulario recibe respuesta en un día hábil",
+      "¿Prefieres escribir? Escríbenos abajo y te respondemos en un día hábil",
     ],
     panel: {
       label: "Consulta DigitalFace",

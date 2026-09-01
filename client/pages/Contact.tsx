@@ -31,6 +31,23 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Booking is the first thing offered: most visitors who reach Contact
+          have already decided to talk. The form below is the alternative for
+          anyone who would rather write. */}
+      <SchedulingPanel
+        id="book"
+        locale={locale}
+        eyebrow={t.booking.eyebrow}
+        title={t.booking.title}
+        description={t.booking.description}
+        ctaLabel={t.booking.ctaLabel}
+        highlights={t.booking.highlights}
+        panel={t.booking.panel}
+        secondaryLabel={t.booking.secondaryLabel}
+        href={bookingHref(path(BOOKING_ROUTE), "contact")}
+        formHref="#contact-form"
+      />
+
       <section
         id="contact-form"
         className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28"
@@ -49,22 +66,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      {/* Scheduling closes the page for anyone who would rather book a time
-          than write. */}
-      <SchedulingPanel
-        id="book"
-        locale={locale}
-        eyebrow={t.booking.eyebrow}
-        title={t.booking.title}
-        description={t.booking.description}
-        ctaLabel={t.booking.ctaLabel}
-        highlights={t.booking.highlights}
-        panel={t.booking.panel}
-        secondaryLabel={t.booking.secondaryLabel}
-        href={bookingHref(path(BOOKING_ROUTE), "contact")}
-        formHref="#contact-form"
-      />
 
       {/* The guide closes the page: how to reach DigitalFace on the left, what
           follows on the right. One panel with an internal divider rather than

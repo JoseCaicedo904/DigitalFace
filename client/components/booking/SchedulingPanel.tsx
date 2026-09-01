@@ -113,7 +113,11 @@ export function SchedulingPanel({
     <section
       id={id}
       className={cn(
-        "relative isolate scroll-mt-20 overflow-hidden border-t border-ink-100 bg-ink-50 py-20 sm:py-24 lg:py-28",
+        /* It follows the dark hero directly now, so the surface change is the
+           separation and a top rule would only cut across it. Slightly less
+           padding on top than the bottom keeps the block reading as the hero's
+           first answer rather than a new chapter. */
+        "relative isolate scroll-mt-20 overflow-hidden bg-ink-50 pb-20 pt-16 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-24",
         className,
       )}
     >
