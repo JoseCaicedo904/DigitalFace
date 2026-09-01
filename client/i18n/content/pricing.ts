@@ -103,7 +103,7 @@ const en = {
       {
         level: "Level 1 · Foundation",
         name: "DigitalFace Capture",
-        price: "$790",
+        price: "$890",
         perMonth: true,
         setup: "$597 one-time setup",
         term: "Month to month",
@@ -159,7 +159,7 @@ const en = {
       {
         level: "Level 2 · Growth",
         name: "DigitalFace AI",
-        price: "$1,200",
+        price: "$1,490",
         perMonth: true,
         setup: "$1,097 one-time setup",
         term: "3-month initial term",
@@ -418,7 +418,7 @@ const es: typeof en = {
       {
         level: "Nivel 1 · Base",
         name: "DigitalFace Capture",
-        price: "$790",
+        price: "$890",
         perMonth: true,
         setup: "$597 de implementación única",
         term: "Mes a mes",
@@ -474,7 +474,7 @@ const es: typeof en = {
       {
         level: "Nivel 2 · Crecimiento",
         name: "DigitalFace AI",
-        price: "$1,200",
+        price: "$1,490",
         perMonth: true,
         setup: "$1,097 de implementación única",
         term: "Periodo inicial de 3 meses",
