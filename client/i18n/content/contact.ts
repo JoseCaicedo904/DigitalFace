@@ -22,9 +22,9 @@ const en = {
       title: "Response time",
       body: "We reply within one business day.",
       steps: [
-        "1. We review how inquiries reach you today.",
-        "2. We show you the system running for your type of practice.",
-        "3. You get a plan and a timeline.",
+        "We review how inquiries reach you today.",
+        "We show you the system running for your type of practice.",
+        "You get a plan and a timeline.",
       ],
     },
     location: {
@@ -34,12 +34,25 @@ const en = {
     },
     include: {
       title: "What to include",
+      /* Kept as prose for anywhere that wants the long form; the guide panel
+         renders the compact checklist below instead. */
       items: [
         "Your type of practice and the treatments you offer.",
         "Where your inquiries come from and roughly how many.",
         "How your team handles follow-up today.",
       ],
+      checklist: [
+        "Type of practice",
+        "Treatments and services",
+        "Where inquiries come from",
+        "Approximate monthly inquiry volume",
+        "How follow-up is handled today",
+      ],
     },
+  },
+  /** Heading for the unified contact guide that closes the page. */
+  guide: {
+    title: "Talk to DigitalFace",
   },
   form: {
     nameLabel: "Name",
@@ -102,9 +115,9 @@ const es: typeof en = {
       title: "Tiempo de respuesta",
       body: "Respondemos en un día hábil.",
       steps: [
-        "1. Revisamos cómo te llegan las consultas hoy.",
-        "2. Te mostramos el sistema aplicado a tu tipo de clínica.",
-        "3. Recibes un plan y unos tiempos claros.",
+        "Revisamos cómo te llegan las consultas hoy.",
+        "Te mostramos el sistema aplicado a tu tipo de clínica.",
+        "Recibes un plan y unos tiempos claros.",
       ],
     },
     location: {
@@ -119,7 +132,17 @@ const es: typeof en = {
         "De dónde llegan tus consultas y más o menos cuántas.",
         "Cómo hace el seguimiento tu equipo actualmente.",
       ],
+      checklist: [
+        "Tipo de clínica",
+        "Tratamientos y servicios",
+        "De dónde llegan las consultas",
+        "Volumen mensual aproximado de consultas",
+        "Cómo se maneja el seguimiento hoy",
+      ],
     },
+  },
+  guide: {
+    title: "Habla con DigitalFace",
   },
   form: {
     nameLabel: "Nombre",
