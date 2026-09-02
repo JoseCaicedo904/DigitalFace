@@ -1,11 +1,11 @@
-import { LeadForm } from "@/components/forms/LeadForm";
+import { ContactFormSection } from "@/components/forms/ContactFormSection";
 import { SchedulingPanel } from "@/components/booking/SchedulingPanel";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { SignalFieldBackdrop } from "@/sections/SignalFieldBackdrop";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { contactContent } from "@/i18n/content/contact";
-import { Check, Clock3, Mail, MapPin, Sparkles } from "lucide-react";
+import { Check, Clock3, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   const { locale, path } = useLocale();
@@ -48,24 +48,7 @@ export default function Contact() {
         formHref="#contact-form"
       />
 
-      <section
-        id="contact-form"
-        className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28"
-      >
-        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6">
-            <LeadForm pageSource="contact" />
-
-            <div className="space-y-3 rounded-2xl border border-ink-100 bg-white/70 p-6 text-sm text-ink-500">
-              <div className="flex items-center gap-3 text-ink-600">
-                <Sparkles className="h-5 w-5 shrink-0 text-brand-500" />
-                <p className="font-semibold">{t.form.nextTitle}</p>
-              </div>
-              <p>{t.form.nextBody}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactFormSection id="contact-form" pageSource="contact" />
 
       {/* The guide closes the page: how to reach DigitalFace on the left, what
           follows on the right. One panel with an internal divider rather than

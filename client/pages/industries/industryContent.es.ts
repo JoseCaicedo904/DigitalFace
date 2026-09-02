@@ -112,7 +112,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         eyebrow: "DigitalFace para clínicas odontológicas",
         title: "Convierte más consultas dentales en valoraciones agendadas.",
         description:
-          "Un solo sistema administrado que conecta la pauta odontológica, la admisión de pacientes nuevos, el agendamiento de valoraciones y el seguimiento del plan de tratamiento — desde la primera consulta hasta la valoración atendida.",
+          "Un solo sistema administrado que conecta la pauta odontológica, la admisión de pacientes nuevos, el agendamiento de valoraciones y el seguimiento del plan de tratamiento, desde la primera consulta hasta la valoración atendida.",
         primaryCta: "Agenda tu diagnóstico odontológico",
         secondaryCta: "Ver el sistema dental",
         visualTitle: "Recorrido de una consulta dental",
@@ -670,7 +670,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Captación dental administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tu mezcla de tratamientos, tu mercado y la demanda real de implantes, carillas o diseño de sonrisa.",
+                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según tu mezcla de tratamientos, tu mercado y la demanda real de implantes, carillas o diseño de sonrisa.",
             },
             {
               title: "CRM de pacientes incluido",
@@ -728,7 +728,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
+                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",
@@ -787,7 +787,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Varios canales de captación",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según los casos que quieres atraer — implantes, arcada completa, estética — tu mercado y tu presupuesto.",
+                "Más de dos canales trabajando juntos, con la mezcla armada según tu mercado, tu presupuesto y los casos que quieres atraer, ya sean implantes, arcada completa o estética.",
             },
             {
               title: "Presupuestos publicitarios mayores",
@@ -1464,7 +1464,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Captación estética administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según los procedimientos que quieres crecer, tu mercado y la demanda real.",
+                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según los procedimientos que quieres crecer, tu mercado y la demanda real.",
             },
             {
               title: "CRM de pacientes incluido",
@@ -1522,7 +1522,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
+                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",
@@ -1695,7 +1695,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         title:
           "Convierte el interés por un tratamiento en clientes que agendan y regresan.",
         description:
-          "Un sistema que conecta promociones, respuesta inmediata, agendamiento, anticipos, nuevas reservas y reactivación de clientes — para que la agenda se llene y se mantenga llena.",
+          "Un sistema que conecta promociones, respuesta inmediata, agendamiento, anticipos, nuevas reservas y reactivación de clientes, para que la agenda se llene y se mantenga llena.",
         primaryCta: "Agenda tu diagnóstico para med spa",
         secondaryCta: "Ver el sistema para med spas",
         visualTitle: "Recorrido de agendamiento del med spa",
@@ -1843,7 +1843,7 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Reactivación de clientes",
             description:
-              "Los segmentos aprobados — clientes inactivos, paquetes sin terminar, membresías por vencer — reciben la campaña de nueva reserva o de temporada que corresponde.",
+              "Los segmentos aprobados, como clientes inactivos, paquetes sin terminar o membresías por vencer, reciben la campaña de nueva reserva o de temporada que corresponde.",
           },
           {
             title: "Reseñas y visitas recurrentes",
@@ -2254,7 +2254,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Captación para med spa administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tus ofertas, tus membresías y los tratamientos que quieres llenar esta temporada.",
+                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según tus ofertas, tus membresías y los tratamientos que quieres llenar esta temporada.",
             },
             {
               title: "CRM de clientes incluido",
@@ -2312,7 +2312,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas atendidas, no solo mensajes.",
+                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas atendidas, no solo mensajes.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",

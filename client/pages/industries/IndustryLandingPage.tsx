@@ -7,14 +7,14 @@ import {
 } from "@/components/ui/accordion";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
-import { LeadForm } from "@/components/forms/LeadForm";
+import { ContactFormSection } from "@/components/forms/ContactFormSection";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { AppointmentCommitment } from "@/sections/AppointmentCommitment";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
 import { IndustryGallery } from "@/sections/IndustryGallery";
-import { BookingCTA } from "@/components/booking/BookingCTA";
+import { SchedulingPanel } from "@/components/booking/SchedulingPanel";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
@@ -24,6 +24,9 @@ import {
   websiteSchema,
 } from "@/lib/structuredData";
 import { commonContent } from "@/i18n/content/common";
+// The scheduler preview speaks for itself before any calendar loads, so its own
+// labels are shared with the contact page rather than restated per funnel.
+import { contactContent } from "@/i18n/content/contact";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
 import {
   clientMedia,
@@ -41,7 +44,6 @@ import {
   HeartHandshake,
   Languages,
   LineChart,
-  LockKeyhole,
   Megaphone,
   MessageSquareText,
   Plus,
@@ -468,6 +470,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
 
   const data = getIndustryData(locale, slug);
   const ui = getIndustryUi(locale);
+  const contact = contactContent[locale];
   const stories = getClientStories(locale);
   const primaryStory = stories[data.proofLead];
   const secondaryStory =
@@ -1053,46 +1056,33 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        {/* The funnel closes on one button rather than an embedded calendar.
-            The long-standing `book-assessment` anchor is kept so older links
-            into this page still land on the conversion block. */}
-        <BookingCTA
+        {/* The funnel closes on the same scheduling subsection the contact page
+            closes on. The long-standing `book-assessment` anchor is kept so
+            older links into this page still land on the conversion block. */}
+        <SchedulingPanel
           id="book-assessment"
+          locale={locale}
           eyebrow={ui.booking.eyebrow}
           title={data.booking.title}
           description={data.booking.description}
           ctaLabel={ui.booking.ctaLabel}
+          highlights={contact.booking.highlights}
+          panel={contact.booking.panel}
+          secondaryLabel={contact.booking.secondaryLabel}
           href={bookHref}
+          formHref="#custom-proposal"
         />
 
         {/* Scheduling a call and asking for a scoped proposal are different
             requests, so the form keeps its own anchor and its own lead routing
             below the calendar rather than competing with it beside one. */}
-        <section
+        <ContactFormSection
           id="custom-proposal"
-          className="scroll-mt-24 border-t border-white/10 bg-slate-950 py-20 text-white sm:py-24 lg:py-28"
-        >
-          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <Reveal reducedMotion={reducedMotion}>
-              <article className="rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur sm:p-8">
-                {/* Same shared form as the homepage and contact page; only the
-                    surrounding industry context differs. */}
-                <LeadForm
-                  tone="dark"
-                  pageSource={LEAD_PAGE_SOURCE_BY_SLUG[slug]}
-                  eyebrow={ui.booking.customScopeLabel}
-                  title={data.booking.proposalTitle}
-                  description={data.booking.proposalDescription}
-                  className="border-0 bg-transparent p-0 sm:p-0 lg:p-0"
-                />
-                <div className="mt-6 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-xs leading-relaxed text-white/55">
-                  <LockKeyhole className="mt-0.5 h-4 w-4 shrink-0 text-brand-200" />
-                  {ui.booking.privacyNote}
-                </div>
-              </article>
-            </Reveal>
-          </div>
-        </section>
+          pageSource={LEAD_PAGE_SOURCE_BY_SLUG[slug]}
+          eyebrow={ui.booking.customScopeLabel}
+          title={data.booking.proposalTitle}
+          description={data.booking.proposalDescription}
+        />
       </main>
 
       <ClosedLandingFooter data={data} ui={ui} />
