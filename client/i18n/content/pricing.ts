@@ -118,6 +118,7 @@ const en = {
           { label: "Paid acquisition", value: "1 priority channel" },
           { label: "Ad budget managed", value: "Up to $1,000 / mo" },
           { label: "CRM for lead management", value: "Included" },
+          { label: "Deposit-based booking", value: "Optional" },
           { label: "Conversion website", value: ALLOWANCE_NOT_INCLUDED },
           { label: "AI communication", value: ALLOWANCE_NOT_INCLUDED },
           { label: "Email marketing", value: ALLOWANCE_NOT_INCLUDED },
@@ -141,6 +142,7 @@ const en = {
               "CRM included for lead capture, pipeline management and follow-up",
               "Every inquiry organized in one pipeline, with its source and stage",
               "Booking connected to your calendar, with confirmations and reminders",
+              "Optional deposit or booking fee before an appointment is confirmed, taken through your own payment provider",
             ],
           },
           {
@@ -174,6 +176,7 @@ const en = {
           { label: "Paid acquisition", value: "2 priority channels" },
           { label: "Ad budget managed", value: "Up to $2,500 / mo" },
           { label: "CRM for lead management", value: "Included" },
+          { label: "Deposit-based booking", value: "Optional" },
           { label: "Conversion website", value: "Site + 2 forms" },
           { label: "AI communication", value: "$20 balance / mo" },
           { label: "Email marketing", value: "Setup + automation" },
@@ -252,6 +255,7 @@ const en = {
               "Advanced AI communication",
               "Custom integrations",
               "Advanced automations",
+              "Deposit and prepayment rules by service, provider or location",
               "Custom funnels and landing experiences",
             ],
           },
@@ -295,6 +299,10 @@ const en = {
       {
         title: "CRM and website scope",
         body: "CRM is included for lead capture, pipeline management and follow-up — not for unlimited custom CRM development. The website is a conversion site with up to 2 lead capture forms, not unlimited pages, revisions or custom development. Managed hosting, SSL and backups are included with it.",
+      },
+      {
+        title: "Appointment deposits",
+        body: "Deposit-based confirmation is available from DigitalFace Capture onward, and it is optional: you decide which appointments ask for a deposit, a reservation fee or full prepayment, and how much. The payment is taken through your own payment provider and settles into your account. We connect the booking workflow to it — DigitalFace never holds, processes or marks up your money, and your provider's transaction fees are billed by them.",
       },
       {
         title: "No annual contract",
@@ -351,6 +359,12 @@ const en = {
         question: "Do we need to buy new software?",
         answer:
           "No. The CRM and the system come with the plan. Your team gets a login and a simple daily workflow.",
+      },
+      {
+        question:
+          "Can we ask for a deposit before an appointment is confirmed?",
+        answer:
+          "Yes, from DigitalFace Capture onward. The booking step can request a deposit, a reservation fee or full prepayment, and the appointment is marked confirmed once the payment clears. It is optional and set per service, the payment runs through your own payment provider and lands in your account, and it is a commitment tool rather than a guarantee of attendance.",
       },
       {
         question: "Is the advertising budget included in the price?",
@@ -441,6 +455,7 @@ const es: typeof en = {
           { label: "Captación paga", value: "1 canal prioritario" },
           { label: "Pauta gestionada", value: "Hasta $1,000 / mes" },
           { label: "CRM para gestión de leads", value: "Incluido" },
+          { label: "Reserva con anticipo", value: "Opcional" },
           { label: "Sitio web de conversión", value: ALLOWANCE_NOT_INCLUDED },
           { label: "Comunicación con IA", value: ALLOWANCE_NOT_INCLUDED },
           { label: "Email marketing", value: ALLOWANCE_NOT_INCLUDED },
@@ -464,6 +479,7 @@ const es: typeof en = {
               "CRM incluido para captura de leads, gestión del proceso comercial y seguimiento",
               "Cada consulta queda organizada en un solo proceso, con su origen y su etapa",
               "Agendamiento conectado a tu calendario, con confirmaciones y recordatorios",
+              "Anticipo o cuota de reserva opcional antes de confirmar una cita, cobrado con tu propio proveedor de pagos",
             ],
           },
           {
@@ -497,6 +513,7 @@ const es: typeof en = {
           { label: "Captación paga", value: "2 canales prioritarios" },
           { label: "Pauta gestionada", value: "Hasta $2,500 / mes" },
           { label: "CRM para gestión de leads", value: "Incluido" },
+          { label: "Reserva con anticipo", value: "Opcional" },
           { label: "Sitio web de conversión", value: "Sitio + 2 formularios" },
           { label: "Comunicación con IA", value: "$20 de saldo / mes" },
           { label: "Email marketing", value: "Setup + automatización" },
@@ -576,6 +593,7 @@ const es: typeof en = {
               "Comunicación con IA avanzada",
               "Integraciones a medida",
               "Automatizaciones avanzadas",
+              "Reglas de anticipos y prepagos por servicio, profesional o sede",
               "Embudos y landings a medida",
             ],
           },
@@ -619,6 +637,10 @@ const es: typeof en = {
       {
         title: "Alcance del CRM y del sitio web",
         body: "El CRM está incluido para captura de leads, gestión del proceso comercial y seguimiento, no para desarrollo de CRM a medida sin límite. El sitio web es un sitio de conversión con hasta 2 formularios de captura, no páginas, ajustes o desarrollo ilimitados. El hosting administrado, el SSL y los respaldos van incluidos con él.",
+      },
+      {
+        title: "Anticipos de cita",
+        body: "La confirmación con anticipo está disponible desde DigitalFace Capture y es opcional: tú decides qué citas piden anticipo, cuota de reserva o pago completo, y de cuánto. El cobro se hace con tu propio proveedor de pagos y el dinero llega a tu cuenta. Nosotros conectamos el agendamiento con él: DigitalFace nunca retiene, procesa ni marca tu dinero, y las comisiones de tu proveedor las cobra tu proveedor.",
       },
       {
         title: "Sin contrato anual",
@@ -675,6 +697,11 @@ const es: typeof en = {
         question: "¿Tenemos que comprar software nuevo?",
         answer:
           "No. El CRM y el sistema vienen con el plan. Tu equipo recibe un acceso y una rutina diaria sencilla.",
+      },
+      {
+        question: "¿Podemos pedir un anticipo antes de confirmar una cita?",
+        answer:
+          "Sí, desde DigitalFace Capture. El agendamiento puede solicitar un anticipo, una cuota de reserva o el pago completo, y la cita queda confirmada cuando el pago se acredita. Es opcional y se define por servicio, el cobro corre por tu propio proveedor de pagos y el dinero llega a tu cuenta, y es una herramienta de compromiso, no una garantía de asistencia.",
       },
       {
         question: "¿La inversión publicitaria está incluida en el precio?",

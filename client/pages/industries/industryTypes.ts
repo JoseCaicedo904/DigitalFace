@@ -3,6 +3,7 @@ import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
 import type { ConversationDemoContent } from "@/components/demo/conversation";
 import type { CrmPipelineDemoContent } from "@/components/demo/crmPipeline";
 import type { SystemJourneyContent } from "@/sections/SystemJourneyIntro";
+import type { AppointmentCommitmentContent } from "@/sections/AppointmentCommitment";
 
 export type IndustrySlug =
   | "dental-practices"
@@ -33,6 +34,14 @@ export type IndustryItem = IndustryTextItem & {
 export type JourneyStep = {
   label: string;
   description: string;
+};
+
+/** One photo in the industry gallery. `alt` is written for the photo, the
+ *  title and description for the moment the photo stands in for. */
+export type GalleryMoment = {
+  title: string;
+  description: string;
+  alt: string;
 };
 
 export type PackageDetail = {
@@ -89,6 +98,12 @@ export type IndustryLandingText = {
     secondaryCta: string;
     visualTitle: string;
     visualStages: string[];
+    /**
+     * Headline set over the wide photograph below the hero. Written in this
+     * funnel's own operational language, so the first full-width statement the
+     * visitor reads is about their practice rather than about the picture.
+     */
+    mediaHeadline: string;
   };
   stats: IndustryStat[];
   problem: {
@@ -96,6 +111,18 @@ export type IndustryLandingText = {
     title: string;
     description: string;
     items: IndustryTextItem[];
+  };
+  /**
+   * The photographic block. Three real environment photos are the only place
+   * the funnel shows the room the visitor works in, so the copy has to earn
+   * them: each caption names a moment the system changes, not the picture.
+   */
+  gallery: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    /** Exactly three, matched positionally to the industry's photo set. */
+    moments: GalleryMoment[];
   };
   journey: {
     eyebrow: string;
@@ -117,6 +144,8 @@ export type IndustryLandingText = {
   conversationDemo: ConversationDemoContent;
   /** The scripted lead-organization demonstration, with this funnel's data. */
   crmPipelineDemo: CrmPipelineDemoContent;
+  /** The reservation step, in this funnel's own word for a deposit. */
+  appointmentCommitment: AppointmentCommitmentContent;
   packagesTitle: string;
   packages: IndustryPackage[];
   faqTitle: string;
@@ -182,7 +211,6 @@ export type IndustryUiCopy = {
   };
   heroMedia: {
     eyebrow: string;
-    title: string;
   };
   workflowOverlay: string;
   capabilitiesDisclaimer: string;

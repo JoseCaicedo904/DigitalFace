@@ -1,5 +1,11 @@
 import type { MediaSlotSpec } from "@/components/media/MediaSlot";
 
+/** A layout photograph: its path plus the CSS object-position its crop needs. */
+export type IndustryPhoto = {
+  src: string;
+  position: string;
+};
+
 export const corporateMedia = {
   hero: {
     id: "C01_CORPORATE_HERO",
@@ -62,13 +68,12 @@ export const industryMedia = {
   "dental-practices": {
     hero: {
       id: "D01_DENTAL_HERO",
-      kind: "video",
-      src: "/media/dental/hero-loop.mp4",
-      poster: "/media/dental/hero-poster.webp",
-      label: "Dental patient journey film",
+      kind: "image",
+      src: "/media/dental/hero-banner.webp",
+      label: "Dental patient journey",
       description:
-        "A premium, reassuring dental consultation story with room for the page interface to breathe.",
-      alt: "Patient arriving for a modern dental consultation",
+        "A premium, reassuring dental consultation moment with room for the page interface to breathe.",
+      alt: "Dentist welcoming a smiling patient into the treatment chair",
       objectPosition: "center",
     },
     workflow: {
@@ -78,20 +83,19 @@ export const industryMedia = {
       label: "Dental consultation workflow",
       description:
         "A natural team-and-patient moment illustrating organized intake and human review.",
-      alt: "Dental coordinator guiding a patient through consultation intake",
+      alt: "Dental team working with a patient during a scheduled appointment",
       objectPosition: "center",
     },
   },
   "aesthetic-medicine": {
     hero: {
       id: "A01_AESTHETIC_HERO",
-      kind: "video",
-      src: "/media/aesthetic/hero-loop.mp4",
-      poster: "/media/aesthetic/hero-poster.webp",
-      label: "Aesthetic consultation film",
+      kind: "image",
+      src: "/media/aesthetic/hero-banner.webp",
+      label: "Aesthetic consultation",
       description:
-        "A physician-led aesthetic consultation story focused on trust, listening, and professional guidance.",
-      alt: "Physician-led aesthetic medicine consultation",
+        "A physician-led aesthetic consultation focused on trust, listening, and professional guidance.",
+      alt: "Aesthetic physician assessing a patient's face during a consultation",
       objectPosition: "center",
     },
     workflow: {
@@ -101,21 +105,20 @@ export const industryMedia = {
       label: "Aesthetic inquiry workflow",
       description:
         "An authentic consultation-team moment with digital intake and clear professional boundaries.",
-      alt: "Aesthetic medicine team organizing a consultation inquiry",
+      alt: "Aesthetic practitioner mapping a treatment on a patient's face",
       objectPosition: "center",
     },
   },
   "med-spas": {
     hero: {
       id: "M01_MEDSPA_HERO",
-      kind: "video",
-      src: "/media/med-spa/hero-loop.mp4",
-      poster: "/media/med-spa/hero-poster.webp",
-      label: "Med spa client journey film",
+      kind: "image",
+      src: "/media/med-spa/hero-banner.webp",
+      label: "Med spa client journey",
       description:
-        "An inviting med-spa arrival and booking story designed around recurring client relationships.",
-      alt: "Client arriving for a premium med spa appointment",
-      objectPosition: "center",
+        "An inviting med-spa treatment moment designed around recurring client relationships.",
+      alt: "Client receiving a facial treatment at a premium med spa",
+      objectPosition: "center 45%",
     },
     workflow: {
       id: "M02_MEDSPA_WORKFLOW",
@@ -124,13 +127,57 @@ export const industryMedia = {
       label: "Med spa booking workflow",
       description:
         "A warm client-coordinator interaction illustrating organized booking and reactivation.",
-      alt: "Med spa coordinator welcoming and assisting a client",
+      alt: "Med spa therapists attending clients during treatments",
       objectPosition: "center",
     },
   },
 } satisfies Record<
   "dental-practices" | "aesthetic-medicine" | "med-spas",
   { hero: MediaSlotSpec; workflow: MediaSlotSpec }
+>;
+
+/**
+ * Photography that is layout, not a media slot: the atmospheric plate behind
+ * the hero and the three mosaic tiles. Paths only — every word that appears
+ * over these images is localized copy and lives in the industry content files.
+ */
+export const industryPhotography = {
+  "dental-practices": {
+    backdrop: "/media/dental/hero-backdrop.webp",
+    backdropPosition: "center 55%",
+    moments: [
+      { src: "/media/dental/moment-01.webp", position: "center 30%" },
+      { src: "/media/dental/moment-02.webp", position: "center" },
+      { src: "/media/dental/moment-03.webp", position: "center" },
+    ],
+  },
+  "aesthetic-medicine": {
+    backdrop: "/media/aesthetic/hero-backdrop.webp",
+    backdropPosition: "center 60%",
+    moments: [
+      // A tall studio portrait: without the upward bias the square-ish feature
+      // tile crops the face straight off the top.
+      { src: "/media/aesthetic/moment-01.webp", position: "center 22%" },
+      { src: "/media/aesthetic/moment-02.webp", position: "center" },
+      { src: "/media/aesthetic/moment-03.webp", position: "center" },
+    ],
+  },
+  "med-spas": {
+    backdrop: "/media/med-spa/hero-backdrop.webp",
+    backdropPosition: "center 50%",
+    moments: [
+      { src: "/media/med-spa/moment-01.webp", position: "center 35%" },
+      { src: "/media/med-spa/moment-02.webp", position: "center" },
+      { src: "/media/med-spa/moment-03.webp", position: "center" },
+    ],
+  },
+} satisfies Record<
+  "dental-practices" | "aesthetic-medicine" | "med-spas",
+  {
+    backdrop: string;
+    backdropPosition: string;
+    moments: [IndustryPhoto, IndustryPhoto, IndustryPhoto];
+  }
 >;
 
 export const clientMedia = {

@@ -1,6 +1,7 @@
 import type { ConversationDemoContent } from "@/components/demo/conversation";
 import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
 import type { CrmPipelineDemoContent } from "@/components/demo/crmPipeline";
+import type { AppointmentCommitmentContent } from "@/sections/AppointmentCommitment";
 import type { Locale } from "../locale";
 
 /**
@@ -899,6 +900,54 @@ const en = {
   adCampaignDemo: adCampaignDemoEn,
   conversationDemo: conversationDemoEn,
   crmPipelineDemo: crmPipelineDemoEn,
+  appointmentCommitment: {
+    eyebrow: "Appointment commitment",
+    title: "A requested appointment is not the same as a confirmed one.",
+    description:
+      "Lead, conversation, qualification, booking — and then, when it fits your business, one more step: a deposit, a reservation fee or full prepayment before the appointment is marked confirmed. The payment runs through the payment provider your business already uses, and the appointment status moves with it.",
+    steps: [
+      {
+        label: "Appointment requested",
+        caption: "The customer picks a time from your real availability.",
+      },
+      {
+        label: "Reservation requested",
+        caption:
+          "A payment request goes out with the booking, only where you want one.",
+      },
+      {
+        label: "Appointment confirmed",
+        caption:
+          "Once the payment clears, the status updates in your pipeline.",
+      },
+      {
+        label: "Reminders",
+        caption: "Confirmations and reminders continue exactly as before.",
+      },
+      {
+        label: "Attended appointment",
+        caption: "Your team walks into a slot someone committed to.",
+      },
+    ],
+    points: [
+      {
+        title: "Fewer casual bookings",
+        description:
+          "A time slot that costs something to hold is asked for by people who mean to use it, so casual requests stop taking space on the calendar.",
+      },
+      {
+        title: "A confirmation your team can trust",
+        description:
+          "Confirmed means paid and confirmed, not just requested, so your schedule reflects real commitments and your team can plan around it.",
+      },
+      {
+        title: "Your provider, your money",
+        description:
+          "Payments run through the payment provider your business already uses and settle into your account. DigitalFace connects the booking workflow to it and never holds your funds.",
+      },
+    ],
+    note: "Optional and configured per service: you decide which appointments ask for a deposit and how much. A deposit strengthens commitment; it is not a guarantee of attendance.",
+  } satisfies AppointmentCommitmentContent,
   valueProps: {
     eyebrow: "Your sales system",
     title: "Automation that feels personal and never takes a day off",
@@ -1244,6 +1293,56 @@ const es: typeof en = {
   adCampaignDemo: adCampaignDemoEs,
   conversationDemo: conversationDemoEs,
   crmPipelineDemo: crmPipelineDemoEs,
+  appointmentCommitment: {
+    eyebrow: "Compromiso de cita",
+    title: "Una cita solicitada no es lo mismo que una cita confirmada.",
+    description:
+      "Contacto, conversación, calificación, agendamiento y, cuando le sirve a tu negocio, un paso más: un anticipo, una cuota de reserva o el pago completo antes de dar la cita por confirmada. El pago corre por el proveedor de pagos que tu negocio ya usa y el estado de la cita avanza con él.",
+    steps: [
+      {
+        label: "Cita solicitada",
+        caption: "La persona elige un horario de tu disponibilidad real.",
+      },
+      {
+        label: "Reserva solicitada",
+        caption:
+          "Con el agendamiento sale una solicitud de pago, solo donde tú la quieras.",
+      },
+      {
+        label: "Cita confirmada",
+        caption:
+          "Cuando el pago se acredita, el estado se actualiza en tu proceso.",
+      },
+      {
+        label: "Recordatorios",
+        caption:
+          "Las confirmaciones y los recordatorios siguen igual que antes.",
+      },
+      {
+        label: "Cita atendida",
+        caption:
+          "Tu equipo llega a un espacio que alguien se comprometió a usar.",
+      },
+    ],
+    points: [
+      {
+        title: "Menos reservas sin intención",
+        description:
+          "Un horario que cuesta reservar lo pide quien realmente piensa usarlo, así las solicitudes casuales dejan de ocupar agenda.",
+      },
+      {
+        title: "Una confirmación en la que tu equipo puede confiar",
+        description:
+          "Confirmada significa pagada y confirmada, no solo solicitada: tu agenda refleja compromisos reales y tu equipo puede planear sobre ella.",
+      },
+      {
+        title: "Tu proveedor, tu dinero",
+        description:
+          "Los pagos pasan por el proveedor de pagos que tu negocio ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+      },
+    ],
+    note: "Es opcional y se configura por servicio: tú decides qué citas piden anticipo y de cuánto. El anticipo refuerza el compromiso; no es una garantía de asistencia.",
+  } satisfies AppointmentCommitmentContent,
   valueProps: {
     eyebrow: "Tu sistema de ventas",
     title: "Automatización que se siente cercana y nunca descansa",

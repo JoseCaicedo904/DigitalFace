@@ -23,7 +23,6 @@ export const industryContentEn: IndustryLocaleBundle = {
     },
     heroMedia: {
       eyebrow: "Trust before conversion",
-      title: "A premium visual moment, built around the real patient journey.",
     },
     workflowOverlay:
       "Technology organizes the opportunity. Your team owns the relationship.",
@@ -106,26 +105,31 @@ export const industryContentEn: IndustryLocaleBundle = {
       metadata: {
         title: "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
         description:
-          "Turn implant, veneer and smile-design inquiries into booked consultations. DigitalFace runs the advertising, bilingual AI follow-up and booking workflow for dental practices in the US and Latin America.",
+          "Turn implant, veneer and smile-design inquiries into attended consultations. DigitalFace runs the advertising, bilingual follow-up, consultation booking and recall workflow for dental practices in the US and Latin America.",
       },
       hero: {
         eyebrow: "DigitalFace for Dental Practices",
         title: "Turn more dental inquiries into booked consultations.",
         description:
-          "One managed system connecting dental advertising, patient communication, automated follow-up, consultation booking and pipeline visibility.",
+          "One managed system connecting dental advertising, new-patient intake, consultation booking and treatment-plan follow-up — from the first inquiry to an attended consultation.",
         primaryCta: "Book a Dental Growth Assessment",
         secondaryCta: "See the dental system",
         visualTitle: "Dental inquiry journey",
         visualStages: [
           "New veneer inquiry captured",
           "Bilingual response delivered",
-          "Consultation opportunity created",
+          "Consultation booked and confirmed",
         ],
+        mediaHeadline:
+          "Your team stays chairside. The inquiry still gets answered, booked and followed up.",
       },
       stats: [
-        { value: "24/7", label: "Inquiry coverage" },
-        { value: "EN + ES", label: "Bilingual communication" },
-        { value: "One view", label: "Every opportunity tracked" },
+        { value: "24/7", label: "New-patient inquiries answered" },
+        { value: "EN + ES", label: "Bilingual patient communication" },
+        {
+          value: "Attended",
+          label: "Tracked, not just booked",
+        },
       ],
       problem: {
         eyebrow: "The conversion gap",
@@ -140,63 +144,90 @@ export const industryContentEn: IndustryLocaleBundle = {
               "Implant, veneer and smile-design inquiries cool off while your team is chairside.",
           },
           {
-            title: "Patient information everywhere",
+            title: "Case detail scattered across inboxes",
             description:
-              "Photos, treatment interests, notes and conversations end up spread across disconnected inboxes.",
+              "Photos, treatment interest and intake notes end up spread across inboxes instead of sitting on one patient record.",
           },
           {
-            title: "Manual consultation follow-up",
+            title: "Consultations that never get booked",
             description:
-              "Staff keep chasing patients who asked a question but never picked a consultation time.",
+              "Staff chase patients who asked about treatment and never picked a time, so the inquiry ages instead of converting.",
           },
           {
-            title: "Unclear financing conversations",
+            title: "Financing answered differently every time",
             description:
-              "General payment information and case-specific questions are not routed the same way twice.",
+              "General payment information and case-specific financing questions are not routed the same way twice.",
           },
           {
-            title: "Missed consultations",
+            title: "No-shows and unscheduled treatment",
             description:
-              "Inconsistent confirmations, reminders and rescheduling leave avoidable gaps in the schedule.",
+              "Inconsistent confirmations, reminders and recall leave gaps in the schedule and treatment sitting unbooked.",
           },
           {
-            title: "No line from campaign to consultation",
+            title: "No line from campaign to case acceptance",
             description:
-              "The practice sees lead totals but cannot connect campaigns to booked consultations.",
+              "The practice sees lead totals, not which campaigns produced attended consultations and accepted treatment plans.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Inside the practice",
+        title:
+          "The clinical room stays yours. The administrative one stops running on memory.",
+        description:
+          "Nothing here changes how you treat. It changes what happens in the hours around the appointment, when your team is chairside and the inquiry is still waiting.",
+        moments: [
+          {
+            title: "The consultation that actually gets booked",
+            description:
+              "A veneer question asked at 9 p.m. is answered in seconds and lands on tomorrow's schedule instead of tomorrow's to-do list.",
+            alt: "Dentist comparing a shade guide with a smiling young patient",
+          },
+          {
+            title: "The chair that stops sitting empty",
+            description:
+              "Confirmations, reminders and rescheduling run on their own, so the gaps in the day close before anyone notices them.",
+            alt: "Treatment light and instruments in a modern dental operatory",
+          },
+          {
+            title: "The front desk that stops chasing",
+            description:
+              "Treatment interest, photos and notes arrive attached to one record, so your coordinator opens a case instead of rebuilding it.",
+            alt: "Dental clinic room where staff attend a patient together",
           },
         ],
       },
       journey: {
         eyebrow: "Dental patient journey",
         title:
-          "From treatment interest to consultation, with the right person involved at the right moment.",
+          "From treatment interest to an attended consultation, with the right person involved at each step.",
         description:
           "The system automates the administrative conversation and keeps clinical boundaries intact throughout.",
         steps: [
           {
-            label: "Inquiry captured",
+            label: "New-patient inquiry captured",
             description:
               "A patient responds to an implant, veneer, smile-design or general treatment campaign.",
           },
           {
-            label: "Immediate response",
+            label: "Immediate bilingual reply",
             description:
               "The patient gets an acknowledgment in English or Spanish while the opportunity enters the CRM.",
           },
           {
-            label: "Interest organized",
+            label: "Intake and case detail organized",
             description:
-              "Treatment interest, administrative details and uploaded patient media stay attached to the record.",
+              "Treatment interest, intake answers and any photos the patient sent stay attached to one record.",
           },
           {
             label: "Human review when required",
             description:
-              "Clinical questions, case-specific payment topics and exceptions go to the right team member.",
+              "Clinical questions, case-specific financing and exceptions go to the right team member.",
           },
           {
-            label: "Consultation lifecycle managed",
+            label: "Consultation and recall managed",
             description:
-              "Booking, reminders, rescheduling, no-show recovery and long-term follow-up run from one pipeline.",
+              "Booking, reminders, rescheduling, no-show recovery and recall on unscheduled treatment run from one pipeline.",
           },
         ],
       },
@@ -210,32 +241,32 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Dental patient acquisition",
             description:
-              "Campaign strategy for implants, veneers, smile design, consultations and selected high-value services.",
+              "Campaign strategy for implants, veneers, smile design and the high-value cases you want more of.",
           },
           {
             title: "AI dental concierge",
             description:
-              "Bilingual administrative replies based on practice-approved information, with clear handoff rules.",
+              "Bilingual administrative replies built from practice-approved answers, with clear handoff rules for anything clinical.",
           },
           {
-            title: "Photo and case intake",
+            title: "Patient intake and photo capture",
             description:
-              "Patient media and intake details stay organized for your team, without turning AI into a clinician.",
+              "Intake answers, photos and treatment interest arrive organized for your coordinator, without turning AI into a clinician.",
           },
           {
-            title: "Consultation workflows",
+            title: "Consultation scheduling",
             description:
               "Availability, booking, confirmations, reminders, rescheduling and cancellations all work together.",
           },
           {
-            title: "Pipeline and human review",
+            title: "Case pipeline and human review",
             description:
-              "Every opportunity has a visible stage, a history, an owner and an escalation path.",
+              "Every consultation opportunity has a visible stage, a history, an owner and an escalation path.",
           },
           {
-            title: "Recovery and reactivation",
+            title: "Recall and reactivation",
             description:
-              "Unanswered inquiries, no-shows and older patient opportunities get structured follow-up.",
+              "No-shows, unanswered inquiries and unscheduled treatment get structured follow-up instead of being forgotten.",
           },
         ],
       },
@@ -243,9 +274,9 @@ export const industryContentEn: IndustryLocaleBundle = {
         eyebrow: "One connected patient system",
         title: "Getting the inquiry is only the beginning.",
         description:
-          "A practice fills its chairs when three parts stay connected: reach people already considering treatment, answer them while the interest is real, and keep every consultation opportunity visible until it is on the schedule.",
+          "A practice fills its chairs when three parts stay connected: reach people already considering treatment, answer them while the interest is real, and keep every case visible from the first inquiry to an attended consultation.",
         closing:
-          "Create treatment inquiries. Move them toward consultations. Keep the patient journey visible.",
+          "Create treatment inquiries. Convert them into attended consultations. Keep every case visible.",
         stages: [
           {
             number: "01",
@@ -257,16 +288,16 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             number: "02",
             label: "Convert",
-            title: "Move them toward the consultation",
+            title: "Turn the inquiry into a booked consultation",
             description:
-              "Answer in seconds, organize what the patient is asking for and guide them to a consultation time.",
+              "Answer in seconds, capture what the patient is asking about and guide them to a consultation time.",
           },
           {
             number: "03",
             label: "Manage",
             title: "Keep the practice in control",
             description:
-              "Source, treatment interest, history, status and the next step stay together for your front desk.",
+              "Source, treatment interest, case history, status and the next step stay together for your front desk.",
           },
         ],
       },
@@ -489,7 +520,7 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Treatment interest",
             description:
-              "What the patient wants, and what they sent, stays attached to the record.",
+              "The treatment the patient is asking about, and the photo they sent, stay on the record.",
           },
           {
             title: "Consultation requested",
@@ -551,7 +582,7 @@ export const industryContentEn: IndustryLocaleBundle = {
               details: [
                 { label: "Source", value: "Meta Ads" },
                 { label: "Interest", value: "Dental implant" },
-                { label: "Asked about", value: "Payment options" },
+                { label: "Asked about", value: "Financing" },
                 { label: "Requested", value: "Tuesday 4:30 PM" },
               ],
             },
@@ -559,6 +590,54 @@ export const industryContentEn: IndustryLocaleBundle = {
           transcriptLabel:
             "Sample patient journey showing one dental inquiry becoming an organized consultation opportunity with a clear next step.",
         },
+      },
+      appointmentCommitment: {
+        eyebrow: "Consultation commitment",
+        title: "A requested consultation is not the same as a confirmed one.",
+        description:
+          "Inquiry, conversation, treatment interest, booking — and then, when it fits your practice, one more step: a consultation reservation, deposit or fee that has to clear before the consultation is marked confirmed. The payment runs through the payment provider your practice already uses, and the consultation status moves with it.",
+        steps: [
+          {
+            label: "Consultation requested",
+            caption: "The patient picks a time from your real availability.",
+          },
+          {
+            label: "Reservation requested",
+            caption:
+              "A payment request goes out with the booking, only for the treatments you choose.",
+          },
+          {
+            label: "Consultation confirmed",
+            caption:
+              "Once the payment clears, the status updates in your pipeline.",
+          },
+          {
+            label: "Reminders",
+            caption: "Confirmations and reminders continue exactly as before.",
+          },
+          {
+            label: "Attended consultation",
+            caption: "Your clinical team walks into a committed appointment.",
+          },
+        ],
+        points: [
+          {
+            title: "Fewer casual bookings",
+            description:
+              "A consultation slot that costs something to hold is asked for by patients who mean to attend, so casual requests stop taking chair time.",
+          },
+          {
+            title: "A schedule you can plan around",
+            description:
+              "Confirmed means paid and confirmed, not just requested, so the day your front desk sees is the day the practice is actually working.",
+          },
+          {
+            title: "Your provider, your money",
+            description:
+              "Payments run through the payment provider your practice already uses and settle into your account. DigitalFace connects the booking workflow to it and never holds your funds.",
+          },
+        ],
+        note: "Optional and configured per treatment: you decide which consultations ask for a reservation and how much. A reservation strengthens commitment; it is not a guarantee of attendance.",
       },
       packagesTitle: "Choose the dental growth level that fits you today.",
       packages: [
@@ -568,39 +647,45 @@ export const industryContentEn: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate dental inquiries, capture every one of them in your CRM and answer automatically.",
+            "Generate implant, veneer and smile-design inquiries, capture every one in your CRM and answer automatically.",
           idealFor:
-            "Practices that need a dependable way to bring dental inquiries in and stop losing them.",
+            "Practices that need a dependable flow of new-patient inquiries and a way to stop losing them.",
           highlights: [
             "One priority acquisition channel",
-            "CRM included for lead capture and follow-up",
+            "CRM included for patient intake and follow-up",
             "Automatic first response, booking and reminders",
+            "Optional deposit to confirm a consultation",
           ],
           details: [
             {
               title: "Managed dental acquisition",
               description:
-                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real treatment demand.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your treatment mix, your market and real demand for implants, veneers or smile design.",
             },
             {
-              title: "CRM included",
+              title: "Patient CRM included",
               description:
-                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
+                "Lead capture, pipeline management and follow-up are included. Every inquiry becomes an organized opportunity with its source, its treatment interest, its stage and its full history, so nobody rebuilds the case from a message thread.",
             },
             {
               title: "Automatic first response",
               description:
-                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient to the next step, day or night.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient toward booking a consultation, day or night.",
             },
             {
               title: "Consultation calendar and reminders",
               description:
-                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your front desk does today, and cut avoidable no-shows.",
+            },
+            {
+              title: "Consultation reservation with optional deposit",
+              description:
+                "When you want it, the booking step asks for a deposit or consultation fee before the consultation is marked confirmed. The payment is taken through your practice's own payment provider and settles into your account; we connect it to the appointment workflow. It stays optional and is configured per treatment.",
             },
             {
               title: "Monthly performance review",
               description:
-                "We review inquiry sources, response activity, booked consultations and cost per booked consultation, then agree the next campaign move.",
+                "We review inquiry sources, response activity, booked and attended consultations, and cost per booked consultation, then agree the next campaign move.",
             },
           ],
           note: {
@@ -633,17 +718,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Two priority acquisition channels",
               description:
-                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked consultations.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing attended consultations, not just clicks.",
             },
             {
               title: "Conversion website with up to 2 forms",
               description:
-                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
+                "A conversion-focused website with up to two new-patient forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
               title: "Bilingual AI communication",
               description:
-                "The assistant answers in English and Spanish, using only information you approve: treatments, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
+                "The assistant answers in English and Spanish, using only what you approve: the treatments you offer, hours, location, financing policies and what your practice will and will not quote in a chat. A $20 AI usage balance is included every month.",
             },
             {
               title: "Clinical and exception handoff",
@@ -653,7 +738,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Email marketing setup and automation",
               description:
-                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
+                "We build and run the campaign automation, recall sequences for patients with unscheduled treatment included. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
             },
             {
               title: "Up to 4 static ad creatives per month",
@@ -691,7 +776,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Multiple acquisition channels",
               description:
-                "More than two channels working together, with the mix built around your treatment priorities, your market and your budget.",
+                "More than two channels working together, with the mix built around the cases you want more of — implants, full-arch, cosmetic — your market and your budget.",
             },
             {
               title: "Larger advertising budgets",
@@ -706,12 +791,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Advanced CRM architecture",
               description:
-                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
+                "Custom pipelines per treatment type, plus the roles, permissions and reporting your treatment coordinators actually work from.",
             },
             {
               title: "Advanced AI communication",
               description:
                 "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
+            },
+            {
+              title: "Advanced deposit and prepayment rules",
+              description:
+                "Different reservation amounts by treatment, provider or location, package prepayment, and the refund or credit rules your business applies — connected to the payment provider you already use.",
             },
             {
               title: "Custom integrations and automations",
@@ -721,7 +811,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Reactivation, reporting and priority support",
               description:
-                "Structured reactivation of your existing patients, attribution across the full journey, and a support level agreed with you.",
+                "Structured recall and reactivation of your existing patient base, attribution from campaign to attended consultation, and a support level agreed with you.",
             },
           ],
           note: {
@@ -733,7 +823,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       ],
       faqTitle: "What dental practices usually ask us",
       faqDescription:
-        "We review your acquisition channels, response process, consultation workflow and follow-up before recommending a package.",
+        "We review your acquisition channels, response times, consultation workflow, recall process and financing conversations before recommending a package.",
       faq: [
         {
           question: "Can the system communicate in English and Spanish?",
@@ -756,6 +846,18 @@ export const industryContentEn: IndustryLocaleBundle = {
             "Yes. Human handoff is part of the system. Configured labels and ownership controls pause AI communication the moment your team steps in.",
         },
         {
+          question:
+            "Can we ask for a deposit before a consultation is confirmed?",
+          answer:
+            "Yes, from DigitalFace Capture onward. The booking step can request a deposit or consultation fee, and the consultation is marked confirmed once the payment clears. It is optional and set per treatment, the payment runs through your practice's own payment provider and lands in your account, and it is a commitment tool rather than a guarantee of attendance.",
+        },
+        {
+          question:
+            "Can you follow up on treatment plans that were never scheduled?",
+          answer:
+            "Yes. Patients with unscheduled treatment can be segmented in the CRM and placed into an approved recall or follow-up sequence. The moment a patient replies with a question about their own case, the conversation is handed to your team.",
+        },
+        {
           question: "Does it work for international patients?",
           answer:
             "Yes. Bilingual FAQs, media intake, consultation preparation and human review can support international-patient workflows within the agreed scope.",
@@ -764,7 +866,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       booking: {
         title: "Let's talk about your patient acquisition system.",
         description:
-          "Choose a convenient time to discuss how your dental practice currently attracts, converts and manages patient opportunities.",
+          "Choose a convenient time to review how your practice attracts new patients, turns inquiries into attended consultations and follows up on unscheduled treatment.",
         proposalTitle: "Need a custom dental workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering photo intake, international patients, a CRM migration, extra locations or another process specific to your practice.",
@@ -779,27 +881,32 @@ export const industryContentEn: IndustryLocaleBundle = {
         title:
           "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
         description:
-          "Turn procedure interest into qualified consultations. DigitalFace runs the advertising, bilingual AI communication and appointment workflow for aesthetic medicine and plastic surgery practices, while clinical decisions stay with your team.",
+          "Turn injectable, skin-quality and surgical procedure interest into attended consultations. DigitalFace runs the advertising, bilingual communication, consultation booking and follow-up for aesthetic medicine and plastic surgery practices, while every clinical decision stays with your team.",
       },
       hero: {
         eyebrow: "DigitalFace for Aesthetic Medicine and Plastic Surgery",
         title:
-          "Turn procedure interest into qualified consultation opportunities.",
+          "Turn procedure interest into qualified, attended consultations.",
         description:
-          "Respond faster, organize what each patient is asking for, automate the administrative follow-up and guide interested patients toward the right consultation.",
+          "Answer in seconds, capture each patient's area of interest, escalate anything clinical to your team and guide serious inquiries toward a booked consultation.",
         primaryCta: "Book an Aesthetic Growth Assessment",
         secondaryCta: "See the patient journey",
         visualTitle: "Aesthetic consultation journey",
         visualStages: [
           "Procedure inquiry captured",
-          "Patient intent organized",
-          "Consultation path activated",
+          "Area of interest organized",
+          "Consultation booked and prepared",
         ],
+        mediaHeadline:
+          "The administrative work runs on its own. Every clinical question still reaches your team.",
       },
       stats: [
-        { value: "24/7", label: "Inquiry coverage" },
-        { value: "EN + ES", label: "Bilingual communication" },
-        { value: "One view", label: "Every opportunity tracked" },
+        { value: "24/7", label: "Procedure inquiries answered" },
+        { value: "Clinician-led", label: "Every clinical question escalated" },
+        {
+          value: "One record",
+          label: "Interest, questions and history",
+        },
       ],
       problem: {
         eyebrow: "The consultation gap",
@@ -811,32 +918,58 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Inquiries arrive after hours",
             description:
-              "Interested patients write when the front desk is closed, and they expect an answer anyway.",
+              "Interested patients write at ten at night, and they compare two or three practices before anyone opens the inbox.",
           },
           {
-            title: "The same questions, over and over",
+            title: "The same administrative questions all day",
             description:
-              "Location, consultation process, financing, availability and preparation questions consume your team's day.",
+              "Consultation fee, process, preparation, location, financing and availability questions consume your coordinators' day.",
           },
           {
-            title: "Unstructured procedure interest",
+            title: "Procedure interest never captured",
             description:
-              "What each patient actually wants stays buried in a message thread instead of organized in the CRM.",
+              "The area a patient asked about stays buried in a thread instead of on the record, so the coordinator restarts the conversation.",
           },
           {
             title: "Clinical questions in the wrong hands",
             description:
-              "Safety, eligibility, symptoms and case-specific recommendations need reliable escalation to a person.",
+              "Suitability, safety and case-specific questions need a reliable route to a qualified person, every single time.",
           },
           {
-            title: "Drop-off before the consultation",
+            title: "Drop-off between booked and attended",
             description:
-              "Interested patients stop replying before choosing, confirming or attending a consultation.",
+              "Patients stop replying, cancel late or simply do not arrive, and high-value consultation slots go unused.",
           },
           {
-            title: "No visibility from campaign to consultation",
+            title: "No line from campaign to treatment",
             description:
-              "Reports show lead totals without showing which inquiries turned into consultation opportunities.",
+              "Reports show lead totals, not which inquiries became attended consultations or treatment plans.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Inside the practice",
+        title: "Physician-led in the room. Physician-led in the inbox, too.",
+        description:
+          "Automation handles what is administrative and stops where it should. Anything clinical reaches you — not a script, not a bot, not a coordinator guessing.",
+        moments: [
+          {
+            title: "The consultation stays yours",
+            description:
+              "Pricing, availability and general process questions are answered instantly. Clinical questions are escalated to the physician, every time.",
+            alt: "Physician assessing a patient's face during an aesthetic consultation",
+          },
+          {
+            title: "The assessment arrives prepared",
+            description:
+              "Area of interest, history and any photos the patient sent are already on the record before they sit down.",
+            alt: "Clinician examining a patient's face during an aesthetic assessment",
+          },
+          {
+            title: "The room is ready and so is the pipeline",
+            description:
+              "Bookings, deposits and post-consultation follow-up run from one view instead of four inboxes and a notebook.",
+            alt: "Modern aesthetic medicine treatment room prepared for a patient",
           },
         ],
       },
@@ -860,7 +993,7 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             label: "Administrative questions answered",
             description:
-              "Approved information about the practice, consultation process, location and policies is delivered consistently.",
+              "Approved information about the consultation process, fees, preparation, location and policies is delivered the same way every time.",
           },
           {
             label: "Clinical questions escalated",
@@ -870,36 +1003,36 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             label: "Consultation and follow-up managed",
             description:
-              "Booking, reminders, rescheduling, missed appointments and long-term interest stay visible and actionable.",
+              "Booking, reminders, rescheduling, missed appointments, post-consultation follow-up and patients due for their next visit stay visible and actionable.",
           },
         ],
       },
       capabilities: {
         eyebrow: "Inside the system",
         title:
-          "A patient-acquisition system built for consultation-driven care",
+          "Built for a practice where everything starts with the consultation",
         description:
           "Campaigns and conversations connect to a controlled appointment journey your team can supervise.",
         items: [
           {
             title: "Procedure acquisition campaigns",
             description:
-              "Campaigns and conversion paths aligned to the surgical or nonsurgical procedures you actually want to grow.",
+              "Campaigns and conversion paths built around the procedures you want to grow: injectables, skin quality, body or surgical.",
           },
           {
             title: "AI patient concierge",
             description:
-              "Approved English and Spanish administrative communication, available well beyond front-desk hours.",
+              "Approved English and Spanish administrative answers, available long after your coordinators go home.",
           },
           {
-            title: "Intent and readiness capture",
+            title: "Area of interest and intent capture",
             description:
-              "Procedure category, language, consultation interest and configured administrative facts stay organized.",
+              "Procedure category, language, timing and consultation interest stay organized on one patient record.",
           },
           {
             title: "Protected clinical boundaries",
             description:
-              "Eligibility, diagnosis, symptoms, complications and medical advice are routed to qualified people.",
+              "Suitability, diagnosis, symptoms, complications and medical advice are routed to qualified people, never answered by software.",
           },
           {
             title: "Consultation lifecycle",
@@ -909,7 +1042,7 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Social inquiry automation",
             description:
-              "Configured Facebook and Instagram comments or messages enter controlled response and follow-up paths.",
+              "Configured Facebook and Instagram comments and messages enter the same controlled response path as a campaign inquiry.",
           },
         ],
       },
@@ -1240,6 +1373,54 @@ export const industryContentEn: IndustryLocaleBundle = {
             "Sample patient journey showing one procedure inquiry becoming an organized consultation opportunity, with the clinical question routed to a person.",
         },
       },
+      appointmentCommitment: {
+        eyebrow: "Consultation commitment",
+        title: "A requested consultation is not the same as a confirmed one.",
+        description:
+          "Inquiry, conversation, procedure interest, booking — and then, when it fits your practice, one more step: a consultation fee or appointment reservation that has to clear before the consultation is marked confirmed. The payment runs through the payment provider your practice already uses, and the appointment status moves with it.",
+        steps: [
+          {
+            label: "Consultation requested",
+            caption: "The patient picks a time from your real availability.",
+          },
+          {
+            label: "Reservation requested",
+            caption:
+              "A payment request goes out with the booking, only for the consultations you choose.",
+          },
+          {
+            label: "Consultation confirmed",
+            caption:
+              "Once the payment clears, the status updates in your pipeline.",
+          },
+          {
+            label: "Reminders",
+            caption: "Confirmations and reminders continue exactly as before.",
+          },
+          {
+            label: "Attended consultation",
+            caption: "Your provider walks into a committed appointment.",
+          },
+        ],
+        points: [
+          {
+            title: "Fewer casual bookings",
+            description:
+              "A consultation that carries a fee is requested by patients who are serious about the procedure, so casual interest stops filling the agenda.",
+          },
+          {
+            title: "Provider time that reflects real commitments",
+            description:
+              "Confirmed means paid and confirmed, not just requested, so the hours you block for consultations are hours a patient has committed to.",
+          },
+          {
+            title: "Your provider, your money",
+            description:
+              "Payments run through the payment provider your practice already uses and settle into your account. DigitalFace connects the booking workflow to it and never holds your funds.",
+          },
+        ],
+        note: "Optional and configured per consultation type: you decide which appointments ask for a fee and how much. A consultation fee strengthens commitment; it is not a guarantee of attendance.",
+      },
       packagesTitle: "Choose the aesthetic growth level that fits you today.",
       packages: [
         {
@@ -1248,39 +1429,45 @@ export const industryContentEn: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate procedure inquiries, capture every one of them in your CRM and answer automatically.",
+            "Generate procedure inquiries, capture every one in your CRM and answer while the patient is still comparing.",
           idealFor:
-            "Practices that need a dependable way to bring procedure inquiries in and stop losing them.",
+            "Practices that need a steady flow of procedure inquiries and a reliable route from inquiry to consultation.",
           highlights: [
             "One priority acquisition channel",
-            "CRM included for lead capture and follow-up",
+            "CRM included for inquiry capture and follow-up",
             "Automatic first response, booking and reminders",
+            "Optional consultation fee to confirm the appointment",
           ],
           details: [
             {
               title: "Managed aesthetic acquisition",
               description:
-                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real procedure demand.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for the procedures you want to grow, your market and real demand.",
             },
             {
-              title: "CRM included",
+              title: "Patient CRM included",
               description:
-                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
+                "Lead capture, pipeline management and follow-up are included. Every inquiry becomes an organized opportunity with its source, its area of interest, its stage and its full history, and anything clinical is flagged for a person.",
             },
             {
               title: "Automatic first response",
               description:
-                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient to the next step, day or night.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the patient toward requesting a consultation, day or night.",
             },
             {
               title: "Consultation calendar and reminders",
               description:
-                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your coordinators do today.",
+            },
+            {
+              title: "Consultation reservation with optional deposit",
+              description:
+                "When you want it, the booking step asks for a consultation fee or reservation before the appointment is marked confirmed. The payment is taken through your practice's own payment provider and settles into your account; we connect it to the appointment workflow. It stays optional and is configured per consultation type.",
             },
             {
               title: "Monthly performance review",
               description:
-                "We review inquiry sources, response activity, booked consultations and cost per booked consultation, then agree the next campaign move.",
+                "We review inquiry sources, response activity, booked and attended consultations, and cost per booked consultation, then agree the next campaign move.",
             },
           ],
           note: {
@@ -1313,17 +1500,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Two priority acquisition channels",
               description:
-                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked consultations.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing attended consultations, not just clicks.",
             },
             {
               title: "Conversion website with up to 2 forms",
               description:
-                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
+                "A conversion-focused website with up to two consultation-request forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
               title: "Bilingual AI communication",
               description:
-                "The assistant answers in English and Spanish, using only information you approve: procedures, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
+                "The assistant answers in English and Spanish, using only what you approve: the procedures you offer, consultation fees, hours, location, policies and what your practice will and will not quote in a chat. A $20 AI usage balance is included every month.",
             },
             {
               title: "Clinical and exception handoff",
@@ -1333,7 +1520,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Email marketing setup and automation",
               description:
-                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
+                "We build and run the campaign automation, post-consultation follow-up and sequences for inquiries that never booked included. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
             },
             {
               title: "Up to 4 static ad creatives per month",
@@ -1371,7 +1558,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Multiple acquisition channels",
               description:
-                "More than two channels working together, with the mix built around your procedure priorities, your market and your budget.",
+                "More than two channels working together, with the mix built around the procedures you want to grow, your market and your budget.",
             },
             {
               title: "Larger advertising budgets",
@@ -1386,12 +1573,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Advanced CRM architecture",
               description:
-                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
+                "Custom pipelines per procedure category, plus the roles, permissions and reporting your patient coordinators actually work from.",
             },
             {
               title: "Advanced AI communication",
               description:
                 "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
+            },
+            {
+              title: "Advanced deposit and prepayment rules",
+              description:
+                "Different reservation amounts by treatment, provider or location, package prepayment, and the refund or credit rules your business applies — connected to the payment provider you already use.",
             },
             {
               title: "Custom integrations and automations",
@@ -1401,7 +1593,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Reactivation, reporting and priority support",
               description:
-                "Structured reactivation of your existing patients, attribution across the full journey, and a support level agreed with you.",
+                "Structured reactivation of past consultations and patients due for their next visit, attribution from campaign to attended consultation, and a support level agreed with you.",
             },
           ],
           note: {
@@ -1413,7 +1605,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       ],
       faqTitle: "What aesthetic practices usually ask us",
       faqDescription:
-        "We review your acquisition channels, response process, consultation journey, handoff rules and follow-up before recommending a package.",
+        "We review your acquisition channels, response times, consultation journey, escalation rules and post-consultation follow-up before recommending a package.",
       faq: [
         {
           question:
@@ -1437,6 +1629,18 @@ export const industryContentEn: IndustryLocaleBundle = {
             "Yes. Facebook and Instagram lead, message or comment workflows can be connected when they are included in the selected package and channel scope.",
         },
         {
+          question:
+            "Can we charge a consultation fee before confirming the appointment?",
+          answer:
+            "Yes, from DigitalFace Capture onward. The booking step can request a consultation fee or reservation, and the appointment is marked confirmed once the payment clears. It is optional and set per consultation type, the payment runs through your practice's own payment provider and lands in your account, and it is a commitment tool rather than a guarantee of attendance.",
+        },
+        {
+          question:
+            "Can it follow up with patients who inquired but never booked?",
+          answer:
+            "Yes. Inquiries that never chose a time enter an approved follow-up sequence, and past patients can be segmented for a next-visit reminder. Anything the patient replies with that is clinical is routed to your team before an answer goes out.",
+        },
+        {
           question: "Do you promise a number of patients or procedures?",
           answer:
             "No. We build and manage the acquisition and conversion system. Results also depend on market demand, budget, offers, clinical fit, pricing, reputation and your own consultation process.",
@@ -1445,7 +1649,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       booking: {
         title: "Let's talk about your patient growth system.",
         description:
-          "Choose a time to discuss how your practice can improve lead generation, response, follow-up, appointments and sales visibility.",
+          "Choose a time to review how your practice captures procedure inquiries, escalates clinical questions, books consultations and follows up afterwards.",
         proposalTitle: "Need a custom aesthetic workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering multiple locations, international patients, procedure-specific intake, social automation or another process in your practice.",
@@ -1459,26 +1663,31 @@ export const industryContentEn: IndustryLocaleBundle = {
       metadata: {
         title: "Med Spa Marketing & Booking System | DigitalFace Marketing",
         description:
-          "Turn treatment interest into booked and returning clients. DigitalFace runs the advertising, AI booking, membership reactivation and review workflow for med spas in the US and Latin America.",
+          "Turn treatment interest into booked and returning clients. DigitalFace runs the promotions, AI booking, deposits, rebooking and client reactivation workflow for med spas in the US and Latin America.",
       },
       hero: {
         eyebrow: "DigitalFace for Med Spas",
         title: "Turn treatment interest into booked and returning clients.",
         description:
-          "One system connecting med-spa advertising, fast response, AI conversations, appointment booking, reactivation and performance tracking.",
+          "One system connecting promotions, fast replies, appointment booking, deposits, rebooking and client reactivation — so the calendar fills and stays full.",
         primaryCta: "Book a Med Spa Growth Assessment",
         secondaryCta: "See the med spa system",
         visualTitle: "Med spa booking journey",
         visualStages: [
-          "Treatment inquiry captured",
+          "Promotion reply captured",
           "Booking conversation active",
-          "Appointment and follow-up ready",
+          "Appointment booked, rebooking set",
         ],
+        mediaHeadline:
+          "The promotion fills the calendar. The follow-up is what keeps it full.",
       },
       stats: [
-        { value: "24/7", label: "Inquiry coverage" },
-        { value: "EN + ES", label: "Bilingual communication" },
-        { value: "One view", label: "Every opportunity tracked" },
+        { value: "24/7", label: "Booking requests answered" },
+        { value: "EN + ES", label: "Bilingual client communication" },
+        {
+          value: "Rebooking",
+          label: "Retention built into the calendar",
+        },
       ],
       problem: {
         eyebrow: "The booking gap",
@@ -1490,32 +1699,58 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Inquiries scattered everywhere",
             description:
-              "Questions arrive through ads, comments, direct messages, forms and calls with no clear owner.",
+              "Story replies, comments, direct messages, forms and calls all arrive at once, with no clear owner.",
           },
           {
-            title: "Promotion leads go cold",
+            title: "Promotions that outrun the front desk",
             description:
-              "High-intent prospects lose interest when an offer is not acknowledged and followed up quickly.",
+              "A seasonal offer creates more messages in an afternoon than anyone can answer before the interest fades.",
           },
           {
-            title: "The same pricing questions daily",
+            title: "Pricing, packages and memberships explained by hand",
             description:
-              "Your team spends hours answering the same approved administrative questions across channels.",
+              "Your team retypes the same approved answers about pricing, packages and membership terms across four channels.",
           },
           {
-            title: "Calendar gaps and no-shows",
+            title: "No-shows and unused appointment slots",
             description:
-              "Confirmations, reminders, rescheduling and recovery all depend on someone remembering every step.",
+              "Confirmations, reminders, rescheduling and recovery depend on someone remembering, so rooms and providers sit idle.",
           },
           {
             title: "A dormant client database",
             description:
-              "Past clients and older contacts are never segmented for seasonal offers, rebooking or reactivation.",
+              "Past clients, lapsed memberships and unfinished packages are never segmented for rebooking or a seasonal offer.",
           },
           {
             title: "Reviews left to chance",
             description:
-              "Good experiences do not reliably turn into reviews, referrals and repeat visits.",
+              "Good visits do not reliably turn into reviews, referrals and a booked next appointment.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Inside the spa",
+        title: "The experience starts long before anyone walks in.",
+        description:
+          "By the time a client is on your table, they have already judged you on how fast you replied, how easy it was to book, and whether anyone remembered them afterward.",
+        moments: [
+          {
+            title: "The first reply feels like the front desk",
+            description:
+              "A message at midnight gets the same warm, on-brand answer your best coordinator would give at noon.",
+            alt: "Med spa staff welcoming clients at the reception desk",
+          },
+          {
+            title: "The ritual stays uninterrupted",
+            description:
+              "Nobody steps out of a treatment to answer a booking question, because the booking question never had to wait.",
+            alt: "Indoor spa pool lit by candlelight",
+          },
+          {
+            title: "The client who comes back on her own",
+            description:
+              "Reactivation, packages and membership reminders run quietly in the background, so the calendar refills without a campaign.",
+            alt: "Lounge seating area of a premium med spa",
           },
         ],
       },
@@ -1531,24 +1766,24 @@ export const industryContentEn: IndustryLocaleBundle = {
               "Someone responds to a promotion, social post, ad, your website, a message or a referral.",
           },
           {
-            label: "Immediate response",
+            label: "Immediate bilingual reply",
             description:
               "The inquiry gets an acknowledgment in English or Spanish and enters the med-spa pipeline.",
           },
           {
-            label: "Approved questions answered",
+            label: "Pricing, packages and availability answered",
             description:
-              "Configured information about treatments, promotions, location, policies and availability goes out consistently.",
+              "Configured information about treatments, promotions, memberships, packages, policies and open times goes out consistently.",
           },
           {
-            label: "Appointment supported",
+            label: "Appointment booked and held",
             description:
-              "The client is guided toward booking, confirmation, reminders, rescheduling or a staff takeover when needed.",
+              "The client is guided to a time, an optional deposit holds the slot, and confirmations and reminders protect it.",
           },
           {
-            label: "Retention continues",
+            label: "Rebooking and reactivation",
             description:
-              "Review requests, rebooking, missed-appointment recovery and approved reactivation campaigns extend the relationship.",
+              "Review requests, rebooking prompts, no-show recovery and approved reactivation campaigns bring clients back.",
           },
         ],
       },
@@ -1562,32 +1797,32 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Treatment promotion campaigns",
             description:
-              "Meta, Instagram, Google or another justified channel selected around the offer and the local market.",
+              "Meta, Instagram, Google or another justified channel, built around the offer, the season and the local market.",
           },
           {
             title: "AI booking concierge",
             description:
-              "Approved English and Spanish replies handle common questions and booking intent beyond business hours.",
+              "Approved English and Spanish replies handle pricing, packages and booking intent long after the last client leaves.",
           },
           {
-            title: "Promotion and interest tracking",
+            title: "Lead source and offer attribution",
             description:
-              "The system records which treatment, campaign or offer brought each opportunity into the pipeline.",
+              "Every opportunity carries the treatment, the offer and the channel behind it, so you know which promotions actually fill the calendar.",
           },
           {
             title: "Appointment lifecycle",
             description:
-              "Booking, reminders, rescheduling, cancellations, missed appointments and recovery all connect.",
+              "Booking, deposits, reminders, rescheduling, cancellations and no-show recovery all connect to the same calendar.",
           },
           {
             title: "Client reactivation",
             description:
-              "Approved segments receive relevant seasonal, membership, package or rebooking campaigns.",
+              "Approved segments — lapsed clients, unfinished packages, expiring memberships — receive the rebooking or seasonal campaign that fits.",
           },
           {
             title: "Reviews and repeat visits",
             description:
-              "Configured post-visit journeys request feedback, support rebooking and keep client history visible.",
+              "Post-visit journeys request a review, prompt the next booking and keep client history visible to the front desk.",
           },
         ],
       },
@@ -1597,7 +1832,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         description:
           "A med spa fills its calendar when three parts stay connected: put the right offer in front of people nearby, answer them before the interest fades, and keep every request visible so the front desk always knows who is still waiting.",
         closing:
-          "Create treatment interest. Turn it into appointments. Keep the calendar under control.",
+          "Create treatment interest. Turn it into booked appointments. Keep the calendar full between promotions.",
         stages: [
           {
             number: "01",
@@ -1915,6 +2150,54 @@ export const industryContentEn: IndustryLocaleBundle = {
             "Sample client journey showing one promotion message becoming an organized booking request with a clear next step.",
         },
       },
+      appointmentCommitment: {
+        eyebrow: "Booking commitment",
+        title: "A requested appointment is not the same as a confirmed one.",
+        description:
+          "Inquiry, conversation, treatment interest, booking — and then, when it fits your med spa, one more step: a booking deposit or treatment reservation that has to clear before the appointment is marked confirmed. The payment runs through the payment provider your med spa already uses, and the appointment status moves with it.",
+        steps: [
+          {
+            label: "Appointment requested",
+            caption: "The client picks a time from your real availability.",
+          },
+          {
+            label: "Reservation requested",
+            caption:
+              "A payment request goes out with the booking, only for the treatments you choose.",
+          },
+          {
+            label: "Appointment confirmed",
+            caption:
+              "Once the payment clears, the status updates in your pipeline.",
+          },
+          {
+            label: "Reminders",
+            caption: "Confirmations and reminders continue exactly as before.",
+          },
+          {
+            label: "Attended appointment",
+            caption: "Your team walks into a slot someone committed to.",
+          },
+        ],
+        points: [
+          {
+            title: "Fewer casual bookings",
+            description:
+              "A treatment slot that costs something to hold is asked for by clients who mean to come in, so promotions stop filling the calendar with no-shows.",
+          },
+          {
+            title: "Treatment rooms that stay productive",
+            description:
+              "Confirmed means paid and confirmed, not just requested, so a room and a provider are held for an appointment someone committed to.",
+          },
+          {
+            title: "Your provider, your money",
+            description:
+              "Payments run through the payment provider your med spa already uses and settle into your account. DigitalFace connects the booking workflow to it and never holds your funds.",
+          },
+        ],
+        note: "Optional and configured per treatment: you decide which appointments ask for a deposit and how much. A deposit strengthens commitment; it is not a guarantee of attendance.",
+      },
       packagesTitle: "Choose the med spa growth level that fits you today.",
       packages: [
         {
@@ -1923,39 +2206,45 @@ export const industryContentEn: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 one-time setup",
           description:
-            "Generate treatment inquiries, capture every one of them in your CRM and answer automatically.",
+            "Generate treatment and promotion inquiries, capture every one in your CRM and answer before the interest fades.",
           idealFor:
-            "Med spas that need a dependable way to bring client inquiries in and stop losing them.",
+            "Med spas that need a dependable flow of booking requests and a calendar that stops leaking them.",
           highlights: [
             "One priority acquisition channel",
-            "CRM included for lead capture and follow-up",
+            "CRM included for booking requests and follow-up",
             "Automatic first response, booking and reminders",
+            "Optional deposit to confirm a booking",
           ],
           details: [
             {
               title: "Managed med spa acquisition",
               description:
-                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offer, your market and real treatment demand.",
+                "We set up and manage one priority channel — Meta, Google or TikTok — chosen for your offers, your memberships and the treatments you want to fill this season.",
             },
             {
-              title: "CRM included",
+              title: "Client CRM included",
               description:
-                "Lead capture, pipeline management and follow-up are included. Every campaign inquiry becomes an organized opportunity with its source, its stage and its full history.",
+                "Lead capture, pipeline management and follow-up are included. Every inquiry becomes an organized opportunity with its lead source, the offer it came from, its stage and its full history.",
             },
             {
               title: "Automatic first response",
               description:
-                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the client to the next step, day or night.",
+                "Rule-based SMS and email replies acknowledge every inquiry immediately and point the client straight at booking, day or night.",
             },
             {
               title: "Appointment calendar and reminders",
               description:
-                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your team does today.",
+                "Booking links, confirmations, reminders and rescheduling instructions replace most of the manual coordination your front desk does today, and cut avoidable no-shows.",
+            },
+            {
+              title: "Treatment reservation with optional booking deposit",
+              description:
+                "When you want it, the booking step asks for a deposit before the appointment is marked confirmed. The payment is taken through your med spa's own payment provider and settles into your account; we connect it to the appointment workflow. It stays optional and is configured per treatment.",
             },
             {
               title: "Monthly performance review",
               description:
-                "We review inquiry sources, response activity, booked appointments and cost per booked appointment, then agree the next campaign move.",
+                "We review lead sources, response activity, booked and attended appointments, and cost per booked appointment, then agree the next promotion.",
             },
           ],
           note: {
@@ -1988,17 +2277,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Two priority acquisition channels",
               description:
-                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing booked appointments.",
+                "Two channels — Meta, Google or TikTok — managed together, with budget shifted toward whichever is producing attended appointments, not just messages.",
             },
             {
               title: "Conversion website with up to 2 forms",
               description:
-                "A conversion-focused website with up to two lead capture forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
+                "A conversion-focused website with up to two booking-request forms wired straight into your CRM. Not unlimited pages, revisions or custom development.",
             },
             {
               title: "Bilingual AI communication",
               description:
-                "The assistant answers in English and Spanish, using only information you approve: treatments, promotions, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
+                "The assistant answers in English and Spanish, using only what you approve: treatments, promotions, membership and package terms, hours, location, policies and pricing rules. A $20 AI usage balance is included every month.",
             },
             {
               title: "Medical and exception handoff",
@@ -2008,7 +2297,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Email marketing setup and automation",
               description:
-                "We build and run the campaign automation. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
+                "We build and run the campaign automation, seasonal offers, membership renewals and rebooking sequences for clients who have not been in for a while. Email delivery is billed by volume, and additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
             },
             {
               title: "Up to 4 static ad creatives per month",
@@ -2046,7 +2335,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Multiple acquisition channels",
               description:
-                "More than two channels working together, with the mix built around your treatment priorities, your market and your budget.",
+                "More than two channels working together, with the mix built around your treatment menu, your memberships and the seasons that move your calendar.",
             },
             {
               title: "Larger advertising budgets",
@@ -2061,12 +2350,17 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Advanced CRM architecture",
               description:
-                "Custom pipelines, roles, permissions and reporting structures built around how your team actually works.",
+                "Separate pipelines for memberships, packages and one-off treatments, plus the roles, permissions and reporting your front desk actually works from.",
             },
             {
               title: "Advanced AI communication",
               description:
                 "Deeper approved knowledge, more channels and more complex qualification and routing than the standard assistant.",
+            },
+            {
+              title: "Advanced deposit and prepayment rules",
+              description:
+                "Different reservation amounts by treatment, provider or location, package prepayment, and the refund or credit rules your business applies — connected to the payment provider you already use.",
             },
             {
               title: "Custom integrations and automations",
@@ -2076,7 +2370,7 @@ export const industryContentEn: IndustryLocaleBundle = {
             {
               title: "Reactivation, reporting and priority support",
               description:
-                "Structured reactivation of your existing clients, attribution across the full journey, and a support level agreed with you.",
+                "Structured reactivation of lapsed clients and expiring memberships, attribution from offer to attended appointment, and a support level agreed with you.",
             },
           ],
           note: {
@@ -2112,6 +2406,16 @@ export const industryContentEn: IndustryLocaleBundle = {
             "Yes. Your team can take ownership whenever a client asks for a person, or when a conversation becomes clinical, sensitive, urgent or falls outside the approved knowledge.",
         },
         {
+          question: "Can we ask for a deposit before confirming a booking?",
+          answer:
+            "Yes, from DigitalFace Capture onward. The booking step can request a booking deposit or treatment reservation, and the appointment is marked confirmed once the payment clears. It is optional and set per treatment, the payment runs through your med spa's own payment provider and lands in your account, and it is a commitment tool rather than a guarantee of attendance.",
+        },
+        {
+          question: "Can it handle memberships and prepaid packages?",
+          answer:
+            "Yes, on the commercial side. The system can track which clients are on a membership or still have sessions left in a package, remind them to book, and take a deposit or prepayment through your own payment provider. It does not replace your point of sale or your clinical records.",
+        },
+        {
           question: "Do you produce professional photos and video?",
           answer:
             "Professional production is not included. The med spa supplies approved raw photos and video, and we adapt the agreed assets for campaigns and conversion paths.",
@@ -2120,7 +2424,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       booking: {
         title: "Let's talk about your growth system.",
         description:
-          "Choose a convenient time to discuss how DigitalFace can help your med spa attract, convert and manage more patient opportunities.",
+          "Choose a convenient time to review how your med spa turns promotions into booked appointments, cuts no-shows and brings clients back.",
         proposalTitle: "Need a custom med spa workflow?",
         proposalDescription:
           "Ask for a scoped proposal covering memberships, multiple locations, review automation, treatment-specific intake or another custom process.",

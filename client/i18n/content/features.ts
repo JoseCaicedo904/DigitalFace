@@ -202,6 +202,7 @@ const en = {
           "People book themselves, and more of them actually show up.",
         bullets: [
           "Self-scheduling calendar links",
+          "Optional deposit or fee before a booking is confirmed, through your own payment provider",
           "Confirmation and reminder sequences",
           "Reschedule links that reduce missed appointments",
           "Daily agenda notifications for your team",
@@ -440,10 +441,7 @@ const es: typeof en = {
           bookedIndex: 1,
           bookedName: "María G.",
           bookedLabel: "Reservado",
-          followUps: [
-            "Confirmación enviada",
-            "Recordatorio 24 horas antes",
-          ],
+          followUps: ["Confirmación enviada", "Recordatorio 24 horas antes"],
           transcriptLabel:
             "Horarios disponibles, con uno tomado y los mensajes que salen después.",
         },
@@ -522,6 +520,7 @@ const es: typeof en = {
         description: "Las personas agendan solas y llegan más veces a la cita.",
         bullets: [
           "Enlaces de calendario para agendar sin intermediarios",
+          "Anticipo o cuota opcional antes de confirmar la cita, con tu propio proveedor de pagos",
           "Secuencias de confirmación y recordatorio",
           "Enlaces para reprogramar que reducen las inasistencias",
           "Aviso diario de la agenda para tu equipo",

@@ -5,6 +5,7 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { BookingCTA } from "@/components/booking/BookingCTA";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
+import { AppointmentCommitment } from "@/sections/AppointmentCommitment";
 import { SelectedWorkSection } from "@/sections/SelectedWork";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
@@ -87,6 +88,11 @@ export default function Index() {
         ctaHref={bookHref}
       />
       <CrmPipelineDemoSection content={t.crmPipelineDemo} ctaHref={bookHref} />
+      {/* The pipeline board above ends on "appointment requested", which is
+          exactly where the next question arrives: how do you know they will
+          turn up? So the reservation step is explained here, attached to the
+          journey it belongs to, rather than as a payments pitch of its own. */}
+      <AppointmentCommitment content={t.appointmentCommitment} />
       {/* Attract, convert and manage have just been shown, and the CRM board
           immediately above is the moment the objection arrives: "we already run
           our own tools." So the answer sits here rather than earlier, where it

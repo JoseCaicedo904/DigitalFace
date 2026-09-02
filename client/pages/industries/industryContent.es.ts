@@ -23,8 +23,6 @@ export const industryContentEs: IndustryLocaleBundle = {
     },
     heroMedia: {
       eyebrow: "Confianza antes de la conversión",
-      title:
-        "Un momento visual de alto nivel, construido sobre el recorrido real del paciente.",
     },
     workflowOverlay:
       "La tecnología organiza la oportunidad. Tu equipo se queda con la relación.",
@@ -108,26 +106,31 @@ export const industryContentEs: IndustryLocaleBundle = {
         title:
           "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
         description:
-          "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones agendadas. DigitalFace opera la pauta, el seguimiento bilingüe con IA y el agendamiento de clínicas odontológicas en Estados Unidos y Latinoamérica.",
+          "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones atendidas. DigitalFace opera la pauta, el seguimiento bilingüe, el agendamiento de valoraciones y la recuperación del tratamiento pendiente de clínicas odontológicas en Estados Unidos y Latinoamérica.",
       },
       hero: {
         eyebrow: "DigitalFace para clínicas odontológicas",
         title: "Convierte más consultas dentales en valoraciones agendadas.",
         description:
-          "Un solo sistema administrado que conecta la pauta odontológica, la comunicación con el paciente, el seguimiento automático, el agendamiento de valoraciones y la visibilidad del proceso.",
+          "Un solo sistema administrado que conecta la pauta odontológica, la admisión de pacientes nuevos, el agendamiento de valoraciones y el seguimiento del plan de tratamiento — desde la primera consulta hasta la valoración atendida.",
         primaryCta: "Agenda tu diagnóstico odontológico",
         secondaryCta: "Ver el sistema dental",
         visualTitle: "Recorrido de una consulta dental",
         visualStages: [
           "Nueva consulta por carillas registrada",
           "Respuesta bilingüe enviada",
-          "Oportunidad de valoración creada",
+          "Valoración agendada y confirmada",
         ],
+        mediaHeadline:
+          "Tu equipo sigue en el sillón. La consulta igual se responde, se agenda y se sigue.",
       },
       stats: [
-        { value: "24/7", label: "Cobertura de consultas" },
-        { value: "EN + ES", label: "Comunicación bilingüe" },
-        { value: "Una vista", label: "Cada oportunidad registrada" },
+        { value: "24/7", label: "Consultas de pacientes nuevos respondidas" },
+        { value: "EN + ES", label: "Comunicación bilingüe con pacientes" },
+        {
+          value: "Atendida",
+          label: "Seguida, no solo agendada",
+        },
       ],
       problem: {
         eyebrow: "La brecha de conversión",
@@ -142,63 +145,90 @@ export const industryContentEs: IndustryLocaleBundle = {
               "Las consultas por implantes, carillas y diseño de sonrisa se enfrían mientras tu equipo está en el sillón.",
           },
           {
-            title: "Información del paciente dispersa",
+            title: "Datos del caso repartidos en bandejas",
             description:
-              "Fotos, intereses de tratamiento, notas y conversaciones terminan repartidos en bandejas de entrada desconectadas.",
+              "Fotos, interés de tratamiento y notas de admisión terminan dispersos en vez de quedar en una sola ficha del paciente.",
           },
           {
-            title: "Seguimiento manual de valoraciones",
+            title: "Valoraciones que nunca se agendan",
             description:
-              "El equipo persigue a pacientes que preguntaron algo pero nunca eligieron un horario para su valoración.",
+              "El equipo persigue a pacientes que preguntaron por un tratamiento y nunca eligieron horario: la consulta envejece en vez de convertir.",
           },
           {
-            title: "Conversaciones de financiación sin criterio",
+            title: "La financiación se explica distinto cada vez",
             description:
-              "La información general de pagos y las preguntas de cada caso no se manejan igual dos veces seguidas.",
+              "La información general de pagos y las preguntas de financiación de cada caso no se manejan igual dos veces seguidas.",
           },
           {
-            title: "Valoraciones perdidas",
+            title: "Inasistencias y tratamiento sin agendar",
             description:
-              "Confirmaciones, recordatorios y reprogramaciones inconsistentes dejan huecos evitables en la agenda.",
+              "Confirmaciones, recordatorios y recuperación inconsistentes dejan huecos en la agenda y tratamiento sin programar.",
           },
           {
-            title: "Sin línea entre campaña y valoración",
+            title: "Sin línea entre campaña y aceptación del caso",
             description:
-              "La clínica ve totales de contactos pero no logra conectar las campañas con las valoraciones agendadas.",
+              "La clínica ve totales de contactos, no qué campañas produjeron valoraciones atendidas y planes de tratamiento aceptados.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Dentro de la clínica",
+        title:
+          "El consultorio sigue siendo tuyo. Lo administrativo deja de depender de la memoria.",
+        description:
+          "Nada de esto cambia cómo tratas. Cambia lo que pasa en las horas alrededor de la cita, cuando tu equipo está en el sillón y la consulta sigue esperando respuesta.",
+        moments: [
+          {
+            title: "La valoración que sí se agenda",
+            description:
+              "Una consulta por carillas a las 9 de la noche se responde en segundos y entra en la agenda de mañana, no en la lista de pendientes.",
+            alt: "Odontólogo comparando la guía de color con un paciente sonriente",
+          },
+          {
+            title: "El sillón que deja de quedarse vacío",
+            description:
+              "Confirmaciones, recordatorios y reprogramaciones corren solos, así que los huecos del día se cierran antes de que alguien los note.",
+            alt: "Lámpara e instrumental en un consultorio odontológico moderno",
+          },
+          {
+            title: "La recepción que deja de perseguir",
+            description:
+              "Interés de tratamiento, fotos y notas llegan en un mismo registro: tu coordinadora abre un caso en lugar de reconstruirlo.",
+            alt: "Sala de una clínica dental donde el equipo atiende a un paciente",
           },
         ],
       },
       journey: {
         eyebrow: "Recorrido del paciente odontológico",
         title:
-          "Del interés en un tratamiento a la valoración, con la persona correcta en el momento correcto.",
+          "Del interés en un tratamiento a una valoración atendida, con la persona correcta en cada paso.",
         description:
           "El sistema automatiza la conversación administrativa y mantiene intactos los límites clínicos en todo el recorrido.",
         steps: [
           {
-            label: "Consulta registrada",
+            label: "Consulta de paciente nuevo registrada",
             description:
               "Un paciente responde a una campaña de implantes, carillas, diseño de sonrisa o tratamiento general.",
           },
           {
-            label: "Respuesta inmediata",
+            label: "Respuesta bilingüe inmediata",
             description:
               "El paciente recibe una respuesta en inglés o español mientras la oportunidad entra al CRM.",
           },
           {
-            label: "Interés organizado",
+            label: "Admisión y datos del caso organizados",
             description:
-              "El interés de tratamiento, los datos administrativos y el material que envía el paciente quedan unidos al registro.",
+              "El interés de tratamiento, las respuestas de admisión y las fotos que envía el paciente quedan en una sola ficha.",
           },
           {
             label: "Revisión humana cuando se requiere",
             description:
-              "Las preguntas clínicas, los temas de pago de cada caso y las excepciones pasan a la persona correcta del equipo.",
+              "Las preguntas clínicas, la financiación de cada caso y las excepciones pasan a la persona correcta del equipo.",
           },
           {
-            label: "Ciclo de la valoración administrado",
+            label: "Valoración y recuperación administradas",
             description:
-              "Agendamiento, recordatorios, reprogramación, recuperación de inasistencias y seguimiento largo salen de un mismo proceso.",
+              "Agendamiento, recordatorios, reprogramación, recuperación de inasistencias y seguimiento del tratamiento pendiente salen de un mismo proceso.",
           },
         ],
       },
@@ -212,32 +242,32 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Captación de pacientes odontológicos",
             description:
-              "Estrategia de campañas para implantes, carillas, diseño de sonrisa, valoraciones y servicios de alto valor seleccionados.",
+              "Estrategia de campañas para implantes, carillas, diseño de sonrisa y los casos de alto valor que quieres atraer.",
           },
           {
             title: "Concierge dental con IA",
             description:
-              "Respuestas administrativas bilingües basadas en información aprobada por la clínica, con reglas claras de traspaso.",
+              "Respuestas administrativas bilingües construidas con información aprobada por la clínica, con reglas claras de traspaso para todo lo clínico.",
           },
           {
-            title: "Recepción de fotos y casos",
+            title: "Admisión del paciente y recepción de fotos",
             description:
-              "El material y los datos del paciente quedan organizados para tu equipo, sin convertir la IA en un clínico.",
+              "Respuestas de admisión, fotos e interés de tratamiento llegan organizados para tu coordinadora, sin convertir la IA en un clínico.",
           },
           {
-            title: "Flujos de valoración",
+            title: "Agendamiento de valoraciones",
             description:
               "Disponibilidad, agendamiento, confirmaciones, recordatorios, reprogramación y cancelaciones funcionan juntos.",
           },
           {
-            title: "Proceso visible y revisión humana",
+            title: "Proceso del caso y revisión humana",
             description:
-              "Cada oportunidad tiene etapa visible, historial, responsable y una ruta de escalamiento.",
+              "Cada oportunidad de valoración tiene etapa visible, historial, responsable y una ruta de escalamiento.",
           },
           {
-            title: "Recuperación y reactivación",
+            title: "Recuperación de tratamiento y reactivación",
             description:
-              "Las consultas sin respuesta, las inasistencias y los pacientes antiguos reciben un seguimiento estructurado.",
+              "Inasistencias, consultas sin respuesta y tratamiento sin agendar reciben un seguimiento estructurado en vez de quedar en el olvido.",
           },
         ],
       },
@@ -245,9 +275,9 @@ export const industryContentEs: IndustryLocaleBundle = {
         eyebrow: "Un sistema de pacientes conectado",
         title: "Recibir la consulta es apenas el comienzo.",
         description:
-          "Una clínica llena sus sillas cuando tres partes siguen conectadas: llegar a personas que ya están evaluando un tratamiento, responderles mientras el interés está vivo y mantener visible cada oportunidad de valoración hasta que quede agendada.",
+          "Una clínica llena sus sillas cuando tres partes siguen conectadas: llegar a personas que ya están evaluando un tratamiento, responderles mientras el interés está vivo y mantener visible cada caso desde la primera consulta hasta la valoración atendida.",
         closing:
-          "Genera consultas de tratamiento. Llévalas hasta la valoración. Mantén visible el recorrido del paciente.",
+          "Genera consultas de tratamiento. Conviértelas en valoraciones atendidas. Mantén visible cada caso.",
         stages: [
           {
             number: "01",
@@ -259,16 +289,16 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             number: "02",
             label: "Convertir",
-            title: "Llévalas hasta la valoración",
+            title: "Convierte la consulta en una valoración agendada",
             description:
-              "Responde en segundos, organiza lo que el paciente está pidiendo y guíalo hacia un horario de valoración.",
+              "Responde en segundos, registra lo que el paciente está preguntando y guíalo hacia un horario de valoración.",
           },
           {
             number: "03",
             label: "Gestionar",
             title: "Mantén el control de la clínica",
             description:
-              "Origen, interés de tratamiento, historial, estado y siguiente paso quedan juntos para tu recepción.",
+              "Origen, interés de tratamiento, historial del caso, estado y siguiente paso quedan juntos para tu recepción.",
           },
         ],
       },
@@ -496,7 +526,7 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Interés de tratamiento",
             description:
-              "Lo que el paciente quiere, y lo que envió, queda anotado en la ficha.",
+              "El tratamiento por el que pregunta el paciente, y la foto que envió, quedan en la ficha.",
           },
           {
             title: "Valoración solicitada",
@@ -559,7 +589,7 @@ export const industryContentEs: IndustryLocaleBundle = {
               details: [
                 { label: "Origen", value: "Meta Ads" },
                 { label: "Interés", value: "Implante dental" },
-                { label: "Preguntó por", value: "Formas de pago" },
+                { label: "Preguntó por", value: "Financiación" },
                 { label: "Solicitó", value: "Martes 4:30 p. m." },
               ],
             },
@@ -567,6 +597,56 @@ export const industryContentEs: IndustryLocaleBundle = {
           transcriptLabel:
             "Recorrido de paciente de ejemplo: una consulta odontológica se convierte en una oportunidad de valoración organizada con un siguiente paso claro.",
         },
+      },
+      appointmentCommitment: {
+        eyebrow: "Compromiso de la valoración",
+        title:
+          "Una valoración solicitada no es lo mismo que una valoración confirmada.",
+        description:
+          "Consulta, conversación, interés de tratamiento, agendamiento y, cuando le sirve a tu clínica, un paso más: una reserva, un anticipo o una cuota de valoración que debe acreditarse antes de dar la cita por confirmada. El pago corre por el proveedor de pagos que tu clínica ya usa y el estado de la valoración avanza con él.",
+        steps: [
+          {
+            label: "Valoración solicitada",
+            caption: "El paciente elige un horario de tu disponibilidad real.",
+          },
+          {
+            label: "Reserva solicitada",
+            caption:
+              "Con el agendamiento sale una solicitud de pago, solo en los tratamientos que tú elijas.",
+          },
+          {
+            label: "Valoración confirmada",
+            caption:
+              "Cuando el pago se acredita, el estado se actualiza en tu proceso.",
+          },
+          {
+            label: "Recordatorios",
+            caption:
+              "Las confirmaciones y los recordatorios siguen igual que antes.",
+          },
+          {
+            label: "Valoración atendida",
+            caption: "Tu equipo clínico llega a una cita comprometida.",
+          },
+        ],
+        points: [
+          {
+            title: "Menos reservas sin intención",
+            description:
+              "Un espacio de valoración que cuesta reservar lo pide quien realmente piensa asistir, así las solicitudes casuales dejan de ocupar sillón.",
+          },
+          {
+            title: "Una agenda sobre la que se puede planear",
+            description:
+              "Confirmada significa pagada y confirmada, no solo solicitada: el día que ve tu recepción es el día que la clínica realmente va a trabajar.",
+          },
+          {
+            title: "Tu proveedor, tu dinero",
+            description:
+              "Los pagos pasan por el proveedor de pagos que tu clínica ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+          },
+        ],
+        note: "Es opcional y se configura por tratamiento: tú decides qué valoraciones piden reserva y de cuánto. La reserva refuerza el compromiso; no es una garantía de asistencia.",
       },
       packagesTitle:
         "Elige el nivel de crecimiento odontológico que corresponde a tu clínica hoy.",
@@ -577,39 +657,45 @@ export const industryContentEs: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas dentales, captúralas todas en tu CRM y responde automáticamente.",
+            "Genera consultas de implantes, carillas y diseño de sonrisa, captúralas todas en tu CRM y responde automáticamente.",
           idealFor:
-            "Clínicas que necesitan una forma confiable de generar consultas dentales y dejar de perderlas.",
+            "Clínicas que necesitan un flujo confiable de pacientes nuevos y una forma de dejar de perderlos.",
           highlights: [
             "Un canal prioritario de captación",
-            "CRM incluido para captura de leads y seguimiento",
+            "CRM incluido para admisión de pacientes y seguimiento",
             "Respuesta automática inmediata, agendamiento y recordatorios",
+            "Anticipo opcional para confirmar la valoración",
           ],
           details: [
             {
               title: "Captación dental administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tu oferta, tu mercado y la demanda real de tratamientos.",
+                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tu mezcla de tratamientos, tu mercado y la demanda real de implantes, carillas o diseño de sonrisa.",
             },
             {
-              title: "CRM incluido",
+              title: "CRM de pacientes incluido",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta de campaña queda como una oportunidad organizada, con su origen, su etapa y su historial completo.",
+                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, su interés de tratamiento, su etapa y su historial completo, para que nadie reconstruya el caso leyendo el chat.",
             },
             {
               title: "Respuesta automática inmediata",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y le indican a cada paciente el siguiente paso, a cualquier hora.",
+                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al paciente hacia agendar su valoración, a cualquier hora.",
             },
             {
               title: "Calendario de citas y recordatorios",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace tu equipo.",
+                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace recepción, y reducen inasistencias evitables.",
+            },
+            {
+              title: "Reserva de valoración con anticipo opcional",
+              description:
+                "Cuando tú lo quieras, el agendamiento pide un anticipo o una cuota de valoración antes de dar la cita por confirmada. El cobro se hace con el proveedor de pagos que tu clínica ya usa y el dinero llega a tu cuenta; nosotros lo conectamos con el flujo de citas. Es opcional y se configura por tratamiento.",
             },
             {
               title: "Revisión mensual de desempeño",
               description:
-                "Revisamos el origen de las consultas, la actividad de respuesta, las citas agendadas y el costo por cita agendada, y acordamos el siguiente movimiento de campaña.",
+                "Revisamos el origen de las consultas, la actividad de respuesta, las valoraciones agendadas y atendidas y el costo por valoración agendada, y acordamos el siguiente movimiento de campaña.",
             },
           ],
           note: {
@@ -642,17 +728,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas agendadas.",
+                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de captura conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "Un sitio web enfocado en conversión con hasta dos formularios de paciente nuevo conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
             },
             {
               title: "Comunicación bilingüe con IA",
               description:
-                "El asistente responde en inglés y español usando únicamente la información que apruebas: tratamientos, horarios, ubicación, políticas y reglas de precio. Cada mes incluye $20 de saldo de uso de IA.",
+                "El asistente responde en inglés y español usando únicamente lo que apruebas: los tratamientos que ofreces, horarios, ubicación, políticas de financiación y lo que tu clínica sí y no cotiza por chat. Cada mes incluye $20 de saldo de uso de IA.",
             },
             {
               title: "Traspaso clínico y de excepciones",
@@ -662,7 +748,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Configuración y automatización de email marketing",
               description:
-                "Construimos y operamos la automatización de las campañas. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Construimos y operamos la automatización de las campañas, incluidas las secuencias de recuperación para pacientes con tratamiento sin agendar. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
             },
             {
               title: "Hasta 4 piezas publicitarias estáticas al mes",
@@ -701,7 +787,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Varios canales de captación",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según tus prioridades de tratamientos, tu mercado y tu presupuesto.",
+                "Más de dos canales trabajando juntos, con la mezcla armada según los casos que quieres atraer — implantes, arcada completa, estética — tu mercado y tu presupuesto.",
             },
             {
               title: "Presupuestos publicitarios mayores",
@@ -716,12 +802,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Arquitectura de CRM avanzada",
               description:
-                "Procesos, roles, permisos y estructuras de reportería a medida, armados según cómo trabaja realmente tu equipo.",
+                "Procesos por tipo de tratamiento, más los roles, permisos y reportería con los que realmente trabajan tus coordinadoras de tratamiento.",
             },
             {
               title: "Comunicación con IA avanzada",
               description:
                 "Más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del asistente estándar.",
+            },
+            {
+              title: "Reglas avanzadas de anticipos y prepagos",
+              description:
+                "Montos de reserva distintos por tratamiento, profesional o sede, prepago de paquetes y las reglas de devolución o crédito que aplica tu negocio, conectadas al proveedor de pagos que ya usas.",
             },
             {
               title: "Integraciones y automatizaciones a medida",
@@ -731,7 +822,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Reactivación, reportería y soporte prioritario",
               description:
-                "Reactivación estructurada de tu base de pacientes, atribución a lo largo de todo el recorrido y un nivel de soporte acordado contigo.",
+                "Recuperación y reactivación estructurada de tu base de pacientes, atribución desde la campaña hasta la valoración atendida, y un nivel de soporte acordado contigo.",
             },
           ],
           note: {
@@ -743,7 +834,7 @@ export const industryContentEs: IndustryLocaleBundle = {
       ],
       faqTitle: "Lo que más nos preguntan las clínicas odontológicas",
       faqDescription:
-        "Revisamos tus canales de captación, tu proceso de respuesta, el flujo de valoraciones y el seguimiento antes de recomendarte un paquete.",
+        "Revisamos tus canales de captación, tus tiempos de respuesta, el flujo de valoraciones, la recuperación del tratamiento pendiente y las conversaciones de financiación antes de recomendarte un paquete.",
       faq: [
         {
           question: "¿El sistema puede comunicarse en inglés y español?",
@@ -768,6 +859,18 @@ export const industryContentEs: IndustryLocaleBundle = {
             "Sí. El traspaso humano es parte del sistema. Las etiquetas y los controles de responsable pausan la comunicación con IA apenas entra tu equipo.",
         },
         {
+          question:
+            "¿Podemos pedir un anticipo antes de confirmar una valoración?",
+          answer:
+            "Sí, desde DigitalFace Capture. El agendamiento puede solicitar un anticipo o una cuota de valoración, y la cita queda confirmada cuando el pago se acredita. Es opcional y se define por tratamiento, el cobro corre por el proveedor de pagos que tu clínica ya usa y el dinero llega a tu cuenta, y es una herramienta de compromiso, no una garantía de asistencia.",
+        },
+        {
+          question:
+            "¿Puede dar seguimiento a los planes de tratamiento que nunca se agendaron?",
+          answer:
+            "Sí. Los pacientes con tratamiento sin agendar se pueden segmentar en el CRM y entrar a una secuencia de recuperación aprobada. Apenas el paciente responde con una pregunta sobre su propio caso, la conversación pasa a tu equipo.",
+        },
+        {
           question: "¿Funciona con pacientes internacionales?",
           answer:
             "Sí. Las preguntas frecuentes bilingües, la recepción de material, la preparación de la valoración y la revisión humana pueden cubrir pacientes internacionales dentro del alcance acordado.",
@@ -776,7 +879,7 @@ export const industryContentEs: IndustryLocaleBundle = {
       booking: {
         title: "Hablemos de tu sistema de captación de pacientes.",
         description:
-          "Elige un horario que te acomode para revisar cómo tu clínica odontológica atrae, convierte y gestiona hoy sus oportunidades de pacientes.",
+          "Elige un horario que te acomode para revisar cómo tu clínica atrae pacientes nuevos, convierte consultas en valoraciones atendidas y da seguimiento al tratamiento sin agendar.",
         proposalTitle: "¿Necesitas un flujo dental a la medida?",
         proposalDescription:
           "Pide una propuesta para recepción de fotos, pacientes internacionales, migración de CRM, sedes adicionales u otro proceso propio de tu clínica.",
@@ -791,27 +894,29 @@ export const industryContentEs: IndustryLocaleBundle = {
         title:
           "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
         description:
-          "Convierte el interés por un procedimiento en valoraciones calificadas. DigitalFace opera la pauta, la comunicación bilingüe con IA y la gestión de citas de centros de medicina estética y cirugía plástica, mientras las decisiones clínicas siguen en tu equipo.",
+          "Convierte el interés por inyectables, calidad de piel y procedimientos quirúrgicos en valoraciones atendidas. DigitalFace opera la pauta, la comunicación bilingüe, el agendamiento y el seguimiento de centros de medicina estética y cirugía plástica, mientras cada decisión clínica sigue en tu equipo.",
       },
       hero: {
         eyebrow: "DigitalFace para medicina estética y cirugía plástica",
         title:
-          "Convierte el interés por un procedimiento en valoraciones calificadas.",
+          "Convierte el interés por un procedimiento en valoraciones calificadas y atendidas.",
         description:
-          "Responde más rápido, organiza lo que pide cada paciente, automatiza el seguimiento administrativo y guía a los interesados hacia la valoración correcta.",
+          "Responde en segundos, registra la zona de interés de cada paciente, escala a tu equipo todo lo clínico y lleva las consultas serias hasta una valoración agendada.",
         primaryCta: "Agenda tu diagnóstico estético",
         secondaryCta: "Ver el recorrido del paciente",
         visualTitle: "Recorrido hacia la valoración estética",
         visualStages: [
           "Consulta por procedimiento registrada",
-          "Intención del paciente organizada",
-          "Ruta de valoración activada",
+          "Zona de interés organizada",
+          "Valoración agendada y preparada",
         ],
+        mediaHeadline:
+          "Lo administrativo corre solo. Todo lo clínico sigue llegando a tu equipo.",
       },
       stats: [
-        { value: "24/7", label: "Cobertura de consultas" },
-        { value: "EN + ES", label: "Comunicación bilingüe" },
-        { value: "Una vista", label: "Cada oportunidad registrada" },
+        { value: "24/7", label: "Consultas por procedimientos respondidas" },
+        { value: "Al médico", label: "Toda pregunta clínica se escala" },
+        { value: "Una ficha", label: "Interés, preguntas e historial" },
       ],
       problem: {
         eyebrow: "La brecha hacia la valoración",
@@ -823,32 +928,59 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Consultas fuera de horario",
             description:
-              "Los pacientes interesados escriben cuando la recepción está cerrada y esperan respuesta de todos modos.",
+              "Los pacientes interesados escriben a las diez de la noche y comparan dos o tres centros antes de que alguien abra la bandeja.",
           },
           {
-            title: "Las mismas preguntas, todos los días",
+            title: "Las mismas preguntas administrativas todo el día",
             description:
-              "Ubicación, proceso de valoración, financiación, disponibilidad y preparación consumen el día de tu equipo.",
+              "Cuota de valoración, proceso, preparación, ubicación, financiación y disponibilidad consumen el día de tus coordinadoras.",
           },
           {
-            title: "Interés sin estructura",
+            title: "El interés nunca queda registrado",
             description:
-              "Lo que realmente busca cada paciente queda enterrado en un hilo de mensajes en lugar de organizado en el CRM.",
+              "La zona por la que preguntó el paciente queda enterrada en un hilo en vez de quedar en la ficha, y la coordinadora reinicia la conversación.",
           },
           {
             title: "Preguntas clínicas en el lugar equivocado",
             description:
-              "Seguridad, viabilidad, síntomas y recomendaciones de cada caso necesitan escalar de forma confiable a una persona.",
+              "Viabilidad, seguridad y preguntas de cada caso necesitan una ruta confiable hacia una persona calificada, siempre.",
           },
           {
-            title: "Abandono antes de la valoración",
+            title: "Abandono entre agendar y asistir",
             description:
-              "Pacientes interesados dejan de responder antes de elegir, confirmar o asistir a la valoración.",
+              "Los pacientes dejan de responder, cancelan tarde o simplemente no llegan, y se pierden horas de valoración de alto valor.",
           },
           {
-            title: "Sin visibilidad de campaña a valoración",
+            title: "Sin línea de la campaña al tratamiento",
             description:
-              "Los reportes muestran totales de contactos sin mostrar cuáles se convirtieron en oportunidades de valoración.",
+              "Los reportes muestran totales de contactos, no cuáles se convirtieron en valoraciones atendidas o planes de tratamiento.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Dentro de la práctica",
+        title:
+          "Criterio médico en la consulta. Criterio médico también en la bandeja de entrada.",
+        description:
+          "La automatización resuelve lo administrativo y se detiene donde debe. Todo lo clínico llega a ti: no a un guion, no a un bot, no a alguien adivinando.",
+        moments: [
+          {
+            title: "La valoración sigue siendo tuya",
+            description:
+              "Precios, disponibilidad y dudas generales del proceso se responden al instante. Lo clínico se escala al médico, siempre.",
+            alt: "Médico evaluando el rostro de una paciente en una consulta estética",
+          },
+          {
+            title: "La valoración llega preparada",
+            description:
+              "Zona de interés, antecedentes y las fotos que envió el paciente ya están en el registro antes de que se siente.",
+            alt: "Profesional examinando el rostro de una paciente en una valoración estética",
+          },
+          {
+            title: "La sala está lista y el proceso también",
+            description:
+              "Agendamiento, anticipos y seguimiento posterior corren desde una sola vista, no desde cuatro bandejas y una libreta.",
+            alt: "Sala moderna de medicina estética preparada para un paciente",
           },
         ],
       },
@@ -872,7 +1004,7 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             label: "Preguntas administrativas resueltas",
             description:
-              "La información aprobada sobre el centro, el proceso de valoración, la ubicación y las políticas se entrega siempre igual.",
+              "La información aprobada sobre el proceso de valoración, las cuotas, la preparación, la ubicación y las políticas se entrega siempre igual.",
           },
           {
             label: "Preguntas clínicas escaladas",
@@ -882,36 +1014,35 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             label: "Valoración y seguimiento administrados",
             description:
-              "Agendamiento, recordatorios, reprogramación, citas perdidas e interés a largo plazo quedan visibles y accionables.",
+              "Agendamiento, recordatorios, reprogramación, citas perdidas, seguimiento posterior y los pacientes que ya deberían volver quedan visibles y accionables.",
           },
         ],
       },
       capabilities: {
         eyebrow: "Dentro del sistema",
-        title:
-          "Un sistema de captación pensado para una atención basada en la valoración",
+        title: "Hecho para un centro donde todo empieza en la valoración",
         description:
           "Las campañas y las conversaciones se conectan a un recorrido de citas controlado que tu equipo puede supervisar.",
         items: [
           {
             title: "Campañas por procedimiento",
             description:
-              "Campañas y rutas de conversión alineadas a los procedimientos quirúrgicos o no quirúrgicos que quieres hacer crecer.",
+              "Campañas y rutas de conversión armadas alrededor de los procedimientos que quieres crecer: inyectables, calidad de piel, corporales o quirúrgicos.",
           },
           {
             title: "Concierge de pacientes con IA",
             description:
-              "Comunicación administrativa aprobada en inglés y español, disponible mucho más allá del horario de recepción.",
+              "Respuestas administrativas aprobadas en inglés y español, disponibles mucho después de que tus coordinadoras se van.",
           },
           {
-            title: "Registro de intención y disposición",
+            title: "Registro de zona de interés e intención",
             description:
-              "Categoría del procedimiento, idioma, interés en la valoración y datos administrativos configurados quedan organizados.",
+              "Categoría del procedimiento, idioma, tiempos e interés en la valoración quedan organizados en una sola ficha.",
           },
           {
             title: "Límites clínicos protegidos",
             description:
-              "Viabilidad, diagnóstico, síntomas, complicaciones y consejo médico se dirigen a personas calificadas.",
+              "Viabilidad, diagnóstico, síntomas, complicaciones y consejo médico se dirigen a personas calificadas, nunca los responde un software.",
           },
           {
             title: "Ciclo completo de la valoración",
@@ -921,7 +1052,7 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Automatización de consultas en redes",
             description:
-              "Los comentarios y mensajes configurados de Facebook e Instagram entran a rutas controladas de respuesta y seguimiento.",
+              "Los comentarios y mensajes configurados de Facebook e Instagram entran a la misma ruta controlada de respuesta que una consulta de campaña.",
           },
         ],
       },
@@ -1261,6 +1392,56 @@ export const industryContentEs: IndustryLocaleBundle = {
             "Recorrido de paciente de ejemplo: una consulta de procedimiento se convierte en una oportunidad de valoración organizada, con la pregunta clínica enviada a una persona.",
         },
       },
+      appointmentCommitment: {
+        eyebrow: "Compromiso de la valoración",
+        title:
+          "Una valoración solicitada no es lo mismo que una valoración confirmada.",
+        description:
+          "Consulta, conversación, interés en el procedimiento, agendamiento y, cuando le sirve a tu centro, un paso más: una cuota de valoración o una reserva de cita que debe acreditarse antes de dar la valoración por confirmada. El pago corre por el proveedor de pagos que tu centro ya usa y el estado de la cita avanza con él.",
+        steps: [
+          {
+            label: "Valoración solicitada",
+            caption: "El paciente elige un horario de tu disponibilidad real.",
+          },
+          {
+            label: "Reserva solicitada",
+            caption:
+              "Con el agendamiento sale una solicitud de pago, solo en las valoraciones que tú elijas.",
+          },
+          {
+            label: "Valoración confirmada",
+            caption:
+              "Cuando el pago se acredita, el estado se actualiza en tu proceso.",
+          },
+          {
+            label: "Recordatorios",
+            caption:
+              "Las confirmaciones y los recordatorios siguen igual que antes.",
+          },
+          {
+            label: "Valoración atendida",
+            caption: "El profesional llega a una cita comprometida.",
+          },
+        ],
+        points: [
+          {
+            title: "Menos reservas sin intención",
+            description:
+              "Una valoración con cuota la solicita quien va en serio con el procedimiento, así el interés casual deja de llenar la agenda.",
+          },
+          {
+            title: "Horas de consulta que reflejan compromisos reales",
+            description:
+              "Confirmada significa pagada y confirmada, no solo solicitada: las horas que bloqueas para valoraciones son horas que un paciente ya comprometió.",
+          },
+          {
+            title: "Tu proveedor, tu dinero",
+            description:
+              "Los pagos pasan por el proveedor de pagos que tu centro ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+          },
+        ],
+        note: "Es opcional y se configura por tipo de valoración: tú decides qué citas piden cuota y de cuánto. La cuota de valoración refuerza el compromiso; no es una garantía de asistencia.",
+      },
       packagesTitle:
         "Elige el nivel de crecimiento estético que corresponde a tu centro hoy.",
       packages: [
@@ -1270,39 +1451,45 @@ export const industryContentEs: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas por procedimientos, captúralas todas en tu CRM y responde automáticamente.",
+            "Genera consultas por procedimientos, captúralas todas en tu CRM y responde mientras el paciente sigue comparando.",
           idealFor:
-            "Clínicas que necesitan una forma confiable de generar consultas por procedimientos y dejar de perderlas.",
+            "Centros que necesitan un flujo estable de consultas por procedimientos y una ruta confiable de la consulta a la valoración.",
           highlights: [
             "Un canal prioritario de captación",
-            "CRM incluido para captura de leads y seguimiento",
+            "CRM incluido para registro de consultas y seguimiento",
             "Respuesta automática inmediata, agendamiento y recordatorios",
+            "Cuota de valoración opcional para confirmar la cita",
           ],
           details: [
             {
               title: "Captación estética administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tu oferta, tu mercado y la demanda real de procedimientos.",
+                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según los procedimientos que quieres crecer, tu mercado y la demanda real.",
             },
             {
-              title: "CRM incluido",
+              title: "CRM de pacientes incluido",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta de campaña queda como una oportunidad organizada, con su origen, su etapa y su historial completo.",
+                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, su zona de interés, su etapa y su historial completo, y todo lo clínico queda marcado para una persona.",
             },
             {
               title: "Respuesta automática inmediata",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y le indican a cada paciente el siguiente paso, a cualquier hora.",
+                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al paciente a solicitar su valoración, a cualquier hora.",
             },
             {
               title: "Calendario de citas y recordatorios",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace tu equipo.",
+                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hacen tus coordinadoras.",
+            },
+            {
+              title: "Reserva de cita con cuota de valoración opcional",
+              description:
+                "Cuando tú lo quieras, el agendamiento pide una cuota de valoración o una reserva antes de dar la cita por confirmada. El cobro se hace con el proveedor de pagos que tu centro ya usa y el dinero llega a tu cuenta; nosotros lo conectamos con el flujo de citas. Es opcional y se configura por tipo de valoración.",
             },
             {
               title: "Revisión mensual de desempeño",
               description:
-                "Revisamos el origen de las consultas, la actividad de respuesta, las citas agendadas y el costo por cita agendada, y acordamos el siguiente movimiento de campaña.",
+                "Revisamos el origen de las consultas, la actividad de respuesta, las valoraciones agendadas y atendidas y el costo por valoración agendada, y acordamos el siguiente movimiento de campaña.",
             },
           ],
           note: {
@@ -1335,17 +1522,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas agendadas.",
+                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de captura conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "Un sitio web enfocado en conversión con hasta dos formularios de solicitud de valoración conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
             },
             {
               title: "Comunicación bilingüe con IA",
               description:
-                "El asistente responde en inglés y español usando únicamente la información que apruebas: procedimientos, horarios, ubicación, políticas y reglas de precio. Cada mes incluye $20 de saldo de uso de IA.",
+                "El asistente responde en inglés y español usando únicamente lo que apruebas: los procedimientos que ofreces, las cuotas de valoración, horarios, ubicación, políticas y lo que tu centro sí y no cotiza por chat. Cada mes incluye $20 de saldo de uso de IA.",
             },
             {
               title: "Traspaso clínico y de excepciones",
@@ -1355,7 +1542,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Configuración y automatización de email marketing",
               description:
-                "Construimos y operamos la automatización de las campañas. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Construimos y operamos la automatización de las campañas, incluido el seguimiento posterior a la valoración y el de quienes nunca agendaron. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
             },
             {
               title: "Hasta 4 piezas publicitarias estáticas al mes",
@@ -1394,7 +1581,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Varios canales de captación",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según tus prioridades de procedimientos, tu mercado y tu presupuesto.",
+                "Más de dos canales trabajando juntos, con la mezcla armada según los procedimientos que quieres crecer, tu mercado y tu presupuesto.",
             },
             {
               title: "Presupuestos publicitarios mayores",
@@ -1409,12 +1596,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Arquitectura de CRM avanzada",
               description:
-                "Procesos, roles, permisos y estructuras de reportería a medida, armados según cómo trabaja realmente tu equipo.",
+                "Procesos por categoría de procedimiento, más los roles, permisos y reportería con los que realmente trabajan tus coordinadoras.",
             },
             {
               title: "Comunicación con IA avanzada",
               description:
                 "Más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del asistente estándar.",
+            },
+            {
+              title: "Reglas avanzadas de anticipos y prepagos",
+              description:
+                "Montos de reserva distintos por tratamiento, profesional o sede, prepago de paquetes y las reglas de devolución o crédito que aplica tu negocio, conectadas al proveedor de pagos que ya usas.",
             },
             {
               title: "Integraciones y automatizaciones a medida",
@@ -1424,7 +1616,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Reactivación, reportería y soporte prioritario",
               description:
-                "Reactivación estructurada de tu base de pacientes, atribución a lo largo de todo el recorrido y un nivel de soporte acordado contigo.",
+                "Reactivación estructurada de valoraciones pasadas y de pacientes que ya deberían volver, atribución desde la campaña hasta la valoración atendida, y un nivel de soporte acordado contigo.",
             },
           ],
           note: {
@@ -1436,7 +1628,7 @@ export const industryContentEs: IndustryLocaleBundle = {
       ],
       faqTitle: "Lo que más nos preguntan los centros de medicina estética",
       faqDescription:
-        "Revisamos tus canales de captación, tu proceso de respuesta, el recorrido de valoración, las reglas de traspaso y el seguimiento antes de recomendarte un paquete.",
+        "Revisamos tus canales de captación, tus tiempos de respuesta, el recorrido de valoración, las reglas de escalamiento y el seguimiento posterior antes de recomendarte un paquete.",
       faq: [
         {
           question:
@@ -1461,6 +1653,18 @@ export const industryContentEs: IndustryLocaleBundle = {
             "Sí. Los formularios, mensajes y comentarios de Facebook e Instagram se pueden conectar cuando están incluidos en el paquete y el alcance de canales elegido.",
         },
         {
+          question:
+            "¿Podemos cobrar una cuota de valoración antes de confirmar la cita?",
+          answer:
+            "Sí, desde DigitalFace Capture. El agendamiento puede solicitar una cuota de valoración o una reserva, y la cita queda confirmada cuando el pago se acredita. Es opcional y se define por tipo de valoración, el cobro corre por el proveedor de pagos que tu centro ya usa y el dinero llega a tu cuenta, y es una herramienta de compromiso, no una garantía de asistencia.",
+        },
+        {
+          question:
+            "¿Puede dar seguimiento a los pacientes que preguntaron y nunca agendaron?",
+          answer:
+            "Sí. Las consultas que nunca eligieron horario entran a una secuencia de seguimiento aprobada, y los pacientes anteriores se pueden segmentar para recordarles su siguiente visita. Todo lo clínico que responda el paciente pasa a tu equipo antes de contestar.",
+        },
+        {
           question: "¿Prometen una cantidad de pacientes o procedimientos?",
           answer:
             "No. Nosotros construimos y administramos el sistema de captación y conversión. Los resultados también dependen de la demanda, el presupuesto, las ofertas, la pertinencia clínica, los precios, la reputación y tu propio proceso de valoración.",
@@ -1469,7 +1673,7 @@ export const industryContentEs: IndustryLocaleBundle = {
       booking: {
         title: "Hablemos de tu sistema de crecimiento de pacientes.",
         description:
-          "Elige un horario para revisar cómo tu centro puede mejorar la generación de leads, la respuesta, el seguimiento, las citas y la visibilidad de ventas.",
+          "Elige un horario para revisar cómo tu centro capta consultas por procedimientos, escala las preguntas clínicas, agenda valoraciones y hace el seguimiento posterior.",
         proposalTitle: "¿Necesitas un flujo estético a la medida?",
         proposalDescription:
           "Pide una propuesta para varias sedes, pacientes internacionales, admisión por procedimiento, automatización en redes u otro proceso de tu centro.",
@@ -1484,27 +1688,32 @@ export const industryContentEs: IndustryLocaleBundle = {
         title:
           "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
         description:
-          "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera la pauta, el agendamiento con IA, la reactivación de membresías y las reseñas de med spas en Estados Unidos y Latinoamérica.",
+          "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera las promociones, el agendamiento con IA, los anticipos, las nuevas reservas y la reactivación de clientes de med spas en Estados Unidos y Latinoamérica.",
       },
       hero: {
         eyebrow: "DigitalFace para med spas",
         title:
           "Convierte el interés por un tratamiento en clientes que agendan y regresan.",
         description:
-          "Un sistema que conecta la pauta del med spa, la respuesta inmediata, las conversaciones con IA, el agendamiento, la reactivación y la medición de resultados.",
+          "Un sistema que conecta promociones, respuesta inmediata, agendamiento, anticipos, nuevas reservas y reactivación de clientes — para que la agenda se llene y se mantenga llena.",
         primaryCta: "Agenda tu diagnóstico para med spa",
         secondaryCta: "Ver el sistema para med spas",
         visualTitle: "Recorrido de agendamiento del med spa",
         visualStages: [
-          "Consulta por tratamiento registrada",
+          "Respuesta a la promoción registrada",
           "Conversación de agendamiento activa",
-          "Cita y seguimiento listos",
+          "Cita agendada y siguiente reserva lista",
         ],
+        mediaHeadline:
+          "La promoción llena la agenda. El seguimiento es lo que la mantiene llena.",
       },
       stats: [
-        { value: "24/7", label: "Cobertura de consultas" },
-        { value: "EN + ES", label: "Comunicación bilingüe" },
-        { value: "Una vista", label: "Cada oportunidad registrada" },
+        { value: "24/7", label: "Solicitudes de cita respondidas" },
+        { value: "EN + ES", label: "Comunicación bilingüe con clientes" },
+        {
+          value: "Recurrencia",
+          label: "Retención dentro de la agenda",
+        },
       ],
       problem: {
         eyebrow: "La brecha del agendamiento",
@@ -1516,32 +1725,58 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Consultas repartidas por todos lados",
             description:
-              "Las preguntas llegan por anuncios, comentarios, mensajes directos, formularios y llamadas, sin un responsable claro.",
+              "Respuestas a historias, comentarios, mensajes directos, formularios y llamadas llegan todas a la vez, sin un responsable claro.",
           },
           {
-            title: "Las promociones se enfrían",
+            title: "Promociones que superan a recepción",
             description:
-              "Las personas más interesadas pierden el impulso cuando la oferta no recibe respuesta y seguimiento rápido.",
+              "Una oferta de temporada genera más mensajes en una tarde de los que alguien alcanza a responder antes de que se enfríe el interés.",
           },
           {
-            title: "Las mismas preguntas de precio cada día",
+            title: "Precios, paquetes y membresías explicados a mano",
             description:
-              "Tu equipo dedica horas a responder las mismas preguntas administrativas aprobadas en varios canales.",
+              "Tu equipo vuelve a escribir las mismas respuestas aprobadas sobre precios, paquetes y condiciones de membresía en cuatro canales.",
           },
           {
-            title: "Huecos de agenda e inasistencias",
+            title: "Inasistencias y espacios de agenda sin usar",
             description:
-              "Confirmaciones, recordatorios, reprogramación y recuperación dependen de que alguien recuerde cada paso.",
+              "Confirmaciones, recordatorios, reprogramación y recuperación dependen de que alguien recuerde, y las salas y el personal quedan ociosos.",
           },
           {
             title: "Base de clientes dormida",
             description:
-              "Los clientes anteriores y los contactos antiguos nunca se segmentan para ofertas de temporada, recompra o reactivación.",
+              "Clientes anteriores, membresías vencidas y paquetes sin terminar nunca se segmentan para volver a reservar ni para una oferta de temporada.",
           },
           {
             title: "Reseñas dejadas al azar",
             description:
-              "Las buenas experiencias no se convierten de forma confiable en reseñas, referidos y visitas repetidas.",
+              "Las buenas visitas no se convierten de forma confiable en reseñas, referidos y una siguiente cita agendada.",
+          },
+        ],
+      },
+      gallery: {
+        eyebrow: "Dentro del spa",
+        title: "La experiencia empieza mucho antes de que alguien entre.",
+        description:
+          "Para cuando la clienta está en tu camilla, ya te evaluó por lo rápido que respondiste, lo fácil que fue agendar y si alguien se acordó de ella después.",
+        moments: [
+          {
+            title: "La primera respuesta suena a recepción",
+            description:
+              "Un mensaje a medianoche recibe la misma respuesta cálida y en tu tono que daría tu mejor coordinadora al mediodía.",
+            alt: "Equipo de un med spa atendiendo a clientas en la recepción",
+          },
+          {
+            title: "El ritual no se interrumpe",
+            description:
+              "Nadie sale de un tratamiento a responder una duda de agenda, porque esa duda nunca tuvo que esperar.",
+            alt: "Piscina interior de spa iluminada con velas",
+          },
+          {
+            title: "La clienta que vuelve sola",
+            description:
+              "Reactivación, paquetes y recordatorios de membresía corren en silencio, así que la agenda se vuelve a llenar sin lanzar una campaña.",
+            alt: "Zona de descanso de un med spa premium",
           },
         ],
       },
@@ -1557,24 +1792,24 @@ export const industryContentEs: IndustryLocaleBundle = {
               "Alguien responde a una promoción, una publicación, un anuncio, tu sitio, un mensaje o una referencia.",
           },
           {
-            label: "Respuesta inmediata",
+            label: "Respuesta bilingüe inmediata",
             description:
               "La consulta recibe respuesta en inglés o español y entra al proceso de oportunidades del med spa.",
           },
           {
-            label: "Preguntas aprobadas resueltas",
+            label: "Precios, paquetes y disponibilidad resueltos",
             description:
-              "La información configurada sobre tratamientos, promociones, ubicación, políticas y disponibilidad sale siempre igual.",
+              "La información configurada sobre tratamientos, promociones, membresías, paquetes, políticas y horarios disponibles sale siempre igual.",
           },
           {
-            label: "Agendamiento acompañado",
+            label: "Cita agendada y asegurada",
             description:
-              "Se guía al cliente hacia la reserva, la confirmación, los recordatorios, la reprogramación o el traspaso al equipo.",
+              "Se guía al cliente hacia un horario, un anticipo opcional sostiene el espacio, y las confirmaciones y recordatorios lo protegen.",
           },
           {
-            label: "La retención continúa",
+            label: "Nuevas reservas y reactivación",
             description:
-              "Solicitudes de reseña, nuevas reservas, recuperación de inasistencias y campañas de reactivación extienden la relación.",
+              "Solicitudes de reseña, avisos para volver a reservar, recuperación de inasistencias y campañas de reactivación aprobadas traen de vuelta a los clientes.",
           },
         ],
       },
@@ -1588,32 +1823,32 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Campañas de promoción de tratamientos",
             description:
-              "Meta, Instagram, Google u otro canal justificado, elegido según la oferta y el mercado local.",
+              "Meta, Instagram, Google u otro canal justificado, armado según la oferta, la temporada y el mercado local.",
           },
           {
             title: "Concierge de agendamiento con IA",
             description:
-              "Respuestas aprobadas en inglés y español para preguntas frecuentes e intención de reserva fuera del horario.",
+              "Respuestas aprobadas en inglés y español para precios, paquetes e intención de reserva mucho después de que sale el último cliente.",
           },
           {
-            title: "Seguimiento de promociones e interés",
+            title: "Origen del lead y atribución de la oferta",
             description:
-              "El sistema registra qué tratamiento, campaña u oferta trajo cada oportunidad al proceso.",
+              "Cada oportunidad lleva el tratamiento, la oferta y el canal que la generó, así sabes qué promociones realmente llenan la agenda.",
           },
           {
             title: "Ciclo completo de la cita",
             description:
-              "Agendamiento, recordatorios, reprogramación, cancelaciones, inasistencias y recuperación quedan conectados.",
+              "Agendamiento, anticipos, recordatorios, reprogramación, cancelaciones y recuperación de inasistencias se conectan al mismo calendario.",
           },
           {
             title: "Reactivación de clientes",
             description:
-              "Los segmentos aprobados reciben campañas de temporada, membresías, paquetes o nuevas reservas.",
+              "Los segmentos aprobados — clientes inactivos, paquetes sin terminar, membresías por vencer — reciben la campaña de nueva reserva o de temporada que corresponde.",
           },
           {
             title: "Reseñas y visitas recurrentes",
             description:
-              "Los recorridos posteriores a la visita piden opinión, impulsan la siguiente cita y mantienen visible el historial.",
+              "Los recorridos posteriores a la visita piden reseña, impulsan la siguiente reserva y mantienen el historial visible para recepción.",
           },
         ],
       },
@@ -1623,7 +1858,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         description:
           "Un med spa llena su agenda cuando tres partes siguen conectadas: poner la oferta correcta frente a personas que viven cerca, responderles antes de que se enfríe el interés y mantener visible cada solicitud para que recepción sepa siempre quién sigue esperando.",
         closing:
-          "Genera interés en tus tratamientos. Conviértelo en citas. Mantén la agenda bajo control.",
+          "Genera interés en tus tratamientos. Conviértelo en citas agendadas. Mantén la agenda llena entre promociones.",
         stages: [
           {
             number: "01",
@@ -1947,6 +2182,56 @@ export const industryContentEs: IndustryLocaleBundle = {
             "Recorrido de cliente de ejemplo: un mensaje desde una promoción se convierte en una solicitud de cita organizada con un siguiente paso claro.",
         },
       },
+      appointmentCommitment: {
+        eyebrow: "Compromiso de la reserva",
+        title: "Una cita solicitada no es lo mismo que una cita confirmada.",
+        description:
+          "Consulta, conversación, interés de tratamiento, agendamiento y, cuando le sirve a tu med spa, un paso más: un anticipo de reserva o una reserva de tratamiento que debe acreditarse antes de dar la cita por confirmada. El pago corre por el proveedor de pagos que tu med spa ya usa y el estado de la cita avanza con él.",
+        steps: [
+          {
+            label: "Cita solicitada",
+            caption: "El cliente elige un horario de tu disponibilidad real.",
+          },
+          {
+            label: "Reserva solicitada",
+            caption:
+              "Con el agendamiento sale una solicitud de pago, solo en los tratamientos que tú elijas.",
+          },
+          {
+            label: "Cita confirmada",
+            caption:
+              "Cuando el pago se acredita, el estado se actualiza en tu proceso.",
+          },
+          {
+            label: "Recordatorios",
+            caption:
+              "Las confirmaciones y los recordatorios siguen igual que antes.",
+          },
+          {
+            label: "Cita atendida",
+            caption:
+              "Tu equipo llega a un espacio que alguien se comprometió a usar.",
+          },
+        ],
+        points: [
+          {
+            title: "Menos reservas sin intención",
+            description:
+              "Un espacio de tratamiento que cuesta reservar lo pide quien realmente piensa venir, así las promociones dejan de llenar la agenda de inasistencias.",
+          },
+          {
+            title: "Cabinas que se mantienen productivas",
+            description:
+              "Confirmada significa pagada y confirmada, no solo solicitada: la cabina y el profesional quedan reservados para una cita comprometida.",
+          },
+          {
+            title: "Tu proveedor, tu dinero",
+            description:
+              "Los pagos pasan por el proveedor de pagos que tu med spa ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+          },
+        ],
+        note: "Es opcional y se configura por tratamiento: tú decides qué citas piden anticipo y de cuánto. El anticipo refuerza el compromiso; no es una garantía de asistencia.",
+      },
       packagesTitle:
         "Elige el nivel de crecimiento que corresponde a tu med spa hoy.",
       packages: [
@@ -1956,39 +2241,45 @@ export const industryContentEs: IndustryLocaleBundle = {
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas por tratamientos, captúralas todas en tu CRM y responde automáticamente.",
+            "Genera consultas por tratamientos y promociones, captúralas todas en tu CRM y responde antes de que se enfríe el interés.",
           idealFor:
-            "Med spas que necesitan una forma confiable de generar consultas de clientes y dejar de perderlas.",
+            "Med spas que necesitan un flujo confiable de solicitudes de cita y una agenda que deje de perderlas.",
           highlights: [
             "Un canal prioritario de captación",
-            "CRM incluido para captura de leads y seguimiento",
+            "CRM incluido para solicitudes de cita y seguimiento",
             "Respuesta automática inmediata, agendamiento y recordatorios",
+            "Anticipo opcional para confirmar la reserva",
           ],
           details: [
             {
               title: "Captación para med spa administrada",
               description:
-                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tu oferta, tu mercado y la demanda real de tratamientos.",
+                "Configuramos y administramos un canal prioritario — Meta, Google o TikTok — elegido según tus ofertas, tus membresías y los tratamientos que quieres llenar esta temporada.",
             },
             {
-              title: "CRM incluido",
+              title: "CRM de clientes incluido",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta de campaña queda como una oportunidad organizada, con su origen, su etapa y su historial completo.",
+                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, la oferta de la que vino, su etapa y su historial completo.",
             },
             {
               title: "Respuesta automática inmediata",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y le indican a cada cliente el siguiente paso, a cualquier hora.",
+                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al cliente directo a reservar, a cualquier hora.",
             },
             {
               title: "Calendario de citas y recordatorios",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace tu equipo.",
+                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace recepción, y reducen inasistencias evitables.",
+            },
+            {
+              title: "Reserva de tratamiento con anticipo opcional",
+              description:
+                "Cuando tú lo quieras, el agendamiento pide un anticipo antes de dar la cita por confirmada. El cobro se hace con el proveedor de pagos que tu med spa ya usa y el dinero llega a tu cuenta; nosotros lo conectamos con el flujo de citas. Es opcional y se configura por tratamiento.",
             },
             {
               title: "Revisión mensual de desempeño",
               description:
-                "Revisamos el origen de las consultas, la actividad de respuesta, las citas agendadas y el costo por cita agendada, y acordamos el siguiente movimiento de campaña.",
+                "Revisamos el origen de los leads, la actividad de respuesta, las citas agendadas y atendidas y el costo por cita agendada, y acordamos la siguiente promoción.",
             },
           ],
           note: {
@@ -2021,17 +2312,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Dos canales prioritarios de captación",
               description:
-                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas agendadas.",
+                "Dos canales — Meta, Google o TikTok — administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas atendidas, no solo mensajes.",
             },
             {
               title: "Sitio web de conversión con hasta 2 formularios",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de captura conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "Un sitio web enfocado en conversión con hasta dos formularios de solicitud de cita conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
             },
             {
               title: "Comunicación bilingüe con IA",
               description:
-                "El asistente responde en inglés y español usando únicamente la información que apruebas: tratamientos, promociones, horarios, ubicación, políticas y reglas de precio. Cada mes incluye $20 de saldo de uso de IA.",
+                "El asistente responde en inglés y español usando únicamente lo que apruebas: tratamientos, promociones, condiciones de membresías y paquetes, horarios, ubicación, políticas y reglas de precio. Cada mes incluye $20 de saldo de uso de IA.",
             },
             {
               title: "Traspaso médico y de excepciones",
@@ -2041,7 +2332,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Configuración y automatización de email marketing",
               description:
-                "Construimos y operamos la automatización de las campañas. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Construimos y operamos la automatización de las campañas, incluidas ofertas de temporada, renovación de membresías y secuencias para clientes que llevan tiempo sin venir. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
             },
             {
               title: "Hasta 4 piezas publicitarias estáticas al mes",
@@ -2080,7 +2371,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Varios canales de captación",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según tus prioridades de tratamientos, tu mercado y tu presupuesto.",
+                "Más de dos canales trabajando juntos, con la mezcla armada según tu menú de tratamientos, tus membresías y las temporadas que mueven tu agenda.",
             },
             {
               title: "Presupuestos publicitarios mayores",
@@ -2095,12 +2386,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Arquitectura de CRM avanzada",
               description:
-                "Procesos, roles, permisos y estructuras de reportería a medida, armados según cómo trabaja realmente tu equipo.",
+                "Procesos separados para membresías, paquetes y tratamientos sueltos, más los roles, permisos y reportería con los que realmente trabaja recepción.",
             },
             {
               title: "Comunicación con IA avanzada",
               description:
                 "Más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del asistente estándar.",
+            },
+            {
+              title: "Reglas avanzadas de anticipos y prepagos",
+              description:
+                "Montos de reserva distintos por tratamiento, profesional o sede, prepago de paquetes y las reglas de devolución o crédito que aplica tu negocio, conectadas al proveedor de pagos que ya usas.",
             },
             {
               title: "Integraciones y automatizaciones a medida",
@@ -2110,7 +2406,7 @@ export const industryContentEs: IndustryLocaleBundle = {
             {
               title: "Reactivación, reportería y soporte prioritario",
               description:
-                "Reactivación estructurada de tu base de clientes, atribución a lo largo de todo el recorrido y un nivel de soporte acordado contigo.",
+                "Reactivación estructurada de clientes inactivos y membresías por vencer, atribución desde la oferta hasta la cita atendida, y un nivel de soporte acordado contigo.",
             },
           ],
           note: {
@@ -2146,6 +2442,17 @@ export const industryContentEs: IndustryLocaleBundle = {
             "Sí. Tu equipo puede tomar el control cuando un cliente pide hablar con una persona o cuando la conversación se vuelve clínica, delicada, urgente o sale del conocimiento aprobado.",
         },
         {
+          question:
+            "¿Podemos pedir un anticipo antes de confirmar una reserva?",
+          answer:
+            "Sí, desde DigitalFace Capture. El agendamiento puede solicitar un anticipo de reserva o una reserva de tratamiento, y la cita queda confirmada cuando el pago se acredita. Es opcional y se define por tratamiento, el cobro corre por el proveedor de pagos que tu med spa ya usa y el dinero llega a tu cuenta, y es una herramienta de compromiso, no una garantía de asistencia.",
+        },
+        {
+          question: "¿Puede manejar membresías y paquetes prepagados?",
+          answer:
+            "Sí, en la parte comercial. El sistema puede registrar qué clientes tienen membresía o sesiones pendientes de un paquete, recordarles reservar y cobrar un anticipo o prepago con tu propio proveedor de pagos. No reemplaza tu punto de venta ni tu historia clínica.",
+        },
+        {
           question: "¿Ustedes producen fotos y videos profesionales?",
           answer:
             "La producción profesional no está incluida. El med spa entrega las fotos y videos originales aprobados, y nosotros adaptamos el material acordado para campañas y rutas de conversión.",
@@ -2154,7 +2461,7 @@ export const industryContentEs: IndustryLocaleBundle = {
       booking: {
         title: "Hablemos de tu sistema de crecimiento.",
         description:
-          "Elige un horario que te acomode para revisar cómo DigitalFace puede ayudar a tu med spa a atraer, convertir y gestionar más oportunidades de pacientes.",
+          "Elige un horario que te acomode para revisar cómo tu med spa convierte promociones en citas agendadas, reduce inasistencias y hace volver a sus clientes.",
         proposalTitle: "¿Necesitas un flujo a la medida para tu med spa?",
         proposalDescription:
           "Pide una propuesta para membresías, varias sedes, automatización de reseñas, admisión por tratamiento u otro proceso propio.",

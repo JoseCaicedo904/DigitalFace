@@ -9,9 +9,11 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { MediaSlot } from "@/components/media/MediaSlot";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
+import { AppointmentCommitment } from "@/sections/AppointmentCommitment";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
+import { IndustryGallery } from "@/sections/IndustryGallery";
 import { BookingCTA } from "@/components/booking/BookingCTA";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -23,7 +25,11 @@ import {
 } from "@/lib/structuredData";
 import { commonContent } from "@/i18n/content/common";
 import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
-import { clientMedia, industryMedia } from "@/data/mediaSlots";
+import {
+  clientMedia,
+  industryMedia,
+  industryPhotography,
+} from "@/data/mediaSlots";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
@@ -467,6 +473,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
   const secondaryStory =
     stories[data.proofLead === "diego" ? "jennifer" : "diego"];
   const pageMedia = industryMedia[data.slug];
+  const pagePhotos = industryPhotography[data.slug];
 
   usePageMetadata(data.metadata.title, data.metadata.description);
 
@@ -490,6 +497,27 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
 
       <main>
         <section className="relative isolate overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28">
+          {/* The room this funnel is written for, held far enough back that the
+              headline never fights it: a slow push-in, a flat wash for tone and
+              a left-weighted gradient so the copy column keeps full contrast. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-30 overflow-hidden"
+          >
+            <motion.img
+              src={pagePhotos.backdrop}
+              alt=""
+              className="h-full w-full object-cover opacity-60"
+              style={{ objectPosition: pagePhotos.backdropPosition }}
+              initial={reducedMotion ? false : { scale: 1.14 }}
+              animate={reducedMotion ? undefined : { scale: 1 }}
+              transition={{ duration: 22, ease: "easeOut" }}
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-slate-950/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/25" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950" />
+          </div>
           <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.36),transparent_48%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.25),transparent_42%)]" />
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
           <motion.div
@@ -655,7 +683,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                       {data.navLabel} · {ui.heroMedia.eyebrow}
                     </p>
                     <p className="mt-3 text-xl font-semibold sm:text-3xl">
-                      {ui.heroMedia.title}
+                      {data.hero.mediaHeadline}
                     </p>
                   </div>
                 </div>
@@ -703,6 +731,18 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
+        {/* Placed after the problem list and before the mechanics: the visitor
+            has just read what is going wrong, so the photographs land on their
+            own room rather than decorating an explanation they have not read. */}
+        <IndustryGallery
+          eyebrow={data.gallery.eyebrow}
+          title={data.gallery.title}
+          description={data.gallery.description}
+          moments={data.gallery.moments}
+          photos={pagePhotos.moments}
+          reducedMotion={reducedMotion}
+        />
+
         <SystemJourneyIntro
           content={data.systemIntro}
           className="bg-gradient-to-b from-secondary/40 via-white to-white"
@@ -722,6 +762,12 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           content={data.crmPipelineDemo}
           ctaHref={bookHref}
         />
+
+        {/* The board above ends on "appointment requested", which is exactly
+            where the next question arrives: how do you know they will turn up?
+            The reservation step is answered here, inside the journey it belongs
+            to, rather than as a payments pitch of its own. */}
+        <AppointmentCommitment content={data.appointmentCommitment} />
 
         <section className="overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
