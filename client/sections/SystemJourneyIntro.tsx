@@ -16,7 +16,10 @@ export type SystemJourneyContent = {
   eyebrow: string;
   title: string;
   description: string;
-  closing: string;
+  /** Optional one-line synthesis under the three cards. The industry funnels
+   *  omit it: their cards already carry attract, convert and manage as titles,
+   *  so the line only restated the row above it. */
+  closing?: string;
   stages: {
     number: string;
     label: string;
@@ -120,9 +123,11 @@ export function SystemJourneyIntro({
           </ol>
         </div>
 
-        <p className="mx-auto mt-10 max-w-3xl text-center text-lg font-semibold text-slate-900 sm:text-xl">
-          {content.closing}
-        </p>
+        {content.closing ? (
+          <p className="mx-auto mt-10 max-w-3xl text-center text-lg font-semibold text-slate-900 sm:text-xl">
+            {content.closing}
+          </p>
+        ) : null}
       </div>
     </section>
   );

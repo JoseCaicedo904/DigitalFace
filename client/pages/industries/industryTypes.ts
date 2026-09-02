@@ -2,7 +2,6 @@ import type { LucideIcon } from "lucide-react";
 import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
 import type { ConversationDemoContent } from "@/components/demo/conversation";
 import type { CrmPipelineDemoContent } from "@/components/demo/crmPipeline";
-import type { SystemJourneyContent } from "@/sections/SystemJourneyIntro";
 import type { AppointmentCommitmentContent } from "@/sections/AppointmentCommitment";
 
 export type IndustrySlug =
@@ -29,11 +28,6 @@ export type IndustryTextItem = {
 
 export type IndustryItem = IndustryTextItem & {
   icon: LucideIcon;
-};
-
-export type JourneyStep = {
-  label: string;
-  description: string;
 };
 
 /** One photo in the industry gallery. `alt` is written for the photo, the
@@ -99,9 +93,9 @@ export type IndustryLandingText = {
     visualTitle: string;
     visualStages: string[];
     /**
-     * Headline set over the wide photograph below the hero. Written in this
-     * funnel's own operational language, so the first full-width statement the
-     * visitor reads is about their practice rather than about the picture.
+     * Headline set over the wide photograph that closes the demonstrations.
+     * Written in this funnel's own operational language, so the page's one
+     * full-width statement is about their practice, not about the picture.
      */
     mediaHeadline: string;
   };
@@ -124,20 +118,12 @@ export type IndustryLandingText = {
     /** Exactly three, matched positionally to the industry's photo set. */
     moments: GalleryMoment[];
   };
-  journey: {
-    eyebrow: string;
-    title: string;
-    description: string;
-    steps: JourneyStep[];
-  };
   capabilities: {
     eyebrow: string;
     title: string;
     description: string;
     items: IndustryTextItem[];
   };
-  /** This funnel's own wording for attract, convert and manage. */
-  systemIntro: SystemJourneyContent;
   /** The scripted advertising demonstration, in this funnel's own campaign. */
   adCampaignDemo: AdCampaignDemoContent;
   /** The scripted phone demonstration, tailored to this funnel's audience. */
@@ -158,7 +144,6 @@ export type IndustryLandingText = {
     description: string;
     proposalTitle: string;
     proposalDescription: string;
-    proposalCta: string;
   };
 };
 
@@ -212,7 +197,6 @@ export type IndustryUiCopy = {
   heroMedia: {
     eyebrow: string;
   };
-  workflowOverlay: string;
   capabilitiesDisclaimer: string;
   packages: {
     eyebrow: string;
@@ -226,17 +210,11 @@ export type IndustryUiCopy = {
     noContract: string;
     footnote: string;
   };
-  proposalBand: {
-    eyebrow: string;
-  };
   proof: {
     eyebrow: string;
     title: string;
     description: string;
     activeLabel: string;
-    slotLabel: string;
-    slotTitle: string;
-    slotDescription: string;
   };
   faq: {
     eyebrow: string;

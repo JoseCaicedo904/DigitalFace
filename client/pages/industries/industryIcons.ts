@@ -5,17 +5,13 @@ import {
   CalendarCheck,
   Camera,
   ChartNoAxesCombined,
-  CircleDollarSign,
   ClipboardCheck,
   Megaphone,
   MessageCircleMore,
   MessagesSquare,
   RefreshCcw,
-  Route,
   ShieldCheck,
-  Sparkles,
   Star,
-  UserCheck,
 } from "lucide-react";
 import type { IndustrySlug } from "./industryTypes";
 
@@ -29,51 +25,21 @@ export const industryIcons: Record<
   { problem: LucideIcon[]; capabilities: LucideIcon[] }
 > = {
   "dental-practices": {
-    problem: [
-      MessagesSquare,
-      Camera,
-      RefreshCcw,
-      CircleDollarSign,
-      CalendarCheck,
-      ChartNoAxesCombined,
-    ],
-    capabilities: [
-      Megaphone,
-      Bot,
-      Camera,
-      CalendarCheck,
-      UserCheck,
-      RefreshCcw,
-    ],
+    problem: [MessagesSquare, Camera, CalendarCheck, ChartNoAxesCombined],
+    capabilities: [Megaphone, Bot, CalendarCheck, RefreshCcw],
   },
   "aesthetic-medicine": {
     problem: [
       MessageCircleMore,
       ClipboardCheck,
-      Route,
       ShieldCheck,
-      CalendarCheck,
       ChartNoAxesCombined,
     ],
-    capabilities: [
-      Megaphone,
-      Bot,
-      ClipboardCheck,
-      ShieldCheck,
-      CalendarCheck,
-      MessagesSquare,
-    ],
+    capabilities: [Megaphone, Bot, ShieldCheck, CalendarCheck],
   },
   "med-spas": {
-    problem: [
-      MessagesSquare,
-      Sparkles,
-      BadgeDollarSign,
-      CalendarCheck,
-      RefreshCcw,
-      Star,
-    ],
-    capabilities: [Megaphone, Bot, Route, CalendarCheck, RefreshCcw, Star],
+    problem: [MessagesSquare, BadgeDollarSign, CalendarCheck, RefreshCcw],
+    capabilities: [Megaphone, Bot, CalendarCheck, Star],
   },
 };
 

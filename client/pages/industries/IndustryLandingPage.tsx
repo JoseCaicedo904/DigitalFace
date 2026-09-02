@@ -12,7 +12,6 @@ import { AdCampaignDemoSection } from "@/sections/AdCampaignDemo";
 import { AppointmentCommitment } from "@/sections/AppointmentCommitment";
 import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
-import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
 import { IndustryGallery } from "@/sections/IndustryGallery";
 import { SchedulingPanel } from "@/components/booking/SchedulingPanel";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
@@ -49,7 +48,6 @@ import {
   Plus,
   ShieldCheck,
   Sparkles,
-  UserRoundCheck,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
@@ -673,28 +671,6 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        <section className="bg-slate-950 pb-12 sm:pb-16">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <MediaSlot
-              spec={pageMedia.hero}
-              aspectClassName="aspect-[16/10] sm:aspect-[21/8]"
-              className="border-white/15 shadow-2xl"
-              overlay={
-                <div className="flex h-full items-end bg-gradient-to-t from-slate-950/85 via-slate-950/5 to-transparent p-6 sm:p-9">
-                  <div className="max-w-2xl text-white">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
-                      {data.navLabel} · {ui.heroMedia.eyebrow}
-                    </p>
-                    <p className="mt-3 text-xl font-semibold sm:text-3xl">
-                      {data.hero.mediaHeadline}
-                    </p>
-                  </div>
-                </div>
-              }
-            />
-          </div>
-        </section>
-
         <section className="bg-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
@@ -746,12 +722,13 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           reducedMotion={reducedMotion}
         />
 
-        <SystemJourneyIntro
-          content={data.systemIntro}
-          className="bg-gradient-to-b from-secondary/40 via-white to-white"
-        />
-
+        {/* Attract, convert and manage used to be announced by a card row here
+            and then demonstrated three times immediately below it, in the same
+            words. The demonstrations are the stronger telling, so they carry
+            the model themselves — and the hero's "see the system" link lands on
+            the first of them rather than on a summary of them. */}
         <AdCampaignDemoSection
+          id="system"
           content={data.adCampaignDemo}
           ctaHref={bookHref}
         />
@@ -772,54 +749,30 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
             to, rather than as a payments pitch of its own. */}
         <AppointmentCommitment content={data.appointmentCommitment} />
 
-        <section className="overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+        {/* The wide plate used to sit directly under the hero, where it restated
+            the promise over a second photograph before the visitor had read an
+            argument. It earns more here: the demonstrations are done, so the
+            headline lands as the conclusion of what was just shown and opens the
+            dark half of the page. */}
+        <section className="bg-slate-950 pt-16 sm:pt-20 lg:pt-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading
-                eyebrow={data.journey.eyebrow}
-                title={data.journey.title}
-                description={data.journey.description}
-              />
-            </Reveal>
-            <div className="relative mt-16">
-              <div className="absolute bottom-0 left-6 top-0 w-px bg-gradient-to-b from-brand-300 via-ocean-300 to-emerald-300 lg:bottom-auto lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-auto" />
-              <div className="grid gap-6 lg:grid-cols-5">
-                {data.journey.steps.map((step, index) => (
-                  <Reveal
-                    key={step.label}
-                    reducedMotion={reducedMotion}
-                    delay={index * 0.07}
-                    className="relative pl-16 lg:pl-0 lg:pt-12"
-                  >
-                    <span className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-slate-950 text-sm font-semibold text-white shadow-brand-soft lg:left-1/2 lg:-translate-x-1/2">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <article className="h-full rounded-2xl border border-ink-100 bg-white p-5 shadow-brand-card">
-                      <h3 className="text-base font-semibold text-slate-900">
-                        {step.label}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-ink-500">
-                        {step.description}
-                      </p>
-                    </article>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-            <Reveal reducedMotion={reducedMotion} className="mt-14">
-              <MediaSlot
-                spec={pageMedia.workflow}
-                aspectClassName="aspect-[16/10] sm:aspect-[21/8]"
-                className="border-ink-100 shadow-brand-soft"
-                overlay={
-                  <div className="flex h-full items-end bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-6 sm:p-8">
-                    <p className="max-w-2xl text-lg font-semibold text-white sm:text-2xl">
-                      {ui.workflowOverlay}
+            <MediaSlot
+              spec={pageMedia.hero}
+              aspectClassName="aspect-[16/10] sm:aspect-[21/8]"
+              className="border-white/15 shadow-2xl"
+              overlay={
+                <div className="flex h-full items-end bg-gradient-to-t from-slate-950/85 via-slate-950/5 to-transparent p-6 sm:p-9">
+                  <div className="max-w-2xl text-white">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-200">
+                      {data.navLabel} · {ui.heroMedia.eyebrow}
+                    </p>
+                    <p className="mt-3 text-xl font-semibold sm:text-3xl">
+                      {data.hero.mediaHeadline}
                     </p>
                   </div>
-                }
-              />
-            </Reveal>
+                </div>
+              }
+            />
           </div>
         </section>
 
@@ -919,31 +872,9 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-brand-700 via-brand-600 to-ocean-600 py-14 text-white">
-          <div className="mx-auto flex max-w-6xl flex-col gap-7 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-            <Reveal reducedMotion={reducedMotion} className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/65">
-                {ui.proposalBand.eyebrow}
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold sm:text-3xl">
-                {data.booking.proposalTitle}
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-white/80 sm:text-base">
-                {data.booking.proposalDescription}
-              </p>
-            </Reveal>
-            <Reveal reducedMotion={reducedMotion}>
-              <a
-                href="#custom-proposal"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 text-sm font-semibold text-brand-700 shadow-xl transition hover:-translate-y-0.5"
-              >
-                {data.booking.proposalCta}
-                <FileText className="h-4 w-4 shrink-0" />
-              </a>
-            </Reveal>
-          </div>
-        </section>
-
+        {/* The full-width proposal band that used to sit here repeated, word for
+            word, the heading and description the proposal form itself carries
+            further down. The cards above already link to that form. */}
         <section className="bg-gradient-to-b from-white via-secondary/30 to-white py-20 sm:py-24 lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <Reveal reducedMotion={reducedMotion}>
@@ -992,29 +923,6 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                         </p>
                       ))}
                     </div>
-                  </article>
-                </Reveal>
-              ))}
-
-              {["03", "04"].map((slot, index) => (
-                <Reveal
-                  key={slot}
-                  reducedMotion={reducedMotion}
-                  delay={(index + 2) * 0.08}
-                >
-                  <article className="flex h-full min-h-64 flex-col items-center justify-center rounded-3xl border-2 border-dashed border-ink-200 bg-white/60 p-8 text-center">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-100 text-ink-400">
-                      <UserRoundCheck className="h-5 w-5" />
-                    </span>
-                    <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
-                      {ui.proof.slotLabel} {slot}
-                    </p>
-                    <h3 className="mt-3 text-xl font-semibold text-slate-900">
-                      {ui.proof.slotTitle}
-                    </h3>
-                    <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-500">
-                      {ui.proof.slotDescription}
-                    </p>
                   </article>
                 </Reveal>
               ))}

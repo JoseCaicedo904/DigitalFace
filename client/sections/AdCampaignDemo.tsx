@@ -21,6 +21,9 @@ interface AdCampaignDemoSectionProps {
   content: AdCampaignDemoContent;
   /** Router path, or an in-page anchor when the page books on itself. */
   ctaHref: string;
+  /** Anchor target. The industry funnels land their "see the system" link
+   *  here, because this is where the demonstration starts. */
+  id?: string;
   className?: string;
 }
 
@@ -33,6 +36,7 @@ interface AdCampaignDemoSectionProps {
 export function AdCampaignDemoSection({
   content: t,
   ctaHref,
+  id,
   className,
 }: AdCampaignDemoSectionProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -55,8 +59,9 @@ export function AdCampaignDemoSection({
 
   return (
     <section
+      id={id}
       className={cn(
-        "relative overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28",
+        "relative scroll-mt-24 overflow-hidden bg-slate-950 py-20 text-white sm:py-24 lg:py-28",
         className,
       )}
     >
