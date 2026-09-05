@@ -5,13 +5,44 @@ import { Button } from "@/components/ui/button";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
-import { Check, ShieldCheck, Sparkles } from "lucide-react";
+import { CalendarDays, Check, ChevronDown, ShieldCheck } from "lucide-react";
+import { BOOKING_ROUTE } from "@/components/booking/bookingRoute";
 
-const formatUSD = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-}).format;
+function FeatureAvailability({
+  included,
+  optional,
+  labels,
+}: {
+  included: boolean;
+  optional: boolean;
+  labels: { included: string; notIncluded: string; optional: string };
+}) {
+  if (!included) {
+    return (
+      <span>
+        <span aria-hidden="true" className="text-ink-300">
+          —
+        </span>
+        <span className="sr-only">{labels.notIncluded}</span>
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex flex-wrap items-center justify-center gap-1.5">
+      <span
+        aria-hidden="true"
+        className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-200"
+      >
+        <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
+      </span>
+      {optional ? (
+        <span className="text-xs text-ink-500">{labels.optional}</span>
+      ) : (
+        <span className="sr-only">{labels.included}</span>
+      )}
+    </span>
+  );
+}
 
 export default function Pricing() {
   const { locale, path } = useLocale();
@@ -66,146 +97,319 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-7">
-            {t.packages.items.map((pkg) => (
-              <article
-                key={pkg.id}
-                aria-labelledby={`pricing-${pkg.id}`}
-                data-featured={pkg.recommended ? "true" : undefined}
-                className={cn(
-                  "pricing-card relative flex h-full min-w-0 flex-col rounded-3xl bg-white/95 p-7 sm:p-8",
-                  pkg.recommended ? "border-2" : "border",
-                )}
-              >
-                {pkg.recommended ? (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
-                    {t.packages.recommendedLabel}
-                  </span>
-                ) : null}
-                <p className="pricing-level text-[11px] font-semibold uppercase tracking-[0.18em]">
-                  {pkg.level}
-                </p>
-                <h2
-                  id={`pricing-${pkg.id}`}
-                  className="mt-3 text-2xl font-semibold leading-tight text-slate-900 lg:min-h-[62px]"
-                >
-                  {pkg.name}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-ink-500 lg:min-h-[88px]">
-                  {pkg.description}
-                </p>
-
-                <div className="mt-6">
-                  <p className="text-xs font-medium text-ink-500">
-                    {t.packages.managementLabel}
-                  </p>
-                  <div className="mt-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-2">
-                    {pkg.startingAt ? (
-                      <span className="text-sm font-medium text-ink-500">
-                        {t.packages.from}
-                      </span>
-                    ) : null}
-                    <span className="text-[2.75rem] font-semibold leading-none tracking-tight text-slate-900 tabular-nums">
-                      {formatUSD(pkg.monthlyFee)}
-                    </span>
-                    <span className="text-sm font-medium text-ink-500">
-                      {t.packages.perMonth}
-                    </span>
-                  </div>
-                  <p className="mt-4 text-sm font-semibold text-slate-900">
-                    {pkg.startingAt ? `${t.packages.from} ` : ""}
-                    {formatUSD(pkg.setupFee)}
-                    <span className="mt-1 block text-xs font-normal text-ink-500">
-                      {t.packages.implementationLabel}
-                    </span>
-                  </p>
-                  <p className="mt-3 text-xs text-ink-500">
-                    {t.packages.terms}
-                  </p>
-                </div>
-
-                <Button
-                  asChild
+          <div className="mt-16" data-pricing-cards>
+            {/* Subgrid keeps the six feature rows and CTAs aligned without clipping translated copy. */}
+            <div className="grid gap-6 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-0">
+              {t.packages.items.map((pkg) => (
+                <article
+                  key={pkg.id}
+                  aria-labelledby={`pricing-${pkg.id}`}
+                  data-featured={pkg.recommended ? "true" : undefined}
                   className={cn(
-                    "pricing-cta mt-6 h-auto w-full whitespace-normal rounded-xl px-5 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
-                    pkg.recommended ? null : "border",
+                    "pricing-card relative grid min-w-0 content-start rounded-3xl bg-white/95 p-6 lg:row-span-9 lg:grid-rows-[subgrid]",
+                    pkg.recommended ? "border-2" : "border",
                   )}
                 >
-                  <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
-                </Button>
-
-                <div className="mt-7">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
-                    {t.packages.inclusionsLabel}
+                  {pkg.recommended ? (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
+                      {t.packages.recommendedLabel}
+                    </span>
+                  ) : null}
+                  <div className="pb-4">
+                    <p className="pricing-level text-[11px] font-semibold uppercase tracking-[0.16em]">
+                      {pkg.level}
+                    </p>
+                    <h2
+                      id={`pricing-${pkg.id}`}
+                      className="mt-2 text-2xl font-semibold leading-tight text-slate-900"
+                    >
+                      {pkg.name}
+                    </h2>
+                    <p className="mt-3 text-sm leading-relaxed text-ink-500">
+                      {pkg.description}
+                    </p>
+                  </div>
+                  <p className="pricing-inherit mb-2 self-start rounded-lg px-3 py-2 text-xs font-semibold">
+                    {pkg.inherits}
                   </p>
-                  <ul className="mt-4 space-y-3">
+                  <ul className="grid lg:row-span-6 lg:grid-rows-[subgrid]">
                     {pkg.features.map((feature) => (
                       <li
-                        key={feature}
-                        className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-500"
+                        key={feature.title}
+                        className="flex items-start gap-2.5 border-b border-ink-100 py-3 last:border-b-0"
                       >
-                        <Check
+                        <span
                           aria-hidden="true"
-                          className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0"
-                        />
-                        <span>{feature}</span>
+                          className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-200"
+                        >
+                          <Check className="h-3 w-3" strokeWidth={2.5} />
+                        </span>
+                        <div className="min-w-0">
+                          <h3 className="text-[13px] font-semibold leading-5 text-slate-900">
+                            {feature.title}
+                          </h3>
+                          <p className="mt-0.5 text-xs leading-5 text-ink-500">
+                            {feature.body}
+                          </p>
+                        </div>
                       </li>
                     ))}
                   </ul>
-                  <p className="pricing-inherit mt-5 rounded-xl px-3 py-3 text-xs font-semibold leading-relaxed">
-                    {pkg.scope}
+                  <div className="pt-4">
+                    <Button
+                      asChild
+                      className={cn(
+                        "pricing-cta h-auto w-full whitespace-normal rounded-xl px-4 py-3 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
+                        pkg.recommended ? null : "border",
+                      )}
+                    >
+                      <Link
+                        to={path(BOOKING_ROUTE)}
+                        aria-label={`${t.packages.ctaContext} ${pkg.name}`}
+                        data-plan={pkg.id}
+                      >
+                        <CalendarDays
+                          aria-hidden="true"
+                          className="mr-2 h-4 w-4 shrink-0"
+                        />
+                        {t.packages.ctaLabel}
+                      </Link>
+                    </Button>
+                    <p className="mt-2 text-center text-xs leading-5 text-ink-500">
+                      {t.packages.callNote}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <details className="group/comparison mt-6 rounded-2xl border border-ink-100 bg-white">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 [&::-webkit-details-marker]:hidden">
+                <span className="text-sm font-semibold text-brand-600">
+                  {t.packages.comparison.title}
+                </span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className="h-4 w-4 shrink-0 text-brand-600 transition-transform group-open/comparison:rotate-180 motion-reduce:transition-none"
+                />
+              </summary>
+              <div className="border-t border-ink-100">
+                <div className="px-5 py-4">
+                  <p className="text-sm leading-relaxed text-ink-500">
+                    {t.packages.comparison.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-ink-500">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Check
+                        aria-hidden="true"
+                        className="h-4 w-4 text-emerald-700"
+                      />
+                      {t.packages.comparison.included}
+                    </span>
+                    <span>{t.packages.comparison.optional}</span>
+                    <span>
+                      <span aria-hidden="true">— </span>
+                      {t.packages.comparison.notIncluded}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-xs text-ink-500 lg:hidden">
+                    {t.packages.comparison.scrollHint}
                   </p>
                 </div>
-
-                <div className="mt-5 rounded-2xl border border-ink-100 bg-ink-50/60 p-4">
-                  <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
-                    <Sparkles
-                      aria-hidden="true"
-                      className="pricing-check h-3.5 w-3.5 flex-shrink-0"
-                    />
-                    {t.packages.usageLabel}
-                  </p>
-                  <p className="mt-2 text-xs leading-relaxed text-ink-500">
-                    {pkg.usageNote}
-                  </p>
+                <div
+                  role="region"
+                  aria-label={t.packages.comparison.title}
+                  tabIndex={0}
+                  className="overflow-x-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-500"
+                >
+                  <table className="w-full min-w-[720px] table-fixed border-collapse text-sm">
+                    <caption className="sr-only">
+                      {t.packages.comparison.title}
+                    </caption>
+                    <thead>
+                      <tr className="border-y border-ink-100 bg-ink-50/70">
+                        <th
+                          scope="col"
+                          className="w-[40%] px-5 py-4 text-left font-semibold text-slate-900"
+                        >
+                          {t.packages.comparison.featureLabel}
+                        </th>
+                        {t.packages.items.map((pkg) => (
+                          <th
+                            key={pkg.id}
+                            scope="col"
+                            className={cn(
+                              "px-3 py-4 text-center font-semibold",
+                              pkg.recommended
+                                ? "bg-brand-50 text-brand-700"
+                                : "text-slate-900",
+                            )}
+                          >
+                            {pkg.shortName}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    {t.packages.comparison.groups.map((group) => (
+                      <tbody key={group.title}>
+                        <tr>
+                          <th
+                            scope="rowgroup"
+                            colSpan={4}
+                            className="border-b border-ink-100 bg-ink-50/60 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-ink-500"
+                          >
+                            {group.title}
+                          </th>
+                        </tr>
+                        {group.items.map((feature) => (
+                          <tr
+                            key={feature.id}
+                            className="border-b border-ink-100"
+                          >
+                            <th
+                              scope="row"
+                              className="px-5 py-3 text-left font-normal"
+                            >
+                              <span className="block text-[13px] font-semibold text-slate-900">
+                                {feature.title}
+                              </span>
+                              <span className="mt-1 block text-xs leading-5 text-ink-500">
+                                {feature.body}
+                              </span>
+                            </th>
+                            {t.packages.items.map((pkg) => (
+                              <td
+                                key={pkg.id}
+                                className={cn(
+                                  "px-3 py-3 text-center",
+                                  pkg.recommended && "bg-brand-50/30",
+                                )}
+                              >
+                                <FeatureAvailability
+                                  included={pkg.includedFeatures.includes(
+                                    feature.id,
+                                  )}
+                                  optional={feature.optional}
+                                  labels={t.packages.comparison}
+                                />
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    ))}
+                    <tbody>
+                      <tr>
+                        <th
+                          scope="rowgroup"
+                          colSpan={4}
+                          className="border-b border-ink-100 bg-ink-50/60 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-ink-500"
+                        >
+                          {t.packages.comparison.scopeLabel}
+                        </th>
+                      </tr>
+                      {t.packages.comparison.limits.map((limit) => (
+                        <tr
+                          key={limit.label}
+                          className="border-b border-ink-100"
+                        >
+                          <th
+                            scope="row"
+                            className="px-5 py-3 text-left text-[13px] font-semibold text-slate-900"
+                          >
+                            {limit.label}
+                          </th>
+                          {limit.values.map((value, index) => (
+                            <td
+                              key={t.packages.items[index].id}
+                              className={cn(
+                                "px-3 py-3 text-center text-xs leading-5 text-ink-500",
+                                t.packages.items[index].recommended &&
+                                  "bg-brand-50/30",
+                              )}
+                            >
+                              {value === "—" ? (
+                                <FeatureAvailability
+                                  included={false}
+                                  optional={false}
+                                  labels={t.packages.comparison}
+                                />
+                              ) : (
+                                value
+                              )}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
-                <p className="mt-4 text-xs leading-relaxed text-ink-500">
-                  <span className="font-semibold text-slate-900">
-                    {t.packages.exclusionsLabel}:{" "}
-                  </span>
-                  {pkg.exclusions}
-                </p>
-
-                <details className="mt-5 border-y border-ink-100 py-1">
-                  <summary
-                    aria-label={`${t.packages.detailsLabel}: ${pkg.name}`}
-                    className="cursor-pointer rounded-lg py-3 text-sm font-semibold text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
-                  >
-                    {t.packages.detailsLabel}
-                  </summary>
-                  <div className="space-y-4 pb-4 pt-2">
-                    {pkg.details.map((detail) => (
-                      <div key={detail.title}>
-                        <h3 className="text-sm font-semibold text-slate-900">
-                          {detail.title}
-                        </h3>
-                        <p className="mt-1 text-xs leading-relaxed text-ink-500">
-                          {detail.body}
-                        </p>
-                      </div>
+                <div className="p-5">
+                  <p className="text-xs leading-relaxed text-ink-500">
+                    {t.packages.comparison.scopeNote}
+                  </p>
+                  <div className="mt-5 grid items-start gap-4 lg:grid-cols-3">
+                    {t.packages.items.map((pkg) => (
+                      <details
+                        key={pkg.id}
+                        className="rounded-xl border border-ink-100 p-4"
+                      >
+                        <summary className="cursor-pointer rounded text-sm font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+                          {pkg.shortName}
+                          <span className="mt-1 block text-xs font-normal text-ink-500">
+                            {t.packages.comparison.detailsLabel}
+                          </span>
+                        </summary>
+                        <div className="space-y-4 pt-4">
+                          <p className="text-xs leading-5 text-ink-500">
+                            <strong className="text-slate-900">
+                              {t.packages.idealForLabel}:{" "}
+                            </strong>
+                            {pkg.idealFor}
+                          </p>
+                          {pkg.details.map((detail) => (
+                            <div key={detail.title}>
+                              <h3 className="text-[13px] font-semibold text-slate-900">
+                                {detail.title}
+                              </h3>
+                              <p className="mt-1 text-xs leading-5 text-ink-500">
+                                {detail.body}
+                              </p>
+                            </div>
+                          ))}
+                          <div>
+                            <h3 className="text-[13px] font-semibold text-slate-900">
+                              {t.packages.usageLabel}
+                            </h3>
+                            <p className="mt-1 text-xs leading-5 text-ink-500">
+                              {pkg.usageNote}
+                            </p>
+                          </div>
+                          <div>
+                            <h3 className="text-[13px] font-semibold text-slate-900">
+                              {t.packages.exclusionsLabel}
+                            </h3>
+                            <p className="mt-1 text-xs leading-5 text-ink-500">
+                              {pkg.exclusions}
+                            </p>
+                          </div>
+                        </div>
+                      </details>
                     ))}
                   </div>
-                </details>
-                <div className="mt-auto pt-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
-                    {t.packages.idealForLabel}
-                  </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
-                    {pkg.idealFor}
-                  </p>
+                  <Link
+                    to={path(BOOKING_ROUTE)}
+                    className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg text-sm font-semibold text-brand-600 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
+                  >
+                    <CalendarDays
+                      aria-hidden="true"
+                      className="h-4 w-4 shrink-0"
+                    />
+                    {t.packages.ctaLabel}
+                  </Link>
                 </div>
-              </article>
-            ))}
+              </div>
+            </details>
           </div>
 
           <div className="mt-12 rounded-3xl border border-ink-100 bg-ink-50/60 p-8">

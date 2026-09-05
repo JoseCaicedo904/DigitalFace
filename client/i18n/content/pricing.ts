@@ -1,48 +1,63 @@
 import type { Locale } from "../locale";
 
-/** Commercial terms for the main pricing cards only; both locales share USD prices. */
-const planTerms = {
-  capture: {
-    id: "capture",
-    monthlyFee: 1000,
-    setupFee: 2500,
-    startingAt: false,
-    recommended: false,
-  },
-  ai: {
-    id: "ai",
-    monthlyFee: 2000,
-    setupFee: 5000,
-    startingAt: false,
-    recommended: true,
-  },
-  salesSystem: {
-    id: "sales-system",
-    monthlyFee: 3500,
-    setupFee: 8500,
-    startingAt: true,
-    recommended: false,
-  },
-} as const;
-
 export type PricingPackage = {
   id: string;
-  monthlyFee: number;
-  setupFee: number;
-  startingAt: boolean;
   recommended: boolean;
+  includedFeatures: string[];
   level: string;
   name: string;
+  shortName: string;
   description: string;
+  inherits: string;
   idealFor: string;
-  features: string[];
+  features: { title: string; body: string }[];
   scope: string;
   exclusions: string;
   usageNote: string;
   details: { title: string; body: string }[];
-  ctaLabel: string;
 };
 
+/** Shared inclusion rules for the main cards and comparison, in both locales. */
+const captureFeatures = [
+  "crm",
+  "capture",
+  "response",
+  "followup",
+  "booking",
+  "missedcall",
+  "reporting",
+  "onboarding",
+];
+const aiFeatures = [
+  ...captureFeatures,
+  "assistant",
+  "qualification",
+  "assistedBooking",
+  "handoff",
+  "recovery",
+  "deposits",
+];
+const salesFeatures = [
+  ...aiFeatures,
+  "ads",
+  "landing",
+  "creatives",
+  "optimization",
+  "attribution",
+];
+const planDefinitions = {
+  capture: {
+    id: "capture",
+    recommended: false,
+    includedFeatures: captureFeatures,
+  },
+  ai: { id: "ai", recommended: true, includedFeatures: aiFeatures },
+  salesSystem: {
+    id: "sales-system",
+    recommended: false,
+    includedFeatures: salesFeatures,
+  },
+};
 const en = {
   metadata: {
     title: "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
@@ -78,13 +93,9 @@ const en = {
     intro:
       "Founding pricing is reserved for our first 10 clients and held for 12 months. Every plan includes managed acquisition and CRM. Your advertising budget is always paid by you, directly to the platforms.",
     recommendedLabel: "Recommended",
-    perMonth: "/month",
-    managementLabel: "Monthly DigitalFace management",
-    from: "From",
-    implementationLabel: "One-time implementation",
-    terms: "USD · Month to month · No minimum term",
-    inclusionsLabel: "What is included",
-    detailsLabel: "Implementation, scope & usage",
+    ctaLabel: "Schedule a consultation",
+    ctaContext: "Schedule a consultation about",
+    callNote: "We define your scope and quote on the call.",
     exclusionsLabel: "Not included",
     usageLabel: "Platform & usage",
     idealForLabel: "Best for",
@@ -92,21 +103,38 @@ const en = {
       "No annual contract required. Every plan runs on a month-to-month basis.",
     items: [
       {
-        ...planTerms.capture,
-        level: "Level 1 · Capture & follow up",
+        ...planDefinitions.capture,
+        level: "01 · Capture & follow up",
         name: "DigitalFace Capture",
         description:
-          "Turn the inquiries you already receive into an organized follow-up and booking process.",
+          "Organize incoming inquiries and keep your follow-up moving.",
         idealFor:
           "A practice with steady inquiries and a team ready to handle the conversations.",
         features: [
-          "CRM and shared inbox with clear lead ownership",
-          "Connect up to 2 existing inquiry sources",
-          "Automatic first response by SMS and email",
-          "Follow-up that stops on reply or opt-out",
-          "Booking links, confirmations and reminders",
-          "Missed-call text-back on 1 connected number",
-          "Monthly pipeline report and workflow tuning",
+          {
+            title: "CRM & shared inbox",
+            body: "Keep contacts, conversations and next steps in one place.",
+          },
+          {
+            title: "Lead capture & first response",
+            body: "Connect two inquiry sources and reply automatically by SMS or email.",
+          },
+          {
+            title: "Automated follow-up",
+            body: "Stay in touch until someone replies or opts out.",
+          },
+          {
+            title: "Booking & reminders",
+            body: "Let people choose a time and receive appointment reminders.",
+          },
+          {
+            title: "Missed-call text-back",
+            body: "Send a text when your connected business number misses a call.",
+          },
+          {
+            title: "Reporting & maintenance",
+            body: "See inquiry progress while we monitor and maintain your system.",
+          },
         ],
         scope: "1 location · 1 pipeline · 1 calendar · English or Spanish",
         exclusions:
@@ -131,25 +159,42 @@ const en = {
             body: "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
           },
         ],
-        ctaLabel: "Plan my Capture setup",
+        inherits: "Your follow-up foundation",
+        shortName: "Capture",
       },
       {
-        ...planTerms.ai,
-        level: "Level 2 · Convert inquiries",
+        ...planDefinitions.ai,
+        level: "02 · Respond & book",
         name: "DigitalFace AI",
         description:
-          "Help more inquiries reach a booked appointment with AI-assisted response, qualification and staff handoff.",
+          "Answer questions and help interested people reach a booked appointment.",
         idealFor:
           "A busy practice losing opportunities to slow replies and manual follow-up.",
         features: [
-          "Everything in Capture, with active AI management",
-          "AI answers approved administrative questions",
-          "Qualifies interest and records it in your CRM",
-          "Web chat + WhatsApp or SMS, in English and Spanish",
-          "Checks availability and asks before booking",
-          "Human handoff and a shared conversation history",
-          "Rescheduling assistance and no-show recovery",
-          "Optional booking deposits through your provider",
+          {
+            title: "Bilingual AI assistant",
+            body: "Answer approved questions in English and Spanish through chat and messaging.",
+          },
+          {
+            title: "Lead qualification",
+            body: "Find out what people need before your team takes over.",
+          },
+          {
+            title: "Booking & rescheduling",
+            body: "Check availability and ask for confirmation before changing an appointment.",
+          },
+          {
+            title: "Human handoff",
+            body: "Bring your team into sensitive conversations with the full history.",
+          },
+          {
+            title: "No-show recovery",
+            body: "Follow up with people who missed a visit and invite them back.",
+          },
+          {
+            title: "Optional booking deposits",
+            body: "Let clients secure an appointment through your payment provider.",
+          },
         ],
         scope: "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
         exclusions:
@@ -178,25 +223,42 @@ const en = {
             body: "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
           },
         ],
-        ctaLabel: "Plan my AI conversion system",
+        inherits: "Everything in Capture, plus",
+        shortName: "AI",
       },
       {
-        ...planTerms.salesSystem,
-        level: "Level 3 · Grow with acquisition",
+        ...planDefinitions.salesSystem,
+        level: "03 · Attract & grow",
         name: "The DigitalFace Sales System",
         description:
-          "Connect paid acquisition to AI follow-up and booking, with a defined starting scope and a quote for expansion.",
+          "Connect paid advertising to a managed response and booking process.",
         idealFor:
           "A practice ready to fund advertising and measure the path from inquiry to attended appointment.",
         features: [
-          "DigitalFace AI included in the starting scope",
-          "1 priority ad channel: Meta or Google",
-          "Manage up to $5,000/month in ad spend",
-          "1 campaign landing page for 1 priority offer",
-          "Up to 4 static ad variations per month",
-          "Weekly campaign optimization",
-          "Track inquiry sources, bookings and attendance",
-          "Monthly acquisition and conversion review",
+          {
+            title: "Meta or Google Ads",
+            body: "Manage one priority advertising channel around your offer.",
+          },
+          {
+            title: "Campaign landing page",
+            body: "Give visitors one focused page to understand your offer and inquire.",
+          },
+          {
+            title: "Static ad creatives",
+            body: "Create up to four monthly ad variations using your materials.",
+          },
+          {
+            title: "Weekly optimization",
+            body: "Adjust campaigns based on what is working and what needs attention.",
+          },
+          {
+            title: "Conversion tracking",
+            body: "Connect ad activity to inquiries, bookings and recorded attendance.",
+          },
+          {
+            title: "Monthly growth review",
+            body: "Review acquisition and booking performance together.",
+          },
         ],
         scope: "Starting scope: 1 location · 1 offer · 1 ad channel",
         exclusions:
@@ -205,16 +267,16 @@ const en = {
           "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
         details: [
           {
-            title: "What the starting price covers",
+            title: "What the starting scope covers",
             body: "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
           },
           {
             title: "Advertising budget",
-            body: "Plan on $2,000–$5,000/month in media spend, separate from our fee and paid from your own ad account. The starting fee manages up to $5,000 on one channel. A second channel, TikTok, additional offers or higher spend requires an agreed management-fee adjustment before expansion.",
+            body: "The starting scope manages up to $5,000/month in ad spend on one Meta or Google channel. You pay the advertising platform directly. A second channel, TikTok, additional offers or higher spend requires an agreed scope and management-fee adjustment.",
           },
           {
             title: "How custom scope is priced",
-            body: "Implementation and monthly fees start at the amounts shown for the starting scope above. Additional locations, brands, lead volume, pipelines, integrations, reporting or dedicated infrastructure raise the quote. We agree deliverables, support capacity and fees in writing before work begins.",
+            body: "We define your implementation and monthly management quote on the consultation. Additional locations, brands, inquiry volume, pipelines, integrations, reporting or dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
           },
           {
             title: "Measurement and usage",
@@ -225,9 +287,217 @@ const en = {
             body: "AI answers approved administrative questions and qualifies commercial interest; it does not diagnose, prescribe, decide clinical eligibility or approve sensitive medical or financial decisions. Staff handles sensitive cases. Appointment changes require explicit confirmation and current availability where relevant. Optional deposits use your provider; attendance is not guaranteed.",
           },
         ],
-        ctaLabel: "Scope my Sales System",
+        inherits: "Everything in AI, plus",
+        shortName: "Sales System",
       },
-    ] satisfies PricingPackage[],
+    ],
+    comparison: {
+      title: "Compare plans & scope",
+      description:
+        "See what each plan includes, then schedule a call to agree your scope and quote.",
+      included: "Included",
+      notIncluded: "Not included",
+      optional: "Optional",
+      featureLabel: "Service & what it does",
+      scopeLabel: "Starting scope & limits",
+      detailsLabel: "Implementation & operating details",
+      scrollHint: "Scroll horizontally to see all three plans.",
+      scopeNote:
+        "Adjustments are the total allowance per plan, alongside maintenance of the delivered system. Additional locations, offers, channels, integrations and new workflows are scoped on your call.",
+      groups: [
+        {
+          title: "Follow-up essentials",
+          items: [
+            {
+              id: "crm",
+              title: "CRM & shared inbox",
+              body: "Contacts, conversations and assigned follow-up in one place.",
+              optional: false,
+            },
+            {
+              id: "capture",
+              title: "Lead capture",
+              body: "Connect existing inquiry sources to your contact list.",
+              optional: false,
+            },
+            {
+              id: "response",
+              title: "Automatic first response",
+              body: "Acknowledge new inquiries by SMS or email.",
+              optional: false,
+            },
+            {
+              id: "followup",
+              title: "Automated follow-up",
+              body: "Keep in touch until a reply or opt-out.",
+              optional: false,
+            },
+            {
+              id: "booking",
+              title: "Booking & reminders",
+              body: "Self-booking links, confirmations and visit reminders.",
+              optional: false,
+            },
+            {
+              id: "missedcall",
+              title: "Missed-call text-back",
+              body: "A text response when one connected number misses a call.",
+              optional: false,
+            },
+            {
+              id: "reporting",
+              title: "Reporting & maintenance",
+              body: "Monthly progress review, workflow monitoring and fixes.",
+              optional: false,
+            },
+            {
+              id: "onboarding",
+              title: "Setup, training & hosting",
+              body: "System configuration, testing, team training and standard hosting.",
+              optional: false,
+            },
+          ],
+        },
+        {
+          title: "AI response & booking",
+          items: [
+            {
+              id: "assistant",
+              title: "Bilingual AI assistant",
+              body: "Approved answers through web chat and WhatsApp or SMS.",
+              optional: false,
+            },
+            {
+              id: "qualification",
+              title: "Lead qualification",
+              body: "Record what someone needs so your team can follow through.",
+              optional: false,
+            },
+            {
+              id: "assistedBooking",
+              title: "AI booking & rescheduling",
+              body: "Check availability and request confirmation before booking changes.",
+              optional: false,
+            },
+            {
+              id: "handoff",
+              title: "Human handoff",
+              body: "Pass conversations to your team with the history attached.",
+              optional: false,
+            },
+            {
+              id: "recovery",
+              title: "No-show recovery",
+              body: "Invite people who missed an appointment to reschedule.",
+              optional: false,
+            },
+            {
+              id: "deposits",
+              title: "Appointment deposits",
+              body: "Optional booking commitment through your payment provider.",
+              optional: true,
+            },
+          ],
+        },
+        {
+          title: "Paid acquisition",
+          items: [
+            {
+              id: "ads",
+              title: "Paid advertising",
+              body: "One priority Meta or Google channel in the starting scope.",
+              optional: false,
+            },
+            {
+              id: "landing",
+              title: "Campaign landing page",
+              body: "One focused page for one priority offer.",
+              optional: false,
+            },
+            {
+              id: "creatives",
+              title: "Static ad creatives",
+              body: "Up to four monthly variations using client-supplied materials.",
+              optional: false,
+            },
+            {
+              id: "optimization",
+              title: "Weekly campaign optimization",
+              body: "Adjust campaigns using their performance data.",
+              optional: false,
+            },
+            {
+              id: "attribution",
+              title: "Acquisition & booking review",
+              body: "Connect advertising, inquiries, bookings and staff-recorded attendance.",
+              optional: false,
+            },
+          ],
+        },
+      ],
+      limits: [
+        {
+          label: "Locations",
+          values: ["1", "1", "1 in starting scope"],
+        },
+        {
+          label: "Sales pipelines",
+          values: ["1", "1", "1 in starting scope"],
+        },
+        {
+          label: "Appointment calendars",
+          values: ["1", "Up to 2", "Up to 2"],
+        },
+        {
+          label: "Existing inquiry sources",
+          values: ["Up to 2", "Up to 2", "Up to 2"],
+        },
+        {
+          label: "Languages",
+          values: [
+            "English or Spanish",
+            "English and Spanish",
+            "English and Spanish",
+          ],
+        },
+        {
+          label: "AI conversation channels",
+          values: [
+            "—",
+            "Web chat + WhatsApp or SMS",
+            "Web chat + WhatsApp or SMS",
+          ],
+        },
+        {
+          label: "Approved business knowledge",
+          values: ["—", "1 knowledge base", "1 knowledge base"],
+        },
+        {
+          label: "Paid advertising channels",
+          values: ["—", "—", "1: Meta or Google"],
+        },
+        {
+          label: "Ad budget managed",
+          values: ["—", "—", "Up to $5,000/month; media spend separate"],
+        },
+        {
+          label: "Campaign landing pages",
+          values: ["—", "—", "1 offer · 2 initial revision rounds"],
+        },
+        {
+          label: "Static ad variations",
+          values: ["—", "—", "Up to 4/month"],
+        },
+        {
+          label: "Requested adjustments",
+          values: [
+            "Up to 1 hour/month",
+            "Up to 2 total hours/month",
+            "Up to 3 total hours/month",
+          ],
+        },
+      ],
+    },
   },
   notes: {
     title: "What the price covers, and what it does not",
@@ -385,13 +655,9 @@ const es: typeof en = {
     intro:
       "El precio fundador está reservado para nuestros primeros 10 clientes y congelado por 12 meses. Todos los planes incluyen la gestión de la captación y el CRM. La inversión publicitaria siempre la pagas tú, directamente a las plataformas.",
     recommendedLabel: "Recomendado",
-    perMonth: "/mes",
-    managementLabel: "Gestión mensual de DigitalFace",
-    from: "Desde",
-    implementationLabel: "Implementación única",
-    terms: "USD · Mes a mes · Sin permanencia mínima",
-    inclusionsLabel: "Qué incluye",
-    detailsLabel: "Implementación, alcance y consumo",
+    ctaLabel: "Agenda una consulta",
+    ctaContext: "Agenda una consulta sobre",
+    callNote: "Definimos el alcance y la propuesta en la llamada.",
     exclusionsLabel: "No incluye",
     usageLabel: "Plataforma y consumo",
     idealForLabel: "Ideal para",
@@ -399,21 +665,38 @@ const es: typeof en = {
       "No se requiere contrato anual. Todos los planes funcionan mes a mes.",
     items: [
       {
-        ...planTerms.capture,
-        level: "Nivel 1 · Captura y seguimiento",
+        ...planDefinitions.capture,
+        level: "01 · Captura y seguimiento",
         name: "DigitalFace Capture",
         description:
-          "Convierte las consultas que ya recibes en un proceso ordenado de seguimiento y agendamiento.",
+          "Organiza las consultas que recibes y mantén el seguimiento al día.",
         idealFor:
           "Una clínica con consultas constantes y un equipo disponible para atender las conversaciones.",
         features: [
-          "CRM y bandeja compartida con responsables claros",
-          "Conexión de hasta 2 fuentes de consultas existentes",
-          "Primera respuesta automática por SMS y correo",
-          "Seguimiento que se detiene al responder o darse de baja",
-          "Enlaces de agendamiento, confirmaciones y recordatorios",
-          "SMS tras llamada perdida en 1 número conectado",
-          "Reporte mensual del proceso comercial y ajustes",
+          {
+            title: "CRM y bandeja compartida",
+            body: "Reúne contactos, conversaciones y próximos pasos en un solo lugar.",
+          },
+          {
+            title: "Captura y primera respuesta",
+            body: "Conecta dos fuentes de consultas y responde por SMS o correo.",
+          },
+          {
+            title: "Seguimiento automático",
+            body: "Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes.",
+          },
+          {
+            title: "Agendamiento y recordatorios",
+            body: "Permite elegir un horario y recibir recordatorios de la cita.",
+          },
+          {
+            title: "SMS tras llamadas perdidas",
+            body: "Envía un texto cuando tu número conectado pierde una llamada.",
+          },
+          {
+            title: "Reportes y mantenimiento",
+            body: "Ve el avance de las consultas mientras cuidamos tu sistema.",
+          },
         ],
         scope: "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
         exclusions:
@@ -438,25 +721,42 @@ const es: typeof en = {
             body: "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
           },
         ],
-        ctaLabel: "Planear mi sistema Capture",
+        inherits: "Tu base de seguimiento",
+        shortName: "Capture",
       },
       {
-        ...planTerms.ai,
-        level: "Nivel 2 · Convierte consultas",
+        ...planDefinitions.ai,
+        level: "02 · Responde y agenda",
         name: "DigitalFace AI",
         description:
-          "Ayuda a que más consultas lleguen a una cita con respuesta asistida por IA, calificación del interés y entrega a tu equipo.",
+          "Responde preguntas y ayuda a las personas interesadas a agendar una cita.",
         idealFor:
           "Una clínica que pierde oportunidades por respuestas tardías y seguimiento manual.",
         features: [
-          "Todo lo de Capture, con gestión activa de la IA",
-          "IA que responde preguntas administrativas aprobadas",
-          "Califica el interés y lo registra en tu CRM",
-          "Chat web + WhatsApp o SMS, en inglés y español",
-          "Verifica disponibilidad y pide confirmar antes de agendar",
-          "Entrega a tu equipo e historial de conversaciones",
-          "Asistencia para reprogramar y recuperar inasistencias",
-          "Anticipos opcionales a través de tu proveedor de pagos",
+          {
+            title: "Asistente de IA bilingüe",
+            body: "Responde preguntas aprobadas en inglés y español por chat y mensajería.",
+          },
+          {
+            title: "Calificación del interés",
+            body: "Identifica qué necesita cada persona antes de pasarla a tu equipo.",
+          },
+          {
+            title: "Agendamiento y reprogramación",
+            body: "Verifica disponibilidad y solicita confirmación antes de cambiar una cita.",
+          },
+          {
+            title: "Entrega a tu equipo",
+            body: "Pasa conversaciones sensibles al personal con todo el historial.",
+          },
+          {
+            title: "Recuperación de inasistencias",
+            body: "Contacta a quienes faltaron a su cita e invítalos a reagendar.",
+          },
+          {
+            title: "Anticipos de cita opcionales",
+            body: "Permite reservar con un anticipo a través de tu proveedor de pagos.",
+          },
         ],
         scope:
           "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
@@ -486,25 +786,42 @@ const es: typeof en = {
             body: "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
           },
         ],
-        ctaLabel: "Planear mi conversión con IA",
+        inherits: "Todo lo de Capture, más",
+        shortName: "AI",
       },
       {
-        ...planTerms.salesSystem,
-        level: "Nivel 3 · Crece con captación",
+        ...planDefinitions.salesSystem,
+        level: "03 · Atrae y crece",
         name: "The DigitalFace Sales System",
         description:
-          "Conecta la pauta con el seguimiento por IA y el agendamiento, con un alcance inicial definido y ampliaciones cotizadas.",
+          "Conecta la pauta con un proceso administrado de respuesta y agendamiento.",
         idealFor:
           "Una clínica lista para invertir en pauta y medir desde la consulta hasta la cita atendida.",
         features: [
-          "DigitalFace AI incluido en el alcance inicial",
-          "1 canal publicitario prioritario: Meta o Google",
-          "Gestión de hasta $5,000/mes de pauta",
-          "1 landing de campaña para 1 oferta prioritaria",
-          "Hasta 4 variaciones de anuncios estáticos al mes",
-          "Optimización semanal de campañas",
-          "Medición de fuentes, citas y asistencia",
-          "Revisión mensual de captación y conversión",
+          {
+            title: "Pauta en Meta o Google",
+            body: "Gestiona un canal publicitario prioritario alrededor de tu oferta.",
+          },
+          {
+            title: "Landing de campaña",
+            body: "Presenta tu oferta en una página enfocada en generar consultas.",
+          },
+          {
+            title: "Anuncios estáticos",
+            body: "Crea hasta cuatro variaciones mensuales con tus materiales.",
+          },
+          {
+            title: "Optimización semanal",
+            body: "Ajusta las campañas según lo que funciona y lo que necesita atención.",
+          },
+          {
+            title: "Medición de conversiones",
+            body: "Conecta anuncios con consultas, citas y asistencia registrada.",
+          },
+          {
+            title: "Revisión mensual de crecimiento",
+            body: "Revisa la captación y el agendamiento en una misma conversación.",
+          },
         ],
         scope: "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
         exclusions:
@@ -513,16 +830,16 @@ const es: typeof en = {
           "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
         details: [
           {
-            title: "Qué cubre el precio inicial",
+            title: "Qué cubre el alcance inicial",
             body: "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
           },
           {
             title: "Presupuesto de pauta",
-            body: "Prevé entre $2,000 y $5,000/mes de pauta, aparte de nuestra tarifa y desde tu propia cuenta publicitaria. La tarifa inicial gestiona hasta $5,000 en un canal. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de gestión antes de ampliar.",
+            body: "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
           },
           {
             title: "Cómo cotizamos el alcance a medida",
-            body: "La implementación y la gestión mensual parten de los valores publicados para el alcance inicial descrito. Más sedes, marcas, volumen de consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada aumentan la cotización. Acordamos por escrito entregables, capacidad de soporte y tarifas antes de empezar.",
+            body: "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
           },
           {
             title: "Medición y consumo",
@@ -533,9 +850,213 @@ const es: typeof en = {
             body: "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
           },
         ],
-        ctaLabel: "Cotizar mi Sales System",
+        inherits: "Todo lo de AI, más",
+        shortName: "Sales System",
       },
-    ] satisfies PricingPackage[],
+    ],
+    comparison: {
+      title: "Compara planes y alcance",
+      description:
+        "Revisa qué incluye cada plan y agenda una llamada para definir el alcance y la propuesta.",
+      included: "Incluido",
+      notIncluded: "No incluido",
+      optional: "Opcional",
+      featureLabel: "Servicio y para qué sirve",
+      scopeLabel: "Alcance inicial y límites",
+      detailsLabel: "Implementación y operación",
+      scrollHint: "Desliza horizontalmente para ver los tres planes.",
+      scopeNote:
+        "Los ajustes son el total por plan, además del mantenimiento del sistema entregado. Más sedes, ofertas, canales, integraciones y flujos nuevos se definen en la llamada.",
+      groups: [
+        {
+          title: "Base de seguimiento",
+          items: [
+            {
+              id: "crm",
+              title: "CRM y bandeja compartida",
+              body: "Contactos, conversaciones y responsables en un solo lugar.",
+              optional: false,
+            },
+            {
+              id: "capture",
+              title: "Captura de leads",
+              body: "Conecta tus fuentes de consultas a la lista de contactos.",
+              optional: false,
+            },
+            {
+              id: "response",
+              title: "Primera respuesta automática",
+              body: "Confirma que recibiste la consulta por SMS o correo.",
+              optional: false,
+            },
+            {
+              id: "followup",
+              title: "Seguimiento automático",
+              body: "Mantén el contacto hasta una respuesta o solicitud de baja.",
+              optional: false,
+            },
+            {
+              id: "booking",
+              title: "Agendamiento y recordatorios",
+              body: "Enlaces de reserva, confirmaciones y recordatorios de la visita.",
+              optional: false,
+            },
+            {
+              id: "missedcall",
+              title: "SMS tras llamada perdida",
+              body: "Un mensaje cuando un número conectado pierde una llamada.",
+              optional: false,
+            },
+            {
+              id: "reporting",
+              title: "Reportes y mantenimiento",
+              body: "Revisión mensual del avance, monitoreo y corrección de flujos.",
+              optional: false,
+            },
+            {
+              id: "onboarding",
+              title: "Configuración, capacitación y hosting",
+              body: "Configuración, pruebas, capacitación y hosting estándar.",
+              optional: false,
+            },
+          ],
+        },
+        {
+          title: "Respuesta y agendamiento con IA",
+          items: [
+            {
+              id: "assistant",
+              title: "Asistente de IA bilingüe",
+              body: "Respuestas aprobadas por chat web y WhatsApp o SMS.",
+              optional: false,
+            },
+            {
+              id: "qualification",
+              title: "Calificación del interés",
+              body: "Registra qué necesita cada persona para que tu equipo continúe.",
+              optional: false,
+            },
+            {
+              id: "assistedBooking",
+              title: "Agendamiento asistido por IA",
+              body: "Verifica disponibilidad y pide confirmación para cambios de citas.",
+              optional: false,
+            },
+            {
+              id: "handoff",
+              title: "Entrega al equipo",
+              body: "Pasa conversaciones al personal con su historial.",
+              optional: false,
+            },
+            {
+              id: "recovery",
+              title: "Recuperación de inasistencias",
+              body: "Invita a reagendar a quienes faltaron a una cita.",
+              optional: false,
+            },
+            {
+              id: "deposits",
+              title: "Anticipos de cita",
+              body: "Compromiso de reserva opcional mediante tu proveedor de pagos.",
+              optional: true,
+            },
+          ],
+        },
+        {
+          title: "Captación con pauta",
+          items: [
+            {
+              id: "ads",
+              title: "Gestión de pauta",
+              body: "Un canal prioritario de Meta o Google en el alcance inicial.",
+              optional: false,
+            },
+            {
+              id: "landing",
+              title: "Landing de campaña",
+              body: "Una página enfocada en una oferta prioritaria.",
+              optional: false,
+            },
+            {
+              id: "creatives",
+              title: "Anuncios estáticos",
+              body: "Hasta cuatro variaciones mensuales con materiales del cliente.",
+              optional: false,
+            },
+            {
+              id: "optimization",
+              title: "Optimización semanal",
+              body: "Ajusta las campañas según sus datos de desempeño.",
+              optional: false,
+            },
+            {
+              id: "attribution",
+              title: "Revisión de captación y citas",
+              body: "Conecta pauta, consultas, citas y asistencia registrada por el equipo.",
+              optional: false,
+            },
+          ],
+        },
+      ],
+      limits: [
+        {
+          label: "Sedes",
+          values: ["1", "1", "1 en el alcance inicial"],
+        },
+        {
+          label: "Procesos comerciales",
+          values: ["1", "1", "1 en el alcance inicial"],
+        },
+        {
+          label: "Calendarios de citas",
+          values: ["1", "Hasta 2", "Hasta 2"],
+        },
+        {
+          label: "Fuentes de consultas existentes",
+          values: ["Hasta 2", "Hasta 2", "Hasta 2"],
+        },
+        {
+          label: "Idiomas",
+          values: ["Inglés o español", "Inglés y español", "Inglés y español"],
+        },
+        {
+          label: "Canales de conversación con IA",
+          values: [
+            "—",
+            "Chat web + WhatsApp o SMS",
+            "Chat web + WhatsApp o SMS",
+          ],
+        },
+        {
+          label: "Información aprobada del negocio",
+          values: ["—", "1 base de conocimiento", "1 base de conocimiento"],
+        },
+        {
+          label: "Canales publicitarios",
+          values: ["—", "—", "1: Meta o Google"],
+        },
+        {
+          label: "Presupuesto de pauta gestionado",
+          values: ["—", "—", "Hasta $5,000/mes; pauta aparte"],
+        },
+        {
+          label: "Landings de campaña",
+          values: ["—", "—", "1 oferta · 2 rondas iniciales de revisión"],
+        },
+        {
+          label: "Variaciones de anuncios estáticos",
+          values: ["—", "—", "Hasta 4/mes"],
+        },
+        {
+          label: "Ajustes solicitados",
+          values: [
+            "Hasta 1 hora/mes",
+            "Hasta 2 horas totales/mes",
+            "Hasta 3 horas totales/mes",
+          ],
+        },
+      ],
+    },
   },
   notes: {
     title: "Qué cubre el precio y qué no",
