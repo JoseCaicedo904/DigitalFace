@@ -1,66 +1,48 @@
 import type { Locale } from "../locale";
 
-/**
- * The value an allowance row uses when the package does not include that
- * capability. The card styles the row as "not included" by comparing against
- * this constant, which is why it is the same glyph in both locales.
- */
-export const ALLOWANCE_NOT_INCLUDED = "—";
+/** Commercial terms for the main pricing cards only; both locales share USD prices. */
+const planTerms = {
+  capture: {
+    id: "capture",
+    monthlyFee: 1000,
+    setupFee: 2500,
+    startingAt: false,
+    recommended: false,
+  },
+  ai: {
+    id: "ai",
+    monthlyFee: 2000,
+    setupFee: 5000,
+    startingAt: false,
+    recommended: true,
+  },
+  salesSystem: {
+    id: "sales-system",
+    monthlyFee: 3500,
+    setupFee: 8500,
+    startingAt: true,
+    recommended: false,
+  },
+} as const;
 
-export type PricingAllowance = { label: string; value: string };
-export type PricingScopeGroup = { title: string; items: string[] };
-
-/**
- * One package card.
- *
- * The three cards are deliberately not three sizes of the same list. Capture
- * and AI are fixed-scope plans with a price, a media-budget ceiling and an
- * allowance table; Custom carries no price, no allowance table and no fixed
- * quantities — only examples of what a scoped engagement can include.
- */
 export type PricingPackage = {
+  id: string;
+  monthlyFee: number;
+  setupFee: number;
+  startingAt: boolean;
+  recommended: boolean;
   level: string;
   name: string;
-  /** Rendered as-is: a money amount on the fixed plans, a word on Custom. */
-  price: string;
-  /** Fixed plans append the "/month" suffix; Custom does not. */
-  perMonth: boolean;
-  /** Fixed plans only. */
-  setup: string | null;
-  term: string | null;
-  /** Custom only: replaces the setup/term line under the price. */
-  priceCaption: string | null;
   description: string;
   idealFor: string;
-  /** Empty on Custom, which has no fixed quantities to compare. */
-  allowances: PricingAllowance[];
-  inherits: string | null;
-  scopeLabel: string;
-  /** Custom only: says out loud that the list below is not an inclusion list. */
-  scopeNote: string | null;
-  groups: PricingScopeGroup[];
-  /** Media-budget rules on the fixed plans; what a quote depends on on Custom. */
-  note: { title: string; body: string };
-  /** Small print for usage-based billing. Rendered under the scope list. */
-  footnotes: string[];
+  features: string[];
+  scope: string;
+  exclusions: string;
+  usageNote: string;
+  details: { title: string; body: string }[];
   ctaLabel: string;
 };
 
-/**
- * Package names, prices, media-budget ceilings and usage rates are approved
- * commercial values. They are intentionally identical in both locales.
- *
- * Two rules keep this file honest, and both are commercial, not editorial:
- *
- * 1. The DigitalFace fee never includes the advertising budget. Every fixed
- *    plan states the media budget it manages and says the spend is paid by the
- *    client directly to the platforms.
- * 2. Anything metered — AI usage, email delivery — is described as a balance or
- *    a rate, never as an allowance that could read as unlimited.
- *
- * Capture and AI share the same `allowances` labels, in the same order, so the
- * two cards compare row for row. Custom has none by design.
- */
 const en = {
   metadata: {
     title: "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
@@ -95,185 +77,155 @@ const en = {
     eyebrow: "Founding pricing",
     intro:
       "Founding pricing is reserved for our first 10 clients and held for 12 months. Every plan includes managed acquisition and CRM. Your advertising budget is always paid by you, directly to the platforms.",
-    mostPopular: "Most popular",
+    recommendedLabel: "Recommended",
     perMonth: "/month",
-    allowancesLabel: "What is included",
+    managementLabel: "Monthly DigitalFace management",
+    from: "From",
+    implementationLabel: "One-time implementation",
+    terms: "USD · Month to month · No minimum term",
+    inclusionsLabel: "What is included",
+    detailsLabel: "Implementation, scope & usage",
+    exclusionsLabel: "Not included",
+    usageLabel: "Platform & usage",
     idealForLabel: "Best for",
     noContract:
       "No annual contract required. Every plan runs on a month-to-month basis.",
     items: [
       {
-        level: "Level 1 · Foundation",
+        ...planTerms.capture,
+        level: "Level 1 · Capture & follow up",
         name: "DigitalFace Capture",
-        price: "$890",
-        perMonth: true,
-        setup: "$597 one-time setup",
-        term: "Month to month",
-        priceCaption: null,
         description:
-          "The entry level: one managed paid channel, CRM and automatic first response, so every inquiry is captured and organized.",
+          "Turn the inquiries you already receive into an organized follow-up and booking process.",
         idealFor:
-          "Businesses that need to start generating inquiries and stop losing them.",
-        allowances: [
-          { label: "Paid acquisition", value: "1 priority channel" },
-          { label: "Ad budget managed", value: "Up to $1,000 / mo" },
-          { label: "CRM for lead management", value: "Included" },
-          { label: "Deposit-based booking", value: "Optional" },
-          { label: "Conversion website", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "AI communication", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "Email marketing", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "Static ad creatives", value: ALLOWANCE_NOT_INCLUDED },
+          "A practice with steady inquiries and a team ready to handle the conversations.",
+        features: [
+          "CRM and shared inbox with clear lead ownership",
+          "Connect up to 2 existing inquiry sources",
+          "Automatic first response by SMS and email",
+          "Follow-up that stops on reply or opt-out",
+          "Booking links, confirmations and reminders",
+          "Missed-call text-back on 1 connected number",
+          "Monthly pipeline report and workflow tuning",
         ],
-        inherits: null,
-        scopeLabel: "What we build and run",
-        scopeNote: null,
-        groups: [
+        scope: "1 location · 1 pipeline · 1 calendar · English or Spanish",
+        exclusions:
+          "Paid ads, conversational AI and website builds are not included.",
+        usageNote:
+          "CRM and standard hosting included. Messaging, email and phone charges are separate at provider cost.",
+        details: [
           {
-            title: "Acquisition",
-            items: [
-              "One priority paid channel — Meta, Google or TikTok — set up and managed by us",
-              "Campaign structure, audiences and ongoing optimization",
-              "Conversion tracking and a monthly performance report",
-            ],
+            title: "What implementation covers",
+            body: "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Native connections only; data migration and custom integrations are quoted separately.",
           },
           {
-            title: "CRM and lead capture",
-            items: [
-              "CRM included for lead capture, pipeline management and follow-up",
-              "Every inquiry organized in one pipeline, with its source and stage",
-              "Booking connected to your calendar, with confirmations and reminders",
-              "Optional deposit or booking fee before an appointment is confirmed, taken through your own payment provider",
-            ],
+            title: "What we manage each month",
+            body: "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
           },
           {
-            title: "First response",
-            items: [
-              "Automatic first response by SMS and email",
-              "Basic follow-up that runs until the lead replies",
-            ],
+            title: "Usage and scope",
+            body: "There is no included usage credit. We agree the provider charges and a monthly usage budget before launch; costs are billed directly by providers or itemized at cost. Extra locations, calendars, languages or inquiry sources require a new quote.",
+          },
+          {
+            title: "When to upgrade",
+            body: "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
           },
         ],
-        note: {
-          title: "Advertising budget",
-          body: "Management includes advertising budgets up to $1,000/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
-        },
-        footnotes: [],
-        ctaLabel: "Start with Capture",
+        ctaLabel: "Plan my Capture setup",
       },
       {
-        level: "Level 2 · Growth",
+        ...planTerms.ai,
+        level: "Level 2 · Convert inquiries",
         name: "DigitalFace AI",
-        price: "$1,490",
-        perMonth: true,
-        setup: "$1,097 one-time setup",
-        term: "Month to month",
-        priceCaption: null,
         description:
-          "The complete growth setup: acquisition, CRM, conversion website, AI communication and campaign infrastructure in one managed system.",
+          "Help more inquiries reach a booked appointment with AI-assisted response, qualification and staff handoff.",
         idealFor:
-          "Businesses that want the full acquisition and conversion system running for them.",
-        allowances: [
-          { label: "Paid acquisition", value: "2 priority channels" },
-          { label: "Ad budget managed", value: "Up to $2,500 / mo" },
-          { label: "CRM for lead management", value: "Included" },
-          { label: "Deposit-based booking", value: "Optional" },
-          { label: "Conversion website", value: "Site + 2 forms" },
-          { label: "AI communication", value: "$20 balance / mo" },
-          { label: "Email marketing", value: "Setup + automation" },
-          { label: "Static ad creatives", value: "Up to 4 / month" },
+          "A busy practice losing opportunities to slow replies and manual follow-up.",
+        features: [
+          "Everything in Capture, with active AI management",
+          "AI answers approved administrative questions",
+          "Qualifies interest and records it in your CRM",
+          "Web chat + WhatsApp or SMS, in English and Spanish",
+          "Checks availability and asks before booking",
+          "Human handoff and a shared conversation history",
+          "Rescheduling assistance and no-show recovery",
+          "Optional booking deposits through your provider",
         ],
-        inherits: "Everything in DigitalFace Capture, plus",
-        scopeLabel: "What we build and run",
-        scopeNote: null,
-        groups: [
+        scope: "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
+        exclusions:
+          "Paid ads, website builds, voice AI and bulk email campaigns are not included.",
+        usageNote:
+          "CRM and standard hosting included. AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
+        details: [
           {
-            title: "Conversion website",
-            items: [
-              "Conversion-focused website with up to 2 lead capture forms",
-              "Forms connected directly to your CRM and your pipeline",
-            ],
+            title: "What implementation covers",
+            body: "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
           },
           {
-            title: "AI communication",
-            items: [
-              "AI assistant answering in English and Spanish, with a $20 monthly usage balance included",
-              "Qualifies interest, answers approved questions and guides people toward booking",
-              "Hands the conversation to your team when a person is needed",
-            ],
+            title: "What we manage each month",
+            body: "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
           },
           {
-            title: "Campaign infrastructure",
-            items: [
-              "Two priority paid channels — Meta, Google or TikTok — managed together",
-              "Email marketing campaign setup and automation",
-              "Up to 4 static photo/graphic ad creatives per month",
-              "Automated follow-up and reminders across the journey",
-            ],
+            title: "Appointment boundaries",
+            body: "AI handles administrative questions and commercial interest only. It does not diagnose, prescribe, determine clinical eligibility or approve sensitive medical or financial decisions. Staff retains responsibility. Booking changes require current availability where relevant and explicit confirmation; sensitive requests go to staff.",
+          },
+          {
+            title: "Deposits and usage",
+            body: "An optional, staff-approved deposit workflow can strengthen booking commitment; attendance is not guaranteed. Your payment provider sends funds to your account and bills its fees. AI and communication usage have no included credit; we agree provider charges and a monthly usage budget before launch, with direct billing or itemized pass-through at cost.",
+          },
+          {
+            title: "When to expand",
+            body: "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
           },
         ],
-        note: {
-          title: "Advertising budget",
-          body: "Management includes advertising budgets up to $2,500/month. Media spend is paid directly by you to the advertising platforms. Higher media budgets require an adjusted management fee.",
-        },
-        footnotes: [
-          "AI usage after the included $20 balance is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens.",
-          "Email delivery is billed at $1.35 per 1,000 emails sent.",
-          "Video production is not included. We can connect you with an external production partner when needed.",
-        ],
-        ctaLabel: "Start with AI",
+        ctaLabel: "Plan my AI conversion system",
       },
       {
-        level: "Custom",
+        ...planTerms.salesSystem,
+        level: "Level 3 · Grow with acquisition",
         name: "The DigitalFace Sales System",
-        price: "Custom",
-        perMonth: false,
-        setup: null,
-        term: null,
-        priceCaption: "Scoped and quoted around your requirements",
         description:
-          "For businesses with larger budgets, several locations, advanced acquisition, complex automation or custom integrations.",
-        idealFor: "Businesses whose requirements go beyond a fixed package.",
-        allowances: [],
-        inherits: null,
-        scopeLabel: "Custom scope may include",
-        scopeNote:
-          "These are available capabilities, not a fixed inclusion list. We scope and quote only what your business actually needs.",
-        groups: [
+          "Connect paid acquisition to AI follow-up and booking, with a defined starting scope and a quote for expansion.",
+        idealFor:
+          "A practice ready to fund advertising and measure the path from inquiry to attended appointment.",
+        features: [
+          "DigitalFace AI included in the starting scope",
+          "1 priority ad channel: Meta or Google",
+          "Manage up to $5,000/month in ad spend",
+          "1 campaign landing page for 1 priority offer",
+          "Up to 4 static ad variations per month",
+          "Weekly campaign optimization",
+          "Track inquiry sources, bookings and attendance",
+          "Monthly acquisition and conversion review",
+        ],
+        scope: "Starting scope: 1 location · 1 offer · 1 ad channel",
+        exclusions:
+          "Full websites, professional photo/video, SEO and bulk reactivation are separate projects.",
+        usageNote:
+          "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
+        details: [
           {
-            title: "Acquisition and reach",
-            items: [
-              "Multiple acquisition channels",
-              "Larger advertising budgets",
-              "Additional locations",
-              "Additional languages",
-            ],
+            title: "What the starting price covers",
+            body: "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
           },
           {
-            title: "Systems and automation",
-            items: [
-              "Advanced CRM architecture",
-              "Advanced AI communication",
-              "Custom integrations",
-              "Advanced automations",
-              "Deposit and prepayment rules by service, provider or location",
-              "Custom funnels and landing experiences",
-            ],
+            title: "Advertising budget",
+            body: "Plan on $2,000–$5,000/month in media spend, separate from our fee and paid from your own ad account. The starting fee manages up to $5,000 on one channel. A second channel, TikTok, additional offers or higher spend requires an agreed management-fee adjustment before expansion.",
           },
           {
-            title: "Growth and support",
-            items: [
-              "Database reactivation",
-              "Advanced reporting",
-              "Priority support",
-            ],
+            title: "How custom scope is priced",
+            body: "Implementation and monthly fees start at the amounts shown for the starting scope above. Additional locations, brands, lead volume, pipelines, integrations, reporting or dedicated infrastructure raise the quote. We agree deliverables, support capacity and fees in writing before work begins.",
+          },
+          {
+            title: "Measurement and usage",
+            body: "Reporting connects advertising to inquiries, bookings and staff-recorded attendance; your team must keep outcomes current. No appointment or revenue guarantee. AI and communication usage have no included credit. We agree provider charges and a monthly usage budget before launch, billed directly or itemized at cost.",
+          },
+          {
+            title: "AI and appointment boundaries",
+            body: "AI answers approved administrative questions and qualifies commercial interest; it does not diagnose, prescribe, decide clinical eligibility or approve sensitive medical or financial decisions. Staff handles sensitive cases. Appointment changes require explicit confirmation and current availability where relevant. Optional deposits use your provider; attendance is not guaranteed.",
           },
         ],
-        note: {
-          title: "How the price is built",
-          body: "Your requirements, advertising budget, channels, locations, integrations, AI usage, automation complexity and support level. We map the scope with you before quoting anything.",
-        },
-        footnotes: [],
-        ctaLabel: "Build a custom plan",
+        ctaLabel: "Scope my Sales System",
       },
     ] satisfies PricingPackage[],
   },
@@ -432,188 +384,158 @@ const es: typeof en = {
     eyebrow: "Precio fundador",
     intro:
       "El precio fundador está reservado para nuestros primeros 10 clientes y congelado por 12 meses. Todos los planes incluyen la gestión de la captación y el CRM. La inversión publicitaria siempre la pagas tú, directamente a las plataformas.",
-    mostPopular: "Más elegido",
+    recommendedLabel: "Recomendado",
     perMonth: "/mes",
-    allowancesLabel: "Qué incluye",
+    managementLabel: "Gestión mensual de DigitalFace",
+    from: "Desde",
+    implementationLabel: "Implementación única",
+    terms: "USD · Mes a mes · Sin permanencia mínima",
+    inclusionsLabel: "Qué incluye",
+    detailsLabel: "Implementación, alcance y consumo",
+    exclusionsLabel: "No incluye",
+    usageLabel: "Plataforma y consumo",
     idealForLabel: "Ideal para",
     noContract:
       "No se requiere contrato anual. Todos los planes funcionan mes a mes.",
     items: [
       {
-        level: "Nivel 1 · Base",
+        ...planTerms.capture,
+        level: "Nivel 1 · Captura y seguimiento",
         name: "DigitalFace Capture",
-        price: "$890",
-        perMonth: true,
-        setup: "$597 de implementación única",
-        term: "Mes a mes",
-        priceCaption: null,
         description:
-          "El nivel de entrada: un canal pago administrado, CRM y respuesta automática inmediata, para que ninguna consulta se pierda.",
+          "Convierte las consultas que ya recibes en un proceso ordenado de seguimiento y agendamiento.",
         idealFor:
-          "Negocios que necesitan empezar a generar consultas y dejar de perderlas.",
-        allowances: [
-          { label: "Captación paga", value: "1 canal prioritario" },
-          { label: "Pauta gestionada", value: "Hasta $1,000 / mes" },
-          { label: "CRM para gestión de leads", value: "Incluido" },
-          { label: "Reserva con anticipo", value: "Opcional" },
-          { label: "Sitio web de conversión", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "Comunicación con IA", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "Email marketing", value: ALLOWANCE_NOT_INCLUDED },
-          { label: "Piezas estáticas", value: ALLOWANCE_NOT_INCLUDED },
+          "Una clínica con consultas constantes y un equipo disponible para atender las conversaciones.",
+        features: [
+          "CRM y bandeja compartida con responsables claros",
+          "Conexión de hasta 2 fuentes de consultas existentes",
+          "Primera respuesta automática por SMS y correo",
+          "Seguimiento que se detiene al responder o darse de baja",
+          "Enlaces de agendamiento, confirmaciones y recordatorios",
+          "SMS tras llamada perdida en 1 número conectado",
+          "Reporte mensual del proceso comercial y ajustes",
         ],
-        inherits: null,
-        scopeLabel: "Lo que construimos y operamos",
-        scopeNote: null,
-        groups: [
+        scope: "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
+        exclusions:
+          "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
+        usageNote:
+          "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
+        details: [
           {
-            title: "Captación",
-            items: [
-              "Un canal pago prioritario — Meta, Google o TikTok — configurado y administrado por nosotros",
-              "Estructura de campañas, audiencias y optimización continua",
-              "Medición de conversiones y reporte mensual de desempeño",
-            ],
+            title: "Qué cubre la implementación",
+            body: "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
           },
           {
-            title: "CRM y captura de leads",
-            items: [
-              "CRM incluido para captura de leads, gestión del proceso comercial y seguimiento",
-              "Cada consulta queda organizada en un solo proceso, con su origen y su etapa",
-              "Agendamiento conectado a tu calendario, con confirmaciones y recordatorios",
-              "Anticipo o cuota de reserva opcional antes de confirmar una cita, cobrado con tu propio proveedor de pagos",
-            ],
+            title: "Qué gestionamos cada mes",
+            body: "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
           },
           {
-            title: "Primera respuesta",
-            items: [
-              "Respuesta automática inmediata por SMS y correo",
-              "Seguimiento básico que corre hasta que la persona responde",
-            ],
+            title: "Consumo y alcance",
+            body: "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
+          },
+          {
+            title: "Cuándo subir de nivel",
+            body: "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
           },
         ],
-        note: {
-          title: "Presupuesto publicitario",
-          body: "La gestión incluye presupuestos publicitarios de hasta $1,000 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
-        },
-        footnotes: [],
-        ctaLabel: "Empezar con Capture",
+        ctaLabel: "Planear mi sistema Capture",
       },
       {
-        level: "Nivel 2 · Crecimiento",
+        ...planTerms.ai,
+        level: "Nivel 2 · Convierte consultas",
         name: "DigitalFace AI",
-        price: "$1,490",
-        perMonth: true,
-        setup: "$1,097 de implementación única",
-        term: "Mes a mes",
-        priceCaption: null,
         description:
-          "El sistema de crecimiento completo: captación, CRM, sitio web de conversión, comunicación con IA e infraestructura de campañas en un solo lugar.",
+          "Ayuda a que más consultas lleguen a una cita con respuesta asistida por IA, calificación del interés y entrega a tu equipo.",
         idealFor:
-          "Negocios que quieren todo el sistema de captación y conversión funcionando por ellos.",
-        allowances: [
-          { label: "Captación paga", value: "2 canales prioritarios" },
-          { label: "Pauta gestionada", value: "Hasta $2,500 / mes" },
-          { label: "CRM para gestión de leads", value: "Incluido" },
-          { label: "Reserva con anticipo", value: "Opcional" },
-          { label: "Sitio web de conversión", value: "Sitio + 2 formularios" },
-          { label: "Comunicación con IA", value: "$20 de saldo / mes" },
-          { label: "Email marketing", value: "Setup + automatización" },
-          { label: "Piezas estáticas", value: "Hasta 4 / mes" },
+          "Una clínica que pierde oportunidades por respuestas tardías y seguimiento manual.",
+        features: [
+          "Todo lo de Capture, con gestión activa de la IA",
+          "IA que responde preguntas administrativas aprobadas",
+          "Califica el interés y lo registra en tu CRM",
+          "Chat web + WhatsApp o SMS, en inglés y español",
+          "Verifica disponibilidad y pide confirmar antes de agendar",
+          "Entrega a tu equipo e historial de conversaciones",
+          "Asistencia para reprogramar y recuperar inasistencias",
+          "Anticipos opcionales a través de tu proveedor de pagos",
         ],
-        inherits: "Todo lo de DigitalFace Capture, y además",
-        scopeLabel: "Lo que construimos y operamos",
-        scopeNote: null,
-        groups: [
+        scope:
+          "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
+        exclusions:
+          "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
+        usageNote:
+          "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
+        details: [
           {
-            title: "Sitio web de conversión",
-            items: [
-              "Sitio web enfocado en conversión con hasta 2 formularios de captura",
-              "Formularios conectados directamente a tu CRM y a tu proceso comercial",
-            ],
+            title: "Qué cubre la implementación",
+            body: "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
           },
           {
-            title: "Comunicación con IA",
-            items: [
-              "Asistente con IA que responde en inglés y español, con $20 de saldo de uso incluidos cada mes",
-              "Califica el interés, responde lo que apruebas y guía a la persona hacia el agendamiento",
-              "Entrega la conversación a tu equipo cuando se necesita una persona",
-            ],
+            title: "Qué gestionamos cada mes",
+            body: "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
           },
           {
-            title: "Infraestructura de campañas",
-            items: [
-              "Dos canales pagos prioritarios — Meta, Google o TikTok — administrados en conjunto",
-              "Configuración y automatización de campañas de email marketing",
-              "Hasta 4 piezas publicitarias estáticas (foto o gráfica) al mes",
-              "Seguimiento y recordatorios automáticos a lo largo del recorrido",
-            ],
+            title: "Límites en el agendamiento",
+            body: "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
+          },
+          {
+            title: "Anticipos y consumo",
+            body: "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
+          },
+          {
+            title: "Cuándo ampliar el sistema",
+            body: "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
           },
         ],
-        note: {
-          title: "Presupuesto publicitario",
-          body: "La gestión incluye presupuestos publicitarios de hasta $2,500 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
-        },
-        footnotes: [
-          "El uso de IA por encima del saldo de $20 incluido se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida.",
-          "El envío de correos se factura a $1.35 por cada 1.000 correos enviados.",
-          "La producción de video no está incluida. Podemos conectarte con un aliado de producción externo cuando lo necesites.",
-        ],
-        ctaLabel: "Empezar con AI",
+        ctaLabel: "Planear mi conversión con IA",
       },
       {
-        level: "A medida",
+        ...planTerms.salesSystem,
+        level: "Nivel 3 · Crece con captación",
         name: "The DigitalFace Sales System",
-        price: "A medida",
-        perMonth: false,
-        setup: null,
-        term: null,
-        priceCaption: "Se define y se cotiza según tus requerimientos",
         description:
-          "Para negocios con presupuestos mayores, varias sedes, captación avanzada, automatización compleja o integraciones a medida.",
+          "Conecta la pauta con el seguimiento por IA y el agendamiento, con un alcance inicial definido y ampliaciones cotizadas.",
         idealFor:
-          "Negocios cuyos requerimientos van más allá de un paquete fijo.",
-        allowances: [],
-        inherits: null,
-        scopeLabel: "El alcance a medida puede incluir",
-        scopeNote:
-          "Son capacidades disponibles, no una lista de inclusiones fijas. Definimos y cotizamos únicamente lo que tu negocio realmente necesita.",
-        groups: [
+          "Una clínica lista para invertir en pauta y medir desde la consulta hasta la cita atendida.",
+        features: [
+          "DigitalFace AI incluido en el alcance inicial",
+          "1 canal publicitario prioritario: Meta o Google",
+          "Gestión de hasta $5,000/mes de pauta",
+          "1 landing de campaña para 1 oferta prioritaria",
+          "Hasta 4 variaciones de anuncios estáticos al mes",
+          "Optimización semanal de campañas",
+          "Medición de fuentes, citas y asistencia",
+          "Revisión mensual de captación y conversión",
+        ],
+        scope: "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
+        exclusions:
+          "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
+        usageNote:
+          "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
+        details: [
           {
-            title: "Captación y alcance",
-            items: [
-              "Varios canales de captación",
-              "Presupuestos publicitarios mayores",
-              "Sedes adicionales",
-              "Idiomas adicionales",
-            ],
+            title: "Qué cubre el precio inicial",
+            body: "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
           },
           {
-            title: "Sistemas y automatización",
-            items: [
-              "Arquitectura de CRM avanzada",
-              "Comunicación con IA avanzada",
-              "Integraciones a medida",
-              "Automatizaciones avanzadas",
-              "Reglas de anticipos y prepagos por servicio, profesional o sede",
-              "Embudos y landings a medida",
-            ],
+            title: "Presupuesto de pauta",
+            body: "Prevé entre $2,000 y $5,000/mes de pauta, aparte de nuestra tarifa y desde tu propia cuenta publicitaria. La tarifa inicial gestiona hasta $5,000 en un canal. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de gestión antes de ampliar.",
           },
           {
-            title: "Crecimiento y soporte",
-            items: [
-              "Reactivación de base de datos",
-              "Reportería avanzada",
-              "Soporte prioritario",
-            ],
+            title: "Cómo cotizamos el alcance a medida",
+            body: "La implementación y la gestión mensual parten de los valores publicados para el alcance inicial descrito. Más sedes, marcas, volumen de consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada aumentan la cotización. Acordamos por escrito entregables, capacidad de soporte y tarifas antes de empezar.",
+          },
+          {
+            title: "Medición y consumo",
+            body: "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
+          },
+          {
+            title: "Límites de la IA y de las citas",
+            body: "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
           },
         ],
-        note: {
-          title: "Cómo se construye el precio",
-          body: "Tus requerimientos, el presupuesto publicitario, los canales, las sedes, las integraciones, el uso de IA, la complejidad de las automatizaciones y el nivel de soporte. Definimos el alcance contigo antes de cotizar.",
-        },
-        footnotes: [],
-        ctaLabel: "Arma tu plan a medida",
+        ctaLabel: "Cotizar mi Sales System",
       },
-    ],
+    ] satisfies PricingPackage[],
   },
   notes: {
     title: "Qué cubre el precio y qué no",

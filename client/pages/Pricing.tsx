@@ -3,12 +3,15 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { CtaSection } from "@/sections/CTA";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { ALLOWANCE_NOT_INCLUDED, pricingContent } from "@/i18n/content/pricing";
+import { pricingContent } from "@/i18n/content/pricing";
 import { cn } from "@/lib/utils";
-import { Check, Megaphone, Plus, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, ShieldCheck, Sparkles } from "lucide-react";
 
-/** The middle plan is the highlighted one in every locale. */
-const FEATURED_INDEX = 1;
+const formatUSD = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+}).format;
 
 export default function Pricing() {
   const { locale, path } = useLocale();
@@ -64,204 +67,145 @@ export default function Pricing() {
           </div>
 
           <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-7">
-            {t.packages.items.map((pkg, index) => {
-              const featured = index === FEATURED_INDEX;
-              /**
-               * The fixed plans lead with a media-budget rule, so the note gets
-               * the megaphone. Custom leads with what a quote is built from.
-               */
-              const NoteIcon = pkg.perMonth ? Megaphone : Sparkles;
-              return (
-                <article
-                  key={pkg.name}
-                  data-featured={featured ? "true" : undefined}
-                  className={cn(
-                    "pricing-card relative flex h-full flex-col rounded-3xl bg-white/95 p-7 sm:p-8",
-                    featured ? "border-2" : "border",
-                  )}
+            {t.packages.items.map((pkg) => (
+              <article
+                key={pkg.id}
+                aria-labelledby={`pricing-${pkg.id}`}
+                data-featured={pkg.recommended ? "true" : undefined}
+                className={cn(
+                  "pricing-card relative flex h-full min-w-0 flex-col rounded-3xl bg-white/95 p-7 sm:p-8",
+                  pkg.recommended ? "border-2" : "border",
+                )}
+              >
+                {pkg.recommended ? (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
+                    {t.packages.recommendedLabel}
+                  </span>
+                ) : null}
+                <p className="pricing-level text-[11px] font-semibold uppercase tracking-[0.18em]">
+                  {pkg.level}
+                </p>
+                <h2
+                  id={`pricing-${pkg.id}`}
+                  className="mt-3 text-2xl font-semibold leading-tight text-slate-900 lg:min-h-[62px]"
                 >
-                  {featured ? (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-600 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white shadow-brand-soft">
-                      {t.packages.mostPopular}
-                    </span>
-                  ) : null}
+                  {pkg.name}
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-ink-500 lg:min-h-[88px]">
+                  {pkg.description}
+                </p>
 
-                  <p className="pricing-level text-[11px] font-semibold uppercase tracking-[0.18em]">
-                    {pkg.level}
+                <div className="mt-6">
+                  <p className="text-xs font-medium text-ink-500">
+                    {t.packages.managementLabel}
                   </p>
-                  <h2 className="mt-3 text-2xl font-semibold leading-tight text-slate-900 lg:min-h-[62px]">
-                    {pkg.name}
-                  </h2>
-                  {/*
-                    The min-height is an alignment device, not a layout rule: it
-                    keeps the price block, the CTA and the block below them on
-                    the same baseline for the copy lengths we ship. A longer
-                    translation simply pushes the card taller.
-                  */}
-                  <p className="mt-3 text-sm leading-relaxed text-ink-500 lg:min-h-[88px]">
-                    {pkg.description}
-                  </p>
-
-                  <div className="mt-6 flex items-baseline gap-1.5">
-                    <span className="text-[2.75rem] font-semibold leading-none tracking-tight text-slate-900 tabular-nums">
-                      {pkg.price}
-                    </span>
-                    {pkg.perMonth ? (
+                  <div className="mt-2 flex flex-wrap items-baseline gap-x-1.5 gap-y-2">
+                    {pkg.startingAt ? (
                       <span className="text-sm font-medium text-ink-500">
-                        {t.packages.perMonth}
+                        {t.packages.from}
                       </span>
                     ) : null}
+                    <span className="text-[2.75rem] font-semibold leading-none tracking-tight text-slate-900 tabular-nums">
+                      {formatUSD(pkg.monthlyFee)}
+                    </span>
+                    <span className="text-sm font-medium text-ink-500">
+                      {t.packages.perMonth}
+                    </span>
                   </div>
-                  <p className="mt-2 text-xs text-ink-400">
-                    {pkg.setup && pkg.term
-                      ? `+ ${pkg.setup} · ${pkg.term}`
-                      : pkg.priceCaption}
+                  <p className="mt-4 text-sm font-semibold text-slate-900">
+                    {pkg.startingAt ? `${t.packages.from} ` : ""}
+                    {formatUSD(pkg.setupFee)}
+                    <span className="mt-1 block text-xs font-normal text-ink-500">
+                      {t.packages.implementationLabel}
+                    </span>
                   </p>
+                  <p className="mt-3 text-xs text-ink-500">
+                    {t.packages.terms}
+                  </p>
+                </div>
 
-                  <Button
-                    asChild
-                    className={cn(
-                      // `hover:bg-[…]` only restates the card-driven colour so
-                      // the Button variant's own hover background cannot win
-                      // when the cursor sits directly on the CTA.
-                      "pricing-cta mt-6 h-auto w-full whitespace-normal rounded-xl px-6 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
-                      featured ? null : "border",
-                    )}
+                <Button
+                  asChild
+                  className={cn(
+                    "pricing-cta mt-6 h-auto w-full whitespace-normal rounded-xl px-5 py-4 text-center text-sm font-semibold leading-snug hover:bg-[color:var(--pc-cta-bg)]",
+                    pkg.recommended ? null : "border",
+                  )}
+                >
+                  <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
+                </Button>
+
+                <div className="mt-7">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
+                    {t.packages.inclusionsLabel}
+                  </p>
+                  <ul className="mt-4 space-y-3">
+                    {pkg.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-500"
+                      >
+                        <Check
+                          aria-hidden="true"
+                          className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0"
+                        />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="pricing-inherit mt-5 rounded-xl px-3 py-3 text-xs font-semibold leading-relaxed">
+                    {pkg.scope}
+                  </p>
+                </div>
+
+                <div className="mt-5 rounded-2xl border border-ink-100 bg-ink-50/60 p-4">
+                  <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
+                    <Sparkles
+                      aria-hidden="true"
+                      className="pricing-check h-3.5 w-3.5 flex-shrink-0"
+                    />
+                    {t.packages.usageLabel}
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-500">
+                    {pkg.usageNote}
+                  </p>
+                </div>
+                <p className="mt-4 text-xs leading-relaxed text-ink-500">
+                  <span className="font-semibold text-slate-900">
+                    {t.packages.exclusionsLabel}:{" "}
+                  </span>
+                  {pkg.exclusions}
+                </p>
+
+                <details className="mt-5 border-y border-ink-100 py-1">
+                  <summary
+                    aria-label={`${t.packages.detailsLabel}: ${pkg.name}`}
+                    className="cursor-pointer rounded-lg py-3 text-sm font-semibold text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
                   >
-                    <Link to={path("/contact")}>{pkg.ctaLabel}</Link>
-                  </Button>
-
-                  {/*
-                    Capture and AI carry the same rows in the same order, so the
-                    two fixed plans compare by reading across. Custom has no
-                    fixed quantities, so it has no table — by design.
-                  */}
-                  {pkg.allowances.length > 0 ? (
-                    <div className="mt-7 rounded-2xl border border-ink-100 bg-ink-50/60 p-5">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                        {t.packages.allowancesLabel}
-                      </p>
-                      <dl className="mt-3">
-                        {pkg.allowances.map((allowance) => {
-                          const included =
-                            allowance.value !== ALLOWANCE_NOT_INCLUDED;
-                          return (
-                            <div
-                              key={allowance.label}
-                              className="flex items-baseline justify-between gap-3 border-b border-dashed border-ink-200/70 py-2 last:border-b-0 last:pb-0"
-                            >
-                              <dt
-                                className={cn(
-                                  "text-xs",
-                                  included ? "text-ink-500" : "text-ink-400",
-                                )}
-                              >
-                                {allowance.label}
-                              </dt>
-                              <dd
-                                className={cn(
-                                  "shrink-0 text-right text-[13px] font-semibold tabular-nums",
-                                  included
-                                    ? "pricing-allowance-value"
-                                    : "text-ink-300",
-                                )}
-                              >
-                                {allowance.value}
-                              </dd>
-                            </div>
-                          );
-                        })}
-                      </dl>
-                    </div>
-                  ) : null}
-
-                  {/*
-                    The commercial guardrail: the media-budget ceiling on the
-                    fixed plans, and what a Custom quote is built from. It is a
-                    panel of its own so it cannot be skimmed past.
-                  */}
-                  <div
-                    className={cn(
-                      "rounded-2xl border border-ink-100 bg-ink-50/60 p-5",
-                      // Sits directly under the CTA on Custom, which has no
-                      // allowance table above it.
-                      pkg.allowances.length > 0 ? "mt-4" : "mt-7",
-                    )}
-                  >
-                    <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                      <NoteIcon className="pricing-check h-3.5 w-3.5 flex-shrink-0" />
-                      {pkg.note.title}
-                    </p>
-                    <p className="mt-2 text-[11px] leading-relaxed text-ink-500">
-                      {pkg.note.body}
-                    </p>
-                  </div>
-
-                  <div className="mt-7">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                      {pkg.scopeLabel}
-                    </p>
-
-                    {pkg.scopeNote ? (
-                      <p className="mt-2 text-[11px] leading-relaxed text-ink-400">
-                        {pkg.scopeNote}
-                      </p>
-                    ) : null}
-
-                    {pkg.inherits ? (
-                      <p className="pricing-inherit mt-3 flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold">
-                        <Plus className="h-3.5 w-3.5 flex-shrink-0" />
-                        {pkg.inherits}
-                      </p>
-                    ) : null}
-
-                    <div className="mt-4 space-y-5">
-                      {pkg.groups.map((group) => (
-                        <div key={group.title}>
-                          <p className="pricing-group-title text-[11px] font-semibold uppercase tracking-[0.14em]">
-                            {group.title}
-                          </p>
-                          <ul className="mt-2 space-y-2">
-                            {group.items.map((item) => (
-                              <li
-                                key={item}
-                                className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-500"
-                              >
-                                <Check className="pricing-check mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Usage-based billing, kept small and kept on the card. */}
-                  {pkg.footnotes.length > 0 ? (
-                    <div className="mt-6 space-y-1.5 border-t border-ink-100 pt-4">
-                      {pkg.footnotes.map((footnote) => (
-                        <p
-                          key={footnote}
-                          className="text-[11px] leading-relaxed text-ink-400"
-                        >
-                          {footnote}
+                    {t.packages.detailsLabel}
+                  </summary>
+                  <div className="space-y-4 pb-4 pt-2">
+                    {pkg.details.map((detail) => (
+                      <div key={detail.title}>
+                        <h3 className="text-sm font-semibold text-slate-900">
+                          {detail.title}
+                        </h3>
+                        <p className="mt-1 text-xs leading-relaxed text-ink-500">
+                          {detail.body}
                         </p>
-                      ))}
-                    </div>
-                  ) : null}
-
-                  <div className="mt-auto border-t border-ink-100 pt-5 text-left">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-                      {t.packages.idealForLabel}
-                    </p>
-                    <p className="mt-1.5 text-sm text-ink-500">
-                      {pkg.idealFor}
-                    </p>
+                      </div>
+                    ))}
                   </div>
-                </article>
-              );
-            })}
+                </details>
+                <div className="mt-auto pt-5">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">
+                    {t.packages.idealForLabel}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-500">
+                    {pkg.idealFor}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
 
           <div className="mt-12 rounded-3xl border border-ink-100 bg-ink-50/60 p-8">
