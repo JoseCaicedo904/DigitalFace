@@ -31,3 +31,6 @@ dist-ssr
 .config/
 .env.*
 !.env.example
+
+.vercel
+.env*

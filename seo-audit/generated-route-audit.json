@@ -675,7 +675,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180811,
+    "htmlBytes": 181156,
     "incoming": [
       "/es",
       "/about",
@@ -1381,7 +1381,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182727,
+    "htmlBytes": 183072,
     "incoming": [
       "/",
       "/es/about",
@@ -1760,7 +1760,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 83178,
+    "htmlBytes": 83523,
     "incoming": [
       "/",
       "/es/about",
@@ -2136,7 +2136,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 83873,
+    "htmlBytes": 84218,
     "incoming": [
       "/es",
       "/about",
@@ -2558,7 +2558,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87538,
+    "htmlBytes": 87883,
     "incoming": [
       "/",
       "/about",
@@ -2983,7 +2983,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 89035,
+    "htmlBytes": 89380,
     "incoming": [
       "/es",
       "/es/about",
@@ -3496,7 +3496,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 97339,
+    "htmlBytes": 97684,
     "incoming": [
       "/",
       "/about",
@@ -4006,7 +4006,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 99286,
+    "htmlBytes": 99631,
     "incoming": [
       "/es",
       "/es/about",
@@ -4562,7 +4562,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 119113,
+    "htmlBytes": 119458,
     "incoming": [
       "/",
       "/about",
@@ -5121,7 +5121,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 120930,
+    "htmlBytes": 121275,
     "incoming": [
       "/es",
       "/es/about",
@@ -5484,7 +5484,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 74546,
+    "htmlBytes": 74891,
     "incoming": [
       "/",
       "/about",
@@ -5844,7 +5844,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 75413,
+    "htmlBytes": 75758,
     "incoming": [
       "/es",
       "/es/about",
@@ -6168,7 +6168,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 32997,
+    "htmlBytes": 33342,
     "incoming": [
       "/",
       "/about",
@@ -6495,7 +6495,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 33604,
+    "htmlBytes": 33949,
     "incoming": [
       "/es",
       "/es/about",
@@ -6874,7 +6874,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 38165,
+    "htmlBytes": 38510,
     "incoming": [
       "/",
       "/about",
@@ -7253,7 +7253,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 39538,
+    "htmlBytes": 39883,
     "incoming": [
       "/es",
       "/es/about",
@@ -7640,7 +7640,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36855,
+    "htmlBytes": 37200,
     "incoming": [
       "/",
       "/about",
@@ -8027,7 +8027,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37928,
+    "htmlBytes": 38273,
     "incoming": [
       "/es",
       "/es/about",
@@ -8489,7 +8489,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 200075,
+    "htmlBytes": 200420,
     "incoming": [
       "/",
       "/about",
@@ -8948,7 +8948,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203270,
+    "htmlBytes": 203615,
     "incoming": [
       "/es",
       "/es/about",
@@ -9407,7 +9407,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 201460,
+    "htmlBytes": 201805,
     "incoming": [
       "/",
       "/about",
@@ -9866,7 +9866,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203983,
+    "htmlBytes": 204328,
     "incoming": [
       "/es",
       "/es/about",
@@ -10325,7 +10325,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 199994,
+    "htmlBytes": 200339,
     "incoming": [
       "/",
       "/about",
@@ -10784,7 +10784,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203008,
+    "htmlBytes": 203353,
     "incoming": [
       "/es",
       "/es/about",
