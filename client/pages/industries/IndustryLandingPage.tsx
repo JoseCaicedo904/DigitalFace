@@ -17,12 +17,10 @@ import { SchedulingPanel } from "@/components/booking/SchedulingPanel";
 import { BOOKING_ROUTE, bookingHref } from "@/components/booking/bookingRoute";
 import { StructuredData } from "@/components/seo/StructuredData";
 import {
-  breadcrumbSchema,
   faqSchema,
   organizationSchema,
   websiteSchema,
 } from "@/lib/structuredData";
-import { commonContent } from "@/i18n/content/common";
 // The scheduler preview speaks for itself before any calendar loads, so its own
 // labels are shared with the contact page rather than restated per funnel.
 import { contactContent } from "@/i18n/content/contact";
@@ -251,7 +249,10 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
               <AccordionTrigger className="gap-4 text-left text-sm font-semibold text-slate-900 hover:no-underline">
                 {detail.title}
               </AccordionTrigger>
-              <AccordionContent className="pr-6 text-sm leading-relaxed text-ink-500">
+              <AccordionContent
+                forceMount
+                className="pr-6 text-sm leading-relaxed text-ink-500"
+              >
                 {detail.description}
               </AccordionContent>
             </AccordionItem>
@@ -371,6 +372,11 @@ function ClosedLandingFooter({
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-white">
       <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
+        <p className="mb-8 text-sm leading-relaxed text-white/60">
+          {locale === "es"
+            ? "Atendemos clínicas en Florida, Estados Unidos y Latinoamérica, de forma remota en inglés y español."
+            : "Serving practices in Florida, across the United States and Latin America, remotely in English and Spanish."}
+        </p>
         <div className="grid gap-8 sm:grid-cols-2">
           <div>
             <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
@@ -487,10 +493,6 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
         data={[
           organizationSchema(locale),
           websiteSchema(locale),
-          breadcrumbSchema(locale, [
-            { name: commonContent[locale].nav.home, path: "/" },
-            { name: data.navLabel, path: `/industries/${slug}` },
-          ]),
           faqSchema(data.faq),
         ]}
       />
@@ -954,7 +956,10 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                     <AccordionTrigger className="gap-5 py-6 text-left text-base font-semibold text-slate-900 hover:no-underline">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="max-w-3xl pb-6 pr-8 text-sm leading-relaxed text-ink-500 sm:text-base">
+                    <AccordionContent
+                      forceMount
+                      className="max-w-3xl pb-6 pr-8 text-sm leading-relaxed text-ink-500 sm:text-base"
+                    >
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

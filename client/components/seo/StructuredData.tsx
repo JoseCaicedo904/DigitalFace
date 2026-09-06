@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { SeoContext, serializeJsonLd } from "@/lib/seo";
 
 type StructuredDataProps = {
   /** Stable per schema block, so a route change replaces rather than duplicates it. */
@@ -14,7 +15,9 @@ type StructuredDataProps = {
  * cannot leave its schema behind for the next route.
  */
 export function StructuredData({ id, data }: StructuredDataProps) {
-  const serialized = JSON.stringify(data);
+  const serialized = serializeJsonLd(data);
+  const collector = useContext(SeoContext);
+  if (collector) collector.schemas.set(id, serialized);
 
   useEffect(() => {
     const elementId = `ld-${id}`;

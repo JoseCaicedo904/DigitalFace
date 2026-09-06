@@ -1,219 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://digitalfacemarketing.com/</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/" />
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://digitalface.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/features</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/features" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/features" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/features" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/industries/dental-practices</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/dental-practices" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/dental-practices" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/dental-practices" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/about" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/industries/aesthetic-medicine</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/aesthetic-medicine" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/aesthetic-medicine" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/aesthetic-medicine" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/es/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/about" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/about" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/industries/med-spas</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/med-spas" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/med-spas" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/med-spas" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/features" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/pay-per-service</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/pay-per-service" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/pay-per-service" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/pay-per-service" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/es/features</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/features" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/features" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/features" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/pricing</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/pricing" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/pricing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/pricing" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/pay-per-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/pay-per-service" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/pay-per-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/pay-per-service" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/about</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/about" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/es/pay-per-service</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/pay-per-service" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/pay-per-service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/pay-per-service" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/contact</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/contact" />
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://digitalface.app/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/pricing" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/book</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/book" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/book" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/book" />
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://digitalface.app/es/pricing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/pricing" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/pricing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/pricing" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/privacy</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/privacy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/privacy" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://digitalface.app/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/contact" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/terms</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/terms" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/terms" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://digitalface.app/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/contact" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/contact" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/" />
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://digitalface.app/book</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/book" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/book" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/book" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/features</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/features" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/features" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/features" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/es/book</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/book" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/book" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/book" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/industries/dental-practices</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/dental-practices" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/dental-practices" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/dental-practices" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/privacy" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/industries/aesthetic-medicine</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/aesthetic-medicine" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/aesthetic-medicine" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/aesthetic-medicine" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/es/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/privacy" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/industries/med-spas</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/industries/med-spas" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/industries/med-spas" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/industries/med-spas" />
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://digitalface.app/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/terms" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/terms" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/pay-per-service</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/pay-per-service" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/pay-per-service" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/pay-per-service" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/es/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/terms" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/terms" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/pricing</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/pricing" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/pricing" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/pricing" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/industries/dental-practices</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/dental-practices" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/dental-practices" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/dental-practices" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/about</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/about" />
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://digitalface.app/es/industries/dental-practices</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/dental-practices" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/dental-practices" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/dental-practices" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/contact</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/contact" />
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://digitalface.app/industries/aesthetic-medicine</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/aesthetic-medicine" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/aesthetic-medicine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/aesthetic-medicine" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/book</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/book" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/book" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/book" />
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://digitalface.app/es/industries/aesthetic-medicine</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/aesthetic-medicine" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/aesthetic-medicine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/aesthetic-medicine" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/privacy</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/privacy" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/privacy" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://digitalface.app/industries/med-spas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/med-spas" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/med-spas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/med-spas" />
   </url>
   <url>
-    <loc>https://digitalfacemarketing.com/es/terms</loc>
-    <lastmod>2026-09-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://digitalfacemarketing.com/terms" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://digitalfacemarketing.com/es/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalfacemarketing.com/terms" />
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://digitalface.app/es/industries/med-spas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/med-spas" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/med-spas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/med-spas" />
   </url>
 </urlset>

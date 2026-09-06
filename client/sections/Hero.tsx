@@ -64,9 +64,9 @@ export function Hero({
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster={corporateMedia.hero.poster}
-            aria-label={corporateMedia.hero.alt}
+            aria-hidden="true"
           />
           <div className="absolute inset-0 z-10 bg-black/50" />
         </>

@@ -1,3 +1,4 @@
+import { startTransition } from "react";
 import {
   createContext,
   useCallback,
@@ -50,14 +51,20 @@ const ServiceRequestContext = createContext<ServiceRequestValue | null>(null);
 
 export function ServiceRequestProvider({ children }: { children: ReactNode }) {
   const { locale } = useLocale();
-  // Read once, synchronously, so a selection made on the previous page is
-  // already on screen for the first paint rather than appearing a frame later.
-  const [ids, setIds] = useState<ServiceId[]>(() => readStoredRequest());
+  // Match the build-time HTML first, then restore selections without overwriting storage.
+  const [ids, setIds] = useState<ServiceId[]>([]);
+  const [restored, setRestored] = useState(false);
+  useEffect(() => {
+    startTransition(() => {
+      setIds(readStoredRequest());
+      setRestored(true);
+    });
+  }, []);
   const [isPanelOpen, setPanelOpen] = useState(false);
 
   useEffect(() => {
-    writeStoredRequest(ids);
-  }, [ids]);
+    if (restored) writeStoredRequest(ids);
+  }, [ids, restored]);
 
   const add = useCallback((id: ServiceId) => {
     setIds((current) => addServiceId(current, id));

@@ -8,7 +8,7 @@ const en = {
   },
   hero: {
     eyebrow: "Contact",
-    title: "See the system running.",
+    title: "Talk to DigitalFace about your growth system.",
     description:
       "Send us a short message or book a call. We reply within one business day.",
     note: "Let's talk",
@@ -101,7 +101,7 @@ const es: typeof en = {
   },
   hero: {
     eyebrow: "Contacto",
-    title: "Mira el sistema funcionando.",
+    title: "Hablemos de tu sistema de crecimiento.",
     description:
       "Escríbenos un mensaje corto o agenda una llamada. Respondemos en un día hábil.",
     note: "Hablemos",

@@ -5,6 +5,7 @@ import { useLocale } from "@/i18n/LocaleProvider";
 import { serviceRequestContent } from "@/i18n/content/serviceRequest";
 import type { ServiceId } from "@/data/serviceCatalog";
 import { useServiceRequest } from "./ServiceRequestProvider";
+import { trackEvent } from "@/lib/analytics";
 
 /**
  * The per-card control. One button carries both directions: it adds the service
@@ -50,6 +51,8 @@ export function AddToRequestButton({
         serviceName,
       )}
       onClick={() => {
+        if (!added)
+          trackEvent("service_request_add", { service_id: serviceId });
         setConfirming(!added);
         toggle(serviceId);
       }}

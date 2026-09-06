@@ -1,81 +1,60 @@
-import "./global.css";
-
 import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense, useState, type ComponentType } from "react";
 import MainLayout from "./components/layout/MainLayout";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Features from "./pages/Features";
-import PayPerService from "./pages/PayPerService";
-import Pricing from "./pages/Pricing";
-import Contact from "./pages/Contact";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
+
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { ServiceRequestProvider } from "./components/request/ServiceRequestProvider";
-import { captureAttribution } from "./lib/attribution";
+import { Analytics } from "./components/seo/Analytics";
+import { localePath } from "./i18n/locale";
+import site from "@shared/site.json";
 
-/**
- * Lazy on purpose, not for weight alone: this is the only route that touches
- * GoHighLevel, and importing it lazily is what keeps the booking iframe and
- * LeadConnector's script out of every other page's bundle.
- */
-const BookPage = lazy(() => import("./pages/Book"));
+// The route manifest also drives static HTML, the sitemap and status handling.
+// Route chunks keep the booking widget and unrelated pages off the initial path.
+const pages: Record<string, ComponentType> = {
+  home: lazy(() => import("./pages/Index")),
+  about: lazy(() => import("./pages/About")),
+  features: lazy(() => import("./pages/Features")),
+  "pay-per-service": lazy(() => import("./pages/PayPerService")),
+  pricing: lazy(() => import("./pages/Pricing")),
+  contact: lazy(() => import("./pages/Contact")),
+  book: lazy(() => import("./pages/Book")),
+  privacy: lazy(() => import("./pages/Privacy")),
+  terms: lazy(() => import("./pages/Terms")),
+  dental: lazy(() =>
+    import("./pages/industries/IndustryPages").then((m) => ({
+      default: m.DentalPracticesPage,
+    })),
+  ),
+  aesthetic: lazy(() =>
+    import("./pages/industries/IndustryPages").then((m) => ({
+      default: m.AestheticMedicinePage,
+    })),
+  ),
+  "med-spa": lazy(() =>
+    import("./pages/industries/IndustryPages").then((m) => ({
+      default: m.MedSpasPage,
+    })),
+  ),
+};
 
-const DentalPracticesPage = lazy(() =>
-  import("./pages/industries/IndustryPages").then((module) => ({
-    default: module.DentalPracticesPage,
-  })),
-);
-const AestheticMedicinePage = lazy(() =>
-  import("./pages/industries/IndustryPages").then((module) => ({
-    default: module.AestheticMedicinePage,
-  })),
-);
-const MedSpasPage = lazy(() =>
-  import("./pages/industries/IndustryPages").then((module) => ({
-    default: module.MedSpasPage,
-  })),
-);
-
-const queryClient = new QueryClient();
-
-/**
- * English lives at the root paths and Spanish under /es, using the same slugs.
- * Both trees render the same components; the locale is read from the URL.
- */
-const corporateRoutes = (
-  <>
-    <Route index element={<Index />} />
-    <Route path="about" element={<About />} />
-    <Route path="features" element={<Features />} />
-    <Route path="pay-per-service" element={<PayPerService />} />
-    <Route path="pricing" element={<Pricing />} />
-    <Route path="contact" element={<Contact />} />
-    <Route path="book" element={<BookPage />} />
-    <Route path="privacy" element={<Privacy />} />
-    <Route path="terms" element={<Terms />} />
-  </>
-);
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+/** Router supplied by the entry point: BrowserRouter or build-time StaticRouter. */
+export default function App() {
+  const [queryClient] = useState(() => new QueryClient());
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
         <LocaleProvider>
-          {/* Inside the locale provider: the request stores language-independent
-              service ids and resolves their names against the active locale. */}
           <ServiceRequestProvider>
             <ScrollToTop />
+            <Analytics />
             <Suspense
               fallback={
                 <div className="flex min-h-screen items-center justify-center bg-slate-950 text-sm font-semibold text-white">
@@ -84,50 +63,42 @@ const App = () => (
               }
             >
               <Routes>
-                <Route path="/" element={<MainLayout />}>
-                  {corporateRoutes}
-                </Route>
-                <Route path="/es" element={<MainLayout />}>
-                  {corporateRoutes}
-                </Route>
-
-                <Route
-                  path="/industries/dental-practices"
-                  element={<DentalPracticesPage />}
-                />
-                <Route
-                  path="/industries/aesthetic-medicine"
-                  element={<AestheticMedicinePage />}
-                />
-                <Route path="/industries/med-spas" element={<MedSpasPage />} />
-
-                <Route
-                  path="/es/industries/dental-practices"
-                  element={<DentalPracticesPage />}
-                />
-                <Route
-                  path="/es/industries/aesthetic-medicine"
-                  element={<AestheticMedicinePage />}
-                />
-                <Route
-                  path="/es/industries/med-spas"
-                  element={<MedSpasPage />}
-                />
-
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                {(["en", "es"] as const).map((locale) => (
+                  <Route key={locale} element={<MainLayout />}>
+                    {site.routes
+                      .filter((r) => r.layout === "corporate")
+                      .map((route) => {
+                        const Page = pages[route.id];
+                        return (
+                          <Route
+                            key={route.id}
+                            path={localePath(locale, route.path)}
+                            element={<Page />}
+                          />
+                        );
+                      })}
+                  </Route>
+                ))}
+                {(["en", "es"] as const).flatMap((locale) =>
+                  site.routes
+                    .filter((r) => r.layout === "industry")
+                    .map((route) => {
+                      const Page = pages[route.id];
+                      return (
+                        <Route
+                          key={locale + route.id}
+                          path={localePath(locale, route.path)}
+                          element={<Page />}
+                        />
+                      );
+                    }),
+                )}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </ServiceRequestProvider>
         </LocaleProvider>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-// Read the landing URL's campaign parameters before any internal navigation
-// can strip them, so a lead submitted three pages later still credits the
-// campaign that paid for the visit.
-captureAttribution();
-
-createRoot(document.getElementById("root")!).render(<App />);
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}

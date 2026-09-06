@@ -154,7 +154,10 @@ function ClientAccordionItem({
         </h4>
       </AccordionPrimitive.Header>
 
-      <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down motion-reduce:animate-none">
+      <AccordionPrimitive.Content
+        forceMount
+        className="data-[state=closed]:hidden overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down motion-reduce:animate-none"
+      >
         <div className="px-4 pb-5 sm:px-5 sm:pb-6">
           <div className="border-t border-ink-100 pt-4">
             <p className="text-sm leading-relaxed text-ink-500">

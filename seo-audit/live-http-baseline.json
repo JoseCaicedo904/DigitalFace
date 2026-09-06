@@ -1,0 +1,414 @@
+{
+  "checkedAt": "2026-09-06T02:27:06.333Z",
+  "scope": "Read-only public HTTP baseline; local changes have not been deployed",
+  "records": [
+    {
+      "url": "https://digitalface.app/",
+      "status": 302,
+      "redirect": "/es"
+    },
+    {
+      "url": "https://digitalface.app/es",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/about",
+      "status": 302,
+      "redirect": "/es/about"
+    },
+    {
+      "url": "https://digitalface.app/es/about",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/features",
+      "status": 302,
+      "redirect": "/es/features"
+    },
+    {
+      "url": "https://digitalface.app/es/features",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/pay-per-service",
+      "status": 302,
+      "redirect": "/es/pay-per-service"
+    },
+    {
+      "url": "https://digitalface.app/es/pay-per-service",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/pricing",
+      "status": 302,
+      "redirect": "/es/pricing"
+    },
+    {
+      "url": "https://digitalface.app/es/pricing",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/contact",
+      "status": 302,
+      "redirect": "/es/contact"
+    },
+    {
+      "url": "https://digitalface.app/es/contact",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/book",
+      "status": 302,
+      "redirect": "/es/book"
+    },
+    {
+      "url": "https://digitalface.app/es/book",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/privacy",
+      "status": 302,
+      "redirect": "/es/privacy"
+    },
+    {
+      "url": "https://digitalface.app/es/privacy",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/terms",
+      "status": 302,
+      "redirect": "/es/terms"
+    },
+    {
+      "url": "https://digitalface.app/es/terms",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/industries/dental-practices",
+      "status": 302,
+      "redirect": "/es/industries/dental-practices"
+    },
+    {
+      "url": "https://digitalface.app/es/industries/dental-practices",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/industries/aesthetic-medicine",
+      "status": 302,
+      "redirect": "/es/industries/aesthetic-medicine"
+    },
+    {
+      "url": "https://digitalface.app/es/industries/aesthetic-medicine",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://digitalface.app/industries/med-spas",
+      "status": 302,
+      "redirect": "/es/industries/med-spas"
+    },
+    {
+      "url": "https://digitalface.app/es/industries/med-spas",
+      "status": 200,
+      "redirect": null,
+      "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+      "canonical": "https://digitalfacemarketing.com/",
+      "h1Count": 0,
+      "googleTags": 0
+    },
+    {
+      "url": "https://www.digitalface.app/pricing",
+      "status": 308,
+      "redirect": "https://digitalface.app/pricing"
+    },
+    {
+      "url": "http://digitalface.app/",
+      "status": 308,
+      "redirect": "https://digitalface.app/"
+    },
+    {
+      "url": "https://digitalface.app/robots.txt",
+      "status": 200,
+      "redirect": null,
+      "robots": "User-agent: Googlebot\nAllow: /\n\nUser-agent: Bingbot\nAllow: /\n\nUser-agent: Twitterbot\nAllow: /\n\nUser-agent: facebookexternalhit\nAllow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: https://digitalfacemarketing.com/sitemap.xml\n"
+    },
+    {
+      "url": "https://digitalface.app/sitemap.xml",
+      "status": 200,
+      "redirect": null,
+      "sitemapUrls": [
+        "https://digitalfacemarketing.com/",
+        "https://digitalfacemarketing.com/features",
+        "https://digitalfacemarketing.com/industries/dental-practices",
+        "https://digitalfacemarketing.com/industries/aesthetic-medicine",
+        "https://digitalfacemarketing.com/industries/med-spas",
+        "https://digitalfacemarketing.com/pay-per-service",
+        "https://digitalfacemarketing.com/pricing",
+        "https://digitalfacemarketing.com/about",
+        "https://digitalfacemarketing.com/contact",
+        "https://digitalfacemarketing.com/book",
+        "https://digitalfacemarketing.com/privacy",
+        "https://digitalfacemarketing.com/terms",
+        "https://digitalfacemarketing.com/es",
+        "https://digitalfacemarketing.com/es/features",
+        "https://digitalfacemarketing.com/es/industries/dental-practices",
+        "https://digitalfacemarketing.com/es/industries/aesthetic-medicine",
+        "https://digitalfacemarketing.com/es/industries/med-spas",
+        "https://digitalfacemarketing.com/es/pay-per-service",
+        "https://digitalfacemarketing.com/es/pricing",
+        "https://digitalfacemarketing.com/es/about",
+        "https://digitalfacemarketing.com/es/contact",
+        "https://digitalfacemarketing.com/es/book",
+        "https://digitalfacemarketing.com/es/privacy",
+        "https://digitalfacemarketing.com/es/terms"
+      ]
+    },
+    {
+      "url": "https://digitalface.app/seo-audit-nonexistent-page",
+      "status": 302,
+      "redirect": "/es/seo-audit-nonexistent-page"
+    }
+  ],
+  "crawlerProbe": {
+    "note": "User-agent simulation only; this is not a Google Search Console test",
+    "checkedAt": "2026-09-06T02:32:06.654Z",
+    "records": [
+      {
+        "route": "/",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/about",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/about",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/features",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/features",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/pay-per-service",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/pay-per-service",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/pricing",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/pricing",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/contact",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/contact",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/book",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/book",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/privacy",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/privacy",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/terms",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/terms",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/industries/dental-practices",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/industries/dental-practices",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/industries/aesthetic-medicine",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/industries/aesthetic-medicine",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/industries/med-spas",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/industries/med-spas",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/seo-audit-nonexistent-page",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      },
+      {
+        "route": "/es/seo-audit-nonexistent-page",
+        "status": 200,
+        "title": "Patient Acquisition & Booking Systems for Clinics | DigitalFace Marketing",
+        "canonical": "https://digitalfacemarketing.com/",
+        "h1Count": 0
+      }
+    ]
+  }
+}

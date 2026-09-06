@@ -5,6 +5,14 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  define: {
+    "import.meta.env.VITE_DEPLOY_ENV": JSON.stringify(
+      process.env.VERCEL_ENV ||
+        process.env.CONTEXT ||
+        process.env.DF_DEPLOY_ENV ||
+        "local",
+    ),
+  },
   server: {
     host: "::",
     // 8080 stays the default; PORT lets a second dev server run alongside it.

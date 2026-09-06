@@ -51,7 +51,7 @@ const seeds: WebsiteProjectSeed[] = [
     url: "https://drajennifersinisterra.com/",
     domain: "drajennifersinisterra.com",
     screenshot: {
-      src: screenshotSrc("HomePage Dra. Jennifer.png"),
+      src: screenshotSrc("dra-jennifer-website.webp"),
       width: 1489,
       height: 873,
     },
@@ -63,7 +63,7 @@ const seeds: WebsiteProjectSeed[] = [
     screenshot: {
       /* The file is named for an earlier working title; the capture is the
          Dr. Diego Sinisterra homepage. */
-      src: screenshotSrc("Homepage Dr Diego Quintero.png"),
+      src: screenshotSrc("dr-diego-website.webp"),
       width: 1710,
       height: 873,
     },

@@ -224,8 +224,8 @@ and keyword decisions should reflect that.
 - Descriptions state the outcome, the vertical and the market. They must accurately
   summarize what is visible on the page.
 - Any page that must not be indexed passes `{ noindex: true }`. This matters here:
-  the SPA answers unknown URLs with HTTP 200, so an undirected error page is
-  indexable.
+  direct requests use the generated 404 document with HTTP 404; client navigation
+  also needs a noindex error state without canonical or hreflang links.
 
 ## Structured data
 
@@ -254,8 +254,9 @@ localization, accessibility, or technical SEO.
 
 - Do not change public URLs without adding redirects and updating canonicals,
   internal links, `hreflang` and `scripts/generate-sitemap.mjs`.
-- Routes added to `client/App.tsx` must also be added to the sitemap generator —
-  the generator warns on drift but does not fail the build.
+- Register routes in `shared/site.json` and their component in `client/App.tsx`.
+  The manifest drives both locale trees, static HTML and sitemap generation.
+  `pnpm build:client` fails when the generated SEO surface is incomplete or invalid.
 - One dominant search intent per URL. Do not create separate pages for keyword
   synonyms.
 - Use descriptive internal anchors. Avoid "click here", "read more", "learn more"
@@ -263,3 +264,17 @@ localization, accessibility, or technical SEO.
 - Preserve accessibility semantics, `data-media-slot` / `data-form-slot` hooks, and
   any analytics or CRM integration attributes.
 - Run `pnpm format.fix`, `pnpm typecheck`, `pnpm test` and `pnpm build` after edits.
+
+## Current SEO architecture (2026-09-05)
+
+- Canonical origin is fixed to https://digitalface.app in shared/site.json; do not
+  restore the legacy host or override it with preview environment values.
+- entry-client.tsx hydrates the actual build-time React HTML; entry-server.tsx
+  collects usePageMetadata and structured-data output. Preserve the initial/client
+  contract and transition-based request-storage restoration.
+- Vercel serves clean static routes and a native 404; no universal SPA rewrite.
+- GA4 is opt-in through VITE_GA4_MEASUREMENT_ID, production deployment and exact
+  production hostname. Never send form data to analytics or count failed submissions.
+- Run pnpm build before pnpm test: HTTP and hydration tests inspect dist/spa.
+- Read SEO_IMPLEMENTATION_REPORT.md and SEO_MANUAL_ACTIONS.md for the complete
+  implementation, unresolved commercial-copy issues and external verification tasks.

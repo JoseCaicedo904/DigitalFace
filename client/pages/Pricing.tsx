@@ -69,9 +69,9 @@ export default function Pricing() {
                 key={pillar.title}
                 className="rounded-3xl border border-ink-100 bg-white/90 p-6 text-left shadow-brand-card"
               >
-                <h3 className="text-lg font-semibold text-slate-900">
+                <h2 className="text-lg font-semibold text-slate-900">
                   {pillar.title}
-                </h3>
+                </h2>
                 <p className="mt-3 text-sm text-ink-500">{pillar.copy}</p>
               </div>
             ))}

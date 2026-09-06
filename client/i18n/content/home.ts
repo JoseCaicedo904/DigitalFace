@@ -734,15 +734,16 @@ const selectedWorkEntriesEs: Record<string, SelectedWorkEntry> = {
 };
 const en = {
   metadata: {
-    title: "Connected Customer Acquisition Systems | DigitalFace Marketing",
+    title:
+      "Customer Acquisition & Marketing Automation | DigitalFace Marketing",
     description:
-      "DigitalFace connects advertising, responsive conversations and opportunity management into one customer acquisition system for appointment-driven businesses in the US and Latin America.",
+      "DigitalFace connects advertising, AI follow-up and CRM for appointment-driven businesses in Florida, across the US and Latin America. Explore your growth system.",
   },
   hero: {
     eyebrow: "The DigitalFace growth system",
     title: "Turn more inquiries into appointments and customers.",
     description:
-      "DigitalFace connects advertising, responsive conversations and opportunity management into one system built to move potential customers forward.",
+      "DigitalFace connects advertising, responsive conversations and opportunity management for appointment-driven businesses in Florida, across the US and Latin America.",
     primaryCta: "Build my growth system",
     secondaryCta: "See how the system works",
     stats: [
@@ -1125,15 +1126,15 @@ const en = {
 const es: typeof en = {
   metadata: {
     title:
-      "Sistemas Conectados de Captación de Clientes | DigitalFace Marketing",
+      "Captación de Clientes y Automatización de Marketing | DigitalFace Marketing",
     description:
-      "DigitalFace conecta pauta, conversaciones oportunas y gestión de oportunidades en un solo sistema de captación para negocios que trabajan con citas en Estados Unidos y Latinoamérica.",
+      "DigitalFace conecta pauta, seguimiento con IA y CRM para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica. Conoce tu sistema de crecimiento.",
   },
   hero: {
     eyebrow: "El sistema de crecimiento DigitalFace",
     title: "Convierte más consultas en citas y clientes.",
     description:
-      "DigitalFace conecta la pauta, las conversaciones oportunas y la gestión de oportunidades en un solo sistema diseñado para hacer avanzar a tus clientes potenciales.",
+      "DigitalFace conecta pauta, conversaciones oportunas y gestión de oportunidades para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica.",
     primaryCta: "Construir mi sistema de crecimiento",
     secondaryCta: "Mira cómo funciona",
     stats: [

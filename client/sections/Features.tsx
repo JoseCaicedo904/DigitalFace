@@ -26,6 +26,7 @@ export function FeaturesSection({
   titleAs = "h2",
 }: FeaturesProps) {
   const Title = titleAs;
+  const ItemTitle = titleAs === "h1" ? "h2" : "h3";
 
   return (
     <section className={cn("bg-white py-20 sm:py-24 lg:py-28", className)}>
@@ -54,9 +55,9 @@ export function FeaturesSection({
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 via-brand-600 to-ocean-500 text-white shadow-brand-soft">
                   {feature.icon}
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-slate-900">
+                <ItemTitle className="mt-6 text-xl font-semibold text-slate-900">
                   {feature.title}
-                </h3>
+                </ItemTitle>
                 <p className="mt-3 text-sm text-ink-500">
                   {feature.description}
                 </p>

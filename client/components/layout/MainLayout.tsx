@@ -40,6 +40,8 @@ import {
  * viewport by the scrollbar, so a numeric comparison leaves a band where CSS
  * has already shown the nav but the measurement declines to look at it.
  */
+const useBrowserLayoutEffect =
+  typeof window === "undefined" ? useEffect : useLayoutEffect;
 const DESKTOP_NAV_QUERY = "(min-width: 1024px)";
 /**
  * Slack required before re-expanding a collapsed nav, so a window dragged
@@ -129,11 +131,11 @@ export default function MainLayout() {
 
   // Re-measure after every commit: expanding the nav changes the very width
   // this decision depends on, and only a fresh read can confirm it still fits.
-  useLayoutEffect(() => {
+  useBrowserLayoutEffect(() => {
     evaluateNavFit();
   });
 
-  useLayoutEffect(() => {
+  useBrowserLayoutEffect(() => {
     const row = headerRowRef.current;
     if (!row) return;
 

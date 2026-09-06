@@ -3,11 +3,36 @@
   "framework": "vite",
   "buildCommand": "pnpm build:client",
   "outputDirectory": "dist/spa",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.digitalface.app"
+        }
+      ],
+      "destination": "https://digitalface.app/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }

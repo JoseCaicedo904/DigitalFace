@@ -8,6 +8,7 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -39,7 +40,8 @@
     "middleware.ts",
     "middleware.test.ts",
     "vite.config.ts",
-    "vite.config.server.ts"
+    "vite.config.server.ts",
+    "vite.config.prerender.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }

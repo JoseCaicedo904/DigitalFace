@@ -49,6 +49,7 @@ export function organizationSchema(locale: Locale): JsonLd {
     // stated as a service area rather than fabricated into a PostalAddress.
     areaServed: [
       { "@type": "Country", name: "United States" },
+      { "@type": "State", name: "Florida" },
       { "@type": "Country", name: "Colombia" },
       { "@type": "Place", name: "Latin America" },
     ],
@@ -69,8 +70,8 @@ export function websiteSchema(locale: Locale): JsonLd {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     name: "DigitalFace Marketing",
-    url: absoluteUrl(localePath(locale, "/")),
-    inLanguage: locale,
+    url: `${SITE_URL}/`,
+    inLanguage: ["en", "es"],
     publisher: { "@id": ORGANIZATION_ID },
   };
 }

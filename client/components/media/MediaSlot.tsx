@@ -1,3 +1,4 @@
+import { useLocale } from "@/i18n/LocaleProvider";
 import { cn } from "@/lib/utils";
 import { ImageIcon, PlayCircle, Sparkles } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
@@ -12,6 +13,29 @@ export type MediaSlotSpec = {
   description: string;
   alt: string;
   objectPosition?: string;
+};
+
+const spanishAlt: Record<string, string> = {
+  C01_CORPORATE_HERO: "Sistema de captación y agendamiento de DigitalFace",
+  C02_DENTAL_GATEWAY: "Consultorio odontológico moderno",
+  C03_AESTHETIC_GATEWAY: "Entorno de consulta de medicina estética",
+  C04_MEDSPA_GATEWAY: "Recepción y consulta en un med spa",
+  C05_SYSTEM_OVERVIEW:
+    "Proceso de DigitalFace desde la consulta hasta el agendamiento",
+  D01_DENTAL_HERO:
+    "Odontólogo recibiendo a un paciente sonriente en el consultorio",
+  D02_DENTAL_WORKFLOW:
+    "Equipo odontológico atendiendo a un paciente en su cita",
+  A01_AESTHETIC_HERO:
+    "Médico evaluando el rostro de una paciente en una consulta estética",
+  A02_AESTHETIC_WORKFLOW:
+    "Profesional planificando un tratamiento durante una consulta estética",
+  M01_MEDSPA_HERO: "Clienta recibiendo un tratamiento facial en un med spa",
+  M02_MEDSPA_WORKFLOW: "Terapeutas de un med spa atendiendo a sus clientes",
+  P01_JENNIFER_CASE_STUDY:
+    "Inicio del sitio web de la Dra. Jennifer Sinisterra desarrollado por DigitalFace",
+  P02_DIEGO_CASE_STUDY:
+    "Inicio del sitio web del Dr. Diego Sinisterra desarrollado por DigitalFace",
 };
 
 type MediaSlotProps = {
@@ -29,6 +53,8 @@ export function MediaSlot({
   compact = false,
   overlay,
 }: MediaSlotProps) {
+  const { locale } = useLocale();
+  const alt = locale === "es" ? spanishAlt[spec.id] || spec.alt : spec.alt;
   const prefersReducedMotion = useReducedMotion();
   const [primaryFailed, setPrimaryFailed] = useState(false);
   const [posterFailed, setPosterFailed] = useState(false);
@@ -64,7 +90,7 @@ export function MediaSlot({
           style={{ objectPosition: spec.objectPosition ?? "center" }}
           src={spec.src}
           poster={spec.poster}
-          aria-label={spec.alt}
+          aria-label={alt}
           autoPlay
           muted
           loop
@@ -79,7 +105,7 @@ export function MediaSlot({
           className="absolute inset-0 h-full w-full object-cover"
           style={{ objectPosition: spec.objectPosition ?? "center" }}
           src={imageSrc}
-          alt={spec.alt}
+          alt={alt}
           loading="lazy"
           decoding="async"
           onError={() => {
@@ -103,26 +129,11 @@ export function MediaSlot({
             )}
           </span>
           <p className="relative mt-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-ocean-200">
-            Media slot · {spec.id}
+            DigitalFace
           </p>
-          <p
-            className={cn(
-              "relative mt-2 font-semibold text-white",
-              compact ? "text-sm" : "text-base sm:text-lg",
-            )}
-          >
-            {spec.label}
+          <p className="relative mt-2 text-sm font-semibold text-white">
+            {alt}
           </p>
-          {!compact ? (
-            <>
-              <p className="relative mt-2 max-w-xl text-xs leading-relaxed text-white/55 sm:text-sm">
-                {spec.description}
-              </p>
-              <code className="relative mt-4 max-w-full overflow-hidden text-ellipsis whitespace-nowrap rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-[10px] text-brand-100">
-                {spec.src}
-              </code>
-            </>
-          ) : null}
         </div>
       ) : null}
 

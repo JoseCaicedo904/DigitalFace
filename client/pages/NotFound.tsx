@@ -9,8 +9,7 @@ const NotFound = () => {
   const { locale, path } = useLocale();
   const t = notFoundContent[locale];
 
-  // The SPA answers every unknown URL with a 200, so the noindex directive is the
-  // only thing stopping a mistyped or stale link from being indexed as a real page.
+  // Direct requests receive a real HTTP 404; noindex also covers in-app navigation.
   usePageMetadata(t.metadata.title, t.metadata.description, { noindex: true });
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-20 text-center text-white">
+    <main className="flex min-h-screen items-center justify-center bg-slate-950 px-6 py-20 text-center text-white">
       <div className="max-w-md">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-ocean-200">
           {t.code}
@@ -45,7 +44,7 @@ const NotFound = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

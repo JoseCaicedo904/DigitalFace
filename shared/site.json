@@ -1,0 +1,118 @@
+{
+  "origin": "https://digitalface.app",
+  "routes": [
+    {
+      "id": "home",
+      "path": "/",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "Healthcare marketing and patient acquisition agency",
+      "intent": "Commercial agency discovery"
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "AboutPage",
+      "topic": "DigitalFace company, founders and working method",
+      "intent": "Brand and trust evaluation"
+    },
+    {
+      "id": "features",
+      "path": "/features",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "service": true,
+      "topic": "Integrated patient acquisition, follow-up and booking system",
+      "intent": "Evaluate how the managed system works"
+    },
+    {
+      "id": "pay-per-service",
+      "path": "/pay-per-service",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "CollectionPage",
+      "service": true,
+      "topic": "Individual advertising, AI, CRM, automation and website services",
+      "intent": "Select services for a custom request"
+    },
+    {
+      "id": "pricing",
+      "path": "/pricing",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "DigitalFace packages, scope and pricing",
+      "intent": "Compare plans and costs"
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "ContactPage",
+      "topic": "Contact DigitalFace and request a proposal",
+      "intent": "Submit a qualified business inquiry"
+    },
+    {
+      "id": "book",
+      "path": "/book",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "Book a DigitalFace consultation",
+      "intent": "Schedule a consultation"
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "DigitalFace privacy policy",
+      "intent": "Brand-specific privacy information"
+    },
+    {
+      "id": "terms",
+      "path": "/terms",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "DigitalFace service terms",
+      "intent": "Brand-specific contractual information"
+    },
+    {
+      "id": "dental",
+      "path": "/industries/dental-practices",
+      "layout": "industry",
+      "indexable": true,
+      "type": "WebPage",
+      "service": true,
+      "topic": "Dental marketing and implant, veneer and smile-design inquiries",
+      "intent": "Evaluate dental patient acquisition services"
+    },
+    {
+      "id": "aesthetic",
+      "path": "/industries/aesthetic-medicine",
+      "layout": "industry",
+      "indexable": true,
+      "type": "WebPage",
+      "service": true,
+      "topic": "Aesthetic medicine and plastic surgery consultation marketing",
+      "intent": "Evaluate procedure-inquiry qualification and follow-up"
+    },
+    {
+      "id": "med-spa",
+      "path": "/industries/med-spas",
+      "layout": "industry",
+      "indexable": true,
+      "type": "WebPage",
+      "service": true,
+      "topic": "Med spa marketing, treatment booking and membership reactivation",
+      "intent": "Evaluate med spa acquisition and retention services"
+    }
+  ]
+}

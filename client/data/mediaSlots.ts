@@ -184,21 +184,21 @@ export const clientMedia = {
   jennifer: {
     id: "P01_JENNIFER_CASE_STUDY",
     kind: "image",
-    src: "/media/clients/jennifer-case-study.webp",
-    label: "Dra. Jennifer case-study portrait",
+    src: "/media/Homepages_Websites/dra-jennifer-website.webp",
+    label: "Dra. Jennifer website project",
     description:
-      "Reserved for an approved real portrait or identity-preserving edit supplied by the client.",
-    alt: "Dra. Jennifer Sinisterra in her professional environment",
+      "Existing client website preview, also published in the DigitalFace portfolio.",
+    alt: "Homepage of the Dra. Jennifer Sinisterra website developed by DigitalFace",
     objectPosition: "center 28%",
   },
   diego: {
     id: "P02_DIEGO_CASE_STUDY",
     kind: "image",
-    src: "/media/clients/diego-case-study.webp",
-    label: "Dr. Diego case-study portrait",
+    src: "/media/Homepages_Websites/dr-diego-website.webp",
+    label: "Dr. Diego website project",
     description:
-      "Reserved for an approved real portrait or identity-preserving edit supplied by the client.",
-    alt: "Dr. Diego Sinisterra in his professional environment",
+      "Existing client website preview, also published in the DigitalFace portfolio.",
+    alt: "Homepage of the Dr. Diego Sinisterra website developed by DigitalFace",
     objectPosition: "center 28%",
   },
 } satisfies Record<"jennifer" | "diego", MediaSlotSpec>;

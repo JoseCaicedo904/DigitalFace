@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { getCountryOptions } from "@/data/countries";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -252,6 +253,11 @@ export function LeadForm({
         return;
       }
 
+      trackEvent("generate_lead", {
+        page_source: pageSource,
+        lead_type: selectedServices.length ? "service_request" : "contact",
+        service_count: selectedServices.length,
+      });
       setSubmittedName(values.name.trim().split(/\s+/)[0] ?? "");
       // The request has been sent, so it is no longer pending: leaving it in
       // place would follow the visitor around and prefill the next form.

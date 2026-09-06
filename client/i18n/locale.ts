@@ -28,9 +28,9 @@ export type { Locale } from "./geo";
 /** Only written after the visitor explicitly changes the language. */
 export const LOCALE_STORAGE_KEY = "digitalface.locale";
 
-export const SITE_URL = (
-  import.meta.env?.VITE_SITE_URL || "https://digitalfacemarketing.com"
-).replace(/\/$/, "");
+// Canonicals must not drift with preview URLs or stale environment values.
+import site from "@shared/site.json";
+export const SITE_URL = site.origin;
 
 export const localeMeta: Record<
   Locale,

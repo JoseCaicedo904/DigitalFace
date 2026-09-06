@@ -149,7 +149,7 @@ export function AdFeedPhone({
    * rather than guessed: the card heights change with the breakpoint and with
    * the length of each ad's copy.
    */
-  useLayoutEffect(() => {
+  (typeof window === "undefined" ? useEffect : useLayoutEffect)(() => {
     const column = columnRef.current;
     const adNode = adRef.current;
     const creativeNode = creativeRef.current;

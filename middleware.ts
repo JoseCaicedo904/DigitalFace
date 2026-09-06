@@ -1,3 +1,5 @@
+import site from "./shared/site.json";
+import { stripLocaleFromPathname } from "./client/i18n/geo";
 import {
   LOCALE_COOKIE_KEY,
   LOCALE_COOKIE_MAX_AGE,
@@ -41,6 +43,13 @@ export default function middleware(request: Request): Response | undefined {
   const url = new URL(request.url);
 
   if (shouldSkip(url.pathname)) return undefined;
+  // Unknown pages must reach the host's real 404, not a guessed Spanish URL.
+  if (
+    !site.routes.some(
+      (route) => route.path === stripLocaleFromPathname(url.pathname),
+    )
+  )
+    return undefined;
 
   const country = request.headers.get("x-vercel-ip-country");
   const cookieLocale = readCookieValue(
