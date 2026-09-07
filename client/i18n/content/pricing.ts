@@ -66,9 +66,9 @@ const en = {
   },
   hero: {
     eyebrow: "Plans and pricing",
-    title: "Choose the system that fits where your practice is today",
+    title: "Choose the help your practice needs.",
     description:
-      "Two managed levels with a defined scope, plus a custom option for businesses that need more — with the media-budget rules and the running costs stated up front.",
+      "Organize inquiries, get help answering patients, or add advertising. We set up and manage your system.",
   },
   pillars: [
     {
@@ -91,11 +91,11 @@ const en = {
   packages: {
     eyebrow: "Founding pricing",
     intro:
-      "Founding pricing is reserved for our first 10 clients and held for 12 months. Every plan includes managed acquisition and CRM. Your advertising budget is always paid by you, directly to the platforms.",
+      "Founding pricing is reserved for the first 10 clients and held for 12 months. We confirm your scope and quote on the call. CRM is included in every plan.",
     recommendedLabel: "Recommended",
-    ctaLabel: "Schedule a consultation",
-    ctaContext: "Schedule a consultation about",
-    callNote: "We define your scope and quote on the call.",
+    ctaLabel: "Book a Plan Consultation",
+    ctaContext: "Book a consultation about",
+    callNote: "We confirm the scope and quote on your call.",
     exclusionsLabel: "Not included",
     usageLabel: "Platform & usage",
     idealForLabel: "Best for",
@@ -107,32 +107,32 @@ const en = {
         level: "01 · Capture & follow up",
         name: "DigitalFace Capture",
         description:
-          "Organize incoming inquiries and keep your follow-up moving.",
+          "For teams that get inquiries and need consistent follow-up.",
         idealFor:
           "A practice with steady inquiries and a team ready to handle the conversations.",
         features: [
           {
-            title: "CRM & shared inbox",
-            body: "Keep contacts, conversations and next steps in one place.",
+            title: "Keep every inquiry together",
+            body: "Contacts, messages and next steps in one CRM and shared inbox.",
           },
           {
-            title: "Lead capture & first response",
+            title: "Reply to new inquiries",
             body: "Connect two inquiry sources and reply automatically by SMS or email.",
           },
           {
-            title: "Automated follow-up",
+            title: "Keep the follow-up going",
             body: "Stay in touch until someone replies or opts out.",
           },
           {
-            title: "Booking & reminders",
+            title: "Make booking easier",
             body: "Let people choose a time and receive appointment reminders.",
           },
           {
-            title: "Missed-call text-back",
+            title: "Reply to missed calls",
             body: "Send a text when your connected business number misses a call.",
           },
           {
-            title: "Reporting & maintenance",
+            title: "See progress. We maintain it.",
             body: "See inquiry progress while we monitor and maintain your system.",
           },
         ],
@@ -167,32 +167,32 @@ const en = {
         level: "02 · Respond & book",
         name: "DigitalFace AI",
         description:
-          "Answer questions and help interested people reach a booked appointment.",
+          "For busy teams that need help answering and booking patients.",
         idealFor:
           "A busy practice losing opportunities to slow replies and manual follow-up.",
         features: [
           {
-            title: "Bilingual AI assistant",
-            body: "Answer approved questions in English and Spanish through chat and messaging.",
+            title: "Let AI answer in two languages",
+            body: "Your AI chatbot answers approved questions in English and Spanish.",
           },
           {
-            title: "Lead qualification",
+            title: "Know what patients need",
             body: "Find out what people need before your team takes over.",
           },
           {
-            title: "Booking & rescheduling",
+            title: "Help book and reschedule",
             body: "Check availability and ask for confirmation before changing an appointment.",
           },
           {
-            title: "Human handoff",
+            title: "Let your team step in",
             body: "Bring your team into sensitive conversations with the full history.",
           },
           {
-            title: "No-show recovery",
+            title: "Reconnect after a missed visit",
             body: "Follow up with people who missed a visit and invite them back.",
           },
           {
-            title: "Optional booking deposits",
+            title: "Offer an optional deposit",
             body: "Let clients secure an appointment through your payment provider.",
           },
         ],
@@ -231,32 +231,32 @@ const en = {
         level: "03 · Attract & grow",
         name: "The DigitalFace Sales System",
         description:
-          "Connect paid advertising to a managed response and booking process.",
+          "For practices ready to add advertising and track bookings.",
         idealFor:
           "A practice ready to fund advertising and measure the path from inquiry to attended appointment.",
         features: [
           {
-            title: "Meta or Google Ads",
-            body: "Manage one priority advertising channel around your offer.",
+            title: "Reach patients with ads",
+            body: "We manage one priority channel: Meta Ads or Google Ads.",
           },
           {
-            title: "Campaign landing page",
+            title: "Give your offer its own page",
             body: "Give visitors one focused page to understand your offer and inquire.",
           },
           {
-            title: "Static ad creatives",
+            title: "Keep your ads fresh",
             body: "Create up to four monthly ad variations using your materials.",
           },
           {
-            title: "Weekly optimization",
+            title: "Improve campaigns every week",
             body: "Adjust campaigns based on what is working and what needs attention.",
           },
           {
-            title: "Conversion tracking",
+            title: "See which ads lead to bookings",
             body: "Connect ad activity to inquiries, bookings and recorded attendance.",
           },
           {
-            title: "Monthly growth review",
+            title: "Review results each month",
             body: "Review acquisition and booking performance together.",
           },
         ],
@@ -292,15 +292,14 @@ const en = {
       },
     ],
     comparison: {
-      title: "Compare plans & scope",
-      description:
-        "See what each plan includes, then schedule a call to agree your scope and quote.",
+      title: "See What’s Included",
+      description: "Compare services, limits and setup details.",
       included: "Included",
       notIncluded: "Not included",
       optional: "Optional",
       featureLabel: "Service & what it does",
       scopeLabel: "Starting scope & limits",
-      detailsLabel: "Implementation & operating details",
+      detailsLabel: "Setup & monthly support",
       scrollHint: "Scroll horizontally to see all three plans.",
       scopeNote:
         "Adjustments are the total allowance per plan, alongside maintenance of the delivered system. Additional locations, offers, channels, integrations and new workflows are scoped on your call.",
@@ -500,35 +499,27 @@ const en = {
     },
   },
   notes: {
-    title: "What the price covers, and what it does not",
+    title: "Costs and terms, explained",
     items: [
       {
-        title: "The DigitalFace fee is not your advertising budget",
-        body: "Capture manages advertising budgets up to $1,000/month and DigitalFace AI up to $2,500/month. That spend is paid by you, directly to the advertising platforms, from your own accounts. Higher media budgets require an adjusted management fee. We never hold or mark up your budget, and you keep the accounts, the tracking assets and the audiences.",
+        title: "Advertising budget is separate",
+        body: "Advertising starts with Sales System: one Meta Ads or Google Ads channel and up to $5,000/month in ad spend. You pay the platform directly. More spend, a second channel or TikTok requires an agreed fee adjustment. You keep your accounts, tracking assets and audiences.",
       },
       {
-        title: "AI usage",
-        body: "DigitalFace AI includes a $20 AI usage balance every month. Usage after that balance is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens. AI communication is metered, never unlimited.",
+        title: "AI and communication usage",
+        body: "There is no included usage credit. AI, messaging, email and phone usage are billed directly by providers or itemized at provider cost. We agree provider charges and a monthly usage budget before launch. CRM and standard hosting are included.",
       },
       {
-        title: "Email marketing",
-        body: "The plan covers campaign setup and the automation that runs it. Email delivery is billed at $1.35 per 1,000 emails sent. Additional campaigns, templates or copywriting beyond the agreed scope are quoted separately.",
+        title: "Ads and campaign pages",
+        body: "Sales System includes one campaign landing page with up to 2 initial revision rounds and up to 4 static ad variations per month using your materials. Full websites, professional photo/video, SEO and bulk reactivation are separate projects. Capture and AI exclude ads and website builds; AI also excludes voice AI and bulk email campaigns.",
       },
       {
-        title: "Creative production",
-        body: "Included creatives are static photo and graphic ad pieces: up to 4 per month on DigitalFace AI. Video production is not included. We can connect you with an external production partner when you need it.",
+        title: "Optional appointment deposits",
+        body: "Available from DigitalFace AI. Staff approves which appointments request a deposit and how much. Your payment provider sends funds to your account and bills its fees. DigitalFace connects the booking step and never holds your funds. A deposit does not guarantee attendance.",
       },
       {
-        title: "CRM and website scope",
-        body: "CRM is included for lead capture, pipeline management and follow-up — not for unlimited custom CRM development. The website is a conversion site with up to 2 lead capture forms, not unlimited pages, revisions or custom development. Managed hosting, SSL and backups are included with it.",
-      },
-      {
-        title: "Appointment deposits",
-        body: "Deposit-based confirmation is available from DigitalFace Capture onward, and it is optional: you decide which appointments ask for a deposit, a reservation fee or full prepayment, and how much. The payment is taken through your own payment provider and settles into your account. We connect the booking workflow to it — DigitalFace never holds, processes or marks up your money, and your provider's transaction fees are billed by them.",
-      },
-      {
-        title: "No annual contract",
-        body: "Every plan runs on a month-to-month basis. There is no annual contract and no minimum term, on Capture, on DigitalFace AI and on Custom engagements. The setup fee is charged once, at the start. You can move up a level at any time and we adjust the scope with you.",
+        title: "Month-to-month, with a defined scope",
+        body: "No annual contract or minimum term. Setup is charged once, at the start. Included adjustments total up to 1 hour/month for Capture, 2 for AI and 3 for Sales System, alongside maintenance. New workflows and extra locations, calendars, languages, channels or integrations are quoted separately. You can upgrade at any time.",
       },
     ],
     guarantee:
@@ -536,25 +527,19 @@ const en = {
   },
   includes: {
     eyebrow: "Included in every plan",
-    title: "Everything you need to actually run the system",
-    description:
-      "We install it, train your team and support it, so it keeps working without becoming your problem.",
+    title: "We handle the setup and support.",
+    description: "Your team gets a working system and help using it.",
     investmentLabel: "Included",
     items: [
       {
-        title: "Done-for-you setup",
+        title: "Ready for your team",
         description:
-          "We build, test and launch the system so you go live fast.",
+          "We build, test and launch your system, then train your team.",
       },
       {
-        title: "CRM for lead management",
+        title: "Every inquiry in one place",
         description:
-          "Lead capture, pipeline management and follow-up, included with every plan.",
-      },
-      {
-        title: "Team onboarding",
-        description:
-          "A short training session so your team knows exactly how to use it.",
+          "CRM setup and marketing automation keep contacts and follow-up organized.",
       },
       {
         title: "Bilingual support",
@@ -565,7 +550,7 @@ const en = {
   },
   faq: {
     eyebrow: "Quick answers",
-    title: "What owners ask before booking a call",
+    title: "Ready to get started?",
     items: [
       {
         question: "How fast can we launch?",
@@ -573,35 +558,9 @@ const en = {
           "Most practices go live within 5 to 7 business days once we have your information and access.",
       },
       {
-        question: "Do we sign an annual contract?",
-        answer:
-          "No. Every plan runs on a month-to-month basis, with no annual contract and no minimum term. The setup fee is charged once, at the start.",
-      },
-      {
         question: "Do we need to buy new software?",
         answer:
           "No. The CRM and the system come with the plan. Your team gets a login and a simple daily workflow.",
-      },
-      {
-        question:
-          "Can we ask for a deposit before an appointment is confirmed?",
-        answer:
-          "Yes, from DigitalFace Capture onward. The booking step can request a deposit, a reservation fee or full prepayment, and the appointment is marked confirmed once the payment clears. It is optional and set per service, the payment runs through your own payment provider and lands in your account, and it is a commitment tool rather than a guarantee of attendance.",
-      },
-      {
-        question: "Is the advertising budget included in the price?",
-        answer:
-          "No. The monthly fee is our management fee. You pay the advertising platforms directly, from your own accounts. Capture manages budgets up to $1,000/month and DigitalFace AI up to $2,500/month; higher budgets require an adjusted management fee.",
-      },
-      {
-        question: "How are AI and email usage billed?",
-        answer:
-          "DigitalFace AI includes a $20 AI usage balance each month. Usage beyond it is billed at $0.40 per 1M input tokens and $2.40 per 1M output tokens. Email delivery is billed at $1.35 per 1,000 emails sent.",
-      },
-      {
-        question: "Does the plan include video production?",
-        answer:
-          "No. Included creatives are static photo and graphic ad pieces. When you need video, we can connect you with an external production partner.",
       },
       {
         question: "When does a Custom plan make sense?",
@@ -612,11 +571,11 @@ const en = {
   },
   cta: {
     eyebrow: "What happens next",
-    title: "See the system built around your practice",
+    title: "Find the right plan on a call.",
     description:
-      "Start a conversation and we will recommend the setup that matches your goals.",
-    primaryCta: "Contact us",
-    secondaryCta: "See the system",
+      "Tell us what your practice needs. We’ll recommend a plan and confirm your quote.",
+    primaryCta: "Book a Call",
+    secondaryCta: "See How It Works",
   },
 } satisfies Record<string, unknown>;
 
@@ -628,9 +587,9 @@ const es: typeof en = {
   },
   hero: {
     eyebrow: "Planes y precios",
-    title: "Elige el sistema que corresponde al momento de tu clínica",
+    title: "Elige el apoyo que necesita tu clínica.",
     description:
-      "Dos niveles administrados con alcance definido, más una opción a medida para quienes necesitan más, con las reglas de la pauta y los costos variables claros desde el principio.",
+      "Organiza las consultas, recibe ayuda para responder o suma publicidad. Nosotros configuramos y gestionamos tu sistema.",
   },
   pillars: [
     {
@@ -653,11 +612,11 @@ const es: typeof en = {
   packages: {
     eyebrow: "Precio fundador",
     intro:
-      "El precio fundador está reservado para nuestros primeros 10 clientes y congelado por 12 meses. Todos los planes incluyen la gestión de la captación y el CRM. La inversión publicitaria siempre la pagas tú, directamente a las plataformas.",
+      "El precio fundador está reservado para los primeros 10 clientes y se mantiene durante 12 meses. Confirmamos el alcance y la cotización en la llamada. Todos los planes incluyen CRM.",
     recommendedLabel: "Recomendado",
-    ctaLabel: "Agenda una consulta",
-    ctaContext: "Agenda una consulta sobre",
-    callNote: "Definimos el alcance y la propuesta en la llamada.",
+    ctaLabel: "Agendar una llamada sobre el plan",
+    ctaContext: "Agendar una llamada sobre",
+    callNote: "Confirmamos el alcance y la cotización en la llamada.",
     exclusionsLabel: "No incluye",
     usageLabel: "Plataforma y consumo",
     idealForLabel: "Ideal para",
@@ -669,32 +628,32 @@ const es: typeof en = {
         level: "01 · Captura y seguimiento",
         name: "DigitalFace Capture",
         description:
-          "Organiza las consultas que recibes y mantén el seguimiento al día.",
+          "Para equipos que reciben consultas y necesitan dar seguimiento.",
         idealFor:
           "Una clínica con consultas constantes y un equipo disponible para atender las conversaciones.",
         features: [
           {
-            title: "CRM y bandeja compartida",
-            body: "Reúne contactos, conversaciones y próximos pasos en un solo lugar.",
+            title: "Reúne todas las consultas",
+            body: "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida.",
           },
           {
-            title: "Captura y primera respuesta",
+            title: "Responde al primer contacto",
             body: "Conecta dos fuentes de consultas y responde por SMS o correo.",
           },
           {
-            title: "Seguimiento automático",
+            title: "Mantén el seguimiento",
             body: "Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes.",
           },
           {
-            title: "Agendamiento y recordatorios",
+            title: "Facilita el agendamiento",
             body: "Permite elegir un horario y recibir recordatorios de la cita.",
           },
           {
-            title: "SMS tras llamadas perdidas",
+            title: "Responde a llamadas perdidas",
             body: "Envía un texto cuando tu número conectado pierde una llamada.",
           },
           {
-            title: "Reportes y mantenimiento",
+            title: "Ve el avance. Nosotros lo mantenemos.",
             body: "Ve el avance de las consultas mientras cuidamos tu sistema.",
           },
         ],
@@ -729,32 +688,32 @@ const es: typeof en = {
         level: "02 · Responde y agenda",
         name: "DigitalFace AI",
         description:
-          "Responde preguntas y ayuda a las personas interesadas a agendar una cita.",
+          "Para equipos que necesitan ayuda para responder y agendar.",
         idealFor:
           "Una clínica que pierde oportunidades por respuestas tardías y seguimiento manual.",
         features: [
           {
-            title: "Asistente de IA bilingüe",
-            body: "Responde preguntas aprobadas en inglés y español por chat y mensajería.",
+            title: "Deja que la IA responda en dos idiomas",
+            body: "Tu chatbot de IA responde preguntas aprobadas en inglés y español.",
           },
           {
-            title: "Calificación del interés",
+            title: "Conoce qué necesita el paciente",
             body: "Identifica qué necesita cada persona antes de pasarla a tu equipo.",
           },
           {
-            title: "Agendamiento y reprogramación",
+            title: "Ayuda a agendar y reprogramar",
             body: "Verifica disponibilidad y solicita confirmación antes de cambiar una cita.",
           },
           {
-            title: "Entrega a tu equipo",
+            title: "Deja que tu equipo intervenga",
             body: "Pasa conversaciones sensibles al personal con todo el historial.",
           },
           {
-            title: "Recuperación de inasistencias",
+            title: "Retoma las citas perdidas",
             body: "Contacta a quienes faltaron a su cita e invítalos a reagendar.",
           },
           {
-            title: "Anticipos de cita opcionales",
+            title: "Ofrece un anticipo opcional",
             body: "Permite reservar con un anticipo a través de tu proveedor de pagos.",
           },
         ],
@@ -794,32 +753,32 @@ const es: typeof en = {
         level: "03 · Atrae y crece",
         name: "The DigitalFace Sales System",
         description:
-          "Conecta la pauta con un proceso administrado de respuesta y agendamiento.",
+          "Para clínicas listas para sumar publicidad y seguir las citas.",
         idealFor:
           "Una clínica lista para invertir en pauta y medir desde la consulta hasta la cita atendida.",
         features: [
           {
-            title: "Pauta en Meta o Google",
-            body: "Gestiona un canal publicitario prioritario alrededor de tu oferta.",
+            title: "Llega a pacientes con anuncios",
+            body: "Gestionamos un canal prioritario: Meta Ads o Google Ads.",
           },
           {
-            title: "Landing de campaña",
+            title: "Dale a tu oferta su propia página",
             body: "Presenta tu oferta en una página enfocada en generar consultas.",
           },
           {
-            title: "Anuncios estáticos",
+            title: "Renueva tus anuncios",
             body: "Crea hasta cuatro variaciones mensuales con tus materiales.",
           },
           {
-            title: "Optimización semanal",
+            title: "Mejora las campañas cada semana",
             body: "Ajusta las campañas según lo que funciona y lo que necesita atención.",
           },
           {
-            title: "Medición de conversiones",
+            title: "Ve qué anuncios generan citas",
             body: "Conecta anuncios con consultas, citas y asistencia registrada.",
           },
           {
-            title: "Revisión mensual de crecimiento",
+            title: "Revisa los resultados cada mes",
             body: "Revisa la captación y el agendamiento en una misma conversación.",
           },
         ],
@@ -855,15 +814,14 @@ const es: typeof en = {
       },
     ],
     comparison: {
-      title: "Compara planes y alcance",
-      description:
-        "Revisa qué incluye cada plan y agenda una llamada para definir el alcance y la propuesta.",
+      title: "Ver qué incluye cada plan",
+      description: "Compara servicios, límites y detalles de implementación.",
       included: "Incluido",
       notIncluded: "No incluido",
       optional: "Opcional",
       featureLabel: "Servicio y para qué sirve",
       scopeLabel: "Alcance inicial y límites",
-      detailsLabel: "Implementación y operación",
+      detailsLabel: "Implementación y soporte mensual",
       scrollHint: "Desliza horizontalmente para ver los tres planes.",
       scopeNote:
         "Los ajustes son el total por plan, además del mantenimiento del sistema entregado. Más sedes, ofertas, canales, integraciones y flujos nuevos se definen en la llamada.",
@@ -1059,35 +1017,27 @@ const es: typeof en = {
     },
   },
   notes: {
-    title: "Qué cubre el precio y qué no",
+    title: "Costos y condiciones claros",
     items: [
       {
-        title: "La tarifa de DigitalFace no es tu inversión publicitaria",
-        body: "Capture gestiona presupuestos publicitarios de hasta $1,000 al mes y DigitalFace AI hasta $2,500 al mes. Esa inversión se paga directamente a las plataformas, desde tus propias cuentas. Presupuestos superiores requieren un ajuste en la tarifa de gestión. Nunca retenemos ni cobramos comisión sobre tu inversión, y tú conservas las cuentas, los píxeles y las audiencias.",
+        title: "La pauta se paga aparte",
+        body: "La publicidad empieza con Sales System: un canal de Meta Ads o Google Ads y hasta $5,000 al mes de pauta gestionada. Pagas directamente a la plataforma. Más presupuesto, un segundo canal o TikTok requieren un ajuste de tarifa acordado. Conservas tus cuentas, activos de seguimiento y audiencias.",
       },
       {
-        title: "Uso de IA",
-        body: "DigitalFace AI incluye $20 de saldo de uso de IA cada mes. El consumo por encima de ese saldo se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida. La comunicación con IA es medida, nunca ilimitada.",
+        title: "Uso de IA y comunicaciones",
+        body: "No hay saldo de consumo incluido. La IA, los mensajes, el correo y la telefonía se facturan directamente por el proveedor o se detallan a costo de proveedor. Antes de activar el sistema acordamos las tarifas y un presupuesto mensual de consumo. El CRM y el alojamiento estándar están incluidos.",
       },
       {
-        title: "Email marketing",
-        body: "El plan cubre la configuración de las campañas y la automatización que las opera. El envío de correos se factura a $1.35 por cada 1.000 correos enviados. Campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+        title: "Anuncios y páginas de campaña",
+        body: "Sales System incluye una página de campaña con hasta 2 rondas iniciales de revisión y hasta 4 variaciones de anuncios estáticos al mes con tus materiales. Los sitios completos, la foto y el video profesionales, el SEO y la reactivación masiva se cotizan aparte. Capture y AI no incluyen anuncios ni sitios web; AI tampoco incluye IA de voz ni campañas masivas de correo.",
       },
       {
-        title: "Producción creativa",
-        body: "Las piezas incluidas son estáticas, de foto o gráfica: hasta 4 al mes en DigitalFace AI. La producción de video no está incluida. Podemos conectarte con un aliado de producción externo cuando lo necesites.",
+        title: "Anticipos opcionales para citas",
+        body: "Disponibles desde DigitalFace AI. Tu personal aprueba qué citas requieren anticipo y de cuánto. Tu proveedor de pagos envía el dinero a tu cuenta y cobra sus comisiones. DigitalFace conecta el agendamiento y nunca retiene tus fondos. Un anticipo no garantiza la asistencia.",
       },
       {
-        title: "Alcance del CRM y del sitio web",
-        body: "El CRM está incluido para captura de leads, gestión del proceso comercial y seguimiento, no para desarrollo de CRM a medida sin límite. El sitio web es un sitio de conversión con hasta 2 formularios de captura, no páginas, ajustes o desarrollo ilimitados. El hosting administrado, el SSL y los respaldos van incluidos con él.",
-      },
-      {
-        title: "Anticipos de cita",
-        body: "La confirmación con anticipo está disponible desde DigitalFace Capture y es opcional: tú decides qué citas piden anticipo, cuota de reserva o pago completo, y de cuánto. El cobro se hace con tu propio proveedor de pagos y el dinero llega a tu cuenta. Nosotros conectamos el agendamiento con él: DigitalFace nunca retiene, procesa ni marca tu dinero, y las comisiones de tu proveedor las cobra tu proveedor.",
-      },
-      {
-        title: "Sin contrato anual",
-        body: "Todos los planes funcionan mes a mes. No hay contrato anual ni permanencia mínima, ni en Capture, ni en DigitalFace AI, ni en los proyectos a medida. La implementación se cobra una sola vez, al inicio. Puedes subir de nivel cuando quieras y ajustamos el alcance contigo.",
+        title: "Mes a mes, con un alcance definido",
+        body: "Sin contrato anual ni permanencia mínima. La implementación se cobra una vez, al inicio. Además del mantenimiento, se incluyen hasta 1 hora mensual de ajustes en Capture, 2 en AI y 3 en Sales System. Los procesos nuevos, sedes, calendarios, idiomas, canales o conexiones adicionales se cotizan aparte. Puedes subir de nivel cuando quieras.",
       },
     ],
     guarantee:
@@ -1095,25 +1045,19 @@ const es: typeof en = {
   },
   includes: {
     eyebrow: "Incluido en todos los planes",
-    title: "Todo lo necesario para operar el sistema de verdad",
-    description:
-      "Lo instalamos, capacitamos a tu equipo y lo sostenemos, para que siga funcionando sin volverse tu problema.",
+    title: "Nos encargamos de la implementación y el soporte.",
+    description: "Tu equipo recibe un sistema listo y ayuda para usarlo.",
     investmentLabel: "Incluido",
     items: [
       {
-        title: "Implementación completa",
+        title: "Listo para tu equipo",
         description:
-          "Construimos, probamos y lanzamos el sistema para que salgas rápido.",
+          "Construimos, probamos y activamos tu sistema. Después capacitamos a tu equipo.",
       },
       {
-        title: "CRM para gestión de leads",
+        title: "Cada consulta en un solo lugar",
         description:
-          "Captura de leads, gestión del proceso comercial y seguimiento, incluidos en todos los planes.",
-      },
-      {
-        title: "Capacitación del equipo",
-        description:
-          "Una sesión corta para que tu equipo sepa exactamente cómo usarlo.",
+          "El CRM y la automatización de marketing mantienen los contactos y el seguimiento organizados.",
       },
       {
         title: "Soporte bilingüe",
@@ -1124,7 +1068,7 @@ const es: typeof en = {
   },
   faq: {
     eyebrow: "Respuestas rápidas",
-    title: "Lo que preguntan los dueños antes de agendar",
+    title: "¿Listo para empezar?",
     items: [
       {
         question: "¿Qué tan rápido podemos salir en vivo?",
@@ -1132,34 +1076,9 @@ const es: typeof en = {
           "La mayoría de clínicas queda activa en 5 a 7 días hábiles desde que tenemos la información y los accesos.",
       },
       {
-        question: "¿Se firma un contrato anual?",
-        answer:
-          "No. Todos los planes funcionan mes a mes, sin contrato anual ni permanencia mínima. La implementación se cobra una sola vez, al inicio.",
-      },
-      {
         question: "¿Tenemos que comprar software nuevo?",
         answer:
           "No. El CRM y el sistema vienen con el plan. Tu equipo recibe un acceso y una rutina diaria sencilla.",
-      },
-      {
-        question: "¿Podemos pedir un anticipo antes de confirmar una cita?",
-        answer:
-          "Sí, desde DigitalFace Capture. El agendamiento puede solicitar un anticipo, una cuota de reserva o el pago completo, y la cita queda confirmada cuando el pago se acredita. Es opcional y se define por servicio, el cobro corre por tu propio proveedor de pagos y el dinero llega a tu cuenta, y es una herramienta de compromiso, no una garantía de asistencia.",
-      },
-      {
-        question: "¿La inversión publicitaria está incluida en el precio?",
-        answer:
-          "No. La tarifa mensual es nuestra tarifa de gestión. La pauta se paga directamente a las plataformas, desde tus propias cuentas. Capture gestiona presupuestos de hasta $1,000 al mes y DigitalFace AI hasta $2,500 al mes; presupuestos superiores requieren un ajuste en la tarifa de gestión.",
-      },
-      {
-        question: "¿Cómo se factura el uso de IA y de correo?",
-        answer:
-          "DigitalFace AI incluye $20 de saldo de uso de IA cada mes. El consumo por encima se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida. El envío de correos se factura a $1.35 por cada 1.000 correos enviados.",
-      },
-      {
-        question: "¿El plan incluye producción de video?",
-        answer:
-          "No. Las piezas incluidas son estáticas, de foto o gráfica. Cuando necesitas video, podemos conectarte con un aliado de producción externo.",
       },
       {
         question: "¿Cuándo tiene sentido un plan a medida?",
@@ -1170,11 +1089,11 @@ const es: typeof en = {
   },
   cta: {
     eyebrow: "Qué sigue",
-    title: "Mira el sistema armado alrededor de tu clínica",
+    title: "Encuentra tu plan en una llamada.",
     description:
-      "Escríbenos y te recomendamos la configuración que corresponde a tus objetivos.",
-    primaryCta: "Contáctanos",
-    secondaryCta: "Ver el sistema",
+      "Cuéntanos qué necesita tu clínica. Te recomendamos un plan y confirmamos la cotización.",
+    primaryCta: "Agendar una llamada",
+    secondaryCta: "Ver cómo funciona",
   },
 };
 

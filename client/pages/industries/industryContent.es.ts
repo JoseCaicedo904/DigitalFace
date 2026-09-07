@@ -16,35 +16,35 @@ export const industryContentEs: IndustryLocaleBundle = {
       otherIndustriesLabel: "Otros tipos de clínica",
     },
     heroVisual: {
-      label: "Vista del sistema en vivo",
+      label: "Así funciona",
       stage: "Etapa",
       bilingual: "Inglés y español",
-      handover: "Listo para traspaso a tu equipo",
+      handover: "Tu equipo puede intervenir",
     },
     heroMedia: {
-      eyebrow: "Confianza antes de la conversión",
+      eyebrow: "A cargo de DigitalFace",
     },
     capabilitiesDisclaimer:
       "DigitalFace automatiza la comunicación administrativa y los procesos del negocio. La responsabilidad clínica siempre es de los profesionales autorizados.",
     packages: {
-      eyebrow: "Dos niveles de crecimiento y un plan a medida",
+      eyebrow: "Elige tu plan",
       description:
-        "Todos los paquetes los implementa y administra DigitalFace, con CRM incluido. Abre cualquier punto para ver el alcance real detrás del titular.",
+        "Lo configuramos y gestionamos. Elige el apoyo que necesita tu negocio.",
       mostPopular: "Más elegido",
       perMonth: "/mes",
-      expandLabel: "Abre cualquier punto",
+      expandLabel: "Ver qué incluye",
       idealFor: "Ideal para",
-      customProposal: "Solicitar propuesta a la medida",
+      customProposal: "Pedir un plan a medida",
       noContract:
         "No se requiere contrato anual. Todos los planes funcionan mes a mes.",
       footnote:
-        "La inversión en pauta la pagas tú directamente a las plataformas, y cada plan indica el presupuesto que gestiona; presupuestos superiores requieren un ajuste en la tarifa de gestión. El uso de IA por encima del saldo incluido, el envío de correos, la mensajería, la telefonía y consumos poco habituales de terceros se facturan según el alcance aprobado. La producción profesional de foto y video no está incluida.",
+        "El CRM y el alojamiento estándar están incluidos. La IA y las comunicaciones se cobran a costo de proveedor, sin saldo incluido. Acordamos un presupuesto de consumo antes de activar el sistema. La publicidad empieza con Sales System; pagas directamente a Meta o Google. La foto y el video profesionales no están incluidos.",
     },
     proof: {
       eyebrow: "Sistemas entregados",
-      title: "Experiencia real de operación detrás del sistema",
+      title: "Mira lo que hemos implementado.",
       description:
-        "Hoy hay dos sistemas de clientes activos. Muestran las capacidades de comunicación, agendamiento, CRM y traspaso humano que usan estos paquetes.",
+        "Dos sistemas activos para comunicación con pacientes, citas y seguimiento.",
       activeLabel: "Cliente activo",
     },
     faq: {
@@ -53,11 +53,11 @@ export const industryContentEs: IndustryLocaleBundle = {
     booking: {
       eyebrow: "¿Hablamos?",
       ctaLabel: "Elige un horario",
-      customScopeLabel: "Alcance a la medida",
+      customScopeLabel: "¿Necesitas algo más?",
       privacyNote:
         "El formulario final debe pedir solo lo necesario para definir el alcance y enlazar a la política de privacidad publicada.",
     },
-    mobileCta: "Agendar diagnóstico",
+    mobileCta: "Agendar una llamada",
   },
 
   clientStories: {
@@ -66,12 +66,12 @@ export const industryContentEs: IndustryLocaleBundle = {
       name: "Dr. Diego Sinisterra",
       sector: "Medicina estética",
       summary:
-        "Un sistema conectado de comunicación con pacientes y gestión de citas, construido alrededor del proceso de valoración estética.",
+        "Respuestas a pacientes y apoyo para citas en una consulta estética.",
       delivered: [
-        "Comunicación bilingüe con pacientes mediante IA",
-        "Agendamiento y automatización del ciclo de citas",
-        "Motor de respuesta a comentarios en Facebook e Instagram",
-        "Control en el CRM, manejo de errores y traspaso al equipo",
+        "Respuestas de IA en inglés y español",
+        "Agendamiento y seguimiento de citas",
+        "Respuestas a comentarios de Facebook e Instagram",
+        "Seguimiento asignado, manejo de errores e intervención del equipo",
       ],
     },
     jennifer: {
@@ -79,12 +79,12 @@ export const industryContentEs: IndustryLocaleBundle = {
       name: "Dra. Jennifer Sinisterra",
       sector: "Odontología estética y pacientes internacionales",
       summary:
-        "Un sistema bilingüe de admisión de pacientes que conecta las conversaciones de WhatsApp, la visibilidad en el CRM, la recepción de material y la revisión humana.",
+        "Recepción bilingüe de datos de pacientes, organizada para revisión.",
       delivered: [
-        "Comunicación con IA en inglés y español",
-        "Recepción de fotos y documentos del paciente",
-        "Sincronización entre Chatwoot, CRM y Drive",
-        "Tareas de revisión humana y traspaso controlado de la IA",
+        "Respuestas de IA en inglés y español",
+        "Recepción de fotos y documentos",
+        "WhatsApp, bandeja compartida, CRM y Drive sincronizados",
+        "Tareas de revisión e intervención del equipo",
       ],
     },
   },
@@ -101,19 +101,19 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       hero: {
         eyebrow: "DigitalFace para clínicas odontológicas",
-        title: "Convierte más consultas dentales en valoraciones agendadas.",
+        title: "Convierte el interés dental en citas de valoración.",
         description:
-          "Un solo sistema administrado que conecta la pauta odontológica, la admisión de pacientes nuevos, el agendamiento de valoraciones y el seguimiento del plan de tratamiento, desde la primera consulta hasta la valoración atendida.",
-        primaryCta: "Agenda tu diagnóstico odontológico",
-        secondaryCta: "Ver el sistema dental",
+          "Marketing dental, seguimiento y agendamiento de citas a cargo de DigitalFace. Tú atiendes a tus pacientes; nosotros ayudamos a los interesados a dar el siguiente paso.",
+        primaryCta: "Agendar una llamada para mi clínica",
+        secondaryCta: "Ver cómo funciona",
         visualTitle: "Recorrido de una consulta dental",
         visualStages: [
-          "Nueva consulta por carillas registrada",
-          "Respuesta bilingüe enviada",
-          "Valoración agendada y confirmada",
+          "Consulta sobre carillas recibida",
+          "Paciente recibe respuesta",
+          "Valoración agendada",
         ],
         mediaHeadline:
-          "Tu equipo sigue en el sillón. La consulta igual se responde, se agenda y se sigue.",
+          "Sigue atendiendo. Nosotros nos encargamos del seguimiento.",
       },
       stats: [
         { value: "24/7", label: "Consultas de pacientes nuevos respondidas" },
@@ -154,27 +154,26 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       gallery: {
         eyebrow: "Dentro de la clínica",
-        title:
-          "El consultorio sigue siendo tuyo. Lo administrativo deja de depender de la memoria.",
+        title: "Que el interés en un tratamiento no se pierda.",
         description:
-          "Nada de esto cambia cómo tratas. Cambia lo que pasa en las horas alrededor de la cita, cuando tu equipo está en el sillón y la consulta sigue esperando respuesta.",
+          "Responder tarde, buscar mensajes y recordar seguimientos le quita tiempo a tu recepción.",
         moments: [
           {
-            title: "La valoración que sí se agenda",
+            title: "Responde mientras atiendes",
             description:
-              "Una consulta por carillas a las 9 de la noche se responde en segundos y entra en la agenda de mañana, no en la lista de pendientes.",
+              "Ayuda a quienes preguntan por implantes, carillas y diseño de sonrisa a dar el siguiente paso.",
             alt: "Odontólogo comparando la guía de color con un paciente sonriente",
           },
           {
-            title: "El sillón que deja de quedarse vacío",
+            title: "Organiza la próxima visita",
             description:
-              "Confirmaciones, recordatorios y reprogramaciones corren solos, así que los huecos del día se cierran antes de que alguien los note.",
+              "Confirmaciones, recordatorios y cambios de cita ayudan a organizar la agenda.",
             alt: "Lámpara e instrumental en un consultorio odontológico moderno",
           },
           {
-            title: "La recepción que deja de perseguir",
+            title: "Dale el contexto a tu coordinador",
             description:
-              "Interés de tratamiento, fotos y notas llegan en un mismo registro: tu coordinadora abre un caso en lugar de reconstruirlo.",
+              "Reúne fotos, interés en tratamientos y notas para dar seguimiento.",
             alt: "Sala de una clínica dental donde el equipo atiende a un paciente",
           },
         ],
@@ -210,34 +209,28 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       adCampaignDemo: {
         eyebrow: "01 · Atraer",
-        title:
-          "Mira cómo un anuncio de carillas se vuelve una solicitud de valoración.",
+        title: "Atrae pacientes interesados en tus tratamientos.",
         description:
-          "Una campaña dental es fácil de juzgar por los clics. Lo que define el mes es el minuto siguiente: si la persona recibe una razón para responder y si lo que dice llega a un lugar donde tu equipo pueda trabajarlo.",
-        ctaLabel: "Agenda tu diagnóstico odontológico",
+          "Sales System suma campañas de marketing dental en Meta Ads o Google Ads para el tratamiento que quieres promocionar.",
+        ctaLabel: "Hablar de campañas dentales",
         phoneCaption: "Anuncio y solicitud de ejemplo",
-        bridge:
-          "La solicitud queda en tu proceso con el tratamiento anotado. Abajo, esa misma consulta recibe respuesta y termina agendada.",
+        bridge: "Siguiente paso: responder al paciente.",
         stages: [
           {
-            title: "Llega a alguien que ya está evaluando el tratamiento",
-            description:
-              "Implantes, carillas y diseño de sonrisa aparecen frente a personas que ya los estaban buscando, en inglés o en español.",
+            title: "Muestra el tratamiento",
+            description: "Promociona implantes, carillas o diseño de sonrisa.",
           },
           {
-            title: "La oferta da un motivo para tocar el anuncio",
-            description:
-              "Una valoración que el paciente puede imaginar, en lugar de un teléfono para llamar después, cuando el interés ya se enfrió.",
+            title: "Invita a una valoración",
+            description: "Ofrece un siguiente paso claro a los interesados.",
           },
           {
-            title: "El interés de tratamiento viene incluido",
-            description:
-              "El paciente dice qué está evaluando y dónde ubicarlo, así nadie empieza la conversación desde cero.",
+            title: "Recibe sus datos",
+            description: "Guarda el tratamiento de interés, idioma y contacto.",
           },
           {
-            title: "La solicitud queda lista para tu equipo",
-            description:
-              "Entra al mismo proceso que el resto de las consultas, con el tratamiento, el idioma y el contacto ya anotados.",
+            title: "Prepara el seguimiento",
+            description: "Deja cada solicitud organizada para tu equipo.",
           },
         ],
         script: {
@@ -311,32 +304,31 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       conversationDemo: {
         eyebrow: "02 · Convertir",
-        title:
-          "Una pregunta por implantes un sábado en la mañana, agendada antes del lunes.",
+        title: "Deja que la IA responda mientras atiendes.",
         description:
-          "Esta es esa misma consulta dentro del sistema dental: respondida con la clínica cerrada, con la foto, el interés de tratamiento y la pregunta de financiación ya organizados antes de que alguien de tu equipo la abra.",
-        ctaLabel: "Agenda tu diagnóstico odontológico",
+          "Tu chatbot de IA responde preguntas aprobadas y ayuda a agendar. Las fotos y las dudas clínicas llegan a tu equipo.",
+        ctaLabel: "Hablar del seguimiento a pacientes",
         phoneCaption: "Conversación de ejemplo",
         stages: [
           {
-            title: "El interés de tratamiento recibe respuesta",
+            title: "Responde fuera de horario",
             description:
-              "Las consultas por implantes, carillas y diseño de sonrisa quedan atendidas aunque tu equipo esté en el sillón.",
+              "Atiende consultas sobre implantes y carillas cuando la clínica está cerrada.",
           },
           {
-            title: "La foto y los datos quedan juntos",
+            title: "Reúne los datos del caso",
             description:
-              "Imágenes, interés de tratamiento y notas de admisión llegan a una sola ficha, no a tres bandejas de entrada.",
+              "Guarda fotos, interés en tratamientos y notas en un registro.",
           },
           {
-            title: "Las preguntas administrativas se responden igual siempre",
+            title: "Usa respuestas aprobadas",
             description:
-              "Financiación, proceso y disponibilidad salen desde lo que tu clínica aprobó, cada vez.",
+              "Explica tus políticas de financiación, proceso y disponibilidad.",
           },
           {
-            title: "Al doctor le llega el caso, no el trabajo repetitivo",
+            title: "Involucra a tu equipo",
             description:
-              "Las preguntas clínicas y las de cada caso llegan a tu equipo con la valoración ya agendada.",
+              "Deriva las dudas clínicas y específicas del caso al personal.",
           },
         ],
         script: {
@@ -411,33 +403,28 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       crmPipelineDemo: {
         eyebrow: "03 · Gestionar",
-        title: "Ten claro en qué punto está cada consulta de tratamiento.",
+        title: "Identifica quién necesita seguimiento.",
         description:
-          "Después de responder, tu equipo todavía necesita ver el caso. El origen, el tratamiento, la foto, la pregunta de pago y el horario solicitado quedan en una sola ficha, así nadie tiene que reconstruir la historia leyendo el chat.",
-        ctaLabel: "Agenda tu diagnóstico odontológico",
+          "Ve el tratamiento de interés, los mensajes y el siguiente paso de cada paciente. Tu CRM mantiene todo organizado.",
+        ctaLabel: "Hablar de mi clínica",
         boardCaption: "Recorrido de paciente de ejemplo",
-        bridge:
-          "Atraer, convertir y gestionar: un solo recorrido del paciente con un siguiente paso claro en cada etapa.",
+        bridge: "Sigue las consultas hasta la cita agendada y la asistencia.",
         stages: [
           {
-            title: "Consulta nueva",
-            description:
-              "La oportunidad aparece apenas el paciente escribe, también el fin de semana.",
+            title: "Solicitud recibida",
+            description: "La solicitud aparece, incluso los fines de semana.",
           },
           {
-            title: "Contactado",
-            description:
-              "La primera respuesta queda a la vista de recepción sin abrir el chat.",
+            title: "Paciente contactado",
+            description: "Recepción puede ver la primera respuesta.",
           },
           {
-            title: "Interés de tratamiento",
-            description:
-              "El tratamiento por el que pregunta el paciente, y la foto que envió, quedan en la ficha.",
+            title: "Interés registrado",
+            description: "El tratamiento y la foto quedan juntos.",
           },
           {
             title: "Valoración solicitada",
-            description:
-              "El equipo ve el horario pedido y sabe exactamente qué confirmar.",
+            description: "Revisa el horario solicitado y qué falta confirmar.",
           },
         ],
         script: {
@@ -505,11 +492,10 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       appointmentCommitment: {
-        eyebrow: "Compromiso de la valoración",
-        title:
-          "Una valoración solicitada no es lo mismo que una valoración confirmada.",
+        eyebrow: "Opcional · Desde DigitalFace AI",
+        title: "Confirma valoraciones con un anticipo opcional.",
         description:
-          "Consulta, conversación, interés de tratamiento, agendamiento y, cuando le sirve a tu clínica, un paso más: una reserva, un anticipo o una cuota de valoración que debe acreditarse antes de dar la cita por confirmada.",
+          "Elige qué tratamientos requieren un pago de reserva antes de confirmar la valoración.",
         steps: [
           {
             label: "Valoración solicitada",
@@ -537,222 +523,253 @@ export const industryContentEs: IndustryLocaleBundle = {
         ],
         points: [
           {
-            title: "Menos reservas sin intención",
+            title: "Pide un compromiso",
             description:
-              "Un espacio de valoración que cuesta reservar lo pide quien realmente piensa asistir, así las solicitudes casuales dejan de ocupar sillón.",
+              "Un pago de reserva puede ayudar a reducir las citas sin compromiso.",
           },
           {
-            title: "Una agenda sobre la que se puede planear",
+            title: "Ve qué citas están confirmadas",
             description:
-              "Confirmada significa pagada y confirmada, no solo solicitada: el día que ve tu recepción es el día que la clínica realmente va a trabajar.",
+              "Distingue las reservas pagadas de las solicitudes de cita.",
           },
           {
-            title: "Tu proveedor, tu dinero",
+            title: "Recibe el dinero en tu cuenta",
             description:
-              "Los pagos pasan por el proveedor de pagos que tu clínica ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+              "Tu proveedor cobra el pago. DigitalFace conecta el agendamiento y nunca retiene tus fondos.",
           },
         ],
         note: "Es opcional y se configura por tratamiento: tú decides qué valoraciones piden reserva y de cuánto. La reserva refuerza el compromiso; no es una garantía de asistencia.",
       },
-      packagesTitle:
-        "Elige el nivel de crecimiento odontológico que corresponde a tu clínica hoy.",
+      packagesTitle: "Elige el plan para tu clínica dental.",
       packages: [
         {
           name: "DigitalFace Capture",
-          nicheName: "Captación de Pacientes Dentales",
+          nicheName: "Organiza las consultas dentales",
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas de implantes, carillas y diseño de sonrisa, captúralas todas en tu CRM y responde automáticamente.",
+            "Organiza las consultas sobre implantes, carillas y diseño de sonrisa, con seguimiento automático.",
           idealFor:
-            "Clínicas que necesitan un flujo confiable de pacientes nuevos y una forma de dejar de perderlos.",
+            "Para equipos que reciben consultas y necesitan dar seguimiento.",
           highlights: [
-            "Un canal prioritario de captación",
-            "CRM incluido para admisión de pacientes y seguimiento",
-            "Respuesta automática inmediata, agendamiento y recordatorios",
-            "Anticipo opcional para confirmar la valoración",
+            "Cada consulta en un CRM",
+            "Respuestas y seguimiento automáticos",
+            "Enlaces de cita y recordatorios",
+            "Mensaje tras una llamada perdida",
           ],
           details: [
             {
-              title: "Captación dental administrada",
+              title: "Qué recibes",
               description:
-                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según tu mezcla de tratamientos, tu mercado y la demanda real de implantes, carillas o diseño de sonrisa.",
+                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
             },
             {
-              title: "CRM de pacientes incluido",
+              title: "Qué cubre la implementación",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, su interés de tratamiento, su etapa y su historial completo, para que nadie reconstruya el caso leyendo el chat.",
+                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
             },
             {
-              title: "Respuesta automática inmediata",
+              title: "Qué gestionamos cada mes",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al paciente hacia agendar su valoración, a cualquier hora.",
+                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
             },
             {
-              title: "Calendario de citas y recordatorios",
+              title: "Consumo y alcance",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace recepción, y reducen inasistencias evitables.",
+                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
             },
             {
-              title: "Revisión mensual de desempeño",
+              title: "Cuándo subir de nivel",
               description:
-                "Revisamos el origen de las consultas, la actividad de respuesta, las valoraciones agendadas y atendidas y el costo por valoración agendada, y acordamos el siguiente movimiento de campaña.",
+                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $1,000 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
           },
-          cta: "Empezar con Captación Dental",
+          cta: "Hablar de Capture",
+          footnotes: [],
         },
         {
           name: "DigitalFace AI",
-          nicheName: "Sistema Dental Completo",
+          nicheName: "Suma seguimiento con IA",
           price: "$1,490",
           setup: "$1,097 de implementación única",
           description:
-            "Dos canales de captación, un sitio web de conversión, comunicación con IA e infraestructura de campañas, administrados como un solo sistema.",
+            "Deja que la IA responda consultas dentales y ayude a agendar valoraciones.",
           idealFor:
-            "Clínicas listas para operar todo el sistema de captación y conversión, con IA respondiendo a toda hora.",
+            "Para equipos que necesitan ayuda para responder y agendar.",
           featured: true,
           highlights: [
-            "Todo lo de DigitalFace Capture",
-            "Sitio web de conversión + hasta 2 formularios",
-            "Comunicación con IA con $20 de saldo mensual",
+            "Todo lo de Capture",
+            "Respuestas de IA en inglés y español",
+            "Apoyo para agendar e intervención del equipo",
+            "Seguimiento a citas perdidas y anticipos opcionales",
           ],
           details: [
             {
-              title: "Todo lo de Capture, más un segundo canal",
+              title: "Qué recibes",
               description:
-                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics. Debajo sigue incluida toda la base de DigitalFace Capture: captación, CRM, primera respuesta, calendario y reportes.",
+                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
             },
             {
-              title: "Sitio web de conversión con hasta 2 formularios",
+              title: "Qué cubre la implementación",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de paciente nuevo conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
             },
             {
-              title: "Comunicación bilingüe con IA",
+              title: "Qué gestionamos cada mes",
               description:
-                "El asistente responde en inglés y español usando únicamente lo que apruebas: los tratamientos que ofreces, horarios, ubicación, políticas de financiación y lo que tu clínica sí y no cotiza por chat. Cada mes incluye $20 de saldo de uso de IA.",
+                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
             },
             {
-              title: "Traspaso clínico y de excepciones",
+              title: "Límites en el agendamiento",
               description:
-                "Diagnósticos, viabilidad del tratamiento, excepciones de financiación, reclamos y urgencias pasan a tu equipo, nunca al asistente.",
+                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
             },
             {
-              title: "Configuración y automatización de email marketing",
+              title: "Anticipos y consumo",
               description:
-                "Construimos y operamos la automatización de las campañas, incluidas las secuencias de recuperación para pacientes con tratamiento sin agendar. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
             },
             {
-              title: "Hasta 4 piezas publicitarias estáticas al mes",
+              title: "Cuándo ampliar el sistema",
               description:
-                "Piezas estáticas de foto o gráfica, adaptadas con textos en inglés y español. La producción de video no está incluida.",
+                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $2,500 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
           },
-          footnotes: [
-            "El uso de IA por encima del saldo de $20 incluido se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida.",
-            "El envío de correos se factura a $1.35 por cada 1.000 correos enviados.",
-            "La producción de video no está incluida. Podemos conectarte con un aliado de producción externo cuando lo necesites.",
-          ],
-          cta: "Empezar con el Sistema Dental Completo",
+          footnotes: [],
+          cta: "Hablar de DigitalFace AI",
         },
         {
           name: "The DigitalFace Sales System",
-          nicheName: "Plan Dental a Medida",
+          nicheName: "Suma publicidad dental",
           price: "A medida",
           priceCaption: "Se define y se cotiza según tus requerimientos",
           description:
-            "Para clínicas con presupuestos mayores, varias sedes, captación avanzada, automatización compleja o integraciones a medida.",
+            "Suma anuncios gestionados y una página para el tratamiento dental que quieres promocionar.",
           idealFor:
-            "Clínicas cuyos requerimientos van más allá de un paquete fijo.",
+            "Para clínicas listas para sumar publicidad y seguir las citas.",
           scopeNote:
-            "Son capacidades disponibles, no una lista de inclusiones fijas. Definimos y cotizamos únicamente lo que tu clínica realmente necesita.",
+            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
           highlights: [
-            "Varios canales de captación y presupuestos mayores",
-            "CRM, IA e integraciones avanzadas",
-            "Sedes, idiomas adicionales y soporte prioritario",
+            "Todo lo de DigitalFace AI",
+            "Un canal de Meta Ads o Google Ads",
+            "Una página de campaña · 2 rondas de revisión",
+            "Hasta 4 variaciones estáticas de anuncios al mes",
           ],
           details: [
             {
-              title: "Varios canales y presupuestos mayores",
+              title: "Qué recibes",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según tu mercado, tu presupuesto y los casos que quieres atraer, ya sean implantes, arcada completa o estética. Los presupuestos publicitarios pueden superar los topes que gestionan los planes fijos, con la tarifa de gestión ajustada al alcance que acordemos.",
+                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
             },
             {
-              title: "Sedes e idiomas adicionales",
+              title: "Qué cubre el alcance inicial",
               description:
-                "Campañas, calendarios, procesos y conversaciones separados por sede, y comunicación más allá del inglés y el español.",
+                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
             },
             {
-              title: "Arquitectura avanzada de CRM e IA",
+              title: "Presupuesto de pauta",
               description:
-                "Procesos por tipo de tratamiento, más los roles, permisos y reportería con los que realmente trabajan tus coordinadoras de tratamiento. El asistente maneja más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del estándar.",
+                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
             },
             {
-              title: "Integraciones, anticipos y reglas de prepago a medida",
+              title: "Cómo cotizamos el alcance a medida",
               description:
-                "Conexiones con tu software de gestión, facturación o herramientas internas, y automatizaciones diseñadas para tu operación específica. Los montos de reserva pueden variar por tratamiento, profesional o sede, con prepago de paquetes y tus propias reglas de devolución o crédito conectadas al proveedor de pagos que ya usas.",
+                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
             },
             {
-              title: "Reactivación, reportería y soporte prioritario",
+              title: "Medición y consumo",
               description:
-                "Recuperación y reactivación estructurada de tu base de pacientes, atribución desde la campaña hasta la valoración atendida, y un nivel de soporte acordado contigo.",
+                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
+            },
+            {
+              title: "Límites de la IA y de las citas",
+              description:
+                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
+            },
+            {
+              title: "No incluido",
+              description:
+                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
             },
           ],
           note: {
-            title: "Cómo se construye el precio",
-            body: "Tus requerimientos, el presupuesto publicitario, los canales, las sedes, las integraciones, el uso de IA, la complejidad de las automatizaciones y el nivel de soporte. Definimos el alcance contigo antes de cotizar.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
           },
-          cta: "Armar mi Plan Dental a Medida",
+          cta: "Hablar de mi Sales System",
+          footnotes: [
+            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
+          ],
         },
       ],
-      faqTitle: "Lo que más nos preguntan las clínicas odontológicas",
-      faqDescription:
-        "Revisamos tus canales de captación, tus tiempos de respuesta, el flujo de valoraciones, la recuperación del tratamiento pendiente y las conversaciones de financiación antes de recomendarte un paquete.",
+      faqTitle: "Antes de agendar",
+      faqDescription: "Respuestas rápidas sobre tu equipo y el sistema.",
       faq: [
         {
-          question:
-            "¿Los pacientes pueden enviar fotos o información del caso?",
+          question: "¿Los pacientes pueden enviar fotos?",
           answer:
-            "Sí. El material y los datos del paciente se organizan y se dirigen a tu equipo. El sistema no analiza imágenes ni reemplaza la revisión clínica.",
+            "Sí, según el alcance acordado. Las fotos y los datos llegan a tu equipo para revisión. El sistema no analiza imágenes.",
         },
         {
-          question: "¿La IA puede recomendar un tratamiento?",
+          question: "¿La IA puede recomendar tratamientos?",
           answer:
-            "No. La IA maneja información administrativa aprobada y registra el interés de tratamiento. El diagnóstico, la viabilidad y las recomendaciones siguen siendo del profesional autorizado.",
+            "No. Comparte respuestas administrativas aprobadas. El diagnóstico, la elegibilidad y las recomendaciones quedan a cargo del equipo clínico.",
         },
         {
-          question:
-            "¿Nuestro equipo puede tomar el control de una conversación?",
-          answer:
-            "Sí. El traspaso humano es parte del sistema. Las etiquetas y los controles de responsable pausan la comunicación con IA apenas entra tu equipo.",
+          question: "¿El equipo puede tomar la conversación?",
+          answer: "Sí. Tu equipo puede hacerse cargo y pausar la IA.",
         },
         {
-          question:
-            "¿Puede dar seguimiento a los planes de tratamiento que nunca se agendaron?",
+          question: "¿Pueden retomar tratamientos sin agendar?",
           answer:
-            "Sí. Los pacientes con tratamiento sin agendar se pueden segmentar en el CRM y entrar a una secuencia de recuperación aprobada. Apenas el paciente responde con una pregunta sobre su propio caso, la conversación pasa a tu equipo.",
+            "Sí, con un alcance acordado. El seguimiento a pacientes existentes y la reactivación masiva se cotizan aparte. Las dudas clínicas de cada caso pasan a tu equipo.",
         },
         {
-          question: "¿Funciona con pacientes internacionales?",
+          question: "¿Funciona para pacientes internacionales?",
           answer:
-            "Sí. Las preguntas frecuentes bilingües, la recepción de material, la preparación de la valoración y la revisión humana pueden cubrir pacientes internacionales dentro del alcance acordado.",
+            "Sí. Las respuestas bilingües, la recepción de archivos, la preparación de la valoración y la revisión del equipo pueden incluirse en el alcance acordado.",
         },
       ],
       booking: {
-        title: "Hablemos de tu sistema de captación de pacientes.",
+        title: "¿Quieres más citas de valoración?",
         description:
-          "Elige un horario que te acomode para revisar cómo tu clínica atrae pacientes nuevos, convierte consultas en valoraciones atendidas y da seguimiento al tratamiento sin agendar.",
-        proposalTitle: "¿Necesitas un flujo dental a la medida?",
+          "Agenda una llamada. Revisamos tus consultas y te recomendamos un plan.",
+        proposalTitle: "¿Necesitas un plan dental a medida?",
         proposalDescription:
-          "Pide una propuesta para recepción de fotos, pacientes internacionales, migración de CRM, sedes adicionales u otro proceso propio de tu clínica.",
+          "Cuéntanos sobre tus sedes, recepción de pacientes o seguimiento de tratamientos.",
       },
     },
 
@@ -767,20 +784,18 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       hero: {
         eyebrow: "DigitalFace para medicina estética y cirugía plástica",
-        title:
-          "Convierte el interés por un procedimiento en valoraciones calificadas y atendidas.",
+        title: "Convierte el interés en procedimientos en valoraciones.",
         description:
-          "Responde en segundos, registra la zona de interés de cada paciente, escala a tu equipo todo lo clínico y lleva las consultas serias hasta una valoración agendada.",
-        primaryCta: "Agenda tu diagnóstico estético",
-        secondaryCta: "Ver el recorrido del paciente",
+          "Marketing para medicina estética, respuestas a pacientes y agendamiento a cargo de DigitalFace. Las decisiones médicas siguen en manos de tus profesionales.",
+        primaryCta: "Agendar una llamada para mi consulta",
+        secondaryCta: "Ver cómo funciona",
         visualTitle: "Recorrido hacia la valoración estética",
         visualStages: [
-          "Consulta por procedimiento registrada",
-          "Zona de interés organizada",
-          "Valoración agendada y preparada",
+          "Consulta sobre procedimiento recibida",
+          "Interés del paciente registrado",
+          "Valoración agendada",
         ],
-        mediaHeadline:
-          "Lo administrativo corre solo. Todo lo clínico sigue llegando a tu equipo.",
+        mediaHeadline: "Nosotros damos seguimiento. Tú brindas la atención.",
       },
       stats: [
         { value: "24/7", label: "Consultas por procedimientos respondidas" },
@@ -819,27 +834,26 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       gallery: {
         eyebrow: "Dentro de la práctica",
-        title:
-          "Criterio médico en la consulta. Criterio médico también en la bandeja de entrada.",
+        title: "Menos mensajes pendientes. Más tiempo para atender.",
         description:
-          "La automatización resuelve lo administrativo y se detiene donde debe. Todo lo clínico llega a ti: no a un guion, no a un bot, no a alguien adivinando.",
+          "Da continuidad a las solicitudes y lleva cada duda clínica al profesional indicado.",
         moments: [
           {
-            title: "La valoración sigue siendo tuya",
+            title: "Las decisiones médicas son tuyas",
             description:
-              "Precios, disponibilidad y dudas generales del proceso se responden al instante. Lo clínico se escala al médico, siempre.",
+              "La IA responde sobre precios y horarios aprobados. Tu equipo da la orientación médica.",
             alt: "Médico evaluando el rostro de una paciente en una consulta estética",
           },
           {
-            title: "La valoración llega preparada",
+            title: "Conoce el interés del paciente",
             description:
-              "Zona de interés, antecedentes y las fotos que envió el paciente ya están en el registro antes de que se siente.",
+              "Revisa juntos el interés, los antecedentes y las fotos enviadas.",
             alt: "Profesional examinando el rostro de una paciente en una valoración estética",
           },
           {
-            title: "La sala está lista y el proceso también",
+            title: "Organiza las valoraciones",
             description:
-              "Agendamiento, anticipos y seguimiento posterior corren desde una sola vista, no desde cuatro bandejas y una libreta.",
+              "Consulta citas, anticipos opcionales y seguimiento en un solo lugar.",
             alt: "Sala moderna de medicina estética preparada para un paciente",
           },
         ],
@@ -874,33 +888,30 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       adCampaignDemo: {
         eyebrow: "01 · Atraer",
-        title: "Mira cómo un anuncio de un procedimiento llega ya organizado.",
+        title: "Atrae interés en tus procedimientos.",
         description:
-          "Quien está evaluando un procedimiento casi nunca llama. Toca el anuncio, pregunta y compara. Cuando la pauta y el seguimiento viven en el mismo sistema, ese interés queda registrado con el procedimiento anotado, antes de que alguien en la clínica escriba una sola palabra.",
-        ctaLabel: "Agenda tu diagnóstico estético",
+          "Sales System suma Meta Ads o Google Ads para medicina estética, con una invitación clara a agendar una valoración.",
+        ctaLabel: "Hablar de campañas para mi consulta",
         phoneCaption: "Anuncio y solicitud de ejemplo",
-        bridge:
-          "Así nace la consulta. Lo que pase en los siguientes minutos decide si termina en una valoración.",
+        bridge: "Siguiente paso: ayudar a agendar la valoración.",
         stages: [
           {
-            title: "Llega a alguien que ya está comparando",
-            description:
-              "Tus procedimientos aparecen frente a personas que los están investigando ahora, no ante un público que nunca lo ha pensado.",
+            title: "Llega a posibles pacientes",
+            description: "Promociona los procedimientos que quieres impulsar.",
           },
           {
-            title: "El anuncio ofrece una valoración, no un procedimiento",
+            title: "Invita a una valoración",
             description:
-              "El siguiente paso es hablar con tu equipo, que es el compromiso que sí acepta un paciente serio.",
+              "Haz de la conversación con tu equipo el siguiente paso.",
           },
           {
-            title: "El interés queda registrado",
+            title: "Registra su interés",
             description:
-              "Lo que el paciente pregunta, y en qué idioma, llega anotado en el registro y no perdido en un hilo de mensajes.",
+              "Guarda la pregunta, el idioma y los datos de contacto.",
           },
           {
-            title: "La consulta queda lista para revisión",
-            description:
-              "Entra al proceso que usan tus coordinadoras, así la primera respuesta ya tiene contexto y las preguntas clínicas llegan a una persona.",
+            title: "Prepara la primera respuesta",
+            description: "Dale a tu coordinador el contexto para responder.",
           },
         ],
         script: {
@@ -978,32 +989,31 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       conversationDemo: {
         eyebrow: "02 · Convertir",
-        title:
-          "Mira al sistema responder lo que le corresponde y ceder lo que no.",
+        title: "La IA responde. Tu equipo decide sobre la atención.",
         description:
-          "El valor de la automatización en medicina estética no es que responda todo. Es que responde lo administrativo al instante, reconoce una pregunta clínica y la pone frente a una persona mientras la valoración igual queda agendada.",
-        ctaLabel: "Agenda tu diagnóstico estético",
+          "Tu chatbot de IA explica los detalles aprobados de la valoración y ayuda a agendar. Las dudas médicas llegan a tu equipo.",
+        ctaLabel: "Hablar de la atención por mensajes",
         phoneCaption: "Conversación de ejemplo",
         stages: [
           {
-            title: "La consulta no espera al horario de oficina",
+            title: "Responde fuera de horario",
             description:
-              "Una pregunta por un procedimiento un domingo en la noche recibe la misma respuesta inmediata que una llamada un martes.",
+              "Atiende consultas sobre procedimientos fuera del horario de atención.",
           },
           {
-            title: "Información aprobada, entregada igual dos veces",
+            title: "Comparte información aprobada",
             description:
-              "El proceso de valoración, la preparación y las políticas salen desde lo que tu práctica autorizó.",
+              "Explica el proceso de valoración, la preparación y tus políticas.",
           },
           {
-            title: "Las preguntas clínicas van a una persona",
+            title: "Deriva las dudas médicas",
             description:
-              "Seguridad, candidatura y temas propios de cada caso se escalan a tu equipo en lugar de responderse con automatización.",
+              "Envía las preguntas sobre seguridad y elegibilidad a un profesional.",
           },
           {
-            title: "La valoración queda protegida",
+            title: "Ayuda a agendar",
             description:
-              "La cita, el recordatorio y la pregunta pendiente de la paciente llegan a tu equipo antes de la visita.",
+              "Reúne la cita, el recordatorio y las dudas pendientes.",
           },
         ],
         script: {
@@ -1084,33 +1094,29 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       crmPipelineDemo: {
         eyebrow: "03 · Gestionar",
-        title: "Mira cada caso y de quién está esperando respuesta.",
+        title: "Ve cada solicitud y quién la atiende.",
         description:
-          "Las coordinadoras pierden tiempo reconstruyendo lo que el paciente ya preguntó. Aquí el origen, el interés, la pregunta que necesita a un médico y el horario solicitado quedan en una sola ficha, así la clínica siempre sabe a quién le toca.",
-        ctaLabel: "Agenda tu diagnóstico estético",
+          "Reúne el procedimiento de interés, los mensajes y la valoración solicitada en tu CRM. Tu equipo sabe qué sigue.",
+        ctaLabel: "Hablar de mi consulta",
         boardCaption: "Recorrido de paciente de ejemplo",
-        bridge:
-          "Atraer, convertir y gestionar: un solo recorrido del paciente donde el criterio clínico siempre queda en tu equipo.",
+        bridge: "Da seguimiento desde la primera pregunta hasta la valoración.",
         stages: [
           {
-            title: "Consulta nueva",
-            description:
-              "La oportunidad se crea apenas el paciente pregunta, de día o de noche.",
+            title: "Solicitud recibida",
+            description: "La solicitud aparece de día o de noche.",
           },
           {
-            title: "Respondida",
-            description:
-              "Lo administrativo queda resuelto y la respuesta queda registrada.",
+            title: "Paciente atendido",
+            description: "Las respuestas administrativas quedan registradas.",
           },
           {
-            title: "Pasada al médico",
-            description:
-              "La pregunta clínica queda marcada para una persona en lugar de responderla el sistema.",
+            title: "Revisión médica pendiente",
+            description: "Las preguntas médicas se señalan para tu equipo.",
           },
           {
             title: "Valoración solicitada",
             description:
-              "El horario pedido queda visible mientras la revisión clínica sigue abierta.",
+              "El horario solicitado sigue visible durante la revisión.",
           },
         ],
         script: {
@@ -1178,11 +1184,10 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       appointmentCommitment: {
-        eyebrow: "Compromiso de la valoración",
-        title:
-          "Una valoración solicitada no es lo mismo que una valoración confirmada.",
+        eyebrow: "Opcional · Desde DigitalFace AI",
+        title: "Confirma valoraciones con un pago opcional.",
         description:
-          "Consulta, conversación, interés en el procedimiento, agendamiento y, cuando le sirve a tu centro, un paso más: una cuota de valoración o una reserva de cita que debe acreditarse antes de dar la valoración por confirmada.",
+          "Elige qué tipos de valoración requieren pago antes de confirmar la cita.",
         steps: [
           {
             label: "Valoración solicitada",
@@ -1210,222 +1215,254 @@ export const industryContentEs: IndustryLocaleBundle = {
         ],
         points: [
           {
-            title: "Menos reservas sin intención",
+            title: "Pide un compromiso",
             description:
-              "Una valoración con cuota la solicita quien va en serio con el procedimiento, así el interés casual deja de llenar la agenda.",
+              "Un pago de reserva puede ayudar a reducir las citas sin compromiso.",
           },
           {
-            title: "Horas de consulta que reflejan compromisos reales",
+            title: "Ve qué citas están confirmadas",
             description:
-              "Confirmada significa pagada y confirmada, no solo solicitada: las horas que bloqueas para valoraciones son horas que un paciente ya comprometió.",
+              "Distingue las reservas pagadas de las solicitudes de cita.",
           },
           {
-            title: "Tu proveedor, tu dinero",
+            title: "Recibe el dinero en tu cuenta",
             description:
-              "Los pagos pasan por el proveedor de pagos que tu centro ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+              "Tu proveedor cobra el pago. DigitalFace conecta el agendamiento y nunca retiene tus fondos.",
           },
         ],
         note: "Es opcional y se configura por tipo de valoración: tú decides qué citas piden cuota y de cuánto. La cuota de valoración refuerza el compromiso; no es una garantía de asistencia.",
       },
-      packagesTitle:
-        "Elige el nivel de crecimiento estético que corresponde a tu centro hoy.",
+      packagesTitle: "Elige el plan para tu consulta estética.",
       packages: [
         {
           name: "DigitalFace Capture",
-          nicheName: "Captación de Valoraciones Estéticas",
+          nicheName: "Organiza el interés en procedimientos",
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas por procedimientos, captúralas todas en tu CRM y responde mientras el paciente sigue comparando.",
+            "Organiza las consultas sobre procedimientos y envía una primera respuesta automática.",
           idealFor:
-            "Centros que necesitan un flujo estable de consultas por procedimientos y una ruta confiable de la consulta a la valoración.",
+            "Para equipos que reciben consultas y necesitan dar seguimiento.",
           highlights: [
-            "Un canal prioritario de captación",
-            "CRM incluido para registro de consultas y seguimiento",
-            "Respuesta automática inmediata, agendamiento y recordatorios",
-            "Cuota de valoración opcional para confirmar la cita",
+            "Cada consulta en un CRM",
+            "Respuestas y seguimiento automáticos",
+            "Enlaces de cita y recordatorios",
+            "Mensaje tras una llamada perdida",
           ],
           details: [
             {
-              title: "Captación estética administrada",
+              title: "Qué recibes",
               description:
-                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según los procedimientos que quieres crecer, tu mercado y la demanda real.",
+                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
             },
             {
-              title: "CRM de pacientes incluido",
+              title: "Qué cubre la implementación",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, su zona de interés, su etapa y su historial completo, y todo lo clínico queda marcado para una persona.",
+                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
             },
             {
-              title: "Respuesta automática inmediata",
+              title: "Qué gestionamos cada mes",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al paciente a solicitar su valoración, a cualquier hora.",
+                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
             },
             {
-              title: "Calendario de citas y recordatorios",
+              title: "Consumo y alcance",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hacen tus coordinadoras.",
+                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
             },
             {
-              title: "Revisión mensual de desempeño",
+              title: "Cuándo subir de nivel",
               description:
-                "Revisamos el origen de las consultas, la actividad de respuesta, las valoraciones agendadas y atendidas y el costo por valoración agendada, y acordamos el siguiente movimiento de campaña.",
+                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $1,000 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
           },
-          cta: "Empezar con Captación de Valoraciones",
+          cta: "Hablar de Capture",
+          footnotes: [],
         },
         {
           name: "DigitalFace AI",
-          nicheName: "Sistema Estético Completo",
+          nicheName: "Suma apoyo con IA",
           price: "$1,490",
           setup: "$1,097 de implementación única",
           description:
-            "Dos canales de captación, un sitio web de conversión, comunicación con IA e infraestructura de campañas, administrados como un solo sistema.",
+            "Deja que la IA responda preguntas aprobadas y ayude a agendar valoraciones.",
           idealFor:
-            "Clínicas listas para operar todo el sistema de captación y conversión, con IA respondiendo a toda hora.",
+            "Para equipos que necesitan ayuda para responder y agendar.",
           featured: true,
           highlights: [
-            "Todo lo de DigitalFace Capture",
-            "Sitio web de conversión + hasta 2 formularios",
-            "Comunicación con IA con $20 de saldo mensual",
+            "Todo lo de Capture",
+            "Respuestas de IA en inglés y español",
+            "Apoyo para agendar e intervención del equipo",
+            "Seguimiento a citas perdidas y anticipos opcionales",
           ],
           details: [
             {
-              title: "Todo lo de Capture, más un segundo canal",
+              title: "Qué recibes",
               description:
-                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando valoraciones atendidas, no solo clics. Debajo sigue incluida toda la base de DigitalFace Capture: captación, CRM, primera respuesta, calendario y reportes.",
+                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
             },
             {
-              title: "Sitio web de conversión con hasta 2 formularios",
+              title: "Qué cubre la implementación",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de solicitud de valoración conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
             },
             {
-              title: "Comunicación bilingüe con IA",
+              title: "Qué gestionamos cada mes",
               description:
-                "El asistente responde en inglés y español usando únicamente lo que apruebas: los procedimientos que ofreces, las cuotas de valoración, horarios, ubicación, políticas y lo que tu centro sí y no cotiza por chat. Cada mes incluye $20 de saldo de uso de IA.",
+                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
             },
             {
-              title: "Traspaso clínico y de excepciones",
+              title: "Límites en el agendamiento",
               description:
-                "La viabilidad clínica, las contraindicaciones, los diagnósticos, el consejo médico personalizado y los reclamos se escalan a profesionales calificados.",
+                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
             },
             {
-              title: "Configuración y automatización de email marketing",
+              title: "Anticipos y consumo",
               description:
-                "Construimos y operamos la automatización de las campañas, incluido el seguimiento posterior a la valoración y el de quienes nunca agendaron. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
             },
             {
-              title: "Hasta 4 piezas publicitarias estáticas al mes",
+              title: "Cuándo ampliar el sistema",
               description:
-                "Piezas estáticas de foto o gráfica, adaptadas con textos en inglés y español. La producción de video no está incluida.",
+                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $2,500 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
           },
-          footnotes: [
-            "El uso de IA por encima del saldo de $20 incluido se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida.",
-            "El envío de correos se factura a $1.35 por cada 1.000 correos enviados.",
-            "La producción de video no está incluida. Podemos conectarte con un aliado de producción externo cuando lo necesites.",
-          ],
-          cta: "Empezar con el Sistema Estético Completo",
+          footnotes: [],
+          cta: "Hablar de DigitalFace AI",
         },
         {
           name: "The DigitalFace Sales System",
-          nicheName: "Plan Estético a Medida",
+          nicheName: "Suma publicidad para tu consulta",
           price: "A medida",
           priceCaption: "Se define y se cotiza según tus requerimientos",
           description:
-            "Para clínicas con presupuestos mayores, varias sedes, captación avanzada, automatización compleja o integraciones a medida.",
+            "Suma anuncios gestionados y una página para tu procedimiento prioritario.",
           idealFor:
-            "Clínicas cuyos requerimientos van más allá de un paquete fijo.",
+            "Para clínicas listas para sumar publicidad y seguir las citas.",
           scopeNote:
-            "Son capacidades disponibles, no una lista de inclusiones fijas. Definimos y cotizamos únicamente lo que tu clínica realmente necesita.",
+            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
           highlights: [
-            "Varios canales de captación y presupuestos mayores",
-            "CRM, IA e integraciones avanzadas",
-            "Sedes, idiomas adicionales y soporte prioritario",
+            "Todo lo de DigitalFace AI",
+            "Un canal de Meta Ads o Google Ads",
+            "Una página de campaña · 2 rondas de revisión",
+            "Hasta 4 variaciones estáticas de anuncios al mes",
           ],
           details: [
             {
-              title: "Varios canales y presupuestos mayores",
+              title: "Qué recibes",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según los procedimientos que quieres crecer, tu mercado y tu presupuesto. Los presupuestos publicitarios pueden superar los topes que gestionan los planes fijos, con la tarifa de gestión ajustada al alcance que acordemos.",
+                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
             },
             {
-              title: "Sedes e idiomas adicionales",
+              title: "Qué cubre el alcance inicial",
               description:
-                "Campañas, calendarios, procesos y conversaciones separados por sede, y comunicación más allá del inglés y el español.",
+                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
             },
             {
-              title: "Arquitectura avanzada de CRM e IA",
+              title: "Presupuesto de pauta",
               description:
-                "Procesos por categoría de procedimiento, más los roles, permisos y reportería con los que realmente trabajan tus coordinadoras. El asistente maneja más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del estándar.",
+                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
             },
             {
-              title: "Integraciones, anticipos y reglas de prepago a medida",
+              title: "Cómo cotizamos el alcance a medida",
               description:
-                "Conexiones con tu software de gestión, facturación o herramientas internas, y automatizaciones diseñadas para tu operación específica. Los montos de reserva pueden variar por tratamiento, profesional o sede, con prepago de paquetes y tus propias reglas de devolución o crédito conectadas al proveedor de pagos que ya usas.",
+                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
             },
             {
-              title: "Reactivación, reportería y soporte prioritario",
+              title: "Medición y consumo",
               description:
-                "Reactivación estructurada de valoraciones pasadas y de pacientes que ya deberían volver, atribución desde la campaña hasta la valoración atendida, y un nivel de soporte acordado contigo.",
+                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
+            },
+            {
+              title: "Límites de la IA y de las citas",
+              description:
+                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
+            },
+            {
+              title: "No incluido",
+              description:
+                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
             },
           ],
           note: {
-            title: "Cómo se construye el precio",
-            body: "Tus requerimientos, el presupuesto publicitario, los canales, las sedes, las integraciones, el uso de IA, la complejidad de las automatizaciones y el nivel de soporte. Definimos el alcance contigo antes de cotizar.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
           },
-          cta: "Armar mi Plan Estético a Medida",
+          cta: "Hablar de mi Sales System",
+          footnotes: [
+            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
+          ],
         },
       ],
-      faqTitle: "Lo que más nos preguntan los centros de medicina estética",
-      faqDescription:
-        "Revisamos tus canales de captación, tus tiempos de respuesta, el recorrido de valoración, las reglas de escalamiento y el seguimiento posterior antes de recomendarte un paquete.",
+      faqTitle: "Antes de agendar",
+      faqDescription: "Respuestas rápidas sobre tu equipo y el sistema.",
       faq: [
         {
-          question:
-            "¿La IA puede decirle a un paciente qué procedimiento le conviene?",
+          question: "¿La IA puede recomendar un procedimiento?",
           answer:
-            "No. La IA entrega información administrativa aprobada y registra el interés. Las recomendaciones, la viabilidad, el diagnóstico y el consejo médico siguen siendo del profesional autorizado.",
+            "No. Comparte información administrativa aprobada. Las recomendaciones, la elegibilidad, el diagnóstico y la orientación médica quedan a cargo de los profesionales.",
         },
         {
-          question:
-            "¿El equipo puede tomar el control de conversaciones sensibles?",
+          question: "¿El personal puede tomar la conversación?",
           answer:
-            "Sí. El traspaso humano y el control de responsables son parte del modelo, así tu equipo entra apenas la conversación se vuelve clínica, urgente o delicada.",
+            "Sí. Tu equipo puede hacerse cargo cuando una conversación es clínica, urgente o sensible.",
         },
         {
-          question: "¿El sistema puede responder consultas de redes sociales?",
+          question: "¿Pueden conectar las consultas de redes sociales?",
           answer:
-            "Sí. Los formularios, mensajes y comentarios de Facebook e Instagram se pueden conectar cuando están incluidos en el paquete y el alcance de canales elegido.",
+            "Sí. Podemos conectar formularios, mensajes y respuestas a comentarios de Facebook e Instagram cuando están incluidos en tu alcance.",
         },
         {
-          question:
-            "¿Puede dar seguimiento a los pacientes que preguntaron y nunca agendaron?",
+          question: "¿Pueden retomar pacientes que no agendaron?",
           answer:
-            "Sí. Las consultas que nunca eligieron horario entran a una secuencia de seguimiento aprobada, y los pacientes anteriores se pueden segmentar para recordarles su siguiente visita. Todo lo clínico que responda el paciente pasa a tu equipo antes de contestar.",
+            "Sí. El seguimiento puede retomar consultas que no se agendaron. Los recordatorios a pacientes existentes y la reactivación masiva se acuerdan aparte. Las dudas médicas pasan a tu equipo.",
         },
         {
-          question: "¿Prometen una cantidad de pacientes o procedimientos?",
+          question: "¿Garantizan una cantidad de pacientes?",
           answer:
-            "No. Nosotros construimos y administramos el sistema de captación y conversión. Los resultados también dependen de la demanda, el presupuesto, las ofertas, la pertinencia clínica, los precios, la reputación y tu propio proceso de valoración.",
+            "No. Los resultados dependen de la demanda, el presupuesto, tu oferta, la elegibilidad clínica, los precios, la reputación y el proceso de valoración.",
         },
       ],
       booking: {
-        title: "Hablemos de tu sistema de crecimiento de pacientes.",
+        title: "¿Quieres más solicitudes de valoración?",
         description:
-          "Elige un horario para revisar cómo tu centro capta consultas por procedimientos, escala las preguntas clínicas, agenda valoraciones y hace el seguimiento posterior.",
-        proposalTitle: "¿Necesitas un flujo estético a la medida?",
+          "Agenda una llamada. Revisamos tu comunicación con pacientes y te recomendamos un plan.",
+        proposalTitle: "¿Necesitas un plan estético a medida?",
         proposalDescription:
-          "Pide una propuesta para varias sedes, pacientes internacionales, admisión por procedimiento, automatización en redes u otro proceso de tu centro.",
+          "Cuéntanos sobre tus sedes, pacientes internacionales o recepción de casos.",
       },
     },
 
@@ -1440,20 +1477,18 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       hero: {
         eyebrow: "DigitalFace para med spas",
-        title:
-          "Convierte el interés por un tratamiento en clientes que agendan y regresan.",
+        title: "Convierte el interés en tu med spa en visitas frecuentes.",
         description:
-          "Un sistema que conecta promociones, respuesta inmediata, agendamiento, anticipos, nuevas reservas y reactivación de clientes, para que la agenda se llene y se mantenga llena.",
-        primaryCta: "Agenda tu diagnóstico para med spa",
-        secondaryCta: "Ver el sistema para med spas",
+          "Marketing para med spas, respuestas y seguimiento a cargo de DigitalFace. Da continuidad a tus tratamientos, paquetes y membresías.",
+        primaryCta: "Agendar una llamada para mi med spa",
+        secondaryCta: "Ver cómo funciona",
         visualTitle: "Recorrido de agendamiento del med spa",
         visualStages: [
-          "Respuesta a la promoción registrada",
-          "Conversación de agendamiento activa",
-          "Cita agendada y siguiente reserva lista",
+          "Consulta sobre oferta recibida",
+          "Conversación de reserva iniciada",
+          "Cita agendada",
         ],
-        mediaHeadline:
-          "La promoción llena la agenda. El seguimiento es lo que la mantiene llena.",
+        mediaHeadline: "Mantén el contacto después de la primera visita.",
       },
       stats: [
         { value: "24/7", label: "Solicitudes de cita respondidas" },
@@ -1494,26 +1529,26 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       gallery: {
         eyebrow: "Dentro del spa",
-        title: "La experiencia empieza mucho antes de que alguien entre.",
+        title: "Dedica menos tiempo a perseguir reservas.",
         description:
-          "Para cuando la clienta está en tu camilla, ya te evaluó por lo rápido que respondiste, lo fácil que fue agendar y si alguien se acordó de ella después.",
+          "Dale al nuevo cliente un siguiente paso claro y al que ya te conoce una razón para volver.",
         moments: [
           {
-            title: "La primera respuesta suena a recepción",
+            title: "Responde a tiempo sobre la oferta",
             description:
-              "Un mensaje a medianoche recibe la misma respuesta cálida y en tu tono que daría tu mejor coordinadora al mediodía.",
+              "Contesta preguntas aprobadas sobre precios, paquetes y membresías.",
             alt: "Equipo de un med spa atendiendo a clientas en la recepción",
           },
           {
-            title: "El ritual no se interrumpe",
+            title: "Atiende sin interrupciones",
             description:
-              "Nadie sale de un tratamiento a responder una duda de agenda, porque esa duda nunca tuvo que esperar.",
+              "Ayuda a reservar mientras tu equipo realiza los tratamientos.",
             alt: "Piscina interior de spa iluminada con velas",
           },
           {
-            title: "La clienta que vuelve sola",
+            title: "Invita a tus clientes a volver",
             description:
-              "Reactivación, paquetes y recordatorios de membresía corren en silencio, así que la agenda se vuelve a llenar sin lanzar una campaña.",
+              "Suma seguimiento para paquetes pendientes, membresías vencidas y próximas visitas, con alcance y cotización aparte.",
             alt: "Zona de descanso de un med spa premium",
           },
         ],
@@ -1549,33 +1584,30 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       adCampaignDemo: {
         eyebrow: "01 · Atraer",
-        title: "Mira cómo una promoción se vuelve una solicitud de cita.",
+        title: "Convierte tu próxima oferta en solicitudes de cita.",
         description:
-          "Un anuncio de med spa genera un pico de interés en pocas horas, casi siempre mientras tu equipo está atendiendo. Esto es lo que pasa con ese interés cuando la pauta está conectada al agendamiento y no termina en un hilo de comentarios.",
-        ctaLabel: "Agenda tu diagnóstico para med spa",
+          "Sales System suma Meta Ads o Google Ads para el tratamiento u oferta principal de tu med spa.",
+        ctaLabel: "Hablar de campañas para mi med spa",
         phoneCaption: "Anuncio y solicitud de ejemplo",
-        bridge:
-          "Todas las respuestas llegan a un solo lugar y no a cinco bandejas. Ahora necesita respuesta mientras la oferta sigue fresca.",
+        bridge: "Siguiente paso: responder mientras la oferta interesa.",
         stages: [
           {
-            title: "Llega a gente que vive cerca y quiere agendar",
+            title: "Llega a clientes cercanos",
             description:
-              "Tus tratamientos y membresías aparecen para personas que están cerca del spa y listas para reservar algo este mes.",
+              "Promociona los tratamientos y membresías que quieres impulsar.",
           },
           {
-            title: "La oferta es fácil de aceptar",
-            description:
-              "Un paso claro en lugar de un hilo de comentarios que la recepción tiene que responder mensaje por mensaje.",
+            title: "Presenta una oferta clara",
+            description: "Dale al interesado un siguiente paso sencillo.",
           },
           {
-            title: "La solicitud dice qué quiere",
-            description:
-              "Tratamiento, idioma y contacto llegan juntos, así la respuesta puede ser un horario en vez de otra pregunta.",
+            title: "Recibe la solicitud",
+            description: "Guarda el tratamiento, el idioma y el contacto.",
           },
           {
-            title: "Nada se queda en una bandeja",
+            title: "Prepara la reserva",
             description:
-              "Cada respuesta cae en un solo proceso con la oferta anotada, lista para agendar, recordar y preparar la visita siguiente.",
+              "Mantén cada respuesta junto a la oferta que la generó.",
           },
         ],
         script: {
@@ -1654,31 +1686,30 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       conversationDemo: {
         eyebrow: "02 · Convertir",
-        title: "Un mensaje al mediodía, agendado para el miércoles.",
+        title: "Deja las preguntas de reserva en manos de la IA.",
         description:
-          "Así se ve uno de esos mensajes cuando el sistema lo toma: la oferta confirmada, un horario elegido y el seguimiento ya listo antes de que alguien en recepción abra la bandeja.",
-        ctaLabel: "Agenda tu diagnóstico para med spa",
+          "Tu chatbot de IA explica las ofertas aprobadas, ayuda a elegir horario y mantiene el seguimiento mientras atiendes.",
+        ctaLabel: "Hablar del apoyo para reservas",
         phoneCaption: "Conversación de ejemplo",
         stages: [
           {
-            title: "Todos los canales llegan a un solo lugar",
+            title: "Reúne los mensajes",
             description:
-              "Respuestas a historias, comentarios, mensajes directos, formularios y llamadas dejan de vivir en cinco bandejas distintas.",
+              "Conecta los mensajes, formularios y llamadas acordados en tu plan.",
           },
           {
-            title: "La oferta se responde mientras hay interés",
+            title: "Explica la oferta",
             description:
-              "Los datos aprobados de la promoción salen en segundos, no cuando se va la última clienta del día.",
+              "Responde preguntas aprobadas sobre promociones y paquetes.",
           },
           {
-            title: "La cita se agenda dentro de la conversación",
-            description:
-              "Sin perseguir un enlace, sin ir y venir por horarios y sin nadie esperando una llamada que no llega.",
+            title: "Ayuda a elegir horario",
+            description: "Ayuda a agendar dentro de la conversación.",
           },
           {
-            title: "La relación continúa",
+            title: "Mantén el contacto",
             description:
-              "Los recordatorios protegen la cita, y el seguimiento trae de vuelta a la clienta para la siguiente.",
+              "Envía recordatorios y retoma el contacto tras una cita perdida.",
           },
         ],
         script: {
@@ -1753,33 +1784,30 @@ export const industryContentEs: IndustryLocaleBundle = {
       },
       crmPipelineDemo: {
         eyebrow: "03 · Gestionar",
-        title: "Un solo lugar para ver quién está esperando un horario.",
+        title: "Ve quién quiere reservar o volver.",
         description:
-          "Una promoción puede traer más mensajes en una tarde de los que recepción alcanza a seguir. Aquí cada solicitud conserva su oferta, su canal, su estado y su siguiente paso, así nada se pierde entre una respuesta de historia y la agenda.",
-        ctaLabel: "Agenda tu diagnóstico para med spa",
+          "Reúne cada oferta, conversación y siguiente paso en tu CRM. Recepción puede ver quién necesita atención.",
+        ctaLabel: "Hablar de mi med spa",
         boardCaption: "Recorrido de cliente de ejemplo",
-        bridge:
-          "Atraer, convertir y gestionar: un solo recorrido del cliente que sigue funcionando después de la primera visita.",
+        bridge: "Sigue las reservas y mantén el contacto con tus clientes.",
         stages: [
           {
-            title: "Solicitud nueva",
+            title: "Solicitud recibida",
             description:
-              "Respuestas de historias, comentarios y mensajes se vuelven una sola solicitud visible.",
+              "Los comentarios y mensajes conectados se convierten en solicitudes visibles.",
           },
           {
-            title: "Respondida",
-            description:
-              "La oferta queda confirmada mientras tu equipo sigue atendiendo.",
+            title: "Cliente atendido",
+            description: "Tu equipo puede ver la respuesta sobre la oferta.",
           },
           {
             title: "Tratamiento elegido",
-            description:
-              "Lo que la clienta quiere agendar queda anotado en la solicitud.",
+            description: "La elección del cliente queda registrada.",
           },
           {
             title: "Cita solicitada",
             description:
-              "Recepción ve el horario por confirmar y el seguimiento ya programado.",
+              "Revisa el horario solicitado y el próximo seguimiento.",
           },
         ],
         script: {
@@ -1847,10 +1875,10 @@ export const industryContentEs: IndustryLocaleBundle = {
         },
       },
       appointmentCommitment: {
-        eyebrow: "Compromiso de la reserva",
-        title: "Una cita solicitada no es lo mismo que una cita confirmada.",
+        eyebrow: "Opcional · Desde DigitalFace AI",
+        title: "Confirma reservas con un anticipo opcional.",
         description:
-          "Consulta, conversación, interés de tratamiento, agendamiento y, cuando le sirve a tu med spa, un paso más: un anticipo de reserva o una reserva de tratamiento que debe acreditarse antes de dar la cita por confirmada.",
+          "Elige qué tratamientos requieren un pago de reserva antes de confirmar la cita.",
         steps: [
           {
             label: "Cita solicitada",
@@ -1879,220 +1907,254 @@ export const industryContentEs: IndustryLocaleBundle = {
         ],
         points: [
           {
-            title: "Menos reservas sin intención",
+            title: "Pide un compromiso",
             description:
-              "Un espacio de tratamiento que cuesta reservar lo pide quien realmente piensa venir, así las promociones dejan de llenar la agenda de inasistencias.",
+              "Un pago de reserva puede ayudar a reducir las citas sin compromiso.",
           },
           {
-            title: "Cabinas que se mantienen productivas",
+            title: "Ve qué citas están confirmadas",
             description:
-              "Confirmada significa pagada y confirmada, no solo solicitada: la cabina y el profesional quedan reservados para una cita comprometida.",
+              "Distingue las reservas pagadas de las solicitudes de cita.",
           },
           {
-            title: "Tu proveedor, tu dinero",
+            title: "Recibe el dinero en tu cuenta",
             description:
-              "Los pagos pasan por el proveedor de pagos que tu med spa ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+              "Tu proveedor cobra el pago. DigitalFace conecta el agendamiento y nunca retiene tus fondos.",
           },
         ],
         note: "Es opcional y se configura por tratamiento: tú decides qué citas piden anticipo y de cuánto. El anticipo refuerza el compromiso; no es una garantía de asistencia.",
       },
-      packagesTitle:
-        "Elige el nivel de crecimiento que corresponde a tu med spa hoy.",
+      packagesTitle: "Elige el plan para tu med spa.",
       packages: [
         {
           name: "DigitalFace Capture",
-          nicheName: "Captación de Clientes para Med Spa",
+          nicheName: "Organiza las solicitudes de cita",
           price: "$890",
           setup: "$597 de implementación única",
           description:
-            "Genera consultas por tratamientos y promociones, captúralas todas en tu CRM y responde antes de que se enfríe el interés.",
+            "Organiza las consultas sobre tratamientos y paquetes, con respuestas y recordatorios automáticos.",
           idealFor:
-            "Med spas que necesitan un flujo confiable de solicitudes de cita y una agenda que deje de perderlas.",
+            "Para equipos que reciben consultas y necesitan dar seguimiento.",
           highlights: [
-            "Un canal prioritario de captación",
-            "CRM incluido para solicitudes de cita y seguimiento",
-            "Respuesta automática inmediata, agendamiento y recordatorios",
-            "Anticipo opcional para confirmar la reserva",
+            "Cada consulta en un CRM",
+            "Respuestas y seguimiento automáticos",
+            "Enlaces de cita y recordatorios",
+            "Mensaje tras una llamada perdida",
           ],
           details: [
             {
-              title: "Captación para med spa administrada",
+              title: "Qué recibes",
               description:
-                "Configuramos y administramos un canal prioritario en Meta, Google o TikTok, elegido según tus ofertas, tus membresías y los tratamientos que quieres llenar esta temporada.",
+                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
             },
             {
-              title: "CRM de clientes incluido",
+              title: "Qué cubre la implementación",
               description:
-                "La captura de leads, la gestión del proceso comercial y el seguimiento van incluidos. Cada consulta queda como una oportunidad organizada, con su origen, la oferta de la que vino, su etapa y su historial completo.",
+                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
             },
             {
-              title: "Respuesta automática inmediata",
+              title: "Qué gestionamos cada mes",
               description:
-                "Mensajes automáticos por SMS y correo confirman cada consulta al instante y llevan al cliente directo a reservar, a cualquier hora.",
+                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
             },
             {
-              title: "Calendario de citas y recordatorios",
+              title: "Consumo y alcance",
               description:
-                "Enlaces de agendamiento, confirmaciones, recordatorios e instrucciones de reprogramación reemplazan casi toda la coordinación manual que hoy hace recepción, y reducen inasistencias evitables.",
+                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
             },
             {
-              title: "Revisión mensual de desempeño",
+              title: "Cuándo subir de nivel",
               description:
-                "Revisamos el origen de los leads, la actividad de respuesta, las citas agendadas y atendidas y el costo por cita agendada, y acordamos la siguiente promoción.",
+                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $1,000 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
           },
-          cta: "Empezar con Captación para Med Spa",
+          cta: "Hablar de Capture",
+          footnotes: [],
         },
         {
           name: "DigitalFace AI",
-          nicheName: "Sistema Completo para Med Spa",
+          nicheName: "Suma apoyo de IA para reservas",
           price: "$1,490",
           setup: "$1,097 de implementación única",
           description:
-            "Dos canales de captación, un sitio web de conversión, comunicación con IA e infraestructura de campañas, administrados como un solo sistema.",
+            "Deja que la IA explique ofertas aprobadas y ayude a reservar o reprogramar.",
           idealFor:
-            "Med spas listos para operar todo el sistema de captación y conversión, con IA respondiendo a toda hora.",
+            "Para equipos que necesitan ayuda para responder y agendar.",
           featured: true,
           highlights: [
-            "Todo lo de DigitalFace Capture",
-            "Sitio web de conversión + hasta 2 formularios",
-            "Comunicación con IA con $20 de saldo mensual",
+            "Todo lo de Capture",
+            "Respuestas de IA en inglés y español",
+            "Apoyo para agendar e intervención del equipo",
+            "Seguimiento a citas perdidas y anticipos opcionales",
           ],
           details: [
             {
-              title: "Todo lo de Capture, más un segundo canal",
+              title: "Qué recibes",
               description:
-                "Dos canales en Meta, Google o TikTok, administrados en conjunto, moviendo el presupuesto hacia el que esté generando citas atendidas, no solo mensajes. Debajo sigue incluida toda la base de DigitalFace Capture: captación, CRM, primera respuesta, calendario y reportes.",
+                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
             },
             {
-              title: "Sitio web de conversión con hasta 2 formularios",
+              title: "Qué cubre la implementación",
               description:
-                "Un sitio web enfocado en conversión con hasta dos formularios de solicitud de cita conectados directamente a tu CRM. No son páginas, ajustes ni desarrollo ilimitados.",
+                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
             },
             {
-              title: "Comunicación bilingüe con IA",
+              title: "Qué gestionamos cada mes",
               description:
-                "El asistente responde en inglés y español usando únicamente lo que apruebas: tratamientos, promociones, condiciones de membresías y paquetes, horarios, ubicación, políticas y reglas de precio. Cada mes incluye $20 de saldo de uso de IA.",
+                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
             },
             {
-              title: "Traspaso médico y de excepciones",
+              title: "Límites en el agendamiento",
               description:
-                "Las preguntas médicas, las contraindicaciones, los síntomas, los reclamos y las solicitudes para el equipo se escalan a personas, nunca las responde el asistente.",
+                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
             },
             {
-              title: "Configuración y automatización de email marketing",
+              title: "Anticipos y consumo",
               description:
-                "Construimos y operamos la automatización de las campañas, incluidas ofertas de temporada, renovación de membresías y secuencias para clientes que llevan tiempo sin venir. El envío de correos se factura por volumen, y las campañas, plantillas o textos adicionales por fuera del alcance acordado se cotizan aparte.",
+                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
             },
             {
-              title: "Hasta 4 piezas publicitarias estáticas al mes",
+              title: "Cuándo ampliar el sistema",
               description:
-                "Piezas estáticas de foto o gráfica, adaptadas con textos en inglés y español. La producción de video no está incluida.",
+                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
+            },
+            {
+              title: "No incluido",
+              description:
+                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
             },
           ],
           note: {
-            title: "Presupuesto publicitario",
-            body: "La gestión incluye presupuestos publicitarios de hasta $2,500 al mes. La inversión publicitaria se paga directamente a las plataformas. Presupuestos publicitarios superiores requieren un ajuste en la tarifa de gestión.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
           },
-          footnotes: [
-            "El uso de IA por encima del saldo de $20 incluido se factura a $0.40 por cada 1M de tokens de entrada y $2.40 por cada 1M de tokens de salida.",
-            "El envío de correos se factura a $1.35 por cada 1.000 correos enviados.",
-            "La producción de video no está incluida. Podemos conectarte con un aliado de producción externo cuando lo necesites.",
-          ],
-          cta: "Empezar con el Sistema Completo para Med Spa",
+          footnotes: [],
+          cta: "Hablar de DigitalFace AI",
         },
         {
           name: "The DigitalFace Sales System",
-          nicheName: "Plan a Medida para Med Spa",
+          nicheName: "Suma publicidad para tu med spa",
           price: "A medida",
           priceCaption: "Se define y se cotiza según tus requerimientos",
           description:
-            "Para med spas con presupuestos mayores, varias sedes, captación avanzada, automatización compleja o integraciones a medida.",
+            "Suma anuncios gestionados y una página para tu tratamiento u oferta principal.",
           idealFor:
-            "Med spas cuyos requerimientos van más allá de un paquete fijo.",
+            "Para clínicas listas para sumar publicidad y seguir las citas.",
           scopeNote:
-            "Son capacidades disponibles, no una lista de inclusiones fijas. Definimos y cotizamos únicamente lo que tu med spa realmente necesita.",
+            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
           highlights: [
-            "Varios canales de captación y presupuestos mayores",
-            "CRM, IA e integraciones avanzadas",
-            "Sedes, idiomas adicionales y soporte prioritario",
+            "Todo lo de DigitalFace AI",
+            "Un canal de Meta Ads o Google Ads",
+            "Una página de campaña · 2 rondas de revisión",
+            "Hasta 4 variaciones estáticas de anuncios al mes",
           ],
           details: [
             {
-              title: "Varios canales y presupuestos mayores",
+              title: "Qué recibes",
               description:
-                "Más de dos canales trabajando juntos, con la mezcla armada según tu menú de tratamientos, tus membresías y las temporadas que mueven tu agenda. Los presupuestos publicitarios pueden superar los topes que gestionan los planes fijos, con la tarifa de gestión ajustada al alcance que acordemos.",
+                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
             },
             {
-              title: "Sedes e idiomas adicionales",
+              title: "Qué cubre el alcance inicial",
               description:
-                "Campañas, calendarios, procesos y conversaciones separados por sede, y comunicación más allá del inglés y el español.",
+                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
             },
             {
-              title: "Arquitectura avanzada de CRM e IA",
+              title: "Presupuesto de pauta",
               description:
-                "Procesos separados para membresías, paquetes y tratamientos sueltos, más los roles, permisos y reportería con los que realmente trabaja recepción. El asistente maneja más conocimiento aprobado, más canales y una lógica de calificación y enrutamiento más compleja que la del estándar.",
+                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
             },
             {
-              title: "Integraciones, anticipos y reglas de prepago a medida",
+              title: "Cómo cotizamos el alcance a medida",
               description:
-                "Conexiones con tu software de gestión, facturación o herramientas internas, y automatizaciones diseñadas para tu operación específica. Los montos de reserva pueden variar por tratamiento, profesional o sede, con prepago de paquetes y tus propias reglas de devolución o crédito conectadas al proveedor de pagos que ya usas.",
+                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
             },
             {
-              title: "Reactivación, reportería y soporte prioritario",
+              title: "Medición y consumo",
               description:
-                "Reactivación estructurada de clientes inactivos y membresías por vencer, atribución desde la oferta hasta la cita atendida, y un nivel de soporte acordado contigo.",
+                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
+            },
+            {
+              title: "Límites de la IA y de las citas",
+              description:
+                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
+            },
+            {
+              title: "Alcance y límites",
+              description:
+                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
+            },
+            {
+              title: "No incluido",
+              description:
+                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
             },
           ],
           note: {
-            title: "Cómo se construye el precio",
-            body: "Tus requerimientos, el presupuesto publicitario, los canales, las sedes, las integraciones, el uso de IA, la complejidad de las automatizaciones y el nivel de soporte. Definimos el alcance contigo antes de cotizar.",
+            title: "Costos de plataforma y consumo",
+            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
           },
-          cta: "Armar mi Plan a Medida para Med Spa",
+          cta: "Hablar de mi Sales System",
+          footnotes: [
+            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
+          ],
         },
       ],
-      faqTitle: "Lo que más nos preguntan los med spas",
-      faqDescription:
-        "Revisamos tus promociones, el flujo de consultas en redes, tu proceso de respuesta, la agenda, la reactivación y el seguimiento antes de recomendarte un paquete.",
+      faqTitle: "Antes de agendar",
+      faqDescription: "Respuestas rápidas sobre tu equipo y el sistema.",
       faq: [
         {
-          question:
-            "¿El sistema puede responder preguntas sobre tratamientos y promociones?",
+          question: "¿La IA puede explicar tratamientos y ofertas?",
           answer:
-            "Sí, cuando las respuestas están aprobadas por el med spa y son de carácter administrativo. La pertinencia clínica, las contraindicaciones, el diagnóstico y el consejo médico personalizado siguen siendo del profesional.",
+            "Sí, con respuestas administrativas aprobadas. La elegibilidad clínica, las contraindicaciones, el diagnóstico y la orientación médica quedan a cargo de los profesionales.",
         },
         {
-          question: "¿Puede manejar consultas de Instagram y Facebook?",
+          question: "¿Pueden conectar Instagram y Facebook?",
           answer:
-            "Sí. Los formularios, las rutas de mensajería seleccionadas y los flujos de comentarios configurados se conectan al sistema cuando están incluidos en el alcance.",
+            "Sí. Los formularios, canales de mensajes y respuestas a comentarios configurados se conectan cuando están incluidos en tu alcance.",
         },
         {
-          question: "¿El equipo puede tomar el control de una conversación?",
+          question: "¿El personal puede tomar la conversación?",
           answer:
-            "Sí. Tu equipo puede tomar el control cuando un cliente pide hablar con una persona o cuando la conversación se vuelve clínica, delicada, urgente o sale del conocimiento aprobado.",
+            "Sí. Tu equipo puede intervenir cuando lo pidan o si la pregunta es clínica, sensible, urgente o fuera de las respuestas aprobadas.",
         },
         {
-          question: "¿Puede manejar membresías y paquetes prepagados?",
+          question: "¿Pueden dar seguimiento a membresías y paquetes?",
           answer:
-            "Sí, en la parte comercial. El sistema puede registrar qué clientes tienen membresía o sesiones pendientes de un paquete, recordarles reservar y cobrar un anticipo o prepago con tu propio proveedor de pagos. No reemplaza tu punto de venta ni tu historia clínica.",
+            "Sí, como trabajo con alcance y cotización aparte. Puedes seguir membresías y sesiones pendientes, enviar recordatorios y solicitar pagos mediante tu proveedor. No reemplaza tu punto de venta ni la historia clínica.",
         },
         {
-          question: "¿Ustedes producen fotos y videos profesionales?",
+          question: "¿Incluyen fotos y video profesionales?",
           answer:
-            "La producción profesional no está incluida. El med spa entrega las fotos y videos originales aprobados, y nosotros adaptamos el material acordado para campañas y rutas de conversión.",
+            "No. Tú aportas fotos y video aprobados; nosotros adaptamos los materiales acordados para campañas y páginas de reserva.",
         },
       ],
       booking: {
-        title: "Hablemos de tu sistema de crecimiento.",
+        title: "¿Quieres más reservas y clientes que vuelvan?",
         description:
-          "Elige un horario que te acomode para revisar cómo tu med spa convierte promociones en citas agendadas, reduce inasistencias y hace volver a sus clientes.",
-        proposalTitle: "¿Necesitas un flujo a la medida para tu med spa?",
+          "Agenda una llamada. Revisamos tus ofertas y seguimiento, y te recomendamos un plan.",
+        proposalTitle: "¿Necesitas un plan de med spa a medida?",
         proposalDescription:
-          "Pide una propuesta para membresías, varias sedes, automatización de reseñas, admisión por tratamiento u otro proceso propio.",
+          "Cuéntanos sobre tus membresías, paquetes, sedes o próximas visitas.",
       },
     },
   },

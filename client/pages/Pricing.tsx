@@ -62,21 +62,6 @@ export default function Pricing() {
           </h1>
           <p className="mt-4 text-lg text-ink-500">{t.hero.description}</p>
         </div>
-        <div className="container mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="rounded-3xl border border-ink-100 bg-white/90 p-6 text-left shadow-brand-card"
-              >
-                <h2 className="text-lg font-semibold text-slate-900">
-                  {pillar.title}
-                </h2>
-                <p className="mt-3 text-sm text-ink-500">{pillar.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       <section className="bg-white py-20 sm:py-24 lg:py-28">
@@ -145,10 +130,10 @@ export default function Pricing() {
                           <Check className="h-3 w-3" strokeWidth={2.5} />
                         </span>
                         <div className="min-w-0">
-                          <h3 className="text-[13px] font-semibold leading-5 text-slate-900">
+                          <h3 className="text-sm font-semibold leading-5 text-slate-900">
                             {feature.title}
                           </h3>
-                          <p className="mt-0.5 text-xs leading-5 text-ink-500">
+                          <p className="mt-0.5 text-sm leading-5 text-ink-500">
                             {feature.body}
                           </p>
                         </div>
@@ -416,19 +401,23 @@ export default function Pricing() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink-400">
               {t.notes.title}
             </p>
-            <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 divide-y divide-ink-200">
               {t.notes.items.map((note) => (
-                <div key={note.title}>
-                  <p className="text-sm font-semibold text-slate-900">
+                <details key={note.title} className="group py-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded text-base font-semibold text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 [&::-webkit-details-marker]:hidden">
                     {note.title}
-                  </p>
-                  <p className="mt-1.5 text-xs leading-relaxed text-ink-500">
+                    <ChevronDown
+                      aria-hidden="true"
+                      className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                    />
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-500">
                     {note.body}
                   </p>
-                </div>
+                </details>
               ))}
             </div>
-            <p className="mt-6 border-t border-ink-200 pt-5 text-xs leading-relaxed text-ink-500">
+            <p className="mt-6 border-t border-ink-200 pt-5 text-sm leading-relaxed text-ink-500">
               {t.notes.guarantee}
             </p>
           </div>
@@ -448,7 +437,7 @@ export default function Pricing() {
               {t.includes.description}
             </p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {t.includes.items.map((item) => (
               <div
                 key={item.title}
@@ -497,7 +486,7 @@ export default function Pricing() {
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
         description={t.cta.description}
-        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
+        primaryCta={{ label: t.cta.primaryCta, href: path(BOOKING_ROUTE) }}
         secondaryCta={{ label: t.cta.secondaryCta, href: path("/features") }}
       />
     </div>

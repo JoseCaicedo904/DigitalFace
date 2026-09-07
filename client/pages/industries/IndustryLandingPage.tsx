@@ -673,48 +673,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
           </div>
         </section>
 
-        <section className="bg-white py-20 sm:py-24 lg:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading
-                eyebrow={data.problem.eyebrow}
-                title={data.problem.title}
-                description={data.problem.description}
-              />
-            </Reveal>
-            <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {data.problem.items.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <Reveal
-                    key={item.title}
-                    reducedMotion={reducedMotion}
-                    delay={index * 0.04}
-                  >
-                    <motion.article
-                      whileHover={reducedMotion ? undefined : { y: -6 }}
-                      className="group h-full rounded-3xl border border-ink-100 bg-white p-7 shadow-brand-card transition hover:border-brand-200"
-                    >
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
-                        <Icon className="h-5 w-5" />
-                      </span>
-                      <h3 className="mt-5 text-lg font-semibold text-slate-900">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-ink-500">
-                        {item.description}
-                      </p>
-                    </motion.article>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Placed after the problem list and before the mechanics: the visitor
-            has just read what is going wrong, so the photographs land on their
-            own room rather than decorating an explanation they have not read. */}
+        {/* The gallery carries the practical benefits; the demos show how they work. */}
         <IndustryGallery
           eyebrow={data.gallery.eyebrow}
           title={data.gallery.title}
@@ -756,7 +715,10 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
             argument. It earns more here: the demonstrations are done, so the
             headline lands as the conclusion of what was just shown and opens the
             dark half of the page. */}
-        <section className="bg-slate-950 pt-16 sm:pt-20 lg:pt-24">
+        <section
+          id="capabilities"
+          className="scroll-mt-24 bg-slate-950 py-16 sm:py-20 lg:py-24"
+        >
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <MediaSlot
               spec={pageMedia.hero}
@@ -775,58 +737,13 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                 </div>
               }
             />
-          </div>
-        </section>
-
-        <section
-          id="capabilities"
-          className="scroll-mt-24 bg-slate-950 py-20 text-white sm:py-24 lg:py-28"
-        >
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <Reveal reducedMotion={reducedMotion}>
-              <SectionHeading
-                eyebrow={data.capabilities.eyebrow}
-                title={data.capabilities.title}
-                description={data.capabilities.description}
-                inverted
+            <p className="mt-6 text-center text-sm text-white/75">
+              <ShieldCheck
+                aria-hidden="true"
+                className="mr-2 inline h-5 w-5 text-ocean-200"
               />
-            </Reveal>
-            <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {data.capabilities.items.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <Reveal
-                    key={item.title}
-                    reducedMotion={reducedMotion}
-                    delay={index * 0.04}
-                  >
-                    <motion.article
-                      whileHover={
-                        reducedMotion ? undefined : { y: -6, scale: 1.01 }
-                      }
-                      className="group h-full rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur transition hover:border-ocean-300/30 hover:bg-white/10"
-                    >
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-ocean-200">
-                        <Icon className="h-5 w-5" />
-                      </span>
-                      <h3 className="mt-5 text-lg font-semibold text-white">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-white/65">
-                        {item.description}
-                      </p>
-                    </motion.article>
-                  </Reveal>
-                );
-              })}
-            </div>
-            <Reveal
-              reducedMotion={reducedMotion}
-              className="mt-10 rounded-2xl border border-ocean-300/20 bg-ocean-400/10 p-5 text-center text-sm text-white/75"
-            >
-              <ShieldCheck className="mr-2 inline h-5 w-5 text-ocean-200" />
               {ui.capabilitiesDisclaimer}
-            </Reveal>
+            </p>
           </div>
         </section>
 
