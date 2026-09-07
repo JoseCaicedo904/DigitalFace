@@ -10,7 +10,9 @@ The implementation preserves React 18, Vite and React Router 6, the corporate se
 
 The source now uses one production origin and one route registry. Unknown direct requests receive a real 404 through the local production server; Vercel configuration removes the catch-all rewrite and uses its native custom-404 handling. GA4 is ready for a user-supplied Measurement ID and counts a lead only after the form endpoint confirms success.
 
-**Evidence boundaries:** public HTTP requests were read-only. The live baseline in `seo-audit/live-http-baseline.json` tested 29 visitor-style URLs and 26 crawler-style requests (24 public routes plus two nonexistent routes). All 26 crawler-style requests returned HTTP 200 with one shared initial title and zero H1s. Changing a User-Agent is a diagnostic probe, not a real Google crawl or Search Console validation. HTTP and www redirects already returned 308 in the tested samples. Nothing was deployed, no DNS/account settings were changed, and no form, calendar or provider API was submitted live.
+**Evidence boundaries:** public HTTP requests were read-only. The live baseline in `seo-audit/live-http-baseline.json` tested 29 visitor-style URLs and 26 crawler-style requests (24 public routes plus two nonexistent routes). All 26 crawler-style requests returned HTTP 200 with one shared initial title and zero H1s. Changing a User-Agent is a diagnostic probe, not a real Google crawl or Search Console validation. HTTP and www redirects already returned 308 in the tested samples. That baseline was captured before the production deployment noted below. No form, calendar or provider API was submitted live.
+
+**Deployment update, 2026-09-07:** commit `d5e6578` (`Favicon`) was deployed through the existing Vercel project `digital-face`. Deployment `dpl_47g992eta9hKCNWdGyBeWRiGr4TC` is production `READY` and aliased to `https://digitalface.app`. The favicon source is `public/DIGITAL FACE favicon.png` (464 x 860 transparent PNG); generated public files are `/favicon.ico`, `/favicon-48x48.png`, `/favicon-96x96.png` and `/favicon-192x192.png`. Live HTTP checks confirmed those URLs return image bytes matching the local public assets. No DNS, Google Search Console, GA4, GHL, n8n, form, calendar or provider-account setting was changed.
 
 The two attached guides were treated as references, not operational instructions. No other client's analytics ID, DNS token, domain or schema was copied.
 
@@ -166,15 +168,15 @@ A successful API response confirms acceptance by the website's upstream workflow
 
 ## G. External tasks — owner handoff
 
-Follow [SEO_MANUAL_ACTIONS.md](SEO_MANUAL_ACTIONS.md) after deploying the reviewed code. It separates Vercel/domain configuration, DNS verification, Search Console, GA4, business verification and content work. Submit **https://digitalface.app/sitemap.xml** to the **digitalface.app Domain property**. No Google verification token is required in source for DNS verification.
+Follow [SEO_MANUAL_ACTIONS.md](SEO_MANUAL_ACTIONS.md) for the remaining account-side tasks. It separates Vercel/domain confirmation, DNS verification, Search Console, GA4, business verification and content work. Submit **https://digitalface.app/sitemap.xml** to the **digitalface.app Domain property**. No Google verification token is required in source for DNS verification.
 
-The live baseline is the old deployment, not evidence that these fixes are live. Vercel build/dashboard overrides, preview indexing controls, native custom-404 status, DNS ownership, GSC indexing, analytics ingestion and GHL/n8n delivery remain external checks. The owner will perform visual/responsive review as requested.
+The pre-deploy live baseline is old evidence. Vercel production deployment is now confirmed for the current source; DNS ownership, GSC indexing, analytics ingestion and GHL/n8n delivery remain external checks. The owner will perform visual/responsive review as requested.
 
 ## H. Future SEO content opportunities
 
 | Priority | Work                                                                             | Why it has distinct value                                                                        | Evidence needed before publishing                                                                       |
 | -------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| P0       | Deploy, verify crawl/indexing and activate lead measurement                      | Establish usable discovery and conversion baselines                                              | Successful build, real production responses, GSC/GA4 access                                             |
+| P0       | Verify crawl/indexing and activate lead measurement                              | Establish usable discovery and conversion baselines                                              | GSC/GA4 access and account-side verification                                                            |
 | P0       | Resolve pricing/scope and business-identity inconsistencies                      | Trust and conversion depend on a consistent factual offer                                        | Written owner confirmation, current legal/contact details                                               |
 | P0       | Two substantive case studies for the existing Jennifer and Diego implementations | Demonstrate practical experience in automation and patient communication                         | Client publication permission, confirmed problem/solution/scope/timeframe; metrics only if verified     |
 | P1       | AI chatbot and appointment-follow-up service pillar                              | Specific commercial evaluation: approved knowledge, channels, human handoff, booking controls    | Real delivered workflow examples, scope, limitations and FAQs                                           |
@@ -207,13 +209,14 @@ Client form/CRM contracts, server-side destination configuration, selected-servi
 
 ### Validation record
 
-- Production build: passed, including build-time HTML and the 24-route SEO validator.
+- Production build: passed locally and remotely, including build-time HTML and the 24-route SEO validator.
+- Favicon validation: passed for the four public favicon assets, three embedded ICO images and all 26 prerendered HTML documents.
 - TypeScript: pnpm typecheck passed.
 - Vitest: 148 tests passed across 12 files, including 10 hydration cases and local HTTP tests for every public route.
 - Generated DOM: unique titles/descriptions/H1s/canonicals, one main landmark, correct language/index state, valid JSON-LD, visible FAQ answers, existing images, labeled form controls, valid internal routes/fragments, no orphan pages and sitemap equality.
 - Analytics: tested entirely offline with synthetic values; no duplicate tag/page-view, no PII/query propagation, success-gated leads and safe behavior when tracking fails.
 - Source formatting: scoped to this task's changed files, preserving unrelated historical files. No separate ESLint script is defined in this repository.
-- Live: read-only public HTTP baseline only. No deployment, Google verification/indexing, field CWV, visual QA, browser automation, live form submission, booked appointment or provider ingestion test.
+- Live: production deployment `dpl_47g992eta9hKCNWdGyBeWRiGr4TC` is `READY`; favicon URLs return image bytes, not HTML, and match the local public assets. No Google verification/indexing, field CWV, visual QA, browser automation, live form submission, booked appointment or provider ingestion test was performed.
 
 Re-run pnpm build, pnpm typecheck and pnpm test after edits. pnpm seo:validate checks the generated output independently. Build before the tests that inspect dist/spa. Vite reports a large shared bundle and an older Browserslist dataset; React Router emits future-version opt-in notices. These are recorded maintenance/performance items, not ignored test failures.
 
