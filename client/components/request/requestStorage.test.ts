@@ -16,6 +16,14 @@ describe("service request selection", () => {
     expect(addServiceId(once, "meta-ads")).toEqual(["meta-ads"]);
   });
 
+  it("keeps the two content services as independent selections", () => {
+    const withProduction = addServiceId([], "audiovisual-production");
+    expect(addServiceId(withProduction, "content-creation")).toEqual([
+      "audiovisual-production",
+      "content-creation",
+    ]);
+  });
+
   it("keeps the selection in catalog order, whatever order it was built in", () => {
     const selection = ["campaign-landing-pages", "meta-ads", "crm-pipeline"]
       .reverse()

@@ -49,6 +49,17 @@ describe("service catalog", () => {
     expect(ids("en")).toEqual(SERVICE_IDS);
   });
 
+  it("offers audiovisual production and content creation independently", () => {
+    expect(SERVICE_IDS).toContain("audiovisual-production");
+    expect(SERVICE_IDS).toContain("content-creation");
+    expect(getServiceName("audiovisual-production", "en")).toBe(
+      "Audiovisual production",
+    );
+    expect(getServiceName("audiovisual-production", "es")).toBe(
+      "Producción audiovisual",
+    );
+  });
+
   it("groups every service under a catalog section", () => {
     const grouped = serviceCatalog.flatMap((group) =>
       group.services.map((service) => service.id),

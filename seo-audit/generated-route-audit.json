@@ -11,7 +11,7 @@
     "url": "/",
     "title": "Customer Acquisition & Marketing Automation | DigitalFace Marketing",
     "description": "DigitalFace connects advertising, AI follow-up and CRM for appointment-driven businesses in Florida, across the US and Latin America. Explore your growth system.",
-    "h1": "Turn more inquiries into appointments and customers.",
+    "h1": "More inquiries. Better follow-up. More opportunities.",
     "canonical": "https://digitalface.app/",
     "indexStatus": "index, follow",
     "alternates": {
@@ -27,59 +27,43 @@
     "headings": [
       {
         "level": 1,
-        "text": "Turn more inquiries into appointments and customers."
+        "text": "More inquiries. Better follow-up. More opportunities."
       },
       {
         "level": 2,
-        "text": "Getting the lead is only the beginning."
+        "text": "Get in front of the right people."
+      },
+      {
+        "level": 2,
+        "text": "Let AI answer while you’re busy."
+      },
+      {
+        "level": 2,
+        "text": "Know who needs your attention."
+      },
+      {
+        "level": 2,
+        "text": "Add an optional deposit to your booking."
       },
       {
         "level": 3,
-        "text": "Create opportunities"
+        "text": "Ask for commitment"
       },
       {
         "level": 3,
-        "text": "Move them forward"
+        "text": "See what is confirmed"
       },
       {
         "level": 3,
-        "text": "Keep control"
+        "text": "Keep payments in your account"
       },
       {
         "level": 2,
-        "text": "Create real opportunities, not just impressions and clicks."
+        "text": "Keep your tools. Connect the work."
       },
       {
         "level": 2,
-        "text": "A lead only becomes valuable when someone moves it forward."
-      },
-      {
-        "level": 2,
-        "text": "Know exactly where every opportunity stands."
-      },
-      {
-        "level": 2,
-        "text": "A requested appointment is not the same as a confirmed one."
-      },
-      {
-        "level": 3,
-        "text": "Fewer casual bookings"
-      },
-      {
-        "level": 3,
-        "text": "A confirmation your team can trust"
-      },
-      {
-        "level": 3,
-        "text": "Your provider, your money"
-      },
-      {
-        "level": 2,
-        "text": "Built to work with your stack."
-      },
-      {
-        "level": 2,
-        "text": "Built across different industries."
+        "text": "See the businesses we’ve worked with."
       },
       {
         "level": 3,
@@ -127,7 +111,7 @@
       },
       {
         "level": 2,
-        "text": "Web experiences built to turn attention into action."
+        "text": "Websites that make the next step clear."
       },
       {
         "level": 3,
@@ -135,15 +119,19 @@
       },
       {
         "level": 2,
-        "text": "Let's talk about what your business needs next."
+        "text": "What would help your business most?"
       },
       {
         "level": 2,
-        "text": "Tell us what you want to improve."
+        "text": "Tell us what you need."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -330,19 +318,23 @@
       },
       {
         "href": "/book?from=homepage",
-        "text": "Build my growth system"
+        "text": "Book a Call"
+      },
+      {
+        "href": "#system",
+        "text": "See How It Works"
       },
       {
         "href": "/book?from=homepage",
-        "text": "See how DigitalFace would create opportunities"
+        "text": "Talk About My Campaigns"
       },
       {
         "href": "/book?from=homepage",
-        "text": "See how DigitalFace would move your inquiries forward"
+        "text": "Talk About AI Support"
       },
       {
         "href": "/book?from=homepage",
-        "text": "See how DigitalFace would keep your team in control"
+        "text": "Talk About My Follow-Up"
       },
       {
         "href": "https://drajennifersinisterra.com/",
@@ -354,7 +346,15 @@
       },
       {
         "href": "/book?from=homepage",
-        "text": "Choose a time"
+        "text": "Find My Next Step"
+      },
+      {
+        "href": "/pricing",
+        "text": "Compare Plans"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Choose Individual Services"
       },
       {
         "href": "/",
@@ -675,7 +675,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 181156,
+    "htmlBytes": 177117,
     "incoming": [
       "/es",
       "/about",
@@ -717,7 +717,7 @@
     "url": "/es",
     "title": "Captación de Clientes y Automatización de Marketing | DigitalFace Marketing",
     "description": "DigitalFace conecta pauta, seguimiento con IA y CRM para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica. Conoce tu sistema de crecimiento.",
-    "h1": "Convierte más consultas en citas y clientes.",
+    "h1": "Más consultas. Mejor seguimiento. Más oportunidades.",
     "canonical": "https://digitalface.app/es",
     "indexStatus": "index, follow",
     "alternates": {
@@ -733,59 +733,43 @@
     "headings": [
       {
         "level": 1,
-        "text": "Convierte más consultas en citas y clientes."
+        "text": "Más consultas. Mejor seguimiento. Más oportunidades."
       },
       {
         "level": 2,
-        "text": "Conseguir el contacto es solo el comienzo."
+        "text": "Llega a las personas indicadas."
+      },
+      {
+        "level": 2,
+        "text": "Deja que la IA responda mientras atiendes."
+      },
+      {
+        "level": 2,
+        "text": "Identifica quién necesita tu atención."
+      },
+      {
+        "level": 2,
+        "text": "Suma un anticipo opcional a tus reservas."
       },
       {
         "level": 3,
-        "text": "Crear oportunidades"
+        "text": "Pide un compromiso"
       },
       {
         "level": 3,
-        "text": "Hacerlas avanzar"
+        "text": "Ve qué está confirmado"
       },
       {
         "level": 3,
-        "text": "Mantener el control"
+        "text": "Recibe el dinero en tu cuenta"
       },
       {
         "level": 2,
-        "text": "Crea oportunidades reales, no solo impresiones y clics."
+        "text": "Conectamos las herramientas que ya usas."
       },
       {
         "level": 2,
-        "text": "Un contacto solo tiene valor cuando alguien lo hace avanzar."
-      },
-      {
-        "level": 2,
-        "text": "Ten claro en qué punto está cada oportunidad."
-      },
-      {
-        "level": 2,
-        "text": "Una cita solicitada no es lo mismo que una cita confirmada."
-      },
-      {
-        "level": 3,
-        "text": "Menos reservas sin intención"
-      },
-      {
-        "level": 3,
-        "text": "Una confirmación en la que tu equipo puede confiar"
-      },
-      {
-        "level": 3,
-        "text": "Tu proveedor, tu dinero"
-      },
-      {
-        "level": 2,
-        "text": "Funciona con las herramientas que ya usas."
-      },
-      {
-        "level": 2,
-        "text": "Construido para diferentes industrias."
+        "text": "Conoce los negocios con los que hemos trabajado."
       },
       {
         "level": 3,
@@ -833,7 +817,7 @@
       },
       {
         "level": 2,
-        "text": "Experiencias web creadas para convertir la atención en acción."
+        "text": "Sitios web que facilitan el siguiente paso."
       },
       {
         "level": 3,
@@ -841,15 +825,19 @@
       },
       {
         "level": 2,
-        "text": "Hablemos de lo que tu negocio necesita ahora."
+        "text": "¿Qué le ayudaría más a tu negocio?"
       },
       {
         "level": 2,
-        "text": "Cuéntanos qué quieres mejorar."
+        "text": "Cuéntanos qué necesitas."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -1036,19 +1024,23 @@
       },
       {
         "href": "/es/book?from=homepage",
-        "text": "Construir mi sistema de crecimiento"
+        "text": "Agendar una llamada"
+      },
+      {
+        "href": "#system",
+        "text": "Ver cómo funciona"
       },
       {
         "href": "/es/book?from=homepage",
-        "text": "Mira cómo DigitalFace crearía oportunidades"
+        "text": "Hablar de mis campañas"
       },
       {
         "href": "/es/book?from=homepage",
-        "text": "Mira cómo DigitalFace haría avanzar tus consultas"
+        "text": "Hablar del apoyo con IA"
       },
       {
         "href": "/es/book?from=homepage",
-        "text": "Mira cómo DigitalFace mantendría el control"
+        "text": "Hablar de mi seguimiento"
       },
       {
         "href": "https://drajennifersinisterra.com/",
@@ -1060,7 +1052,15 @@
       },
       {
         "href": "/es/book?from=homepage",
-        "text": "Elige un horario"
+        "text": "Definir mi próximo paso"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Comparar planes"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Elegir servicios individuales"
       },
       {
         "href": "/es",
@@ -1381,7 +1381,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 183072,
+    "htmlBytes": 178843,
     "incoming": [
       "/",
       "/es/about",
@@ -1423,7 +1423,7 @@
     "url": "/about",
     "title": "About DigitalFace Marketing | How the Company Works",
     "description": "DigitalFace brings strategy, technology and specialist expertise together under one accountable relationship. How the company is organized, what it takes responsibility for, and where it operates from.",
-    "h1": "Specialized expertise. One DigitalFace.",
+    "h1": "Marketing and technology. One team.",
     "canonical": "https://digitalface.app/about",
     "indexStatus": "index, follow",
     "alternates": {
@@ -1440,43 +1440,39 @@
     "headings": [
       {
         "level": 1,
-        "text": "Specialized expertise. One DigitalFace."
+        "text": "Marketing and technology. One team."
       },
       {
         "level": 2,
-        "text": "One direction. Specialized depth."
+        "text": "One point of contact. The right specialists."
       },
       {
         "level": 2,
-        "text": "Four things that guide the work."
+        "text": "What you can expect from us."
       },
       {
         "level": 3,
-        "text": "Business before tools"
+        "text": "Your business comes first"
       },
       {
         "level": 3,
-        "text": "Specialists when specialization matters"
-      },
-      {
-        "level": 3,
-        "text": "Clarity and accountability"
-      },
-      {
-        "level": 3,
-        "text": "Results over activity"
+        "text": "Clear answers and ownership"
       },
       {
         "level": 2,
-        "text": "Built in Colombia. Working beyond borders."
+        "text": "Based in Colombia. Connected across borders."
       },
       {
         "level": 2,
-        "text": "Ready to attract, convert and manage opportunities better?"
+        "text": "Tell us what you want to improve."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -1760,7 +1756,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 83523,
+    "htmlBytes": 80899,
     "incoming": [
       "/",
       "/es/about",
@@ -1799,7 +1795,7 @@
     "url": "/es/about",
     "title": "Sobre DigitalFace Marketing | Cómo funciona la compañía",
     "description": "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cómo está organizada la compañía, de qué responde y desde dónde opera.",
-    "h1": "Experiencia especializada. Un solo DigitalFace.",
+    "h1": "Marketing y tecnología. Un solo equipo.",
     "canonical": "https://digitalface.app/es/about",
     "indexStatus": "index, follow",
     "alternates": {
@@ -1816,43 +1812,39 @@
     "headings": [
       {
         "level": 1,
-        "text": "Experiencia especializada. Un solo DigitalFace."
+        "text": "Marketing y tecnología. Un solo equipo."
       },
       {
         "level": 2,
-        "text": "Una sola dirección. Experiencia especializada."
+        "text": "Un solo contacto. Los especialistas adecuados."
       },
       {
         "level": 2,
-        "text": "Cuatro cosas que guían el trabajo."
+        "text": "Qué puedes esperar de nosotros."
       },
       {
         "level": 3,
-        "text": "El negocio antes que las herramientas"
-      },
-      {
-        "level": 3,
-        "text": "Especialistas cuando la especialización importa"
+        "text": "Tu negocio marca el rumbo"
       },
       {
         "level": 3,
         "text": "Claridad y responsabilidad"
       },
       {
-        "level": 3,
-        "text": "Resultados antes que actividad"
+        "level": 2,
+        "text": "Desde Colombia, conectados con otros mercados."
       },
       {
         "level": 2,
-        "text": "Construida en Colombia. Trabajando más allá de las fronteras."
-      },
-      {
-        "level": 2,
-        "text": "¿Listo para atraer, convertir y gestionar mejor tus oportunidades?"
+        "text": "Cuéntanos qué quieres mejorar."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -2136,7 +2128,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 84218,
+    "htmlBytes": 81545,
     "incoming": [
       "/es",
       "/about",
@@ -2176,7 +2168,7 @@
     "url": "/features",
     "title": "Patient Acquisition & Follow-Up System | DigitalFace Marketing",
     "description": "How the DigitalFace system captures every patient inquiry and turns it into a booked appointment: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
-    "h1": "The DigitalFace Sales System: from patient inquiry to booked appointment",
+    "h1": "From first interest to the next appointment.",
     "canonical": "https://digitalface.app/features",
     "indexStatus": "index, follow",
     "alternates": {
@@ -2194,99 +2186,87 @@
     "headings": [
       {
         "level": 1,
-        "text": "The DigitalFace Sales System: from patient inquiry to booked appointment"
+        "text": "From first interest to the next appointment."
       },
       {
         "level": 2,
-        "text": "No inquiry goes unanswered"
+        "text": "Attract"
       },
       {
         "level": 2,
-        "text": "Appointments on autopilot"
+        "text": "Convert"
       },
       {
         "level": 2,
-        "text": "A pipeline you can read"
+        "text": "Manage"
       },
       {
         "level": 2,
-        "text": "One patient, one evening: the system doing its job"
+        "text": "Here’s how an inquiry moves forward."
       },
       {
         "level": 3,
-        "text": "She finds you and leaves her details"
+        "text": "They find you"
       },
       {
         "level": 3,
-        "text": "She gets a real answer in seconds"
+        "text": "They get an answer"
       },
       {
         "level": 3,
-        "text": "She books herself, without a phone call"
+        "text": "They choose a time"
       },
       {
         "level": 3,
-        "text": "Your team opens one board and sees everything"
+        "text": "Your team knows what’s next"
       },
       {
         "level": 2,
-        "text": "The seven modules behind those four moments"
+        "text": "The support behind each step."
       },
       {
         "level": 3,
-        "text": "Paid traffic that creates demand"
+        "text": "Bring in new inquiries"
       },
       {
         "level": 3,
-        "text": "Lead capture from every channel"
+        "text": "Keep incoming leads together"
       },
       {
         "level": 3,
-        "text": "Instant follow-up and nurture"
+        "text": "Answer and follow up"
       },
       {
         "level": 3,
-        "text": "Booking and reminders"
+        "text": "Make booking easier"
       },
       {
         "level": 3,
-        "text": "CRM pipeline visibility"
+        "text": "See every next step"
       },
       {
         "level": 3,
-        "text": "Recovery and reactivation"
+        "text": "Reconnect with missed opportunities"
       },
       {
         "level": 3,
-        "text": "Ongoing optimization"
+        "text": "Keep improving"
       },
       {
         "level": 2,
-        "text": "Three principles that keep the system simple"
-      },
-      {
-        "level": 3,
-        "text": "Clarity"
-      },
-      {
-        "level": 3,
-        "text": "Automation"
-      },
-      {
-        "level": 3,
-        "text": "Support"
+        "text": "We get it ready in 3 steps."
       },
       {
         "level": 2,
-        "text": "A productized setup with a clear timeline"
-      },
-      {
-        "level": 2,
-        "text": "Want to see how the system runs?"
+        "text": "See how it would work for your practice."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -2472,12 +2452,12 @@
         "text": "Book a demo"
       },
       {
-        "href": "/contact",
-        "text": "Talk with us"
+        "href": "/book",
+        "text": "Book a System Walkthrough"
       },
       {
         "href": "/pricing",
-        "text": "See the plans"
+        "text": "Compare Plans"
       },
       {
         "href": "/",
@@ -2558,7 +2538,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87883,
+    "htmlBytes": 86446,
     "incoming": [
       "/",
       "/about",
@@ -2601,7 +2581,7 @@
     "url": "/es/features",
     "title": "Sistema de Captación y Seguimiento de Pacientes | DigitalFace Marketing",
     "description": "Cómo el sistema DigitalFace captura cada consulta de paciente y la convierte en una cita agendada: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
-    "h1": "El Sistema de Ventas DigitalFace: de la consulta del paciente a la cita agendada",
+    "h1": "Del primer interés a la próxima cita.",
     "canonical": "https://digitalface.app/es/features",
     "indexStatus": "index, follow",
     "alternates": {
@@ -2619,99 +2599,87 @@
     "headings": [
       {
         "level": 1,
-        "text": "El Sistema de Ventas DigitalFace: de la consulta del paciente a la cita agendada"
+        "text": "Del primer interés a la próxima cita."
       },
       {
         "level": 2,
-        "text": "Ninguna consulta se queda sin respuesta"
+        "text": "Atraer"
       },
       {
         "level": 2,
-        "text": "Citas en piloto automático"
+        "text": "Convertir"
       },
       {
         "level": 2,
-        "text": "Un proceso que se entiende"
+        "text": "Gestionar"
       },
       {
         "level": 2,
-        "text": "Una paciente, una noche: el sistema haciendo su trabajo"
+        "text": "Así avanza una consulta."
       },
       {
         "level": 3,
-        "text": "Te encuentra y deja sus datos"
+        "text": "Te encuentran"
       },
       {
         "level": 3,
-        "text": "Recibe una respuesta real en segundos"
+        "text": "Reciben una respuesta"
       },
       {
         "level": 3,
-        "text": "Agenda ella sola, sin llamar"
+        "text": "Eligen un horario"
       },
       {
         "level": 3,
-        "text": "Tu equipo abre un tablero y ve todo"
+        "text": "Tu equipo sabe qué sigue"
       },
       {
         "level": 2,
-        "text": "Los siete módulos detrás de esos cuatro momentos"
+        "text": "El apoyo detrás de cada paso."
       },
       {
         "level": 3,
-        "text": "Pauta digital que genera demanda"
+        "text": "Recibe nuevas consultas"
       },
       {
         "level": 3,
-        "text": "Captura de contactos desde todos los canales"
+        "text": "Reúne los contactos que llegan"
       },
       {
         "level": 3,
-        "text": "Respuesta inmediata y seguimiento"
+        "text": "Responde y da seguimiento"
       },
       {
         "level": 3,
-        "text": "Agendamiento y recordatorios"
+        "text": "Facilita las reservas"
       },
       {
         "level": 3,
-        "text": "Visibilidad del proceso en el CRM"
+        "text": "Ve cada próximo paso"
       },
       {
         "level": 3,
-        "text": "Recuperación y reactivación"
+        "text": "Retoma las oportunidades pendientes"
       },
       {
         "level": 3,
-        "text": "Optimización continua"
+        "text": "Sigue mejorando"
       },
       {
         "level": 2,
-        "text": "Tres principios que mantienen el sistema simple"
-      },
-      {
-        "level": 3,
-        "text": "Claridad"
-      },
-      {
-        "level": 3,
-        "text": "Automatización"
-      },
-      {
-        "level": 3,
-        "text": "Soporte"
+        "text": "Lo ponemos en marcha en 3 pasos."
       },
       {
         "level": 2,
-        "text": "Una implementación estandarizada con tiempos claros"
-      },
-      {
-        "level": 2,
-        "text": "¿Quieres ver cómo funciona el sistema?"
+        "text": "Mira cómo funcionaría en tu clínica."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -2897,12 +2865,12 @@
         "text": "Agenda una demostración"
       },
       {
-        "href": "/es/contact",
-        "text": "Hablemos"
+        "href": "/es/book",
+        "text": "Agendar una demostración"
       },
       {
         "href": "/es/pricing",
-        "text": "Ver los planes"
+        "text": "Comparar planes"
       },
       {
         "href": "/es",
@@ -2983,7 +2951,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 89380,
+    "htmlBytes": 87755,
     "incoming": [
       "/es",
       "/es/about",
@@ -3026,7 +2994,7 @@
     "url": "/pay-per-service",
     "title": "Marketing & Automation Services for Clinics | DigitalFace Marketing",
     "description": "Hire one DigitalFace capability at a time instead of a full system: Meta and Google ads, chatbots, workflow automation, CRM setup, reporting, websites and funnels.",
-    "h1": "Take the one piece you need, without the bundle.",
+    "h1": "Choose only the services you need.",
     "canonical": "https://digitalface.app/pay-per-service",
     "indexStatus": "index, follow",
     "alternates": {
@@ -3044,15 +3012,15 @@
     "headings": [
       {
         "level": 1,
-        "text": "Take the one piece you need, without the bundle."
+        "text": "Choose only the services you need."
       },
       {
         "level": 2,
-        "text": "Build your stack one service at a time."
+        "text": "What would help your business?"
       },
       {
         "level": 3,
-        "text": "Paid media & tracking"
+        "text": "Paid Media"
       },
       {
         "level": 4,
@@ -3076,11 +3044,15 @@
       },
       {
         "level": 4,
+        "text": "Audiovisual production"
+      },
+      {
+        "level": 4,
         "text": "Content creation"
       },
       {
         "level": 3,
-        "text": "Automation and chatbots"
+        "text": "Automation & Chatbots"
       },
       {
         "level": 4,
@@ -3104,7 +3076,7 @@
       },
       {
         "level": 3,
-        "text": "Lead operations and CRM"
+        "text": "Lead Management & CRM"
       },
       {
         "level": 4,
@@ -3128,7 +3100,7 @@
       },
       {
         "level": 3,
-        "text": "Websites and funnels"
+        "text": "Websites & Funnels"
       },
       {
         "level": 4,
@@ -3140,11 +3112,15 @@
       },
       {
         "level": 2,
-        "text": "Tell us which service you need and we will map the next step."
+        "text": "Ready to discuss your request?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -3330,92 +3306,36 @@
         "text": "Book a demo"
       },
       {
-        "href": "/contact",
-        "text": "Book a service call"
+        "href": "#services",
+        "text": "See Services"
       },
       {
         "href": "/features",
-        "text": "See the Sales System"
+        "text": "See the Complete System"
       },
       {
-        "href": "/contact",
-        "text": "Request an ad strategy call->"
+        "href": "#paid-media",
+        "text": "Paid Media"
       },
       {
-        "href": "/contact",
-        "text": "Set up my tracking->"
+        "href": "#automation-and-chatbots",
+        "text": "Automation & Chatbots"
       },
       {
-        "href": "/contact",
-        "text": "Ask about TikTok ads->"
+        "href": "#lead-ops-crm",
+        "text": "Lead Management & CRM"
       },
       {
-        "href": "/contact",
-        "text": "Plan a Google ads campaign->"
+        "href": "#websites-and-funnels",
+        "text": "Websites & Funnels"
       },
       {
-        "href": "/contact",
-        "text": "Request an SEO strategy->"
-      },
-      {
-        "href": "/contact",
-        "text": "Plan content creation->"
-      },
-      {
-        "href": "/contact",
-        "text": "Start a chatbot project->"
-      },
-      {
-        "href": "/contact",
-        "text": "Request a workflow audit->"
-      },
-      {
-        "href": "/contact",
-        "text": "Automate appointments->"
-      },
-      {
-        "href": "/contact",
-        "text": "Ask about e-commerce automation->"
-      },
-      {
-        "href": "/contact",
-        "text": "Automate comment replies->"
-      },
-      {
-        "href": "/contact",
-        "text": "Set up lead capture->"
-      },
-      {
-        "href": "/contact",
-        "text": "Set up appointment flows->"
-      },
-      {
-        "href": "/contact",
-        "text": "Configure my pipeline->"
-      },
-      {
-        "href": "/contact",
-        "text": "Schedule a CRM consult->"
-      },
-      {
-        "href": "/contact",
-        "text": "Build a reporting dashboard->"
-      },
-      {
-        "href": "/contact",
-        "text": "Start a web project->"
-      },
-      {
-        "href": "/contact",
-        "text": "Build a landing page->"
-      },
-      {
-        "href": "/contact",
-        "text": "Book a service call"
+        "href": "/contact#request-services",
+        "text": "Review My Request"
       },
       {
         "href": "/features",
-        "text": "See the Sales System"
+        "text": "See the Complete System"
       },
       {
         "href": "/",
@@ -3496,7 +3416,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 97684,
+    "htmlBytes": 109309,
     "incoming": [
       "/",
       "/about",
@@ -3536,7 +3456,7 @@
     "url": "/es/pay-per-service",
     "title": "Servicios de Marketing y Automatización para Clínicas | DigitalFace Marketing",
     "description": "Contrata una sola capacidad de DigitalFace a la vez en lugar del sistema completo: pauta en Meta y Google, chatbots, automatización de procesos, CRM, reportes, sitios web y embudos.",
-    "h1": "Llévate solo la pieza que necesitas.",
+    "h1": "Elige solo los servicios que necesitas.",
     "canonical": "https://digitalface.app/es/pay-per-service",
     "indexStatus": "index, follow",
     "alternates": {
@@ -3554,15 +3474,15 @@
     "headings": [
       {
         "level": 1,
-        "text": "Llévate solo la pieza que necesitas."
+        "text": "Elige solo los servicios que necesitas."
       },
       {
         "level": 2,
-        "text": "Arma tu estructura servicio por servicio."
+        "text": "¿Qué le ayudaría a tu negocio?"
       },
       {
         "level": 3,
-        "text": "Publicidad y medición"
+        "text": "Publicidad digital"
       },
       {
         "level": 4,
@@ -3583,6 +3503,10 @@
       {
         "level": 4,
         "text": "Estrategia SEO"
+      },
+      {
+        "level": 4,
+        "text": "Producción audiovisual"
       },
       {
         "level": 4,
@@ -3638,7 +3562,7 @@
       },
       {
         "level": 3,
-        "text": "Sitios web y embudos"
+        "text": "Sitios web y páginas de campaña"
       },
       {
         "level": 4,
@@ -3650,11 +3574,15 @@
       },
       {
         "level": 2,
-        "text": "Cuéntanos qué servicio necesitas y definimos el siguiente paso."
+        "text": "¿Listo para hablar de tu solicitud?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -3840,92 +3768,36 @@
         "text": "Agenda una demostración"
       },
       {
-        "href": "/es/contact",
-        "text": "Agenda una llamada"
+        "href": "#services",
+        "text": "Ver servicios"
       },
       {
         "href": "/es/features",
-        "text": "Ver el Sistema de Ventas"
+        "text": "Ver el sistema completo"
       },
       {
-        "href": "/es/contact",
-        "text": "Agenda una asesoría de pauta->"
+        "href": "#paid-media",
+        "text": "Publicidad digital"
       },
       {
-        "href": "/es/contact",
-        "text": "Configura mi medición->"
+        "href": "#automation-and-chatbots",
+        "text": "Automatización y chatbots"
       },
       {
-        "href": "/es/contact",
-        "text": "Pregunta por TikTok Ads->"
+        "href": "#lead-ops-crm",
+        "text": "Gestión de contactos y CRM"
       },
       {
-        "href": "/es/contact",
-        "text": "Planea una campaña en Google->"
+        "href": "#websites-and-funnels",
+        "text": "Sitios web y páginas de campaña"
       },
       {
-        "href": "/es/contact",
-        "text": "Solicita una estrategia SEO->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Planea tu contenido->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Empieza tu proyecto de chatbot->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Solicita una revisión de procesos->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Automatiza tus citas->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Pregunta por automatización de e-commerce->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Automatiza tus comentarios->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Configura la captura de contactos->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Configura tus flujos de citas->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Configura mi embudo->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Agenda una asesoría de CRM->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Arma tu tablero de reportes->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Empieza tu proyecto web->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Arma tu landing page->"
-      },
-      {
-        "href": "/es/contact",
-        "text": "Agenda una llamada"
+        "href": "/es/contact#request-services",
+        "text": "Revisar mi solicitud"
       },
       {
         "href": "/es/features",
-        "text": "Ver el Sistema de Ventas"
+        "text": "Ver el sistema completo"
       },
       {
         "href": "/es",
@@ -4006,7 +3878,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 99631,
+    "htmlBytes": 111228,
     "incoming": [
       "/es",
       "/es/about",
@@ -4045,7 +3917,7 @@
     "url": "/pricing",
     "title": "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
     "description": "DigitalFace Capture, DigitalFace AI and The DigitalFace Sales System: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
-    "h1": "Choose the system that fits where your practice is today",
+    "h1": "Choose the help your practice needs.",
     "canonical": "https://digitalface.app/pricing",
     "indexStatus": "index, follow",
     "alternates": {
@@ -4062,23 +3934,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Choose the system that fits where your practice is today"
-      },
-      {
-        "level": 2,
-        "text": "Productized"
-      },
-      {
-        "level": 2,
-        "text": "Automation first"
-      },
-      {
-        "level": 2,
-        "text": "Built for small teams"
-      },
-      {
-        "level": 2,
-        "text": "Fully visible"
+        "text": "Choose the help your practice needs."
       },
       {
         "level": 2,
@@ -4086,27 +3942,27 @@
       },
       {
         "level": 3,
-        "text": "CRM & shared inbox"
+        "text": "Keep every inquiry together"
       },
       {
         "level": 3,
-        "text": "Lead capture & first response"
+        "text": "Reply to new inquiries"
       },
       {
         "level": 3,
-        "text": "Automated follow-up"
+        "text": "Keep the follow-up going"
       },
       {
         "level": 3,
-        "text": "Booking & reminders"
+        "text": "Make booking easier"
       },
       {
         "level": 3,
-        "text": "Missed-call text-back"
+        "text": "Reply to missed calls"
       },
       {
         "level": 3,
-        "text": "Reporting & maintenance"
+        "text": "See progress. We maintain it."
       },
       {
         "level": 2,
@@ -4114,27 +3970,27 @@
       },
       {
         "level": 3,
-        "text": "Bilingual AI assistant"
+        "text": "Let AI answer in two languages"
       },
       {
         "level": 3,
-        "text": "Lead qualification"
+        "text": "Know what patients need"
       },
       {
         "level": 3,
-        "text": "Booking & rescheduling"
+        "text": "Help book and reschedule"
       },
       {
         "level": 3,
-        "text": "Human handoff"
+        "text": "Let your team step in"
       },
       {
         "level": 3,
-        "text": "No-show recovery"
+        "text": "Reconnect after a missed visit"
       },
       {
         "level": 3,
-        "text": "Optional booking deposits"
+        "text": "Offer an optional deposit"
       },
       {
         "level": 2,
@@ -4142,27 +3998,27 @@
       },
       {
         "level": 3,
-        "text": "Meta or Google Ads"
+        "text": "Reach patients with ads"
       },
       {
         "level": 3,
-        "text": "Campaign landing page"
+        "text": "Give your offer its own page"
       },
       {
         "level": 3,
-        "text": "Static ad creatives"
+        "text": "Keep your ads fresh"
       },
       {
         "level": 3,
-        "text": "Weekly optimization"
+        "text": "Improve campaigns every week"
       },
       {
         "level": 3,
-        "text": "Conversion tracking"
+        "text": "See which ads lead to bookings"
       },
       {
         "level": 3,
-        "text": "Monthly growth review"
+        "text": "Review results each month"
       },
       {
         "level": 3,
@@ -4246,19 +4102,15 @@
       },
       {
         "level": 2,
-        "text": "Everything you need to actually run the system"
+        "text": "We handle the setup and support."
       },
       {
         "level": 3,
-        "text": "Done-for-you setup"
+        "text": "Ready for your team"
       },
       {
         "level": 3,
-        "text": "CRM for lead management"
-      },
-      {
-        "level": 3,
-        "text": "Team onboarding"
+        "text": "Every inquiry in one place"
       },
       {
         "level": 3,
@@ -4266,15 +4118,19 @@
       },
       {
         "level": 2,
-        "text": "What owners ask before booking a call"
+        "text": "Ready to get started?"
       },
       {
         "level": 2,
-        "text": "See the system built around your practice"
+        "text": "Find the right plan on a call."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -4461,27 +4317,27 @@
       },
       {
         "href": "/book",
-        "text": "Schedule a consultation"
+        "text": "Book a Plan Consultation"
       },
       {
         "href": "/book",
-        "text": "Schedule a consultation"
+        "text": "Book a Plan Consultation"
       },
       {
         "href": "/book",
-        "text": "Schedule a consultation"
+        "text": "Book a Plan Consultation"
       },
       {
         "href": "/book",
-        "text": "Schedule a consultation"
+        "text": "Book a Plan Consultation"
       },
       {
-        "href": "/contact",
-        "text": "Contact us"
+        "href": "/book",
+        "text": "Book a Call"
       },
       {
         "href": "/features",
-        "text": "See the system"
+        "text": "See How It Works"
       },
       {
         "href": "/",
@@ -4562,7 +4418,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 119458,
+    "htmlBytes": 119722,
     "incoming": [
       "/",
       "/about",
@@ -4604,7 +4460,7 @@
     "url": "/es/pricing",
     "title": "Planes y Precios para Clínicas | DigitalFace Marketing",
     "description": "DigitalFace Capture, DigitalFace AI y The DigitalFace Sales System: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
-    "h1": "Elige el sistema que corresponde al momento de tu clínica",
+    "h1": "Elige el apoyo que necesita tu clínica.",
     "canonical": "https://digitalface.app/es/pricing",
     "indexStatus": "index, follow",
     "alternates": {
@@ -4621,23 +4477,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Elige el sistema que corresponde al momento de tu clínica"
-      },
-      {
-        "level": 2,
-        "text": "Estandarizado"
-      },
-      {
-        "level": 2,
-        "text": "Automatización primero"
-      },
-      {
-        "level": 2,
-        "text": "Hecho para equipos pequeños"
-      },
-      {
-        "level": 2,
-        "text": "Todo a la vista"
+        "text": "Elige el apoyo que necesita tu clínica."
       },
       {
         "level": 2,
@@ -4645,27 +4485,27 @@
       },
       {
         "level": 3,
-        "text": "CRM y bandeja compartida"
+        "text": "Reúne todas las consultas"
       },
       {
         "level": 3,
-        "text": "Captura y primera respuesta"
+        "text": "Responde al primer contacto"
       },
       {
         "level": 3,
-        "text": "Seguimiento automático"
+        "text": "Mantén el seguimiento"
       },
       {
         "level": 3,
-        "text": "Agendamiento y recordatorios"
+        "text": "Facilita el agendamiento"
       },
       {
         "level": 3,
-        "text": "SMS tras llamadas perdidas"
+        "text": "Responde a llamadas perdidas"
       },
       {
         "level": 3,
-        "text": "Reportes y mantenimiento"
+        "text": "Ve el avance. Nosotros lo mantenemos."
       },
       {
         "level": 2,
@@ -4673,27 +4513,27 @@
       },
       {
         "level": 3,
-        "text": "Asistente de IA bilingüe"
+        "text": "Deja que la IA responda en dos idiomas"
       },
       {
         "level": 3,
-        "text": "Calificación del interés"
+        "text": "Conoce qué necesita el paciente"
       },
       {
         "level": 3,
-        "text": "Agendamiento y reprogramación"
+        "text": "Ayuda a agendar y reprogramar"
       },
       {
         "level": 3,
-        "text": "Entrega a tu equipo"
+        "text": "Deja que tu equipo intervenga"
       },
       {
         "level": 3,
-        "text": "Recuperación de inasistencias"
+        "text": "Retoma las citas perdidas"
       },
       {
         "level": 3,
-        "text": "Anticipos de cita opcionales"
+        "text": "Ofrece un anticipo opcional"
       },
       {
         "level": 2,
@@ -4701,27 +4541,27 @@
       },
       {
         "level": 3,
-        "text": "Pauta en Meta o Google"
+        "text": "Llega a pacientes con anuncios"
       },
       {
         "level": 3,
-        "text": "Landing de campaña"
+        "text": "Dale a tu oferta su propia página"
       },
       {
         "level": 3,
-        "text": "Anuncios estáticos"
+        "text": "Renueva tus anuncios"
       },
       {
         "level": 3,
-        "text": "Optimización semanal"
+        "text": "Mejora las campañas cada semana"
       },
       {
         "level": 3,
-        "text": "Medición de conversiones"
+        "text": "Ve qué anuncios generan citas"
       },
       {
         "level": 3,
-        "text": "Revisión mensual de crecimiento"
+        "text": "Revisa los resultados cada mes"
       },
       {
         "level": 3,
@@ -4805,19 +4645,15 @@
       },
       {
         "level": 2,
-        "text": "Todo lo necesario para operar el sistema de verdad"
+        "text": "Nos encargamos de la implementación y el soporte."
       },
       {
         "level": 3,
-        "text": "Implementación completa"
+        "text": "Listo para tu equipo"
       },
       {
         "level": 3,
-        "text": "CRM para gestión de leads"
-      },
-      {
-        "level": 3,
-        "text": "Capacitación del equipo"
+        "text": "Cada consulta en un solo lugar"
       },
       {
         "level": 3,
@@ -4825,15 +4661,19 @@
       },
       {
         "level": 2,
-        "text": "Lo que preguntan los dueños antes de agendar"
+        "text": "¿Listo para empezar?"
       },
       {
         "level": 2,
-        "text": "Mira el sistema armado alrededor de tu clínica"
+        "text": "Encuentra tu plan en una llamada."
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -5020,27 +4860,27 @@
       },
       {
         "href": "/es/book",
-        "text": "Agenda una consulta"
+        "text": "Agendar una llamada sobre el plan"
       },
       {
         "href": "/es/book",
-        "text": "Agenda una consulta"
+        "text": "Agendar una llamada sobre el plan"
       },
       {
         "href": "/es/book",
-        "text": "Agenda una consulta"
+        "text": "Agendar una llamada sobre el plan"
       },
       {
         "href": "/es/book",
-        "text": "Agenda una consulta"
+        "text": "Agendar una llamada sobre el plan"
       },
       {
-        "href": "/es/contact",
-        "text": "Contáctanos"
+        "href": "/es/book",
+        "text": "Agendar una llamada"
       },
       {
         "href": "/es/features",
-        "text": "Ver el sistema"
+        "text": "Ver cómo funciona"
       },
       {
         "href": "/es",
@@ -5121,7 +4961,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 121275,
+    "htmlBytes": 121538,
     "incoming": [
       "/es",
       "/es/about",
@@ -5163,7 +5003,7 @@
     "url": "/contact",
     "title": "Contact DigitalFace Marketing | Book a Patient Growth Call",
     "description": "Tell us about your practice and how patient inquiries reach you today. We map your follow-up flow and bring a plan to the call, and we reply within one business day.",
-    "h1": "Talk to DigitalFace about your growth system.",
+    "h1": "Tell us what you need.",
     "canonical": "https://digitalface.app/contact",
     "indexStatus": "index, follow",
     "alternates": {
@@ -5180,31 +5020,35 @@
     "headings": [
       {
         "level": 1,
-        "text": "Talk to DigitalFace about your growth system."
+        "text": "Tell us what you need."
       },
       {
         "level": 2,
-        "text": "Choose a time that works for you."
+        "text": "Choose a time. We’ll take it from there."
       },
       {
         "level": 2,
-        "text": "Tell us what you want to improve."
+        "text": "Prefer to send a message?"
       },
       {
         "level": 2,
-        "text": "Talk to DigitalFace"
+        "text": "Contact details"
       },
       {
         "level": 3,
-        "text": "What happens next"
+        "text": "Email"
       },
       {
-        "level": 4,
-        "text": "What to include"
+        "level": 3,
+        "text": "Where we work"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -5391,15 +5235,15 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "Choose a time"
+        "text": "Book a Call"
       },
       {
         "href": "#contact-form",
-        "text": "Use the form instead"
+        "text": "Send a Message"
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon7Tue8Wed9Thu10Fri11Sat12Mon14Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Tue8Wed9Thu10Fri11Sat12Mon14Tue15Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalfacemarketing.com",
@@ -5484,7 +5328,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 74891,
+    "htmlBytes": 70210,
     "incoming": [
       "/",
       "/about",
@@ -5523,7 +5367,7 @@
     "url": "/es/contact",
     "title": "Contacto | Agenda una Llamada con DigitalFace Marketing",
     "description": "Cuéntanos sobre tu clínica y cómo llegan tus consultas de pacientes hoy. Mapeamos tu flujo de seguimiento y llegamos a la llamada con un plan. Respondemos en un día hábil.",
-    "h1": "Hablemos de tu sistema de crecimiento.",
+    "h1": "Cuéntanos qué necesitas.",
     "canonical": "https://digitalface.app/es/contact",
     "indexStatus": "index, follow",
     "alternates": {
@@ -5540,31 +5384,35 @@
     "headings": [
       {
         "level": 1,
-        "text": "Hablemos de tu sistema de crecimiento."
+        "text": "Cuéntanos qué necesitas."
       },
       {
         "level": 2,
-        "text": "Elige el horario que mejor te funcione."
+        "text": "Elige un horario. Te ayudamos con lo que sigue."
       },
       {
         "level": 2,
-        "text": "Cuéntanos qué quieres mejorar."
+        "text": "¿Prefieres escribirnos?"
       },
       {
         "level": 2,
-        "text": "Habla con DigitalFace"
+        "text": "Datos de contacto"
       },
       {
         "level": 3,
-        "text": "Qué sigue"
+        "text": "Correo"
       },
       {
-        "level": 4,
-        "text": "Qué incluir en tu mensaje"
+        "level": 3,
+        "text": "Dónde trabajamos"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -5751,15 +5599,15 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Elige un horario"
+        "text": "Agendar una llamada"
       },
       {
         "href": "#contact-form",
-        "text": "Prefiero el formulario"
+        "text": "Enviar un mensaje"
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun7mar8mié9jue10vie11sáb12lun14Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mar8mié9jue10vie11sáb12lun14mar15Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalfacemarketing.com",
@@ -5844,7 +5692,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 75758,
+    "htmlBytes": 71083,
     "incoming": [
       "/es",
       "/es/about",
@@ -5906,6 +5754,10 @@
     "headingJumps": [],
     "links": [
       {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
+      {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
       },
@@ -6168,7 +6020,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 33342,
+    "htmlBytes": 35536,
     "incoming": [
       "/",
       "/about",
@@ -6233,6 +6085,10 @@
     "headingJumps": [],
     "links": [
       {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
+      {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
       },
@@ -6495,7 +6351,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 33949,
+    "htmlBytes": 36157,
     "incoming": [
       "/es",
       "/es/about",
@@ -6612,6 +6468,10 @@
     "headingJumps": [],
     "links": [
       {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
+      {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
       },
@@ -6874,7 +6734,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 38510,
+    "htmlBytes": 40704,
     "incoming": [
       "/",
       "/about",
@@ -6990,6 +6850,10 @@
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -7253,7 +7117,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 39883,
+    "htmlBytes": 42090,
     "incoming": [
       "/es",
       "/es/about",
@@ -7378,6 +7242,10 @@
     "headingJumps": [],
     "links": [
       {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
+      {
         "href": "/",
         "text": "DigitalFace MarketingColombia - Florida"
       },
@@ -7640,7 +7508,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37200,
+    "htmlBytes": 39394,
     "incoming": [
       "/",
       "/about",
@@ -7764,6 +7632,10 @@
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/es",
         "text": "DigitalFace MarketingColombia - Florida"
@@ -8027,7 +7899,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 38273,
+    "htmlBytes": 40481,
     "incoming": [
       "/es",
       "/es/about",
@@ -8070,7 +7942,7 @@
     "url": "/industries/dental-practices",
     "title": "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
     "description": "Turn implant, veneer and smile design inquiries into attended consultations. DigitalFace runs the advertising, bilingual follow-up, consultation booking and recall workflow for dental practices in the US and Latin America.",
-    "h1": "Turn more dental inquiries into booked consultations.",
+    "h1": "Turn dental inquiries into booked consultations.",
     "canonical": "https://digitalface.app/industries/dental-practices",
     "indexStatus": "index, follow",
     "alternates": {
@@ -8089,7 +7961,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Turn more dental inquiries into booked consultations."
+        "text": "Turn dental inquiries into booked consultations."
       },
       {
         "level": 2,
@@ -8097,171 +7969,159 @@
       },
       {
         "level": 2,
-        "text": "Your practice may not need more leads. It may need a better way to convert the ones you already get."
+        "text": "Keep treatment interest from slipping away."
       },
       {
         "level": 3,
-        "text": "The inquiry cools before anyone answers"
+        "text": "Answer while you treat"
       },
       {
         "level": 3,
-        "text": "Case detail scattered across inboxes"
+        "text": "Keep the next visit on track"
       },
       {
         "level": 3,
-        "text": "No-shows and unscheduled treatment"
-      },
-      {
-        "level": 3,
-        "text": "No line from campaign to case acceptance"
+        "text": "Give your coordinator the full picture"
       },
       {
         "level": 2,
-        "text": "The clinical room stays yours. The administrative one stops running on memory."
-      },
-      {
-        "level": 3,
-        "text": "The consultation that actually gets booked"
-      },
-      {
-        "level": 3,
-        "text": "The chair that stops sitting empty"
-      },
-      {
-        "level": 3,
-        "text": "The front desk that stops chasing"
+        "text": "Reach patients interested in your treatments."
       },
       {
         "level": 2,
-        "text": "Watch a veneer ad become a consultation request."
+        "text": "Let AI answer while you’re chairside."
       },
       {
         "level": 2,
-        "text": "A Saturday morning implant question, on the schedule before Monday."
+        "text": "Know who needs a follow-up."
       },
       {
         "level": 2,
-        "text": "Know where every treatment inquiry stands."
+        "text": "Confirm consultations with an optional deposit."
+      },
+      {
+        "level": 3,
+        "text": "Ask for commitment"
+      },
+      {
+        "level": 3,
+        "text": "See what is confirmed"
+      },
+      {
+        "level": 3,
+        "text": "Keep payments in your account"
       },
       {
         "level": 2,
-        "text": "A requested consultation is not the same as a confirmed one."
+        "text": "Choose your dental plan."
       },
       {
         "level": 3,
-        "text": "Fewer casual bookings"
+        "text": "Organize dental inquiries"
       },
       {
         "level": 3,
-        "text": "A schedule you can plan around"
+        "text": "What you get"
       },
       {
         "level": 3,
-        "text": "Your provider, your money"
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Usage and scope"
+      },
+      {
+        "level": 3,
+        "text": "When to upgrade"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add AI patient follow-up"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Deposits and usage"
+      },
+      {
+        "level": 3,
+        "text": "When to expand"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add dental advertising"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What the starting scope covers"
+      },
+      {
+        "level": 3,
+        "text": "Advertising budget"
+      },
+      {
+        "level": 3,
+        "text": "How custom scope is priced"
+      },
+      {
+        "level": 3,
+        "text": "Measurement and usage"
+      },
+      {
+        "level": 3,
+        "text": "AI and appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
       },
       {
         "level": 2,
-        "text": "Built around the way modern dental practices attract and guide patients"
-      },
-      {
-        "level": 3,
-        "text": "Dental patient acquisition"
-      },
-      {
-        "level": 3,
-        "text": "AI dental concierge and patient intake"
-      },
-      {
-        "level": 3,
-        "text": "Consultation scheduling and case pipeline"
-      },
-      {
-        "level": 3,
-        "text": "Recall and reactivation"
-      },
-      {
-        "level": 2,
-        "text": "Choose the dental growth level that fits you today."
-      },
-      {
-        "level": 3,
-        "text": "Dental Patient Capture"
-      },
-      {
-        "level": 3,
-        "text": "Managed dental acquisition"
-      },
-      {
-        "level": 3,
-        "text": "Patient CRM included"
-      },
-      {
-        "level": 3,
-        "text": "Automatic first response"
-      },
-      {
-        "level": 3,
-        "text": "Consultation calendar and reminders"
-      },
-      {
-        "level": 3,
-        "text": "Monthly performance review"
-      },
-      {
-        "level": 3,
-        "text": "Complete Dental Growth System"
-      },
-      {
-        "level": 3,
-        "text": "Everything in Capture, plus a second channel"
-      },
-      {
-        "level": 3,
-        "text": "Conversion website with up to 2 forms"
-      },
-      {
-        "level": 3,
-        "text": "Bilingual AI communication"
-      },
-      {
-        "level": 3,
-        "text": "Clinical and exception handoff"
-      },
-      {
-        "level": 3,
-        "text": "Email marketing setup and automation"
-      },
-      {
-        "level": 3,
-        "text": "Up to 4 static ad creatives per month"
-      },
-      {
-        "level": 3,
-        "text": "Custom Dental Growth Plan"
-      },
-      {
-        "level": 3,
-        "text": "Multiple channels and larger budgets"
-      },
-      {
-        "level": 3,
-        "text": "Additional locations and languages"
-      },
-      {
-        "level": 3,
-        "text": "Advanced CRM and AI architecture"
-      },
-      {
-        "level": 3,
-        "text": "Custom integrations, deposits and prepayment rules"
-      },
-      {
-        "level": 3,
-        "text": "Reactivation, reporting and priority support"
-      },
-      {
-        "level": 2,
-        "text": "Real operating experience behind the system"
+        "text": "See what we’ve built."
       },
       {
         "level": 3,
@@ -8273,23 +8133,23 @@
       },
       {
         "level": 2,
-        "text": "What dental practices usually ask us"
+        "text": "Before you book"
       },
       {
         "level": 3,
-        "text": "Can patients send photos or case information?"
+        "text": "Can patients send photos?"
       },
       {
         "level": 3,
-        "text": "Can the AI recommend a treatment?"
+        "text": "Can AI recommend a treatment?"
       },
       {
         "level": 3,
-        "text": "Can our staff take over a conversation?"
+        "text": "Can staff take over?"
       },
       {
         "level": 3,
-        "text": "Can you follow up on treatment plans that were never scheduled?"
+        "text": "Can you follow up on unscheduled treatment?"
       },
       {
         "level": 3,
@@ -8297,15 +8157,19 @@
       },
       {
         "level": 2,
-        "text": "Let's talk about your patient acquisition system."
+        "text": "Want more dental consultations?"
       },
       {
         "level": 2,
-        "text": "Need a custom dental workflow?"
+        "text": "Need a custom dental plan?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/industries/dental-practices",
         "text": "EN — Current language"
@@ -8320,47 +8184,47 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Book a Dental Growth Assessment"
+        "text": "Book a Dental Marketing Call"
       },
       {
         "href": "#system",
-        "text": "See the dental system"
+        "text": "See How It Works"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Book a Dental Growth Assessment"
+        "text": "Talk About Dental Campaigns"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Book a Dental Growth Assessment"
+        "text": "Talk About Patient Follow-Up"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Book a Dental Growth Assessment"
+        "text": "Talk About Your Practice"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Start Dental Patient Capture"
+        "text": "Talk About Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Start the Complete Dental System"
+        "text": "Talk About DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Build a Custom Dental Plan"
+        "text": "Discuss My Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=dental-practices",
@@ -8372,7 +8236,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon7Tue8Wed9Thu10Fri11Sat12Mon14Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Tue8Wed9Thu10Fri11Sat12Mon14Tue15Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -8412,7 +8276,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "Book growth assessment"
+        "text": "Book a Call"
       }
     ],
     "images": [
@@ -8489,7 +8353,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 200420,
+    "htmlBytes": 200799,
     "incoming": [
       "/",
       "/about",
@@ -8529,7 +8393,7 @@
     "url": "/es/industries/dental-practices",
     "title": "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
     "description": "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones atendidas. DigitalFace opera la pauta, el seguimiento bilingüe, el agendamiento de valoraciones y la recuperación del tratamiento pendiente de clínicas odontológicas en Estados Unidos y Latinoamérica.",
-    "h1": "Convierte más consultas dentales en valoraciones agendadas.",
+    "h1": "Convierte el interés dental en citas de valoración.",
     "canonical": "https://digitalface.app/es/industries/dental-practices",
     "indexStatus": "index, follow",
     "alternates": {
@@ -8548,7 +8412,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Convierte más consultas dentales en valoraciones agendadas."
+        "text": "Convierte el interés dental en citas de valoración."
       },
       {
         "level": 2,
@@ -8556,171 +8420,159 @@
       },
       {
         "level": 2,
-        "text": "Puede que tu clínica no necesite más contactos, sino una mejor forma de convertir los que ya llegan."
+        "text": "Que el interés en un tratamiento no se pierda."
       },
       {
         "level": 3,
-        "text": "La consulta se enfría antes de que alguien responda"
+        "text": "Responde mientras atiendes"
       },
       {
         "level": 3,
-        "text": "Datos del caso repartidos en bandejas"
+        "text": "Organiza la próxima visita"
       },
       {
         "level": 3,
-        "text": "Inasistencias y tratamiento sin agendar"
-      },
-      {
-        "level": 3,
-        "text": "Sin línea entre campaña y aceptación del caso"
+        "text": "Dale el contexto a tu coordinador"
       },
       {
         "level": 2,
-        "text": "El consultorio sigue siendo tuyo. Lo administrativo deja de depender de la memoria."
-      },
-      {
-        "level": 3,
-        "text": "La valoración que sí se agenda"
-      },
-      {
-        "level": 3,
-        "text": "El sillón que deja de quedarse vacío"
-      },
-      {
-        "level": 3,
-        "text": "La recepción que deja de perseguir"
+        "text": "Atrae pacientes interesados en tus tratamientos."
       },
       {
         "level": 2,
-        "text": "Mira cómo un anuncio de carillas se vuelve una solicitud de valoración."
+        "text": "Deja que la IA responda mientras atiendes."
       },
       {
         "level": 2,
-        "text": "Una pregunta por implantes un sábado en la mañana, agendada antes del lunes."
+        "text": "Identifica quién necesita seguimiento."
       },
       {
         "level": 2,
-        "text": "Ten claro en qué punto está cada consulta de tratamiento."
+        "text": "Confirma valoraciones con un anticipo opcional."
+      },
+      {
+        "level": 3,
+        "text": "Pide un compromiso"
+      },
+      {
+        "level": 3,
+        "text": "Ve qué citas están confirmadas"
+      },
+      {
+        "level": 3,
+        "text": "Recibe el dinero en tu cuenta"
       },
       {
         "level": 2,
-        "text": "Una valoración solicitada no es lo mismo que una valoración confirmada."
+        "text": "Elige el plan para tu clínica dental."
       },
       {
         "level": 3,
-        "text": "Menos reservas sin intención"
+        "text": "Organiza las consultas dentales"
       },
       {
         "level": 3,
-        "text": "Una agenda sobre la que se puede planear"
+        "text": "Qué recibes"
       },
       {
         "level": 3,
-        "text": "Tu proveedor, tu dinero"
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Consumo y alcance"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo subir de nivel"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma seguimiento con IA"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Límites en el agendamiento"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo ampliar el sistema"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma publicidad dental"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre el alcance inicial"
+      },
+      {
+        "level": 3,
+        "text": "Presupuesto de pauta"
+      },
+      {
+        "level": 3,
+        "text": "Cómo cotizamos el alcance a medida"
+      },
+      {
+        "level": 3,
+        "text": "Medición y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Límites de la IA y de las citas"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
       },
       {
         "level": 2,
-        "text": "Construido alrededor de cómo una clínica moderna atrae y acompaña a sus pacientes"
-      },
-      {
-        "level": 3,
-        "text": "Captación de pacientes odontológicos"
-      },
-      {
-        "level": 3,
-        "text": "Concierge dental con IA y admisión del paciente"
-      },
-      {
-        "level": 3,
-        "text": "Agendamiento de valoraciones y proceso del caso"
-      },
-      {
-        "level": 3,
-        "text": "Recuperación de tratamiento y reactivación"
-      },
-      {
-        "level": 2,
-        "text": "Elige el nivel de crecimiento odontológico que corresponde a tu clínica hoy."
-      },
-      {
-        "level": 3,
-        "text": "Captación de Pacientes Dentales"
-      },
-      {
-        "level": 3,
-        "text": "Captación dental administrada"
-      },
-      {
-        "level": 3,
-        "text": "CRM de pacientes incluido"
-      },
-      {
-        "level": 3,
-        "text": "Respuesta automática inmediata"
-      },
-      {
-        "level": 3,
-        "text": "Calendario de citas y recordatorios"
-      },
-      {
-        "level": 3,
-        "text": "Revisión mensual de desempeño"
-      },
-      {
-        "level": 3,
-        "text": "Sistema Dental Completo"
-      },
-      {
-        "level": 3,
-        "text": "Todo lo de Capture, más un segundo canal"
-      },
-      {
-        "level": 3,
-        "text": "Sitio web de conversión con hasta 2 formularios"
-      },
-      {
-        "level": 3,
-        "text": "Comunicación bilingüe con IA"
-      },
-      {
-        "level": 3,
-        "text": "Traspaso clínico y de excepciones"
-      },
-      {
-        "level": 3,
-        "text": "Configuración y automatización de email marketing"
-      },
-      {
-        "level": 3,
-        "text": "Hasta 4 piezas publicitarias estáticas al mes"
-      },
-      {
-        "level": 3,
-        "text": "Plan Dental a Medida"
-      },
-      {
-        "level": 3,
-        "text": "Varios canales y presupuestos mayores"
-      },
-      {
-        "level": 3,
-        "text": "Sedes e idiomas adicionales"
-      },
-      {
-        "level": 3,
-        "text": "Arquitectura avanzada de CRM e IA"
-      },
-      {
-        "level": 3,
-        "text": "Integraciones, anticipos y reglas de prepago a medida"
-      },
-      {
-        "level": 3,
-        "text": "Reactivación, reportería y soporte prioritario"
-      },
-      {
-        "level": 2,
-        "text": "Experiencia real de operación detrás del sistema"
+        "text": "Mira lo que hemos implementado."
       },
       {
         "level": 3,
@@ -8732,39 +8584,43 @@
       },
       {
         "level": 2,
-        "text": "Lo que más nos preguntan las clínicas odontológicas"
+        "text": "Antes de agendar"
       },
       {
         "level": 3,
-        "text": "¿Los pacientes pueden enviar fotos o información del caso?"
+        "text": "¿Los pacientes pueden enviar fotos?"
       },
       {
         "level": 3,
-        "text": "¿La IA puede recomendar un tratamiento?"
+        "text": "¿La IA puede recomendar tratamientos?"
       },
       {
         "level": 3,
-        "text": "¿Nuestro equipo puede tomar el control de una conversación?"
+        "text": "¿El equipo puede tomar la conversación?"
       },
       {
         "level": 3,
-        "text": "¿Puede dar seguimiento a los planes de tratamiento que nunca se agendaron?"
+        "text": "¿Pueden retomar tratamientos sin agendar?"
       },
       {
         "level": 3,
-        "text": "¿Funciona con pacientes internacionales?"
+        "text": "¿Funciona para pacientes internacionales?"
       },
       {
         "level": 2,
-        "text": "Hablemos de tu sistema de captación de pacientes."
+        "text": "¿Quieres más citas de valoración?"
       },
       {
         "level": 2,
-        "text": "¿Necesitas un flujo dental a la medida?"
+        "text": "¿Necesitas un plan dental a medida?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/industries/dental-practices",
         "text": "EN"
@@ -8779,47 +8635,47 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Agenda tu diagnóstico odontológico"
+        "text": "Agendar una llamada para mi clínica"
       },
       {
         "href": "#system",
-        "text": "Ver el sistema dental"
+        "text": "Ver cómo funciona"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Agenda tu diagnóstico odontológico"
+        "text": "Hablar de campañas dentales"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Agenda tu diagnóstico odontológico"
+        "text": "Hablar del seguimiento a pacientes"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Agenda tu diagnóstico odontológico"
+        "text": "Hablar de mi clínica"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Empezar con Captación Dental"
+        "text": "Hablar de Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Empezar con el Sistema Dental Completo"
+        "text": "Hablar de DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Armar mi Plan Dental a Medida"
+        "text": "Hablar de mi Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=dental-practices",
@@ -8831,7 +8687,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun7mar8mié9jue10vie11sáb12lun14Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mar8mié9jue10vie11sáb12lun14mar15Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -8871,7 +8727,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Agendar diagnóstico"
+        "text": "Agendar una llamada"
       }
     ],
     "images": [
@@ -8948,7 +8804,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203615,
+    "htmlBytes": 203277,
     "incoming": [
       "/es",
       "/es/about",
@@ -8988,7 +8844,7 @@
     "url": "/industries/aesthetic-medicine",
     "title": "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
     "description": "Turn injectable, skin quality and surgical procedure interest into attended consultations. DigitalFace runs the advertising, bilingual communication, consultation booking and follow-up for aesthetic medicine and plastic surgery practices, while every clinical decision stays with your team.",
-    "h1": "Turn procedure interest into qualified, attended consultations.",
+    "h1": "Turn procedure interest into consultations.",
     "canonical": "https://digitalface.app/industries/aesthetic-medicine",
     "indexStatus": "index, follow",
     "alternates": {
@@ -9007,7 +8863,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Turn procedure interest into qualified, attended consultations."
+        "text": "Turn procedure interest into consultations."
       },
       {
         "level": 2,
@@ -9015,171 +8871,159 @@
       },
       {
         "level": 2,
-        "text": "High-value procedure inquiries are too important to lose to a slow reply."
+        "text": "Less inbox work. More time with patients."
       },
       {
         "level": 3,
-        "text": "The inquiry arrives at ten at night, the questions arrive all day"
+        "text": "Keep medical decisions with clinicians"
       },
       {
         "level": 3,
-        "text": "Procedure interest never captured"
+        "text": "Know what the patient wants"
       },
       {
         "level": 3,
-        "text": "Clinical questions in the wrong hands"
-      },
-      {
-        "level": 3,
-        "text": "No line from campaign to attended consultation"
+        "text": "Keep consultations organized"
       },
       {
         "level": 2,
-        "text": "Physician-led in the room. Physician-led in the inbox, too."
-      },
-      {
-        "level": 3,
-        "text": "The consultation stays yours"
-      },
-      {
-        "level": 3,
-        "text": "The assessment arrives prepared"
-      },
-      {
-        "level": 3,
-        "text": "The room is ready and so is the pipeline"
+        "text": "Attract interest in your procedures."
       },
       {
         "level": 2,
-        "text": "Watch a procedure ad arrive as an organized inquiry."
+        "text": "AI handles questions. Clinicians handle care."
       },
       {
         "level": 2,
-        "text": "Watch the system answer what it should, and hand over what it should not."
+        "text": "See every inquiry and who handles it."
       },
       {
         "level": 2,
-        "text": "See every case, and who it is waiting on."
+        "text": "Confirm consultations with an optional fee."
+      },
+      {
+        "level": 3,
+        "text": "Ask for commitment"
+      },
+      {
+        "level": 3,
+        "text": "See what is confirmed"
+      },
+      {
+        "level": 3,
+        "text": "Keep payments in your account"
       },
       {
         "level": 2,
-        "text": "A requested consultation is not the same as a confirmed one."
+        "text": "Choose your aesthetic practice plan."
       },
       {
         "level": 3,
-        "text": "Fewer casual bookings"
+        "text": "Organize procedure inquiries"
       },
       {
         "level": 3,
-        "text": "Provider time that reflects real commitments"
+        "text": "What you get"
       },
       {
         "level": 3,
-        "text": "Your provider, your money"
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Usage and scope"
+      },
+      {
+        "level": 3,
+        "text": "When to upgrade"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add AI consultation support"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Deposits and usage"
+      },
+      {
+        "level": 3,
+        "text": "When to expand"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add aesthetic advertising"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What the starting scope covers"
+      },
+      {
+        "level": 3,
+        "text": "Advertising budget"
+      },
+      {
+        "level": 3,
+        "text": "How custom scope is priced"
+      },
+      {
+        "level": 3,
+        "text": "Measurement and usage"
+      },
+      {
+        "level": 3,
+        "text": "AI and appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
       },
       {
         "level": 2,
-        "text": "Built for a practice where everything starts with the consultation"
-      },
-      {
-        "level": 3,
-        "text": "Procedure acquisition and social inquiries"
-      },
-      {
-        "level": 3,
-        "text": "AI patient concierge and interest capture"
-      },
-      {
-        "level": 3,
-        "text": "Protected clinical boundaries"
-      },
-      {
-        "level": 3,
-        "text": "Consultation lifecycle"
-      },
-      {
-        "level": 2,
-        "text": "Choose the aesthetic growth level that fits you today."
-      },
-      {
-        "level": 3,
-        "text": "Aesthetic Consultation Capture"
-      },
-      {
-        "level": 3,
-        "text": "Managed aesthetic acquisition"
-      },
-      {
-        "level": 3,
-        "text": "Patient CRM included"
-      },
-      {
-        "level": 3,
-        "text": "Automatic first response"
-      },
-      {
-        "level": 3,
-        "text": "Consultation calendar and reminders"
-      },
-      {
-        "level": 3,
-        "text": "Monthly performance review"
-      },
-      {
-        "level": 3,
-        "text": "Complete Aesthetic Growth System"
-      },
-      {
-        "level": 3,
-        "text": "Everything in Capture, plus a second channel"
-      },
-      {
-        "level": 3,
-        "text": "Conversion website with up to 2 forms"
-      },
-      {
-        "level": 3,
-        "text": "Bilingual AI communication"
-      },
-      {
-        "level": 3,
-        "text": "Clinical and exception handoff"
-      },
-      {
-        "level": 3,
-        "text": "Email marketing setup and automation"
-      },
-      {
-        "level": 3,
-        "text": "Up to 4 static ad creatives per month"
-      },
-      {
-        "level": 3,
-        "text": "Custom Aesthetic Growth Plan"
-      },
-      {
-        "level": 3,
-        "text": "Multiple channels and larger budgets"
-      },
-      {
-        "level": 3,
-        "text": "Additional locations and languages"
-      },
-      {
-        "level": 3,
-        "text": "Advanced CRM and AI architecture"
-      },
-      {
-        "level": 3,
-        "text": "Custom integrations, deposits and prepayment rules"
-      },
-      {
-        "level": 3,
-        "text": "Reactivation, reporting and priority support"
-      },
-      {
-        "level": 2,
-        "text": "Real operating experience behind the system"
+        "text": "See what we’ve built."
       },
       {
         "level": 3,
@@ -9191,39 +9035,43 @@
       },
       {
         "level": 2,
-        "text": "What aesthetic practices usually ask us"
+        "text": "Before you book"
       },
       {
         "level": 3,
-        "text": "Can the AI tell a patient which procedure is right for them?"
+        "text": "Can AI recommend a procedure?"
       },
       {
         "level": 3,
-        "text": "Can staff take over sensitive conversations?"
+        "text": "Can staff take over?"
       },
       {
         "level": 3,
-        "text": "Can the system respond to social media inquiries?"
+        "text": "Can you connect social media inquiries?"
       },
       {
         "level": 3,
-        "text": "Can it follow up with patients who inquired but never booked?"
+        "text": "Can you follow up with patients who never booked?"
       },
       {
         "level": 3,
-        "text": "Do you promise a number of patients or procedures?"
+        "text": "Do you guarantee patient numbers?"
       },
       {
         "level": 2,
-        "text": "Let's talk about your patient growth system."
+        "text": "Ready for more consultation inquiries?"
       },
       {
         "level": 2,
-        "text": "Need a custom aesthetic workflow?"
+        "text": "Need a custom aesthetic plan?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/industries/aesthetic-medicine",
         "text": "EN — Current language"
@@ -9238,47 +9086,47 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Book an Aesthetic Growth Assessment"
+        "text": "Book an Aesthetic Marketing Call"
       },
       {
         "href": "#system",
-        "text": "See the patient journey"
+        "text": "See How It Works"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Book an Aesthetic Growth Assessment"
+        "text": "Talk About Aesthetic Campaigns"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Book an Aesthetic Growth Assessment"
+        "text": "Talk About Patient Communication"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Book an Aesthetic Growth Assessment"
+        "text": "Talk About Your Practice"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Start Consultation Capture"
+        "text": "Talk About Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Start the Complete Aesthetic System"
+        "text": "Talk About DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Build a Custom Aesthetic Plan"
+        "text": "Discuss My Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=aesthetic-medicine",
@@ -9290,7 +9138,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon7Tue8Wed9Thu10Fri11Sat12Mon14Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Tue8Wed9Thu10Fri11Sat12Mon14Tue15Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -9330,7 +9178,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "Book growth assessment"
+        "text": "Book a Call"
       }
     ],
     "images": [
@@ -9407,7 +9255,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 201805,
+    "htmlBytes": 201837,
     "incoming": [
       "/",
       "/about",
@@ -9447,7 +9295,7 @@
     "url": "/es/industries/aesthetic-medicine",
     "title": "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
     "description": "Convierte el interés por inyectables, calidad de piel y procedimientos quirúrgicos en valoraciones atendidas. DigitalFace opera la pauta, la comunicación bilingüe, el agendamiento y el seguimiento de centros de medicina estética y cirugía plástica, mientras cada decisión clínica sigue en tu equipo.",
-    "h1": "Convierte el interés por un procedimiento en valoraciones calificadas y atendidas.",
+    "h1": "Convierte el interés en procedimientos en valoraciones.",
     "canonical": "https://digitalface.app/es/industries/aesthetic-medicine",
     "indexStatus": "index, follow",
     "alternates": {
@@ -9466,7 +9314,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Convierte el interés por un procedimiento en valoraciones calificadas y atendidas."
+        "text": "Convierte el interés en procedimientos en valoraciones."
       },
       {
         "level": 2,
@@ -9474,171 +9322,159 @@
       },
       {
         "level": 2,
-        "text": "Una consulta por un procedimiento de alto valor es demasiado importante para perderla por una respuesta tardía."
+        "text": "Menos mensajes pendientes. Más tiempo para atender."
       },
       {
         "level": 3,
-        "text": "La consulta llega a las diez de la noche; las preguntas, todo el día"
+        "text": "Las decisiones médicas son tuyas"
       },
       {
         "level": 3,
-        "text": "El interés nunca queda registrado"
+        "text": "Conoce el interés del paciente"
       },
       {
         "level": 3,
-        "text": "Preguntas clínicas en el lugar equivocado"
-      },
-      {
-        "level": 3,
-        "text": "Sin línea de la campaña a la valoración atendida"
+        "text": "Organiza las valoraciones"
       },
       {
         "level": 2,
-        "text": "Criterio médico en la consulta. Criterio médico también en la bandeja de entrada."
-      },
-      {
-        "level": 3,
-        "text": "La valoración sigue siendo tuya"
-      },
-      {
-        "level": 3,
-        "text": "La valoración llega preparada"
-      },
-      {
-        "level": 3,
-        "text": "La sala está lista y el proceso también"
+        "text": "Atrae interés en tus procedimientos."
       },
       {
         "level": 2,
-        "text": "Mira cómo un anuncio de un procedimiento llega ya organizado."
+        "text": "La IA responde. Tu equipo decide sobre la atención."
       },
       {
         "level": 2,
-        "text": "Mira al sistema responder lo que le corresponde y ceder lo que no."
+        "text": "Ve cada solicitud y quién la atiende."
       },
       {
         "level": 2,
-        "text": "Mira cada caso y de quién está esperando respuesta."
+        "text": "Confirma valoraciones con un pago opcional."
+      },
+      {
+        "level": 3,
+        "text": "Pide un compromiso"
+      },
+      {
+        "level": 3,
+        "text": "Ve qué citas están confirmadas"
+      },
+      {
+        "level": 3,
+        "text": "Recibe el dinero en tu cuenta"
       },
       {
         "level": 2,
-        "text": "Una valoración solicitada no es lo mismo que una valoración confirmada."
+        "text": "Elige el plan para tu consulta estética."
       },
       {
         "level": 3,
-        "text": "Menos reservas sin intención"
+        "text": "Organiza el interés en procedimientos"
       },
       {
         "level": 3,
-        "text": "Horas de consulta que reflejan compromisos reales"
+        "text": "Qué recibes"
       },
       {
         "level": 3,
-        "text": "Tu proveedor, tu dinero"
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Consumo y alcance"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo subir de nivel"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma apoyo con IA"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Límites en el agendamiento"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo ampliar el sistema"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma publicidad para tu consulta"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre el alcance inicial"
+      },
+      {
+        "level": 3,
+        "text": "Presupuesto de pauta"
+      },
+      {
+        "level": 3,
+        "text": "Cómo cotizamos el alcance a medida"
+      },
+      {
+        "level": 3,
+        "text": "Medición y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Límites de la IA y de las citas"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
       },
       {
         "level": 2,
-        "text": "Hecho para un centro donde todo empieza en la valoración"
-      },
-      {
-        "level": 3,
-        "text": "Captación por procedimiento y consultas en redes"
-      },
-      {
-        "level": 3,
-        "text": "Concierge de pacientes con IA y registro del interés"
-      },
-      {
-        "level": 3,
-        "text": "Límites clínicos protegidos"
-      },
-      {
-        "level": 3,
-        "text": "Ciclo completo de la valoración"
-      },
-      {
-        "level": 2,
-        "text": "Elige el nivel de crecimiento estético que corresponde a tu centro hoy."
-      },
-      {
-        "level": 3,
-        "text": "Captación de Valoraciones Estéticas"
-      },
-      {
-        "level": 3,
-        "text": "Captación estética administrada"
-      },
-      {
-        "level": 3,
-        "text": "CRM de pacientes incluido"
-      },
-      {
-        "level": 3,
-        "text": "Respuesta automática inmediata"
-      },
-      {
-        "level": 3,
-        "text": "Calendario de citas y recordatorios"
-      },
-      {
-        "level": 3,
-        "text": "Revisión mensual de desempeño"
-      },
-      {
-        "level": 3,
-        "text": "Sistema Estético Completo"
-      },
-      {
-        "level": 3,
-        "text": "Todo lo de Capture, más un segundo canal"
-      },
-      {
-        "level": 3,
-        "text": "Sitio web de conversión con hasta 2 formularios"
-      },
-      {
-        "level": 3,
-        "text": "Comunicación bilingüe con IA"
-      },
-      {
-        "level": 3,
-        "text": "Traspaso clínico y de excepciones"
-      },
-      {
-        "level": 3,
-        "text": "Configuración y automatización de email marketing"
-      },
-      {
-        "level": 3,
-        "text": "Hasta 4 piezas publicitarias estáticas al mes"
-      },
-      {
-        "level": 3,
-        "text": "Plan Estético a Medida"
-      },
-      {
-        "level": 3,
-        "text": "Varios canales y presupuestos mayores"
-      },
-      {
-        "level": 3,
-        "text": "Sedes e idiomas adicionales"
-      },
-      {
-        "level": 3,
-        "text": "Arquitectura avanzada de CRM e IA"
-      },
-      {
-        "level": 3,
-        "text": "Integraciones, anticipos y reglas de prepago a medida"
-      },
-      {
-        "level": 3,
-        "text": "Reactivación, reportería y soporte prioritario"
-      },
-      {
-        "level": 2,
-        "text": "Experiencia real de operación detrás del sistema"
+        "text": "Mira lo que hemos implementado."
       },
       {
         "level": 3,
@@ -9650,39 +9486,43 @@
       },
       {
         "level": 2,
-        "text": "Lo que más nos preguntan los centros de medicina estética"
+        "text": "Antes de agendar"
       },
       {
         "level": 3,
-        "text": "¿La IA puede decirle a un paciente qué procedimiento le conviene?"
+        "text": "¿La IA puede recomendar un procedimiento?"
       },
       {
         "level": 3,
-        "text": "¿El equipo puede tomar el control de conversaciones sensibles?"
+        "text": "¿El personal puede tomar la conversación?"
       },
       {
         "level": 3,
-        "text": "¿El sistema puede responder consultas de redes sociales?"
+        "text": "¿Pueden conectar las consultas de redes sociales?"
       },
       {
         "level": 3,
-        "text": "¿Puede dar seguimiento a los pacientes que preguntaron y nunca agendaron?"
+        "text": "¿Pueden retomar pacientes que no agendaron?"
       },
       {
         "level": 3,
-        "text": "¿Prometen una cantidad de pacientes o procedimientos?"
+        "text": "¿Garantizan una cantidad de pacientes?"
       },
       {
         "level": 2,
-        "text": "Hablemos de tu sistema de crecimiento de pacientes."
+        "text": "¿Quieres más solicitudes de valoración?"
       },
       {
         "level": 2,
-        "text": "¿Necesitas un flujo estético a la medida?"
+        "text": "¿Necesitas un plan estético a medida?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/industries/aesthetic-medicine",
         "text": "EN"
@@ -9697,47 +9537,47 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Agenda tu diagnóstico estético"
+        "text": "Agendar una llamada para mi consulta"
       },
       {
         "href": "#system",
-        "text": "Ver el recorrido del paciente"
+        "text": "Ver cómo funciona"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Agenda tu diagnóstico estético"
+        "text": "Hablar de campañas para mi consulta"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Agenda tu diagnóstico estético"
+        "text": "Hablar de la atención por mensajes"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Agenda tu diagnóstico estético"
+        "text": "Hablar de mi consulta"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Empezar con Captación de Valoraciones"
+        "text": "Hablar de Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Empezar con el Sistema Estético Completo"
+        "text": "Hablar de DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Armar mi Plan Estético a Medida"
+        "text": "Hablar de mi Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
@@ -9749,7 +9589,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun7mar8mié9jue10vie11sáb12lun14Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mar8mié9jue10vie11sáb12lun14mar15Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -9789,7 +9629,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Agendar diagnóstico"
+        "text": "Agendar una llamada"
       }
     ],
     "images": [
@@ -9866,7 +9706,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 204328,
+    "htmlBytes": 203918,
     "incoming": [
       "/es",
       "/es/about",
@@ -9906,7 +9746,7 @@
     "url": "/industries/med-spas",
     "title": "Med Spa Marketing & Booking System | DigitalFace Marketing",
     "description": "Turn treatment interest into booked and returning clients. DigitalFace runs the promotions, AI booking, deposits, rebooking and client reactivation workflow for med spas in the US and Latin America.",
-    "h1": "Turn treatment interest into booked and returning clients.",
+    "h1": "Turn med spa interest into repeat visits.",
     "canonical": "https://digitalface.app/industries/med-spas",
     "indexStatus": "index, follow",
     "alternates": {
@@ -9925,7 +9765,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Turn treatment interest into booked and returning clients."
+        "text": "Turn med spa interest into repeat visits."
       },
       {
         "level": 2,
@@ -9933,171 +9773,159 @@
       },
       {
         "level": 2,
-        "text": "Your team should be treating clients, not chasing every Instagram message by hand."
+        "text": "Spend less time chasing booking messages."
       },
       {
         "level": 3,
-        "text": "Every promotion lands in five inboxes at once"
+        "text": "Reply while the offer is fresh"
       },
       {
         "level": 3,
-        "text": "Pricing, packages and memberships explained by hand"
+        "text": "Keep treatments uninterrupted"
       },
       {
         "level": 3,
-        "text": "No-shows and unused appointment slots"
-      },
-      {
-        "level": 3,
-        "text": "A client base that never comes back on its own"
+        "text": "Bring clients back"
       },
       {
         "level": 2,
-        "text": "The experience starts long before anyone walks in."
-      },
-      {
-        "level": 3,
-        "text": "The first reply feels like the front desk"
-      },
-      {
-        "level": 3,
-        "text": "The ritual stays uninterrupted"
-      },
-      {
-        "level": 3,
-        "text": "The client who comes back on her own"
+        "text": "Turn your next offer into booking requests."
       },
       {
         "level": 2,
-        "text": "Watch an offer turn into a booking request."
+        "text": "Let AI handle the booking questions."
       },
       {
         "level": 2,
-        "text": "A story reply at lunchtime, on the schedule for Wednesday."
+        "text": "See who wants to book or come back."
       },
       {
         "level": 2,
-        "text": "One place to see who is waiting on a time."
+        "text": "Confirm bookings with an optional deposit."
+      },
+      {
+        "level": 3,
+        "text": "Ask for commitment"
+      },
+      {
+        "level": 3,
+        "text": "See what is confirmed"
+      },
+      {
+        "level": 3,
+        "text": "Keep payments in your account"
       },
       {
         "level": 2,
-        "text": "A requested appointment is not the same as a confirmed one."
+        "text": "Choose your med spa plan."
       },
       {
         "level": 3,
-        "text": "Fewer casual bookings"
+        "text": "Organize booking requests"
       },
       {
         "level": 3,
-        "text": "Treatment rooms that stay productive"
+        "text": "What you get"
       },
       {
         "level": 3,
-        "text": "Your provider, your money"
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Usage and scope"
+      },
+      {
+        "level": 3,
+        "text": "When to upgrade"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add AI booking support"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What implementation covers"
+      },
+      {
+        "level": 3,
+        "text": "What we manage each month"
+      },
+      {
+        "level": 3,
+        "text": "Appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Deposits and usage"
+      },
+      {
+        "level": 3,
+        "text": "When to expand"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
+      },
+      {
+        "level": 3,
+        "text": "Add med spa advertising"
+      },
+      {
+        "level": 3,
+        "text": "What you get"
+      },
+      {
+        "level": 3,
+        "text": "What the starting scope covers"
+      },
+      {
+        "level": 3,
+        "text": "Advertising budget"
+      },
+      {
+        "level": 3,
+        "text": "How custom scope is priced"
+      },
+      {
+        "level": 3,
+        "text": "Measurement and usage"
+      },
+      {
+        "level": 3,
+        "text": "AI and appointment boundaries"
+      },
+      {
+        "level": 3,
+        "text": "Scope and limits"
+      },
+      {
+        "level": 3,
+        "text": "Not included"
       },
       {
         "level": 2,
-        "text": "Built for the fast mix of promotions, appointments and repeat treatments"
-      },
-      {
-        "level": 3,
-        "text": "Promotion campaigns with offer attribution"
-      },
-      {
-        "level": 3,
-        "text": "AI booking concierge"
-      },
-      {
-        "level": 3,
-        "text": "Appointment lifecycle"
-      },
-      {
-        "level": 3,
-        "text": "Reactivation, reviews and repeat visits"
-      },
-      {
-        "level": 2,
-        "text": "Choose the med spa growth level that fits you today."
-      },
-      {
-        "level": 3,
-        "text": "Med Spa Client Capture"
-      },
-      {
-        "level": 3,
-        "text": "Managed med spa acquisition"
-      },
-      {
-        "level": 3,
-        "text": "Client CRM included"
-      },
-      {
-        "level": 3,
-        "text": "Automatic first response"
-      },
-      {
-        "level": 3,
-        "text": "Appointment calendar and reminders"
-      },
-      {
-        "level": 3,
-        "text": "Monthly performance review"
-      },
-      {
-        "level": 3,
-        "text": "Complete Med Spa Growth System"
-      },
-      {
-        "level": 3,
-        "text": "Everything in Capture, plus a second channel"
-      },
-      {
-        "level": 3,
-        "text": "Conversion website with up to 2 forms"
-      },
-      {
-        "level": 3,
-        "text": "Bilingual AI communication"
-      },
-      {
-        "level": 3,
-        "text": "Medical and exception handoff"
-      },
-      {
-        "level": 3,
-        "text": "Email marketing setup and automation"
-      },
-      {
-        "level": 3,
-        "text": "Up to 4 static ad creatives per month"
-      },
-      {
-        "level": 3,
-        "text": "Custom Med Spa Growth Plan"
-      },
-      {
-        "level": 3,
-        "text": "Multiple channels and larger budgets"
-      },
-      {
-        "level": 3,
-        "text": "Additional locations and languages"
-      },
-      {
-        "level": 3,
-        "text": "Advanced CRM and AI architecture"
-      },
-      {
-        "level": 3,
-        "text": "Custom integrations, deposits and prepayment rules"
-      },
-      {
-        "level": 3,
-        "text": "Reactivation, reporting and priority support"
-      },
-      {
-        "level": 2,
-        "text": "Real operating experience behind the system"
+        "text": "See what we’ve built."
       },
       {
         "level": 3,
@@ -10109,39 +9937,43 @@
       },
       {
         "level": 2,
-        "text": "What med spas usually ask us"
+        "text": "Before you book"
       },
       {
         "level": 3,
-        "text": "Can the system answer questions about treatments and promotions?"
+        "text": "Can AI explain treatments and offers?"
       },
       {
         "level": 3,
-        "text": "Can it handle Instagram and Facebook inquiries?"
+        "text": "Can you connect Instagram and Facebook?"
       },
       {
         "level": 3,
-        "text": "Can staff take over a conversation?"
+        "text": "Can staff take over?"
       },
       {
         "level": 3,
-        "text": "Can it handle memberships and prepaid packages?"
+        "text": "Can you follow up on memberships and packages?"
       },
       {
         "level": 3,
-        "text": "Do you produce professional photos and video?"
+        "text": "Are professional photos and video included?"
       },
       {
         "level": 2,
-        "text": "Let's talk about your growth system."
+        "text": "Ready for more bookings and return visits?"
       },
       {
         "level": 2,
-        "text": "Need a custom med spa workflow?"
+        "text": "Need a custom med spa plan?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
       {
         "href": "/industries/med-spas",
         "text": "EN — Current language"
@@ -10156,47 +9988,47 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Book a Med Spa Growth Assessment"
+        "text": "Book a Med Spa Marketing Call"
       },
       {
         "href": "#system",
-        "text": "See the med spa system"
+        "text": "See How It Works"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Book a Med Spa Growth Assessment"
+        "text": "Talk About Med Spa Campaigns"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Book a Med Spa Growth Assessment"
+        "text": "Talk About Booking Support"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Book a Med Spa Growth Assessment"
+        "text": "Talk About Your Med Spa"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Start Med Spa Client Capture"
+        "text": "Talk About Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Start the Complete Med Spa System"
+        "text": "Talk About DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Build a Custom Med Spa Plan"
+        "text": "Discuss My Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Request a custom proposal"
+        "text": "Request a Custom Plan"
       },
       {
         "href": "/book?from=med-spas",
@@ -10208,7 +10040,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon7Tue8Wed9Thu10Fri11Sat12Mon14Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Tue8Wed9Thu10Fri11Sat12Mon14Tue15Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -10248,7 +10080,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "Book growth assessment"
+        "text": "Book a Call"
       }
     ],
     "images": [
@@ -10325,7 +10157,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 200339,
+    "htmlBytes": 200626,
     "incoming": [
       "/",
       "/about",
@@ -10365,7 +10197,7 @@
     "url": "/es/industries/med-spas",
     "title": "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
     "description": "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera las promociones, el agendamiento con IA, los anticipos, las nuevas reservas y la reactivación de clientes de med spas en Estados Unidos y Latinoamérica.",
-    "h1": "Convierte el interés por un tratamiento en clientes que agendan y regresan.",
+    "h1": "Convierte el interés en tu med spa en visitas frecuentes.",
     "canonical": "https://digitalface.app/es/industries/med-spas",
     "indexStatus": "index, follow",
     "alternates": {
@@ -10384,7 +10216,7 @@
     "headings": [
       {
         "level": 1,
-        "text": "Convierte el interés por un tratamiento en clientes que agendan y regresan."
+        "text": "Convierte el interés en tu med spa en visitas frecuentes."
       },
       {
         "level": 2,
@@ -10392,171 +10224,159 @@
       },
       {
         "level": 2,
-        "text": "Tu equipo debería estar atendiendo clientes, no persiguiendo cada mensaje de Instagram a mano."
+        "text": "Dedica menos tiempo a perseguir reservas."
       },
       {
         "level": 3,
-        "text": "Cada promoción cae en cinco bandejas a la vez"
+        "text": "Responde a tiempo sobre la oferta"
       },
       {
         "level": 3,
-        "text": "Precios, paquetes y membresías explicados a mano"
+        "text": "Atiende sin interrupciones"
       },
       {
         "level": 3,
-        "text": "Inasistencias y espacios de agenda sin usar"
-      },
-      {
-        "level": 3,
-        "text": "Una base de clientes que no vuelve sola"
+        "text": "Invita a tus clientes a volver"
       },
       {
         "level": 2,
-        "text": "La experiencia empieza mucho antes de que alguien entre."
-      },
-      {
-        "level": 3,
-        "text": "La primera respuesta suena a recepción"
-      },
-      {
-        "level": 3,
-        "text": "El ritual no se interrumpe"
-      },
-      {
-        "level": 3,
-        "text": "La clienta que vuelve sola"
+        "text": "Convierte tu próxima oferta en solicitudes de cita."
       },
       {
         "level": 2,
-        "text": "Mira cómo una promoción se vuelve una solicitud de cita."
+        "text": "Deja las preguntas de reserva en manos de la IA."
       },
       {
         "level": 2,
-        "text": "Un mensaje al mediodía, agendado para el miércoles."
+        "text": "Ve quién quiere reservar o volver."
       },
       {
         "level": 2,
-        "text": "Un solo lugar para ver quién está esperando un horario."
+        "text": "Confirma reservas con un anticipo opcional."
+      },
+      {
+        "level": 3,
+        "text": "Pide un compromiso"
+      },
+      {
+        "level": 3,
+        "text": "Ve qué citas están confirmadas"
+      },
+      {
+        "level": 3,
+        "text": "Recibe el dinero en tu cuenta"
       },
       {
         "level": 2,
-        "text": "Una cita solicitada no es lo mismo que una cita confirmada."
+        "text": "Elige el plan para tu med spa."
       },
       {
         "level": 3,
-        "text": "Menos reservas sin intención"
+        "text": "Organiza las solicitudes de cita"
       },
       {
         "level": 3,
-        "text": "Cabinas que se mantienen productivas"
+        "text": "Qué recibes"
       },
       {
         "level": 3,
-        "text": "Tu proveedor, tu dinero"
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Consumo y alcance"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo subir de nivel"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma apoyo de IA para reservas"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre la implementación"
+      },
+      {
+        "level": 3,
+        "text": "Qué gestionamos cada mes"
+      },
+      {
+        "level": 3,
+        "text": "Límites en el agendamiento"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Cuándo ampliar el sistema"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
+      },
+      {
+        "level": 3,
+        "text": "Suma publicidad para tu med spa"
+      },
+      {
+        "level": 3,
+        "text": "Qué recibes"
+      },
+      {
+        "level": 3,
+        "text": "Qué cubre el alcance inicial"
+      },
+      {
+        "level": 3,
+        "text": "Presupuesto de pauta"
+      },
+      {
+        "level": 3,
+        "text": "Cómo cotizamos el alcance a medida"
+      },
+      {
+        "level": 3,
+        "text": "Medición y consumo"
+      },
+      {
+        "level": 3,
+        "text": "Límites de la IA y de las citas"
+      },
+      {
+        "level": 3,
+        "text": "Alcance y límites"
+      },
+      {
+        "level": 3,
+        "text": "No incluido"
       },
       {
         "level": 2,
-        "text": "Hecho para el ritmo rápido de promociones, citas y tratamientos recurrentes"
-      },
-      {
-        "level": 3,
-        "text": "Campañas de promoción con atribución de la oferta"
-      },
-      {
-        "level": 3,
-        "text": "Concierge de agendamiento con IA"
-      },
-      {
-        "level": 3,
-        "text": "Ciclo completo de la cita"
-      },
-      {
-        "level": 3,
-        "text": "Reactivación, reseñas y visitas recurrentes"
-      },
-      {
-        "level": 2,
-        "text": "Elige el nivel de crecimiento que corresponde a tu med spa hoy."
-      },
-      {
-        "level": 3,
-        "text": "Captación de Clientes para Med Spa"
-      },
-      {
-        "level": 3,
-        "text": "Captación para med spa administrada"
-      },
-      {
-        "level": 3,
-        "text": "CRM de clientes incluido"
-      },
-      {
-        "level": 3,
-        "text": "Respuesta automática inmediata"
-      },
-      {
-        "level": 3,
-        "text": "Calendario de citas y recordatorios"
-      },
-      {
-        "level": 3,
-        "text": "Revisión mensual de desempeño"
-      },
-      {
-        "level": 3,
-        "text": "Sistema Completo para Med Spa"
-      },
-      {
-        "level": 3,
-        "text": "Todo lo de Capture, más un segundo canal"
-      },
-      {
-        "level": 3,
-        "text": "Sitio web de conversión con hasta 2 formularios"
-      },
-      {
-        "level": 3,
-        "text": "Comunicación bilingüe con IA"
-      },
-      {
-        "level": 3,
-        "text": "Traspaso médico y de excepciones"
-      },
-      {
-        "level": 3,
-        "text": "Configuración y automatización de email marketing"
-      },
-      {
-        "level": 3,
-        "text": "Hasta 4 piezas publicitarias estáticas al mes"
-      },
-      {
-        "level": 3,
-        "text": "Plan a Medida para Med Spa"
-      },
-      {
-        "level": 3,
-        "text": "Varios canales y presupuestos mayores"
-      },
-      {
-        "level": 3,
-        "text": "Sedes e idiomas adicionales"
-      },
-      {
-        "level": 3,
-        "text": "Arquitectura avanzada de CRM e IA"
-      },
-      {
-        "level": 3,
-        "text": "Integraciones, anticipos y reglas de prepago a medida"
-      },
-      {
-        "level": 3,
-        "text": "Reactivación, reportería y soporte prioritario"
-      },
-      {
-        "level": 2,
-        "text": "Experiencia real de operación detrás del sistema"
+        "text": "Mira lo que hemos implementado."
       },
       {
         "level": 3,
@@ -10568,39 +10388,43 @@
       },
       {
         "level": 2,
-        "text": "Lo que más nos preguntan los med spas"
+        "text": "Antes de agendar"
       },
       {
         "level": 3,
-        "text": "¿El sistema puede responder preguntas sobre tratamientos y promociones?"
+        "text": "¿La IA puede explicar tratamientos y ofertas?"
       },
       {
         "level": 3,
-        "text": "¿Puede manejar consultas de Instagram y Facebook?"
+        "text": "¿Pueden conectar Instagram y Facebook?"
       },
       {
         "level": 3,
-        "text": "¿El equipo puede tomar el control de una conversación?"
+        "text": "¿El personal puede tomar la conversación?"
       },
       {
         "level": 3,
-        "text": "¿Puede manejar membresías y paquetes prepagados?"
+        "text": "¿Pueden dar seguimiento a membresías y paquetes?"
       },
       {
         "level": 3,
-        "text": "¿Ustedes producen fotos y videos profesionales?"
+        "text": "¿Incluyen fotos y video profesionales?"
       },
       {
         "level": 2,
-        "text": "Hablemos de tu sistema de crecimiento."
+        "text": "¿Quieres más reservas y clientes que vuelvan?"
       },
       {
         "level": 2,
-        "text": "¿Necesitas un flujo a la medida para tu med spa?"
+        "text": "¿Necesitas un plan de med spa a medida?"
       }
     ],
     "headingJumps": [],
     "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
       {
         "href": "/industries/med-spas",
         "text": "EN"
@@ -10615,47 +10439,47 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Agenda tu diagnóstico para med spa"
+        "text": "Agendar una llamada para mi med spa"
       },
       {
         "href": "#system",
-        "text": "Ver el sistema para med spas"
+        "text": "Ver cómo funciona"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Agenda tu diagnóstico para med spa"
+        "text": "Hablar de campañas para mi med spa"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Agenda tu diagnóstico para med spa"
+        "text": "Hablar del apoyo para reservas"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Agenda tu diagnóstico para med spa"
+        "text": "Hablar de mi med spa"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Empezar con Captación para Med Spa"
+        "text": "Hablar de Capture"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Empezar con el Sistema Completo para Med Spa"
+        "text": "Hablar de DigitalFace AI"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Armar mi Plan a Medida para Med Spa"
+        "text": "Hablar de mi Sales System"
       },
       {
         "href": "#custom-proposal",
-        "text": "Solicitar propuesta a la medida"
+        "text": "Pedir un plan a medida"
       },
       {
         "href": "/es/book?from=med-spas",
@@ -10667,7 +10491,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun7mar8mié9jue10vie11sáb12lun14Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mar8mié9jue10vie11sáb12lun14mar15Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -10707,7 +10531,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Agendar diagnóstico"
+        "text": "Agendar una llamada"
       }
     ],
     "images": [
@@ -10784,7 +10608,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203353,
+    "htmlBytes": 203090,
     "incoming": [
       "/es",
       "/es/about",

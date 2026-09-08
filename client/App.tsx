@@ -11,6 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { LocaleProvider } from "./i18n/LocaleProvider";
 import { ServiceRequestProvider } from "./components/request/ServiceRequestProvider";
 import { Analytics } from "./components/seo/Analytics";
+import { WhatsAppButton } from "./components/contact/WhatsAppButton";
+import { GhlChatWidget } from "./components/ghl/GhlChatWidget";
 import { localePath } from "./i18n/locale";
 import site from "@shared/site.json";
 
@@ -55,6 +57,8 @@ export default function App() {
           <ServiceRequestProvider>
             <ScrollToTop />
             <Analytics />
+            <GhlChatWidget />
+            <WhatsAppButton />
             <Suspense
               fallback={
                 <div className="flex min-h-screen items-center justify-center bg-slate-950 text-sm font-semibold text-white">

@@ -85,14 +85,25 @@ const en = {
           ],
           ctaLabel: "Request an SEO strategy",
         },
+        audiovisual: {
+          title: "Audiovisual production",
+          description:
+            "On-site photo and video sessions that create original branded assets for campaigns and digital channels.",
+          outcomes: [
+            "Record professional photo and video content",
+            "Create original assets for campaigns and ads",
+            "Build a reusable branded content library",
+          ],
+          ctaLabel: "Plan audiovisual production",
+        },
         content: {
           title: "Content creation",
           description:
-            "Content built to educate, build trust and convert across paid, organic and owned channels.",
+            "Remote content creation using client assets, ideas or references, supported by editing and AI tools.",
           outcomes: [
-            "Write messaging that matches real buying intent",
-            "Support campaigns with conversion-focused content",
-            "Build authority across your channels",
+            "Turn existing materials into finished content",
+            "Create digital pieces with editing and AI support",
+            "Adapt content for ads, social media and websites",
           ],
           ctaLabel: "Plan content creation",
         },
@@ -347,14 +358,25 @@ const es: typeof en = {
           ],
           ctaLabel: "Solicita una estrategia SEO",
         },
+        audiovisual: {
+          title: "Producción audiovisual",
+          description:
+            "Sesiones presenciales de foto y video para crear material original de marca para campañas y canales digitales.",
+          outcomes: [
+            "Grabar contenido profesional de foto y video",
+            "Crear piezas originales para campañas y anuncios",
+            "Construir una biblioteca reutilizable de marca",
+          ],
+          ctaLabel: "Planea tu producción audiovisual",
+        },
         content: {
           title: "Creación de contenido",
           description:
-            "Contenido para educar, generar confianza y convertir en canales pagos, orgánicos y propios.",
+            "Creación remota con material, ideas o referencias del cliente, apoyada por edición y herramientas de IA.",
           outcomes: [
-            "Escribir mensajes alineados con la intención real de compra",
-            "Acompañar las campañas con contenido enfocado en conversión",
-            "Construir autoridad en tus canales",
+            "Convertir materiales existentes en contenido terminado",
+            "Crear piezas digitales con edición y apoyo de IA",
+            "Adaptar contenido para pauta, redes sociales y sitios web",
           ],
           ctaLabel: "Planea tu contenido",
         },

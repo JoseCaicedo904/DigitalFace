@@ -31,6 +31,7 @@ export const serviceCatalog = [
       { id: "tiktok-ads", contentKey: "tiktok" },
       { id: "google-ads", contentKey: "google" },
       { id: "seo-strategy", contentKey: "seo" },
+      { id: "audiovisual-production", contentKey: "audiovisual" },
       { id: "content-creation", contentKey: "content" },
     ],
   },
