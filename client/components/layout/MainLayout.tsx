@@ -364,6 +364,9 @@ export default function MainLayout() {
               between brand and controls; the fluid gap keeps it spacious on
               wide screens and tightens gracefully near the breakpoint. */}
           <nav
+            aria-label={
+              locale === "es" ? "Navegación principal" : "Main navigation"
+            }
             className={cn(
               "hidden flex-1 items-center justify-center gap-[clamp(0.75rem,1.1vw,1.25rem)]",
               !navCollapsed && "lg:flex",
@@ -429,7 +432,7 @@ export default function MainLayout() {
                     aria-hidden="true"
                     className="absolute left-0 right-0 top-full z-[70] hidden h-4 -translate-y-4 opacity-0 lg:block lg:pointer-events-none lg:group-hover:pointer-events-auto lg:group-hover:opacity-100"
                   />
-                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out lg:block lg:invisible lg:pointer-events-none lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                  <div className="absolute left-0 right-0 top-full z-[70] hidden translate-y-2 pt-4 opacity-0 transition duration-200 ease-out lg:block lg:invisible lg:pointer-events-none lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100 lg:group-focus-within:visible lg:group-focus-within:pointer-events-auto lg:group-focus-within:translate-y-0 lg:group-focus-within:opacity-100">
                     <div className="rounded-3xl border border-ink-100 bg-white/95 p-8 shadow-brand-card backdrop-blur-xl">
                       <div className="grid gap-8 lg:grid-cols-4">
                         {megaNav.categories.map((category) => {
@@ -505,6 +508,7 @@ export default function MainLayout() {
               className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-ink-200 text-ink-600 transition hover:border-brand-200 hover:text-brand-600"
               aria-label={t.nav.menuToggle}
               aria-expanded={menuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setMenuOpen((prev) => !prev)}
             >
               {menuOpen ? (
@@ -516,11 +520,13 @@ export default function MainLayout() {
           </div>
         </div>
         <div
+          id="mobile-navigation"
+          aria-hidden={!menuOpen}
           className={cn(
             !navCollapsed && "lg:hidden",
             menuOpen
-              ? "max-h-[42rem] opacity-100"
-              : "pointer-events-none max-h-0 opacity-0",
+              ? "visible max-h-[42rem] opacity-100"
+              : "invisible pointer-events-none max-h-0 opacity-0",
           )}
         >
           {/* Margins track the header padding so the panel lines up with the
@@ -528,7 +534,12 @@ export default function MainLayout() {
               did not fit, so it becomes a right-aligned panel rather than a
               full-bleed bar. */}
           <div className="mx-4 mb-4 rounded-2xl border border-ink-200 bg-white/90 shadow-brand-card backdrop-blur sm:mx-6 lg:ml-auto lg:max-w-md">
-            <nav className="flex flex-col divide-y divide-ink-100">
+            <nav
+              aria-label={
+                locale === "es" ? "Navegación móvil" : "Mobile navigation"
+              }
+              className="flex flex-col divide-y divide-ink-100"
+            >
               {navItems.map((item) =>
                 item.key === "industries" ? (
                   <details key="mobile-industries" className="group/details">
@@ -614,9 +625,9 @@ export default function MainLayout() {
           </div>
           <div className="grid flex-1 gap-10 text-sm sm:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.35fr)_minmax(0,1fr)]">
             <div className="space-y-3">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                 {t.footer.navigate}
-              </h3>
+              </h2>
               <ul className="space-y-2">
                 {navItems
                   .filter((item) => item.key !== "industries")
@@ -646,15 +657,18 @@ export default function MainLayout() {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                 {t.footer.contact}
-              </h3>
+              </h2>
               <ul className="space-y-2 text-white/80">
                 <li>
                   <span>{t.footer.emailLabel}</span>
-                  <span className="block font-semibold text-white whitespace-nowrap">
+                  <a
+                    href="mailto:sales@digitalfacemarketing.com"
+                    className="block font-semibold text-white whitespace-nowrap"
+                  >
                     sales@digitalfacemarketing.com
-                  </span>
+                  </a>
                 </li>
                 <li>
                   <span>{t.footer.hoursLabel}</span>
@@ -671,9 +685,9 @@ export default function MainLayout() {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                 {t.footer.offices}
-              </h3>
+              </h2>
               <ul className="space-y-2 text-white/80">
                 <li>
                   <span className="block font-semibold text-white">

@@ -128,6 +128,19 @@ for (const route of all) {
     route.url + ": missing page entity",
   );
   const schemaText = JSON.stringify(schemas);
+  for (const type of ["Organization", "WebSite"])
+    check(
+      schemas.filter((s) => s["@type"] === type).length === 1,
+      route.url + ": duplicate/missing " + type,
+    );
+  for (const schema of schemas.filter((s) => s["@type"] === "Organization")) {
+    const logo = new URL(schema.logo.url);
+    check(
+      logo.origin === site.origin &&
+        fs.existsSync(path.join(output, decodeURIComponent(logo.pathname))),
+      route.url + ": missing organization logo",
+    );
+  }
   check(
     !/aggregateRating|foundingDate|numberOfEmployees/.test(schemaText),
     route.url + ": unsupported schema claim",
@@ -158,7 +171,7 @@ for (const route of all) {
     return {
       src,
       alt: img.getAttribute("alt"),
-      loading: img.loading || "eager",
+      loading: img.getAttribute("loading") || "eager",
       width: img.getAttribute("width"),
       height: img.getAttribute("height"),
       class: img.className,
@@ -194,6 +207,38 @@ for (const route of all) {
   const headingJumps = headings.filter(
     (h, i) => i > 0 && h.level > headings[i - 1].level + 1,
   );
+  check(headingJumps.length === 0, route.url + ": skipped heading level");
+  for (const media of doc.querySelectorAll(
+    "video[src], video[poster], source[src]",
+  )) {
+    for (const attr of ["src", "poster"]) {
+      const src = media.getAttribute(attr);
+      if (src?.startsWith("/"))
+        check(
+          fs.existsSync(path.join(output, decodeURIComponent(src))),
+          route.url + ": missing media " + src,
+        );
+    }
+  }
+  const preloads = [...doc.querySelectorAll('link[rel="preload"][as="image"]')];
+  check(
+    preloads.length === (route.preloadImage ? 1 : 0),
+    route.url + ": unexpected image preload count",
+  );
+  for (const preload of preloads) {
+    const src = preload.getAttribute("href");
+    check(
+      src === route.preloadImage && fs.existsSync(path.join(output, src)),
+      route.url + ": invalid hero preload",
+    );
+    check(
+      [...doc.querySelectorAll("img, video")].some(
+        (el) =>
+          el.getAttribute("src") === src || el.getAttribute("poster") === src,
+      ),
+      route.url + ": preload does not match rendered media",
+    );
+  }
   const links = [...doc.querySelectorAll("a[href]")].map((a) => ({
     href: a.getAttribute("href"),
     text:
@@ -232,6 +277,22 @@ for (const record of records) {
   for (const link of record.links) {
     const url = new URL(link.href, record.canonical);
     if (url.origin !== site.origin) continue;
+    check(
+      link.text.length > 0,
+      record.url + ": unnamed internal link " + link.href,
+    );
+    const linkLocale =
+      url.pathname === "/es" || url.pathname.startsWith("/es/") ? "es" : "en";
+    if (
+      linkLocale !== record.locale &&
+      !["/sitemap.xml", "/robots.txt"].includes(url.pathname)
+    )
+      check(
+        record.alternates[linkLocale] === url.origin + url.pathname,
+        record.url +
+          ": internal link switches language unexpectedly " +
+          link.href,
+      );
     if (["/sitemap.xml", "/robots.txt"].includes(url.pathname)) continue;
     const target = documents.get(url.pathname);
     check(Boolean(target), record.url + ": broken internal route " + link.href);

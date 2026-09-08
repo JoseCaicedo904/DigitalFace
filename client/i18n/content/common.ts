@@ -71,7 +71,7 @@ const en = {
   },
   footer: {
     tagline:
-      "DigitalFace installs and manages the acquisition, follow-up and booking system behind dental practices, aesthetic medicine and med spas.",
+      "DigitalFace connects advertising, websites, CRM and AI follow-up for appointment-driven businesses in the US, Canada and Latin America.",
     promise: "No inquiry goes unanswered.",
     navigate: "Navigate",
     industries: "Industries",
@@ -163,7 +163,7 @@ const es: typeof en = {
   },
   footer: {
     tagline:
-      "DigitalFace instala y administra el sistema de captación, seguimiento y agendamiento que usan clínicas odontológicas, centros de medicina estética y med spas.",
+      "DigitalFace conecta publicidad, sitios web, CRM y seguimiento con IA para negocios que trabajan con citas en Estados Unidos, Canadá y Latinoamérica.",
     promise: "Ninguna consulta se queda sin respuesta.",
     navigate: "Navegación",
     industries: "Industrias",

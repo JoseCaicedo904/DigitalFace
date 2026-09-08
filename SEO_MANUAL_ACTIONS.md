@@ -1,5 +1,7 @@
 # DigitalFace — manual SEO actions after deployment
 
+> Updated release note: the 2026-09-08 local SEO release candidate documented in `SEO_AUDIT_DIGITALFACE_2026.md` has not been deployed. Review and deploy it before performing the post-deployment checks below.
+
 Prepared 2026-09-05; updated 2026-09-07 after production deployment. Official website: **https://digitalface.app**. The current source has been deployed to the existing Vercel `digital-face` project. No Google, DNS, GA4, GHL or n8n account setting was changed.
 
 Follow these steps in order. Values marked **USER ACTION REQUIRED** must come from your own DigitalFace account; do not copy them from the Dra. Jennifer guide.

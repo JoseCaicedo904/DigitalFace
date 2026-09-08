@@ -1,5 +1,7 @@
 # DigitalFace SEO implementation report
 
+> Historical implementation record from 2026-09-05/07. For the current 2026-09-08 local route metadata, remediation, validation and manual actions, use `SEO_AUDIT_DIGITALFACE_2026.md`.
+
 Date: 2026-09-05 (America/New*York). Scope: the official website source at `C:/Users/jose*/OneDrive/Documents/WEBSITES/Website Official DF/DF Site`. Canonical origin: https://digitalface.app.
 
 ## A. Executive summary

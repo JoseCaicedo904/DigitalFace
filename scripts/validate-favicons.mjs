@@ -9,6 +9,7 @@ const declarations = [
   ["/favicon-96x96.png", "96x96", "image/png"],
   ["/favicon-192x192.png", "192x192", "image/png"],
 ];
+const appleDeclaration = ["/favicon-180x180.png", "180x180"];
 for (const [url] of declarations) {
   const source = await fs.readFile("public" + url);
   const built = await fs.readFile("dist/spa" + url);
@@ -42,6 +43,13 @@ for (const [url] of declarations) {
   }
 }
 
+const apple = await fs.readFile("public" + appleDeclaration[0]);
+assert.deepEqual(await fs.readFile("dist/spa" + appleDeclaration[0]), apple);
+const appleMeta = await sharp(apple).metadata();
+assert.equal(appleMeta.format, "png");
+assert.equal(appleMeta.width, 180);
+assert.equal(appleMeta.height, 180);
+
 const site = JSON.parse(await fs.readFile("shared/site.json", "utf8"));
 const routes = site.routes.flatMap(({ path }) => [
   path,
@@ -63,8 +71,16 @@ for (const route of [...routes, "/404", "/es/404"]) {
     declarations,
     route + ": exact icon declarations in initial HTML",
   );
+  const appleLink = dom.window.document.head.querySelector(
+    'link[rel="apple-touch-icon"]',
+  );
+  assert.deepEqual(
+    [appleLink?.getAttribute("href"), appleLink?.getAttribute("sizes")],
+    appleDeclaration,
+    route + ": exact Apple touch icon declaration",
+  );
   dom.window.close();
 }
 console.log(
-  "Validated 4 built favicon assets, 3 ICO images, and all 26 prerendered HTML documents.",
+  "Validated 5 built icon assets, 3 ICO images, and all 26 prerendered HTML documents.",
 );

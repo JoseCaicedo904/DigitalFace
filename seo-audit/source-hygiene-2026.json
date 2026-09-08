@@ -1,0 +1,18 @@
+{
+  "checked": 244,
+  "unregisteredPages": [
+    "client/pages/Automations.tsx",
+    "client/pages/AutomationsChatbots.tsx",
+    "client/pages/AutomationsCrm.tsx",
+    "client/pages/AutomationsWorkflows.tsx",
+    "client/pages/Blog.tsx",
+    "client/pages/ManyChatTemplates.tsx",
+    "client/pages/Portfolio.tsx",
+    "client/pages/Services.tsx",
+    "client/pages/SocialMediaAds.tsx",
+    "client/pages/Websites.tsx",
+    "client/pages/payPerServiceIcons.tsx"
+  ],
+  "findings": [],
+  "verificationFiles": []
+}

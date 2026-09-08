@@ -27,22 +27,26 @@ export const payPerServicePageContent: Record<
       paidMedia: {
         ...payPerServiceContent.en.groups.paidMedia,
         title: "Paid Media",
-        description: "Get in front of the right people.",
+        description:
+          "Reach potential customers with campaigns on Meta, Google and TikTok.",
       },
       automation: {
         ...payPerServiceContent.en.groups.automation,
         title: "Automation & Chatbots",
-        description: "Let the system handle repeated questions and tasks.",
+        description:
+          "Answer inquiries with AI chatbots and automate follow-up, booking and routine tasks.",
       },
       leadOps: {
         ...payPerServiceContent.en.groups.leadOps,
         title: "Lead Management & CRM",
-        description: "Keep every lead in one place and know what happens next.",
+        description:
+          "Connect your lead sources, CRM pipeline and reporting so your team knows what happens next.",
       },
       websites: {
         ...payPerServiceContent.en.groups.websites,
         title: "Websites & Funnels",
-        description: "Turn visitors into inquiries.",
+        description:
+          "Build business websites and campaign landing pages connected to lead capture and CRM.",
       },
     },
     cta: {
@@ -75,23 +79,26 @@ export const payPerServicePageContent: Record<
       paidMedia: {
         ...payPerServiceContent.es.groups.paidMedia,
         title: "Publicidad digital",
-        description: "Llega a las personas indicadas.",
+        description:
+          "Llega a clientes potenciales con campañas en Meta, Google y TikTok.",
       },
       automation: {
         ...payPerServiceContent.es.groups.automation,
         title: "Automatización y chatbots",
         description:
-          "Deja las preguntas y tareas repetitivas en manos del sistema.",
+          "Responde consultas con chatbots de IA y automatiza el seguimiento, las citas y las tareas repetitivas.",
       },
       leadOps: {
         ...payPerServiceContent.es.groups.leadOps,
         title: "Gestión de contactos y CRM",
-        description: "Reúne cada contacto y ten claro qué sigue.",
+        description:
+          "Conecta tus fuentes de contactos, etapas del CRM y reportes para que tu equipo sepa qué sigue.",
       },
       websites: {
         ...payPerServiceContent.es.groups.websites,
         title: "Sitios web y páginas de campaña",
-        description: "Convierte visitas en consultas.",
+        description:
+          "Crea sitios web y páginas de campaña conectados a la captura de contactos y al CRM.",
       },
     },
     cta: {

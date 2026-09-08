@@ -20,7 +20,7 @@ const en = {
   metadata: {
     title: "About DigitalFace Marketing | How the Company Works",
     description:
-      "DigitalFace brings strategy, technology and specialist expertise together under one accountable relationship. How the company is organized, what it takes responsibility for, and where it operates from.",
+      "Meet the team behind DigitalFace: marketing strategy, technology and ongoing support for business growth, delivered remotely from Colombia and Florida.",
   },
   hero: {
     eyebrow: "About DigitalFace",
@@ -104,7 +104,7 @@ const es: typeof en = {
   metadata: {
     title: "Sobre DigitalFace Marketing | Cómo funciona la compañía",
     description:
-      "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cómo está organizada la compañía, de qué responde y desde dónde opera.",
+      "Conoce al equipo de DigitalFace: estrategia de marketing, tecnología y soporte para el crecimiento de negocios, con atención remota desde Colombia y Florida.",
   },
   hero: {
     eyebrow: "Sobre DigitalFace",

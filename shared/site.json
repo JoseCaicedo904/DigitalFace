@@ -3,11 +3,12 @@
   "routes": [
     {
       "id": "home",
+      "preloadImage": "/images/hero-poster.webp",
       "path": "/",
       "layout": "corporate",
       "indexable": true,
       "type": "WebPage",
-      "topic": "Healthcare marketing and patient acquisition agency",
+      "topic": "Lead generation and marketing automation for appointment-driven businesses",
       "intent": "Commercial agency discovery"
     },
     {
@@ -86,6 +87,7 @@
     },
     {
       "id": "dental",
+      "preloadImage": "/media/dental/hero-backdrop.webp",
       "path": "/industries/dental-practices",
       "layout": "industry",
       "indexable": true,
@@ -96,6 +98,7 @@
     },
     {
       "id": "aesthetic",
+      "preloadImage": "/media/aesthetic/hero-backdrop.webp",
       "path": "/industries/aesthetic-medicine",
       "layout": "industry",
       "indexable": true,
@@ -106,6 +109,7 @@
     },
     {
       "id": "med-spa",
+      "preloadImage": "/media/med-spa/hero-backdrop.webp",
       "path": "/industries/med-spas",
       "layout": "industry",
       "indexable": true,

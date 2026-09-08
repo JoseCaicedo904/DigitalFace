@@ -95,7 +95,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       metadata: {
         title: "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
         description:
-          "Turn implant, veneer and smile design inquiries into attended consultations. DigitalFace runs the advertising, bilingual follow-up, consultation booking and recall workflow for dental practices in the US and Latin America.",
+          "Dental marketing, bilingual follow-up and appointment booking for implant, veneer and smile-design inquiries. DigitalFace connects your ads, AI and CRM.",
       },
       hero: {
         eyebrow: "DigitalFace for Dental Practices",
@@ -769,10 +769,9 @@ export const industryContentEn: IndustryLocaleBundle = {
       navLabel: "Aesthetic Medicine",
       industryLabel: "Aesthetic Practice Growth System",
       metadata: {
-        title:
-          "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
+        title: "Aesthetic Clinic Marketing | DigitalFace Marketing",
         description:
-          "Turn injectable, skin quality and surgical procedure interest into attended consultations. DigitalFace runs the advertising, bilingual communication, consultation booking and follow-up for aesthetic medicine and plastic surgery practices, while every clinical decision stays with your team.",
+          "Marketing and patient follow-up for aesthetic medicine and plastic surgery practices. DigitalFace connects ads, inquiry qualification, CRM and consultation booking.",
       },
       hero: {
         eyebrow: "DigitalFace for Aesthetic Medicine and Plastic Surgery",
@@ -1455,7 +1454,7 @@ export const industryContentEn: IndustryLocaleBundle = {
       metadata: {
         title: "Med Spa Marketing & Booking System | DigitalFace Marketing",
         description:
-          "Turn treatment interest into booked and returning clients. DigitalFace runs the promotions, AI booking, deposits, rebooking and client reactivation workflow for med spas in the US and Latin America.",
+          "Help med spa clients book and return. DigitalFace connects paid promotions, AI follow-up, CRM, appointment booking and client reactivation.",
       },
       hero: {
         eyebrow: "DigitalFace for Med Spas",

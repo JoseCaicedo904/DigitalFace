@@ -2,10 +2,9 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title:
-      "Marketing & Automation Services for Clinics | DigitalFace Marketing",
+    title: "Marketing, CRM & Automation Services | DigitalFace Marketing",
     description:
-      "Hire one DigitalFace capability at a time instead of a full system: Meta and Google ads, chatbots, workflow automation, CRM setup, reporting, websites and funnels.",
+      "Choose individual services from DigitalFace: paid ads, AI chatbots, CRM, automation, websites and funnels. Send your selection for a scoped proposal.",
   },
   hero: {
     eyebrow: "Pay per service",
@@ -276,9 +275,9 @@ const en = {
 const es: typeof en = {
   metadata: {
     title:
-      "Servicios de Marketing y Automatización para Clínicas | DigitalFace Marketing",
+      "Servicios de Marketing, CRM y Automatización | DigitalFace Marketing",
     description:
-      "Contrata una sola capacidad de DigitalFace a la vez en lugar del sistema completo: pauta en Meta y Google, chatbots, automatización de procesos, CRM, reportes, sitios web y embudos.",
+      "Elige servicios de DigitalFace: publicidad, chatbots con IA, CRM, automatización, sitios web y páginas de campaña. Solicita una propuesta con el alcance que necesitas.",
   },
   hero: {
     eyebrow: "Servicios por separado",

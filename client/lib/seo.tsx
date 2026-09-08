@@ -72,7 +72,7 @@ export function buildHead(
     { name: "twitter:image", content: image },
     { name: "twitter:image:alt", content: imageAlt },
   ];
-  const links = canonical
+  const links: Record<string, string>[] = canonical
     ? [
         { rel: "canonical", href: canonical },
         ...(!noindex
@@ -84,6 +84,13 @@ export function buildHead(
           : []),
       ]
     : [];
+  if (route?.preloadImage && !noindex)
+    links.push({
+      rel: "preload",
+      as: "image",
+      href: route.preloadImage,
+      fetchpriority: "high",
+    });
   const label = title.split(" | ")[0];
   const organization = { "@id": `${site.origin}/#organization` };
   const pageSchema = canonical
@@ -139,6 +146,7 @@ export function buildHead(
                   provider: organization,
                   areaServed: [
                     { "@type": "Country", name: "United States" },
+                    { "@type": "Country", name: "Canada" },
                     { "@type": "State", name: "Florida" },
                     { "@type": "Place", name: "Latin America" },
                   ],

@@ -714,10 +714,9 @@ const selectedWorkEntriesEs: Record<string, SelectedWorkEntry> = {
 };
 const en = {
   metadata: {
-    title:
-      "Customer Acquisition & Marketing Automation | DigitalFace Marketing",
+    title: "Lead Generation & Marketing Automation | DigitalFace Marketing",
     description:
-      "DigitalFace connects advertising, AI follow-up and CRM for appointment-driven businesses in Florida, across the US and Latin America. Explore your growth system.",
+      "DigitalFace connects ads, websites, CRM and AI follow-up to help appointment-driven businesses turn inquiries into customers across the US, Canada and LATAM.",
   },
   hero: {
     eyebrow: "The DigitalFace growth system",
@@ -1101,10 +1100,9 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title:
-      "Captación de Clientes y Automatización de Marketing | DigitalFace Marketing",
+    title: "Captación de Clientes y Automatización | DigitalFace Marketing",
     description:
-      "DigitalFace conecta pauta, seguimiento con IA y CRM para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica. Conoce tu sistema de crecimiento.",
+      "DigitalFace conecta publicidad, sitios web, CRM y seguimiento con IA para ayudar a convertir consultas en clientes en Estados Unidos, Canadá y Latinoamérica.",
   },
   hero: {
     eyebrow: "El sistema de crecimiento DigitalFace",

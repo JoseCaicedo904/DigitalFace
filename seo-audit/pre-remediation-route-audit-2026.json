@@ -1,17 +1,16 @@
 [
   {
     "id": "home",
-    "preloadImage": "/images/hero-poster.webp",
     "path": "/",
     "layout": "corporate",
     "indexable": true,
     "type": "WebPage",
-    "topic": "Lead generation and marketing automation for appointment-driven businesses",
+    "topic": "Healthcare marketing and patient acquisition agency",
     "intent": "Commercial agency discovery",
     "locale": "en",
     "url": "/",
-    "title": "Lead Generation & Marketing Automation | DigitalFace Marketing",
-    "description": "DigitalFace connects ads, websites, CRM and AI follow-up to help appointment-driven businesses turn inquiries into customers across the US, Canada and LATAM.",
+    "title": "Customer Acquisition & Marketing Automation | DigitalFace Marketing",
+    "description": "DigitalFace connects advertising, AI follow-up and CRM for appointment-driven businesses in Florida, across the US and Latin America. Explore your growth system.",
     "h1": "More inquiries. Better follow-up. More opportunities.",
     "canonical": "https://digitalface.app/",
     "indexStatus": "index, follow",
@@ -406,10 +405,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -434,7 +429,7 @@
       {
         "src": "/media/Logos_Partners/01-highlevel.png",
         "alt": "GoHighLevel logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "813",
         "height": "210",
         "class": "h-full w-auto max-w-none object-contain"
@@ -442,7 +437,7 @@
       {
         "src": "/media/Logos_Partners/02-hubspot.png",
         "alt": "HubSpot logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "565",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -450,7 +445,7 @@
       {
         "src": "/media/Logos_Partners/03-pipedrive.png",
         "alt": "Pipedrive logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "456",
         "height": "107",
         "class": "h-full w-auto max-w-none object-contain"
@@ -458,7 +453,7 @@
       {
         "src": "/media/Logos_Partners/04-kommo.png",
         "alt": "Kommo logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "390",
         "height": "158",
         "class": "h-full w-auto max-w-none object-contain"
@@ -466,7 +461,7 @@
       {
         "src": "/media/Logos_Partners/05-zoho-crm.png",
         "alt": "Zoho CRM logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "683",
         "height": "135",
         "class": "h-full w-auto max-w-none object-contain"
@@ -474,7 +469,7 @@
       {
         "src": "/media/Logos_Partners/06-activecampaign.png",
         "alt": "ActiveCampaign logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "648",
         "height": "115",
         "class": "h-full w-auto max-w-none object-contain"
@@ -482,7 +477,7 @@
       {
         "src": "/media/Logos_Partners/21-Odoo.png",
         "alt": "Odoo logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1242",
         "height": "392",
         "class": "h-full w-auto max-w-none object-contain"
@@ -490,7 +485,7 @@
       {
         "src": "/media/Logos_Partners/08-openai.png",
         "alt": "OpenAI logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "494",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -498,7 +493,7 @@
       {
         "src": "/media/Logos_Partners/09-chatgpt.png",
         "alt": "ChatGPT logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "564",
         "height": "179",
         "class": "h-full w-auto max-w-none object-contain"
@@ -506,7 +501,7 @@
       {
         "src": "/media/Logos_Partners/07-n8n.png",
         "alt": "n8n logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "360",
         "height": "107",
         "class": "h-full w-auto max-w-none object-contain"
@@ -514,7 +509,7 @@
       {
         "src": "/media/Logos_Partners/10-whatsapp-business.png",
         "alt": "WhatsApp Business logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "869",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -522,7 +517,7 @@
       {
         "src": "/media/Logos_Partners/11-messenger.png",
         "alt": "Messenger logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "618",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -530,7 +525,7 @@
       {
         "src": "/media/Logos_Partners/12-instagram.png",
         "alt": "Instagram logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "587",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -538,7 +533,7 @@
       {
         "src": "/media/Logos_Partners/22-Respond.io.png",
         "alt": "Respond.io logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1228",
         "height": "198",
         "class": "h-full w-auto max-w-none object-contain"
@@ -546,7 +541,7 @@
       {
         "src": "/media/Logos_Partners/13-chatwoot.png",
         "alt": "Chatwoot logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "554",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -554,7 +549,7 @@
       {
         "src": "/media/Logos_Partners/14-meta.png",
         "alt": "Meta logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "440",
         "height": "141",
         "class": "h-full w-auto max-w-none object-contain"
@@ -562,7 +557,7 @@
       {
         "src": "/media/Logos_Partners/15-google-ads.png",
         "alt": "Google Ads logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "541",
         "height": "166",
         "class": "h-full w-auto max-w-none object-contain"
@@ -570,7 +565,7 @@
       {
         "src": "/media/Logos_Partners/16-tiktok.png",
         "alt": "TikTok logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "466",
         "height": "183",
         "class": "h-full w-auto max-w-none object-contain"
@@ -578,7 +573,7 @@
       {
         "src": "/media/Logos_Partners/17-calendly.png",
         "alt": "Calendly logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "528",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -586,7 +581,7 @@
       {
         "src": "/media/Logos_Partners/20-google-drive.png",
         "alt": "Google Drive logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "591",
         "height": "161",
         "class": "h-full w-auto max-w-none object-contain"
@@ -594,7 +589,7 @@
       {
         "src": "/media/Logos_Partners/18-react.png",
         "alt": "React logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "429",
         "height": "166",
         "class": "h-full w-auto max-w-none object-contain"
@@ -602,63 +597,63 @@
       {
         "src": "/media/Logos_Partners/19-nextjs.png",
         "alt": "Next.js logo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "472",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
-        "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
+        "src": "/media/clients/dr-diego-sinisterra.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "154",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/saboreo.webp",
+        "src": "/media/clients/saboreo.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "256",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/igrafit.webp",
+        "src": "/media/clients/igrafit.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "256",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
         "src": "/media/clients/traffic-publicidad.jpeg",
         "alt": "",
-        "loading": "lazy",
-        "width": "225",
-        "height": "225",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/motos-y-partes-de-occidente.webp",
+        "src": "/media/clients/motos-y-partes-de-occidente.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "174",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/magic-soul.webp",
+        "src": "/media/clients/magic-soul.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "252",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Dra. Jennifer Sinisterra aesthetic dentistry website homepage",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1489",
         "height": "873",
         "class": "absolute left-0 top-0 w-[calc(100%*var(--shot-zoom))] max-w-none select-none sm:w-full"
@@ -666,7 +661,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1710",
         "height": "873",
         "class": "absolute left-0 top-0 w-[calc(100%*var(--shot-zoom))] max-w-none select-none sm:w-full"
@@ -680,7 +675,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 177833,
+    "htmlBytes": 177117,
     "incoming": [
       "/es",
       "/about",
@@ -712,17 +707,16 @@
   },
   {
     "id": "home",
-    "preloadImage": "/images/hero-poster.webp",
     "path": "/",
     "layout": "corporate",
     "indexable": true,
     "type": "WebPage",
-    "topic": "Lead generation and marketing automation for appointment-driven businesses",
+    "topic": "Healthcare marketing and patient acquisition agency",
     "intent": "Commercial agency discovery",
     "locale": "es",
     "url": "/es",
-    "title": "Captación de Clientes y Automatización | DigitalFace Marketing",
-    "description": "DigitalFace conecta publicidad, sitios web, CRM y seguimiento con IA para ayudar a convertir consultas en clientes en Estados Unidos, Canadá y Latinoamérica.",
+    "title": "Captación de Clientes y Automatización de Marketing | DigitalFace Marketing",
+    "description": "DigitalFace conecta pauta, seguimiento con IA y CRM para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica. Conoce tu sistema de crecimiento.",
     "h1": "Más consultas. Mejor seguimiento. Más oportunidades.",
     "canonical": "https://digitalface.app/es",
     "indexStatus": "index, follow",
@@ -1117,10 +1111,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -1145,7 +1135,7 @@
       {
         "src": "/media/Logos_Partners/01-highlevel.png",
         "alt": "Logo de GoHighLevel",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "813",
         "height": "210",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1153,7 +1143,7 @@
       {
         "src": "/media/Logos_Partners/02-hubspot.png",
         "alt": "Logo de HubSpot",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "565",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1161,7 +1151,7 @@
       {
         "src": "/media/Logos_Partners/03-pipedrive.png",
         "alt": "Logo de Pipedrive",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "456",
         "height": "107",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1169,7 +1159,7 @@
       {
         "src": "/media/Logos_Partners/04-kommo.png",
         "alt": "Logo de Kommo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "390",
         "height": "158",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1177,7 +1167,7 @@
       {
         "src": "/media/Logos_Partners/05-zoho-crm.png",
         "alt": "Logo de Zoho CRM",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "683",
         "height": "135",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1185,7 +1175,7 @@
       {
         "src": "/media/Logos_Partners/06-activecampaign.png",
         "alt": "Logo de ActiveCampaign",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "648",
         "height": "115",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1193,7 +1183,7 @@
       {
         "src": "/media/Logos_Partners/21-Odoo.png",
         "alt": "Logo de Odoo",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1242",
         "height": "392",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1201,7 +1191,7 @@
       {
         "src": "/media/Logos_Partners/08-openai.png",
         "alt": "Logo de OpenAI",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "494",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1209,7 +1199,7 @@
       {
         "src": "/media/Logos_Partners/09-chatgpt.png",
         "alt": "Logo de ChatGPT",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "564",
         "height": "179",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1217,7 +1207,7 @@
       {
         "src": "/media/Logos_Partners/07-n8n.png",
         "alt": "Logo de n8n",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "360",
         "height": "107",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1225,7 +1215,7 @@
       {
         "src": "/media/Logos_Partners/10-whatsapp-business.png",
         "alt": "Logo de WhatsApp Business",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "869",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1233,7 +1223,7 @@
       {
         "src": "/media/Logos_Partners/11-messenger.png",
         "alt": "Logo de Messenger",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "618",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1241,7 +1231,7 @@
       {
         "src": "/media/Logos_Partners/12-instagram.png",
         "alt": "Logo de Instagram",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "587",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1249,7 +1239,7 @@
       {
         "src": "/media/Logos_Partners/22-Respond.io.png",
         "alt": "Logo de Respond.io",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1228",
         "height": "198",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1257,7 +1247,7 @@
       {
         "src": "/media/Logos_Partners/13-chatwoot.png",
         "alt": "Logo de Chatwoot",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "554",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1265,7 +1255,7 @@
       {
         "src": "/media/Logos_Partners/14-meta.png",
         "alt": "Logo de Meta",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "440",
         "height": "141",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1273,7 +1263,7 @@
       {
         "src": "/media/Logos_Partners/15-google-ads.png",
         "alt": "Logo de Google Ads",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "541",
         "height": "166",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1281,7 +1271,7 @@
       {
         "src": "/media/Logos_Partners/16-tiktok.png",
         "alt": "Logo de TikTok",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "466",
         "height": "183",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1289,7 +1279,7 @@
       {
         "src": "/media/Logos_Partners/17-calendly.png",
         "alt": "Logo de Calendly",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "528",
         "height": "178",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1297,7 +1287,7 @@
       {
         "src": "/media/Logos_Partners/20-google-drive.png",
         "alt": "Logo de Google Drive",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "591",
         "height": "161",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1305,7 +1295,7 @@
       {
         "src": "/media/Logos_Partners/18-react.png",
         "alt": "Logo de React",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "429",
         "height": "166",
         "class": "h-full w-auto max-w-none object-contain"
@@ -1313,63 +1303,63 @@
       {
         "src": "/media/Logos_Partners/19-nextjs.png",
         "alt": "Logo de Next.js",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "472",
         "height": "173",
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
-        "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
+        "src": "/media/clients/dr-diego-sinisterra.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "154",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/saboreo.webp",
+        "src": "/media/clients/saboreo.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "256",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/igrafit.webp",
+        "src": "/media/clients/igrafit.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "256",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
         "src": "/media/clients/traffic-publicidad.jpeg",
         "alt": "",
-        "loading": "lazy",
-        "width": "225",
-        "height": "225",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/motos-y-partes-de-occidente.webp",
+        "src": "/media/clients/motos-y-partes-de-occidente.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "174",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
-        "src": "/media/clients/optimized/magic-soul.webp",
+        "src": "/media/clients/magic-soul.png",
         "alt": "",
-        "loading": "lazy",
-        "width": "256",
-        "height": "252",
+        "loading": "eager",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Página de inicio del sitio web de odontología estética de la Dra. Jennifer Sinisterra",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1489",
         "height": "873",
         "class": "absolute left-0 top-0 w-[calc(100%*var(--shot-zoom))] max-w-none select-none sm:w-full"
@@ -1377,7 +1367,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "",
-        "loading": "lazy",
+        "loading": "eager",
         "width": "1710",
         "height": "873",
         "class": "absolute left-0 top-0 w-[calc(100%*var(--shot-zoom))] max-w-none select-none sm:w-full"
@@ -1391,7 +1381,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 179505,
+    "htmlBytes": 178843,
     "incoming": [
       "/",
       "/es/about",
@@ -1432,7 +1422,7 @@
     "locale": "en",
     "url": "/about",
     "title": "About DigitalFace Marketing | How the Company Works",
-    "description": "Meet the team behind DigitalFace: marketing strategy, technology and ongoing support for business growth, delivered remotely from Colombia and Florida.",
+    "description": "DigitalFace brings strategy, technology and specialist expertise together under one accountable relationship. How the company is organized, what it takes responsibility for, and where it operates from.",
     "h1": "Marketing and technology. One team.",
     "canonical": "https://digitalface.app/about",
     "indexStatus": "index, follow",
@@ -1720,10 +1710,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -1770,7 +1756,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81146,
+    "htmlBytes": 80899,
     "incoming": [
       "/",
       "/es/about",
@@ -1808,7 +1794,7 @@
     "locale": "es",
     "url": "/es/about",
     "title": "Sobre DigitalFace Marketing | Cómo funciona la compañía",
-    "description": "Conoce al equipo de DigitalFace: estrategia de marketing, tecnología y soporte para el crecimiento de negocios, con atención remota desde Colombia y Florida.",
+    "description": "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cómo está organizada la compañía, de qué responde y desde dónde opera.",
     "h1": "Marketing y tecnología. Un solo equipo.",
     "canonical": "https://digitalface.app/es/about",
     "indexStatus": "index, follow",
@@ -2096,10 +2082,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -2146,7 +2128,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81838,
+    "htmlBytes": 81545,
     "incoming": [
       "/es",
       "/about",
@@ -2184,8 +2166,8 @@
     "intent": "Evaluate how the managed system works",
     "locale": "en",
     "url": "/features",
-    "title": "CRM & Automated Lead Follow-Up | DigitalFace Marketing",
-    "description": "Connect advertising, AI conversations, CRM and appointment booking in one managed system. See how DigitalFace helps your practice follow up and convert inquiries.",
+    "title": "Patient Acquisition & Follow-Up System | DigitalFace Marketing",
+    "description": "How the DigitalFace system captures every patient inquiry and turns it into a booked appointment: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
     "h1": "From first interest to the next appointment.",
     "canonical": "https://digitalface.app/features",
     "indexStatus": "index, follow",
@@ -2526,10 +2508,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -2560,7 +2538,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 86726,
+    "htmlBytes": 86446,
     "incoming": [
       "/",
       "/about",
@@ -2601,8 +2579,8 @@
     "intent": "Evaluate how the managed system works",
     "locale": "es",
     "url": "/es/features",
-    "title": "CRM y Seguimiento Automatizado | DigitalFace Marketing",
-    "description": "Conecta publicidad, conversaciones con IA, CRM y agendamiento en un sistema gestionado por DigitalFace para dar seguimiento a las consultas de tu clínica.",
+    "title": "Sistema de Captación y Seguimiento de Pacientes | DigitalFace Marketing",
+    "description": "Cómo el sistema DigitalFace captura cada consulta de paciente y la convierte en una cita agendada: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
     "h1": "Del primer interés a la próxima cita.",
     "canonical": "https://digitalface.app/es/features",
     "indexStatus": "index, follow",
@@ -2943,10 +2921,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -2977,7 +2951,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87819,
+    "htmlBytes": 87755,
     "incoming": [
       "/es",
       "/es/about",
@@ -3018,8 +2992,8 @@
     "intent": "Select services for a custom request",
     "locale": "en",
     "url": "/pay-per-service",
-    "title": "Marketing, CRM & Automation Services | DigitalFace Marketing",
-    "description": "Choose individual services from DigitalFace: paid ads, AI chatbots, CRM, automation, websites and funnels. Send your selection for a scoped proposal.",
+    "title": "Marketing & Automation Services for Clinics | DigitalFace Marketing",
+    "description": "Hire one DigitalFace capability at a time instead of a full system: Meta and Google ads, chatbots, workflow automation, CRM setup, reporting, websites and funnels.",
     "h1": "Choose only the services you need.",
     "canonical": "https://digitalface.app/pay-per-service",
     "indexStatus": "index, follow",
@@ -3412,10 +3386,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -3446,7 +3416,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 109839,
+    "htmlBytes": 109309,
     "incoming": [
       "/",
       "/about",
@@ -3456,10 +3426,7 @@
       "/contact",
       "/book",
       "/privacy",
-      "/terms",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas"
+      "/terms"
     ],
     "outgoing": [
       "/",
@@ -3487,8 +3454,8 @@
     "intent": "Select services for a custom request",
     "locale": "es",
     "url": "/es/pay-per-service",
-    "title": "Servicios de Marketing, CRM y Automatización | DigitalFace Marketing",
-    "description": "Elige servicios de DigitalFace: publicidad, chatbots con IA, CRM, automatización, sitios web y páginas de campaña. Solicita una propuesta con el alcance que necesitas.",
+    "title": "Servicios de Marketing y Automatización para Clínicas | DigitalFace Marketing",
+    "description": "Contrata una sola capacidad de DigitalFace a la vez en lugar del sistema completo: pauta en Meta y Google, chatbots, automatización de procesos, CRM, reportes, sitios web y embudos.",
     "h1": "Elige solo los servicios que necesitas.",
     "canonical": "https://digitalface.app/es/pay-per-service",
     "indexStatus": "index, follow",
@@ -3881,10 +3848,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -3915,7 +3878,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111768,
+    "htmlBytes": 111228,
     "incoming": [
       "/es",
       "/es/about",
@@ -3925,10 +3888,7 @@
       "/es/contact",
       "/es/book",
       "/es/privacy",
-      "/es/terms",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas"
+      "/es/terms"
     ],
     "outgoing": [
       "/es",
@@ -3956,7 +3916,7 @@
     "locale": "en",
     "url": "/pricing",
     "title": "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
-    "description": "Compare DigitalFace plans for lead capture, AI follow-up and managed growth. Review setup fees, monthly pricing, included services and usage terms.",
+    "description": "DigitalFace Capture, DigitalFace AI and The DigitalFace Sales System: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
     "h1": "Choose the help your practice needs.",
     "canonical": "https://digitalface.app/pricing",
     "indexStatus": "index, follow",
@@ -4428,10 +4388,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -4462,7 +4418,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 120061,
+    "htmlBytes": 119722,
     "incoming": [
       "/",
       "/about",
@@ -4503,7 +4459,7 @@
     "locale": "es",
     "url": "/es/pricing",
     "title": "Planes y Precios para Clínicas | DigitalFace Marketing",
-    "description": "Compara los planes DigitalFace de captación, seguimiento con IA y crecimiento gestionado: implementación, mensualidades, servicios incluidos y condiciones de uso.",
+    "description": "DigitalFace Capture, DigitalFace AI y The DigitalFace Sales System: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
     "h1": "Elige el apoyo que necesita tu clínica.",
     "canonical": "https://digitalface.app/es/pricing",
     "indexStatus": "index, follow",
@@ -4975,10 +4931,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -5009,7 +4961,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 121901,
+    "htmlBytes": 121538,
     "incoming": [
       "/es",
       "/es/about",
@@ -5049,8 +5001,8 @@
     "intent": "Submit a qualified business inquiry",
     "locale": "en",
     "url": "/contact",
-    "title": "Contact & Custom Proposals | DigitalFace Marketing",
-    "description": "Tell DigitalFace what your business needs: advertising, websites, CRM or automated follow-up. Send a message or a service request for a tailored proposal.",
+    "title": "Contact DigitalFace Marketing | Book a Patient Growth Call",
+    "description": "Tell us about your practice and how patient inquiries reach you today. We map your follow-up flow and bring a plan to the call, and we reply within one business day.",
     "h1": "Tell us what you need.",
     "canonical": "https://digitalface.app/contact",
     "indexStatus": "index, follow",
@@ -5346,10 +5298,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -5380,7 +5328,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 70591,
+    "htmlBytes": 70211,
     "incoming": [
       "/",
       "/about",
@@ -5390,10 +5338,7 @@
       "/es/contact",
       "/book",
       "/privacy",
-      "/terms",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas"
+      "/terms"
     ],
     "outgoing": [
       "/",
@@ -5420,8 +5365,8 @@
     "intent": "Submit a qualified business inquiry",
     "locale": "es",
     "url": "/es/contact",
-    "title": "Contacto y Propuestas a Medida | DigitalFace Marketing",
-    "description": "Cuéntale a DigitalFace qué necesita tu negocio: publicidad, sitios web, CRM o seguimiento automatizado. Envía tu consulta y solicita una propuesta a medida.",
+    "title": "Contacto | Agenda una Llamada con DigitalFace Marketing",
+    "description": "Cuéntanos sobre tu clínica y cómo llegan tus consultas de pacientes hoy. Mapeamos tu flujo de seguimiento y llegamos a la llamada con un plan. Respondemos en un día hábil.",
     "h1": "Cuéntanos qué necesitas.",
     "canonical": "https://digitalface.app/es/contact",
     "indexStatus": "index, follow",
@@ -5717,10 +5662,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -5751,7 +5692,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 71477,
+    "htmlBytes": 71084,
     "incoming": [
       "/es",
       "/es/about",
@@ -5761,10 +5702,7 @@
       "/contact",
       "/es/book",
       "/es/privacy",
-      "/es/terms",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas"
+      "/es/terms"
     ],
     "outgoing": [
       "/es",
@@ -6052,10 +5990,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -6086,7 +6020,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 35983,
+    "htmlBytes": 35536,
     "incoming": [
       "/",
       "/about",
@@ -6387,10 +6321,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -6421,7 +6351,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36600,
+    "htmlBytes": 36157,
     "incoming": [
       "/es",
       "/es/about",
@@ -6774,10 +6704,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -6808,7 +6734,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 41151,
+    "htmlBytes": 40704,
     "incoming": [
       "/",
       "/about",
@@ -7161,10 +7087,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -7195,7 +7117,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42533,
+    "htmlBytes": 42090,
     "incoming": [
       "/es",
       "/es/about",
@@ -7556,10 +7478,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/privacy",
         "text": "Privacy Policy"
       },
@@ -7590,7 +7508,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 39841,
+    "htmlBytes": 39394,
     "incoming": [
       "/",
       "/about",
@@ -7951,10 +7869,6 @@
         "text": "Med Spas"
       },
       {
-        "href": "mailto:sales@digitalfacemarketing.com",
-        "text": "sales@digitalfacemarketing.com"
-      },
-      {
         "href": "/es/privacy",
         "text": "Política de privacidad"
       },
@@ -7985,7 +7899,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 40924,
+    "htmlBytes": 40481,
     "incoming": [
       "/es",
       "/es/about",
@@ -8017,7 +7931,6 @@
   },
   {
     "id": "dental",
-    "preloadImage": "/media/dental/hero-backdrop.webp",
     "path": "/industries/dental-practices",
     "layout": "industry",
     "indexable": true,
@@ -8028,7 +7941,7 @@
     "locale": "en",
     "url": "/industries/dental-practices",
     "title": "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
-    "description": "Dental marketing, bilingual follow-up and appointment booking for implant, veneer and smile-design inquiries. DigitalFace connects your ads, AI and CRM.",
+    "description": "Turn implant, veneer and smile design inquiries into attended consultations. DigitalFace runs the advertising, bilingual follow-up, consultation booking and recall workflow for dental practices in the US and Latin America.",
     "h1": "Turn dental inquiries into booked consultations.",
     "canonical": "https://digitalface.app/industries/dental-practices",
     "indexStatus": "index, follow",
@@ -8338,14 +8251,6 @@
         "text": "Plans and pricing"
       },
       {
-        "href": "/pay-per-service#services",
-        "text": "Custom advertising, automation and CRM services"
-      },
-      {
-        "href": "/contact#contact-form",
-        "text": "Request a proposal"
-      },
-      {
         "href": "/industries/aesthetic-medicine",
         "text": "Aesthetic Medicine"
       },
@@ -8394,7 +8299,7 @@
       {
         "src": "/media/dental/moment-01.webp",
         "alt": "Dentist comparing a shade guide with a smiling young patient",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8402,7 +8307,7 @@
       {
         "src": "/media/dental/moment-02.webp",
         "alt": "Treatment light and instruments in a modern dental operatory",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8410,7 +8315,7 @@
       {
         "src": "/media/dental/moment-03.webp",
         "alt": "Dental clinic room where staff attend a patient together",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8418,7 +8323,7 @@
       {
         "src": "/media/dental/hero-banner.webp",
         "alt": "Dentist welcoming a smiling patient into the treatment chair",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8426,7 +8331,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Homepage of the Dra. Jennifer Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8434,7 +8339,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Homepage of the Dr. Diego Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8448,7 +8353,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 200970,
+    "htmlBytes": 200800,
     "incoming": [
       "/",
       "/about",
@@ -8469,8 +8374,6 @@
       "/",
       "/features",
       "/pricing",
-      "/pay-per-service",
-      "/contact",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
       "/privacy",
@@ -8479,7 +8382,6 @@
   },
   {
     "id": "dental",
-    "preloadImage": "/media/dental/hero-backdrop.webp",
     "path": "/industries/dental-practices",
     "layout": "industry",
     "indexable": true,
@@ -8489,8 +8391,8 @@
     "intent": "Evaluate dental patient acquisition services",
     "locale": "es",
     "url": "/es/industries/dental-practices",
-    "title": "Marketing Dental y Captación de Pacientes | DigitalFace Marketing",
-    "description": "Marketing dental, seguimiento bilingüe y agendamiento para consultas de implantes, carillas y diseño de sonrisa. DigitalFace conecta publicidad, IA y CRM.",
+    "title": "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
+    "description": "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones atendidas. DigitalFace opera la pauta, el seguimiento bilingüe, el agendamiento de valoraciones y la recuperación del tratamiento pendiente de clínicas odontológicas en Estados Unidos y Latinoamérica.",
     "h1": "Convierte el interés dental en citas de valoración.",
     "canonical": "https://digitalface.app/es/industries/dental-practices",
     "indexStatus": "index, follow",
@@ -8800,14 +8702,6 @@
         "text": "Planes y precios"
       },
       {
-        "href": "/es/pay-per-service#services",
-        "text": "Publicidad, automatización y CRM a medida"
-      },
-      {
-        "href": "/es/contact#contact-form",
-        "text": "Solicitar una propuesta"
-      },
-      {
         "href": "/es/industries/aesthetic-medicine",
         "text": "Medicina Estética"
       },
@@ -8856,7 +8750,7 @@
       {
         "src": "/media/dental/moment-01.webp",
         "alt": "Odontólogo comparando la guía de color con un paciente sonriente",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8864,7 +8758,7 @@
       {
         "src": "/media/dental/moment-02.webp",
         "alt": "Lámpara e instrumental en un consultorio odontológico moderno",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8872,7 +8766,7 @@
       {
         "src": "/media/dental/moment-03.webp",
         "alt": "Sala de una clínica dental donde el equipo atiende a un paciente",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -8880,7 +8774,7 @@
       {
         "src": "/media/dental/hero-banner.webp",
         "alt": "Odontólogo recibiendo a un paciente sonriente en el consultorio",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8888,7 +8782,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Inicio del sitio web de la Dra. Jennifer Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8896,7 +8790,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Inicio del sitio web del Dr. Diego Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -8910,7 +8804,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203042,
+    "htmlBytes": 203279,
     "incoming": [
       "/es",
       "/es/about",
@@ -8931,8 +8825,6 @@
       "/es",
       "/es/features",
       "/es/pricing",
-      "/es/pay-per-service",
-      "/es/contact",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
       "/es/privacy",
@@ -8941,7 +8833,6 @@
   },
   {
     "id": "aesthetic",
-    "preloadImage": "/media/aesthetic/hero-backdrop.webp",
     "path": "/industries/aesthetic-medicine",
     "layout": "industry",
     "indexable": true,
@@ -8951,8 +8842,8 @@
     "intent": "Evaluate procedure-inquiry qualification and follow-up",
     "locale": "en",
     "url": "/industries/aesthetic-medicine",
-    "title": "Aesthetic Clinic Marketing | DigitalFace Marketing",
-    "description": "Marketing and patient follow-up for aesthetic medicine and plastic surgery practices. DigitalFace connects ads, inquiry qualification, CRM and consultation booking.",
+    "title": "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
+    "description": "Turn injectable, skin quality and surgical procedure interest into attended consultations. DigitalFace runs the advertising, bilingual communication, consultation booking and follow-up for aesthetic medicine and plastic surgery practices, while every clinical decision stays with your team.",
     "h1": "Turn procedure interest into consultations.",
     "canonical": "https://digitalface.app/industries/aesthetic-medicine",
     "indexStatus": "index, follow",
@@ -9262,14 +9153,6 @@
         "text": "Plans and pricing"
       },
       {
-        "href": "/pay-per-service#services",
-        "text": "Custom advertising, automation and CRM services"
-      },
-      {
-        "href": "/contact#contact-form",
-        "text": "Request a proposal"
-      },
-      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -9318,7 +9201,7 @@
       {
         "src": "/media/aesthetic/moment-01.webp",
         "alt": "Physician assessing a patient's face during an aesthetic consultation",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9326,7 +9209,7 @@
       {
         "src": "/media/aesthetic/moment-02.webp",
         "alt": "Clinician examining a patient's face during an aesthetic assessment",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9334,7 +9217,7 @@
       {
         "src": "/media/aesthetic/moment-03.webp",
         "alt": "Modern aesthetic medicine treatment room prepared for a patient",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9342,7 +9225,7 @@
       {
         "src": "/media/aesthetic/hero-banner.webp",
         "alt": "Aesthetic physician assessing a patient's face during a consultation",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9350,7 +9233,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Homepage of the Dr. Diego Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9358,7 +9241,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Homepage of the Dra. Jennifer Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9372,7 +9255,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 201575,
+    "htmlBytes": 201838,
     "incoming": [
       "/",
       "/about",
@@ -9393,8 +9276,6 @@
       "/",
       "/features",
       "/pricing",
-      "/pay-per-service",
-      "/contact",
       "/industries/dental-practices",
       "/industries/med-spas",
       "/privacy",
@@ -9403,7 +9284,6 @@
   },
   {
     "id": "aesthetic",
-    "preloadImage": "/media/aesthetic/hero-backdrop.webp",
     "path": "/industries/aesthetic-medicine",
     "layout": "industry",
     "indexable": true,
@@ -9413,8 +9293,8 @@
     "intent": "Evaluate procedure-inquiry qualification and follow-up",
     "locale": "es",
     "url": "/es/industries/aesthetic-medicine",
-    "title": "Marketing para Clínicas Estéticas | DigitalFace Marketing",
-    "description": "Marketing y seguimiento de pacientes para medicina estética y cirugía plástica. DigitalFace conecta publicidad, calificación de consultas, CRM y agendamiento.",
+    "title": "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
+    "description": "Convierte el interés por inyectables, calidad de piel y procedimientos quirúrgicos en valoraciones atendidas. DigitalFace opera la pauta, la comunicación bilingüe, el agendamiento y el seguimiento de centros de medicina estética y cirugía plástica, mientras cada decisión clínica sigue en tu equipo.",
     "h1": "Convierte el interés en procedimientos en valoraciones.",
     "canonical": "https://digitalface.app/es/industries/aesthetic-medicine",
     "indexStatus": "index, follow",
@@ -9724,14 +9604,6 @@
         "text": "Planes y precios"
       },
       {
-        "href": "/es/pay-per-service#services",
-        "text": "Publicidad, automatización y CRM a medida"
-      },
-      {
-        "href": "/es/contact#contact-form",
-        "text": "Solicitar una propuesta"
-      },
-      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -9780,7 +9652,7 @@
       {
         "src": "/media/aesthetic/moment-01.webp",
         "alt": "Médico evaluando el rostro de una paciente en una consulta estética",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9788,7 +9660,7 @@
       {
         "src": "/media/aesthetic/moment-02.webp",
         "alt": "Profesional examinando el rostro de una paciente en una valoración estética",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9796,7 +9668,7 @@
       {
         "src": "/media/aesthetic/moment-03.webp",
         "alt": "Sala moderna de medicina estética preparada para un paciente",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -9804,7 +9676,7 @@
       {
         "src": "/media/aesthetic/hero-banner.webp",
         "alt": "Médico evaluando el rostro de una paciente en una consulta estética",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9812,7 +9684,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Inicio del sitio web del Dr. Diego Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9820,7 +9692,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Inicio del sitio web de la Dra. Jennifer Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -9834,7 +9706,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203579,
+    "htmlBytes": 203920,
     "incoming": [
       "/es",
       "/es/about",
@@ -9855,8 +9727,6 @@
       "/es",
       "/es/features",
       "/es/pricing",
-      "/es/pay-per-service",
-      "/es/contact",
       "/es/industries/dental-practices",
       "/es/industries/med-spas",
       "/es/privacy",
@@ -9865,7 +9735,6 @@
   },
   {
     "id": "med-spa",
-    "preloadImage": "/media/med-spa/hero-backdrop.webp",
     "path": "/industries/med-spas",
     "layout": "industry",
     "indexable": true,
@@ -9876,7 +9745,7 @@
     "locale": "en",
     "url": "/industries/med-spas",
     "title": "Med Spa Marketing & Booking System | DigitalFace Marketing",
-    "description": "Help med spa clients book and return. DigitalFace connects paid promotions, AI follow-up, CRM, appointment booking and client reactivation.",
+    "description": "Turn treatment interest into booked and returning clients. DigitalFace runs the promotions, AI booking, deposits, rebooking and client reactivation workflow for med spas in the US and Latin America.",
     "h1": "Turn med spa interest into repeat visits.",
     "canonical": "https://digitalface.app/industries/med-spas",
     "indexStatus": "index, follow",
@@ -10186,14 +10055,6 @@
         "text": "Plans and pricing"
       },
       {
-        "href": "/pay-per-service#services",
-        "text": "Custom advertising, automation and CRM services"
-      },
-      {
-        "href": "/contact#contact-form",
-        "text": "Request a proposal"
-      },
-      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -10242,7 +10103,7 @@
       {
         "src": "/media/med-spa/moment-01.webp",
         "alt": "Med spa staff welcoming clients at the reception desk",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10250,7 +10111,7 @@
       {
         "src": "/media/med-spa/moment-02.webp",
         "alt": "Indoor spa pool lit by candlelight",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10258,7 +10119,7 @@
       {
         "src": "/media/med-spa/moment-03.webp",
         "alt": "Lounge seating area of a premium med spa",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10266,7 +10127,7 @@
       {
         "src": "/media/med-spa/hero-banner.webp",
         "alt": "Client receiving a facial treatment at a premium med spa",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10274,7 +10135,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Homepage of the Dr. Diego Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10282,7 +10143,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Homepage of the Dra. Jennifer Sinisterra website developed by DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10296,7 +10157,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 200853,
+    "htmlBytes": 200627,
     "incoming": [
       "/",
       "/about",
@@ -10317,8 +10178,6 @@
       "/",
       "/features",
       "/pricing",
-      "/pay-per-service",
-      "/contact",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/privacy",
@@ -10327,7 +10186,6 @@
   },
   {
     "id": "med-spa",
-    "preloadImage": "/media/med-spa/hero-backdrop.webp",
     "path": "/industries/med-spas",
     "layout": "industry",
     "indexable": true,
@@ -10337,8 +10195,8 @@
     "intent": "Evaluate med spa acquisition and retention services",
     "locale": "es",
     "url": "/es/industries/med-spas",
-    "title": "Marketing para Med Spas | DigitalFace Marketing",
-    "description": "Ayuda a que tus clientes agenden y regresen al med spa. DigitalFace conecta publicidad, seguimiento con IA, CRM, agendamiento y reactivación.",
+    "title": "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
+    "description": "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera las promociones, el agendamiento con IA, los anticipos, las nuevas reservas y la reactivación de clientes de med spas en Estados Unidos y Latinoamérica.",
     "h1": "Convierte el interés en tu med spa en visitas frecuentes.",
     "canonical": "https://digitalface.app/es/industries/med-spas",
     "indexStatus": "index, follow",
@@ -10648,14 +10506,6 @@
         "text": "Planes y precios"
       },
       {
-        "href": "/es/pay-per-service#services",
-        "text": "Publicidad, automatización y CRM a medida"
-      },
-      {
-        "href": "/es/contact#contact-form",
-        "text": "Solicitar una propuesta"
-      },
-      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -10704,7 +10554,7 @@
       {
         "src": "/media/med-spa/moment-01.webp",
         "alt": "Equipo de un med spa atendiendo a clientas en la recepción",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10712,7 +10562,7 @@
       {
         "src": "/media/med-spa/moment-02.webp",
         "alt": "Piscina interior de spa iluminada con velas",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10720,7 +10570,7 @@
       {
         "src": "/media/med-spa/moment-03.webp",
         "alt": "Zona de descanso de un med spa premium",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "h-full w-full object-cover transition-transform [transition-duration:1600ms] ease-out group-hover:scale-[1.07] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
@@ -10728,7 +10578,7 @@
       {
         "src": "/media/med-spa/hero-banner.webp",
         "alt": "Clienta recibiendo un tratamiento facial en un med spa",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10736,7 +10586,7 @@
       {
         "src": "/media/Homepages_Websites/dr-diego-website.webp",
         "alt": "Inicio del sitio web del Dr. Diego Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10744,7 +10594,7 @@
       {
         "src": "/media/Homepages_Websites/dra-jennifer-website.webp",
         "alt": "Inicio del sitio web de la Dra. Jennifer Sinisterra desarrollado por DigitalFace",
-        "loading": "lazy",
+        "loading": "eager",
         "width": null,
         "height": null,
         "class": "absolute inset-0 h-full w-full object-cover"
@@ -10758,7 +10608,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202945,
+    "htmlBytes": 203093,
     "incoming": [
       "/es",
       "/es/about",
@@ -10779,8 +10629,6 @@
       "/es",
       "/es/features",
       "/es/pricing",
-      "/es/pay-per-service",
-      "/es/contact",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/privacy",

@@ -95,9 +95,9 @@ export const industryContentEs: IndustryLocaleBundle = {
       industryLabel: "Sistema de Crecimiento Odontológico",
       metadata: {
         title:
-          "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
+          "Marketing Dental y Captación de Pacientes | DigitalFace Marketing",
         description:
-          "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones atendidas. DigitalFace opera la pauta, el seguimiento bilingüe, el agendamiento de valoraciones y la recuperación del tratamiento pendiente de clínicas odontológicas en Estados Unidos y Latinoamérica.",
+          "Marketing dental, seguimiento bilingüe y agendamiento para consultas de implantes, carillas y diseño de sonrisa. DigitalFace conecta publicidad, IA y CRM.",
       },
       hero: {
         eyebrow: "DigitalFace para clínicas odontológicas",
@@ -777,10 +777,9 @@ export const industryContentEs: IndustryLocaleBundle = {
       navLabel: "Medicina Estética",
       industryLabel: "Sistema de Crecimiento en Medicina Estética",
       metadata: {
-        title:
-          "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
+        title: "Marketing para Clínicas Estéticas | DigitalFace Marketing",
         description:
-          "Convierte el interés por inyectables, calidad de piel y procedimientos quirúrgicos en valoraciones atendidas. DigitalFace opera la pauta, la comunicación bilingüe, el agendamiento y el seguimiento de centros de medicina estética y cirugía plástica, mientras cada decisión clínica sigue en tu equipo.",
+          "Marketing y seguimiento de pacientes para medicina estética y cirugía plástica. DigitalFace conecta publicidad, calificación de consultas, CRM y agendamiento.",
       },
       hero: {
         eyebrow: "DigitalFace para medicina estética y cirugía plástica",
@@ -1470,10 +1469,9 @@ export const industryContentEs: IndustryLocaleBundle = {
       navLabel: "Med Spas",
       industryLabel: "Sistema de Crecimiento para Med Spas",
       metadata: {
-        title:
-          "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
+        title: "Marketing para Med Spas | DigitalFace Marketing",
         description:
-          "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera las promociones, el agendamiento con IA, los anticipos, las nuevas reservas y la reactivación de clientes de med spas en Estados Unidos y Latinoamérica.",
+          "Ayuda a que tus clientes agenden y regresen al med spa. DigitalFace conecta publicidad, seguimiento con IA, CRM, agendamiento y reactivación.",
       },
       hero: {
         eyebrow: "DigitalFace para med spas",

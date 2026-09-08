@@ -1,0 +1,50 @@
+[
+  {
+    "source": "/media/clients/dr-diego-sinisterra.png",
+    "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
+    "width": 256,
+    "height": 154,
+    "originalBytes": 136108,
+    "optimizedBytes": 7044
+  },
+  {
+    "source": "/media/clients/saboreo.png",
+    "src": "/media/clients/optimized/saboreo.webp",
+    "width": 256,
+    "height": 256,
+    "originalBytes": 241481,
+    "optimizedBytes": 17246
+  },
+  {
+    "source": "/media/clients/igrafit.png",
+    "src": "/media/clients/optimized/igrafit.webp",
+    "width": 256,
+    "height": 256,
+    "originalBytes": 106998,
+    "optimizedBytes": 8020
+  },
+  {
+    "source": "/media/clients/traffic-publicidad.jpeg",
+    "src": "/media/clients/traffic-publicidad.jpeg",
+    "width": 225,
+    "height": 225,
+    "originalBytes": 4368,
+    "optimizedBytes": 4368
+  },
+  {
+    "source": "/media/clients/motos-y-partes-de-occidente.png",
+    "src": "/media/clients/optimized/motos-y-partes-de-occidente.webp",
+    "width": 256,
+    "height": 174,
+    "originalBytes": 40352,
+    "optimizedBytes": 13350
+  },
+  {
+    "source": "/media/clients/magic-soul.png",
+    "src": "/media/clients/optimized/magic-soul.webp",
+    "width": 256,
+    "height": 252,
+    "originalBytes": 780395,
+    "optimizedBytes": 58616
+  }
+]

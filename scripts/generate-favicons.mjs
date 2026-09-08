@@ -14,7 +14,7 @@ const png = (size) =>
     .png({ compressionLevel: 9 })
     .toBuffer();
 
-for (const size of [48, 96, 192])
+for (const size of [48, 96, 180, 192])
   await fs.writeFile(`public/favicon-${size}x${size}.png`, await png(size));
 
 // ICO directory with three PNG-encoded images, supported by modern ICO readers.
@@ -36,5 +36,5 @@ images.forEach((image, index) => {
 });
 await fs.writeFile("public/favicon.ico", Buffer.concat([directory, ...images]));
 console.log(
-  "Generated DigitalFace ICO (16/32/48) and PNG (48/96/192) favicons.",
+  "Generated DigitalFace ICO (16/32/48), PNG (48/96/192), and Apple (180) icons.",
 );

@@ -3,9 +3,9 @@ import type { Locale } from "../locale";
 
 const en = {
   metadata: {
-    title: "Patient Acquisition & Follow-Up System | DigitalFace Marketing",
+    title: "CRM & Automated Lead Follow-Up | DigitalFace Marketing",
     description:
-      "How the DigitalFace system captures every patient inquiry and turns it into a booked appointment: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
+      "Connect advertising, AI conversations, CRM and appointment booking in one managed system. See how DigitalFace helps your practice follow up and convert inquiries.",
   },
   overview: {
     eyebrow: "Sales System",
@@ -299,10 +299,9 @@ const en = {
 
 const es: typeof en = {
   metadata: {
-    title:
-      "Sistema de Captación y Seguimiento de Pacientes | DigitalFace Marketing",
+    title: "CRM y Seguimiento Automatizado | DigitalFace Marketing",
     description:
-      "Cómo el sistema DigitalFace captura cada consulta de paciente y la convierte en una cita agendada: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
+      "Conecta publicidad, conversaciones con IA, CRM y agendamiento en un sistema gestionado por DigitalFace para dar seguimiento a las consultas de tu clínica.",
   },
   overview: {
     eyebrow: "Sistema de Ventas",

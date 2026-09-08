@@ -8,6 +8,7 @@ import {
 } from "@/data/clients";
 import type { HomeContent } from "@/i18n/content/home";
 import { cn } from "@/lib/utils";
+import optimizedClientLogos from "@/data/optimizedClientLogos.json";
 
 type SelectedWorkContent = HomeContent["selectedWork"];
 
@@ -54,6 +55,12 @@ function ClientLogo({
     );
   }
 
+  const image = (
+    optimizedClientLogos as Record<
+      string,
+      { src: string; width: number; height: number }
+    >
+  )[client.logo.src];
   return (
     <span
       className={cn(
@@ -64,7 +71,9 @@ function ClientLogo({
       )}
     >
       <img
-        src={client.logo.src}
+        src={image?.src || client.logo.src}
+        width={image?.width}
+        height={image?.height}
         /* Decorative: the client name is rendered right beside it. */
         alt=""
         loading="lazy"

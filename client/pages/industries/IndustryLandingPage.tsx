@@ -374,8 +374,8 @@ function ClosedLandingFooter({
       <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6 lg:px-8">
         <p className="mb-8 text-sm leading-relaxed text-white/60">
           {locale === "es"
-            ? "Atendemos clínicas en Florida, Estados Unidos y Latinoamérica, de forma remota en inglés y español."
-            : "Serving practices in Florida, across the United States and Latin America, remotely in English and Spanish."}
+            ? "Atendemos clínicas en Estados Unidos, Canadá y Latinoamérica, de forma remota en inglés y español."
+            : "Serving practices across the United States, Canada and Latin America, remotely in English and Spanish."}
         </p>
         <div className="grid gap-8 sm:grid-cols-2">
           <div>
@@ -405,6 +405,26 @@ function ClosedLandingFooter({
                   to={path("/pricing")}
                 >
                   {ui.footer.plansLink}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-white/75 transition hover:text-white"
+                  to={path("/pay-per-service#services")}
+                >
+                  {locale === "es"
+                    ? "Publicidad, automatización y CRM a medida"
+                    : "Custom advertising, automation and CRM services"}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-white/75 transition hover:text-white"
+                  to={path("/contact#contact-form")}
+                >
+                  {locale === "es"
+                    ? "Solicitar una propuesta"
+                    : "Request a proposal"}
                 </Link>
               </li>
             </ul>

@@ -1,0 +1,473 @@
+[
+  {
+    "file": "DIGITAL FACE favicon.png",
+    "bytes": 21893,
+    "width": 464,
+    "height": 860,
+    "format": "png"
+  },
+  {
+    "file": "favicon-192x192.png",
+    "bytes": 6994,
+    "width": 192,
+    "height": 192,
+    "format": "png"
+  },
+  {
+    "file": "favicon-48x48.png",
+    "bytes": 1942,
+    "width": 48,
+    "height": 48,
+    "format": "png"
+  },
+  {
+    "file": "favicon-96x96.png",
+    "bytes": 3773,
+    "width": 96,
+    "height": 96,
+    "format": "png"
+  },
+  {
+    "file": "favicon.ico",
+    "bytes": 3928
+  },
+  {
+    "file": "placeholder.svg",
+    "bytes": 3253,
+    "width": 1200,
+    "height": 1200,
+    "format": "svg"
+  },
+  {
+    "file": "robots.txt",
+    "bytes": 69
+  },
+  {
+    "file": "images\\DIGITAL FACE MARCA ISOTIPO.png",
+    "bytes": 21893,
+    "width": 464,
+    "height": 860,
+    "format": "png"
+  },
+  {
+    "file": "images\\digitalface-post.png",
+    "bytes": 486947,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 01.png",
+    "bytes": 537554,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 02.png",
+    "bytes": 530617,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 03.png",
+    "bytes": 399392,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 04.png",
+    "bytes": 356828,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 05.png",
+    "bytes": 541913,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 06.png",
+    "bytes": 628869,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "images\\ML 07.png",
+    "bytes": 601459,
+    "width": 1536,
+    "height": 1024,
+    "format": "png"
+  },
+  {
+    "file": "videos\\digitalface-hero.mp4",
+    "bytes": 2815737
+  },
+  {
+    "file": "media\\aesthetic\\hero-backdrop.webp",
+    "bytes": 109068,
+    "width": 2000,
+    "height": 1533,
+    "format": "webp"
+  },
+  {
+    "file": "media\\aesthetic\\hero-banner.webp",
+    "bytes": 86584,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  },
+  {
+    "file": "media\\aesthetic\\moment-01.webp",
+    "bytes": 75736,
+    "width": 1200,
+    "height": 2132,
+    "format": "webp"
+  },
+  {
+    "file": "media\\aesthetic\\moment-02.webp",
+    "bytes": 50476,
+    "width": 1200,
+    "height": 800,
+    "format": "webp"
+  },
+  {
+    "file": "media\\aesthetic\\moment-03.webp",
+    "bytes": 19886,
+    "width": 1200,
+    "height": 801,
+    "format": "webp"
+  },
+  {
+    "file": "media\\aesthetic\\workflow-banner.webp",
+    "bytes": 84184,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  },
+  {
+    "file": "media\\clients\\dr-diego-sinisterra.png",
+    "bytes": 136108,
+    "width": 2000,
+    "height": 1202,
+    "format": "png"
+  },
+  {
+    "file": "media\\clients\\igrafit.png",
+    "bytes": 106998,
+    "width": 2362,
+    "height": 2362,
+    "format": "png"
+  },
+  {
+    "file": "media\\clients\\magic-soul.png",
+    "bytes": 780395,
+    "width": 3426,
+    "height": 3374,
+    "format": "png"
+  },
+  {
+    "file": "media\\clients\\motos-y-partes-de-occidente.png",
+    "bytes": 40352,
+    "width": 1001,
+    "height": 680,
+    "format": "png"
+  },
+  {
+    "file": "media\\clients\\saboreo.png",
+    "bytes": 241481,
+    "width": 3543,
+    "height": 3543,
+    "format": "png"
+  },
+  {
+    "file": "media\\clients\\traffic-publicidad.jpeg",
+    "bytes": 4368,
+    "width": 225,
+    "height": 225,
+    "format": "jpeg"
+  },
+  {
+    "file": "media\\dental\\hero-backdrop.webp",
+    "bytes": 123574,
+    "width": 2000,
+    "height": 1335,
+    "format": "webp"
+  },
+  {
+    "file": "media\\dental\\hero-banner.webp",
+    "bytes": 83222,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  },
+  {
+    "file": "media\\dental\\moment-01.webp",
+    "bytes": 49832,
+    "width": 1200,
+    "height": 1800,
+    "format": "webp"
+  },
+  {
+    "file": "media\\dental\\moment-02.webp",
+    "bytes": 20838,
+    "width": 1200,
+    "height": 800,
+    "format": "webp"
+  },
+  {
+    "file": "media\\dental\\moment-03.webp",
+    "bytes": 48370,
+    "width": 1200,
+    "height": 800,
+    "format": "webp"
+  },
+  {
+    "file": "media\\dental\\workflow-banner.webp",
+    "bytes": 88358,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  },
+  {
+    "file": "media\\Homepages_Websites\\dr-diego-website.webp",
+    "bytes": 97624,
+    "width": 1710,
+    "height": 873,
+    "format": "webp"
+  },
+  {
+    "file": "media\\Homepages_Websites\\dra-jennifer-website.webp",
+    "bytes": 102830,
+    "width": 1489,
+    "height": 873,
+    "format": "webp"
+  },
+  {
+    "file": "media\\Homepages_Websites\\Homepage Dr Diego Quintero.png",
+    "bytes": 1073563,
+    "width": 1710,
+    "height": 873,
+    "format": "png"
+  },
+  {
+    "file": "media\\Homepages_Websites\\HomePage Dra. Jennifer.png",
+    "bytes": 844798,
+    "width": 1489,
+    "height": 873,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\01-highlevel.png",
+    "bytes": 6951,
+    "width": 813,
+    "height": 210,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\02-hubspot.png",
+    "bytes": 13715,
+    "width": 565,
+    "height": 173,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\03-pipedrive.png",
+    "bytes": 4418,
+    "width": 456,
+    "height": 107,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\04-kommo.png",
+    "bytes": 3059,
+    "width": 390,
+    "height": 158,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\05-zoho-crm.png",
+    "bytes": 7825,
+    "width": 683,
+    "height": 135,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\06-activecampaign.png",
+    "bytes": 8236,
+    "width": 648,
+    "height": 115,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\07-n8n.png",
+    "bytes": 12979,
+    "width": 360,
+    "height": 107,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\08-openai.png",
+    "bytes": 16101,
+    "width": 494,
+    "height": 173,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\09-chatgpt.png",
+    "bytes": 17089,
+    "width": 564,
+    "height": 179,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\10-whatsapp-business.png",
+    "bytes": 24659,
+    "width": 869,
+    "height": 178,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\11-messenger.png",
+    "bytes": 13767,
+    "width": 618,
+    "height": 178,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\12-instagram.png",
+    "bytes": 15592,
+    "width": 587,
+    "height": 178,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\13-chatwoot.png",
+    "bytes": 12449,
+    "width": 554,
+    "height": 173,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\14-meta.png",
+    "bytes": 13804,
+    "width": 440,
+    "height": 141,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\15-google-ads.png",
+    "bytes": 16917,
+    "width": 541,
+    "height": 166,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\16-tiktok.png",
+    "bytes": 11611,
+    "width": 466,
+    "height": 183,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\17-calendly.png",
+    "bytes": 21122,
+    "width": 528,
+    "height": 178,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\18-react.png",
+    "bytes": 26532,
+    "width": 429,
+    "height": 166,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\19-nextjs.png",
+    "bytes": 9634,
+    "width": 472,
+    "height": 173,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\20-google-drive.png",
+    "bytes": 15107,
+    "width": 591,
+    "height": 161,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\21-Odoo.png",
+    "bytes": 31336,
+    "width": 1242,
+    "height": 392,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\22-Respond.io.png",
+    "bytes": 28565,
+    "width": 1228,
+    "height": 198,
+    "format": "png"
+  },
+  {
+    "file": "media\\Logos_Partners\\PREVIEW-white-background.jpg",
+    "bytes": 174959,
+    "width": 1680,
+    "height": 850,
+    "format": "jpeg"
+  },
+  {
+    "file": "media\\Logos_Partners\\README.txt",
+    "bytes": 685
+  },
+  {
+    "file": "media\\med-spa\\hero-backdrop.webp",
+    "bytes": 364438,
+    "width": 2000,
+    "height": 1333,
+    "format": "webp"
+  },
+  {
+    "file": "media\\med-spa\\hero-banner.webp",
+    "bytes": 119898,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  },
+  {
+    "file": "media\\med-spa\\moment-01.webp",
+    "bytes": 66296,
+    "width": 1200,
+    "height": 801,
+    "format": "webp"
+  },
+  {
+    "file": "media\\med-spa\\moment-02.webp",
+    "bytes": 84004,
+    "width": 1200,
+    "height": 900,
+    "format": "webp"
+  },
+  {
+    "file": "media\\med-spa\\moment-03.webp",
+    "bytes": 123214,
+    "width": 1200,
+    "height": 849,
+    "format": "webp"
+  },
+  {
+    "file": "media\\med-spa\\workflow-banner.webp",
+    "bytes": 139452,
+    "width": 1920,
+    "height": 1280,
+    "format": "webp"
+  }
+]

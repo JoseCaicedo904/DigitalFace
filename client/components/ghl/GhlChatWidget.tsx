@@ -60,6 +60,7 @@ function keepOnlyCurrentLoader(script: HTMLScriptElement) {
 function appendLeadConnectorLoader(widgetId: string, loadId: number) {
   const script = document.createElement("script");
   script.src = LEADCONNECTOR_CHAT_LOADER_SRC;
+  script.async = true;
   script.setAttribute("data-resources-url", LEADCONNECTOR_CHAT_RESOURCES_URL);
   script.setAttribute("data-widget-id", widgetId);
   script.setAttribute(MANAGED_SCRIPT_ATTRIBUTE, "true");
@@ -108,10 +109,48 @@ export function loadGhlChatWidget(widgetId: string): () => void {
   };
 }
 
+/** Give the initial document priority, without requiring interaction to get help. */
+export function scheduleGhlChatWidget(widgetId: string): () => void {
+  let started = false;
+  let dispose: (() => void) | undefined;
+  let idle: number | undefined;
+  const events = ["pointerdown", "keydown"] as const;
+  const cancelPending = () => {
+    window.clearTimeout(deadline);
+    if (idle !== undefined) window.cancelIdleCallback?.(idle);
+    window.removeEventListener("load", onLoad);
+    events.forEach((event) => window.removeEventListener(event, start));
+  };
+  const start = () => {
+    if (started) return;
+    started = true;
+    cancelPending();
+    dispose = loadGhlChatWidget(widgetId);
+  };
+  const onLoad = () => {
+    if (started || idle !== undefined) return;
+    if (window.requestIdleCallback) {
+      idle = window.requestIdleCallback(start, { timeout: 1500 });
+    }
+  };
+  // This deadline also covers browsers without requestIdleCallback and slow load.
+  const deadline = window.setTimeout(start, 2500);
+  events.forEach((event) =>
+    window.addEventListener(event, start, { once: true, passive: true }),
+  );
+  if (document.readyState === "complete") onLoad();
+  else window.addEventListener("load", onLoad, { once: true });
+  return () => {
+    started = true;
+    cancelPending();
+    dispose?.();
+  };
+}
+
 export function GhlChatWidget() {
   const { locale } = useLocale();
 
-  useEffect(() => loadGhlChatWidget(getGhlChatWidgetId(locale)), [locale]);
+  useEffect(() => scheduleGhlChatWidget(getGhlChatWidgetId(locale)), [locale]);
 
   return null;
 }

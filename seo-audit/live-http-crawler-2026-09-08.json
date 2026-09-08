@@ -1,0 +1,1042 @@
+{
+  "checkedAt": "2026-09-08T17:32:23.890Z",
+  "method": "Public GET; no JavaScript execution; Googlebot User-Agent diagnostic, not a real Google crawl",
+  "records": [
+    {
+      "url": "http://digitalface.app/pricing",
+      "status": 308,
+      "contentType": "text/plain",
+      "location": "https://digitalface.app/pricing",
+      "robotsHeader": null,
+      "bytes": 14
+    },
+    {
+      "url": "https://digitalface.app/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 177117,
+      "title": "Customer Acquisition & Marketing Automation | DigitalFace Marketing",
+      "description": "DigitalFace connects advertising, AI follow-up and CRM for appointment-driven businesses in Florida, across the US and Latin America. Explore your growth system.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "More inquiries. Better follow-up. More opportunities."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/about",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 80899,
+      "title": "About DigitalFace Marketing | How the Company Works",
+      "description": "DigitalFace brings strategy, technology and specialist expertise together under one accountable relationship. How the company is organized, what it takes responsibility for, and where it operates from.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/about",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Marketing and technology. One team."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/about"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/about"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/about"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/blog",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 6580,
+      "title": "Page not found | DigitalFace Marketing",
+      "description": "This page does not exist. Head back to the DigitalFace Marketing home page.",
+      "lang": "en",
+      "canonical": null,
+      "robots": "noindex, follow",
+      "h1": [
+        "We could not find that page"
+      ],
+      "alternates": [],
+      "schemaCount": 0,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/book",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 35536,
+      "title": "Book a DigitalFace Consultation | DigitalFace Marketing",
+      "description": "Schedule a short consultation with DigitalFace to discuss lead generation, conversion, CRM, automation and AI for your business.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/book",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Choose a time that works for you."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/book"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/book"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/book"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/contact",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 70211,
+      "title": "Contact DigitalFace Marketing | Book a Patient Growth Call",
+      "description": "Tell us about your practice and how patient inquiries reach you today. We map your follow-up flow and bring a plan to the call, and we reply within one business day.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/contact",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Tell us what you need."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/contact"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/contact"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/contact"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 178841,
+      "title": "Captación de Clientes y Automatización de Marketing | DigitalFace Marketing",
+      "description": "DigitalFace conecta pauta, seguimiento con IA y CRM para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica. Conoce tu sistema de crecimiento.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Más consultas. Mejor seguimiento. Más oportunidades."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/about",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 81543,
+      "title": "Sobre DigitalFace Marketing | Cómo funciona la compañía",
+      "description": "DigitalFace reúne estrategia, tecnología y experiencia especializada en una sola relación con responsabilidad clara. Cómo está organizada la compañía, de qué responde y desde dónde opera.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/about",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Marketing y tecnología. Un solo equipo."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/about"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/about"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/about"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/book",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 36157,
+      "title": "Agenda una Consulta con DigitalFace | DigitalFace Marketing",
+      "description": "Agenda una consulta corta con DigitalFace para hablar de generación de leads, conversión, CRM, automatización e IA para tu negocio.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/book",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Elige el horario que mejor te funcione."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/book"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/book"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/book"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/contact",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 71084,
+      "title": "Contacto | Agenda una Llamada con DigitalFace Marketing",
+      "description": "Cuéntanos sobre tu clínica y cómo llegan tus consultas de pacientes hoy. Mapeamos tu flujo de seguimiento y llegamos a la llamada con un plan. Respondemos en un día hábil.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/contact",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Cuéntanos qué necesitas."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/contact"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/contact"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/contact"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/features",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 87753,
+      "title": "Sistema de Captación y Seguimiento de Pacientes | DigitalFace Marketing",
+      "description": "Cómo el sistema DigitalFace captura cada consulta de paciente y la convierte en una cita agendada: pauta digital, captura de contactos, respuesta inmediata, agendamiento, CRM, recuperación y optimización continua.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/features",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Del primer interés a la próxima cita."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/features"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/features"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/features"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/industries/aesthetic-medicine",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 203918,
+      "title": "Marketing para Medicina Estética y Captación de Pacientes | DigitalFace Marketing",
+      "description": "Convierte el interés por inyectables, calidad de piel y procedimientos quirúrgicos en valoraciones atendidas. DigitalFace opera la pauta, la comunicación bilingüe, el agendamiento y el seguimiento de centros de medicina estética y cirugía plástica, mientras cada decisión clínica sigue en tu equipo.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/industries/aesthetic-medicine",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Convierte el interés en procedimientos en valoraciones."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/aesthetic-medicine"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/aesthetic-medicine"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/aesthetic-medicine"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/industries/dental-practices",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 203279,
+      "title": "Marketing para Clínicas Dentales y Captación de Pacientes | DigitalFace Marketing",
+      "description": "Convierte las consultas de implantes, carillas y diseño de sonrisa en valoraciones atendidas. DigitalFace opera la pauta, el seguimiento bilingüe, el agendamiento de valoraciones y la recuperación del tratamiento pendiente de clínicas odontológicas en Estados Unidos y Latinoamérica.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/industries/dental-practices",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Convierte el interés dental en citas de valoración."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/dental-practices"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/dental-practices"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/dental-practices"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/industries/med-spas",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 203093,
+      "title": "Marketing para Med Spas y Agendamiento de Citas | DigitalFace Marketing",
+      "description": "Convierte el interés por un tratamiento en clientes que agendan y regresan. DigitalFace opera las promociones, el agendamiento con IA, los anticipos, las nuevas reservas y la reactivación de clientes de med spas en Estados Unidos y Latinoamérica.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/industries/med-spas",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Convierte el interés en tu med spa en visitas frecuentes."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/med-spas"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/med-spas"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/med-spas"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/pay-per-service",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 111226,
+      "title": "Servicios de Marketing y Automatización para Clínicas | DigitalFace Marketing",
+      "description": "Contrata una sola capacidad de DigitalFace a la vez en lugar del sistema completo: pauta en Meta y Google, chatbots, automatización de procesos, CRM, reportes, sitios web y embudos.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/pay-per-service",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Elige solo los servicios que necesitas."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pay-per-service"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pay-per-service"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pay-per-service"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/pricing",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 121538,
+      "title": "Planes y Precios para Clínicas | DigitalFace Marketing",
+      "description": "DigitalFace Capture, DigitalFace AI y The DigitalFace Sales System: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/pricing",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Elige el apoyo que necesita tu clínica."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pricing"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pricing"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pricing"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/pricing?lang=en",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 121538,
+      "title": "Planes y Precios para Clínicas | DigitalFace Marketing",
+      "description": "DigitalFace Capture, DigitalFace AI y The DigitalFace Sales System: qué incluye cada plan, qué presupuesto publicitario gestiona cada uno y cómo se factura el uso de IA y de correo.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/pricing",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Elige el apoyo que necesita tu clínica."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pricing"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pricing"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pricing"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/privacy",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 42090,
+      "title": "Política de privacidad | DigitalFace Marketing",
+      "description": "Cómo DigitalFace Marketing recolecta, usa, comparte y protege la información personal.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/privacy",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Política de privacidad"
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/privacy"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/privacy"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/privacy"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/seo-audit-missing-2026",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 6580,
+      "title": "Page not found | DigitalFace Marketing",
+      "description": "This page does not exist. Head back to the DigitalFace Marketing home page.",
+      "lang": "en",
+      "canonical": null,
+      "robots": "noindex, follow",
+      "h1": [
+        "We could not find that page"
+      ],
+      "alternates": [],
+      "schemaCount": 0,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/es/terms",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 40481,
+      "title": "Términos del servicio | DigitalFace Marketing",
+      "description": "Los términos y condiciones que rigen el uso de los servicios de DigitalFace Marketing.",
+      "lang": "es",
+      "canonical": "https://digitalface.app/es/terms",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Términos del servicio"
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/terms"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/terms"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/terms"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/favicon-192x192.png",
+      "status": 200,
+      "contentType": "image/png",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 6994,
+      "sha256": "79209e1702c297f2e0365d1027a5931a08d0d8dcf364cbe03b6f05e705f425f9"
+    },
+    {
+      "url": "https://digitalface.app/favicon-48x48.png",
+      "status": 200,
+      "contentType": "image/png",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 1942,
+      "sha256": "de998b8793157d3229a908a59745020c80726f6dbe9b90a34d4001e28a2a80d0"
+    },
+    {
+      "url": "https://digitalface.app/favicon-96x96.png",
+      "status": 200,
+      "contentType": "image/png",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 3773,
+      "sha256": "7a87154776c4330e06f43ad909954e557729ac3b10ece73c1cd07bb90a62ad7b"
+    },
+    {
+      "url": "https://digitalface.app/favicon.ico",
+      "status": 200,
+      "contentType": "image/vnd.microsoft.icon",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 3928,
+      "sha256": "b234b89932e5b7603501a556490be8d431cfc291f6efce379f4e31b398748856"
+    },
+    {
+      "url": "https://digitalface.app/features",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 86446,
+      "title": "Patient Acquisition & Follow-Up System | DigitalFace Marketing",
+      "description": "How the DigitalFace system captures every patient inquiry and turns it into a booked appointment: paid traffic, lead capture, instant follow-up, booking, CRM, recovery and ongoing optimization.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/features",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "From first interest to the next appointment."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/features"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/features"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/features"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/images/digitalface-post.png",
+      "status": 200,
+      "contentType": "image/png",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 486947,
+      "sha256": "c01512bce9ed4fb82d61567582a8cfd8bf1255486418d7329d2c711837a305d2"
+    },
+    {
+      "url": "https://digitalface.app/index.html",
+      "status": 308,
+      "contentType": "text/plain",
+      "location": "/",
+      "robotsHeader": null,
+      "bytes": 15
+    },
+    {
+      "url": "https://digitalface.app/industries/aesthetic-medicine",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 201838,
+      "title": "Aesthetic Medicine Marketing & Patient Acquisition | DigitalFace Marketing",
+      "description": "Turn injectable, skin quality and surgical procedure interest into attended consultations. DigitalFace runs the advertising, bilingual communication, consultation booking and follow-up for aesthetic medicine and plastic surgery practices, while every clinical decision stays with your team.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/industries/aesthetic-medicine",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Turn procedure interest into consultations."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/aesthetic-medicine"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/aesthetic-medicine"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/aesthetic-medicine"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/industries/dental-practices",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 200800,
+      "title": "Dental Marketing & Patient Acquisition | DigitalFace Marketing",
+      "description": "Turn implant, veneer and smile design inquiries into attended consultations. DigitalFace runs the advertising, bilingual follow-up, consultation booking and recall workflow for dental practices in the US and Latin America.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/industries/dental-practices",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Turn dental inquiries into booked consultations."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/dental-practices"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/dental-practices"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/dental-practices"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/industries/med-spas",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 200627,
+      "title": "Med Spa Marketing & Booking System | DigitalFace Marketing",
+      "description": "Turn treatment interest into booked and returning clients. DigitalFace runs the promotions, AI booking, deposits, rebooking and client reactivation workflow for med spas in the US and Latin America.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/industries/med-spas",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Turn med spa interest into repeat visits."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/industries/med-spas"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/industries/med-spas"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/industries/med-spas"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/pay-per-service",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 109309,
+      "title": "Marketing & Automation Services for Clinics | DigitalFace Marketing",
+      "description": "Hire one DigitalFace capability at a time instead of a full system: Meta and Google ads, chatbots, workflow automation, CRM setup, reporting, websites and funnels.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/pay-per-service",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Choose only the services you need."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pay-per-service"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pay-per-service"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pay-per-service"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/pricing",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 119722,
+      "title": "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
+      "description": "DigitalFace Capture, DigitalFace AI and The DigitalFace Sales System: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/pricing",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Choose the help your practice needs."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pricing"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pricing"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pricing"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/pricing?utm_source=seo_audit",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 119722,
+      "title": "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
+      "description": "DigitalFace Capture, DigitalFace AI and The DigitalFace Sales System: what each plan includes, the advertising budget each one manages, and how AI and email usage are billed.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/pricing",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Choose the help your practice needs."
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/pricing"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/pricing"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/pricing"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/pricing.html",
+      "status": 308,
+      "contentType": "text/plain",
+      "location": "/pricing",
+      "robotsHeader": null,
+      "bytes": 15
+    },
+    {
+      "url": "https://digitalface.app/pricing/",
+      "status": 308,
+      "contentType": "text/plain",
+      "location": "/pricing",
+      "robotsHeader": null,
+      "bytes": 15
+    },
+    {
+      "url": "https://digitalface.app/privacy",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 40704,
+      "title": "Privacy Policy | DigitalFace Marketing",
+      "description": "How DigitalFace Marketing collects, uses, shares and protects personal information.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/privacy",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Privacy Policy"
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/privacy"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/privacy"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/privacy"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 69,
+      "rules": "User-agent: *\nAllow: /\n\nSitemap: https://digitalface.app/sitemap.xml\n"
+    },
+    {
+      "url": "https://digitalface.app/seo-audit-missing-2026",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 6580,
+      "title": "Page not found | DigitalFace Marketing",
+      "description": "This page does not exist. Head back to the DigitalFace Marketing home page.",
+      "lang": "en",
+      "canonical": null,
+      "robots": "noindex, follow",
+      "h1": [
+        "We could not find that page"
+      ],
+      "alternates": [],
+      "schemaCount": 0,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/services",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 6580,
+      "title": "Page not found | DigitalFace Marketing",
+      "description": "This page does not exist. Head back to the DigitalFace Marketing home page.",
+      "lang": "en",
+      "canonical": null,
+      "robots": "noindex, follow",
+      "h1": [
+        "We could not find that page"
+      ],
+      "alternates": [],
+      "schemaCount": 0,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://digitalface.app/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 8690,
+      "urls": [
+        "https://digitalface.app/",
+        "https://digitalface.app/es",
+        "https://digitalface.app/about",
+        "https://digitalface.app/es/about",
+        "https://digitalface.app/features",
+        "https://digitalface.app/es/features",
+        "https://digitalface.app/pay-per-service",
+        "https://digitalface.app/es/pay-per-service",
+        "https://digitalface.app/pricing",
+        "https://digitalface.app/es/pricing",
+        "https://digitalface.app/contact",
+        "https://digitalface.app/es/contact",
+        "https://digitalface.app/book",
+        "https://digitalface.app/es/book",
+        "https://digitalface.app/privacy",
+        "https://digitalface.app/es/privacy",
+        "https://digitalface.app/terms",
+        "https://digitalface.app/es/terms",
+        "https://digitalface.app/industries/dental-practices",
+        "https://digitalface.app/es/industries/dental-practices",
+        "https://digitalface.app/industries/aesthetic-medicine",
+        "https://digitalface.app/es/industries/aesthetic-medicine",
+        "https://digitalface.app/industries/med-spas",
+        "https://digitalface.app/es/industries/med-spas"
+      ]
+    },
+    {
+      "url": "https://digitalface.app/terms",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "location": null,
+      "robotsHeader": null,
+      "bytes": 39394,
+      "title": "Terms of Service | DigitalFace Marketing",
+      "description": "The terms and conditions that govern the use of DigitalFace Marketing services.",
+      "lang": "en",
+      "canonical": "https://digitalface.app/terms",
+      "robots": "index, follow, max-image-preview:large",
+      "h1": [
+        "Terms of Service"
+      ],
+      "alternates": [
+        {
+          "lang": "en",
+          "href": "https://digitalface.app/terms"
+        },
+        {
+          "lang": "es",
+          "href": "https://digitalface.app/es/terms"
+        },
+        {
+          "lang": "x-default",
+          "href": "https://digitalface.app/terms"
+        }
+      ],
+      "schemaCount": 2,
+      "verificationPresent": false
+    },
+    {
+      "url": "https://www.digitalface.app/pricing",
+      "status": 308,
+      "contentType": "text/plain",
+      "location": "https://digitalface.app/pricing",
+      "robotsHeader": null,
+      "bytes": 15
+    }
+  ]
+}

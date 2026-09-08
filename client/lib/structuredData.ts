@@ -49,6 +49,7 @@ export function organizationSchema(locale: Locale): JsonLd {
     // stated as a service area rather than fabricated into a PostalAddress.
     areaServed: [
       { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "Canada" },
       { "@type": "State", name: "Florida" },
       { "@type": "Country", name: "Colombia" },
       { "@type": "Place", name: "Latin America" },
@@ -59,7 +60,7 @@ export function organizationSchema(locale: Locale): JsonLd {
       contactType: "sales",
       email: CONTACT_EMAIL,
       availableLanguage: ["en", "es"],
-      areaServed: ["US", "CO"],
+      areaServed: ["US", "CA", "CO"],
     },
   };
 }
