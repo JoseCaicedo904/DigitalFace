@@ -9,44 +9,42 @@ const en = {
   },
   overview: {
     eyebrow: "Sales System",
-    title:
-      "The DigitalFace Sales System: from patient inquiry to booked appointment",
+    title: "From first interest to the next appointment.",
     description:
-      "One managed engine for practices that live on their calendar. Capture every inquiry, answer it instantly and book more appointments.",
+      "The DigitalFace Sales System connects ads, AI conversations and follow-up. We build and manage it for your practice.",
     items: [
       {
-        title: "No inquiry goes unanswered",
-        description: "Every message is captured and gets an immediate reply.",
+        title: "Attract",
+        description: "Ads and websites help people find you and get in touch.",
       },
       {
-        title: "Appointments on autopilot",
+        title: "Convert",
         description:
-          "Self-booking, confirmations and reminders keep the calendar full.",
+          "AI, forms and booking tools help turn inquiries into appointments.",
       },
       {
-        title: "A pipeline you can read",
+        title: "Manage",
         description:
-          "Every opportunity and its stage, visible in one dashboard.",
+          "Your CRM keeps every contact, conversation and next step organized.",
       },
     ],
   },
   journey: {
     eyebrow: "How it runs",
-    title: "One patient, one evening: the system doing its job",
+    title: "Here’s how an inquiry moves forward.",
     description:
-      "Everything listed further down exists to make these four moments happen without anyone on your team having to remember them.",
-    patientLabel: "Her side",
-    systemLabel: "Your side",
-    modulesLabel: "Covers",
+      "Follow a sample patient from the ad to the appointment and follow-up.",
+    patientLabel: "For the patient",
+    systemLabel: "What we handle",
+    modulesLabel: "Behind the scenes",
     acts: [
       {
         badge: "01",
         time: "9:14 PM",
-        title: "She finds you and leaves her details",
-        patient:
-          "María is on her phone after putting the kids to bed. Your ad comes up, she taps it and leaves her name and number. It takes her twenty seconds.",
+        title: "They find you",
+        patient: "María sees your ad and leaves her name and number.",
         system:
-          "We run the campaigns that put you in front of her, and every form, message and chat lands in the same place, whichever channel it arrived from.",
+          "We connect your campaigns, forms, messages and chat to one place.",
         modules: ["Paid traffic", "Lead capture"],
         script: {
           kind: "inbox",
@@ -79,11 +77,11 @@ const en = {
       {
         badge: "02",
         time: "9:15 PM",
-        title: "She gets a real answer in seconds",
+        title: "They get an answer",
         patient:
-          "Forty seconds later her phone buzzes. It is your practice, answering the question she actually asked, not an autoreply telling her someone will be in touch.",
+          "She gets a reply to her question while she is still interested.",
         system:
-          "An immediate reply goes out by text and email, and a follow-up sequence keeps going for days that stops the moment she writes back.",
+          "Automatic texts and emails respond quickly. Follow-up stops when she replies.",
         modules: ["Instant follow-up"],
         script: {
           kind: "reply",
@@ -108,11 +106,11 @@ const en = {
       {
         badge: "03",
         time: "9:17 PM",
-        title: "She books herself, without a phone call",
+        title: "They choose a time",
         patient:
-          "She picks Tuesday at 10:00 from the times she is offered. No calling in the morning, no waiting for the practice to open.",
+          "She picks an available appointment without waiting for office hours.",
         system:
-          "The calendar only offers hours you actually work. Once she takes one, the confirmation and the reminders go out on their own.",
+          "Booking links, confirmations and reminders handle the coordination.",
         modules: ["Booking and reminders"],
         script: {
           kind: "booking",
@@ -130,11 +128,11 @@ const en = {
       {
         badge: "04",
         time: "Next morning",
-        title: "Your team opens one board and sees everything",
+        title: "Your team knows what’s next",
         patient:
-          "María arrives on Tuesday. She never had to chase anyone, and neither did your front desk.",
+          "María comes to her appointment. Her conversation is already on record.",
         system:
-          "Every inquiry is an opportunity with an owner and a stage. Anyone who went quiet stays in an automatic follow-up, so the ones that normally go cold do not.",
+          "See the contact, owner and status in your CRM. Follow up with people who haven’t booked.",
         modules: ["CRM pipeline", "Recovery", "Ongoing optimization"],
         script: {
           kind: "pipeline",
@@ -157,86 +155,73 @@ const en = {
     ],
   } satisfies JourneyContent,
   modules: {
-    label: "Module",
-    eyebrow: "What is included",
-    title: "The seven modules behind those four moments",
+    label: "Service",
+    eyebrow: "See what it can do",
+    title: "The support behind each step.",
     description:
-      "One managed system, billed as one plan. This is everything it does.",
+      "Open a service for details. Your plan and agreed scope define what we deliver.",
     items: [
       {
-        title: "Paid traffic that creates demand",
-        description:
-          "We plan, launch and manage the campaigns that bring qualified people into your system.",
+        title: "Bring in new inquiries",
+        description: "We plan, launch and manage advertising.",
         bullets: [
-          "Facebook and Instagram campaigns on Meta",
-          "Google Search, Display and YouTube",
-          "TikTok campaigns for top-of-funnel reach",
-          "Setup, tracking and ongoing optimization",
+          "Meta Ads: Facebook and Instagram",
+          "Google Search, Display, YouTube and TikTok campaigns",
+          "Campaign setup, tracking and ongoing improvements",
         ],
       },
       {
-        title: "Lead capture from every channel",
-        description:
-          "Every inquiry flows into one system, so nothing depends on someone remembering.",
+        title: "Keep incoming leads together",
+        description: "Connected sources send inquiries straight to your CRM.",
         bullets: [
-          "Website forms, funnels and surveys connected",
-          "Chat widget and two-way text conversations",
-          "Every inquiry recorded in your CRM automatically",
-          "Facebook, Instagram and Google lead sync",
+          "Website forms, campaign pages and surveys",
+          "Web chat and two-way text conversations",
+          "Facebook, Instagram and Google inquiries recorded automatically",
         ],
       },
       {
-        title: "Instant follow-up and nurture",
-        description:
-          "Automated messages answer in seconds and keep the conversation alive.",
+        title: "Answer and follow up",
+        description: "Marketing automation keeps the conversation moving.",
         bullets: [
-          "Immediate SMS and email replies",
-          "Multi-day follow-up that stops the moment someone answers",
-          "Messages written to sound like your team, not a robot",
-          "Long-term nurture for people who are not ready yet",
+          "Immediate SMS and email replies in your team’s voice",
+          "Multi-day follow-up that stops when someone answers",
+          "Longer-term follow-up for people who aren’t ready yet",
         ],
       },
       {
-        title: "Booking and reminders",
-        description:
-          "People book themselves, and more of them actually show up.",
+        title: "Make booking easier",
+        description: "Let people choose a time and receive reminders.",
         bullets: [
-          "Self-scheduling calendar links",
-          "Optional deposit or fee before a booking is confirmed, through your own payment provider",
-          "Confirmation and reminder sequences",
-          "Reschedule links that reduce missed appointments",
-          "Daily agenda notifications for your team",
+          "Booking and rescheduling links",
+          "Confirmations, reminders and daily agendas for your team",
+          "Optional deposits or fees before confirmation, through your payment provider",
         ],
       },
       {
-        title: "CRM pipeline visibility",
-        description:
-          "A simple visual pipeline shows exactly where every opportunity stands.",
+        title: "See every next step",
+        description: "One CRM record holds the contact’s history.",
         bullets: [
-          "An opportunity created automatically for each inquiry",
-          "Stages for new, booked, no-show and closed",
-          "Owner assignments and task prompts",
-          "Notes and full history in one record",
+          "A record created for each inquiry",
+          "New, booked, missed and closed stages",
+          "Assigned owners, task prompts and conversation notes",
         ],
       },
       {
-        title: "Recovery and reactivation",
-        description: "Win back the opportunities that normally go cold.",
+        title: "Reconnect with missed opportunities",
+        description: "Follow up when someone goes quiet or misses a visit.",
         bullets: [
-          "No-show recovery messages",
-          "Missed-call text back",
-          "Post-appointment follow-up sequences",
+          "No-show follow-up and missed-call texts",
+          "Post-appointment messages",
           "Reactivation campaigns for older contacts",
         ],
       },
       {
-        title: "Ongoing optimization",
-        description: "We keep the system sharp as your practice grows.",
+        title: "Keep improving",
+        description: "We support your team and refine the system.",
         bullets: [
-          "Monthly tuning of messages and workflows",
-          "Adjustments based on real response data",
-          "New campaigns added when they are justified",
-          "Support for changes and questions",
+          "Monthly message and automation adjustments based on responses",
+          "New campaigns when justified",
+          "Help with changes, questions and training",
         ],
       },
     ],
@@ -266,39 +251,32 @@ const en = {
   },
   launch: {
     eyebrow: "Launch plan",
-    title: "A productized setup with a clear timeline",
+    title: "We get it ready in 3 steps.",
     description:
-      "The same delivery process every time. Clear steps, and a fast start.",
+      "We handle the technical work, train your team and stay available for support.",
     timelineBadge: "5-7",
     timelineTitle: "Business days to launch for most practices.",
     timelineSubtitle: "You stay with your patients while we build.",
     notes: [
-      "The same proven playbook, adapted to your practice.",
-      "We run the setup. You step in only where we need a decision.",
+      "We adapt the setup to your practice.",
+      "You approve the key decisions. We handle the build.",
     ],
     steps: [
       {
         badge: "D1",
-        title: "Day 1: share the basics",
-        description: "One short call and a quick form. We take it from there.",
+        title: "Day 1 · Tell us what you need",
+        description: "A short call and form give us the basics.",
       },
       {
         badge: "D2",
-        title: "Days 2-4: build and test",
-        description:
-          "We set everything up, run the checks and make sure it holds.",
+        title: "Days 2–4 · We build and test",
+        description: "We connect the tools and check the complete process.",
       },
       {
         badge: "D5",
-        title: "Days 5-7: go live",
+        title: "Days 5–7 · Go live with support",
         description:
-          "The system turns on and inquiries start moving through it.",
-      },
-      {
-        badge: "ON",
-        title: "Ongoing: we stay with you",
-        description:
-          "We keep it tuned, handle updates and answer questions quickly.",
+          "Your system starts running. We handle updates, improvements and questions.",
       },
     ],
     routineLabel: "Your daily routine",
@@ -307,14 +285,15 @@ const en = {
       "Confirm appointments",
       "Show up and treat",
     ],
-    routineClose: "That is the routine. We handle the rest.",
+    routineClose:
+      "We maintain the system while your team handles patient care.",
   },
   cta: {
     eyebrow: "See it live",
-    title: "Want to see how the system runs?",
-    description: "Book a short call and we will walk you through it.",
-    primaryCta: "Talk with us",
-    secondaryCta: "See the plans",
+    title: "See how it would work for your practice.",
+    description: "Book a call to discuss your goals and the right scope.",
+    primaryCta: "Book a System Walkthrough",
+    secondaryCta: "Compare Plans",
   },
 } satisfies Record<string, unknown>;
 
@@ -327,45 +306,43 @@ const es: typeof en = {
   },
   overview: {
     eyebrow: "Sistema de Ventas",
-    title:
-      "El Sistema de Ventas DigitalFace: de la consulta del paciente a la cita agendada",
+    title: "Del primer interés a la próxima cita.",
     description:
-      "Un solo motor administrado para negocios que viven de su calendario. Captura cada consulta, respóndela al instante y agenda más citas.",
+      "El Sales System de DigitalFace conecta anuncios, conversaciones con IA y seguimiento. Nosotros lo implementamos y gestionamos para tu clínica.",
     items: [
       {
-        title: "Ninguna consulta se queda sin respuesta",
+        title: "Atraer",
         description:
-          "Cada mensaje queda registrado y recibe una respuesta inmediata.",
+          "Los anuncios y tu sitio web ayudan a que te encuentren y contacten.",
       },
       {
-        title: "Citas en piloto automático",
+        title: "Convertir",
         description:
-          "Autoagendamiento, confirmaciones y recordatorios mantienen el calendario lleno.",
+          "La IA, los formularios y la agenda ayudan a convertir consultas en citas.",
       },
       {
-        title: "Un proceso que se entiende",
+        title: "Gestionar",
         description:
-          "Cada oportunidad y su etapa, visibles en un solo tablero.",
+          "Tu CRM organiza contactos, conversaciones y próximos pasos.",
       },
     ],
   },
   journey: {
     eyebrow: "Cómo funciona",
-    title: "Una paciente, una noche: el sistema haciendo su trabajo",
+    title: "Así avanza una consulta.",
     description:
-      "Todo lo que aparece más abajo existe para que estos cuatro momentos ocurran sin que nadie de tu equipo tenga que acordarse.",
-    patientLabel: "Del lado de ella",
-    systemLabel: "Del lado tuyo",
-    modulesLabel: "Cubre",
+      "Sigue este ejemplo desde el anuncio hasta la cita y el seguimiento.",
+    patientLabel: "Para el paciente",
+    systemLabel: "De qué nos encargamos",
+    modulesLabel: "Cómo lo hacemos",
     acts: [
       {
         badge: "01",
         time: "9:14 pm",
-        title: "Te encuentra y deja sus datos",
-        patient:
-          "María está en su teléfono después de acostar a los niños. Aparece tu anuncio, lo toca y deja su nombre y su número. Le toma veinte segundos.",
+        title: "Te encuentran",
+        patient: "María ve tu anuncio y deja su nombre y teléfono.",
         system:
-          "Nosotros manejamos las campañas que te ponen frente a ella, y cada formulario, mensaje y chat llega al mismo lugar, sin importar por dónde entró.",
+          "Conectamos campañas, formularios, mensajes y chat en un solo lugar.",
         modules: ["Pauta digital", "Captura de contactos"],
         script: {
           kind: "inbox",
@@ -398,11 +375,10 @@ const es: typeof en = {
       {
         badge: "02",
         time: "9:15 pm",
-        title: "Recibe una respuesta real en segundos",
-        patient:
-          "Cuarenta segundos después le vibra el teléfono. Es tu clínica, respondiendo la pregunta que hizo, no un mensaje automático diciéndole que alguien la va a contactar.",
+        title: "Reciben una respuesta",
+        patient: "Su pregunta recibe respuesta mientras aún tiene interés.",
         system:
-          "Sale una respuesta inmediata por texto y correo, y una secuencia de seguimiento que dura varios días y se detiene apenas ella contesta.",
+          "Los mensajes y correos automáticos responden a tiempo. El seguimiento se detiene cuando ella contesta.",
         modules: ["Respuesta inmediata"],
         script: {
           kind: "reply",
@@ -427,11 +403,11 @@ const es: typeof en = {
       {
         badge: "03",
         time: "9:17 pm",
-        title: "Agenda ella sola, sin llamar",
+        title: "Eligen un horario",
         patient:
-          "Elige el martes a las 10:00 entre los horarios que le ofrecen. Sin llamar en la mañana, sin esperar a que abra la clínica.",
+          "Reserva un horario disponible sin esperar a que abra la clínica.",
         system:
-          "El calendario solo ofrece las horas que de verdad atiendes. Apenas toma una, la confirmación y los recordatorios salen solos.",
+          "Los enlaces de cita, confirmaciones y recordatorios facilitan la coordinación.",
         modules: ["Agendamiento y recordatorios"],
         script: {
           kind: "booking",
@@ -449,11 +425,10 @@ const es: typeof en = {
       {
         badge: "04",
         time: "A la mañana siguiente",
-        title: "Tu equipo abre un tablero y ve todo",
-        patient:
-          "María llega el martes. No tuvo que perseguir a nadie, y tu recepción tampoco.",
+        title: "Tu equipo sabe qué sigue",
+        patient: "María llega a su cita y la conversación ya está registrada.",
         system:
-          "Cada consulta es una oportunidad con responsable y etapa. Quien se quedó callado sigue en un seguimiento automático, así que las oportunidades que normalmente se enfrían no se enfrían.",
+          "Ve el contacto, responsable y estado en tu CRM. Da seguimiento a quienes aún no agendan.",
         modules: ["CRM", "Recuperación", "Optimización continua"],
         script: {
           kind: "pipeline",
@@ -476,85 +451,75 @@ const es: typeof en = {
     ],
   } satisfies JourneyContent,
   modules: {
-    label: "Módulo",
-    eyebrow: "Qué incluye",
-    title: "Los siete módulos detrás de esos cuatro momentos",
+    label: "Servicio",
+    eyebrow: "Mira qué puede hacer",
+    title: "El apoyo detrás de cada paso.",
     description:
-      "Un solo sistema administrado, cobrado como un solo plan. Esto es todo lo que hace.",
+      "Abre cada servicio para ver los detalles. Tu plan y el alcance acordado definen qué entregamos.",
     items: [
       {
-        title: "Pauta digital que genera demanda",
+        title: "Recibe nuevas consultas",
+        description: "Planificamos, activamos y gestionamos publicidad.",
+        bullets: [
+          "Meta Ads: Facebook e Instagram",
+          "Campañas de Google Search, Display, YouTube y TikTok",
+          "Configuración, seguimiento y mejoras de campañas",
+        ],
+      },
+      {
+        title: "Reúne los contactos que llegan",
+        description: "Las fuentes conectadas envían las consultas a tu CRM.",
+        bullets: [
+          "Formularios, páginas de campaña y encuestas",
+          "Chat web y conversaciones por mensaje de texto",
+          "Registro automático de consultas de Facebook, Instagram y Google",
+        ],
+      },
+      {
+        title: "Responde y da seguimiento",
+        description: "La automatización de marketing mantiene el contacto.",
+        bullets: [
+          "Respuestas inmediatas por SMS y correo con el tono de tu equipo",
+          "Seguimiento durante varios días que se detiene cuando responden",
+          "Seguimiento a quienes todavía no están listos",
+        ],
+      },
+      {
+        title: "Facilita las reservas",
         description:
-          "Planeamos, lanzamos y administramos las campañas que traen personas calificadas a tu sistema.",
+          "Deja que el paciente elija horario y reciba recordatorios.",
         bullets: [
-          "Campañas de Facebook e Instagram en Meta",
-          "Google Search, Display y YouTube",
-          "Campañas en TikTok para alcance inicial",
-          "Configuración, medición y optimización continua",
+          "Enlaces para agendar y reprogramar",
+          "Confirmaciones, recordatorios y agenda diaria para tu equipo",
+          "Anticipos o cuotas opcionales antes de confirmar, mediante tu proveedor de pagos",
         ],
       },
       {
-        title: "Captura de contactos desde todos los canales",
+        title: "Ve cada próximo paso",
+        description: "Un registro de CRM reúne el historial del contacto.",
+        bullets: [
+          "Un registro por cada consulta",
+          "Estados de nuevo, agendado, inasistencia y cerrado",
+          "Responsables asignados, tareas y notas de conversaciones",
+        ],
+      },
+      {
+        title: "Retoma las oportunidades pendientes",
         description:
-          "Cada consulta entra a un mismo sistema, sin depender de que alguien se acuerde.",
+          "Da seguimiento a quienes dejan de responder o faltan a una cita.",
         bullets: [
-          "Formularios, embudos y encuestas conectados",
-          "Chat del sitio y conversaciones de texto en dos vías",
-          "Cada consulta registrada automáticamente en tu CRM",
-          "Sincronización con Facebook, Instagram y Google",
+          "Seguimiento a inasistencias y mensajes tras llamadas perdidas",
+          "Mensajes después de la cita",
+          "Campañas de reactivación para contactos anteriores",
         ],
       },
       {
-        title: "Respuesta inmediata y seguimiento",
-        description:
-          "Los mensajes automáticos responden en segundos y mantienen viva la conversación.",
+        title: "Sigue mejorando",
+        description: "Apoyamos a tu equipo y ajustamos el sistema.",
         bullets: [
-          "Respuestas inmediatas por SMS y correo",
-          "Seguimiento de varios días que se detiene apenas la persona responde",
-          "Mensajes escritos con el tono de tu equipo, no de un robot",
-          "Seguimiento a largo plazo para quienes todavía no deciden",
-        ],
-      },
-      {
-        title: "Agendamiento y recordatorios",
-        description: "Las personas agendan solas y llegan más veces a la cita.",
-        bullets: [
-          "Enlaces de calendario para agendar sin intermediarios",
-          "Anticipo o cuota opcional antes de confirmar la cita, con tu propio proveedor de pagos",
-          "Secuencias de confirmación y recordatorio",
-          "Enlaces para reprogramar que reducen las inasistencias",
-          "Aviso diario de la agenda para tu equipo",
-        ],
-      },
-      {
-        title: "Visibilidad del proceso en el CRM",
-        description:
-          "Un proceso visual y sencillo muestra en qué punto está cada oportunidad.",
-        bullets: [
-          "Una oportunidad creada automáticamente por cada consulta",
-          "Etapas de nuevo, agendado, no asistió y cerrado",
-          "Asignación de responsables y tareas",
-          "Notas e historial completo en un mismo registro",
-        ],
-      },
-      {
-        title: "Recuperación y reactivación",
-        description: "Recupera las oportunidades que normalmente se enfrían.",
-        bullets: [
-          "Mensajes para recuperar citas no asistidas",
-          "Mensaje automático por llamada perdida",
-          "Secuencias de seguimiento después de la cita",
-          "Campañas de reactivación para contactos antiguos",
-        ],
-      },
-      {
-        title: "Optimización continua",
-        description: "Mantenemos el sistema afinado mientras tu clínica crece.",
-        bullets: [
-          "Ajuste mensual de mensajes y flujos",
-          "Cambios basados en datos reales de respuesta",
-          "Nuevas campañas cuando el caso lo justifica",
-          "Soporte para cambios y preguntas",
+          "Ajustes mensuales de mensajes y automatizaciones según las respuestas",
+          "Nuevas campañas cuando se justifiquen",
+          "Ayuda con cambios, preguntas y capacitación",
         ],
       },
     ],
@@ -584,40 +549,33 @@ const es: typeof en = {
   },
   launch: {
     eyebrow: "Plan de lanzamiento",
-    title: "Una implementación estandarizada con tiempos claros",
+    title: "Lo ponemos en marcha en 3 pasos.",
     description:
-      "El mismo proceso de entrega cada vez. Pasos claros y un arranque rápido.",
+      "Nos encargamos del trabajo técnico, capacitamos a tu equipo y seguimos acompañándote.",
     timelineBadge: "5-7",
     timelineTitle: "Días hábiles para salir en vivo en la mayoría de clínicas.",
     timelineSubtitle: "Tú sigues con tus pacientes mientras nosotros armamos.",
     notes: [
-      "El mismo método probado, adaptado a tu clínica.",
-      "Nosotros hacemos la configuración. Tú entras solo donde se necesita una decisión.",
+      "Adaptamos la configuración a tu clínica.",
+      "Tú apruebas las decisiones clave. Nosotros lo implementamos.",
     ],
     steps: [
       {
         badge: "D1",
-        title: "Día 1: comparte lo básico",
-        description:
-          "Una llamada corta y un formulario rápido. Desde ahí seguimos nosotros.",
+        title: "Día 1 · Cuéntanos qué necesitas",
+        description: "Una llamada corta y un formulario nos dan lo básico.",
       },
       {
         badge: "D2",
-        title: "Días 2-4: construcción y pruebas",
+        title: "Días 2–4 · Configuramos y probamos",
         description:
-          "Configuramos todo, hacemos las pruebas y verificamos que funcione.",
+          "Conectamos las herramientas y revisamos el proceso completo.",
       },
       {
         badge: "D5",
-        title: "Días 5-7: salida en vivo",
+        title: "Días 5–7 · Empieza con acompañamiento",
         description:
-          "El sistema se activa y las consultas empiezan a moverse dentro de él.",
-      },
-      {
-        badge: "ON",
-        title: "Después: seguimos contigo",
-        description:
-          "Lo mantenemos afinado, aplicamos actualizaciones y respondemos rápido.",
+          "Tu sistema entra en funcionamiento. Atendemos ajustes, mejoras y preguntas.",
       },
     ],
     routineLabel: "Tu rutina diaria",
@@ -626,14 +584,16 @@ const es: typeof en = {
       "Confirmar las citas",
       "Atender a tus pacientes",
     ],
-    routineClose: "Esa es la rutina. Del resto nos encargamos nosotros.",
+    routineClose:
+      "Mantenemos el sistema mientras tu equipo atiende a los pacientes.",
   },
   cta: {
     eyebrow: "Míralo en vivo",
-    title: "¿Quieres ver cómo funciona el sistema?",
-    description: "Agenda una llamada corta y te lo mostramos paso a paso.",
-    primaryCta: "Hablemos",
-    secondaryCta: "Ver los planes",
+    title: "Mira cómo funcionaría en tu clínica.",
+    description:
+      "Agenda una llamada para revisar tus objetivos y el alcance adecuado.",
+    primaryCta: "Agendar una demostración",
+    secondaryCta: "Comparar planes",
   },
 };
 

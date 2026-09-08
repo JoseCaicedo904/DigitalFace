@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { Hero } from "@/sections/Hero";
 import { ModularCapabilityBackdrop } from "@/sections/ModularCapabilityBackdrop";
 import { CtaSection } from "@/sections/CTA";
 import { AddToRequestButton } from "@/components/request/AddToRequestButton";
 import { useLocale } from "@/i18n/LocaleProvider";
-import { payPerServiceContent } from "@/i18n/content/payPerService";
+import { payPerServicePageContent } from "@/i18n/content/payPerServicePage";
 import { payPerServiceOutcomeIcons } from "./payPerServiceIcons";
-import { serviceCatalog } from "@/data/serviceCatalog";
+import { serviceCatalog, getServiceName } from "@/data/serviceCatalog";
+import { ChevronDown } from "lucide-react";
+import { REQUEST_SERVICES_ANCHOR } from "@/components/request/anchor";
 
 /**
  * The catalog itself now lives in `@/data/serviceCatalog`: the anchor ids are
@@ -17,7 +18,7 @@ import { serviceCatalog } from "@/data/serviceCatalog";
 
 export default function PayPerService() {
   const { locale, path } = useLocale();
-  const t = payPerServiceContent[locale];
+  const t = payPerServicePageContent[locale];
 
   usePageMetadata(t.metadata.title, t.metadata.description);
 
@@ -27,13 +28,16 @@ export default function PayPerService() {
         eyebrow={t.hero.eyebrow}
         title={t.hero.title}
         description={t.hero.description}
-        primaryCta={{ label: t.hero.primaryCta, href: path("/contact") }}
+        primaryCta={{ label: t.hero.primaryCta, href: "#services" }}
         secondaryCta={{ label: t.hero.secondaryCta, href: path("/features") }}
         showVideo={false}
         background={<ModularCapabilityBackdrop />}
       />
 
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
+      <section
+        id="services"
+        className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28"
+      >
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
@@ -45,7 +49,21 @@ export default function PayPerService() {
             <p className="mt-4 text-lg text-ink-500">{t.catalog.description}</p>
           </div>
 
-          <div className="mt-16 space-y-16">
+          <nav
+            aria-label={t.catalog.eyebrow}
+            className="mt-8 flex flex-wrap justify-center gap-3"
+          >
+            {serviceCatalog.map((group) => (
+              <a
+                key={group.id}
+                href={`#${group.id}`}
+                className="rounded-full border border-brand-100 px-4 py-2 text-sm font-semibold text-brand-600 hover:bg-brand-50"
+              >
+                {t.groups[group.key].title}
+              </a>
+            ))}
+          </nav>
+          <div className="mt-12 space-y-12">
             {serviceCatalog.map((group) => {
               const groupCopy = t.groups[group.key];
               const services = groupCopy.services as Record<
@@ -93,10 +111,14 @@ export default function PayPerService() {
                                 {copy.description}
                               </p>
                             </div>
-                            <div className="rounded-2xl border border-ink-100 bg-secondary/40 p-4">
-                              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-600">
+                            <details className="group rounded-2xl border border-ink-100 bg-secondary/40 p-4">
+                              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded text-sm font-semibold text-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 [&::-webkit-details-marker]:hidden">
                                 {copy.outcomesLabel ?? t.catalog.helpsWith}
-                              </p>
+                                <ChevronDown
+                                  aria-hidden="true"
+                                  className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                                />
+                              </summary>
                               <ul className="mt-3 space-y-2 text-sm text-ink-500">
                                 {copy.outcomes.map((outcome, index) => {
                                   const OutcomeIcon = outcomeIcons?.[index];
@@ -115,23 +137,14 @@ export default function PayPerService() {
                                   );
                                 })}
                               </ul>
-                            </div>
+                            </details>
                           </div>
-                          {/* Add first, ask second: the button builds the
-                              request without leaving the page, and the original
-                              link still goes straight to the conversation. */}
+                          {/* Selection keeps the canonical service ID and request flow. */}
                           <div className="mt-auto flex flex-col items-start gap-3 pt-6">
                             <AddToRequestButton
                               serviceId={service.id}
-                              serviceName={copy.title}
+                              serviceName={getServiceName(service.id, locale)}
                             />
-                            <Link
-                              to={path("/contact")}
-                              className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 transition hover:text-brand-700"
-                            >
-                              {copy.ctaLabel}
-                              <span aria-hidden="true">-&gt;</span>
-                            </Link>
                           </div>
                         </div>
                       );
@@ -148,7 +161,10 @@ export default function PayPerService() {
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
         description={t.cta.description}
-        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
+        primaryCta={{
+          label: t.cta.primaryCta,
+          href: `${path("/contact")}#${REQUEST_SERVICES_ANCHOR}`,
+        }}
         secondaryCta={{ label: t.cta.secondaryCta, href: path("/features") }}
       />
     </div>

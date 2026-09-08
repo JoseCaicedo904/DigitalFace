@@ -1,4 +1,5 @@
 import { usePageMetadata } from "@/hooks/usePageMetadata";
+import { BOOKING_ROUTE } from "@/components/booking/bookingRoute";
 import { FeaturesSection } from "@/sections/Features";
 import { PatientJourneySection } from "@/sections/PatientJourney";
 import { CtaSection } from "@/sections/CTA";
@@ -7,6 +8,7 @@ import { featuresContent } from "@/i18n/content/features";
 import {
   CalendarCheck,
   CheckCircle2,
+  ChevronDown,
   LayoutDashboard,
   PhoneCall,
 } from "lucide-react";
@@ -38,9 +40,7 @@ export default function Features() {
 
       <PatientJourneySection content={t.journey} />
 
-      {/* The specification behind the story: every module still listed in full,
-          but as one spec sheet rather than seven illustrated pitches, so the
-          page stops reading like an à-la-carte menu for a bundled plan. */}
+      {/* Service details expand on demand so the patient journey stays easy to scan. */}
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -50,69 +50,38 @@ export default function Features() {
             <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
               {t.modules.title}
             </h2>
-            <p className="mt-4 text-lg text-ink-500">
-              {t.modules.description}
-            </p>
+            <p className="mt-4 text-lg text-ink-500">{t.modules.description}</p>
           </div>
 
-          <div className="mt-14 divide-y divide-ink-100 overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-brand-card">
-            {t.modules.items.map((service, index) => (
-              <div
-                key={service.title}
-                className="grid gap-5 p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12"
-              >
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
-                    {t.modules.label} 0{index + 1}
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold text-slate-900 sm:text-2xl">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                    {service.description}
-                  </p>
-                </div>
-                <ul className="grid content-start gap-2.5 text-sm text-ink-500 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          <div className="mt-10 divide-y divide-ink-100 overflow-hidden rounded-3xl border border-ink-100 bg-white shadow-brand-card">
+            {t.modules.items.map((service) => (
+              <details key={service.title} className="group p-6 sm:p-8">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-5 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 [&::-webkit-details-marker]:hidden">
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-base text-ink-500">
+                      {service.description}
+                    </p>
+                  </div>
+                  <ChevronDown
+                    aria-hidden="true"
+                    className="mt-1 h-5 w-5 shrink-0 text-brand-600 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+                  />
+                </summary>
+                <ul className="mt-5 grid gap-3 text-sm text-ink-600 md:grid-cols-3">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-2.5">
                       <CheckCircle2
-                        className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-500"
                         aria-hidden="true"
+                        className="mt-0.5 h-4 w-4 shrink-0 text-brand-500"
                       />
                       {bullet}
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              {t.principles.eyebrow}
-            </span>
-            <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              {t.principles.title}
-            </h2>
-            <p className="mt-4 text-lg text-ink-500">
-              {t.principles.description}
-            </p>
-          </div>
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {t.principles.items.map((value) => (
-              <div
-                key={value.title}
-                className="rounded-3xl border border-ink-100 bg-white/90 p-8 text-left shadow-brand-card"
-              >
-                <h3 className="text-xl font-semibold text-slate-900">
-                  {value.title}
-                </h3>
-                <p className="mt-3 text-sm text-ink-500">{value.description}</p>
-              </div>
+              </details>
             ))}
           </div>
         </div>
@@ -215,7 +184,7 @@ export default function Features() {
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
         description={t.cta.description}
-        primaryCta={{ label: t.cta.primaryCta, href: path("/contact") }}
+        primaryCta={{ label: t.cta.primaryCta, href: path(BOOKING_ROUTE) }}
         secondaryCta={{ label: t.cta.secondaryCta, href: path("/pricing") }}
       />
     </div>

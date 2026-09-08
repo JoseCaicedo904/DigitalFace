@@ -11,7 +11,7 @@ import { ConversationDemoSection } from "@/sections/ConversationDemo";
 import { CrmPipelineDemoSection } from "@/sections/CrmPipelineDemo";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { Hero } from "@/sections/Hero";
-import { SystemJourneyIntro } from "@/sections/SystemJourneyIntro";
+import { Link } from "react-router-dom";
 import { TechEcosystemSection } from "@/sections/TechEcosystem";
 import { WebsitePortfolioSection } from "@/sections/WebsitePortfolio";
 
@@ -77,12 +77,16 @@ export default function Index() {
         title={t.hero.title}
         description={t.hero.description}
         primaryCta={{ label: t.hero.primaryCta, href: bookHref }}
+        secondaryCta={{ label: t.hero.secondaryCta, href: "#system" }}
         media={<HeroSystemPreview content={t.systemIntro} />}
       />
-      <SystemJourneyIntro content={t.systemIntro} />
       {/* Every consultation CTA on this page leads to the one scheduling
           route, so none of them depend on an embedded widget. */}
-      <AdCampaignDemoSection content={t.adCampaignDemo} ctaHref={bookHref} />
+      <AdCampaignDemoSection
+        id="system"
+        content={t.adCampaignDemo}
+        ctaHref={bookHref}
+      />
       <ConversationDemoSection
         content={t.conversationDemo}
         ctaHref={bookHref}
@@ -121,7 +125,26 @@ export default function Index() {
         className="scroll-mt-24 bg-gradient-to-b from-white via-secondary/40 to-white py-20 sm:py-24 lg:py-28"
       >
         <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <LeadForm pageSource="homepage" />
+          <div className="mb-8 flex flex-wrap justify-center gap-6 text-base font-semibold text-brand-600">
+            <Link
+              to={path("/pricing")}
+              className="underline underline-offset-4"
+            >
+              {t.cta.secondaryCta}
+            </Link>
+            <Link
+              to={path("/pay-per-service")}
+              className="underline underline-offset-4"
+            >
+              {t.cta.primaryCta}
+            </Link>
+          </div>
+          <LeadForm
+            pageSource="homepage"
+            eyebrow={t.cta.eyebrow}
+            title={t.cta.title}
+            description={t.cta.description}
+          />
         </div>
       </section>
     </div>

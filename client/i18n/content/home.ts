@@ -11,31 +11,29 @@ import type { Locale } from "../locale";
  */
 const conversationDemoEn: ConversationDemoContent = {
   eyebrow: "02 · Convert",
-  title: "A lead only becomes valuable when someone moves it forward.",
+  title: "Let AI answer while you’re busy.",
   description:
-    "The inquiry from the ad is answered while interest is still high. DigitalFace handles common questions, captures useful context and guides the conversation toward an appointment, with your team ready to step in when needed.",
-  ctaLabel: "See how DigitalFace would move your inquiries forward",
+    "Your AI chatbot answers approved questions, collects useful details and helps people book. Your team can step in whenever needed.",
+  ctaLabel: "Talk About AI Support",
   phoneCaption: "Sample conversation",
   stages: [
     {
-      title: "The inquiry lands",
+      title: "Receive the inquiry",
       description:
-        "Ads, forms, chat and social messages arrive in one thread, nights and weekends included.",
+        "Bring connected ads, forms, chat and social messages together.",
     },
     {
-      title: "The reply goes out in seconds",
-      description:
-        "Nobody waits until the morning for an answer, and the opportunity is created the moment it arrives.",
+      title: "Send a quick reply",
+      description: "Respond outside office hours, too.",
     },
     {
-      title: "The conversation does the work",
-      description:
-        "Repeat questions get answered, interest is captured, and the calendar is offered at the right moment.",
+      title: "Help choose a time",
+      description: "Answer common questions and offer the calendar.",
     },
     {
-      title: "Your team stays in control",
+      title: "Keep your team involved",
       description:
-        "A person can take over at any point, and every booking lands in your pipeline with a reminder attached.",
+        "Staff can take over, with the conversation and booking history.",
     },
   ],
   script: {
@@ -106,31 +104,29 @@ const conversationDemoEn: ConversationDemoContent = {
 
 const conversationDemoEs: ConversationDemoContent = {
   eyebrow: "02 · Convertir",
-  title: "Un contacto solo tiene valor cuando alguien lo hace avanzar.",
+  title: "Deja que la IA responda mientras atiendes.",
   description:
-    "La consulta del anuncio recibe respuesta mientras el interés sigue alto. DigitalFace atiende las preguntas frecuentes, reúne el contexto necesario y guía la conversación hacia una cita, con tu equipo listo para intervenir cuando haga falta.",
-  ctaLabel: "Mira cómo DigitalFace haría avanzar tus consultas",
+    "Tu chatbot de IA responde preguntas aprobadas, reúne información y ayuda a agendar. Tu equipo puede intervenir cuando sea necesario.",
+  ctaLabel: "Hablar del apoyo con IA",
   phoneCaption: "Conversación de ejemplo",
   stages: [
     {
-      title: "La consulta llega",
+      title: "Recibe la consulta",
       description:
-        "Anuncios, formularios, chat y mensajes de redes entran en una sola conversación, también de noche y los fines de semana.",
+        "Reúne las consultas de anuncios, formularios, chat y redes conectados.",
     },
     {
-      title: "La respuesta sale en segundos",
-      description:
-        "Nadie espera hasta el otro día para recibir respuesta, y la oportunidad se crea apenas entra el mensaje.",
+      title: "Responde a tiempo",
+      description: "Responde también fuera del horario de atención.",
     },
     {
-      title: "La conversación hace el trabajo",
-      description:
-        "Responde las preguntas de siempre, registra el interés y ofrece el calendario en el momento correcto.",
+      title: "Ayuda a elegir horario",
+      description: "Contesta preguntas frecuentes y ofrece el calendario.",
     },
     {
-      title: "Tu equipo mantiene el control",
+      title: "Mantén a tu equipo al tanto",
       description:
-        "Una persona puede tomar la conversación cuando quiera, y cada cita queda en tu proceso con su recordatorio.",
+        "Tu personal puede intervenir con el historial de la conversación y la cita.",
     },
   ],
   script: {
@@ -206,33 +202,28 @@ const conversationDemoEs: ConversationDemoContent = {
  */
 const adCampaignDemoEn: AdCampaignDemoContent = {
   eyebrow: "01 · Attract",
-  title: "Create real opportunities, not just impressions and clicks.",
+  title: "Get in front of the right people.",
   description:
-    "DigitalFace puts your services in front of relevant people and gives each person one clear path from attention to an inquiry your team can work.",
-  ctaLabel: "See how DigitalFace would create opportunities",
+    "Meta Ads and Google Ads put your offer in front of potential customers. A clear page or form gives them a way to respond.",
+  ctaLabel: "Talk About My Campaigns",
   phoneCaption: "Sample ad and lead form",
-  bridge:
-    "The opportunity is in. Now it needs a timely conversation that moves it forward.",
+  bridge: "Next: answer the inquiry.",
   stages: [
     {
-      title: "It reaches someone already looking",
-      description:
-        "Your treatments show up in the feed people check every day, in the market and the language you actually serve.",
+      title: "Reach your audience",
+      description: "Show your services in the markets and languages you serve.",
     },
     {
-      title: "The offer earns a response",
-      description:
-        "One clear next step instead of a phone number and a hope, so interest turns into action while the person is still paying attention.",
+      title: "Make the offer clear",
+      description: "Give people one clear reason to get in touch.",
     },
     {
-      title: "Interest becomes contact details",
-      description:
-        "A short form asks what they want and how to reach them. Nothing for your front desk to chase, nothing anyone types twice.",
+      title: "Collect their details",
+      description: "Ask what they need and how to reach them.",
     },
     {
-      title: "The lead arrives ready to work",
-      description:
-        "Every response lands in the same pipeline as the rest of your inquiries, organized and waiting for the first message.",
+      title: "Keep the inquiry organized",
+      description: "Send the response to your CRM, ready for follow-up.",
     },
   ],
   script: {
@@ -319,33 +310,29 @@ const adCampaignDemoEn: AdCampaignDemoContent = {
 
 const adCampaignDemoEs: AdCampaignDemoContent = {
   eyebrow: "01 · Atraer",
-  title: "Crea oportunidades reales, no solo impresiones y clics.",
+  title: "Llega a las personas indicadas.",
   description:
-    "DigitalFace pone tus servicios frente a personas relevantes y le da a cada una un camino claro para pasar de la atención a una consulta que tu equipo puede trabajar.",
-  ctaLabel: "Mira cómo DigitalFace crearía oportunidades",
+    "Meta Ads y Google Ads muestran tu oferta a posibles clientes. Una página o formulario claro les facilita el contacto.",
+  ctaLabel: "Hablar de mis campañas",
   phoneCaption: "Anuncio y formulario de ejemplo",
-  bridge:
-    "La oportunidad ya llegó. Ahora necesita una conversación oportuna que la haga avanzar.",
+  bridge: "Siguiente paso: responder al interesado.",
   stages: [
     {
-      title: "Llega a alguien que ya está buscando",
+      title: "Llega a tu público",
       description:
-        "Tus tratamientos aparecen en el feed que la gente revisa todos los días, en el mercado y el idioma que realmente atiendes.",
+        "Muestra tus servicios en los mercados e idiomas que atiendes.",
     },
     {
-      title: "La oferta se gana la respuesta",
-      description:
-        "Un paso claro en lugar de un número de teléfono y una esperanza, para que el interés se vuelva acción mientras la persona sigue atenta.",
+      title: "Presenta una oferta clara",
+      description: "Dale al interesado una razón clara para contactarte.",
     },
     {
-      title: "El interés se vuelve datos de contacto",
-      description:
-        "Un formulario corto pregunta qué quiere y dónde ubicarla. Nada que perseguir en recepción y nada que alguien tenga que escribir dos veces.",
+      title: "Recibe sus datos",
+      description: "Pregunta qué necesita y cómo puedes contactarlo.",
     },
     {
-      title: "El contacto llega listo para trabajar",
-      description:
-        "Cada respuesta cae en el mismo proceso que el resto de tus consultas, organizada y lista para el primer mensaje.",
+      title: "Organiza la consulta",
+      description: "La respuesta llega a tu CRM, lista para el seguimiento.",
     },
   ],
   script: {
@@ -437,29 +424,28 @@ const adCampaignDemoEs: AdCampaignDemoContent = {
  */
 const crmPipelineDemoEn: CrmPipelineDemoContent = {
   eyebrow: "03 · Manage",
-  title: "Know exactly where every opportunity stands.",
+  title: "Know who needs your attention.",
   description:
-    "Once inquiries and conversations are moving, DigitalFace keeps the source, interest, history, status and next step together so your team can see what needs attention without searching through scattered messages.",
-  ctaLabel: "See how DigitalFace would keep your team in control",
+    "Your CRM keeps contacts, conversations and next steps in one place. See who is new, who wants to book and who needs follow-up.",
+  ctaLabel: "Talk About My Follow-Up",
   boardCaption: "Sample lead journey",
-  bridge:
-    "Attract, convert and manage: one connected customer journey with a clear next step at every stage.",
+  bridge: "Attract, convert and manage. One team handles the connections.",
   stages: [
     {
       title: "New inquiry",
-      description: "The opportunity appears as soon as the contact arrives.",
+      description: "A new contact appears on the board.",
     },
     {
       title: "Contacted",
-      description: "The first conversation is visible to the whole team.",
+      description: "Your team can see the first conversation.",
     },
     {
       title: "Interested",
-      description: "The source and treatment interest stay with the lead.",
+      description: "The source and treatment interest stay together.",
     },
     {
       title: "Appointment requested",
-      description: "The team can see exactly what needs to be confirmed next.",
+      description: "See the requested time and what needs confirmation.",
     },
   ],
   script: {
@@ -527,30 +513,28 @@ const crmPipelineDemoEn: CrmPipelineDemoContent = {
 
 const crmPipelineDemoEs: CrmPipelineDemoContent = {
   eyebrow: "03 · Gestionar",
-  title: "Ten claro en qué punto está cada oportunidad.",
+  title: "Identifica quién necesita tu atención.",
   description:
-    "Cuando las consultas y conversaciones empiezan a avanzar, DigitalFace mantiene juntos el origen, el interés, el historial, el estado y el siguiente paso para que tu equipo vea qué necesita atención sin buscar entre mensajes dispersos.",
-  ctaLabel: "Mira cómo DigitalFace mantendría el control",
+    "Tu CRM reúne contactos, conversaciones y próximos pasos. Ve quién acaba de llegar, quién quiere agendar y quién necesita seguimiento.",
+  ctaLabel: "Hablar de mi seguimiento",
   boardCaption: "Ejemplo del recorrido de un contacto",
-  bridge:
-    "Atraer, convertir y gestionar: un solo recorrido conectado con un siguiente paso claro en cada etapa.",
+  bridge: "Atraer, convertir y gestionar. Un solo equipo conecta todo.",
   stages: [
     {
-      title: "Consulta nueva",
-      description: "La oportunidad aparece apenas llega el contacto.",
+      title: "Nueva consulta",
+      description: "El nuevo contacto aparece en el tablero.",
     },
     {
-      title: "En conversación",
-      description: "Todo el equipo puede ver que la conversación ya comenzó.",
+      title: "Contactado",
+      description: "Tu equipo puede ver la primera conversación.",
     },
     {
-      title: "Interés confirmado",
-      description:
-        "El origen y el tratamiento de interés quedan unidos al contacto.",
+      title: "Interesado",
+      description: "El origen y el tratamiento de interés quedan juntos.",
     },
     {
       title: "Cita solicitada",
-      description: "El equipo ve exactamente qué falta por confirmar.",
+      description: "Revisa el horario solicitado y qué falta confirmar.",
     },
   ],
   script: {
@@ -636,29 +620,26 @@ const selectedWorkEntriesEn: Record<string, SelectedWorkEntry> = {
     category: "Aesthetic Dentistry · Cali, Colombia",
     description:
       "Cosmetic and restorative dental practice specializing in smile design, veneers, implants and international patient care.",
-    highlight:
-      "Digital ecosystem built around patient acquisition, qualification and follow-up.",
+    highlight: "Patient inquiries, intake details and follow-up, connected.",
   },
   diego: {
     category: "Aesthetic Medicine · Cali, Colombia",
     description:
       "Medical aesthetics practice focused on personalized treatments, natural-looking results and patient follow-up.",
-    highlight:
-      "A connected digital journey from campaign and website to appointment and CRM.",
+    highlight: "Campaigns and a website connected to appointments and CRM.",
   },
   braveros: {
     category: "Sports & Events · Bugalagrande, Colombia",
     description:
       "Fitness community behind Neon Race, a multi-edition nighttime running event combining sport, entertainment and regional participation.",
-    highlight:
-      "Digital acquisition and online conversion supporting a growing regional running event.",
+    highlight: "Marketing and online sign-ups for a regional running event.",
   },
   saboreo: {
     category: "Food & Hospitality · Bugalagrande, Colombia",
     description:
       "Local fast-food brand known especially for its salchipapas, delivery and casual dining experience. Public listings currently show very strong customer reviews.",
     highlight:
-      "Digital marketing built around a local food brand and its customer acquisition.",
+      "Digital marketing to help a local food business attract customers.",
   },
   igrafit: {
     category: "Branding & Visual Production · New Jersey, USA",
@@ -688,28 +669,27 @@ const selectedWorkEntriesEs: Record<string, SelectedWorkEntry> = {
     description:
       "Consultorio de odontología estética y restaurativa especializado en diseño de sonrisa, carillas, implantes y atención a pacientes internacionales.",
     highlight:
-      "Ecosistema digital construido alrededor de la captación, la calificación y el seguimiento de pacientes.",
+      "Consultas de pacientes, datos iniciales y seguimiento conectados.",
   },
   diego: {
     category: "Medicina estética · Cali, Colombia",
     description:
       "Consultorio de medicina estética enfocado en tratamientos personalizados, resultados de apariencia natural y seguimiento al paciente.",
-    highlight:
-      "Un recorrido digital conectado, desde la campaña y el sitio web hasta la cita y el CRM.",
+    highlight: "Campañas y sitio web conectados con citas y CRM.",
   },
   braveros: {
     category: "Deporte y eventos · Bugalagrande, Colombia",
     description:
       "Comunidad fitness detrás de Neon Race, una carrera nocturna de varias ediciones que combina deporte, entretenimiento y participación regional.",
     highlight:
-      "Captación digital y conversión en línea para una carrera regional en crecimiento.",
+      "Marketing y registros en línea para un evento regional de atletismo.",
   },
   saboreo: {
     category: "Gastronomía · Bugalagrande, Colombia",
     description:
       "Marca local de comida rápida reconocida sobre todo por sus salchipapas, su servicio a domicilio y su experiencia de mesa informal. Sus perfiles públicos muestran hoy reseñas muy positivas.",
     highlight:
-      "Marketing digital construido alrededor de una marca local de comida y su captación de clientes.",
+      "Marketing digital para atraer clientes a un negocio local de comida.",
   },
   igrafit: {
     category: "Branding y producción visual · Nueva Jersey, EE. UU.",
@@ -741,11 +721,11 @@ const en = {
   },
   hero: {
     eyebrow: "The DigitalFace growth system",
-    title: "Turn more inquiries into appointments and customers.",
+    title: "More inquiries. Better follow-up. More opportunities.",
     description:
-      "DigitalFace connects advertising, responsive conversations and opportunity management for appointment-driven businesses in Florida, across the US and Latin America.",
-    primaryCta: "Build my growth system",
-    secondaryCta: "See how the system works",
+      "We bring marketing, AI and CRM together to help turn interest into appointments. DigitalFace handles the setup and ongoing support.",
+    primaryCta: "Book a Call",
+    secondaryCta: "See How It Works",
     stats: [
       { value: "Instant", label: "First response" },
       { value: "24/7", label: "Follow-up coverage" },
@@ -765,28 +745,27 @@ const en = {
     title: "Getting the lead is only the beginning.",
     description:
       "Customer acquisition works when three parts stay connected: create the opportunity, move it forward while interest is high and keep every next step visible.",
-    previewLabel: "The customer journey",
-    closing:
-      "Create opportunities. Move them forward. Keep control of the customer journey.",
+    previewLabel: "Attract → Convert → Manage",
+    closing: "One team handles the setup and keeps it working.",
     stages: [
       {
         number: "01",
         label: "Attract",
-        title: "Create opportunities",
+        title: "Get people interested",
         description:
           "Reach relevant people and turn their attention into real inquiries.",
       },
       {
         number: "02",
         label: "Convert",
-        title: "Move them forward",
+        title: "Help them book",
         description:
           "Respond, understand the need and guide the conversation toward action.",
       },
       {
         number: "03",
         label: "Manage",
-        title: "Keep control",
+        title: "Keep every lead organized",
         description:
           "Keep every opportunity, conversation, status and next step organized.",
       },
@@ -903,9 +882,9 @@ const en = {
   crmPipelineDemo: crmPipelineDemoEn,
   appointmentCommitment: {
     eyebrow: "Appointment commitment",
-    title: "A requested appointment is not the same as a confirmed one.",
+    title: "Add an optional deposit to your booking.",
     description:
-      "Lead, conversation, qualification, booking — and then, when it fits your business, one more step: a deposit, a reservation fee or full prepayment before the appointment is marked confirmed. The payment runs through the payment provider your business already uses, and the appointment status moves with it.",
+      "Choose a deposit, reservation fee or full prepayment for selected services. Your payment provider collects it before the appointment is marked confirmed.",
     steps: [
       {
         label: "Appointment requested",
@@ -932,19 +911,17 @@ const en = {
     ],
     points: [
       {
-        title: "Fewer casual bookings",
-        description:
-          "A time slot that costs something to hold is asked for by people who mean to use it, so casual requests stop taking space on the calendar.",
+        title: "Ask for commitment",
+        description: "A reservation payment can help reduce casual bookings.",
       },
       {
-        title: "A confirmation your team can trust",
-        description:
-          "Confirmed means paid and confirmed, not just requested, so your schedule reflects real commitments and your team can plan around it.",
+        title: "See what is confirmed",
+        description: "Distinguish paid reservations from appointment requests.",
       },
       {
-        title: "Your provider, your money",
+        title: "Keep payments in your account",
         description:
-          "Payments run through the payment provider your business already uses and settle into your account. DigitalFace connects the booking workflow to it and never holds your funds.",
+          "Your provider collects the payment. DigitalFace connects the booking step and never holds your funds.",
       },
     ],
     note: "Optional and configured per service: you decide which appointments ask for a deposit and how much. A deposit strengthens commitment; it is not a guarantee of attendance.",
@@ -1009,9 +986,8 @@ const en = {
    */
   selectedWork: {
     eyebrow: "Selected work",
-    title: "Built across different industries.",
-    description:
-      "From healthcare and professional services to events, automotive, branding and food businesses.",
+    title: "See the businesses we’ve worked with.",
+    description: "Healthcare, professional services, events and more.",
     featuredGroupLabel: "Featured success stories",
     selectedGroupLabel: "Selected clients",
     rosterGroupLabel: "More businesses we have worked with",
@@ -1026,9 +1002,9 @@ const en = {
    */
   websitePortfolio: {
     eyebrow: "Digital experiences",
-    title: "Web experiences built to turn attention into action.",
+    title: "Websites that make the next step clear.",
     description:
-      "Selected DigitalFace website projects designed around clarity, trust and conversion.",
+      "Web development that helps visitors understand your services and get in touch.",
     projectLabel: "DigitalFace website project",
     visitCta: "Visit live website",
     /** Screen-reader name for the whole showcase. */
@@ -1044,14 +1020,14 @@ const en = {
         category: "Aesthetic Dentistry",
         location: "Cali, Colombia",
         description:
-          "Premium digital experience for an aesthetic dentistry practice, designed to present treatments clearly and convert local and international patient interest into enquiries.",
+          "A dental website that presents treatments and invites local and international patient inquiries.",
         alt: "Dra. Jennifer Sinisterra aesthetic dentistry website homepage",
       },
       diego: {
         category: "Aesthetic Medicine",
         location: "Cali, Colombia",
         description:
-          "Conversion-focused digital experience for an aesthetic medicine practice, connecting treatment discovery with patient enquiries and appointment intent.",
+          "An aesthetic medicine website that connects treatment information with consultation requests.",
         alt: "Dr. Diego Sinisterra aesthetic medicine website homepage",
       },
     } as Record<
@@ -1071,10 +1047,10 @@ const en = {
    * and its order live in `client/data/techEcosystem.ts`.
    */
   techEcosystem: {
-    eyebrow: "Technology ecosystem",
-    title: "Built to work with your stack.",
+    eyebrow: "Your existing tools",
+    title: "Keep your tools. Connect the work.",
     description:
-      "We connect the platforms your business already uses across marketing, CRM, messaging, automation and customer management so they work together as one system.",
+      "We connect your marketing, messaging, CRM and scheduling tools so your team spends less time moving information.",
     categories: "CRM · Messaging · Advertising · AI · Automation · Scheduling",
     /** Screen-reader name for the scrollable rail. */
     railLabel: "Platforms DigitalFace works with",
@@ -1108,18 +1084,18 @@ const en = {
   /** The closing conversion block. One button, no second sales pitch. */
   booking: {
     eyebrow: "Ready when you are",
-    title: "Let's talk about what your business needs next.",
+    title: "What would help your business most?",
     description:
-      "Choose a convenient time to discuss your lead generation, conversion, CRM, automation or complete growth system.",
-    ctaLabel: "Choose a time",
+      "Choose the complete system or just the services you need. We’ll help you decide on a call.",
+    ctaLabel: "Find My Next Step",
   },
   cta: {
-    eyebrow: "Build your connected system",
-    title: "Bring more opportunities in—and give each one a clear next step.",
+    eyebrow: "Prefer to write?",
+    title: "Tell us what you need.",
     description:
-      "Tell us how inquiries reach your business today. We will map the advertising, conversation and management system needed to move more of them forward.",
-    primaryCta: "Discuss my growth system",
-    secondaryCta: "See the plans",
+      "Share your business goals and we’ll help you choose the next step.",
+    primaryCta: "Choose Individual Services",
+    secondaryCta: "Compare Plans",
   },
 } satisfies Record<string, unknown>;
 
@@ -1132,11 +1108,11 @@ const es: typeof en = {
   },
   hero: {
     eyebrow: "El sistema de crecimiento DigitalFace",
-    title: "Convierte más consultas en citas y clientes.",
+    title: "Más consultas. Mejor seguimiento. Más oportunidades.",
     description:
-      "DigitalFace conecta pauta, conversaciones oportunas y gestión de oportunidades para negocios que trabajan con citas en Florida, Estados Unidos y Latinoamérica.",
-    primaryCta: "Construir mi sistema de crecimiento",
-    secondaryCta: "Mira cómo funciona",
+      "Unimos marketing, IA y CRM para ayudarte a convertir el interés en citas. DigitalFace se encarga de la implementación y el soporte.",
+    primaryCta: "Agendar una llamada",
+    secondaryCta: "Ver cómo funciona",
     stats: [
       { value: "Inmediata", label: "Primera respuesta" },
       { value: "24/7", label: "Cobertura de seguimiento" },
@@ -1156,28 +1132,27 @@ const es: typeof en = {
     title: "Conseguir el contacto es solo el comienzo.",
     description:
       "La captación funciona cuando tres partes se mantienen conectadas: crear la oportunidad, hacerla avanzar mientras el interés sigue alto y mantener visible cada siguiente paso.",
-    previewLabel: "El recorrido del cliente",
-    closing:
-      "Crea oportunidades. Hazlas avanzar. Mantén el control del recorrido del cliente.",
+    previewLabel: "Atraer → Convertir → Gestionar",
+    closing: "Un solo equipo lo configura y lo mantiene funcionando.",
     stages: [
       {
         number: "01",
         label: "Atraer",
-        title: "Crear oportunidades",
+        title: "Despierta el interés",
         description:
           "Llega a personas relevantes y convierte su atención en consultas reales.",
       },
       {
         number: "02",
         label: "Convertir",
-        title: "Hacerlas avanzar",
+        title: "Ayuda a agendar",
         description:
           "Responde, entiende la necesidad y guía la conversación hacia la acción.",
       },
       {
         number: "03",
         label: "Gestionar",
-        title: "Mantener el control",
+        title: "Organiza cada contacto",
         description:
           "Organiza cada oportunidad, conversación, estado y siguiente paso.",
       },
@@ -1296,9 +1271,9 @@ const es: typeof en = {
   crmPipelineDemo: crmPipelineDemoEs,
   appointmentCommitment: {
     eyebrow: "Compromiso de cita",
-    title: "Una cita solicitada no es lo mismo que una cita confirmada.",
+    title: "Suma un anticipo opcional a tus reservas.",
     description:
-      "Contacto, conversación, calificación, agendamiento y, cuando le sirve a tu negocio, un paso más: un anticipo, una cuota de reserva o el pago completo antes de dar la cita por confirmada. El pago corre por el proveedor de pagos que tu negocio ya usa y el estado de la cita avanza con él.",
+      "Elige anticipo, cuota de reserva o pago completo para ciertos servicios. Tu proveedor cobra el pago antes de marcar la cita como confirmada.",
     steps: [
       {
         label: "Cita solicitada",
@@ -1327,19 +1302,19 @@ const es: typeof en = {
     ],
     points: [
       {
-        title: "Menos reservas sin intención",
+        title: "Pide un compromiso",
         description:
-          "Un horario que cuesta reservar lo pide quien realmente piensa usarlo, así las solicitudes casuales dejan de ocupar agenda.",
+          "Un pago de reserva puede ayudar a reducir las citas sin compromiso.",
       },
       {
-        title: "Una confirmación en la que tu equipo puede confiar",
+        title: "Ve qué está confirmado",
         description:
-          "Confirmada significa pagada y confirmada, no solo solicitada: tu agenda refleja compromisos reales y tu equipo puede planear sobre ella.",
+          "Distingue las reservas pagadas de las solicitudes de cita.",
       },
       {
-        title: "Tu proveedor, tu dinero",
+        title: "Recibe el dinero en tu cuenta",
         description:
-          "Los pagos pasan por el proveedor de pagos que tu negocio ya usa y llegan a tu cuenta. DigitalFace conecta el agendamiento con él y nunca retiene tus fondos.",
+          "Tu proveedor cobra el pago. DigitalFace conecta el agendamiento y nunca retiene tus fondos.",
       },
     ],
     note: "Es opcional y se configura por servicio: tú decides qué citas piden anticipo y de cuánto. El anticipo refuerza el compromiso; no es una garantía de asistencia.",
@@ -1399,9 +1374,8 @@ const es: typeof en = {
   },
   selectedWork: {
     eyebrow: "Trabajos seleccionados",
-    title: "Construido para diferentes industrias.",
-    description:
-      "Desde salud y servicios profesionales hasta eventos, automotriz, branding y gastronomía.",
+    title: "Conoce los negocios con los que hemos trabajado.",
+    description: "Salud, servicios profesionales, eventos y más.",
     featuredGroupLabel: "Casos destacados",
     selectedGroupLabel: "Clientes seleccionados",
     rosterGroupLabel: "Otros negocios con los que hemos trabajado",
@@ -1411,9 +1385,9 @@ const es: typeof en = {
   },
   websitePortfolio: {
     eyebrow: "Experiencias digitales",
-    title: "Experiencias web creadas para convertir la atención en acción.",
+    title: "Sitios web que facilitan el siguiente paso.",
     description:
-      "Proyectos web seleccionados de DigitalFace, diseñados alrededor de la claridad, la confianza y la conversión.",
+      "Desarrollo web para presentar tus servicios y facilitar el contacto.",
     projectLabel: "Proyecto web de DigitalFace",
     visitCta: "Ver el sitio en vivo",
     carouselLabel: "Proyectos web de DigitalFace",
@@ -1427,23 +1401,23 @@ const es: typeof en = {
         category: "Odontología estética",
         location: "Cali, Colombia",
         description:
-          "Experiencia digital premium para una consulta de odontología estética, diseñada para presentar los tratamientos con claridad y convertir el interés de pacientes locales e internacionales en consultas.",
+          "Un sitio dental que presenta tratamientos y facilita el contacto de pacientes locales e internacionales.",
         alt: "Página de inicio del sitio web de odontología estética de la Dra. Jennifer Sinisterra",
       },
       diego: {
         category: "Medicina estética",
         location: "Cali, Colombia",
         description:
-          "Experiencia digital enfocada en conversión para una consulta de medicina estética, que conecta el descubrimiento de tratamientos con las consultas y la intención de agendar cita.",
+          "Un sitio de medicina estética que conecta la información de tratamientos con solicitudes de valoración.",
         alt: "Página de inicio del sitio web de medicina estética del Dr. Diego Sinisterra",
       },
     },
   },
   techEcosystem: {
-    eyebrow: "Ecosistema tecnológico",
-    title: "Funciona con las herramientas que ya usas.",
+    eyebrow: "Tus herramientas actuales",
+    title: "Conectamos las herramientas que ya usas.",
     description:
-      "Conectamos las plataformas que tu negocio ya utiliza en marketing, CRM, mensajería, automatización y gestión de clientes para que trabajen juntas como un solo sistema.",
+      "Conectamos marketing, mensajes, CRM y agenda para que tu equipo dedique menos tiempo a pasar información de un lugar a otro.",
     categories: "CRM · Mensajería · Pauta · IA · Automatización · Agendamiento",
     railLabel: "Plataformas con las que trabaja DigitalFace",
     previousLabel: "Desplazar tecnologías a la izquierda",
@@ -1474,18 +1448,18 @@ const es: typeof en = {
   },
   booking: {
     eyebrow: "Cuando quieras",
-    title: "Hablemos de lo que tu negocio necesita ahora.",
+    title: "¿Qué le ayudaría más a tu negocio?",
     description:
-      "Elige un horario para conversar sobre tu generación de leads, conversión, CRM, automatización o el sistema de crecimiento completo.",
-    ctaLabel: "Elige un horario",
+      "Elige el sistema completo o solo los servicios que necesitas. Te ayudamos a decidir en una llamada.",
+    ctaLabel: "Definir mi próximo paso",
   },
   cta: {
-    eyebrow: "Construye tu sistema conectado",
-    title: "Atrae más oportunidades y dale a cada una un siguiente paso claro.",
+    eyebrow: "¿Prefieres escribir?",
+    title: "Cuéntanos qué necesitas.",
     description:
-      "Cuéntanos cómo llegan hoy las consultas a tu negocio. Trazaremos el sistema de pauta, conversación y gestión necesario para hacer avanzar más oportunidades.",
-    primaryCta: "Hablar sobre mi sistema de crecimiento",
-    secondaryCta: "Ver los planes",
+      "Cuéntanos qué quieres mejorar en tu negocio y te ayudamos a definir el siguiente paso.",
+    primaryCta: "Elegir servicios individuales",
+    secondaryCta: "Comparar planes",
   },
 };
 
