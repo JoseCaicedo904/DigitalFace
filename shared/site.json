@@ -31,6 +31,16 @@
       "intent": "Evaluate how the managed system works"
     },
     {
+      "id": "paid-advertising",
+      "path": "/industries/paid-advertising",
+      "layout": "corporate",
+      "indexable": true,
+      "type": "WebPage",
+      "service": true,
+      "topic": "Paid advertising management across Meta Ads, Google Ads and TikTok Ads",
+      "intent": "Evaluate paid media strategy and campaign management"
+    },
+    {
       "id": "pay-per-service",
       "path": "/pay-per-service",
       "layout": "corporate",

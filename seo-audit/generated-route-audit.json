@@ -150,6 +150,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -166,19 +170,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -290,6 +294,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -326,8 +334,8 @@
         "text": "See How It Works"
       },
       {
-        "href": "/book?from=homepage",
-        "text": "Talk About My Campaigns"
+        "href": "/industries/paid-advertising",
+        "text": "Explore Paid Advertising"
       },
       {
         "href": "/book?from=homepage",
@@ -392,6 +400,10 @@
       {
         "href": "/contact",
         "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
       },
       {
         "href": "/industries/dental-practices",
@@ -680,11 +692,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 179539,
+    "htmlBytes": 180908,
     "incoming": [
       "/es",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -698,6 +711,7 @@
     "outgoing": [
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -861,6 +875,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -877,19 +895,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -1001,6 +1019,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -1037,8 +1059,8 @@
         "text": "Ver cómo funciona"
       },
       {
-        "href": "/es/book?from=homepage",
-        "text": "Hablar de mis campañas"
+        "href": "/es/industries/paid-advertising",
+        "text": "Explorar la pauta digital"
       },
       {
         "href": "/es/book?from=homepage",
@@ -1103,6 +1125,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
       },
       {
         "href": "/es/industries/dental-practices",
@@ -1391,11 +1417,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 181197,
+    "htmlBytes": 182596,
     "incoming": [
       "/",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -1409,6 +1436,7 @@
     "outgoing": [
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -1454,7 +1482,7 @@
       },
       {
         "level": 2,
-        "text": "One point of contact. The right specialists."
+        "text": "One direction. Specialized depth."
       },
       {
         "level": 2,
@@ -1500,6 +1528,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -1516,19 +1548,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -1640,6 +1672,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -1708,6 +1744,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -1762,6 +1802,38 @@
         "class": "h-6 w-6 object-contain"
       },
       {
+        "src": "/media/Logos-About/LOGO%20DIGITAL%20FACE%20MARCA%20AZUL.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "w-full brightness-0 invert opacity-[0.035] transition-opacity duration-700 group-hover/brand:opacity-[0.065] motion-reduce:transition-none"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-12 w-auto rounded-md object-contain"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20AZUL.jpg",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full scale-[1.35] object-cover object-center opacity-75"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20BLANCO.jpg",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full scale-[1.42] object-cover object-center opacity-75"
+      },
+      {
         "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
         "alt": "DigitalFace Marketing logo",
         "loading": "eager",
@@ -1770,11 +1842,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81146,
+    "htmlBytes": 87510,
     "incoming": [
       "/",
       "/es/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -1785,6 +1858,7 @@
     "outgoing": [
       "/",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -1830,7 +1904,7 @@
       },
       {
         "level": 2,
-        "text": "Un solo contacto. Los especialistas adecuados."
+        "text": "Una sola dirección. Experiencia especializada."
       },
       {
         "level": 2,
@@ -1876,6 +1950,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -1892,19 +1970,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -2016,6 +2094,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -2084,6 +2166,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -2138,6 +2224,38 @@
         "class": "h-6 w-6 object-contain"
       },
       {
+        "src": "/media/Logos-About/LOGO%20DIGITAL%20FACE%20MARCA%20AZUL.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "w-full brightness-0 invert opacity-[0.035] transition-opacity duration-700 group-hover/brand:opacity-[0.065] motion-reduce:transition-none"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-12 w-auto rounded-md object-contain"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20AZUL.jpg",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full scale-[1.35] object-cover object-center opacity-75"
+      },
+      {
+        "src": "/media/Logos-About/DIGITAL%20FACE%20MARCA%20BLANCO.jpg",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full scale-[1.42] object-cover object-center opacity-75"
+      },
+      {
         "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
         "alt": "Logotipo de DigitalFace Marketing",
         "loading": "eager",
@@ -2146,11 +2264,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81838,
+    "htmlBytes": 88268,
     "incoming": [
       "/es",
       "/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -2161,6 +2280,7 @@
     "outgoing": [
       "/es",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -2302,6 +2422,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -2318,19 +2442,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -2442,6 +2566,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -2514,6 +2642,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -2560,11 +2692,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 86726,
+    "htmlBytes": 88084,
     "incoming": [
       "/",
       "/about",
       "/es/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -2578,6 +2711,7 @@
     "outgoing": [
       "/",
       "/about",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -2719,6 +2853,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -2735,19 +2873,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -2859,6 +2997,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -2931,6 +3073,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -2977,11 +3123,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87819,
+    "htmlBytes": 89195,
     "incoming": [
       "/es",
       "/es/about",
       "/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -2995,6 +3142,7 @@
     "outgoing": [
       "/es",
       "/es/about",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -3002,6 +3150,1224 @@
       "/es/pricing",
       "/es/contact",
       "/features",
+      "/es/book",
+      "/es/privacy",
+      "/es/terms"
+    ]
+  },
+  {
+    "id": "paid-advertising",
+    "path": "/industries/paid-advertising",
+    "layout": "corporate",
+    "indexable": true,
+    "type": "WebPage",
+    "service": true,
+    "topic": "Paid advertising management across Meta Ads, Google Ads and TikTok Ads",
+    "intent": "Evaluate paid media strategy and campaign management",
+    "locale": "en",
+    "url": "/industries/paid-advertising",
+    "title": "Paid Advertising Agency for Meta, Google & TikTok | DigitalFace",
+    "description": "DigitalFace plans and manages Meta, Google and TikTok Ads around qualified inquiries, customer acquisition and measurable conversions across the US, Canada and LATAM.",
+    "h1": "Paid advertising built around what happens after the click.",
+    "canonical": "https://digitalface.app/industries/paid-advertising",
+    "indexStatus": "index, follow",
+    "alternates": {
+      "en": "https://digitalface.app/industries/paid-advertising",
+      "es": "https://digitalface.app/es/industries/paid-advertising",
+      "x-default": "https://digitalface.app/industries/paid-advertising"
+    },
+    "schema": [
+      "WebPage",
+      "BreadcrumbList",
+      "Service",
+      "Organization",
+      "WebSite",
+      "FAQPage"
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "Paid advertising built around what happens after the click."
+      },
+      {
+        "level": 2,
+        "text": "Clicks are inputs. Acquisition is the assignment."
+      },
+      {
+        "level": 3,
+        "text": "The right audience"
+      },
+      {
+        "level": 3,
+        "text": "A measurable action"
+      },
+      {
+        "level": 3,
+        "text": "A useful opportunity"
+      },
+      {
+        "level": 3,
+        "text": "A better next decision"
+      },
+      {
+        "level": 2,
+        "text": "Use each channel for the role it is best equipped to play."
+      },
+      {
+        "level": 3,
+        "text": "Put the offer inside the feed your audience already uses."
+      },
+      {
+        "level": 3,
+        "text": "We do not automatically recommend all three."
+      },
+      {
+        "level": 2,
+        "text": "Fit comes before spend."
+      },
+      {
+        "level": 3,
+        "text": "Customer"
+      },
+      {
+        "level": 3,
+        "text": "Offer"
+      },
+      {
+        "level": 3,
+        "text": "Intent"
+      },
+      {
+        "level": 3,
+        "text": "Market"
+      },
+      {
+        "level": 3,
+        "text": "Economics"
+      },
+      {
+        "level": 3,
+        "text": "Creative"
+      },
+      {
+        "level": 2,
+        "text": "A campaign is a learning system, not a one-time setup."
+      },
+      {
+        "level": 3,
+        "text": "Frame the business objective"
+      },
+      {
+        "level": 3,
+        "text": "Prepare the conversion path"
+      },
+      {
+        "level": 3,
+        "text": "Build the campaign architecture"
+      },
+      {
+        "level": 3,
+        "text": "Launch, observe and test"
+      },
+      {
+        "level": 3,
+        "text": "Optimize toward the business"
+      },
+      {
+        "level": 2,
+        "text": "Read platform data. Make business decisions."
+      },
+      {
+        "level": 3,
+        "text": "Optimize toward"
+      },
+      {
+        "level": 3,
+        "text": "Use as supporting signals"
+      },
+      {
+        "level": 2,
+        "text": "The work between a budget and a useful acquisition channel."
+      },
+      {
+        "level": 3,
+        "text": "Strategy"
+      },
+      {
+        "level": 3,
+        "text": "Campaign build"
+      },
+      {
+        "level": 3,
+        "text": "Messages + creative"
+      },
+      {
+        "level": 3,
+        "text": "Conversion tracking"
+      },
+      {
+        "level": 3,
+        "text": "Conversion analysis"
+      },
+      {
+        "level": 3,
+        "text": "Ongoing management"
+      },
+      {
+        "level": 3,
+        "text": "Advertising is the acquisition engine—not the whole company."
+      },
+      {
+        "level": 2,
+        "text": "Select a channel—or ask us to recommend one."
+      },
+      {
+        "level": 3,
+        "text": "Meta Ads"
+      },
+      {
+        "level": 3,
+        "text": "Google Ads"
+      },
+      {
+        "level": 3,
+        "text": "TikTok Ads"
+      },
+      {
+        "level": 3,
+        "text": "Management is scoped after the channel plan."
+      },
+      {
+        "level": 3,
+        "text": "Advertising spend stays separate."
+      },
+      {
+        "level": 2,
+        "text": "The decisions behind the media plan."
+      },
+      {
+        "level": 2,
+        "text": "Start with the business outcome. We’ll work backward to the media plan."
+      }
+    ],
+    "headingJumps": [],
+    "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
+      {
+        "href": "/",
+        "text": "DigitalFace MarketingColombia - Florida"
+      },
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/about",
+        "text": "About"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
+        "href": "/industries/dental-practices",
+        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
+      },
+      {
+        "href": "/industries/aesthetic-medicine",
+        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
+      },
+      {
+        "href": "/industries/med-spas",
+        "text": "Med SpasBookings, packages, memberships and reactivation"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid media and social advertising"
+      },
+      {
+        "href": "/industries/paid-advertising#meta-ads",
+        "text": "Meta ads"
+      },
+      {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
+        "href": "/industries/paid-advertising#google-ads",
+        "text": "Google ads"
+      },
+      {
+        "href": "/pay-per-service#seo-strategy",
+        "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#content-creation",
+        "text": "Content creation"
+      },
+      {
+        "href": "/pay-per-service#automation-and-chatbots",
+        "text": "Automation and chatbots"
+      },
+      {
+        "href": "/pay-per-service#chatbot-development",
+        "text": "Chatbot development"
+      },
+      {
+        "href": "/pay-per-service#workflow-automation",
+        "text": "Workflow automation"
+      },
+      {
+        "href": "/pay-per-service#appointment-automation",
+        "text": "Appointment and calendar automation"
+      },
+      {
+        "href": "/pay-per-service#ecommerce-automation",
+        "text": "E-commerce automation"
+      },
+      {
+        "href": "/pay-per-service#comment-auto-reply",
+        "text": "Facebook and Instagram comment replies"
+      },
+      {
+        "href": "/pay-per-service#lead-ops-crm",
+        "text": "Lead operations and CRM"
+      },
+      {
+        "href": "/pay-per-service#lead-capture",
+        "text": "Lead capture and CRM sync"
+      },
+      {
+        "href": "/pay-per-service#appointment-booking",
+        "text": "Appointment booking and reminders"
+      },
+      {
+        "href": "/pay-per-service#crm-pipeline",
+        "text": "CRM pipeline setup"
+      },
+      {
+        "href": "/pay-per-service#crm-integration",
+        "text": "CRM integration and data sync"
+      },
+      {
+        "href": "/pay-per-service#reporting-dashboards",
+        "text": "Reporting and performance dashboards"
+      },
+      {
+        "href": "/pay-per-service#websites-and-funnels",
+        "text": "Websites and funnels"
+      },
+      {
+        "href": "/pay-per-service#corporate-websites",
+        "text": "Corporate and business websites"
+      },
+      {
+        "href": "/pay-per-service#campaign-landing-pages",
+        "text": "Campaign landing pages"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN — Current language"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES"
+      },
+      {
+        "href": "/book",
+        "text": "Book a call"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN — Current language"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES"
+      },
+      {
+        "href": "/",
+        "text": "Home→"
+      },
+      {
+        "href": "/about",
+        "text": "About→"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System→"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
+        "href": "/industries/dental-practices",
+        "text": "Dental Practices"
+      },
+      {
+        "href": "/industries/aesthetic-medicine",
+        "text": "Aesthetic Medicine"
+      },
+      {
+        "href": "/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service→"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans→"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact→"
+      },
+      {
+        "href": "/book",
+        "text": "Book a demo"
+      },
+      {
+        "href": "#channel-plan",
+        "text": "Build my channel plan"
+      },
+      {
+        "href": "#management",
+        "text": "See what we manage"
+      },
+      {
+        "href": "/features",
+        "text": "See the wider DigitalFace system"
+      },
+      {
+        "href": "/contact#request-services",
+        "text": "Review my service request"
+      },
+      {
+        "href": "/contact",
+        "text": "Request a channel recommendation"
+      },
+      {
+        "href": "/book?from=paid-advertising",
+        "text": "Book a paid advertising call"
+      },
+      {
+        "href": "/contact",
+        "text": "Send a custom request"
+      },
+      {
+        "href": "/",
+        "text": "DigitalFace Marketing"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN — Current language"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES"
+      },
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/about",
+        "text": "About"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
+        "href": "/industries/dental-practices",
+        "text": "Dental Practices"
+      },
+      {
+        "href": "/industries/aesthetic-medicine",
+        "text": "Aesthetic Medicine"
+      },
+      {
+        "href": "/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "mailto:sales@digitalfacemarketing.com",
+        "text": "sales@digitalfacemarketing.com"
+      },
+      {
+        "href": "/privacy",
+        "text": "Privacy Policy"
+      },
+      {
+        "href": "/terms",
+        "text": "Terms of Service"
+      },
+      {
+        "href": "/sitemap.xml",
+        "text": "Sitemap"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "DigitalFace Marketing logo",
+        "loading": "eager",
+        "width": "44",
+        "height": "44",
+        "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem] brightness-0 invert opacity-60"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem] brightness-0 invert opacity-60"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "DigitalFace Marketing logo",
+        "loading": "eager",
+        "width": "40",
+        "height": "40",
+        "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
+      }
+    ],
+    "htmlBytes": 111556,
+    "incoming": [
+      "/",
+      "/about",
+      "/features",
+      "/es/industries/paid-advertising",
+      "/pay-per-service",
+      "/pricing",
+      "/contact",
+      "/book",
+      "/privacy",
+      "/terms"
+    ],
+    "outgoing": [
+      "/",
+      "/about",
+      "/features",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
+      "/pay-per-service",
+      "/pricing",
+      "/contact",
+      "/es/industries/paid-advertising",
+      "/book",
+      "/privacy",
+      "/terms"
+    ]
+  },
+  {
+    "id": "paid-advertising",
+    "path": "/industries/paid-advertising",
+    "layout": "corporate",
+    "indexable": true,
+    "type": "WebPage",
+    "service": true,
+    "topic": "Paid advertising management across Meta Ads, Google Ads and TikTok Ads",
+    "intent": "Evaluate paid media strategy and campaign management",
+    "locale": "es",
+    "url": "/es/industries/paid-advertising",
+    "title": "Agencia de Publicidad en Meta, Google y TikTok | DigitalFace",
+    "description": "DigitalFace planea y gestiona pauta en Meta, Google y TikTok para generar consultas calificadas, captar clientes y medir conversiones en EE. UU., Canadá y Latinoamérica.",
+    "h1": "Pauta digital pensada para lo que ocurre después del clic.",
+    "canonical": "https://digitalface.app/es/industries/paid-advertising",
+    "indexStatus": "index, follow",
+    "alternates": {
+      "en": "https://digitalface.app/industries/paid-advertising",
+      "es": "https://digitalface.app/es/industries/paid-advertising",
+      "x-default": "https://digitalface.app/industries/paid-advertising"
+    },
+    "schema": [
+      "WebPage",
+      "BreadcrumbList",
+      "Service",
+      "Organization",
+      "WebSite",
+      "FAQPage"
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "Pauta digital pensada para lo que ocurre después del clic."
+      },
+      {
+        "level": 2,
+        "text": "Los clics son insumos. La captación es el trabajo."
+      },
+      {
+        "level": 3,
+        "text": "La audiencia indicada"
+      },
+      {
+        "level": 3,
+        "text": "Una acción medible"
+      },
+      {
+        "level": 3,
+        "text": "Una oportunidad útil"
+      },
+      {
+        "level": 3,
+        "text": "Una mejor decisión siguiente"
+      },
+      {
+        "level": 2,
+        "text": "Usa cada canal para el trabajo que mejor sabe hacer."
+      },
+      {
+        "level": 3,
+        "text": "Lleva la oferta al feed que tu audiencia ya utiliza."
+      },
+      {
+        "level": 3,
+        "text": "No recomendamos las tres plataformas por defecto."
+      },
+      {
+        "level": 2,
+        "text": "Primero encaje. Después inversión."
+      },
+      {
+        "level": 3,
+        "text": "Cliente"
+      },
+      {
+        "level": 3,
+        "text": "Oferta"
+      },
+      {
+        "level": 3,
+        "text": "Intención"
+      },
+      {
+        "level": 3,
+        "text": "Mercado"
+      },
+      {
+        "level": 3,
+        "text": "Rentabilidad"
+      },
+      {
+        "level": 3,
+        "text": "Contenido"
+      },
+      {
+        "level": 2,
+        "text": "Una campaña es un sistema de aprendizaje, no una configuración única."
+      },
+      {
+        "level": 3,
+        "text": "Definir el objetivo de negocio"
+      },
+      {
+        "level": 3,
+        "text": "Preparar el camino de conversión"
+      },
+      {
+        "level": 3,
+        "text": "Construir la arquitectura"
+      },
+      {
+        "level": 3,
+        "text": "Activar, observar y probar"
+      },
+      {
+        "level": 3,
+        "text": "Optimizar hacia el negocio"
+      },
+      {
+        "level": 2,
+        "text": "Lee los datos de plataforma. Decide para el negocio."
+      },
+      {
+        "level": 3,
+        "text": "Optimizar hacia"
+      },
+      {
+        "level": 3,
+        "text": "Usar como señales de apoyo"
+      },
+      {
+        "level": 2,
+        "text": "El trabajo entre un presupuesto y un canal de captación útil."
+      },
+      {
+        "level": 3,
+        "text": "Estrategia"
+      },
+      {
+        "level": 3,
+        "text": "Construcción de campañas"
+      },
+      {
+        "level": 3,
+        "text": "Mensajes + creatividad"
+      },
+      {
+        "level": 3,
+        "text": "Tracking de conversiones"
+      },
+      {
+        "level": 3,
+        "text": "Análisis de conversión"
+      },
+      {
+        "level": 3,
+        "text": "Gestión continua"
+      },
+      {
+        "level": 3,
+        "text": "La pauta es el motor de captación; no es toda la compañía."
+      },
+      {
+        "level": 2,
+        "text": "Selecciona un canal o pídenos una recomendación."
+      },
+      {
+        "level": 3,
+        "text": "Meta Ads"
+      },
+      {
+        "level": 3,
+        "text": "Google Ads"
+      },
+      {
+        "level": 3,
+        "text": "TikTok Ads"
+      },
+      {
+        "level": 3,
+        "text": "La gestión se cotiza después de definir el plan de canales."
+      },
+      {
+        "level": 3,
+        "text": "La inversión en pauta se paga por separado."
+      },
+      {
+        "level": 2,
+        "text": "Las decisiones detrás del plan de medios."
+      },
+      {
+        "level": 2,
+        "text": "Empieza por el resultado de negocio. Nosotros volvemos desde ahí hasta el plan de medios."
+      }
+    ],
+    "headingJumps": [],
+    "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace MarketingColombia - Florida"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
+        "href": "/es/industries/dental-practices",
+        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
+      },
+      {
+        "href": "/es/industries/aesthetic-medicine",
+        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
+      },
+      {
+        "href": "/es/industries/med-spas",
+        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Pauta digital y publicidad en redes"
+      },
+      {
+        "href": "/es/industries/paid-advertising#meta-ads",
+        "text": "Anuncios en Meta"
+      },
+      {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
+        "href": "/es/industries/paid-advertising#google-ads",
+        "text": "Anuncios en Google"
+      },
+      {
+        "href": "/es/pay-per-service#seo-strategy",
+        "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#content-creation",
+        "text": "Creación de contenido"
+      },
+      {
+        "href": "/es/pay-per-service#automation-and-chatbots",
+        "text": "Automatización y chatbots"
+      },
+      {
+        "href": "/es/pay-per-service#chatbot-development",
+        "text": "Desarrollo de chatbots"
+      },
+      {
+        "href": "/es/pay-per-service#workflow-automation",
+        "text": "Automatización de procesos"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-automation",
+        "text": "Automatización de citas y calendario"
+      },
+      {
+        "href": "/es/pay-per-service#ecommerce-automation",
+        "text": "Automatización para e-commerce"
+      },
+      {
+        "href": "/es/pay-per-service#comment-auto-reply",
+        "text": "Respuestas a comentarios en Facebook e Instagram"
+      },
+      {
+        "href": "/es/pay-per-service#lead-ops-crm",
+        "text": "Gestión de contactos y CRM"
+      },
+      {
+        "href": "/es/pay-per-service#lead-capture",
+        "text": "Captura de contactos y sincronización con el CRM"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-booking",
+        "text": "Agendamiento de citas y recordatorios"
+      },
+      {
+        "href": "/es/pay-per-service#crm-pipeline",
+        "text": "Configuración del embudo en el CRM"
+      },
+      {
+        "href": "/es/pay-per-service#crm-integration",
+        "text": "Integración de CRM y sincronización de datos"
+      },
+      {
+        "href": "/es/pay-per-service#reporting-dashboards",
+        "text": "Reportes y tableros de rendimiento"
+      },
+      {
+        "href": "/es/pay-per-service#websites-and-funnels",
+        "text": "Sitios web y embudos"
+      },
+      {
+        "href": "/es/pay-per-service#corporate-websites",
+        "text": "Sitios web corporativos y de negocio"
+      },
+      {
+        "href": "/es/pay-per-service#campaign-landing-pages",
+        "text": "Landing pages para campañas"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES — Idioma actual"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una llamada"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES — Idioma actual"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio→"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros→"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas→"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
+        "href": "/es/industries/dental-practices",
+        "text": "Clínicas Odontológicas"
+      },
+      {
+        "href": "/es/industries/aesthetic-medicine",
+        "text": "Medicina Estética"
+      },
+      {
+        "href": "/es/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado→"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes→"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto→"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una demostración"
+      },
+      {
+        "href": "#channel-plan",
+        "text": "Definir mi plan de canales"
+      },
+      {
+        "href": "#management",
+        "text": "Ver qué gestionamos"
+      },
+      {
+        "href": "/es/features",
+        "text": "Ver el sistema completo de DigitalFace"
+      },
+      {
+        "href": "/es/contact#request-services",
+        "text": "Revisar mi solicitud de servicios"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Solicitar recomendación de canales"
+      },
+      {
+        "href": "/es/book?from=paid-advertising",
+        "text": "Agendar una llamada sobre pauta"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Enviar una solicitud a medida"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace Marketing"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "EN"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "ES — Idioma actual"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
+        "href": "/es/industries/dental-practices",
+        "text": "Clínicas Odontológicas"
+      },
+      {
+        "href": "/es/industries/aesthetic-medicine",
+        "text": "Medicina Estética"
+      },
+      {
+        "href": "/es/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "mailto:sales@digitalfacemarketing.com",
+        "text": "sales@digitalfacemarketing.com"
+      },
+      {
+        "href": "/es/privacy",
+        "text": "Política de privacidad"
+      },
+      {
+        "href": "/es/terms",
+        "text": "Términos del servicio"
+      },
+      {
+        "href": "/sitemap.xml",
+        "text": "Mapa del sitio"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "44",
+        "height": "44",
+        "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem] brightness-0 invert opacity-60"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "h-5 w-auto object-contain max-w-[4.5rem] brightness-0 invert opacity-60"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "w-auto object-contain h-5 max-w-[5.5rem]"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "438",
+        "height": "127",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "493",
+        "height": "154",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "eager",
+        "width": "465",
+        "height": "186",
+        "class": "h-7 w-auto max-w-[9rem] object-contain"
+      },
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "40",
+        "height": "40",
+        "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
+      }
+    ],
+    "htmlBytes": 113422,
+    "incoming": [
+      "/es",
+      "/es/about",
+      "/es/features",
+      "/industries/paid-advertising",
+      "/es/pay-per-service",
+      "/es/pricing",
+      "/es/contact",
+      "/es/book",
+      "/es/privacy",
+      "/es/terms"
+    ],
+    "outgoing": [
+      "/es",
+      "/es/about",
+      "/es/features",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
+      "/es/pay-per-service",
+      "/es/pricing",
+      "/es/contact",
+      "/industries/paid-advertising",
       "/es/book",
       "/es/privacy",
       "/es/terms"
@@ -3164,6 +4530,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -3180,19 +4550,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -3304,6 +4674,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -3356,6 +4730,10 @@
         "text": "Websites & Funnels"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Explore how DigitalFace manages paid advertising→"
+      },
+      {
         "href": "/contact#request-services",
         "text": "Review My Request"
       },
@@ -3398,6 +4776,10 @@
       {
         "href": "/contact",
         "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
       },
       {
         "href": "/industries/dental-practices",
@@ -3446,11 +4828,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 109839,
+    "htmlBytes": 111495,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/es/pay-per-service",
       "/pricing",
       "/contact",
@@ -3465,6 +4848,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -3633,6 +5017,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -3649,19 +5037,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -3773,6 +5161,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -3825,6 +5217,10 @@
         "text": "Sitios web y páginas de campaña"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Explora cómo DigitalFace gestiona la pauta digital→"
+      },
+      {
         "href": "/es/contact#request-services",
         "text": "Revisar mi solicitud"
       },
@@ -3867,6 +5263,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
       },
       {
         "href": "/es/industries/dental-practices",
@@ -3915,11 +5315,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111768,
+    "htmlBytes": 113448,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -3934,6 +5335,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -4188,6 +5590,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -4204,19 +5610,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -4328,6 +5734,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -4416,6 +5826,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -4462,11 +5876,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 120061,
+    "htmlBytes": 121419,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/es/pricing",
       "/contact",
@@ -4481,6 +5896,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -4735,6 +6151,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -4751,19 +6171,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -4873,6 +6293,10 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
       },
       {
         "href": "/es/industries/dental-practices",
@@ -4963,6 +6387,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -5009,11 +6437,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 121901,
+    "htmlBytes": 123277,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/pricing",
       "/es/contact",
@@ -5028,6 +6457,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -5114,6 +6544,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -5130,19 +6564,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -5254,6 +6688,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -5291,7 +6729,7 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed9Thu10Fri11Sat12Mon14Tue15Wed16Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalfacemarketing.com",
@@ -5332,6 +6770,10 @@
       {
         "href": "/contact",
         "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
       },
       {
         "href": "/industries/dental-practices",
@@ -5380,11 +6822,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 72293,
+    "htmlBytes": 73652,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/es/contact",
@@ -5399,6 +6842,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -5485,6 +6929,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -5501,19 +6949,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -5625,6 +7073,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -5662,7 +7114,7 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié9jue10vie11sáb12lun14mar15mié16Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalfacemarketing.com",
@@ -5703,6 +7155,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
       },
       {
         "href": "/es/industries/dental-practices",
@@ -5751,11 +7207,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 73165,
+    "htmlBytes": 74541,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/contact",
@@ -5770,6 +7227,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -5836,6 +7294,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -5852,19 +7314,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -5976,6 +7438,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -6040,6 +7506,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -6086,11 +7556,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 35983,
+    "htmlBytes": 37341,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -6105,6 +7576,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -6171,6 +7643,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -6187,19 +7663,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -6311,6 +7787,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -6375,6 +7855,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -6421,11 +7905,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36600,
+    "htmlBytes": 37976,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -6440,6 +7925,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -6558,6 +8044,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -6574,19 +8064,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -6698,6 +8188,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -6762,6 +8256,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -6808,11 +8306,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 41151,
+    "htmlBytes": 42509,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -6827,6 +8326,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -6945,6 +8445,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -6961,19 +8465,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -7085,6 +8589,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -7149,6 +8657,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -7195,11 +8707,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42533,
+    "htmlBytes": 43909,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -7214,6 +8727,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -7340,6 +8854,10 @@
         "text": "Sales System"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
       },
@@ -7356,19 +8874,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/pay-per-service#paid-media",
+        "href": "/industries/paid-advertising",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/pay-per-service#meta-ads",
+        "href": "/industries/paid-advertising#meta-ads",
         "text": "Meta ads"
       },
       {
-        "href": "/pay-per-service#tiktok-ads",
+        "href": "/industries/paid-advertising#tiktok-ads",
         "text": "TikTok ads"
       },
       {
-        "href": "/pay-per-service#google-ads",
+        "href": "/industries/paid-advertising#google-ads",
         "text": "Google ads"
       },
       {
@@ -7480,6 +8998,10 @@
         "text": "Sales System→"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -7544,6 +9066,10 @@
         "text": "Contact"
       },
       {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
         "href": "/industries/dental-practices",
         "text": "Dental Practices"
       },
@@ -7590,11 +9116,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 39841,
+    "htmlBytes": 41199,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -7609,6 +9136,7 @@
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -7735,6 +9263,10 @@
         "text": "Sistema de Ventas"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
       },
@@ -7751,19 +9283,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/pay-per-service#paid-media",
+        "href": "/es/industries/paid-advertising",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/pay-per-service#meta-ads",
+        "href": "/es/industries/paid-advertising#meta-ads",
         "text": "Anuncios en Meta"
       },
       {
-        "href": "/es/pay-per-service#tiktok-ads",
+        "href": "/es/industries/paid-advertising#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/pay-per-service#google-ads",
+        "href": "/es/industries/paid-advertising#google-ads",
         "text": "Anuncios en Google"
       },
       {
@@ -7875,6 +9407,10 @@
         "text": "Sistema de Ventas→"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -7939,6 +9475,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
         "href": "/es/industries/dental-practices",
         "text": "Clínicas Odontológicas"
       },
@@ -7985,11 +9525,12 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 40924,
+    "htmlBytes": 42300,
     "incoming": [
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -8004,6 +9545,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -8323,7 +9865,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed9Thu10Fri11Sat12Mon14Tue15Wed16Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -8448,11 +9990,12 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202676,
+    "htmlBytes": 202677,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -8785,7 +10328,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié9jue10vie11sáb12lun14mar15mié16Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -8915,6 +10458,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -9247,7 +10791,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed9Thu10Fri11Sat12Mon14Tue15Wed16Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -9372,11 +10916,12 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203281,
+    "htmlBytes": 203282,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -9709,7 +11254,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié9jue10vie11sáb12lun14mar15mié16Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -9839,6 +11384,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
@@ -10171,7 +11717,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed9Thu10Fri11Sat12Mon14Tue15Wed16Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -10296,11 +11842,12 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202559,
+    "htmlBytes": 202560,
     "incoming": [
       "/",
       "/about",
       "/features",
+      "/industries/paid-advertising",
       "/pay-per-service",
       "/pricing",
       "/contact",
@@ -10633,7 +12180,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié9jue10vie11sáb12lun14mar15mié16Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -10763,6 +12310,7 @@
       "/es",
       "/es/about",
       "/es/features",
+      "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",

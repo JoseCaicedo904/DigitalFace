@@ -193,14 +193,22 @@ export default function MainLayout() {
   );
 
   const industryNav = useMemo(
-    () =>
-      getIndustryNavLabels(locale).map(({ slug, label }) => ({
+    () => [
+      {
+        slug: "paid-advertising",
+        label: t.industries.paidAdvertising.label,
+        description: t.industries.paidAdvertising.description,
+        to: path("/industries/paid-advertising"),
+        icon: Megaphone,
+      },
+      ...getIndustryNavLabels(locale).map(({ slug, label }) => ({
         slug,
         label,
         description: t.industries[INDUSTRY_DESCRIPTION_KEYS[slug]].description,
         to: path(industryHref(slug)),
         icon: INDUSTRY_ICONS[slug],
       })),
+    ],
     [locale, t, path],
   );
 
@@ -211,19 +219,19 @@ export default function MainLayout() {
         {
           title: t.megaNav.paidMedia.title,
           icon: Megaphone,
-          to: path("/pay-per-service#paid-media"),
+          to: path("/industries/paid-advertising"),
           links: [
             {
               label: t.megaNav.paidMedia.links.meta,
-              to: path("/pay-per-service#meta-ads"),
+              to: path("/industries/paid-advertising#meta-ads"),
             },
             {
               label: t.megaNav.paidMedia.links.tiktok,
-              to: path("/pay-per-service#tiktok-ads"),
+              to: path("/industries/paid-advertising#tiktok-ads"),
             },
             {
               label: t.megaNav.paidMedia.links.google,
-              to: path("/pay-per-service#google-ads"),
+              to: path("/industries/paid-advertising#google-ads"),
             },
             {
               label: t.megaNav.paidMedia.links.seo,

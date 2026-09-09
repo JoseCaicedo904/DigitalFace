@@ -85,7 +85,7 @@ export default function Index() {
       <AdCampaignDemoSection
         id="system"
         content={t.adCampaignDemo}
-        ctaHref={bookHref}
+        ctaHref={path("/industries/paid-advertising")}
       />
       <ConversationDemoSection
         content={t.conversationDemo}

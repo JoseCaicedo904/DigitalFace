@@ -1,6 +1,10 @@
 import { MessageCircle, Phone } from "lucide-react";
 import { useLocale } from "@/i18n/LocaleProvider";
 import type { Locale } from "@/i18n/locale";
+import {
+  FLOATING_ACTION_BOTTOM,
+  FLOATING_ACTION_EDGE_INSET,
+} from "@/components/floatingActionLayout";
 
 export const WHATSAPP_NUMBER_DISPLAY = "+57 300 506 1366";
 export const WHATSAPP_NUMBER = "573005061366";
@@ -55,8 +59,8 @@ export function WhatsAppButton() {
       data-contact-channel="whatsapp"
       className="group fixed z-[9998] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_18px_45px_rgba(15,23,42,0.24)] ring-1 ring-white/40 transition duration-200 hover:-translate-y-0.5 hover:bg-[#1ebe5d] hover:shadow-[0_22px_50px_rgba(37,211,102,0.35)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/35"
       style={{
-        right: "max(1rem, env(safe-area-inset-right))",
-        bottom: "calc(env(safe-area-inset-bottom) + 6.25rem)",
+        right: FLOATING_ACTION_EDGE_INSET,
+        bottom: FLOATING_ACTION_BOTTOM.whatsapp,
       }}
     >
       <span className="sr-only">{label}</span>

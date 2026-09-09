@@ -204,8 +204,8 @@ const adCampaignDemoEn: AdCampaignDemoContent = {
   eyebrow: "01 · Attract",
   title: "Get in front of the right people.",
   description:
-    "Meta Ads and Google Ads put your offer in front of potential customers. A clear page or form gives them a way to respond.",
-  ctaLabel: "Talk About My Campaigns",
+    "Meta, Google and TikTok can each play a different role in finding demand and turning attention into a measurable response.",
+  ctaLabel: "Explore Paid Advertising",
   phoneCaption: "Sample ad and lead form",
   bridge: "Next: answer the inquiry.",
   stages: [
@@ -312,8 +312,8 @@ const adCampaignDemoEs: AdCampaignDemoContent = {
   eyebrow: "01 · Atraer",
   title: "Llega a las personas indicadas.",
   description:
-    "Meta Ads y Google Ads muestran tu oferta a posibles clientes. Una página o formulario claro les facilita el contacto.",
-  ctaLabel: "Hablar de mis campañas",
+    "Meta, Google y TikTok pueden cumplir funciones distintas para encontrar demanda y convertir la atención en una respuesta medible.",
+  ctaLabel: "Explorar la pauta digital",
   phoneCaption: "Anuncio y formulario de ejemplo",
   bridge: "Siguiente paso: responder al interesado.",
   stages: [

@@ -22,6 +22,7 @@ const pages: Record<string, ComponentType> = {
   home: lazy(() => import("./pages/Index")),
   about: lazy(() => import("./pages/About")),
   features: lazy(() => import("./pages/Features")),
+  "paid-advertising": lazy(() => import("./pages/PaidAdvertising")),
   "pay-per-service": lazy(() => import("./pages/PayPerService")),
   pricing: lazy(() => import("./pages/Pricing")),
   contact: lazy(() => import("./pages/Contact")),

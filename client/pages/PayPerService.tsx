@@ -9,6 +9,7 @@ import { payPerServiceOutcomeIcons } from "./payPerServiceIcons";
 import { serviceCatalog, getServiceName } from "@/data/serviceCatalog";
 import { ChevronDown } from "lucide-react";
 import { REQUEST_SERVICES_ANCHOR } from "@/components/request/anchor";
+import { Link } from "react-router-dom";
 
 /**
  * The catalog itself now lives in `@/data/serviceCatalog`: the anchor ids are
@@ -90,6 +91,20 @@ export default function PayPerService() {
                     <p className="text-sm text-ink-500 sm:text-base">
                       {groupCopy.description}
                     </p>
+                    {group.key === "paidMedia" ? (
+                      <Link
+                        to={path("/industries/paid-advertising")}
+                        className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-600 underline-offset-4 hover:underline"
+                      >
+                        {t.catalog.paidMediaLink}
+                        <span
+                          aria-hidden="true"
+                          className="transition-transform group-hover:translate-x-1"
+                        >
+                          →
+                        </span>
+                      </Link>
+                    ) : null}
                   </div>
                   <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {group.services.map((service) => {

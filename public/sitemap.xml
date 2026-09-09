@@ -37,6 +37,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/features" />
   </url>
   <url>
+    <loc>https://digitalface.app/industries/paid-advertising</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/paid-advertising" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/paid-advertising" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/paid-advertising" />
+  </url>
+  <url>
+    <loc>https://digitalface.app/es/industries/paid-advertising</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/industries/paid-advertising" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/industries/paid-advertising" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://digitalface.app/industries/paid-advertising" />
+  </url>
+  <url>
     <loc>https://digitalface.app/pay-per-service</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://digitalface.app/pay-per-service" />
     <xhtml:link rel="alternate" hreflang="es" href="https://digitalface.app/es/pay-per-service" />

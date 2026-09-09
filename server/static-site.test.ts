@@ -76,7 +76,9 @@ describe("Generated production HTTP documents", () => {
   it("serves XML and robots as files", async () => {
     const xml = await fetch(origin + "/sitemap.xml");
     expect(xml.headers.get("content-type")).toContain("xml");
-    expect((await xml.text()).match(/<loc>/g)).toHaveLength(24);
+    expect((await xml.text()).match(/<loc>/g)).toHaveLength(
+      site.routes.length * 2,
+    );
     expect(await (await fetch(origin + "/robots.txt")).text()).toContain(
       "Sitemap: https://digitalface.app/sitemap.xml",
     );

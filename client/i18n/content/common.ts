@@ -15,11 +15,16 @@ const en = {
     pricing: "Plans",
     contact: "Contact",
     menuToggle: "Open or close the navigation menu",
-    industriesIntro: "Choose your patient growth system",
+    industriesIntro: "Choose a growth focus",
     bookCall: "Book a call",
     bookDemo: "Book a demo",
   },
   industries: {
+    paidAdvertising: {
+      label: "Paid Advertising",
+      description:
+        "Meta, Google and TikTok acquisition managed around business outcomes",
+    },
     dental: {
       description: "Implants, veneers and high-value treatment inquiries",
     },
@@ -107,11 +112,16 @@ const es: typeof en = {
     pricing: "Planes",
     contact: "Contacto",
     menuToggle: "Abrir o cerrar el menú de navegación",
-    industriesIntro: "Elige tu sistema de captación de pacientes",
+    industriesIntro: "Elige un enfoque de crecimiento",
     bookCall: "Agenda una llamada",
     bookDemo: "Agenda una demostración",
   },
   industries: {
+    paidAdvertising: {
+      label: "Publicidad pagada",
+      description:
+        "Captación en Meta, Google y TikTok gestionada hacia resultados de negocio",
+    },
     dental: {
       description: "Implantes, carillas y tratamientos de alto valor",
     },

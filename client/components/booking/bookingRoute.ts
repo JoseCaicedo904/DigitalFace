@@ -15,6 +15,7 @@ export type BookingSource =
   | "homepage"
   | "about"
   | "contact"
+  | "paid-advertising"
   | "dental-practices"
   | "aesthetic-medicine"
   | "med-spas";

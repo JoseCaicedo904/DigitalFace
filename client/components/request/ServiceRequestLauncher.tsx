@@ -7,6 +7,10 @@ import { useLocale } from "@/i18n/LocaleProvider";
 import { stripLocaleFromPathname } from "@/i18n/locale";
 import { serviceRequestContent } from "@/i18n/content/serviceRequest";
 import { getServiceGroupName } from "@/data/serviceCatalog";
+import {
+  FLOATING_ACTION_BOTTOM,
+  FLOATING_ACTION_EDGE_INSET,
+} from "@/components/floatingActionLayout";
 import { useServiceRequest } from "./ServiceRequestProvider";
 import { REQUEST_SERVICES_ANCHOR } from "./anchor";
 
@@ -52,9 +56,12 @@ export function ServiceRequestLauncher() {
               ? copy.launcher.ariaOne
               : copy.launcher.aria.replace("{count}", String(count))
           }
+          style={{
+            right: FLOATING_ACTION_EDGE_INSET,
+            bottom: FLOATING_ACTION_BOTTOM.serviceRequest,
+          }}
           className={cn(
-            "fixed right-4 z-40 inline-flex items-center gap-2.5 rounded-2xl",
-            "bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:bottom-6 sm:right-6",
+            "fixed z-40 inline-flex max-w-[calc(100vw-2rem)] items-center gap-2.5 whitespace-nowrap rounded-2xl",
             "bg-gradient-to-r from-brand-600 via-brand-500 to-ocean-500 px-4 py-3 sm:px-5 sm:py-3.5",
             "text-[15px] font-semibold text-white shadow-brand-soft",
             "transition duration-300 hover:-translate-y-0.5 hover:shadow-xl active:translate-y-0",

@@ -54,6 +54,8 @@ describe("Generated HTML hydrates without changing the page contract", () => {
     "/pricing",
     "/es/contact",
     "/pay-per-service",
+    "/industries/paid-advertising",
+    "/es/industries/paid-advertising",
     "/industries/dental-practices",
     "/es/industries/med-spas",
     "/es/industries/aesthetic-medicine",

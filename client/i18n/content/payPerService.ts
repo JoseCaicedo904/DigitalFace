@@ -20,6 +20,7 @@ const en = {
     description:
       "Take one service or combine a few. Each engagement is scoped as a focused project with clear deliverables.",
     helpsWith: "Helps with",
+    paidMediaLink: "Explore how DigitalFace manages paid advertising",
   },
   groups: {
     paidMedia: {
@@ -293,6 +294,7 @@ const es: typeof en = {
     description:
       "Toma un servicio o combina varios. Cada trabajo se define como un proyecto puntual con entregables claros.",
     helpsWith: "Sirve para",
+    paidMediaLink: "Explora cómo DigitalFace gestiona la pauta digital",
   },
   groups: {
     paidMedia: {
