@@ -35,11 +35,11 @@ const en = {
   },
   network: {
     eyebrow: "How DigitalFace works",
-    title: "One point of contact. The right specialists.",
+    title: "One direction. Specialized depth.",
     description:
-      "We coordinate the strategy, technical work and communication. You know who is responsible.",
+      "Different challenges require different strengths. DigitalFace keeps strategy, communication and accountability at the center.",
     secondary:
-      "Specialist partners join when your project needs their expertise.",
+      "For our clients, that means one relationship, one standard of execution and the expertise needed to move with confidence.",
     coreName: "DigitalFace",
     coreLabel: "Your point of contact",
     disciplinesLabel: "Expertise for your project",
@@ -119,10 +119,11 @@ const es: typeof en = {
   },
   network: {
     eyebrow: "Cómo trabaja DigitalFace",
-    title: "Un solo contacto. Los especialistas adecuados.",
+    title: "Una sola dirección. Experiencia especializada.",
     description:
-      "Coordinamos la estrategia, el trabajo técnico y la comunicación. Sabes quién responde.",
-    secondary: "Sumamos aliados especialistas cuando tu proyecto lo necesita.",
+      "Cada desafío requiere fortalezas distintas. DigitalFace mantiene la estrategia, la comunicación y la responsabilidad en el centro.",
+    secondary:
+      "Para nuestros clientes, eso significa una sola relación, un mismo estándar de ejecución y la experiencia necesaria para avanzar con confianza.",
     coreName: "DigitalFace",
     coreLabel: "Tu punto de contacto",
     disciplinesLabel: "Especialidades para tu proyecto",
