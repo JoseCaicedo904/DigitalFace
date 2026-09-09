@@ -276,6 +276,13 @@ const PRINCIPLE_ACCENTS: readonly PrincipleAccent[] = [
   { icon: UserRoundCheck, tint: "#7dd3fc" },
 ];
 
+const ABOUT_PRINCIPLE_LOGOS = {
+  blueField: "/media/Logos-About/DIGITAL%20FACE%20MARCA%20AZUL.jpg",
+  whiteField: "/media/Logos-About/DIGITAL%20FACE%20MARCA%20BLANCO.jpg",
+  isotype: "/media/Logos-About/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+  wordmark: "/media/Logos-About/LOGO%20DIGITAL%20FACE%20MARCA%20AZUL.png",
+} as const;
+
 function PrincipleDiagram({
   index,
   accent,
@@ -291,10 +298,28 @@ function PrincipleDiagram({
     return (
       <div
         aria-hidden="true"
-        className="relative flex h-40 w-full max-w-[17rem] items-center justify-center"
+        className="relative flex h-44 w-full max-w-[19rem] items-center justify-center"
       >
+        <motion.div
+          className="absolute inset-1 overflow-hidden rounded-[2rem] border border-white/10 bg-brand-700 shadow-[0_24px_70px_-28px_rgba(14,165,233,0.5)]"
+          animate={
+            reduceMotion
+              ? undefined
+              : { y: [-3, 3, -3], rotate: [-1.5, 0, -1.5] }
+          }
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img
+            src={ABOUT_PRINCIPLE_LOGOS.blueField}
+            alt=""
+            className="h-full w-full scale-[1.35] object-cover object-center opacity-75"
+            loading="lazy"
+            decoding="async"
+          />
+          <span className="absolute inset-0 bg-gradient-to-br from-[#06101f]/20 via-[#071324]/55 to-[#0c0d1b]/90" />
+        </motion.div>
         <motion.span
-          className="absolute h-36 w-36 rounded-full border border-dashed border-violet-300/20"
+          className="absolute h-36 w-36 rounded-full border border-dashed border-violet-200/25"
           animate={reduceMotion ? undefined : { rotate: 360 }}
           transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
         />
@@ -346,8 +371,24 @@ function PrincipleDiagram({
   return (
     <div
       aria-hidden="true"
-      className="relative flex h-40 w-full max-w-[17rem] items-center justify-center"
+      className="relative flex h-44 w-full max-w-[19rem] items-center justify-center"
     >
+      <motion.div
+        className="absolute inset-1 overflow-hidden rounded-[2rem] border border-sky-100/10 bg-[#e8eef6] shadow-[0_24px_70px_-30px_rgba(14,165,233,0.42)]"
+        animate={
+          reduceMotion ? undefined : { y: [3, -3, 3], rotate: [1.5, 0, 1.5] }
+        }
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <img
+          src={ABOUT_PRINCIPLE_LOGOS.whiteField}
+          alt=""
+          className="h-full w-full scale-[1.42] object-cover object-center opacity-75"
+          loading="lazy"
+          decoding="async"
+        />
+        <span className="absolute inset-0 bg-gradient-to-br from-white/10 via-[#0a3561]/25 to-[#07101f]/75" />
+      </motion.div>
       <span className="absolute left-[10%] right-[10%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-sky-300/5 via-sky-300/50 to-sky-300/5" />
       <motion.span
         className="absolute left-[10%] top-1/2 h-px w-[80%] origin-left -translate-y-1/2 bg-gradient-to-r from-transparent via-sky-200 to-transparent"
@@ -407,11 +448,25 @@ function PrinciplesFlow({
   const reduceMotion = Boolean(prefersReducedMotion);
 
   return (
-    <div className="relative isolate overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] px-5 py-10 shadow-[0_40px_100px_-58px_rgba(0,0,0,0.95)] sm:px-8 sm:py-14 lg:rounded-[2.5rem] lg:px-10 lg:py-16">
+    <div className="group/brand relative isolate overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] px-5 py-10 shadow-[0_40px_100px_-58px_rgba(0,0,0,0.95)] sm:px-8 sm:py-14 lg:rounded-[2.5rem] lg:px-10 lg:py-16">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(139,92,246,0.08),transparent_38%,transparent_62%,rgba(14,165,233,0.07))]"
       />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-6 left-1/2 w-[86%] max-w-[38rem] -translate-x-1/2"
+      >
+        <motion.img
+          src={ABOUT_PRINCIPLE_LOGOS.wordmark}
+          alt=""
+          className="w-full brightness-0 invert opacity-[0.035] transition-opacity duration-700 group-hover/brand:opacity-[0.065] motion-reduce:transition-none"
+          animate={reduceMotion ? undefined : { x: [-7, 7, -7] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
       <div
         aria-hidden="true"
         className="absolute bottom-12 left-[1.6rem] top-12 w-px bg-gradient-to-b from-violet-300/15 via-white/20 to-sky-300/15 sm:left-[2.15rem] lg:left-1/2"
@@ -431,6 +486,28 @@ function PrinciplesFlow({
           ease: "easeInOut",
         }}
       />
+      <span
+        aria-hidden="true"
+        className="absolute left-[0.6rem] top-1/2 z-10 -translate-y-1/2 sm:left-[1.15rem] lg:left-1/2 lg:-translate-x-1/2"
+      >
+        <motion.span
+          className="flex h-14 w-8 items-center justify-center rounded-lg border border-white/15 bg-[#0a0b14] p-0.5 shadow-[0_0_0_7px_rgba(10,11,20,0.92),0_0_26px_rgba(14,165,233,0.2)]"
+          animate={
+            reduceMotion
+              ? undefined
+              : { scale: [1, 1.04, 1], opacity: [0.78, 1, 0.78] }
+          }
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <img
+            src={ABOUT_PRINCIPLE_LOGOS.isotype}
+            alt=""
+            className="h-12 w-auto rounded-md object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </motion.span>
+      </span>
 
       <ol className="relative space-y-16 sm:space-y-20 lg:space-y-24">
         {items.slice(0, 2).map((item, index) => {
