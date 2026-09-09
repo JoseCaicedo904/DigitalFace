@@ -32,7 +32,7 @@ afterEach(async () => {
   if (root) await act(async () => root.unmount());
   vi.unstubAllGlobals();
 });
-async function prepare(withRequest = false) {
+async function prepare(withRequest = false, initialEntry = "/contact") {
   if (withRequest)
     window.localStorage.setItem(
       REQUEST_STORAGE_KEY,
@@ -41,7 +41,7 @@ async function prepare(withRequest = false) {
   await act(async () => {
     root = createRoot(document.getElementById("test-root")!);
     root.render(
-      <MemoryRouter initialEntries={["/contact"]}>
+      <MemoryRouter initialEntries={[initialEntry]}>
         <LocaleProvider>
           <ServiceRequestProvider>
             <LeadForm pageSource="contact" />
@@ -54,7 +54,7 @@ async function prepare(withRequest = false) {
     name: "Synthetic Tester",
     business: "Synthetic Practice",
     email: "synthetic@example.invalid",
-    phone: "+12025550123",
+    phone: "202 555 0123",
     country: "US",
     goal: "more_leads",
   })) {
@@ -75,12 +75,14 @@ async function submit() {
 }
 describe("Lead conversion confirmation", () => {
   it("emits one lead only after a confirmed successful request; never includes form values", async () => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({ ok: true, json: async () => ({ ok: true }) }),
-    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue({ ok: true, json: async () => ({ ok: true }) });
+    vi.stubGlobal("fetch", fetchMock);
     await prepare(true);
     await submit();
+    const request = fetchMock.mock.calls[0]?.[1] as RequestInit;
+    expect(JSON.parse(String(request.body)).phone).toBe("+12025550123");
     expect(trackEvent).toHaveBeenCalledExactlyOnceWith("generate_lead", {
       page_source: "contact",
       lead_type: "service_request",
@@ -110,4 +112,26 @@ describe("Lead conversion confirmation", () => {
     await submit();
     expect(trackEvent).not.toHaveBeenCalled();
   });
+});
+
+describe("Phone country selector", () => {
+  it.each([
+    {
+      route: "/contact",
+      countryName: "United States",
+      dialCode: "+1",
+    },
+    { route: "/es/contact", countryName: "Colombia", dialCode: "+57" },
+  ])(
+    "uses the URL locale default on $route",
+    async ({ route, countryName, dialCode }) => {
+      await prepare(false, route);
+      const trigger = document.querySelector<HTMLElement>(
+        "[data-phone-country-trigger]",
+      )!;
+
+      expect(trigger.getAttribute("aria-label")).toContain(countryName);
+      expect(trigger.textContent).toContain(dialCode);
+    },
+  );
 });

@@ -1,8 +1,8 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import { handleDemo } from "./routes/demo";
-import { handleLeadIntake } from "./routes/lead";
+import { handleDemo } from "./routes/demo.js";
+import { handleLeadIntake } from "./routes/lead.js";
 
 export function createServer() {
   const app = express();

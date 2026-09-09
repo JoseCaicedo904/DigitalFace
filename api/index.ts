@@ -1,10 +1,6 @@
-import serverless from "serverless-http";
+import { createServer } from "../server/index.js";
 
-import { createServer } from "../server";
-
-const handler = serverless(createServer());
-
-export default handler;
+export default createServer();
 
 export const config = {
   api: {

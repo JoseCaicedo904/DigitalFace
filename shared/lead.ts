@@ -1,3 +1,5 @@
+import parsePhoneNumber, { type CountryCode } from "libphonenumber-js";
+
 /**
  * Lead intake contract shared by the browser form and the Express proxy.
  *
@@ -70,6 +72,7 @@ export interface LeadSubmission extends LeadAttribution {
   name: string;
   business: string;
   email: string;
+  /** Validated and normalized international number in E.164 format. */
   phone: string;
   /** ISO 3166-1 alpha-2, plus the display name so n8n stays readable. */
   country: string;
@@ -96,16 +99,44 @@ export interface LeadResponse {
   fieldErrors?: Record<string, string>;
 }
 
+const NATIONAL_PHONE_CHARACTERS = /^[\d\s().-]+$/;
+
 /**
- * Permissive on purpose. Real international numbers arrive with +, spaces,
- * dots, dashes and parentheses, and rejecting them costs real leads. We only
- * insist on enough digits to be a phone number at all.
+ * Combines a local/national number with the country selected in the separate
+ * prefix control. International prefixes are rejected here so a visitor
+ * cannot accidentally submit the country code twice.
  */
-export function isPlausiblePhone(value: string): boolean {
-  const digits = value.replace(/\D/g, "");
-  return (
-    digits.length >= 7 && digits.length <= 18 && /^[\d\s+().-]+$/.test(value)
-  );
+export function normalizeNationalPhone(
+  value: string,
+  country: CountryCode,
+): string | null {
+  const trimmed = value.trim();
+  if (
+    !trimmed ||
+    /^(?:\+|00)/.test(trimmed) ||
+    !NATIONAL_PHONE_CHARACTERS.test(trimmed)
+  ) {
+    return null;
+  }
+
+  const phone = parsePhoneNumber(trimmed, {
+    defaultCountry: country,
+    extract: false,
+  });
+
+  return phone?.isValid() ? phone.number : null;
+}
+
+/**
+ * Validates a complete international number and returns its canonical E.164
+ * representation. The server uses this before forwarding any lead upstream.
+ */
+export function normalizeInternationalPhone(value: string): string | null {
+  const trimmed = value.trim();
+  if (!trimmed.startsWith("+")) return null;
+
+  const phone = parsePhoneNumber(trimmed, { extract: false });
+  return phone?.isValid() ? phone.number : null;
 }
 
 /** Deliberately simple: the shape check that catches typos, not RFC 5322. */

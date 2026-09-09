@@ -1,4 +1,9 @@
 import type { Locale } from "@/i18n/locale";
+import {
+  getCountries,
+  getCountryCallingCode,
+  type CountryCode,
+} from "libphonenumber-js";
 
 /**
  * ISO 3166-1 alpha-2 codes. Only the codes are stored: `Intl.DisplayNames`
@@ -221,6 +226,12 @@ const PRIORITY_CODES = ["US", "CO", "MX", "ES", "AR", "CL", "PE", "EC"];
 
 export type CountryOption = { code: string; name: string };
 
+export type PhoneCountryOption = {
+  code: CountryCode;
+  name: string;
+  dialCode: string;
+};
+
 export function isSupportedCountry(code: string): boolean {
   return (COUNTRY_CODES as readonly string[]).includes(code);
 }
@@ -259,6 +270,50 @@ export function getCountryOptions(locale: Locale): {
     priority: PRIORITY_CODES.map(
       (code) => named.find((option) => option.code === code)!,
     ).filter(Boolean),
+    rest: named
+      .filter((option) => !PRIORITY_CODES.includes(option.code))
+      .sort(byName),
+  };
+}
+
+/**
+ * Phone-specific country choices come from libphonenumber's maintained
+ * metadata so every displayed prefix is the same prefix used for validation.
+ */
+export function getPhoneCountryOptions(locale: Locale): {
+  priority: PhoneCountryOption[];
+  rest: PhoneCountryOption[];
+} {
+  let display: Intl.DisplayNames | null = null;
+  try {
+    display = new Intl.DisplayNames([locale], { type: "region" });
+  } catch {
+    display = null;
+  }
+
+  const named = getCountries().map<PhoneCountryOption>((code) => {
+    let name = code as string;
+    try {
+      name = display?.of(code) ?? code;
+    } catch {
+      name = code;
+    }
+
+    return {
+      code,
+      name,
+      dialCode: getCountryCallingCode(code),
+    };
+  });
+
+  const collator = new Intl.Collator(locale, { sensitivity: "base" });
+  const byName = (a: PhoneCountryOption, b: PhoneCountryOption) =>
+    collator.compare(a.name, b.name);
+
+  return {
+    priority: PRIORITY_CODES.map((code) =>
+      named.find((option) => option.code === code),
+    ).filter((option): option is PhoneCountryOption => Boolean(option)),
     rest: named
       .filter((option) => !PRIORITY_CODES.includes(option.code))
       .sort(byName),

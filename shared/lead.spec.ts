@@ -2,27 +2,41 @@ import { describe, expect, it } from "vitest";
 import {
   LEAD_GOALS,
   isPlausibleEmail,
-  isPlausiblePhone,
+  normalizeInternationalPhone,
+  normalizeNationalPhone,
   normalizeWebsite,
 } from "./lead";
 
-describe("isPlausiblePhone", () => {
-  it("accepts the international formats real prospects type", () => {
-    for (const value of [
-      "+57 320 123 4567",
-      "+1 (305) 555-0142",
-      "3201234567",
-      "+34 600 00 00 00",
-      "+52 55 1234 5678",
-      "305.555.0142",
-    ]) {
-      expect(isPlausiblePhone(value), value).toBe(true);
-    }
+describe("normalizeNationalPhone", () => {
+  it("combines selected country metadata with a valid national number", () => {
+    expect(normalizeNationalPhone("300 506 1366", "CO")).toBe("+573005061366");
+    expect(normalizeNationalPhone("305 555 1234", "US")).toBe("+13055551234");
+    expect(normalizeNationalPhone("600 00 00 00", "ES")).toBe("+34600000000");
   });
 
-  it("rejects values that cannot be a phone number", () => {
-    for (const value of ["", "12345", "call me", "+57 abc 123 4567"]) {
-      expect(isPlausiblePhone(value), value).toBe(false);
+  it("rejects malformed, incomplete and already-prefixed input", () => {
+    for (const value of [
+      "",
+      "12345",
+      "call me",
+      "+57 300 506 1366",
+      "0034 600 00 00 00",
+    ]) {
+      expect(normalizeNationalPhone(value, "CO"), value).toBeNull();
+    }
+  });
+});
+
+describe("normalizeInternationalPhone", () => {
+  it("canonicalizes a valid international number to E.164", () => {
+    expect(normalizeInternationalPhone("+1 (305) 555-1234")).toBe(
+      "+13055551234",
+    );
+  });
+
+  it("requires a valid international number", () => {
+    for (const value of ["3055551234", "+1 305", "+57 abc 3005061366"]) {
+      expect(normalizeInternationalPhone(value), value).toBeNull();
     }
   });
 });

@@ -1,6 +1,6 @@
 import { trackEvent } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
-import { getCountryOptions } from "@/data/countries";
+import { getCountryOptions, getPhoneCountryOptions } from "@/data/countries";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { leadFormContent } from "@/i18n/content/leadForm";
 import { readAttribution } from "@/lib/attribution";
@@ -8,16 +8,28 @@ import { RequestedServicesField } from "@/components/request/RequestedServicesFi
 import { useServiceRequest } from "@/components/request/ServiceRequestProvider";
 import { cn } from "@/lib/utils";
 import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   LEAD_FORM_SOURCE,
   LEAD_GOALS,
   isPlausibleEmail,
-  isPlausiblePhone,
+  normalizeNationalPhone,
   normalizeWebsite,
   type LeadGoal,
   type LeadPageSource,
   type LeadResponse,
   type LeadSubmission,
 } from "@shared/lead";
+import type { CountryCode } from "libphonenumber-js";
+import "country-flag-icons/3x2/flags.css";
 import {
   AlertCircle,
   CheckCircle2,
@@ -35,6 +47,15 @@ import { useId, useMemo, useState, type FormEvent } from "react";
  */
 
 const LEAD_ENDPOINT = "/api/lead";
+
+function CountryFlag({ code }: { code: CountryCode }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`flag:${code} shrink-0 rounded-[2px] shadow-sm ring-1 ring-black/10`}
+    />
+  );
+}
 
 type FieldKey =
   | "name"
@@ -99,8 +120,25 @@ export function LeadForm({
   const { services: selectedServices, clear: clearRequest } =
     useServiceRequest();
   const countries = useMemo(() => getCountryOptions(locale), [locale]);
+  const phoneCountries = useMemo(
+    () => getPhoneCountryOptions(locale),
+    [locale],
+  );
+  const phoneCountryOptions = useMemo(
+    () => [...phoneCountries.priority, ...phoneCountries.rest],
+    [phoneCountries],
+  );
 
   const [values, setValues] = useState<Values>(EMPTY_VALUES);
+  const [phoneCountry, setPhoneCountry] = useState<CountryCode>(() =>
+    locale === "es" ? "CO" : "US",
+  );
+  const selectedPhoneCountry = useMemo(
+    () =>
+      phoneCountryOptions.find((option) => option.code === phoneCountry) ??
+      null,
+    [phoneCountry, phoneCountryOptions],
+  );
   const [errors, setErrors] = useState<Partial<Record<FieldKey, string>>>({});
   const [status, setStatus] = useState<Status>("idle");
   const [submittedName, setSubmittedName] = useState("");
@@ -169,20 +207,24 @@ export function LeadForm({
     }
   }
 
-  function validate(): Partial<Record<FieldKey, string>> {
+  function validate(): {
+    fields: Partial<Record<FieldKey, string>>;
+    normalizedPhone: string | null;
+  } {
     const next: Partial<Record<FieldKey, string>> = {};
+    const normalizedPhone = normalizeNationalPhone(values.phone, phoneCountry);
 
     if (!values.name.trim()) next.name = t.errors.name;
     if (!values.business.trim()) next.business = t.errors.business;
     if (!isPlausibleEmail(values.email.trim())) next.email = t.errors.email;
-    if (!isPlausiblePhone(values.phone.trim())) next.phone = t.errors.phone;
+    if (!normalizedPhone) next.phone = t.errors.phone;
     if (!values.country) next.country = t.errors.country;
     if (!values.goal) next.goal = t.errors.goal;
     if (values.website.trim() && normalizeWebsite(values.website) === null) {
       next.website = t.errors.website;
     }
 
-    return next;
+    return { fields: next, normalizedPhone };
   }
 
   /* ------------------------------------------------------------ submission */
@@ -191,7 +233,7 @@ export function LeadForm({
     event.preventDefault();
     if (status === "submitting") return; // guards double-click duplicates
 
-    const found = validate();
+    const { fields: found, normalizedPhone } = validate();
     setErrors(found);
     if (Object.keys(found).length > 0) {
       setStatus("idle");
@@ -200,6 +242,10 @@ export function LeadForm({
         ?.scrollIntoView({ block: "center", behavior: "smooth" });
       return;
     }
+
+    // `phone` is validated above from the national input plus the selected
+    // country. This guard keeps the payload type honest if validation changes.
+    if (!normalizedPhone) return;
 
     // Silently accept and discard: telling a bot it failed just teaches it.
     if (values.companyFax.trim()) {
@@ -220,7 +266,7 @@ export function LeadForm({
       name: values.name.trim(),
       business: values.business.trim(),
       email: values.email.trim(),
-      phone: values.phone.trim(),
+      phone: normalizedPhone,
       country: values.country,
       countryName,
       website: normalizeWebsite(values.website) || "",
@@ -465,23 +511,110 @@ export function LeadForm({
           </div>
 
           <div id={id("phone-field")} className="space-y-2.5">
-            <label htmlFor={id("phone")} className={labelClass}>
+            <label
+              id={id("phone-label")}
+              htmlFor={id("phone")}
+              className={labelClass}
+            >
               {t.phoneLabel}
             </label>
-            <input
-              id={id("phone")}
-              name="phone"
-              type="tel"
-              inputMode="tel"
-              autoComplete="tel"
-              required
-              aria-invalid={Boolean(errors.phone)}
-              aria-describedby={describedBy("phone")}
-              placeholder={t.phonePlaceholder}
-              className={control("phone")}
-              value={values.phone}
-              onChange={(event) => setValue("phone", event.target.value)}
-            />
+            <div
+              role="group"
+              aria-labelledby={id("phone-label")}
+              className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-2.5"
+            >
+              <Select
+                name="phoneCountry"
+                value={phoneCountry}
+                onValueChange={(value) => {
+                  setPhoneCountry(value as CountryCode);
+                  if (errors.phone) {
+                    setErrors((previous) => {
+                      const next = { ...previous };
+                      delete next.phone;
+                      return next;
+                    });
+                  }
+                }}
+              >
+                <SelectTrigger
+                  id={id("phone-country")}
+                  data-phone-country-trigger
+                  aria-label={`${t.phoneCountryLabel}: ${
+                    selectedPhoneCountry?.name ?? phoneCountry
+                  }${
+                    selectedPhoneCountry
+                      ? ` +${selectedPhoneCountry.dialCode}`
+                      : ""
+                  }`}
+                  aria-invalid={Boolean(errors.phone)}
+                  aria-describedby={describedBy("phone")}
+                  className={cn(
+                    controlClass,
+                    "h-auto min-w-0 cursor-pointer px-3 py-3.5",
+                    errors.phone && invalidClass,
+                  )}
+                >
+                  <SelectValue>
+                    {selectedPhoneCountry ? (
+                      <span className="flex min-w-0 items-center gap-2 font-semibold">
+                        <CountryFlag code={selectedPhoneCountry.code} />
+                        <span>+{selectedPhoneCountry.dialCode}</span>
+                      </span>
+                    ) : null}
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent
+                  position="item-aligned"
+                  className="max-h-80 min-w-[18rem] max-w-[calc(100vw-2rem)]"
+                >
+                  <SelectGroup>
+                    <SelectLabel>{t.countryPriorityGroup}</SelectLabel>
+                    {phoneCountries.priority.map((option) => (
+                      <SelectItem key={option.code} value={option.code}>
+                        <span className="flex items-center gap-2.5">
+                          <CountryFlag code={option.code} />
+                          <span className="min-w-0 flex-1">{option.name}</span>
+                          <span className="tabular-nums text-muted-foreground">
+                            +{option.dialCode}
+                          </span>
+                        </span>
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                  <SelectSeparator />
+                  <SelectGroup>
+                    <SelectLabel>{t.countryAllGroup}</SelectLabel>
+                    {phoneCountries.rest.map((option) => (
+                      <SelectItem key={option.code} value={option.code}>
+                        <span className="flex items-center gap-2.5">
+                          <CountryFlag code={option.code} />
+                          <span className="min-w-0 flex-1">{option.name}</span>
+                          <span className="tabular-nums text-muted-foreground">
+                            +{option.dialCode}
+                          </span>
+                        </span>
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+
+              <input
+                id={id("phone")}
+                name="phone"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel-national"
+                required
+                aria-invalid={Boolean(errors.phone)}
+                aria-describedby={describedBy("phone")}
+                placeholder={t.phonePlaceholder}
+                className={cn(control("phone"), "px-3 sm:px-4")}
+                value={values.phone}
+                onChange={(event) => setValue("phone", event.target.value)}
+              />
+            </div>
             {errors.phone ? (
               <p id={id("phone-error")} className={errorTextClass}>
                 {errors.phone}

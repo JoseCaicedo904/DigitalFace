@@ -5,9 +5,9 @@ import {
   LEAD_PAGE_SOURCES,
   MAX_SELECTED_SERVICES,
   SELECTED_SERVICE_ID_PATTERN,
-  isPlausiblePhone,
+  normalizeInternationalPhone,
   type LeadResponse,
-} from "../../shared/lead";
+} from "../../shared/lead.js";
 
 /**
  * Server-side proxy between the website form and the DigitalFace lead intake.
@@ -32,7 +32,16 @@ const leadSchema = z.object({
     .trim()
     .min(5)
     .max(40)
-    .refine(isPlausiblePhone, "invalid_phone"),
+    .transform((value, context) => {
+      const normalized = normalizeInternationalPhone(value);
+      if (normalized) return normalized;
+
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "invalid_phone",
+      });
+      return z.NEVER;
+    }),
   country: z.string().trim().length(2),
   countryName: optionalText(120),
   website: optionalText(400),
