@@ -7,13 +7,11 @@ import type { Locale } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  Briefcase,
   Building2,
   Clock,
   Globe,
   MapPin,
   Target,
-  TrendingUp,
   UserRoundCheck,
   Users,
   type LucideIcon,
@@ -265,101 +263,240 @@ function SpecialistNetwork({
 }
 
 /* --------------------------------------------------------------------------
- * Principles — the "how we think" band.
- *
- * A bento composition rather than a 2×2 of identical boxes: the tiles are two
- * heights, the right column drops half a tile, and every surface is near-solid
- * with a hairline edge. Size and position carry the rhythm, so the colour can
- * stay in the icon chip and one soft corner wash — which is what keeps a dark
- * band premium instead of noisy.
- *
- * The copy is untouched, which is why the icons are matched to the items here
- * by position instead of being added to the content file.
+ * Principles — one connected operating flow rather than separate cards.
  * -------------------------------------------------------------------------- */
 
 type PrincipleAccent = {
   icon: LucideIcon;
-  /** Icon colour, and the tint of the tile's corner wash. */
   tint: string;
-  /** `r,g,b` triplet for the wash and the chip's glow. */
-  glow: string;
 };
 
-/** Left column reads violet, right column ocean — the site's two accents. */
 const PRINCIPLE_ACCENTS: readonly PrincipleAccent[] = [
-  { icon: Briefcase, tint: "#c4b5fd", glow: "139,92,246" },
-  { icon: UserRoundCheck, tint: "#7dd3fc", glow: "14,165,233" },
-  { icon: Target, tint: "#c4b5fd", glow: "139,92,246" },
-  { icon: TrendingUp, tint: "#7dd3fc", glow: "14,165,233" },
+  { icon: Target, tint: "#c4b5fd" },
+  { icon: UserRoundCheck, tint: "#7dd3fc" },
 ];
 
-/**
- * One tile. Icon, title and body are one group at the top of the surface on a
- * fixed rhythm, so the three read as belonging together and a two-line title
- * shifts nothing above it. Height comes from the row rather than a minimum on
- * the tile: the taller card in a row sets it, and its neighbour matches, which
- * keeps the pair aligned without opening a gap under the icon.
- */
-function PrincipleTile({
-  title,
-  body,
+function PrincipleDiagram({
+  index,
   accent,
+  reduceMotion,
 }: {
-  title: string;
-  body: string;
+  index: number;
   accent: PrincipleAccent;
+  reduceMotion: boolean;
 }) {
   const Icon = accent.icon;
 
-  return (
-    <article
-      className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.08] bg-[#12131f] p-8 sm:p-9 lg:p-10",
-        /* 200ms and a 2% scale: enough to acknowledge the pointer, not enough
-           to read as an animation. */
-        "transition duration-200 ease-out hover:border-white/[0.16] hover:shadow-[0_34px_70px_-30px_rgba(0,0,0,0.95)]",
-        "hover:-translate-y-0.5 hover:scale-[1.02] motion-reduce:transform-none motion-reduce:transition-none",
-      )}
-    >
-      {/* The tile's only colour, and it stays in the corner. */}
-      <span
+  if (index === 0) {
+    return (
+      <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-70 transition-opacity duration-200 group-hover:opacity-100 motion-reduce:transition-none"
-        style={{
-          background: `radial-gradient(115% 80% at 100% 0%, rgba(${accent.glow},0.16), transparent 58%)`,
+        className="relative flex h-40 w-full max-w-[17rem] items-center justify-center"
+      >
+        <motion.span
+          className="absolute h-36 w-36 rounded-full border border-dashed border-violet-300/20"
+          animate={reduceMotion ? undefined : { rotate: 360 }}
+          transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
+        />
+        <span className="absolute h-28 w-28 rounded-full border border-white/10" />
+        <span className="absolute h-20 w-20 rounded-full border border-violet-300/25 bg-violet-400/[0.04]" />
+        <motion.span
+          className="absolute h-12 w-12 rounded-full bg-violet-400/15 blur-xl"
+          animate={reduceMotion ? undefined : { opacity: [0.35, 0.8, 0.35] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-violet-200/20 bg-[#171627] shadow-[0_0_36px_rgba(139,92,246,0.2)]">
+          <Icon
+            className="h-7 w-7"
+            strokeWidth={1.5}
+            style={{ color: accent.tint }}
+          />
+        </span>
+        {[18, 142, 226].map((degrees, pointIndex) => {
+          const radians = (degrees * Math.PI) / 180;
+          const x = 50 + 43 * Math.cos(radians);
+          const y = 50 + 43 * Math.sin(radians);
+
+          return (
+            <motion.span
+              key={degrees}
+              className="absolute h-2 w-2 rounded-full bg-violet-200 shadow-[0_0_14px_rgba(196,181,253,0.7)]"
+              style={{ left: `${x}%`, top: `${y}%` }}
+              animate={
+                reduceMotion
+                  ? undefined
+                  : {
+                      opacity: [0.35, 1, 0.35],
+                      scale: [0.8, 1.15, 0.8],
+                    }
+              }
+              transition={{
+                duration: 3.6,
+                delay: pointIndex * 0.6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      aria-hidden="true"
+      className="relative flex h-40 w-full max-w-[17rem] items-center justify-center"
+    >
+      <span className="absolute left-[10%] right-[10%] top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-sky-300/5 via-sky-300/50 to-sky-300/5" />
+      <motion.span
+        className="absolute left-[10%] top-1/2 h-px w-[80%] origin-left -translate-y-1/2 bg-gradient-to-r from-transparent via-sky-200 to-transparent"
+        initial={reduceMotion ? false : { scaleX: 0, opacity: 0 }}
+        whileInView={reduceMotion ? undefined : { scaleX: 1, opacity: 0.7 }}
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+      />
+      {[10, 50, 90].map((position, pointIndex) => (
+        <span
+          key={position}
+          className={cn(
+            "absolute top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl border bg-[#111723]",
+            pointIndex === 2
+              ? "h-16 w-16 border-sky-200/25 shadow-[0_0_36px_rgba(14,165,233,0.18)]"
+              : "h-9 w-9 border-white/10",
+          )}
+          style={{ left: `${position}%` }}
+        >
+          {pointIndex === 2 ? (
+            <Icon
+              className="h-7 w-7"
+              strokeWidth={1.5}
+              style={{ color: accent.tint }}
+            />
+          ) : (
+            <motion.span
+              className="h-2 w-2 rounded-full bg-sky-200"
+              animate={
+                reduceMotion
+                  ? undefined
+                  : {
+                      opacity: [0.35, 1, 0.35],
+                      scale: [0.85, 1.2, 0.85],
+                    }
+              }
+              transition={{
+                duration: 3.2,
+                delay: pointIndex * 0.7,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function PrinciplesFlow({
+  items,
+}: {
+  items: readonly { title: string; body: string }[];
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const reduceMotion = Boolean(prefersReducedMotion);
+
+  return (
+    <div className="relative isolate overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] px-5 py-10 shadow-[0_40px_100px_-58px_rgba(0,0,0,0.95)] sm:px-8 sm:py-14 lg:rounded-[2.5rem] lg:px-10 lg:py-16">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(139,92,246,0.08),transparent_38%,transparent_62%,rgba(14,165,233,0.07))]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-12 left-[1.6rem] top-12 w-px bg-gradient-to-b from-violet-300/15 via-white/20 to-sky-300/15 sm:left-[2.15rem] lg:left-1/2"
+      />
+      <motion.span
+        aria-hidden="true"
+        className="absolute left-[1.6rem] top-[8%] h-24 w-px bg-gradient-to-b from-transparent via-white/80 to-transparent shadow-[0_0_16px_rgba(255,255,255,0.45)] sm:left-[2.15rem] lg:left-1/2"
+        animate={
+          reduceMotion
+            ? undefined
+            : { top: ["8%", "78%"], opacity: [0, 0.85, 0] }
+        }
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          repeatDelay: 1.5,
+          ease: "easeInOut",
         }}
       />
-      {/* Light falling on a solid surface, not glass. */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/[0.05] to-transparent"
-      />
 
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] transition-colors duration-200 group-hover:border-white/20 motion-reduce:transition-none">
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 rounded-2xl opacity-0 blur-md transition-opacity duration-200 group-hover:opacity-100 motion-reduce:transition-none"
-          style={{ background: `rgba(${accent.glow},0.35)` }}
-        />
-        <Icon
-          aria-hidden="true"
-          strokeWidth={1.5}
-          className="relative h-7 w-7"
-          style={{ color: accent.tint }}
-        />
-      </span>
+      <ol className="relative space-y-16 sm:space-y-20 lg:space-y-24">
+        {items.slice(0, 2).map((item, index) => {
+          const accent = PRINCIPLE_ACCENTS[index];
 
-      {/* Fixed gap under the icon — never `mt-auto`, which is what pushed the
-          copy to the floor and opened the dead area in the middle. */}
-      <div className="relative mt-7 sm:mt-8">
-        <h3 className="text-balance text-2xl font-semibold leading-snug tracking-tight text-white sm:text-[1.75rem]">
-          {title}
-        </h3>
-        <p className="mt-4 text-base leading-relaxed text-white/60 sm:text-lg">
-          {body}
-        </p>
-      </div>
-    </article>
+          return (
+            <motion.li
+              key={item.title}
+              className="group relative grid min-h-[15rem] gap-7 pl-14 sm:pl-20 lg:grid-cols-2 lg:items-center lg:gap-20 lg:pl-0"
+              initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
+              <span className="absolute left-[0.6rem] top-1 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-[#0d0e19] font-mono text-[10px] font-semibold tracking-[0.12em] text-white/65 shadow-[0_0_0_7px_rgba(10,11,20,0.95)] transition duration-300 group-hover:border-white/30 group-hover:text-white sm:left-[1.15rem] lg:left-1/2 lg:-translate-x-1/2 motion-reduce:transition-none">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <article
+                className={cn(
+                  "relative border-t border-white/10 pt-7 transition duration-300 group-hover:border-white/20 motion-reduce:transition-none",
+                  index === 0
+                    ? "lg:pr-16 lg:text-right"
+                    : "lg:col-start-2 lg:pl-16",
+                )}
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    "absolute top-[-1px] h-px w-20 bg-gradient-to-r transition-all duration-500 group-hover:w-32 motion-reduce:transition-none",
+                    index === 0
+                      ? "left-0 from-violet-300/80 to-transparent lg:left-auto lg:right-0 lg:bg-gradient-to-l"
+                      : "left-0 from-sky-300/80 to-transparent",
+                  )}
+                />
+                <h3 className="text-balance text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
+                  {item.title}
+                </h3>
+                <p className="mt-5 text-base leading-relaxed text-white/60 sm:text-lg">
+                  {item.body}
+                </p>
+              </article>
+
+              <div
+                className={cn(
+                  "flex transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100 motion-reduce:transform-none motion-reduce:transition-none",
+                  index === 0
+                    ? "justify-start opacity-80 lg:col-start-2 lg:row-start-1 lg:pl-16"
+                    : "justify-start opacity-75 lg:col-start-1 lg:row-start-1 lg:justify-end lg:pr-16",
+                )}
+              >
+                <PrincipleDiagram
+                  index={index}
+                  accent={accent}
+                  reduceMotion={reduceMotion}
+                />
+              </div>
+            </motion.li>
+          );
+        })}
+      </ol>
+    </div>
   );
 }
 
@@ -907,54 +1044,37 @@ export default function About() {
       ) : null}
 
       {/* 04 — How we think */}
-      <section className="relative overflow-hidden bg-[#0a0b14] py-24 text-white sm:py-28 lg:py-36">
+      <section className="relative overflow-hidden bg-[#080914] py-24 text-white sm:py-28 lg:py-36">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_12%_0%,rgba(76,29,149,0.38),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(90%_70%_at_96%_8%,rgba(3,105,161,0.22),transparent_58%)]" />
-          {/* A measured grid rather than a light show: it gives the tiles
-              something to sit on and disappears at the edges. */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.028)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(75%_60%_at_50%_28%,black,transparent)]" />
+          <div className="absolute -left-52 -top-64 h-[42rem] w-[42rem] animate-hero-drift rounded-full bg-[radial-gradient(circle,rgba(124,58,237,0.2),transparent_68%)] blur-3xl motion-reduce:animate-none" />
+          <div className="absolute -bottom-72 -right-56 h-[40rem] w-[40rem] animate-hero-drift rounded-full bg-[radial-gradient(circle,rgba(14,165,233,0.15),transparent_68%)] blur-3xl [animation-direction:reverse] [animation-duration:28s] motion-reduce:animate-none" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(75%_68%_at_70%_45%,black,transparent)]" />
         </div>
 
         <div className="container relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl">
-            <span className={eyebrowDark}>{t.principles.eyebrow}</span>
-            <h2 className="mt-7 text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
-              {t.principles.title}
-            </h2>
-          </Reveal>
-
-          {/* The tiles hang off this line, which is the same hairline they are
-              drawn with — that is what ties the heading to the block. */}
-          <div
-            aria-hidden="true"
-            className="mt-12 h-px w-full bg-gradient-to-r from-white/25 via-white/[0.08] to-transparent sm:mt-14"
-          />
-
-          {/* Rows stretch (the grid default), so the two tiles in a row end at
-              the same line whichever title wraps. The stagger stays; the height
-              difference now comes from the copy, not from a minimum. */}
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6 lg:pb-14">
-            {t.principles.items.map((item, index) => (
-              /* The offset lives on a plain wrapper. Put it on the Reveal and
-                 framer-motion writes its own inline transform, silently
-                 dropping it — the same trap as the network diagram above. */
+          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.62fr)_minmax(0,1.38fr)] lg:items-start lg:gap-16 xl:gap-20">
+            <Reveal className="max-w-xl lg:sticky lg:top-28">
+              <span className={eyebrowDark}>{t.principles.eyebrow}</span>
+              <h2 className="mt-7 text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-[3.75rem]">
+                {t.principles.title}
+              </h2>
               <div
-                key={item.title}
-                className={cn("h-full", index % 2 === 1 && "lg:translate-y-14")}
+                aria-hidden="true"
+                className="mt-10 flex max-w-sm items-center gap-4"
               >
-                <Reveal delay={index * 0.07} className="h-full [&>*]:h-full">
-                  <PrincipleTile
-                    title={item.title}
-                    body={item.body}
-                    accent={PRINCIPLE_ACCENTS[index % PRINCIPLE_ACCENTS.length]}
-                  />
-                </Reveal>
+                <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-transparent" />
+                <span className="font-mono text-[10px] tracking-[0.24em] text-white/35">
+                  01 — 02
+                </span>
               </div>
-            ))}
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <PrinciplesFlow items={t.principles.items} />
+            </Reveal>
           </div>
         </div>
       </section>
