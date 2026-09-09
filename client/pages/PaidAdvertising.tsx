@@ -56,6 +56,7 @@ const platformAssets: Record<
   PaidChannel,
   {
     serviceId: ServiceId;
+    anchorId: string;
     logo: string;
     width: number;
     height: number;
@@ -64,6 +65,7 @@ const platformAssets: Record<
 > = {
   meta: {
     serviceId: "meta-ads",
+    anchorId: "meta-ads",
     logo: "/media/Logos_Partners/14-meta.png",
     width: 438,
     height: 127,
@@ -71,6 +73,7 @@ const platformAssets: Record<
   },
   google: {
     serviceId: "google-ads",
+    anchorId: "google-campaigns",
     logo: "/media/Logos_Partners/15-google-ads.png",
     width: 493,
     height: 154,
@@ -78,6 +81,7 @@ const platformAssets: Record<
   },
   tiktok: {
     serviceId: "tiktok-ads",
+    anchorId: "tiktok-ads",
     logo: "/media/Logos_Partners/16-tiktok.png",
     width: 465,
     height: 186,
@@ -527,7 +531,7 @@ export default function PaidAdvertising() {
               return (
                 <article
                   key={channel}
-                  id={asset.serviceId}
+                  id={asset.anchorId}
                   className="relative flex h-full scroll-mt-28 flex-col overflow-hidden rounded-3xl border border-ink-100 bg-white p-7 shadow-brand-card"
                 >
                   <span

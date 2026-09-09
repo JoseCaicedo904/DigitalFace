@@ -231,7 +231,7 @@ export default function MainLayout() {
             },
             {
               label: t.megaNav.paidMedia.links.google,
-              to: path("/industries/paid-advertising#google-ads"),
+              to: path("/industries/paid-advertising#google-campaigns"),
             },
             {
               label: t.megaNav.paidMedia.links.seo,

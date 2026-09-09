@@ -182,7 +182,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -692,7 +692,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180908,
+    "htmlBytes": 180914,
     "incoming": [
       "/es",
       "/about",
@@ -907,7 +907,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -1417,7 +1417,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182596,
+    "htmlBytes": 182602,
     "incoming": [
       "/",
       "/es/about",
@@ -1560,7 +1560,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -1842,7 +1842,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87510,
+    "htmlBytes": 87516,
     "incoming": [
       "/",
       "/es/about",
@@ -1982,7 +1982,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -2264,7 +2264,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 88268,
+    "htmlBytes": 88274,
     "incoming": [
       "/es",
       "/about",
@@ -2454,7 +2454,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -2692,7 +2692,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 88084,
+    "htmlBytes": 88090,
     "incoming": [
       "/",
       "/about",
@@ -2885,7 +2885,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -3123,7 +3123,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 89195,
+    "htmlBytes": 89201,
     "incoming": [
       "/es",
       "/es/about",
@@ -3405,7 +3405,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -3735,7 +3735,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111556,
+    "htmlBytes": 111568,
     "incoming": [
       "/",
       "/about",
@@ -4014,7 +4014,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -4344,7 +4344,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 113422,
+    "htmlBytes": 113434,
     "incoming": [
       "/es",
       "/es/about",
@@ -4562,7 +4562,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -4828,7 +4828,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111495,
+    "htmlBytes": 111501,
     "incoming": [
       "/",
       "/about",
@@ -5049,7 +5049,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -5315,7 +5315,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 113448,
+    "htmlBytes": 113454,
     "incoming": [
       "/es",
       "/es/about",
@@ -5622,7 +5622,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -5876,7 +5876,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 121419,
+    "htmlBytes": 121425,
     "incoming": [
       "/",
       "/about",
@@ -6183,7 +6183,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -6437,7 +6437,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 123277,
+    "htmlBytes": 123283,
     "incoming": [
       "/es",
       "/es/about",
@@ -6576,7 +6576,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -6822,7 +6822,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 73652,
+    "htmlBytes": 73658,
     "incoming": [
       "/",
       "/about",
@@ -6961,7 +6961,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -7207,7 +7207,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 74541,
+    "htmlBytes": 74547,
     "incoming": [
       "/es",
       "/es/about",
@@ -7326,7 +7326,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -7556,7 +7556,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37341,
+    "htmlBytes": 37347,
     "incoming": [
       "/",
       "/about",
@@ -7675,7 +7675,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -7905,7 +7905,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37976,
+    "htmlBytes": 37982,
     "incoming": [
       "/es",
       "/es/about",
@@ -8076,7 +8076,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -8306,7 +8306,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42509,
+    "htmlBytes": 42515,
     "incoming": [
       "/",
       "/about",
@@ -8477,7 +8477,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -8707,7 +8707,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 43909,
+    "htmlBytes": 43915,
     "incoming": [
       "/es",
       "/es/about",
@@ -8886,7 +8886,7 @@
         "text": "TikTok ads"
       },
       {
-        "href": "/industries/paid-advertising#google-ads",
+        "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
@@ -9116,7 +9116,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 41199,
+    "htmlBytes": 41205,
     "incoming": [
       "/",
       "/about",
@@ -9295,7 +9295,7 @@
         "text": "Anuncios en TikTok"
       },
       {
-        "href": "/es/industries/paid-advertising#google-ads",
+        "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
@@ -9525,7 +9525,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42300,
+    "htmlBytes": 42306,
     "incoming": [
       "/es",
       "/es/about",
