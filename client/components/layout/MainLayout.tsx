@@ -180,7 +180,6 @@ export default function MainLayout() {
       { key: "home", label: t.nav.home, to: path("/") },
       { key: "about", label: t.nav.about, to: path("/about") },
       { key: "features", label: t.nav.features, to: path("/features") },
-      { key: "industries", label: t.nav.industries, to: null },
       {
         key: "payPerService",
         label: t.nav.payPerService,
