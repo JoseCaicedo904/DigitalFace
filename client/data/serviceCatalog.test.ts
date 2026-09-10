@@ -60,6 +60,16 @@ describe("service catalog", () => {
     );
   });
 
+  it("uses Google Ads as the middle paid-media card and request id", () => {
+    const paidMedia = serviceCatalog.find((group) => group.key === "paidMedia");
+
+    expect(
+      paidMedia?.services.slice(0, 3).map((service) => service.id),
+    ).toEqual(["meta-ads", "google-ads", "tiktok-ads"]);
+    expect(isServiceId("google-ads")).toBe(true);
+    expect(isServiceId("conversion-tracking")).toBe(false);
+  });
+
   it("groups every service under a catalog section", () => {
     const grouped = serviceCatalog.flatMap((group) =>
       group.services.map((service) => service.id),

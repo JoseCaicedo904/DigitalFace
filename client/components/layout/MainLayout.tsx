@@ -8,6 +8,13 @@ import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { commonContent } from "@/i18n/content/common";
 import {
+  serviceCatalog,
+  serviceHref,
+  getServiceName,
+  type ServiceGroupKey,
+  type ServiceId,
+} from "@/data/serviceCatalog";
+import {
   getIndustryNavLabels,
   industryHref,
 } from "@/pages/industries/industryData";
@@ -60,6 +67,21 @@ const INDUSTRY_DESCRIPTION_KEYS = {
   "aesthetic-medicine": "aesthetic",
   "med-spas": "medSpa",
 } as const;
+const SERVICE_GROUP_ICONS = {
+  paidMedia: Megaphone,
+  automation: Sparkles,
+  leadOps: BarChart3,
+  websites: Search,
+} as const satisfies Record<ServiceGroupKey, typeof Megaphone>;
+const SERVICE_GROUP_DESTINATIONS: Partial<Record<ServiceGroupKey, string>> = {
+  paidMedia: "/industries/paid-advertising",
+};
+
+const SERVICE_DESTINATIONS: Partial<Record<ServiceId, string>> = {
+  "meta-ads": "/industries/paid-advertising#meta-ads",
+  "google-ads": "/industries/paid-advertising#google-campaigns",
+  "tiktok-ads": "/industries/paid-advertising#tiktok-ads",
+};
 
 const desktopNavLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
@@ -214,106 +236,20 @@ export default function MainLayout() {
   const megaNav = useMemo(
     () => ({
       to: path("/pay-per-service"),
-      categories: [
-        {
-          title: t.megaNav.paidMedia.title,
-          icon: Megaphone,
-          to: path("/industries/paid-advertising"),
-          links: [
-            {
-              label: t.megaNav.paidMedia.links.meta,
-              to: path("/industries/paid-advertising#meta-ads"),
-            },
-            {
-              label: t.megaNav.paidMedia.links.tiktok,
-              to: path("/industries/paid-advertising#tiktok-ads"),
-            },
-            {
-              label: t.megaNav.paidMedia.links.google,
-              to: path("/industries/paid-advertising#google-campaigns"),
-            },
-            {
-              label: t.megaNav.paidMedia.links.seo,
-              to: path("/pay-per-service#seo-strategy"),
-            },
-            {
-              label: t.megaNav.paidMedia.links.content,
-              to: path("/pay-per-service#content-creation"),
-            },
-          ],
-        },
-        {
-          title: t.megaNav.automation.title,
-          icon: Sparkles,
-          to: path("/pay-per-service#automation-and-chatbots"),
-          links: [
-            {
-              label: t.megaNav.automation.links.chatbot,
-              to: path("/pay-per-service#chatbot-development"),
-            },
-            {
-              label: t.megaNav.automation.links.workflow,
-              to: path("/pay-per-service#workflow-automation"),
-            },
-            {
-              label: t.megaNav.automation.links.appointment,
-              to: path("/pay-per-service#appointment-automation"),
-            },
-            {
-              label: t.megaNav.automation.links.ecommerce,
-              to: path("/pay-per-service#ecommerce-automation"),
-            },
-            {
-              label: t.megaNav.automation.links.comments,
-              to: path("/pay-per-service#comment-auto-reply"),
-            },
-          ],
-        },
-        {
-          title: t.megaNav.leadOps.title,
-          icon: BarChart3,
-          to: path("/pay-per-service#lead-ops-crm"),
-          links: [
-            {
-              label: t.megaNav.leadOps.links.capture,
-              to: path("/pay-per-service#lead-capture"),
-            },
-            {
-              label: t.megaNav.leadOps.links.booking,
-              to: path("/pay-per-service#appointment-booking"),
-            },
-            {
-              label: t.megaNav.leadOps.links.pipeline,
-              to: path("/pay-per-service#crm-pipeline"),
-            },
-            {
-              label: t.megaNav.leadOps.links.integration,
-              to: path("/pay-per-service#crm-integration"),
-            },
-            {
-              label: t.megaNav.leadOps.links.reporting,
-              to: path("/pay-per-service#reporting-dashboards"),
-            },
-          ],
-        },
-        {
-          title: t.megaNav.websites.title,
-          icon: Search,
-          to: path("/pay-per-service#websites-and-funnels"),
-          links: [
-            {
-              label: t.megaNav.websites.links.corporate,
-              to: path("/pay-per-service#corporate-websites"),
-            },
-            {
-              label: t.megaNav.websites.links.landing,
-              to: path("/pay-per-service#campaign-landing-pages"),
-            },
-          ],
-        },
-      ],
+      categories: serviceCatalog.map((group) => ({
+        title: t.megaNav[group.key].title,
+        icon: SERVICE_GROUP_ICONS[group.key],
+        to: path(
+          SERVICE_GROUP_DESTINATIONS[group.key] ??
+            `/pay-per-service#${group.id}`,
+        ),
+        links: group.services.map((service) => ({
+          label: getServiceName(service.id, locale),
+          to: path(SERVICE_DESTINATIONS[service.id] ?? serviceHref(service.id)),
+        })),
+      })),
     }),
-    [t, path],
+    [locale, t, path],
   );
 
   const homePath = path("/");

@@ -91,11 +91,4 @@ function GoogleAnalyticsMark(props: MarkProps) {
 export const payPerServiceOutcomeIcons: Record<
   string,
   ComponentType<MarkProps>[]
-> = {
-  "conversion-tracking": [
-    MetaMark,
-    TikTokMark,
-    GoogleAdsMark,
-    GoogleAnalyticsMark,
-  ],
-};
+> = {};

@@ -39,18 +39,16 @@ const en = {
           ],
           ctaLabel: "Request an ad strategy call",
         },
-        tracking: {
-          title: "Conversion Tracking & Analytics",
+        google: {
+          title: "Google ads",
           description:
-            "Set up the measurement behind your marketing so you can see which campaigns, clicks and actions are actually producing results.",
-          outcomesLabel: "Includes",
+            "Reach people actively searching for your services with targeted Google Search campaigns built around high-intent keywords and measurable conversions.",
           outcomes: [
-            "Meta Pixel setup",
-            "TikTok Pixel setup",
-            "Google Ads conversion tracking",
-            "Google Analytics 4 setup",
+            "Capture high-intent searches",
+            "Drive qualified traffic and leads",
+            "Track calls, forms and conversions",
           ],
-          ctaLabel: "Set up my tracking",
+          ctaLabel: "Plan a Google ads campaign",
         },
         tiktok: {
           title: "TikTok ads",
@@ -62,17 +60,6 @@ const en = {
             "Test messaging fast with real data",
           ],
           ctaLabel: "Ask about TikTok ads",
-        },
-        google: {
-          title: "Google ads",
-          description:
-            "Search, display and retargeting campaigns that capture demand at the moment someone is actively looking.",
-          outcomes: [
-            "Capture high-intent demand at the moment of search",
-            "Keep traffic steady through search and display",
-            "Stay present with well-targeted retargeting",
-          ],
-          ctaLabel: "Plan a Google ads campaign",
         },
         seo: {
           title: "SEO strategy",
@@ -313,18 +300,16 @@ const es: typeof en = {
           ],
           ctaLabel: "Agenda una asesoría de pauta",
         },
-        tracking: {
-          title: "Tracking de Conversiones y Analítica",
+        google: {
+          title: "Anuncios en Google",
           description:
-            "Configuramos la medición detrás de tu marketing para que puedas identificar qué campañas, clics y acciones realmente están generando resultados.",
-          outcomesLabel: "Incluye",
+            "Llega a personas que buscan activamente tus servicios con campañas segmentadas de Búsqueda de Google, basadas en palabras clave de alta intención y conversiones medibles.",
           outcomes: [
-            "Configuración de Meta Pixel",
-            "Configuración de TikTok Pixel",
-            "Seguimiento de conversiones de Google Ads",
-            "Configuración de Google Analytics 4",
+            "Capturar búsquedas de alta intención",
+            "Generar tráfico y contactos calificados",
+            "Medir llamadas, formularios y conversiones",
           ],
-          ctaLabel: "Configura mi medición",
+          ctaLabel: "Planea una campaña en Google",
         },
         tiktok: {
           title: "Anuncios en TikTok",
@@ -336,17 +321,6 @@ const es: typeof en = {
             "Probar mensajes rápido con datos reales",
           ],
           ctaLabel: "Pregunta por TikTok Ads",
-        },
-        google: {
-          title: "Anuncios en Google",
-          description:
-            "Campañas de búsqueda, display y retargeting que capturan la demanda justo cuando alguien está buscando.",
-          outcomes: [
-            "Capturar demanda de alta intención en el momento de la búsqueda",
-            "Mantener tráfico constante entre búsqueda y display",
-            "Seguir presente con retargeting bien segmentado",
-          ],
-          ctaLabel: "Planea una campaña en Google",
         },
         seo: {
           title: "Estrategia SEO",

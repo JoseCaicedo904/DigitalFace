@@ -27,9 +27,8 @@ export const serviceCatalog = [
     id: "paid-media",
     services: [
       { id: "meta-ads", contentKey: "meta" },
-      { id: "conversion-tracking", contentKey: "tracking" },
-      { id: "tiktok-ads", contentKey: "tiktok" },
       { id: "google-ads", contentKey: "google" },
+      { id: "tiktok-ads", contentKey: "tiktok" },
       { id: "seo-strategy", contentKey: "seo" },
       { id: "audiovisual-production", contentKey: "audiovisual" },
       { id: "content-creation", contentKey: "content" },

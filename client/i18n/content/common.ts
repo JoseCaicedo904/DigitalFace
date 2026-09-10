@@ -38,40 +38,15 @@ const en = {
   megaNav: {
     paidMedia: {
       title: "Paid media and social advertising",
-      links: {
-        meta: "Meta ads",
-        tiktok: "TikTok ads",
-        google: "Google ads",
-        seo: "SEO strategy",
-        content: "Content creation",
-      },
     },
     automation: {
       title: "Automation and chatbots",
-      links: {
-        chatbot: "Chatbot development",
-        workflow: "Workflow automation",
-        appointment: "Appointment and calendar automation",
-        ecommerce: "E-commerce automation",
-        comments: "Facebook and Instagram comment replies",
-      },
     },
     leadOps: {
       title: "Lead operations and CRM",
-      links: {
-        capture: "Lead capture and CRM sync",
-        booking: "Appointment booking and reminders",
-        pipeline: "CRM pipeline setup",
-        integration: "CRM integration and data sync",
-        reporting: "Reporting and performance dashboards",
-      },
     },
     websites: {
       title: "Websites and funnels",
-      links: {
-        corporate: "Corporate and business websites",
-        landing: "Campaign landing pages",
-      },
     },
   },
   footer: {
@@ -135,40 +110,15 @@ const es: typeof en = {
   megaNav: {
     paidMedia: {
       title: "Pauta digital y publicidad en redes",
-      links: {
-        meta: "Anuncios en Meta",
-        tiktok: "Anuncios en TikTok",
-        google: "Anuncios en Google",
-        seo: "Estrategia SEO",
-        content: "Creación de contenido",
-      },
     },
     automation: {
       title: "Automatización y chatbots",
-      links: {
-        chatbot: "Desarrollo de chatbots",
-        workflow: "Automatización de procesos",
-        appointment: "Automatización de citas y calendario",
-        ecommerce: "Automatización para e-commerce",
-        comments: "Respuestas a comentarios en Facebook e Instagram",
-      },
     },
     leadOps: {
       title: "Gestión de contactos y CRM",
-      links: {
-        capture: "Captura de contactos y sincronización con el CRM",
-        booking: "Agendamiento de citas y recordatorios",
-        pipeline: "Configuración del embudo en el CRM",
-        integration: "Integración de CRM y sincronización de datos",
-        reporting: "Reportes y tableros de rendimiento",
-      },
     },
     websites: {
       title: "Sitios web y embudos",
-      links: {
-        corporate: "Sitios web corporativos y de negocio",
-        landing: "Landing pages para campañas",
-      },
     },
   },
   footer: {

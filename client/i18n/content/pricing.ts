@@ -523,7 +523,7 @@ const en = {
       },
     ],
     guarantee:
-      "Every plan is backed in writing: 30 days money back on the setup fee, live within 7 business days or the setup is free, no annual contract and no minimum term, and you own every account, asset and automation we build for you.",
+      "Every plan is backed in writing: No annual contract, no minimum term, and you own every account, and external asset we build for you.",
   },
   includes: {
     eyebrow: "Included in every plan",
