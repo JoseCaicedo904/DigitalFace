@@ -10,7 +10,7 @@ import { SITE_URL, absoluteUrl, localePath, type Locale } from "@/i18n/locale";
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 
-export const CONTACT_EMAIL = "sales@digitalfacemarketing.com";
+export const CONTACT_EMAIL = "sales@digitalface.app";
 
 type JsonLd = Record<string, unknown>;
 

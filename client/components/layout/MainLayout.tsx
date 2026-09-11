@@ -607,10 +607,10 @@ export default function MainLayout() {
                 <li>
                   <span>{t.footer.emailLabel}</span>
                   <a
-                    href="mailto:sales@digitalfacemarketing.com"
+                    href="mailto:sales@digitalface.app"
                     className="block font-semibold text-white whitespace-nowrap"
                   >
-                    sales@digitalfacemarketing.com
+                    sales@digitalface.app
                   </a>
                 </li>
                 <li>

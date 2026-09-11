@@ -71,10 +71,10 @@ export default function Contact() {
                     {t.cards.email.title}
                   </h3>
                   <a
-                    href="mailto:sales@digitalfacemarketing.com"
+                    href="mailto:sales@digitalface.app"
                     className="mt-2 block break-words text-base font-semibold text-brand-600 underline underline-offset-4"
                   >
-                    sales@digitalfacemarketing.com
+                    sales@digitalface.app
                   </a>
                 </div>
               </div>

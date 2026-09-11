@@ -43,7 +43,7 @@ describe("normalizeInternationalPhone", () => {
 
 describe("isPlausibleEmail", () => {
   it("accepts ordinary addresses", () => {
-    expect(isPlausibleEmail("sales@digitalfacemarketing.com")).toBe(true);
+    expect(isPlausibleEmail("sales@digitalface.app")).toBe(true);
     expect(isPlausibleEmail("first.last+tag@sub.domain.co")).toBe(true);
   });
 

@@ -172,7 +172,7 @@ const en: { privacy: LegalPage; terms: LegalPage } = {
       {
         heading: "13. Contact us",
         body: [
-          "For privacy questions or requests, contact us at sales@digitalfacemarketing.com.",
+          "For privacy questions or requests, contact us at sales@digitalface.app.",
         ],
         list: [],
         subsections: [],
@@ -309,7 +309,7 @@ const en: { privacy: LegalPage; terms: LegalPage } = {
       {
         heading: "15. Contact us",
         body: [
-          "For questions about these terms, contact us at sales@digitalfacemarketing.com.",
+          "For questions about these terms, contact us at sales@digitalface.app.",
         ],
         list: [],
         subsections: [],
@@ -474,7 +474,7 @@ const es: typeof en = {
       {
         heading: "13. Contáctanos",
         body: [
-          "Para consultas o solicitudes sobre privacidad, escríbenos a sales@digitalfacemarketing.com.",
+          "Para consultas o solicitudes sobre privacidad, escríbenos a sales@digitalface.app.",
         ],
         list: [],
         subsections: [],
@@ -611,7 +611,7 @@ const es: typeof en = {
       {
         heading: "15. Contáctanos",
         body: [
-          "Para preguntas sobre estos términos, escríbenos a sales@digitalfacemarketing.com.",
+          "Para preguntas sobre estos términos, escríbenos a sales@digitalface.app.",
         ],
         list: [],
         subsections: [],
