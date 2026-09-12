@@ -55,7 +55,7 @@ const en = {
     ai_communication: "AI Customer Communication",
     website: "Website / Landing Page",
     full_growth_system: "Full Growth System",
-    not_sure: "Not Sure Yet",
+    not_sure: "Other",
   } satisfies Record<LeadGoal, string>,
 
   submit: "Get My Offer & Contact DigitalFace",
@@ -127,7 +127,7 @@ const es: typeof en = {
     ai_communication: "Comunicación con clientes usando IA",
     website: "Sitio web / Landing page",
     full_growth_system: "Sistema de crecimiento completo",
-    not_sure: "Todavía no lo sé",
+    not_sure: "Otro",
   },
 
   submit: "Quiero mi oferta y contactar a DigitalFace",
