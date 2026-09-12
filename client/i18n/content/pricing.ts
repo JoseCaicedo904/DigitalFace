@@ -510,6 +510,10 @@ const en = {
         body: "There is no included usage credit. AI, messaging, email and phone usage are billed directly by providers or itemized at provider cost. We agree provider charges and a monthly usage budget before launch. CRM and standard hosting are included.",
       },
       {
+        title: "Do we need to buy new software?",
+        body: "No. The CRM and the system come with the plan. Your team gets a login and a simple daily workflow.",
+      },
+      {
         title: "Ads and campaign pages",
         body: "Sales System includes one campaign landing page with up to 2 initial revision rounds and up to 4 static ad variations per month using your materials. Full websites, professional photo/video, SEO and bulk reactivation are separate projects. Capture and AI exclude ads and website builds; AI also excludes voice AI and bulk email campaigns.",
       },
@@ -545,27 +549,6 @@ const en = {
         title: "Bilingual support",
         description:
           "Updates, fixes and improvements in English and Spanish, Monday to Friday 8:00 AM – 8:00 PM ET and Saturday 8:00 AM – 6:00 PM ET.",
-      },
-    ],
-  },
-  faq: {
-    eyebrow: "Quick answers",
-    title: "Ready to get started?",
-    items: [
-      {
-        question: "How fast can we launch?",
-        answer:
-          "Most practices go live within 5 to 7 business days once we have your information and access.",
-      },
-      {
-        question: "Do we need to buy new software?",
-        answer:
-          "No. The CRM and the system come with the plan. Your team gets a login and a simple daily workflow.",
-      },
-      {
-        question: "When does a Custom plan make sense?",
-        answer:
-          "When you need several channels, larger media budgets, more than one location, additional languages, custom integrations or advanced automation. We scope those requirements and quote them specifically for your business.",
       },
     ],
   },
@@ -1028,6 +1011,10 @@ const es: typeof en = {
         body: "No hay saldo de consumo incluido. La IA, los mensajes, el correo y la telefonía se facturan directamente por el proveedor o se detallan a costo de proveedor. Antes de activar el sistema acordamos las tarifas y un presupuesto mensual de consumo. El CRM y el alojamiento estándar están incluidos.",
       },
       {
+        title: "¿Necesitamos comprar nuevo software?",
+        body: "No. El CRM y el sistema vienen incluidos con el plan. Tu equipo recibe acceso y un flujo de trabajo diario sencillo.",
+      },
+      {
         title: "Anuncios y páginas de campaña",
         body: "Sales System incluye una página de campaña con hasta 2 rondas iniciales de revisión y hasta 4 variaciones de anuncios estáticos al mes con tus materiales. Los sitios completos, la foto y el video profesionales, el SEO y la reactivación masiva se cotizan aparte. Capture y AI no incluyen anuncios ni sitios web; AI tampoco incluye IA de voz ni campañas masivas de correo.",
       },
@@ -1063,27 +1050,6 @@ const es: typeof en = {
         title: "Soporte bilingüe",
         description:
           "Actualizaciones, ajustes y mejoras en inglés y español, de lunes a viernes de 8:00 a. m. a 8:00 p. m. ET y sábados de 8:00 a. m. a 6:00 p. m. ET.",
-      },
-    ],
-  },
-  faq: {
-    eyebrow: "Respuestas rápidas",
-    title: "¿Listo para empezar?",
-    items: [
-      {
-        question: "¿Qué tan rápido podemos salir en vivo?",
-        answer:
-          "La mayoría de clínicas queda activa en 5 a 7 días hábiles desde que tenemos la información y los accesos.",
-      },
-      {
-        question: "¿Tenemos que comprar software nuevo?",
-        answer:
-          "No. El CRM y el sistema vienen con el plan. Tu equipo recibe un acceso y una rutina diaria sencilla.",
-      },
-      {
-        question: "¿Cuándo tiene sentido un plan a medida?",
-        answer:
-          "Cuando necesitas varios canales, presupuestos publicitarios mayores, más de una sede, idiomas adicionales, integraciones a medida o automatización avanzada. Definimos esos requerimientos y los cotizamos específicamente para tu negocio.",
       },
     ],
   },

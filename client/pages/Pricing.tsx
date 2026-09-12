@@ -452,32 +452,6 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24 lg:py-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl">
-            <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-secondary px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              {t.faq.eyebrow}
-            </span>
-            <h2 className="mt-6 text-3xl font-semibold text-slate-900 sm:text-4xl">
-              {t.faq.title}
-            </h2>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {t.faq.items.map((item) => (
-                <div
-                  key={item.question}
-                  className="rounded-2xl border border-ink-100 bg-white/90 p-6 shadow-brand-card"
-                >
-                  <p className="text-sm font-semibold text-slate-900">
-                    {item.question}
-                  </p>
-                  <p className="mt-2 text-sm text-ink-500">{item.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CtaSection
         eyebrow={t.cta.eyebrow}
         title={t.cta.title}
