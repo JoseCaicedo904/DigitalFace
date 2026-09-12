@@ -18,7 +18,14 @@ type CatalogGroup = {
   key: ServiceGroupKey;
   /** Section anchor on the Pay per Service page. */
   id: string;
-  services: readonly { id: string; contentKey: string }[];
+  services: readonly {
+    id: string;
+    contentKey: string;
+    /** Optional neutral DOM anchor when the service id triggers cosmetic filters. */
+    anchorId?: string;
+    /** Optional visual order for the Pay per Service card grid. */
+    pageOrder?: number;
+  }[];
 };
 
 export const serviceCatalog = [
@@ -27,8 +34,13 @@ export const serviceCatalog = [
     id: "paid-media",
     services: [
       { id: "meta-ads", contentKey: "meta" },
-      { id: "google-ads", contentKey: "google" },
-      { id: "tiktok-ads", contentKey: "tiktok" },
+      {
+        id: "google-ads",
+        contentKey: "google",
+        anchorId: "google-campaigns",
+        pageOrder: 2,
+      },
+      { id: "tiktok-ads", contentKey: "tiktok", pageOrder: 1 },
       { id: "seo-strategy", contentKey: "seo" },
       { id: "audiovisual-production", contentKey: "audiovisual" },
       { id: "content-creation", contentKey: "content" },
@@ -75,16 +87,22 @@ type CatalogEntry = {
   groupKey: ServiceGroupKey;
   /** Section anchor the service card lives under. */
   groupAnchor: string;
+  /** DOM anchor for the service card; may differ from its request id. */
+  anchorId: string;
+  /** Visual position within its Pay per Service group. */
+  pageOrder: number;
 };
 
 const entries = new Map<string, CatalogEntry>();
 for (const group of serviceCatalog) {
-  for (const service of group.services) {
+  for (const [catalogOrder, service] of group.services.entries()) {
     entries.set(service.id, {
       id: service.id,
       contentKey: service.contentKey,
       groupKey: group.key,
       groupAnchor: group.id,
+      anchorId: "anchorId" in service ? service.anchorId : service.id,
+      pageOrder: "pageOrder" in service ? service.pageOrder : catalogOrder,
     });
   }
 }
@@ -135,9 +153,25 @@ export function getServiceGroupName(id: ServiceId, locale: Locale): string {
   return payPerServiceContent[locale].groups[entry.groupKey].title;
 }
 
+/** DOM anchor for a card, kept separate from the stable request id. */
+export function getServiceAnchor(id: ServiceId): string {
+  return entries.get(id)?.anchorId ?? id;
+}
+
+/** Order cards without changing the catalog order shared by navigation/pickers. */
+export function orderServicesForPage<T extends readonly { id: ServiceId }[]>(
+  services: T,
+): T[number][] {
+  return [...services].sort(
+    (left, right) =>
+      (entries.get(left.id)?.pageOrder ?? 0) -
+      (entries.get(right.id)?.pageOrder ?? 0),
+  );
+}
+
 /** Canonical (English) path to the card itself; callers add the locale prefix. */
 export function serviceHref(id: ServiceId): string {
-  return `/pay-per-service#${id}`;
+  return `/pay-per-service#${getServiceAnchor(id)}`;
 }
 
 export type ResolvedService = { id: ServiceId; name: string };

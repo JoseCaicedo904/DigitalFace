@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CrmPipelineBoard } from "@/components/demo/CrmPipelineBoard";
+import { DemoDisclaimer } from "@/components/demo/DemoDisclaimer";
 import type { CrmPipelineDemoContent } from "@/components/demo/crmPipeline";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,7 @@ interface CrmPipelineDemoSectionProps {
   content: CrmPipelineDemoContent;
   /** Router path, or an in-page anchor when the page books on itself. */
   ctaHref: string;
+  disclaimer?: string;
   className?: string;
 }
 
@@ -32,6 +34,7 @@ interface CrmPipelineDemoSectionProps {
 export function CrmPipelineDemoSection({
   content: t,
   ctaHref,
+  disclaimer,
   className,
 }: CrmPipelineDemoSectionProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -98,6 +101,7 @@ export function CrmPipelineDemoSection({
           <p className="mt-5 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-500">
             {t.boardCaption}
           </p>
+          {disclaimer ? <DemoDisclaimer text={disclaimer} /> : null}
         </motion.div>
 
         <motion.ol

@@ -876,6 +876,8 @@ const en = {
       },
     ],
   },
+  demoDisclaimer:
+    "Illustrative example only. Final screens, workflows and visual appearance may vary depending on the platform(s) selected and your business configuration.",
   adCampaignDemo: adCampaignDemoEn,
   conversationDemo: conversationDemoEn,
   crmPipelineDemo: crmPipelineDemoEn,
@@ -1264,6 +1266,8 @@ const es: typeof en = {
       },
     ],
   },
+  demoDisclaimer:
+    "Ejemplo ilustrativo. Las pantallas, flujos y apariencia final pueden variar según la plataforma seleccionada y la configuración de tu negocio.",
   adCampaignDemo: adCampaignDemoEs,
   conversationDemo: conversationDemoEs,
   crmPipelineDemo: crmPipelineDemoEs,

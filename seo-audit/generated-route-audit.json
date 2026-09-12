@@ -150,22 +150,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -175,19 +159,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -199,11 +187,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -211,11 +199,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -223,7 +211,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -231,11 +219,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -292,22 +280,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -620,6 +592,182 @@
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
+        "src": "/media/Logos_Partners/01-highlevel.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "813",
+        "height": "210",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/02-hubspot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "565",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/03-pipedrive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "456",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/04-kommo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "390",
+        "height": "158",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/05-zoho-crm.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "683",
+        "height": "135",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/06-activecampaign.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "648",
+        "height": "115",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/21-Odoo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1242",
+        "height": "392",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/08-openai.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "494",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/09-chatgpt.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "564",
+        "height": "179",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/07-n8n.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "360",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/10-whatsapp-business.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "869",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/11-messenger.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "618",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/12-instagram.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "587",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/22-Respond.io.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1228",
+        "height": "198",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/13-chatwoot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "554",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "440",
+        "height": "141",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "541",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "466",
+        "height": "183",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/17-calendly.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "528",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/20-google-drive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "591",
+        "height": "161",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/18-react.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "429",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/19-nextjs.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "472",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
         "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
         "alt": "",
         "loading": "lazy",
@@ -692,7 +840,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180914,
+    "htmlBytes": 180300,
     "incoming": [
       "/es",
       "/about",
@@ -711,15 +859,15 @@
     "outgoing": [
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -875,22 +1023,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -900,19 +1032,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -924,11 +1060,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -936,11 +1072,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -956,7 +1092,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -1017,22 +1153,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -1345,6 +1465,182 @@
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
+        "src": "/media/Logos_Partners/01-highlevel.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "813",
+        "height": "210",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/02-hubspot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "565",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/03-pipedrive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "456",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/04-kommo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "390",
+        "height": "158",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/05-zoho-crm.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "683",
+        "height": "135",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/06-activecampaign.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "648",
+        "height": "115",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/21-Odoo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1242",
+        "height": "392",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/08-openai.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "494",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/09-chatgpt.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "564",
+        "height": "179",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/07-n8n.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "360",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/10-whatsapp-business.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "869",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/11-messenger.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "618",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/12-instagram.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "587",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/22-Respond.io.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1228",
+        "height": "198",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/13-chatwoot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "554",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "440",
+        "height": "141",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "541",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "466",
+        "height": "183",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/17-calendly.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "528",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/20-google-drive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "591",
+        "height": "161",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/18-react.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "429",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/19-nextjs.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "472",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
         "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
         "alt": "",
         "loading": "lazy",
@@ -1417,7 +1713,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182602,
+    "htmlBytes": 181859,
     "incoming": [
       "/",
       "/es/about",
@@ -1436,15 +1732,15 @@
     "outgoing": [
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -1528,22 +1824,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -1553,19 +1833,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -1577,11 +1861,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -1589,11 +1873,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -1601,7 +1885,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -1609,11 +1893,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -1670,22 +1954,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -1842,7 +2110,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87516,
+    "htmlBytes": 81044,
     "incoming": [
       "/",
       "/es/about",
@@ -1858,15 +2126,15 @@
     "outgoing": [
       "/",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/about",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -1950,22 +2218,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -1975,19 +2227,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -1999,11 +2255,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -2011,11 +2267,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -2031,7 +2287,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -2092,22 +2348,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -2264,7 +2504,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 88274,
+    "htmlBytes": 81723,
     "incoming": [
       "/es",
       "/about",
@@ -2280,15 +2520,15 @@
     "outgoing": [
       "/es",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/about",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -2422,22 +2662,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -2447,19 +2671,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -2471,11 +2699,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -2483,11 +2711,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -2495,7 +2723,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -2503,11 +2731,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -2564,22 +2792,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -2692,7 +2904,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 88090,
+    "htmlBytes": 81618,
     "incoming": [
       "/",
       "/about",
@@ -2711,15 +2923,15 @@
     "outgoing": [
       "/",
       "/about",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/features",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -2853,22 +3065,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -2878,19 +3074,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -2902,11 +3102,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -2914,11 +3114,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -2934,7 +3134,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -2995,22 +3195,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -3123,7 +3307,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 89201,
+    "htmlBytes": 82652,
     "incoming": [
       "/es",
       "/es/about",
@@ -3142,15 +3326,15 @@
     "outgoing": [
       "/es",
       "/es/about",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/features",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -3373,22 +3557,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -3398,19 +3566,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -3422,11 +3594,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -3434,11 +3606,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -3446,7 +3618,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -3454,11 +3626,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -3515,22 +3687,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -3735,7 +3891,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111568,
+    "htmlBytes": 105094,
     "incoming": [
       "/",
       "/about",
@@ -3752,14 +3908,14 @@
       "/",
       "/about",
       "/features",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
       "/pricing",
       "/contact",
       "/es/industries/paid-advertising",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -3982,22 +4138,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -4007,19 +4147,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -4031,11 +4175,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -4043,11 +4187,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -4063,7 +4207,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -4124,22 +4268,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -4344,7 +4472,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 113434,
+    "htmlBytes": 106881,
     "incoming": [
       "/es",
       "/es/about",
@@ -4361,14 +4489,14 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
       "/industries/paid-advertising",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -4417,10 +4545,6 @@
       {
         "level": 4,
         "text": "Meta ads (Facebook and Instagram)"
-      },
-      {
-        "level": 4,
-        "text": "Conversion Tracking & Analytics"
       },
       {
         "level": 4,
@@ -4530,22 +4654,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -4555,19 +4663,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -4579,11 +4691,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -4591,11 +4703,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -4603,7 +4715,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -4611,11 +4723,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -4672,22 +4784,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -4828,7 +4924,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 111501,
+    "htmlBytes": 100903,
     "incoming": [
       "/",
       "/about",
@@ -4849,13 +4945,13 @@
       "/about",
       "/features",
       "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pricing",
       "/contact",
       "/es/pay-per-service",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -4904,10 +5000,6 @@
       {
         "level": 4,
         "text": "Anuncios en Meta (Facebook e Instagram)"
-      },
-      {
-        "level": 4,
-        "text": "Tracking de Conversiones y Analítica"
       },
       {
         "level": 4,
@@ -5017,22 +5109,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -5042,19 +5118,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -5066,11 +5146,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -5078,11 +5158,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -5098,7 +5178,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -5159,22 +5239,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -5315,7 +5379,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 113454,
+    "htmlBytes": 102715,
     "incoming": [
       "/es",
       "/es/about",
@@ -5336,13 +5400,13 @@
       "/es/about",
       "/es/features",
       "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pricing",
       "/es/contact",
       "/pay-per-service",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -5590,22 +5654,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -5615,19 +5663,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -5639,11 +5691,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -5651,11 +5703,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -5663,7 +5715,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -5671,11 +5723,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -5732,22 +5784,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -5876,7 +5912,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 121425,
+    "htmlBytes": 114861,
     "incoming": [
       "/",
       "/about",
@@ -5896,14 +5932,14 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/contact",
       "/es/pricing",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -6151,22 +6187,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -6176,19 +6196,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -6200,11 +6224,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -6212,11 +6236,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -6232,7 +6256,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -6293,22 +6317,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -6437,7 +6445,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 123283,
+    "htmlBytes": 116734,
     "incoming": [
       "/es",
       "/es/about",
@@ -6457,14 +6465,14 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/contact",
       "/pricing",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -6544,22 +6552,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -6569,19 +6561,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -6593,11 +6589,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -6605,11 +6601,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -6617,7 +6613,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -6625,11 +6621,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -6688,22 +6684,6 @@
         "text": "Sales System→"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service→"
       },
@@ -6729,7 +6709,7 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -6822,7 +6802,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 73658,
+    "htmlBytes": 67168,
     "incoming": [
       "/",
       "/about",
@@ -6842,14 +6822,14 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/es/contact",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -6929,22 +6909,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -6954,19 +6918,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -6978,11 +6946,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -6990,11 +6958,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -7010,7 +6978,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -7073,22 +7041,6 @@
         "text": "Sistema de Ventas→"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado→"
       },
@@ -7114,7 +7066,7 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -7207,7 +7159,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 74547,
+    "htmlBytes": 67978,
     "incoming": [
       "/es",
       "/es/about",
@@ -7227,14 +7179,14 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/contact",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -7294,22 +7246,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -7319,19 +7255,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -7343,11 +7283,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -7355,11 +7295,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -7367,7 +7307,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -7375,11 +7315,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -7436,22 +7376,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -7556,7 +7480,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37347,
+    "htmlBytes": 30875,
     "incoming": [
       "/",
       "/about",
@@ -7576,14 +7500,14 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy",
       "/terms"
     ]
@@ -7643,22 +7567,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -7668,19 +7576,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -7692,11 +7604,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -7704,11 +7616,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -7724,7 +7636,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -7785,22 +7697,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -7905,7 +7801,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37982,
+    "htmlBytes": 31431,
     "incoming": [
       "/es",
       "/es/about",
@@ -7925,14 +7821,14 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
     ]
@@ -8044,22 +7940,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -8069,19 +7949,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -8093,11 +7977,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -8105,11 +7989,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -8117,7 +8001,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -8125,11 +8009,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -8186,22 +8070,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -8306,7 +8174,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42515,
+    "htmlBytes": 36034,
     "incoming": [
       "/",
       "/about",
@@ -8326,15 +8194,15 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/privacy",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/terms"
     ]
   },
@@ -8445,22 +8313,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -8470,19 +8322,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -8494,11 +8350,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -8506,11 +8362,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -8526,7 +8382,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -8587,22 +8443,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -8707,7 +8547,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 43915,
+    "htmlBytes": 37355,
     "incoming": [
       "/es",
       "/es/about",
@@ -8727,15 +8567,15 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/privacy",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/terms"
     ]
   },
@@ -8854,22 +8694,6 @@
         "text": "Sales System"
       },
       {
-        "href": "/industries/paid-advertising",
-        "text": "Paid AdvertisingMeta, Google and TikTok acquisition managed around business outcomes"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental PracticesImplants, veneers and high-value treatment inquiries"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic MedicineConsultation growth for physicians and aesthetic teams"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med SpasBookings, packages, memberships and reactivation"
-      },
-      {
         "href": "/pay-per-service",
         "text": "Pay per Service"
       },
@@ -8879,19 +8703,23 @@
       },
       {
         "href": "/industries/paid-advertising#meta-ads",
-        "text": "Meta ads"
-      },
-      {
-        "href": "/industries/paid-advertising#tiktok-ads",
-        "text": "TikTok ads"
+        "text": "Meta ads (Facebook and Instagram)"
       },
       {
         "href": "/industries/paid-advertising#google-campaigns",
         "text": "Google ads"
       },
       {
+        "href": "/industries/paid-advertising#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
         "href": "/pay-per-service#seo-strategy",
         "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
       },
       {
         "href": "/pay-per-service#content-creation",
@@ -8903,11 +8731,11 @@
       },
       {
         "href": "/pay-per-service#chatbot-development",
-        "text": "Chatbot development"
+        "text": "Chatbot development (AI and rule-based)"
       },
       {
         "href": "/pay-per-service#workflow-automation",
-        "text": "Workflow automation"
+        "text": "Specialized workflow automation"
       },
       {
         "href": "/pay-per-service#appointment-automation",
@@ -8915,11 +8743,11 @@
       },
       {
         "href": "/pay-per-service#ecommerce-automation",
-        "text": "E-commerce automation"
+        "text": "E-commerce automation (Shopify and WooCommerce)"
       },
       {
         "href": "/pay-per-service#comment-auto-reply",
-        "text": "Facebook and Instagram comment replies"
+        "text": "Auto-reply for Facebook and Instagram comments"
       },
       {
         "href": "/pay-per-service#lead-ops-crm",
@@ -8927,7 +8755,7 @@
       },
       {
         "href": "/pay-per-service#lead-capture",
-        "text": "Lead capture and CRM sync"
+        "text": "Lead capture and CRM sync across every channel"
       },
       {
         "href": "/pay-per-service#appointment-booking",
@@ -8935,11 +8763,11 @@
       },
       {
         "href": "/pay-per-service#crm-pipeline",
-        "text": "CRM pipeline setup"
+        "text": "CRM pipeline setup (GoHighLevel)"
       },
       {
         "href": "/pay-per-service#crm-integration",
-        "text": "CRM integration and data sync"
+        "text": "CRM integration and unified data sync"
       },
       {
         "href": "/pay-per-service#reporting-dashboards",
@@ -8996,22 +8824,6 @@
       {
         "href": "/features",
         "text": "Sales System→"
-      },
-      {
-        "href": "/industries/paid-advertising",
-        "text": "Paid Advertising"
-      },
-      {
-        "href": "/industries/dental-practices",
-        "text": "Dental Practices"
-      },
-      {
-        "href": "/industries/aesthetic-medicine",
-        "text": "Aesthetic Medicine"
-      },
-      {
-        "href": "/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/pay-per-service",
@@ -9116,7 +8928,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 41205,
+    "htmlBytes": 34724,
     "incoming": [
       "/",
       "/about",
@@ -9136,15 +8948,15 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
-      "/industries/dental-practices",
-      "/industries/aesthetic-medicine",
-      "/industries/med-spas",
       "/pay-per-service",
+      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/terms",
       "/book",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
       "/privacy"
     ]
   },
@@ -9263,22 +9075,6 @@
         "text": "Sistema de Ventas"
       },
       {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagadaCaptación en Meta, Google y TikTok gestionada hacia resultados de negocio"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas OdontológicasImplantes, carillas y tratamientos de alto valor"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina EstéticaMás consultas para médicos y equipos estéticos"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med SpasAgendamiento, paquetes, membresías y reactivación"
-      },
-      {
         "href": "/es/pay-per-service",
         "text": "Servicios por separado"
       },
@@ -9288,19 +9084,23 @@
       },
       {
         "href": "/es/industries/paid-advertising#meta-ads",
-        "text": "Anuncios en Meta"
-      },
-      {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
-        "text": "Anuncios en TikTok"
+        "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
         "href": "/es/industries/paid-advertising#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
+        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
         "href": "/es/pay-per-service#seo-strategy",
         "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
       },
       {
         "href": "/es/pay-per-service#content-creation",
@@ -9312,11 +9112,11 @@
       },
       {
         "href": "/es/pay-per-service#chatbot-development",
-        "text": "Desarrollo de chatbots"
+        "text": "Desarrollo de chatbots (IA y por reglas)"
       },
       {
         "href": "/es/pay-per-service#workflow-automation",
-        "text": "Automatización de procesos"
+        "text": "Automatización de procesos específicos"
       },
       {
         "href": "/es/pay-per-service#appointment-automation",
@@ -9324,11 +9124,11 @@
       },
       {
         "href": "/es/pay-per-service#ecommerce-automation",
-        "text": "Automatización para e-commerce"
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
       },
       {
         "href": "/es/pay-per-service#comment-auto-reply",
-        "text": "Respuestas a comentarios en Facebook e Instagram"
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
       },
       {
         "href": "/es/pay-per-service#lead-ops-crm",
@@ -9344,7 +9144,7 @@
       },
       {
         "href": "/es/pay-per-service#crm-pipeline",
-        "text": "Configuración del embudo en el CRM"
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
       },
       {
         "href": "/es/pay-per-service#crm-integration",
@@ -9405,22 +9205,6 @@
       {
         "href": "/es/features",
         "text": "Sistema de Ventas→"
-      },
-      {
-        "href": "/es/industries/paid-advertising",
-        "text": "Publicidad pagada"
-      },
-      {
-        "href": "/es/industries/dental-practices",
-        "text": "Clínicas Odontológicas"
-      },
-      {
-        "href": "/es/industries/aesthetic-medicine",
-        "text": "Medicina Estética"
-      },
-      {
-        "href": "/es/industries/med-spas",
-        "text": "Med Spas"
       },
       {
         "href": "/es/pay-per-service",
@@ -9525,7 +9309,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 42306,
+    "htmlBytes": 35746,
     "incoming": [
       "/es",
       "/es/about",
@@ -9545,15 +9329,15 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
-      "/es/industries/dental-practices",
-      "/es/industries/aesthetic-medicine",
-      "/es/industries/med-spas",
       "/es/pay-per-service",
+      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/terms",
       "/es/book",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
       "/es/privacy"
     ]
   },
@@ -9865,7 +9649,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -9990,7 +9774,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202677,
+    "htmlBytes": 202659,
     "incoming": [
       "/",
       "/about",
@@ -10328,7 +10112,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -10453,7 +10237,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 204734,
+    "htmlBytes": 204716,
     "incoming": [
       "/es",
       "/es/about",
@@ -10791,7 +10575,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -10916,7 +10700,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203282,
+    "htmlBytes": 203264,
     "incoming": [
       "/",
       "/about",
@@ -11254,7 +11038,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -11379,7 +11163,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 205271,
+    "htmlBytes": 205253,
     "incoming": [
       "/es",
       "/es/about",
@@ -11717,7 +11501,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Thu10Fri11Sat12Mon14Tue15Wed16Thu17Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -11842,7 +11626,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202560,
+    "htmlBytes": 202542,
     "incoming": [
       "/",
       "/about",
@@ -12180,7 +11964,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026jue10vie11sáb12lun14mar15mié16jue17Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -12305,7 +12089,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 204636,
+    "htmlBytes": 204618,
     "incoming": [
       "/es",
       "/es/about",

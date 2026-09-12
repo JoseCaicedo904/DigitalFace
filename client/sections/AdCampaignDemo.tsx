@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AdFeedPhone } from "@/components/demo/AdFeedPhone";
+import { DemoDisclaimer } from "@/components/demo/DemoDisclaimer";
 import type { AdCampaignDemoContent } from "@/components/demo/adCampaign";
 import { cn } from "@/lib/utils";
 
@@ -24,6 +25,7 @@ interface AdCampaignDemoSectionProps {
   /** Anchor target. The industry funnels land their "see the system" link
    *  here, because this is where the demonstration starts. */
   id?: string;
+  disclaimer?: string;
   className?: string;
 }
 
@@ -37,6 +39,7 @@ export function AdCampaignDemoSection({
   content: t,
   ctaHref,
   id,
+  disclaimer,
   className,
 }: AdCampaignDemoSectionProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -104,6 +107,9 @@ export function AdCampaignDemoSection({
             <p className="mt-5 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-white/40">
               {t.phoneCaption}
             </p>
+            {disclaimer ? (
+              <DemoDisclaimer text={disclaimer} tone="dark" />
+            ) : null}
           </motion.div>
 
           <motion.div

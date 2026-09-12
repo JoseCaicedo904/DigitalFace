@@ -86,12 +86,18 @@ export default function Index() {
         id="system"
         content={t.adCampaignDemo}
         ctaHref={path("/industries/paid-advertising")}
+        disclaimer={t.demoDisclaimer}
       />
       <ConversationDemoSection
         content={t.conversationDemo}
         ctaHref={bookHref}
+        disclaimer={t.demoDisclaimer}
       />
-      <CrmPipelineDemoSection content={t.crmPipelineDemo} ctaHref={bookHref} />
+      <CrmPipelineDemoSection
+        content={t.crmPipelineDemo}
+        ctaHref={bookHref}
+        disclaimer={t.demoDisclaimer}
+      />
       {/* The pipeline board above ends on "appointment requested", which is
           exactly where the next question arrives: how do you know they will
           turn up? So the reservation step is explained here, attached to the

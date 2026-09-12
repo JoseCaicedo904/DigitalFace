@@ -6,7 +6,12 @@ import { AddToRequestButton } from "@/components/request/AddToRequestButton";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { payPerServicePageContent } from "@/i18n/content/payPerServicePage";
 import { payPerServiceOutcomeIcons } from "./payPerServiceIcons";
-import { serviceCatalog, getServiceName } from "@/data/serviceCatalog";
+import {
+  getServiceAnchor,
+  getServiceName,
+  orderServicesForPage,
+  serviceCatalog,
+} from "@/data/serviceCatalog";
 import { ChevronDown } from "lucide-react";
 import { REQUEST_SERVICES_ANCHOR } from "@/components/request/anchor";
 import { Link } from "react-router-dom";
@@ -107,14 +112,14 @@ export default function PayPerService() {
                     ) : null}
                   </div>
                   <div className="grid auto-rows-fr place-items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {group.services.map((service) => {
+                    {orderServicesForPage(group.services).map((service) => {
                       const copy = services[service.contentKey];
                       const outcomeIcons =
                         payPerServiceOutcomeIcons[service.id];
                       return (
                         <div
                           key={service.id}
-                          id={service.id}
+                          id={getServiceAnchor(service.id)}
                           className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card scroll-mt-28"
                         >
                           <div className="flex flex-1 flex-col space-y-5">

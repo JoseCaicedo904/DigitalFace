@@ -1,11 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
   SERVICE_IDS,
+  getServiceAnchor,
   getServiceGroupName,
   getServiceName,
   isServiceId,
+  orderServicesForPage,
   resolveCatalog,
   serviceCatalog,
+  serviceHref,
 } from "./serviceCatalog";
 
 /**
@@ -60,14 +63,25 @@ describe("service catalog", () => {
     );
   });
 
-  it("uses Google Ads as the middle paid-media card and request id", () => {
+  it("places Google Ads after TikTok on the page without changing catalog order", () => {
     const paidMedia = serviceCatalog.find((group) => group.key === "paidMedia");
 
     expect(
       paidMedia?.services.slice(0, 3).map((service) => service.id),
     ).toEqual(["meta-ads", "google-ads", "tiktok-ads"]);
+    expect(
+      orderServicesForPage(paidMedia?.services ?? [])
+        .slice(0, 3)
+        .map((service) => service.id),
+    ).toEqual(["meta-ads", "tiktok-ads", "google-ads"]);
     expect(isServiceId("google-ads")).toBe(true);
     expect(isServiceId("conversion-tracking")).toBe(false);
+  });
+
+  it("uses a filter-safe Google Ads card anchor", () => {
+    expect(getServiceAnchor("google-ads")).toBe("google-campaigns");
+    expect(serviceHref("google-ads")).toBe("/pay-per-service#google-campaigns");
+    expect(getServiceAnchor("tiktok-ads")).toBe("tiktok-ads");
   });
 
   it("groups every service under a catalog section", () => {

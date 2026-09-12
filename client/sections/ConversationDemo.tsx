@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ConversationPhone } from "@/components/demo/ConversationPhone";
+import { DemoDisclaimer } from "@/components/demo/DemoDisclaimer";
 import type { ConversationDemoContent } from "@/components/demo/conversation";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,7 @@ interface ConversationDemoSectionProps {
   content: ConversationDemoContent;
   /** Router path, or an in-page anchor when the page books on itself. */
   ctaHref: string;
+  disclaimer?: string;
   className?: string;
 }
 
@@ -36,6 +38,7 @@ interface ConversationDemoSectionProps {
 export function ConversationDemoSection({
   content: t,
   ctaHref,
+  disclaimer,
   className,
 }: ConversationDemoSectionProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -171,6 +174,7 @@ export function ConversationDemoSection({
             <p className="mt-5 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-400">
               {t.phoneCaption}
             </p>
+            {disclaimer ? <DemoDisclaimer text={disclaimer} /> : null}
           </motion.div>
         </div>
       </div>
