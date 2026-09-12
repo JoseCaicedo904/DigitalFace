@@ -67,10 +67,6 @@ export default function Pricing() {
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center justify-center rounded-full border border-brand-100 bg-brand-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
-              {t.packages.eyebrow}
-            </span>
-            <p className="mt-4 text-base text-ink-500">{t.packages.intro}</p>
             {/*
               The commitment answer, given before the prices rather than in the
               small print under them. It reads as one line on desktop and as a
