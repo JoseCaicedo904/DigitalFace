@@ -42,9 +42,9 @@ const en = {
         badge: "01",
         time: "9:14 PM",
         title: "They find you",
-        patient: "María sees your ad and leaves her name and number.",
+        patient: "María sees the ad and leaves her name and number.",
         system:
-          "We connect your campaigns, forms, messages and chat to one place.",
+          "We build and connect the campaigns, forms, messages and chat to one place.",
         modules: ["Paid traffic", "Lead capture"],
         script: {
           kind: "inbox",
@@ -339,9 +339,9 @@ const es: typeof en = {
         badge: "01",
         time: "9:14 pm",
         title: "Te encuentran",
-        patient: "María ve tu anuncio y deja su nombre y teléfono.",
+        patient: "María ve el anuncio y deja su nombre y número.",
         system:
-          "Conectamos campañas, formularios, mensajes y chat en un solo lugar.",
+          "Construimos y conectamos las campañas, formularios, mensajes y chat en un solo lugar.",
         modules: ["Pauta digital", "Captura de contactos"],
         script: {
           kind: "inbox",
