@@ -47,7 +47,10 @@ export const clients: ClientRecord[] = [
     id: "jennifer",
     name: "Dra. Jennifer Sinisterra",
     tier: "featured",
-    logo: null,
+    logo: {
+      src: `${LOGO_DIR}/optimized/Logo Dra. Jennifer.PNG`,
+      tone: "light",
+    },
   },
   {
     id: "diego",
@@ -59,7 +62,10 @@ export const clients: ClientRecord[] = [
     id: "braveros",
     name: "Braveros Box / Neon Race",
     tier: "featured",
-    logo: null,
+    logo: {
+      src: `${LOGO_DIR}/optimized/Logo Braveros.png`,
+      tone: "dark",
+    },
   },
   {
     id: "saboreo",
