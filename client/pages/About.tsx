@@ -5,7 +5,14 @@ import { useLocale } from "@/i18n/LocaleProvider";
 import { aboutContent } from "@/i18n/content/about";
 import type { Locale } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
-import { motion, useReducedMotion } from "framer-motion";
+import {
+  animate,
+  motion,
+  useInView,
+  useMotionValue,
+  useReducedMotion,
+  useTransform,
+} from "framer-motion";
 import {
   Building2,
   Clock,
@@ -754,6 +761,134 @@ function RootsIcon({
 /** Matched to the details by position, so the content file stays copy-only. */
 const DETAIL_ICONS: readonly LucideIcon[] = [MapPin, Globe, Clock];
 
+type RootStatConfig = {
+  value: number;
+  minimumDigits: number;
+  suffix: string;
+};
+
+const ROOT_STAT_CONFIG: readonly RootStatConfig[] = [
+  { value: 9, minimumDigits: 2, suffix: "+" },
+  { value: 50, minimumDigits: 1, suffix: "+" },
+  { value: 500, minimumDigits: 1, suffix: "+" },
+  { value: 3, minimumDigits: 2, suffix: "" },
+];
+
+function AnimatedStatNumber({
+  config,
+  delay,
+  play,
+  reduceMotion,
+}: {
+  config: RootStatConfig;
+  delay: number;
+  play: boolean;
+  reduceMotion: boolean;
+}) {
+  const value = useMotionValue(reduceMotion ? config.value : 0);
+  const displayValue = useTransform(value, (latest) =>
+    String(Math.round(latest)).padStart(config.minimumDigits, "0"),
+  );
+
+  useEffect(() => {
+    if (reduceMotion) {
+      value.set(config.value);
+      return;
+    }
+
+    if (!play) return;
+
+    const controls = animate(value, config.value, {
+      duration: 1.35,
+      delay,
+      ease: [0.22, 1, 0.36, 1],
+    });
+
+    return () => controls.stop();
+  }, [config.value, delay, play, reduceMotion, value]);
+
+  const finalValue = String(config.value).padStart(config.minimumDigits, "0");
+
+  return (
+    <dd className="order-1 flex items-start text-[3.5rem] font-semibold leading-none tracking-[-0.055em] text-slate-900 sm:text-[4rem] lg:text-[4.25rem] xl:text-[4.75rem]">
+      <span className="sr-only">
+        {finalValue}
+        {config.suffix}
+      </span>
+      <motion.span aria-hidden="true" className="tabular-nums">
+        {displayValue}
+      </motion.span>
+      {config.suffix ? (
+        <span
+          aria-hidden="true"
+          className="ml-1 mt-[0.08em] text-[0.5em] tracking-normal text-brand-600"
+        >
+          {config.suffix}
+        </span>
+      ) : null}
+    </dd>
+  );
+}
+
+function RootsStats({
+  items,
+}: {
+  items: readonly { label: string; supportingText: string }[];
+}) {
+  const panelRef = useRef<HTMLDListElement | null>(null);
+  const inView = useInView(panelRef, { once: true, amount: 0.25 });
+  const prefersReducedMotion = useReducedMotion();
+  const reduceMotion = Boolean(prefersReducedMotion);
+
+  return (
+    <dl
+      ref={panelRef}
+      className="mt-12 grid grid-cols-1 border-y border-ink-200/80 sm:grid-cols-2"
+    >
+      {items.map((item, index) => {
+        const config = ROOT_STAT_CONFIG[index];
+
+        return (
+          <motion.div
+            key={item.label}
+            className={cn(
+              "relative flex flex-col py-7",
+              index > 0 && "border-t border-ink-200/80",
+              index === 0 && "sm:pr-8",
+              index === 1 &&
+                "sm:border-l sm:border-t-0 sm:border-ink-200/80 sm:pl-8",
+              index === 2 && "sm:pr-8",
+              index === 3 && "sm:border-l sm:border-ink-200/80 sm:pl-8",
+            )}
+            initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+            animate={inView || reduceMotion ? { opacity: 1, y: 0 } : undefined}
+            transition={{
+              duration: 0.55,
+              delay: reduceMotion ? 0 : index * 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+          >
+            <dt className="order-2 mt-4 text-[11px] font-semibold uppercase leading-[1.45] tracking-[0.18em] text-ink-500 sm:text-xs">
+              {item.label}
+            </dt>
+            <AnimatedStatNumber
+              config={config}
+              delay={index * 0.12}
+              play={inView}
+              reduceMotion={reduceMotion}
+            />
+            {item.supportingText ? (
+              <dd className="order-3 mt-4 max-w-[16rem] text-xs leading-relaxed text-ink-500 sm:text-[13px]">
+                {item.supportingText}
+              </dd>
+            ) : null}
+          </motion.div>
+        );
+      })}
+    </dl>
+  );
+}
+
 /* --------------------------------------------------------------------------
  * Hero atmosphere — the About opening.
  *
@@ -1194,6 +1329,7 @@ export default function About() {
                       {t.roots.foundersNote}
                     </p>
                   </div>
+                  <RootsStats items={t.roots.stats} />
                 </div>
               </div>
 

@@ -5,8 +5,8 @@ import type { Locale } from "../locale";
  *
  * Three standing rules for this file:
  * 1. DigitalFace is the protagonist. Founder names appear exactly once, as
- *    company history — no biographies, credentials, years of experience or
- *    individual timelines.
+ *    company history — no biographies, personal credentials or individual
+ *    timelines. Company-level metrics require explicit written approval.
  * 2. No invented scale. DigitalFace has no departments, employees or offices
  *    beyond what is published elsewhere on the site. Specialists are partners
  *    brought into an engagement, and the copy must keep saying so.
@@ -74,6 +74,15 @@ const en = {
     ],
     foundersNote:
       "Founded by brothers Nicolás and José Caicedo, bringing together marketing, quantitative analysis and technology.",
+    stats: [
+      { label: "Years of experience", supportingText: "" },
+      { label: "Businesses supported", supportingText: "" },
+      { label: "Digital solutions implemented", supportingText: "" },
+      {
+        label: "Markets served",
+        supportingText: "Colombia · United States · Latin America",
+      },
+    ],
     detailsLabel: "Company details",
     details: [
       {
@@ -158,6 +167,15 @@ const es: typeof en = {
     ],
     foundersNote:
       "Fundada por los hermanos Nicolás y José Caicedo, combinando marketing, análisis cuantitativo y tecnología.",
+    stats: [
+      { label: "Años de experiencia", supportingText: "" },
+      { label: "Negocios apoyados", supportingText: "" },
+      { label: "Soluciones digitales implementadas", supportingText: "" },
+      {
+        label: "Mercados atendidos",
+        supportingText: "Colombia · Estados Unidos · Latinoamérica",
+      },
+    ],
     detailsLabel: "Datos de la compañía",
     details: [
       {
