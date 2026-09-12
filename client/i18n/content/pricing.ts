@@ -51,10 +51,10 @@ const planDefinitions = {
     recommended: false,
     includedFeatures: captureFeatures,
   },
-  ai: { id: "ai", recommended: true, includedFeatures: aiFeatures },
+  ai: { id: "ai", recommended: false, includedFeatures: aiFeatures },
   salesSystem: {
     id: "sales-system",
-    recommended: false,
+    recommended: true,
     includedFeatures: salesFeatures,
   },
 };
