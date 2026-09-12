@@ -172,28 +172,28 @@ const en = {
           "A busy practice losing opportunities to slow replies and manual follow-up.",
         features: [
           {
-            title: "Let AI answer in two languages",
-            body: "Your AI chatbot answers approved questions in English and Spanish.",
+            title: "AI answers in multiple languages",
+            body: "Approved questions can be handled in English, Spanish, and other supported languages.",
           },
           {
-            title: "Know what patients need",
-            body: "Find out what people need before your team takes over.",
+            title: "Understand patient needs",
+            body: "The AI asks the right questions and identifies what someone needs before your team steps in.",
           },
           {
-            title: "Help book and reschedule",
-            body: "Check availability and ask for confirmation before changing an appointment.",
+            title: "AI helps book and reschedule",
+            body: "Check availability, suggest times, and confirm changes before updating an appointment.",
           },
           {
-            title: "Let your team step in",
-            body: "Bring your team into sensitive conversations with the full history.",
+            title: "Bring your team in",
+            body: "The AI hands sensitive or complex conversations to your staff with the context preserved.",
           },
           {
-            title: "Reconnect after a missed visit",
-            body: "Follow up with people who missed a visit and invite them back.",
+            title: "Reconnect after missed visits",
+            body: "Follow up automatically with patients who did not attend and invite them to book again.",
           },
           {
-            title: "Offer an optional deposit",
-            body: "Let clients secure an appointment through your payment provider.",
+            title: "AI supports optional deposits",
+            body: "The AI guides patients through a reservation payment using your connected payment provider.",
           },
         ],
         scope: "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
@@ -693,28 +693,28 @@ const es: typeof en = {
           "Una clínica que pierde oportunidades por respuestas tardías y seguimiento manual.",
         features: [
           {
-            title: "Deja que la IA responda en dos idiomas",
-            body: "Tu chatbot de IA responde preguntas aprobadas en inglés y español.",
+            title: "La IA responde en varios idiomas",
+            body: "Las preguntas aprobadas pueden atenderse en inglés, español y otros idiomas compatibles.",
           },
           {
-            title: "Conoce qué necesita el paciente",
-            body: "Identifica qué necesita cada persona antes de pasarla a tu equipo.",
+            title: "Entender lo que necesita el paciente",
+            body: "La IA hace las preguntas adecuadas e identifica la necesidad antes de que intervenga tu equipo.",
           },
           {
-            title: "Ayuda a agendar y reprogramar",
-            body: "Verifica disponibilidad y solicita confirmación antes de cambiar una cita.",
+            title: "La IA ayuda a agendar y reprogramar",
+            body: "Consulta disponibilidad, propone horarios y confirma cambios antes de actualizar una cita.",
           },
           {
-            title: "Deja que tu equipo intervenga",
-            body: "Pasa conversaciones sensibles al personal con todo el historial.",
+            title: "Incorporar a tu equipo",
+            body: "La IA transfiere conversaciones sensibles o complejas manteniendo el contexto disponible.",
           },
           {
-            title: "Retoma las citas perdidas",
-            body: "Contacta a quienes faltaron a su cita e invítalos a reagendar.",
+            title: "Retomar citas perdidas",
+            body: "Hace seguimiento automático a quienes no asistieron y los invita a agendar nuevamente.",
           },
           {
-            title: "Ofrece un anticipo opcional",
-            body: "Permite reservar con un anticipo a través de tu proveedor de pagos.",
+            title: "La IA facilita depósitos opcionales",
+            body: "La IA guía al paciente durante el pago de reserva mediante tu proveedor conectado.",
           },
         ],
         scope:
