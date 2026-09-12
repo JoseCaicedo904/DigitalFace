@@ -1367,8 +1367,12 @@ export default function About() {
                               key={line}
                               className={cn(
                                 "block",
-                                lineIndex === 0 &&
+                                (lineIndex === 0 ||
+                                  (index === 2 && lineIndex === 2)) &&
                                   "font-semibold text-slate-900",
+                                index === 2 &&
+                                  lineIndex % 2 === 1 &&
+                                  "whitespace-nowrap font-normal",
                               )}
                             >
                               {line}

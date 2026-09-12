@@ -59,8 +59,10 @@ const en = {
     offices: "Offices",
     emailLabel: "Email",
     hoursLabel: "Service window",
-    hoursValue:
-      "Monday – Friday, 8:00 AM – 8:00 PM ET · Saturday, 8:00 AM – 6:00 PM ET",
+    hoursValue: [
+      { day: "Monday – Friday", time: "8:00 AM – 8:00 PM ET" },
+      { day: "Saturday", time: "8:00 AM – 6:00 PM ET" },
+    ],
     locationsLabel: "Locations",
     locationsValue: "Miami, FL and Cali, CO",
     miamiTitle: "Miami, Florida",
@@ -131,8 +133,10 @@ const es: typeof en = {
     offices: "Oficinas",
     emailLabel: "Correo",
     hoursLabel: "Horario de atención",
-    hoursValue:
-      "Lunes a viernes, 8:00 a. m. – 8:00 p. m. ET · Sábado, 8:00 a. m. – 6:00 p. m. ET",
+    hoursValue: [
+      { day: "Lunes a viernes", time: "8:00 a. m. – 8:00 p. m. ET" },
+      { day: "Sábado", time: "8:00 a. m. – 6:00 p. m. ET" },
+    ],
     locationsLabel: "Ubicaciones",
     locationsValue: "Miami, FL y Cali, CO",
     miamiTitle: "Miami, Florida",

@@ -651,8 +651,15 @@ export default function MainLayout() {
                 </li>
                 <li>
                   <span>{t.footer.hoursLabel}</span>
-                  <span className="block font-semibold text-white">
-                    {t.footer.hoursValue}
+                  <span className="block text-white">
+                    {t.footer.hoursValue.map(({ day, time }) => (
+                      <span key={day} className="block">
+                        <span className="block font-semibold">{day}</span>
+                        <span className="block whitespace-nowrap font-normal">
+                          {time}
+                        </span>
+                      </span>
+                    ))}
                   </span>
                 </li>
                 <li>

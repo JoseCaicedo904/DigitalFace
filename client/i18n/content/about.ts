@@ -95,7 +95,8 @@ const en = {
         lines: [
           "Monday – Friday",
           "8:00 AM – 8:00 PM ET",
-          "Saturday · 8:00 AM – 6:00 PM ET",
+          "Saturday",
+          "8:00 AM – 6:00 PM ET",
         ],
       },
     ],
@@ -191,7 +192,8 @@ const es: typeof en = {
         lines: [
           "Lunes a viernes",
           "8:00 a. m. – 8:00 p. m. ET",
-          "Sábado · 8:00 a. m. – 6:00 p. m. ET",
+          "Sábado",
+          "8:00 a. m. – 6:00 p. m. ET",
         ],
       },
     ],
