@@ -523,7 +523,7 @@ const en = {
       },
       {
         title: "Month-to-month, with a defined scope",
-        body: "No annual contract or minimum term. Setup is charged once, at the start. Included adjustments total up to 1 hour/month for Capture, 2 for AI and 3 for Sales System, alongside maintenance. New workflows and extra locations, calendars, languages, channels or integrations are quoted separately. You can upgrade at any time.",
+        body: "No annual contract or minimum term. Setup is charged once, at the start. Included adjustments are available each week: up to 3 hours for Capture, 4 hours for AI and 6 hours for the Sales System, alongside ongoing maintenance. New workflows and additional locations, calendars, languages, channels or integrations are quoted separately. You can upgrade at any time.",
       },
     ],
     guarantee:
@@ -1024,7 +1024,7 @@ const es: typeof en = {
       },
       {
         title: "Mes a mes, con un alcance definido",
-        body: "Sin contrato anual ni permanencia mínima. La implementación se cobra una vez, al inicio. Además del mantenimiento, se incluyen hasta 1 hora mensual de ajustes en Capture, 2 en AI y 3 en Sales System. Los procesos nuevos, sedes, calendarios, idiomas, canales o conexiones adicionales se cotizan aparte. Puedes subir de nivel cuando quieras.",
+        body: "Sin contrato anual ni permanencia mínima. La implementación se cobra una sola vez, al inicio. Cada semana se incluyen hasta 3 horas de ajustes para Capture, 4 horas para AI y 6 horas para Sales System, además del mantenimiento continuo. Los nuevos workflows y las ubicaciones, calendarios, idiomas, canales o integraciones adicionales se cotizan por separado. Puedes cambiar a un plan superior en cualquier momento.",
       },
     ],
     guarantee:
