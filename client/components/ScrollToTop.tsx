@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { anchorIdFromHash, scrollToPageAnchor } from "@/lib/anchorScroll";
 
 /**
  * Forces window scroll position to reset to the top whenever the route changes.
@@ -9,9 +10,15 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     if (hash) {
-      const target = document.getElementById(hash.slice(1));
-      if (target) {
-        target.scrollIntoView({ block: "start" });
+      const anchorId = anchorIdFromHash(hash);
+      const target = anchorId ? document.getElementById(anchorId) : null;
+      if (anchorId && target) {
+        scrollToPageAnchor(
+          anchorId,
+          target.hasAttribute("data-pay-per-service-anchor")
+            ? "smooth"
+            : "auto",
+        );
         return;
       }
     }

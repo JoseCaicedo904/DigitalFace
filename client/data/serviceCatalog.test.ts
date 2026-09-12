@@ -84,6 +84,12 @@ describe("service catalog", () => {
     expect(getServiceAnchor("tiktok-ads")).toBe("tiktok-ads");
   });
 
+  it("keeps every service deep link on Pay per Service", () => {
+    for (const id of SERVICE_IDS) {
+      expect(serviceHref(id)).toBe(`/pay-per-service#${getServiceAnchor(id)}`);
+    }
+  });
+
   it("groups every service under a catalog section", () => {
     const grouped = serviceCatalog.flatMap((group) =>
       group.services.map((service) => service.id),

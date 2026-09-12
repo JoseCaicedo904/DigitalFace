@@ -8,12 +8,13 @@ import { cn } from "@/lib/utils";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { commonContent } from "@/i18n/content/common";
 import {
+  getServiceAnchor,
   serviceCatalog,
   serviceHref,
   getServiceName,
   type ServiceGroupKey,
-  type ServiceId,
 } from "@/data/serviceCatalog";
+import { scrollToPageAnchor } from "@/lib/anchorScroll";
 import {
   getIndustryNavLabels,
   industryHref,
@@ -29,7 +30,13 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import {
   useCallback,
   useEffect,
@@ -38,6 +45,7 @@ import {
   useRef,
   useState,
 } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 
 /**
  * Below this the header always uses the drawer — a phone or tablet can never
@@ -73,15 +81,6 @@ const SERVICE_GROUP_ICONS = {
   leadOps: BarChart3,
   websites: Search,
 } as const satisfies Record<ServiceGroupKey, typeof Megaphone>;
-const SERVICE_GROUP_DESTINATIONS: Partial<Record<ServiceGroupKey, string>> = {
-  paidMedia: "/industries/paid-advertising",
-};
-
-const SERVICE_DESTINATIONS: Partial<Record<ServiceId, string>> = {
-  "meta-ads": "/industries/paid-advertising#meta-ads",
-  "google-ads": "/industries/paid-advertising#google-campaigns",
-  "tiktok-ads": "/industries/paid-advertising#tiktok-ads",
-};
 
 const desktopNavLinkClass = ({ isActive }: { isActive: boolean }) =>
   cn(
@@ -96,6 +95,7 @@ const desktopNavLinkClass = ({ isActive }: { isActive: boolean }) =>
 export default function MainLayout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const { locale, path } = useLocale();
   const t = commonContent[locale];
 
@@ -239,17 +239,41 @@ export default function MainLayout() {
       categories: serviceCatalog.map((group) => ({
         title: t.megaNav[group.key].title,
         icon: SERVICE_GROUP_ICONS[group.key],
-        to: path(
-          SERVICE_GROUP_DESTINATIONS[group.key] ??
-            `/pay-per-service#${group.id}`,
-        ),
+        anchorId: group.id,
+        to: path(`/pay-per-service#${group.id}`),
         links: group.services.map((service) => ({
           label: getServiceName(service.id, locale),
-          to: path(SERVICE_DESTINATIONS[service.id] ?? serviceHref(service.id)),
+          anchorId: getServiceAnchor(service.id),
+          to: path(serviceHref(service.id)),
         })),
       })),
     }),
     [locale, t, path],
+  );
+
+  const payPerServicePath = path("/pay-per-service");
+  const handleCatalogAnchorClick = useCallback(
+    (event: ReactMouseEvent<HTMLAnchorElement>, anchorId: string) => {
+      if (
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        location.pathname !== payPerServicePath
+      ) {
+        return;
+      }
+
+      if (!scrollToPageAnchor(anchorId)) return;
+
+      event.preventDefault();
+      const destination = `${payPerServicePath}#${anchorId}`;
+      if (`${location.pathname}${location.hash}` !== destination) {
+        navigate(destination);
+      }
+    },
+    [location.hash, location.pathname, navigate, payPerServicePath],
   );
 
   const homePath = path("/");
@@ -384,6 +408,12 @@ export default function MainLayout() {
                             <div key={category.title} className="space-y-4">
                               <Link
                                 to={category.to}
+                                onClick={(event) =>
+                                  handleCatalogAnchorClick(
+                                    event,
+                                    category.anchorId,
+                                  )
+                                }
                                 className="flex items-center gap-3 text-sm font-semibold text-ink-900 transition hover:text-brand-600 cursor-pointer"
                               >
                                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
@@ -399,6 +429,12 @@ export default function MainLayout() {
                                   <li key={link.to}>
                                     <Link
                                       to={link.to}
+                                      onClick={(event) =>
+                                        handleCatalogAnchorClick(
+                                          event,
+                                          link.anchorId,
+                                        )
+                                      }
                                       className="transition hover:text-brand-600 cursor-pointer"
                                     >
                                       {link.label}

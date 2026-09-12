@@ -102,7 +102,10 @@ export default function Index() {
           exactly where the next question arrives: how do you know they will
           turn up? So the reservation step is explained here, attached to the
           journey it belongs to, rather than as a payments pitch of its own. */}
-      <AppointmentCommitment content={t.appointmentCommitment} />
+      <AppointmentCommitment
+        content={t.appointmentCommitment}
+        className="hidden sm:block"
+      />
       {/* Attract, convert and manage have just been shown, and the CRM board
           immediately above is the moment the objection arrives: "we already run
           our own tools." So the answer sits here rather than earlier, where it

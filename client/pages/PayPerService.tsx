@@ -12,21 +12,38 @@ import {
   orderServicesForPage,
   serviceCatalog,
 } from "@/data/serviceCatalog";
+import { anchorIdFromHash, scrollToPageAnchor } from "@/lib/anchorScroll";
 import { ChevronDown } from "lucide-react";
 import { REQUEST_SERVICES_ANCHOR } from "@/components/request/anchor";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 /**
- * The catalog itself now lives in `@/data/serviceCatalog`: the anchor ids are
- * also the ids the request builder stores and sends, so the page and the
- * request cannot drift apart.
+ * The catalog itself lives in `@/data/serviceCatalog`: each stable request id
+ * also supplies the card anchor used by navigation (with one filter-safe DOM
+ * override), so the menu, page and request builder cannot drift apart.
  */
 
 export default function PayPerService() {
   const { locale, path } = useLocale();
+  const { hash } = useLocation();
   const t = payPerServicePageContent[locale];
 
   usePageMetadata(t.metadata.title, t.metadata.description);
+
+  // The route is lazy-loaded, so cross-page hash navigation may run before the
+  // cards exist. Retry once this page has mounted; same-page hash changes use
+  // this same path without remounting the catalog or losing request state.
+  useEffect(() => {
+    const anchorId = anchorIdFromHash(hash);
+    if (!anchorId) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      scrollToPageAnchor(anchorId);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [hash]);
 
   return (
     <div className="bg-white">
@@ -87,6 +104,7 @@ export default function PayPerService() {
                 <div
                   key={group.id}
                   id={group.id}
+                  data-pay-per-service-anchor
                   className="space-y-8 scroll-mt-28"
                 >
                   <div className="space-y-3">
@@ -120,6 +138,7 @@ export default function PayPerService() {
                         <div
                           key={service.id}
                           id={getServiceAnchor(service.id)}
+                          data-pay-per-service-anchor
                           className="flex h-full flex-col self-stretch rounded-3xl border border-ink-100 bg-white/95 p-6 shadow-brand-card scroll-mt-28"
                         >
                           <div className="flex flex-1 flex-col space-y-5">
