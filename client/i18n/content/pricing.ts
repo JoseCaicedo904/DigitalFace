@@ -527,7 +527,7 @@ const en = {
       },
     ],
     guarantee:
-      "Every plan is backed in writing: No annual contract, no minimum term, and you own every account, and external asset we build for you.",
+      "Every plan is backed in writing: No annual contract, no minimum term.",
   },
   includes: {
     eyebrow: "Included in every plan",
@@ -1028,7 +1028,7 @@ const es: typeof en = {
       },
     ],
     guarantee:
-      "Todos los planes quedan por escrito: 30 días de devolución sobre el valor de implementación, salida en vivo en 7 días hábiles o la implementación no se cobra, sin contrato anual ni permanencia mínima, y todas las cuentas, activos y automatizaciones que construimos quedan a tu nombre.",
+      "Cada plan queda respaldado por escrito: Sin contrato anual ni permanencia mínima.",
   },
   includes: {
     eyebrow: "Incluido en todos los planes",
