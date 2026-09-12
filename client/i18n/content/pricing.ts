@@ -229,7 +229,7 @@ const en = {
       {
         ...planDefinitions.salesSystem,
         level: "03 · Attract & grow",
-        name: "The DigitalFace Sales System",
+        name: "The DigitalFace Sales System - Custom Plan",
         description:
           "For practices ready to add advertising and track bookings.",
         idealFor:
@@ -751,7 +751,7 @@ const es: typeof en = {
       {
         ...planDefinitions.salesSystem,
         level: "03 · Atrae y crece",
-        name: "The DigitalFace Sales System",
+        name: "The DigitalFace Sales System - Custom Plan",
         description:
           "Para clínicas listas para sumar publicidad y seguir las citas.",
         idealFor:
