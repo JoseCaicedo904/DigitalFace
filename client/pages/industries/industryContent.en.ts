@@ -30,15 +30,9 @@ export const industryContentEn: IndustryLocaleBundle = {
       eyebrow: "Choose your plan",
       description:
         "We set it up and manage it. Choose the help your practice needs.",
-      mostPopular: "Most popular",
-      perMonth: "/month",
       expandLabel: "See what’s included",
       idealFor: "Ideal for",
       customProposal: "Request a Custom Plan",
-      noContract:
-        "No annual contract required. Every plan runs on a month-to-month basis.",
-      footnote:
-        "CRM and standard hosting are included. AI and communication usage are separate at provider cost, with no included credit. We agree a usage budget before launch. Advertising starts with Sales System; you pay Meta or Google directly. Professional photo and video are not included.",
     },
     proof: {
       eyebrow: "Systems delivered",
@@ -208,7 +202,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         eyebrow: "01 · Attract",
         title: "Reach patients interested in your treatments.",
         description:
-          "Sales System adds dental campaigns on Meta Ads or Google Ads around the treatment you want to promote.",
+          "Activate dental campaigns on Meta Ads, Google Ads or TikTok Ads around the treatment you want to promote, within your plan’s channel limit and custom scope.",
         ctaLabel: "Talk About Dental Campaigns",
         phoneCaption: "Sample ad and consultation request",
         bridge: "Next: answer the treatment inquiry.",
@@ -535,196 +529,19 @@ export const industryContentEn: IndustryLocaleBundle = {
       packagesTitle: "Choose your dental plan.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organize dental inquiries",
-          price: "$890",
-          setup: "$597 one-time setup",
-          description:
-            "Keep implant, veneer and smile design inquiries organized, with automatic follow-up.",
-          idealFor:
-            "For teams that get inquiries and need consistent follow-up.",
-          highlights: [
-            "Every inquiry in one CRM",
-            "Automatic replies and follow-up",
-            "Booking links and reminders",
-            "Missed-call text-back",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Contacts, messages and next steps in one CRM and shared inbox. Connect two inquiry sources and reply automatically by SMS or email. Stay in touch until someone replies or opts out. Let people choose a time and receive appointment reminders. Send a text when your connected business number misses a call. See inquiry progress while we monitor and maintain your system.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Native connections only; data migration and custom integrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
-            },
-            {
-              title: "Usage and scope",
-              description:
-                "There is no included usage credit. We agree the provider charges and a monthly usage budget before launch; costs are billed directly by providers or itemized at cost. Extra locations, calendars, languages or inquiry sources require a new quote.",
-            },
-            {
-              title: "When to upgrade",
-              description:
-                "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · 1 calendar · English or Spanish",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, conversational AI and website builds are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Messaging, email and phone charges are separate at provider cost.",
-          },
           cta: "Talk About Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Add AI patient follow-up",
-          price: "$1,490",
-          setup: "$1,097 one-time setup",
-          description:
-            "Let AI answer dental inquiries and help patients book a consultation.",
-          idealFor:
-            "For busy teams that need help answering and booking patients.",
-          featured: true,
-          highlights: [
-            "Everything in Capture",
-            "AI answers in English and Spanish",
-            "Booking help and staff takeover",
-            "No-show follow-up and optional deposits",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Your AI chatbot answers approved questions in English and Spanish. Find out what people need before your team takes over. Check availability and ask for confirmation before changing an appointment. Bring your team into sensitive conversations with the full history. Follow up with people who missed a visit and invite them back. Let clients secure an appointment through your payment provider.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
-            },
-            {
-              title: "Appointment boundaries",
-              description:
-                "AI handles administrative questions and commercial interest only. It does not diagnose, prescribe, determine clinical eligibility or approve sensitive medical or financial decisions. Staff retains responsibility. Booking changes require current availability where relevant and explicit confirmation; sensitive requests go to staff.",
-            },
-            {
-              title: "Deposits and usage",
-              description:
-                "An optional, staff-approved deposit workflow can strengthen booking commitment; attendance is not guaranteed. Your payment provider sends funds to your account and bills its fees. AI and communication usage have no included credit; we agree provider charges and a monthly usage budget before launch, with direct billing or itemized pass-through at cost.",
-            },
-            {
-              title: "When to expand",
-              description:
-                "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, website builds, voice AI and bulk email campaigns are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
-          },
-          footnotes: [],
           cta: "Talk About DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Add dental advertising",
-          price: "Custom",
-          priceCaption: "Scoped and quoted around your requirements",
-          description:
-            "Add managed ads and a campaign page for the dental treatment you want to promote.",
-          idealFor:
-            "For practices ready to add advertising and track bookings.",
-          scopeNote:
-            "Starting scope shown below. We agree your final scope and quote before work begins.",
-          highlights: [
-            "Everything in DigitalFace AI",
-            "One Meta Ads or Google Ads channel",
-            "One campaign page · 2 revision rounds",
-            "Up to 4 static ad variations/month",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "We manage one priority channel: Meta Ads or Google Ads. Give visitors one focused page to understand your offer and inquire. Create up to four monthly ad variations using your materials. Adjust campaigns based on what is working and what needs attention. Connect ad activity to inquiries, bookings and recorded attendance. Review acquisition and booking performance together.",
-            },
-            {
-              title: "What the starting scope covers",
-              description:
-                "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
-            },
-            {
-              title: "Advertising budget",
-              description:
-                "The starting scope manages up to $5,000/month in ad spend on one Meta or Google channel. You pay the advertising platform directly. A second channel, TikTok, additional offers or higher spend requires an agreed scope and management-fee adjustment.",
-            },
-            {
-              title: "How custom scope is priced",
-              description:
-                "We define your implementation and monthly management quote on the consultation. Additional locations, brands, inquiry volume, pipelines, integrations, reporting or dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
-            },
-            {
-              title: "Measurement and usage",
-              description:
-                "Reporting connects advertising to inquiries, bookings and staff-recorded attendance; your team must keep outcomes current. No appointment or revenue guarantee. AI and communication usage have no included credit. We agree provider charges and a monthly usage budget before launch, billed directly or itemized at cost.",
-            },
-            {
-              title: "AI and appointment boundaries",
-              description:
-                "AI answers approved administrative questions and qualifies commercial interest; it does not diagnose, prescribe, decide clinical eligibility or approve sensitive medical or financial decisions. Staff handles sensitive cases. Appointment changes require explicit confirmation and current availability where relevant. Optional deposits use your provider; attendance is not guaranteed.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "Starting scope: 1 location · 1 offer · 1 ad channel",
-            },
-            {
-              title: "Not included",
-              description:
-                "Full websites, professional photo/video, SEO and bulk reactivation are separate projects.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
-          },
+          id: "sales-system",
+          nicheName: "Scale dental acquisition",
           cta: "Discuss My Sales System",
-          footnotes: [
-            "Starting scope manages up to $5,000/month in ad spend. Higher spend or more channels requires an agreed fee adjustment.",
-          ],
         },
       ],
       faqTitle: "Before you book",
@@ -885,7 +702,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         eyebrow: "01 · Attract",
         title: "Attract interest in your procedures.",
         description:
-          "Sales System adds Meta Ads or Google Ads for aesthetic medicine, with a clear invitation to book a consultation.",
+          "Activate aesthetic-medicine campaigns on Meta Ads, Google Ads or TikTok Ads, within your plan’s channel limit and custom scope.",
         ctaLabel: "Talk About Aesthetic Campaigns",
         phoneCaption: "Sample ad and consultation request",
         bridge: "Next: help the patient book a consultation.",
@@ -1217,196 +1034,19 @@ export const industryContentEn: IndustryLocaleBundle = {
       packagesTitle: "Choose your aesthetic practice plan.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organize procedure inquiries",
-          price: "$890",
-          setup: "$597 one-time setup",
-          description:
-            "Keep procedure inquiries organized and send an automatic first reply.",
-          idealFor:
-            "For teams that get inquiries and need consistent follow-up.",
-          highlights: [
-            "Every inquiry in one CRM",
-            "Automatic replies and follow-up",
-            "Booking links and reminders",
-            "Missed-call text-back",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Contacts, messages and next steps in one CRM and shared inbox. Connect two inquiry sources and reply automatically by SMS or email. Stay in touch until someone replies or opts out. Let people choose a time and receive appointment reminders. Send a text when your connected business number misses a call. See inquiry progress while we monitor and maintain your system.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Native connections only; data migration and custom integrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
-            },
-            {
-              title: "Usage and scope",
-              description:
-                "There is no included usage credit. We agree the provider charges and a monthly usage budget before launch; costs are billed directly by providers or itemized at cost. Extra locations, calendars, languages or inquiry sources require a new quote.",
-            },
-            {
-              title: "When to upgrade",
-              description:
-                "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · 1 calendar · English or Spanish",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, conversational AI and website builds are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Messaging, email and phone charges are separate at provider cost.",
-          },
           cta: "Talk About Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Add AI consultation support",
-          price: "$1,490",
-          setup: "$1,097 one-time setup",
-          description:
-            "Let AI answer approved questions and help patients book a consultation.",
-          idealFor:
-            "For busy teams that need help answering and booking patients.",
-          featured: true,
-          highlights: [
-            "Everything in Capture",
-            "AI answers in English and Spanish",
-            "Booking help and staff takeover",
-            "No-show follow-up and optional deposits",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Your AI chatbot answers approved questions in English and Spanish. Find out what people need before your team takes over. Check availability and ask for confirmation before changing an appointment. Bring your team into sensitive conversations with the full history. Follow up with people who missed a visit and invite them back. Let clients secure an appointment through your payment provider.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
-            },
-            {
-              title: "Appointment boundaries",
-              description:
-                "AI handles administrative questions and commercial interest only. It does not diagnose, prescribe, determine clinical eligibility or approve sensitive medical or financial decisions. Staff retains responsibility. Booking changes require current availability where relevant and explicit confirmation; sensitive requests go to staff.",
-            },
-            {
-              title: "Deposits and usage",
-              description:
-                "An optional, staff-approved deposit workflow can strengthen booking commitment; attendance is not guaranteed. Your payment provider sends funds to your account and bills its fees. AI and communication usage have no included credit; we agree provider charges and a monthly usage budget before launch, with direct billing or itemized pass-through at cost.",
-            },
-            {
-              title: "When to expand",
-              description:
-                "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, website builds, voice AI and bulk email campaigns are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
-          },
-          footnotes: [],
           cta: "Talk About DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Add aesthetic advertising",
-          price: "Custom",
-          priceCaption: "Scoped and quoted around your requirements",
-          description:
-            "Add managed ads and a campaign page for your priority procedure.",
-          idealFor:
-            "For practices ready to add advertising and track bookings.",
-          scopeNote:
-            "Starting scope shown below. We agree your final scope and quote before work begins.",
-          highlights: [
-            "Everything in DigitalFace AI",
-            "One Meta Ads or Google Ads channel",
-            "One campaign page · 2 revision rounds",
-            "Up to 4 static ad variations/month",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "We manage one priority channel: Meta Ads or Google Ads. Give visitors one focused page to understand your offer and inquire. Create up to four monthly ad variations using your materials. Adjust campaigns based on what is working and what needs attention. Connect ad activity to inquiries, bookings and recorded attendance. Review acquisition and booking performance together.",
-            },
-            {
-              title: "What the starting scope covers",
-              description:
-                "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
-            },
-            {
-              title: "Advertising budget",
-              description:
-                "The starting scope manages up to $5,000/month in ad spend on one Meta or Google channel. You pay the advertising platform directly. A second channel, TikTok, additional offers or higher spend requires an agreed scope and management-fee adjustment.",
-            },
-            {
-              title: "How custom scope is priced",
-              description:
-                "We define your implementation and monthly management quote on the consultation. Additional locations, brands, inquiry volume, pipelines, integrations, reporting or dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
-            },
-            {
-              title: "Measurement and usage",
-              description:
-                "Reporting connects advertising to inquiries, bookings and staff-recorded attendance; your team must keep outcomes current. No appointment or revenue guarantee. AI and communication usage have no included credit. We agree provider charges and a monthly usage budget before launch, billed directly or itemized at cost.",
-            },
-            {
-              title: "AI and appointment boundaries",
-              description:
-                "AI answers approved administrative questions and qualifies commercial interest; it does not diagnose, prescribe, decide clinical eligibility or approve sensitive medical or financial decisions. Staff handles sensitive cases. Appointment changes require explicit confirmation and current availability where relevant. Optional deposits use your provider; attendance is not guaranteed.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "Starting scope: 1 location · 1 offer · 1 ad channel",
-            },
-            {
-              title: "Not included",
-              description:
-                "Full websites, professional photo/video, SEO and bulk reactivation are separate projects.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
-          },
+          id: "sales-system",
+          nicheName: "Scale aesthetic acquisition",
           cta: "Discuss My Sales System",
-          footnotes: [
-            "Starting scope manages up to $5,000/month in ad spend. Higher spend or more channels requires an agreed fee adjustment.",
-          ],
         },
       ],
       faqTitle: "Before you book",
@@ -1544,7 +1184,7 @@ export const industryContentEn: IndustryLocaleBundle = {
           {
             title: "Promotion campaigns with offer attribution",
             description:
-              "Meta, Instagram, Google or another justified channel, built around the offer, the season and the local market, with every opportunity carrying the treatment, the offer and the channel behind it so you know which promotions actually fill the calendar.",
+              "Meta Ads (Facebook and Instagram), Google Ads or TikTok Ads, selected within your plan’s channel limit and built around the offer, the season and the local market. Every opportunity carries the treatment, offer and source so you can see which promotions fill the calendar.",
           },
           {
             title: "AI booking concierge",
@@ -1567,7 +1207,7 @@ export const industryContentEn: IndustryLocaleBundle = {
         eyebrow: "01 · Attract",
         title: "Turn your next offer into booking requests.",
         description:
-          "Sales System adds Meta Ads or Google Ads around your med spa’s priority treatment or offer.",
+          "Activate med spa campaigns on Meta Ads, Google Ads or TikTok Ads around your priority treatment or offer, within your plan’s channel limit and custom scope.",
         ctaLabel: "Talk About Med Spa Campaigns",
         phoneCaption: "Sample ad and booking request",
         bridge: "Next: answer while the offer is fresh.",
@@ -1899,196 +1539,19 @@ export const industryContentEn: IndustryLocaleBundle = {
       packagesTitle: "Choose your med spa plan.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organize booking requests",
-          price: "$890",
-          setup: "$597 one-time setup",
-          description:
-            "Organize treatment and package inquiries, with automatic replies and reminders.",
-          idealFor:
-            "For teams that get inquiries and need consistent follow-up.",
-          highlights: [
-            "Every inquiry in one CRM",
-            "Automatic replies and follow-up",
-            "Booking links and reminders",
-            "Missed-call text-back",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Contacts, messages and next steps in one CRM and shared inbox. Connect two inquiry sources and reply automatically by SMS or email. Stay in touch until someone replies or opts out. Let people choose a time and receive appointment reminders. Send a text when your connected business number misses a call. See inquiry progress while we monitor and maintain your system.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Native connections only; data migration and custom integrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
-            },
-            {
-              title: "Usage and scope",
-              description:
-                "There is no included usage credit. We agree the provider charges and a monthly usage budget before launch; costs are billed directly by providers or itemized at cost. Extra locations, calendars, languages or inquiry sources require a new quote.",
-            },
-            {
-              title: "When to upgrade",
-              description:
-                "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · 1 calendar · English or Spanish",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, conversational AI and website builds are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Messaging, email and phone charges are separate at provider cost.",
-          },
           cta: "Talk About Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Add AI booking support",
-          price: "$1,490",
-          setup: "$1,097 one-time setup",
-          description:
-            "Let AI explain approved offers and help clients book or reschedule.",
-          idealFor:
-            "For busy teams that need help answering and booking patients.",
-          featured: true,
-          highlights: [
-            "Everything in Capture",
-            "AI answers in English and Spanish",
-            "Booking help and staff takeover",
-            "No-show follow-up and optional deposits",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "Your AI chatbot answers approved questions in English and Spanish. Find out what people need before your team takes over. Check availability and ask for confirmation before changing an appointment. Bring your team into sensitive conversations with the full history. Follow up with people who missed a visit and invite them back. Let clients secure an appointment through your payment provider.",
-            },
-            {
-              title: "What implementation covers",
-              description:
-                "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
-            },
-            {
-              title: "What we manage each month",
-              description:
-                "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
-            },
-            {
-              title: "Appointment boundaries",
-              description:
-                "AI handles administrative questions and commercial interest only. It does not diagnose, prescribe, determine clinical eligibility or approve sensitive medical or financial decisions. Staff retains responsibility. Booking changes require current availability where relevant and explicit confirmation; sensitive requests go to staff.",
-            },
-            {
-              title: "Deposits and usage",
-              description:
-                "An optional, staff-approved deposit workflow can strengthen booking commitment; attendance is not guaranteed. Your payment provider sends funds to your account and bills its fees. AI and communication usage have no included credit; we agree provider charges and a monthly usage budget before launch, with direct billing or itemized pass-through at cost.",
-            },
-            {
-              title: "When to expand",
-              description:
-                "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
-            },
-            {
-              title: "Not included",
-              description:
-                "Paid ads, website builds, voice AI and bulk email campaigns are not included.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
-          },
-          footnotes: [],
           cta: "Talk About DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Add med spa advertising",
-          price: "Custom",
-          priceCaption: "Scoped and quoted around your requirements",
-          description:
-            "Add managed ads and a campaign page for your priority treatment or offer.",
-          idealFor:
-            "For practices ready to add advertising and track bookings.",
-          scopeNote:
-            "Starting scope shown below. We agree your final scope and quote before work begins.",
-          highlights: [
-            "Everything in DigitalFace AI",
-            "One Meta Ads or Google Ads channel",
-            "One campaign page · 2 revision rounds",
-            "Up to 4 static ad variations/month",
-          ],
-          details: [
-            {
-              title: "What you get",
-              description:
-                "We manage one priority channel: Meta Ads or Google Ads. Give visitors one focused page to understand your offer and inquire. Create up to four monthly ad variations using your materials. Adjust campaigns based on what is working and what needs attention. Connect ad activity to inquiries, bookings and recorded attendance. Review acquisition and booking performance together.",
-            },
-            {
-              title: "What the starting scope covers",
-              description:
-                "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
-            },
-            {
-              title: "Advertising budget",
-              description:
-                "The starting scope manages up to $5,000/month in ad spend on one Meta or Google channel. You pay the advertising platform directly. A second channel, TikTok, additional offers or higher spend requires an agreed scope and management-fee adjustment.",
-            },
-            {
-              title: "How custom scope is priced",
-              description:
-                "We define your implementation and monthly management quote on the consultation. Additional locations, brands, inquiry volume, pipelines, integrations, reporting or dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
-            },
-            {
-              title: "Measurement and usage",
-              description:
-                "Reporting connects advertising to inquiries, bookings and staff-recorded attendance; your team must keep outcomes current. No appointment or revenue guarantee. AI and communication usage have no included credit. We agree provider charges and a monthly usage budget before launch, billed directly or itemized at cost.",
-            },
-            {
-              title: "AI and appointment boundaries",
-              description:
-                "AI answers approved administrative questions and qualifies commercial interest; it does not diagnose, prescribe, decide clinical eligibility or approve sensitive medical or financial decisions. Staff handles sensitive cases. Appointment changes require explicit confirmation and current availability where relevant. Optional deposits use your provider; attendance is not guaranteed.",
-            },
-            {
-              title: "Scope and limits",
-              description:
-                "Starting scope: 1 location · 1 offer · 1 ad channel",
-            },
-            {
-              title: "Not included",
-              description:
-                "Full websites, professional photo/video, SEO and bulk reactivation are separate projects.",
-            },
-          ],
-          note: {
-            title: "Platform and usage costs",
-            body: "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
-          },
+          id: "sales-system",
+          nicheName: "Scale med spa acquisition",
           cta: "Discuss My Sales System",
-          footnotes: [
-            "Starting scope manages up to $5,000/month in ad spend. Higher spend or more channels requires an agreed fee adjustment.",
-          ],
         },
       ],
       faqTitle: "Before you book",

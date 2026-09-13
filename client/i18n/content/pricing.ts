@@ -157,7 +157,7 @@ const en = {
           },
           {
             title: "What we manage each month",
-            body: "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. Management of an activated ad channel follows its separate scope and budget-based quote. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
+            body: "Workflow monitoring, fixes to the delivered system, one performance review and up to 3 hours of requested copy or workflow adjustments each week. Management of an activated ad channel follows its separate scope and budget-based quote. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
           },
           {
             title: "Usage and scope",
@@ -221,7 +221,7 @@ const en = {
           },
           {
             title: "What we manage each month",
-            body: "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Management of activated ad channels follows each channel's separate scope and budget-based quote. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
+            body: "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Management of activated ad channels follows each channel's separate scope and budget-based quote. Includes one monthly review and up to 4 hours of requested knowledge-base or workflow changes each week; new systems are quoted separately.",
           },
           {
             title: "Appointment boundaries",
@@ -285,7 +285,7 @@ const en = {
         details: [
           {
             title: "What the custom scope covers",
-            body: "DigitalFace AI implementation plus management for up to three selected channels from Meta Ads, Google Ads and TikTok Ads. Tracking, landing-page requirements, creative volume, review cadence and requested changes are defined for each activated channel before launch.",
+            body: "DigitalFace AI implementation plus management for up to three selected channels from Meta Ads, Google Ads and TikTok Ads. Tracking, landing-page requirements, creative volume and review cadence are defined for each activated channel before launch. Ongoing maintenance and up to 6 hours of requested adjustments are available each week.",
           },
           {
             title: "Channel pricing and advertising budget",
@@ -715,7 +715,7 @@ const es: typeof en = {
           },
           {
             title: "Qué gestionamos cada mes",
-            body: "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. La gestión del canal publicitario activo sigue su alcance y cotización basada en presupuesto. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
+            body: "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 3 horas semanales de ajustes solicitados en textos o flujos. La gestión del canal publicitario activo sigue su alcance y cotización basada en presupuesto. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
           },
           {
             title: "Consumo y alcance",
@@ -779,7 +779,7 @@ const es: typeof en = {
           },
           {
             title: "Qué gestionamos cada mes",
-            body: "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. La gestión de los canales publicitarios activos sigue el alcance y la cotización basada en presupuesto de cada canal. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
+            body: "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. La gestión de los canales publicitarios activos sigue el alcance y la cotización basada en presupuesto de cada canal. Incluye una revisión mensual y hasta 4 horas semanales de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
           },
           {
             title: "Límites en el agendamiento",
@@ -843,7 +843,7 @@ const es: typeof en = {
         details: [
           {
             title: "Qué cubre el alcance personalizado",
-            body: "La implementación de DigitalFace AI más la gestión de hasta tres canales seleccionados entre Meta Ads, Google Ads y TikTok Ads. La medición, las landings necesarias, el volumen creativo, la frecuencia de revisión y los cambios solicitados se definen para cada canal activo antes del lanzamiento.",
+            body: "La implementación de DigitalFace AI más la gestión de hasta tres canales seleccionados entre Meta Ads, Google Ads y TikTok Ads. La medición, las landings necesarias, el volumen creativo y la frecuencia de revisión se definen para cada canal activo antes del lanzamiento. El mantenimiento continuo y hasta 6 horas semanales de ajustes solicitados están disponibles.",
           },
           {
             title: "Precio por canal y presupuesto de pauta",

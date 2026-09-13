@@ -43,32 +43,39 @@ export type PackageDetail = {
   description: string;
 };
 
-export type IndustryPackage = {
-  /** Brand name. Identical in every locale. */
-  name: string;
+/** Niche-specific presentation layered over the authoritative main Plans data. */
+export type IndustryPackagePresentation = {
+  id: "capture" | "ai" | "sales-system";
   nicheName: string;
-  /** A money amount on the fixed plans, a word ("Custom") on the custom plan. */
-  price: string;
-  /** Fixed plans only. Its absence is what marks a plan as quoted, not priced. */
-  setup?: string;
-  /** Custom plan only: replaces the "/month" and setup lines under the price. */
-  priceCaption?: string;
+  cta: string;
+};
+
+/** Resolved package rendered on every industry landing page. */
+export type IndustryPackage = IndustryPackagePresentation & {
+  /** Brand name and commercial fields come directly from the main Plans data. */
+  name: string;
   description: string;
   idealFor: string;
-  featured?: boolean;
+  featured: boolean;
+  inherits: string;
   highlights: string[];
-  /** Custom plan only: says the highlights are examples, not inclusions. */
-  scopeNote?: string;
+  adChannelCapacity: string;
+  adChannelPricing: string;
   details: PackageDetail[];
-  /**
-   * The commercial guardrail, shown on the card rather than hidden in the
-   * accordion: the media-budget ceiling on the fixed plans, and what a quote is
-   * built from on the custom plan.
-   */
-  note: { title: string; body: string };
-  /** Usage-based billing small print, shown under the inclusions. */
-  footnotes?: string[];
-  cta: string;
+  scope: string;
+  exclusions: string;
+  usageNote: string;
+};
+
+export type IndustryCommercialTerms = {
+  recommendedLabel: string;
+  noContract: string;
+  title: string;
+  guarantee: string;
+  items: PackageDetail[];
+  scopeLabel: string;
+  exclusionsLabel: string;
+  usageLabel: string;
 };
 
 export type IndustryFaq = {
@@ -133,7 +140,7 @@ export type IndustryLandingText = {
   /** The reservation step, in this funnel's own word for a deposit. */
   appointmentCommitment: AppointmentCommitmentContent;
   packagesTitle: string;
-  packages: IndustryPackage[];
+  packages: IndustryPackagePresentation[];
   faqTitle: string;
   /** Subtitle for the FAQ block. Used to lean on the booking copy. */
   faqDescription: string;
@@ -150,10 +157,12 @@ export type IndustryLandingText = {
 /** Resolved data handed to the landing page component. */
 export type IndustryLandingData = Omit<
   IndustryLandingText,
-  "problem" | "capabilities"
+  "problem" | "capabilities" | "packages"
 > & {
   slug: IndustrySlug;
   proofLead: ClientStoryId;
+  packages: IndustryPackage[];
+  commercialTerms: IndustryCommercialTerms;
   problem: Omit<IndustryLandingText["problem"], "items"> & {
     items: IndustryItem[];
   };
@@ -201,14 +210,9 @@ export type IndustryUiCopy = {
   packages: {
     eyebrow: string;
     description: string;
-    mostPopular: string;
-    perMonth: string;
     expandLabel: string;
     idealFor: string;
     customProposal: string;
-    /** Commitment answer, stated above the cards rather than in small print. */
-    noContract: string;
-    footnote: string;
   };
   proof: {
     eyebrow: string;

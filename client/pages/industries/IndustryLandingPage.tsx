@@ -41,9 +41,7 @@ import {
   HeartHandshake,
   Languages,
   LineChart,
-  Megaphone,
   MessageSquareText,
-  Plus,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -57,6 +55,7 @@ import {
   industryHref,
 } from "./industryData";
 import type {
+  IndustryCommercialTerms,
   IndustryLandingData,
   IndustryPackage,
   IndustrySlug,
@@ -74,6 +73,7 @@ type RevealProps = {
 type PackageCardProps = {
   plan: IndustryPackage;
   ui: IndustryUiCopy;
+  commercialTerms: IndustryCommercialTerms;
   reducedMotion: boolean;
   bookHref: string;
 };
@@ -150,7 +150,13 @@ function SectionHeading({
   );
 }
 
-function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
+function PackageCard({
+  plan,
+  ui,
+  commercialTerms,
+  reducedMotion,
+  bookHref,
+}: PackageCardProps) {
   return (
     <motion.article
       whileHover={reducedMotion ? undefined : { y: -8 }}
@@ -164,7 +170,7 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
     >
       {plan.featured ? (
         <span className="absolute right-6 top-0 rounded-b-xl bg-gradient-to-r from-brand-600 to-ocean-500 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
-          {ui.packages.mostPopular}
+          {commercialTerms.recommendedLabel}
         </span>
       ) : null}
 
@@ -177,62 +183,34 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
         </h3>
       </div>
 
-      <div className="mt-6 flex items-baseline gap-2">
-        <span className="text-4xl font-semibold tracking-tight text-slate-900">
-          {plan.price}
-        </span>
-        {plan.setup ? (
-          <span className="text-sm font-medium text-ink-500">
-            {ui.packages.perMonth}
-          </span>
-        ) : null}
-      </div>
-      <p className="mt-1 text-xs font-medium text-ink-400">
-        {plan.setup ? `+ ${plan.setup}` : plan.priceCaption}
-      </p>
       <p className="mt-5 min-h-[4.5rem] text-sm leading-relaxed text-ink-500">
         {plan.description}
       </p>
 
-      {plan.scopeNote ? (
-        <p className="mt-5 text-xs leading-relaxed text-ink-400">
-          {plan.scopeNote}
+      <div className="mt-5 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-4">
+        <p className="text-sm font-semibold leading-5 text-brand-700">
+          {plan.adChannelCapacity}
         </p>
-      ) : null}
+        <p className="mt-1 text-xs leading-5 text-ink-500">
+          {plan.adChannelPricing}
+        </p>
+      </div>
 
-      <div
-        className={cn(
-          "space-y-3 rounded-2xl border border-brand-100 bg-brand-50/70 p-5",
-          plan.scopeNote ? "mt-3" : "mt-6",
-        )}
-      >
+      <div className="mt-6 space-y-3 rounded-2xl border border-brand-100 bg-brand-50/70 p-5">
+        <p className="rounded-lg bg-white/80 px-3 py-2 text-xs font-semibold text-brand-700">
+          {plan.inherits}
+        </p>
         {plan.highlights.map((item) => {
-          /* A tick would read as "included" on a plan that promises nothing. */
-          const Marker = plan.scopeNote ? Plus : CheckCircle2;
           return (
             <p
               key={item}
               className="flex items-start gap-2.5 text-sm text-ink-600"
             >
-              <Marker className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
               <span>{item}</span>
             </p>
           );
         })}
-      </div>
-
-      <div className="mt-4 rounded-2xl border border-ink-100 bg-ink-50/70 p-5">
-        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
-          {plan.setup ? (
-            <Megaphone className="h-3.5 w-3.5 shrink-0 text-brand-600" />
-          ) : (
-            <Sparkles className="h-3.5 w-3.5 shrink-0 text-brand-600" />
-          )}
-          {plan.note.title}
-        </p>
-        <p className="mt-2 text-[11px] leading-relaxed text-ink-500">
-          {plan.note.body}
-        </p>
       </div>
 
       <div className="mt-6">
@@ -243,7 +221,7 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
           {plan.details.map((detail, index) => (
             <AccordionItem
               key={detail.title}
-              value={`${plan.name}-${index}`}
+              value={`${plan.id}-${index}`}
               className="border-ink-100"
             >
               <AccordionTrigger className="gap-4 text-left text-sm font-semibold text-slate-900 hover:no-underline">
@@ -260,18 +238,26 @@ function PackageCard({ plan, ui, reducedMotion, bookHref }: PackageCardProps) {
         </Accordion>
       </div>
 
-      {plan.footnotes?.length ? (
-        <div className="mt-6 space-y-1.5 border-t border-ink-100 pt-4">
-          {plan.footnotes.map((footnote) => (
-            <p
-              key={footnote}
-              className="text-[11px] leading-relaxed text-ink-400"
-            >
-              {footnote}
-            </p>
-          ))}
-        </div>
-      ) : null}
+      <div className="mt-6 space-y-2 border-t border-ink-100 pt-4 text-[11px] leading-relaxed text-ink-400">
+        <p>
+          <span className="font-semibold text-ink-500">
+            {commercialTerms.scopeLabel}:
+          </span>{" "}
+          {plan.scope}
+        </p>
+        <p>
+          <span className="font-semibold text-ink-500">
+            {commercialTerms.exclusionsLabel}:
+          </span>{" "}
+          {plan.exclusions}
+        </p>
+        <p>
+          <span className="font-semibold text-ink-500">
+            {commercialTerms.usageLabel}:
+          </span>{" "}
+          {plan.usageNote}
+        </p>
+      </div>
 
       <div className="mt-6 border-t border-ink-100 pt-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-400">
@@ -782,7 +768,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
             <Reveal reducedMotion={reducedMotion} className="mt-6 text-center">
               <p className="inline-flex items-start gap-2 rounded-2xl border border-brand-200 bg-brand-50 px-5 py-3 text-left text-sm font-semibold text-brand-700 sm:items-center sm:rounded-full sm:py-2 sm:text-center">
                 <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 sm:mt-0" />
-                {ui.packages.noContract}
+                {data.commercialTerms.noContract}
               </p>
             </Reveal>
             <div className="mt-14 grid items-stretch gap-7 lg:grid-cols-3">
@@ -796,6 +782,7 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
                   <PackageCard
                     plan={plan}
                     ui={ui}
+                    commercialTerms={data.commercialTerms}
                     reducedMotion={reducedMotion}
                     bookHref={bookHref}
                   />
@@ -804,9 +791,33 @@ export default function IndustryLandingPage({ slug }: { slug: IndustrySlug }) {
             </div>
             <Reveal
               reducedMotion={reducedMotion}
-              className="mt-10 rounded-3xl border border-ink-100 bg-ink-50/70 p-6 text-center text-sm leading-relaxed text-ink-500"
+              className="mt-10 rounded-3xl border border-ink-100 bg-ink-50/70 p-6 text-left"
             >
-              {ui.packages.footnote}
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">
+                {data.commercialTerms.title}
+              </p>
+              <p className="mt-3 text-sm font-semibold leading-relaxed text-slate-900">
+                {data.commercialTerms.guarantee}
+              </p>
+              <Accordion type="single" collapsible className="mt-3">
+                {data.commercialTerms.items.map((item, index) => (
+                  <AccordionItem
+                    key={item.title}
+                    value={`commercial-term-${index}`}
+                    className="border-ink-100"
+                  >
+                    <AccordionTrigger className="gap-4 text-left text-sm font-semibold text-slate-900 hover:no-underline">
+                      {item.title}
+                    </AccordionTrigger>
+                    <AccordionContent
+                      forceMount
+                      className="pr-6 text-sm leading-relaxed text-ink-500"
+                    >
+                      {item.description}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </Reveal>
           </div>
         </section>

@@ -1,14 +1,18 @@
 import type { Locale } from "@/i18n/locale";
+import { pricingContent } from "@/i18n/content/pricing";
 import { industryIcons, industryProofLead } from "./industryIcons";
 import { industryContentEn } from "./industryContent.en";
 import { industryContentEs } from "./industryContent.es";
 import type {
   ClientStory,
   ClientStoryId,
+  IndustryCommercialTerms,
   IndustryItem,
   IndustryLandingData,
   IndustryLandingText,
   IndustryLocaleBundle,
+  IndustryPackage,
+  IndustryPackagePresentation,
   IndustrySlug,
   IndustryTextItem,
   IndustryUiCopy,
@@ -18,10 +22,12 @@ import { INDUSTRY_SLUGS } from "./industryTypes";
 export type {
   ClientStory,
   ClientStoryId,
+  IndustryCommercialTerms,
   IndustryItem,
   IndustryLandingData,
   IndustryLandingText,
   IndustryPackage,
+  IndustryPackagePresentation,
   IndustrySlug,
   IndustryUiCopy,
 } from "./industryTypes";
@@ -42,6 +48,98 @@ function attachIcons(
   }));
 }
 
+function buildCommercialPackages(
+  locale: Locale,
+  presentations: IndustryPackagePresentation[],
+): IndustryPackage[] {
+  const commercial = pricingContent[locale];
+  const plans = commercial.packages.items;
+
+  if (presentations.length !== plans.length) {
+    throw new Error(
+      `Industry package presentation count (${presentations.length}) does not match the main Plans page (${plans.length}).`,
+    );
+  }
+
+  const presentationsById = new Map(
+    presentations.map((presentation) => [presentation.id, presentation]),
+  );
+
+  const featureSummaryTitle =
+    locale === "en"
+      ? "Core plan capabilities"
+      : "Funciones principales del plan";
+
+  return plans.map((plan) => {
+    const presentation = presentationsById.get(
+      plan.id as IndustryPackagePresentation["id"],
+    );
+    if (!presentation) {
+      throw new Error(`Missing industry presentation for plan "${plan.id}".`);
+    }
+    const addOns = commercial.packages.comparison.addOns.items.filter((item) =>
+      plan.includedFeatures.includes(item.id),
+    );
+
+    return {
+      id: presentation.id,
+      name: plan.name,
+      nicheName: presentation.nicheName,
+      description: plan.description,
+      idealFor: plan.idealFor,
+      featured: plan.recommended,
+      inherits: plan.inherits,
+      highlights: plan.features.map((feature) => feature.title),
+      adChannelCapacity: plan.adChannelCapacity,
+      adChannelPricing: plan.adChannelPricing,
+      details: [
+        {
+          title: featureSummaryTitle,
+          description: plan.features
+            .map((feature) => `${feature.title}: ${feature.body}`)
+            .join(" "),
+        },
+        ...plan.details.map((detail) => ({
+          title: detail.title,
+          description: detail.body,
+        })),
+        ...(addOns.length
+          ? [
+              {
+                title: commercial.packages.comparison.addOns.title,
+                description: addOns
+                  .map((addOn) => `${addOn.title}: ${addOn.body}`)
+                  .join(" "),
+              },
+            ]
+          : []),
+      ],
+      scope: plan.scope,
+      exclusions: plan.exclusions,
+      usageNote: plan.usageNote,
+      cta: presentation.cta,
+    };
+  });
+}
+
+function buildCommercialTerms(locale: Locale): IndustryCommercialTerms {
+  const commercial = pricingContent[locale];
+
+  return {
+    recommendedLabel: commercial.packages.recommendedLabel,
+    noContract: commercial.packages.noContract,
+    title: commercial.notes.title,
+    guarantee: commercial.notes.guarantee,
+    items: commercial.notes.items.map((item) => ({
+      title: item.title,
+      description: item.body,
+    })),
+    scopeLabel: commercial.packages.comparison.scopeLabel,
+    exclusionsLabel: commercial.packages.exclusionsLabel,
+    usageLabel: commercial.packages.usageLabel,
+  };
+}
+
 function buildIndustry(
   locale: Locale,
   slug: IndustrySlug,
@@ -53,6 +151,8 @@ function buildIndustry(
     ...text,
     slug,
     proofLead: industryProofLead[slug],
+    packages: buildCommercialPackages(locale, text.packages),
+    commercialTerms: buildCommercialTerms(locale),
     problem: {
       ...text.problem,
       items: attachIcons(text.problem.items, icons.problem),

@@ -30,15 +30,9 @@ export const industryContentEs: IndustryLocaleBundle = {
       eyebrow: "Elige tu plan",
       description:
         "Lo configuramos y gestionamos. Elige el apoyo que necesita tu negocio.",
-      mostPopular: "Más elegido",
-      perMonth: "/mes",
       expandLabel: "Ver qué incluye",
       idealFor: "Ideal para",
       customProposal: "Pedir un plan a medida",
-      noContract:
-        "No se requiere contrato anual. Todos los planes funcionan mes a mes.",
-      footnote:
-        "El CRM y el alojamiento estándar están incluidos. La IA y las comunicaciones se cobran a costo de proveedor, sin saldo incluido. Acordamos un presupuesto de consumo antes de activar el sistema. La publicidad empieza con Sales System; pagas directamente a Meta o Google. La foto y el video profesionales no están incluidos.",
     },
     proof: {
       eyebrow: "Sistemas entregados",
@@ -211,7 +205,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         eyebrow: "01 · Atraer",
         title: "Atrae pacientes interesados en tus tratamientos.",
         description:
-          "Sales System suma campañas de marketing dental en Meta Ads o Google Ads para el tratamiento que quieres promocionar.",
+          "Activa campañas dentales en Meta Ads, Google Ads o TikTok Ads para el tratamiento que quieres promocionar, dentro del límite de canales y el alcance personalizado de tu plan.",
         ctaLabel: "Hablar de campañas dentales",
         phoneCaption: "Anuncio y solicitud de ejemplo",
         bridge: "Siguiente paso: responder al paciente.",
@@ -543,196 +537,19 @@ export const industryContentEs: IndustryLocaleBundle = {
       packagesTitle: "Elige el plan para tu clínica dental.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organiza las consultas dentales",
-          price: "$890",
-          setup: "$597 de implementación única",
-          description:
-            "Organiza las consultas sobre implantes, carillas y diseño de sonrisa, con seguimiento automático.",
-          idealFor:
-            "Para equipos que reciben consultas y necesitan dar seguimiento.",
-          highlights: [
-            "Cada consulta en un CRM",
-            "Respuestas y seguimiento automáticos",
-            "Enlaces de cita y recordatorios",
-            "Mensaje tras una llamada perdida",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
-            },
-            {
-              title: "Consumo y alcance",
-              description:
-                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
-            },
-            {
-              title: "Cuándo subir de nivel",
-              description:
-                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
-          },
           cta: "Hablar de Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Suma seguimiento con IA",
-          price: "$1,490",
-          setup: "$1,097 de implementación única",
-          description:
-            "Deja que la IA responda consultas dentales y ayude a agendar valoraciones.",
-          idealFor:
-            "Para equipos que necesitan ayuda para responder y agendar.",
-          featured: true,
-          highlights: [
-            "Todo lo de Capture",
-            "Respuestas de IA en inglés y español",
-            "Apoyo para agendar e intervención del equipo",
-            "Seguimiento a citas perdidas y anticipos opcionales",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
-            },
-            {
-              title: "Límites en el agendamiento",
-              description:
-                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
-            },
-            {
-              title: "Anticipos y consumo",
-              description:
-                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Cuándo ampliar el sistema",
-              description:
-                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
-          },
-          footnotes: [],
           cta: "Hablar de DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Suma publicidad dental",
-          price: "A medida",
-          priceCaption: "Se define y se cotiza según tus requerimientos",
-          description:
-            "Suma anuncios gestionados y una página para el tratamiento dental que quieres promocionar.",
-          idealFor:
-            "Para clínicas listas para sumar publicidad y seguir las citas.",
-          scopeNote:
-            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
-          highlights: [
-            "Todo lo de DigitalFace AI",
-            "Un canal de Meta Ads o Google Ads",
-            "Una página de campaña · 2 rondas de revisión",
-            "Hasta 4 variaciones estáticas de anuncios al mes",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
-            },
-            {
-              title: "Qué cubre el alcance inicial",
-              description:
-                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
-            },
-            {
-              title: "Presupuesto de pauta",
-              description:
-                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
-            },
-            {
-              title: "Cómo cotizamos el alcance a medida",
-              description:
-                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
-            },
-            {
-              title: "Medición y consumo",
-              description:
-                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Límites de la IA y de las citas",
-              description:
-                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
-            },
-            {
-              title: "No incluido",
-              description:
-                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
-          },
+          id: "sales-system",
+          nicheName: "Escala la captación dental",
           cta: "Hablar de mi Sales System",
-          footnotes: [
-            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
-          ],
         },
       ],
       faqTitle: "Antes de agendar",
@@ -889,7 +706,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         eyebrow: "01 · Atraer",
         title: "Atrae interés en tus procedimientos.",
         description:
-          "Sales System suma Meta Ads o Google Ads para medicina estética, con una invitación clara a agendar una valoración.",
+          "Activa campañas de medicina estética en Meta Ads, Google Ads o TikTok Ads, dentro del límite de canales y el alcance personalizado de tu plan.",
         ctaLabel: "Hablar de campañas para mi consulta",
         phoneCaption: "Anuncio y solicitud de ejemplo",
         bridge: "Siguiente paso: ayudar a agendar la valoración.",
@@ -1234,196 +1051,19 @@ export const industryContentEs: IndustryLocaleBundle = {
       packagesTitle: "Elige el plan para tu consulta estética.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organiza el interés en procedimientos",
-          price: "$890",
-          setup: "$597 de implementación única",
-          description:
-            "Organiza las consultas sobre procedimientos y envía una primera respuesta automática.",
-          idealFor:
-            "Para equipos que reciben consultas y necesitan dar seguimiento.",
-          highlights: [
-            "Cada consulta en un CRM",
-            "Respuestas y seguimiento automáticos",
-            "Enlaces de cita y recordatorios",
-            "Mensaje tras una llamada perdida",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
-            },
-            {
-              title: "Consumo y alcance",
-              description:
-                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
-            },
-            {
-              title: "Cuándo subir de nivel",
-              description:
-                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
-          },
           cta: "Hablar de Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Suma apoyo con IA",
-          price: "$1,490",
-          setup: "$1,097 de implementación única",
-          description:
-            "Deja que la IA responda preguntas aprobadas y ayude a agendar valoraciones.",
-          idealFor:
-            "Para equipos que necesitan ayuda para responder y agendar.",
-          featured: true,
-          highlights: [
-            "Todo lo de Capture",
-            "Respuestas de IA en inglés y español",
-            "Apoyo para agendar e intervención del equipo",
-            "Seguimiento a citas perdidas y anticipos opcionales",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
-            },
-            {
-              title: "Límites en el agendamiento",
-              description:
-                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
-            },
-            {
-              title: "Anticipos y consumo",
-              description:
-                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Cuándo ampliar el sistema",
-              description:
-                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
-          },
-          footnotes: [],
           cta: "Hablar de DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Suma publicidad para tu consulta",
-          price: "A medida",
-          priceCaption: "Se define y se cotiza según tus requerimientos",
-          description:
-            "Suma anuncios gestionados y una página para tu procedimiento prioritario.",
-          idealFor:
-            "Para clínicas listas para sumar publicidad y seguir las citas.",
-          scopeNote:
-            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
-          highlights: [
-            "Todo lo de DigitalFace AI",
-            "Un canal de Meta Ads o Google Ads",
-            "Una página de campaña · 2 rondas de revisión",
-            "Hasta 4 variaciones estáticas de anuncios al mes",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
-            },
-            {
-              title: "Qué cubre el alcance inicial",
-              description:
-                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
-            },
-            {
-              title: "Presupuesto de pauta",
-              description:
-                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
-            },
-            {
-              title: "Cómo cotizamos el alcance a medida",
-              description:
-                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
-            },
-            {
-              title: "Medición y consumo",
-              description:
-                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Límites de la IA y de las citas",
-              description:
-                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
-            },
-            {
-              title: "No incluido",
-              description:
-                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
-          },
+          id: "sales-system",
+          nicheName: "Escala la captación estética",
           cta: "Hablar de mi Sales System",
-          footnotes: [
-            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
-          ],
         },
       ],
       faqTitle: "Antes de agendar",
@@ -1561,7 +1201,7 @@ export const industryContentEs: IndustryLocaleBundle = {
           {
             title: "Campañas de promoción con atribución de la oferta",
             description:
-              "Meta, Instagram, Google u otro canal justificado, armado según la oferta, la temporada y el mercado local, con cada oportunidad llevando el tratamiento, la oferta y el canal que la generó, así sabes qué promociones realmente llenan la agenda.",
+              "Meta Ads (Facebook e Instagram), Google Ads o TikTok Ads, seleccionados dentro del límite de canales de tu plan y definidos según la oferta, la temporada y el mercado local. Cada oportunidad conserva el tratamiento, la oferta y el origen para que veas qué promociones llenan la agenda.",
           },
           {
             title: "Concierge de agendamiento con IA",
@@ -1584,7 +1224,7 @@ export const industryContentEs: IndustryLocaleBundle = {
         eyebrow: "01 · Atraer",
         title: "Convierte tu próxima oferta en solicitudes de cita.",
         description:
-          "Sales System suma Meta Ads o Google Ads para el tratamiento u oferta principal de tu med spa.",
+          "Activa campañas para tu med spa en Meta Ads, Google Ads o TikTok Ads alrededor del tratamiento u oferta principal, dentro del límite de canales y el alcance personalizado de tu plan.",
         ctaLabel: "Hablar de campañas para mi med spa",
         phoneCaption: "Anuncio y solicitud de ejemplo",
         bridge: "Siguiente paso: responder mientras la oferta interesa.",
@@ -1925,196 +1565,19 @@ export const industryContentEs: IndustryLocaleBundle = {
       packagesTitle: "Elige el plan para tu med spa.",
       packages: [
         {
-          name: "DigitalFace Capture",
+          id: "capture",
           nicheName: "Organiza las solicitudes de cita",
-          price: "$890",
-          setup: "$597 de implementación única",
-          description:
-            "Organiza las consultas sobre tratamientos y paquetes, con respuestas y recordatorios automáticos.",
-          idealFor:
-            "Para equipos que reciben consultas y necesitan dar seguimiento.",
-          highlights: [
-            "Cada consulta en un CRM",
-            "Respuestas y seguimiento automáticos",
-            "Enlaces de cita y recordatorios",
-            "Mensaje tras una llamada perdida",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Contactos, mensajes y próximos pasos en un CRM y una bandeja compartida. Conecta dos fuentes de consultas y responde por SMS o correo. Mantén el contacto hasta que respondan o pidan dejar de recibir mensajes. Permite elegir un horario y recibir recordatorios de la cita. Envía un texto cuando tu número conectado pierde una llamada. Ve el avance de las consultas mientras cuidamos tu sistema.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
-            },
-            {
-              title: "Consumo y alcance",
-              description:
-                "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
-            },
-            {
-              title: "Cuándo subir de nivel",
-              description:
-                "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
-          },
           cta: "Hablar de Capture",
-          footnotes: [],
         },
         {
-          name: "DigitalFace AI",
+          id: "ai",
           nicheName: "Suma apoyo de IA para reservas",
-          price: "$1,490",
-          setup: "$1,097 de implementación única",
-          description:
-            "Deja que la IA explique ofertas aprobadas y ayude a reservar o reprogramar.",
-          idealFor:
-            "Para equipos que necesitan ayuda para responder y agendar.",
-          featured: true,
-          highlights: [
-            "Todo lo de Capture",
-            "Respuestas de IA en inglés y español",
-            "Apoyo para agendar e intervención del equipo",
-            "Seguimiento a citas perdidas y anticipos opcionales",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Tu chatbot de IA responde preguntas aprobadas en inglés y español. Identifica qué necesita cada persona antes de pasarla a tu equipo. Verifica disponibilidad y solicita confirmación antes de cambiar una cita. Pasa conversaciones sensibles al personal con todo el historial. Contacta a quienes faltaron a su cita e invítalos a reagendar. Permite reservar con un anticipo a través de tu proveedor de pagos.",
-            },
-            {
-              title: "Qué cubre la implementación",
-              description:
-                "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
-            },
-            {
-              title: "Qué gestionamos cada mes",
-              description:
-                "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
-            },
-            {
-              title: "Límites en el agendamiento",
-              description:
-                "La IA solo atiende preguntas administrativas e interés comercial. No diagnostica, prescribe, determina elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. Tu equipo conserva la responsabilidad. Los cambios de citas requieren disponibilidad vigente cuando corresponda y confirmación explícita; las solicitudes sensibles pasan al personal.",
-            },
-            {
-              title: "Anticipos y consumo",
-              description:
-                "Un flujo opcional de anticipo aprobado por tu equipo puede reforzar el compromiso con la cita; no garantiza asistencia. Tu proveedor de pagos deposita el dinero en tu cuenta y cobra sus comisiones. La IA y las comunicaciones no incluyen saldo de consumo; antes del lanzamiento acordamos tarifas y presupuesto mensual, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Cuándo ampliar el sistema",
-              description:
-                "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
-            },
-            {
-              title: "No incluido",
-              description:
-                "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
-          },
-          footnotes: [],
           cta: "Hablar de DigitalFace AI",
         },
         {
-          name: "The DigitalFace Sales System",
-          nicheName: "Suma publicidad para tu med spa",
-          price: "A medida",
-          priceCaption: "Se define y se cotiza según tus requerimientos",
-          description:
-            "Suma anuncios gestionados y una página para tu tratamiento u oferta principal.",
-          idealFor:
-            "Para clínicas listas para sumar publicidad y seguir las citas.",
-          scopeNote:
-            "Este es el alcance inicial. Acordamos el alcance final y la cotización antes de empezar.",
-          highlights: [
-            "Todo lo de DigitalFace AI",
-            "Un canal de Meta Ads o Google Ads",
-            "Una página de campaña · 2 rondas de revisión",
-            "Hasta 4 variaciones estáticas de anuncios al mes",
-          ],
-          details: [
-            {
-              title: "Qué recibes",
-              description:
-                "Gestionamos un canal prioritario: Meta Ads o Google Ads. Presenta tu oferta en una página enfocada en generar consultas. Crea hasta cuatro variaciones mensuales con tus materiales. Ajusta las campañas según lo que funciona y lo que necesita atención. Conecta anuncios con consultas, citas y asistencia registrada. Revisa la captación y el agendamiento en una misma conversación.",
-            },
-            {
-              title: "Qué cubre el alcance inicial",
-              description:
-                "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
-            },
-            {
-              title: "Presupuesto de pauta",
-              description:
-                "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
-            },
-            {
-              title: "Cómo cotizamos el alcance a medida",
-              description:
-                "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
-            },
-            {
-              title: "Medición y consumo",
-              description:
-                "Los reportes conectan la pauta con consultas, citas y asistencia registrada por el personal; tu equipo debe mantener los resultados actualizados. No se garantizan citas ni ingresos. La IA y las comunicaciones no incluyen saldo de consumo. Acordamos tarifas y presupuesto mensual antes del lanzamiento, con cobro directo o cargos detallados al costo.",
-            },
-            {
-              title: "Límites de la IA y de las citas",
-              description:
-                "La IA responde preguntas administrativas aprobadas y califica interés comercial; no diagnostica, prescribe, decide elegibilidad clínica ni aprueba decisiones médicas o financieras sensibles. El personal atiende los casos sensibles. Los cambios de citas requieren confirmación explícita y disponibilidad vigente cuando corresponda. Los anticipos opcionales usan tu proveedor; no garantizan asistencia.",
-            },
-            {
-              title: "Alcance y límites",
-              description:
-                "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
-            },
-            {
-              title: "No incluido",
-              description:
-                "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
-            },
-          ],
-          note: {
-            title: "Costos de plataforma y consumo",
-            body: "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
-          },
+          id: "sales-system",
+          nicheName: "Escala la captación de tu med spa",
           cta: "Hablar de mi Sales System",
-          footnotes: [
-            "El alcance inicial gestiona hasta $5,000 al mes de pauta. Más presupuesto o canales requieren un ajuste de tarifa acordado.",
-          ],
         },
       ],
       faqTitle: "Antes de agendar",
