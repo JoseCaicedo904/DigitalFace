@@ -36,6 +36,12 @@ const aiFeatures = [
   "handoff",
   "recovery",
   "deposits",
+  "emailGrowth",
+  "reputationBuilder",
+  "voiceAiReceptionist",
+  "cancellationFill",
+  "customGhlIntegrations",
+  "b2bProspecting",
 ];
 const salesFeatures = [
   ...aiFeatures,
@@ -434,6 +440,47 @@ const en = {
           ],
         },
       ],
+      addOns: {
+        title: "Optional add-ons",
+        items: [
+          {
+            id: "emailGrowth",
+            title: "Email Growth",
+            body: "Managed email campaigns for approved contact lists.",
+            optional: true,
+          },
+          {
+            id: "reputationBuilder",
+            title: "Reputation Builder",
+            body: "Automated review requests and reputation follow-up.",
+            optional: true,
+          },
+          {
+            id: "voiceAiReceptionist",
+            title: "Voice AI Receptionist",
+            body: "AI phone support for approved questions, qualification and booking.",
+            optional: true,
+          },
+          {
+            id: "cancellationFill",
+            title: "Cancellation-Fill Automation",
+            body: "Invite eligible contacts when appointment times become available.",
+            optional: true,
+          },
+          {
+            id: "customGhlIntegrations",
+            title: "Custom GHL Integrations",
+            body: "Connect GoHighLevel with approved business tools and workflows.",
+            optional: true,
+          },
+          {
+            id: "b2bProspecting",
+            title: "B2B Prospecting & Enrichment (Scraping)",
+            body: "Build business prospect lists from public sources and enrich CRM records.",
+            optional: true,
+          },
+        ],
+      },
       limits: [
         {
           label: "Locations",
@@ -931,6 +978,47 @@ const es: typeof en = {
           ],
         },
       ],
+      addOns: {
+        title: "Servicios adicionales opcionales",
+        items: [
+          {
+            id: "emailGrowth",
+            title: "Crecimiento por correo",
+            body: "Campañas de correo gestionadas para listas de contactos aprobadas.",
+            optional: true,
+          },
+          {
+            id: "reputationBuilder",
+            title: "Reputación y reseñas",
+            body: "Solicitudes automatizadas de reseñas y seguimiento de reputación.",
+            optional: true,
+          },
+          {
+            id: "voiceAiReceptionist",
+            title: "Recepcionista con IA de voz",
+            body: "Atención telefónica con IA para preguntas aprobadas, calificación y agendamiento.",
+            optional: true,
+          },
+          {
+            id: "cancellationFill",
+            title: "Automatización para cubrir cancelaciones",
+            body: "Invita a contactos elegibles cuando se liberan horarios de citas.",
+            optional: true,
+          },
+          {
+            id: "customGhlIntegrations",
+            title: "Integraciones personalizadas con GHL",
+            body: "Conecta GoHighLevel con herramientas y workflows aprobados del negocio.",
+            optional: true,
+          },
+          {
+            id: "b2bProspecting",
+            title: "Prospección y enriquecimiento B2B (Scraping)",
+            body: "Crea listas de empresas desde fuentes públicas y enriquece los registros del CRM.",
+            optional: true,
+          },
+        ],
+      },
       limits: [
         {
           label: "Sedes",

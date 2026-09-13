@@ -323,6 +323,52 @@ export default function Pricing() {
                         </tr>
                       ))}
                     </tbody>
+                    <tbody>
+                      <tr>
+                        <th
+                          scope="rowgroup"
+                          colSpan={4}
+                          className="border-b border-ink-100 bg-ink-50/60 px-5 py-3 text-left text-xs font-semibold uppercase tracking-wide text-ink-500"
+                        >
+                          {t.packages.comparison.addOns.title}
+                        </th>
+                      </tr>
+                      {t.packages.comparison.addOns.items.map((feature) => (
+                        <tr
+                          key={feature.id}
+                          className="border-b border-ink-100"
+                        >
+                          <th
+                            scope="row"
+                            className="px-5 py-3 text-left font-normal"
+                          >
+                            <span className="block text-[13px] font-semibold text-slate-900">
+                              {feature.title}
+                            </span>
+                            <span className="mt-1 block text-xs leading-5 text-ink-500">
+                              {feature.body}
+                            </span>
+                          </th>
+                          {t.packages.items.map((pkg) => (
+                            <td
+                              key={pkg.id}
+                              className={cn(
+                                "px-3 py-3 text-center",
+                                pkg.recommended && "bg-brand-50/30",
+                              )}
+                            >
+                              <FeatureAvailability
+                                included={pkg.includedFeatures.includes(
+                                  feature.id,
+                                )}
+                                optional={feature.optional}
+                                labels={t.packages.comparison}
+                              />
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
                   </table>
                 </div>
                 <div className="p-5">
