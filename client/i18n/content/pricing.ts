@@ -487,14 +487,6 @@ const en = {
           label: "Static ad variations",
           values: ["—", "—", "Up to 4/month"],
         },
-        {
-          label: "Requested adjustments",
-          values: [
-            "Up to 1 hour/month",
-            "Up to 2 total hours/month",
-            "Up to 3 total hours/month",
-          ],
-        },
       ],
     },
   },
@@ -987,14 +979,6 @@ const es: typeof en = {
         {
           label: "Variaciones de anuncios estáticos",
           values: ["—", "—", "Hasta 4/mes"],
-        },
-        {
-          label: "Ajustes solicitados",
-          values: [
-            "Hasta 1 hora/mes",
-            "Hasta 2 horas totales/mes",
-            "Hasta 3 horas totales/mes",
-          ],
         },
       ],
     },
