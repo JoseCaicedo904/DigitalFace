@@ -8,6 +8,8 @@ export type PricingPackage = {
   name: string;
   shortName: string;
   description: string;
+  adChannelCapacity: string;
+  adChannelPricing: string;
   inherits: string;
   idealFor: string;
   features: { title: string; body: string }[];
@@ -27,6 +29,9 @@ const captureFeatures = [
   "missedcall",
   "reporting",
   "onboarding",
+  "ads",
+  "optimization",
+  "attribution",
 ];
 const aiFeatures = [
   ...captureFeatures,
@@ -43,14 +48,7 @@ const aiFeatures = [
   "customGhlIntegrations",
   "b2bProspecting",
 ];
-const salesFeatures = [
-  ...aiFeatures,
-  "ads",
-  "landing",
-  "creatives",
-  "optimization",
-  "attribution",
-];
+const salesFeatures = [...aiFeatures, "landing", "creatives"];
 const planDefinitions = {
   capture: {
     id: "capture",
@@ -68,18 +66,18 @@ const en = {
   metadata: {
     title: "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
     description:
-      "Compare DigitalFace plans for lead capture, AI follow-up and managed growth. Review setup fees, monthly pricing, included services and usage terms.",
+      "Compare DigitalFace plans for lead capture, AI follow-up and advertising across Meta, Google and TikTok, with channel management quoted by scope and budget.",
   },
   hero: {
     eyebrow: "Plans and pricing",
     title: "Choose the help your practice needs.",
     description:
-      "Organize inquiries, get help answering patients, or add advertising. We set up and manage your system.",
+      "Organize inquiries, add AI support and activate up to three advertising channels. We set up and manage your system.",
   },
   pillars: [
     {
-      title: "Productized",
-      copy: "A proven system with defined deliverables and a fast launch.",
+      title: "Defined scope",
+      copy: "A proven system with clear deliverables and advertising capacity for each plan.",
     },
     {
       title: "Automation first",
@@ -95,13 +93,14 @@ const en = {
     },
   ],
   packages: {
-    eyebrow: "Founding pricing",
+    eyebrow: "Custom channel pricing",
     intro:
-      "Founding pricing is reserved for the first 10 clients and held for 12 months. We confirm your scope and quote on the call. CRM is included in every plan.",
+      "Every plan can activate advertising within its channel limit. Each selected channel is scoped and quoted separately according to the budget managed.",
     recommendedLabel: "Recommended",
     ctaLabel: "Book a Plan Consultation",
     ctaContext: "Book a consultation about",
-    callNote: "We confirm the scope and quote on your call.",
+    callNote:
+      "We confirm the system scope, channels and custom quote on your call.",
     exclusionsLabel: "Not included",
     usageLabel: "Platform & usage",
     idealForLabel: "Best for",
@@ -113,9 +112,12 @@ const en = {
         level: "01 · Capture & follow up",
         name: "DigitalFace Capture",
         description:
-          "For teams that get inquiries and need consistent follow-up.",
+          "For teams that need organized follow-up and advertising on up to one selected channel.",
+        adChannelCapacity: "Up to 1 selected ad channel",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google or TikTok · Each activated channel is quoted separately and scales with managed ad spend.",
         idealFor:
-          "A practice with steady inquiries and a team ready to handle the conversations.",
+          "A practice ready to organize inquiries and activate one Meta, Google or TikTok channel.",
         features: [
           {
             title: "Keep every inquiry together",
@@ -142,27 +144,28 @@ const en = {
             body: "See inquiry progress while we monitor and maintain your system.",
           },
         ],
-        scope: "1 location · 1 pipeline · 1 calendar · English or Spanish",
+        scope:
+          "1 location · 1 pipeline · 1 calendar · English or Spanish · up to 1 selected ad channel",
         exclusions:
-          "Paid ads, conversational AI and website builds are not included.",
+          "Conversational AI, campaign landing pages, custom ad creative production and full website builds are not included.",
         usageNote:
-          "CRM and standard hosting included. Messaging, email and phone charges are separate at provider cost.",
+          "CRM and standard hosting included. Each activated ad channel is quoted separately based on its managed budget. Ad spend is paid directly to the selected platform; messaging, email and phone charges are separate at provider cost.",
         details: [
           {
             title: "What implementation covers",
-            body: "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Native connections only; data migration and custom integrations are quoted separately.",
+            body: "We configure your pipeline, connect up to 2 existing forms or native lead sources, set up first response, follow-up, booking and missed-call workflows, test them and train your team. Advertising setup for up to one selected channel follows its separately approved scope. Native connections only; data migration and custom integrations are quoted separately.",
           },
           {
             title: "What we manage each month",
-            body: "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
+            body: "Workflow monitoring, fixes to the delivered system, one performance review and up to 1 hour of requested copy or workflow adjustments. Management of an activated ad channel follows its separate scope and budget-based quote. New workflows are scoped separately. Your staff handles conversations and appointment decisions.",
           },
           {
             title: "Usage and scope",
-            body: "There is no included usage credit. We agree the provider charges and a monthly usage budget before launch; costs are billed directly by providers or itemized at cost. Extra locations, calendars, languages or inquiry sources require a new quote.",
+            body: "There is no included usage credit. Capture supports up to one selected ad channel, quoted separately according to that channel and its managed budget. Ad spend is paid directly to the platform. We agree other provider charges and a monthly usage budget before launch; extra locations, calendars, languages or inquiry sources require a new quote.",
           },
           {
             title: "When to upgrade",
-            body: "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment. Deposit workflows and no-show recovery start there.",
+            body: "Choose DigitalFace AI when your team needs help answering, qualifying and guiding inquiries to a confirmed appointment, with capacity for up to two selected ad channels. Deposit workflows and no-show recovery start there.",
           },
         ],
         inherits: "Your follow-up foundation",
@@ -173,9 +176,12 @@ const en = {
         level: "02 · Respond & book",
         name: "DigitalFace AI",
         description:
-          "For busy teams that need help answering and booking patients.",
+          "For busy teams that need AI help and advertising on up to two selected channels.",
+        adChannelCapacity: "Up to 2 selected ad channels",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google or TikTok · Each activated channel is quoted separately and scales with managed ad spend.",
         idealFor:
-          "A busy practice losing opportunities to slow replies and manual follow-up.",
+          "A busy practice that needs AI follow-up and flexibility to activate one or two advertising channels.",
         features: [
           {
             title: "AI answers in multiple languages",
@@ -202,19 +208,20 @@ const en = {
             body: "The AI guides patients through a reservation payment using your connected payment provider.",
           },
         ],
-        scope: "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base",
+        scope:
+          "1 location · 1 pipeline · up to 2 calendars · 1 knowledge base · up to 2 selected ad channels",
         exclusions:
-          "Paid ads, website builds, voice AI and bulk email campaigns are not included.",
+          "Campaign landing pages, custom ad creative production, full website builds, voice AI and bulk email campaigns are not included.",
         usageNote:
-          "CRM and standard hosting included. AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
+          "CRM and standard hosting included. Each activated ad channel is quoted separately based on its managed budget. Ad spend is paid directly to the selected platforms; AI, messaging, email, phone and payment-provider charges are separate at provider cost.",
         details: [
           {
             title: "What implementation covers",
-            body: "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
+            body: "Capture setup plus one approved knowledge base, web chat and one messaging channel (WhatsApp or SMS), English and Spanish responses, up to 2 calendars, handoff rules, appointment workflows, testing and team training. Advertising setup for up to two selected channels follows their separately approved scopes. Up to 2 existing inquiry sources are connected; custom integrations and migrations are quoted separately.",
           },
           {
             title: "What we manage each month",
-            body: "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
+            body: "We monitor the system, fix delivered workflows, review conversation quality, tune approved answers and report inquiry-to-booking progress. Management of activated ad channels follows each channel's separate scope and budget-based quote. Includes one monthly review and up to 2 hours of requested knowledge-base or workflow changes; new systems are quoted separately.",
           },
           {
             title: "Appointment boundaries",
@@ -226,7 +233,7 @@ const en = {
           },
           {
             title: "When to expand",
-            body: "Add the Sales System when you need managed acquisition and a campaign landing page. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
+            body: "Add the Sales System when you need capacity for up to three selected ad channels, campaign landing pages and channel-specific creative scope. More locations, calendars, knowledge bases, channels or languages require a scoped quote.",
           },
         ],
         inherits: "Everything in Capture, plus",
@@ -237,21 +244,24 @@ const en = {
         level: "03 · Attract & grow",
         name: "The DigitalFace Sales System - Custom Plan",
         description:
-          "For practices ready to add advertising and track bookings.",
+          "For practices scaling the complete system across up to three selected advertising channels.",
+        adChannelCapacity: "Up to 3 selected ad channels",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google or TikTok · Each activated channel is quoted separately and scales with managed ad spend.",
         idealFor:
-          "A practice ready to fund advertising and measure the path from inquiry to attended appointment.",
+          "A practice ready to coordinate acquisition across up to three channels and measure the path from inquiry to attended appointment.",
         features: [
           {
-            title: "Reach patients with ads",
-            body: "We manage one priority channel: Meta Ads or Google Ads.",
+            title: "Coordinate up to three ad channels",
+            body: "Activate Meta Ads, Google Ads and TikTok Ads within your custom scope.",
           },
           {
-            title: "Give your offer its own page",
-            body: "Give visitors one focused page to understand your offer and inquire.",
+            title: "Build pages around each offer",
+            body: "Landing-page scope follows the selected channels and offers approved in your quote.",
           },
           {
-            title: "Keep your ads fresh",
-            body: "Create up to four monthly ad variations using your materials.",
+            title: "Keep channel creative fresh",
+            body: "Creative volume is scoped for each channel and its managed budget.",
           },
           {
             title: "Improve campaigns every week",
@@ -266,23 +276,24 @@ const en = {
             body: "Review acquisition and booking performance together.",
           },
         ],
-        scope: "Starting scope: 1 location · 1 offer · 1 ad channel",
+        scope:
+          "Custom scope: 1 location · selected offers · up to 3 selected ad channels",
         exclusions:
           "Full websites, professional photo/video, SEO and bulk reactivation are separate projects.",
         usageNote:
-          "CRM and standard hosting included. Ad spend is paid directly to Meta or Google. AI, messaging and other provider charges are separate at cost.",
+          "CRM and standard hosting included. Each activated ad channel is quoted separately based on its managed budget. Ad spend is paid directly to Meta, Google or TikTok; AI, messaging and other provider charges are separate at cost.",
         details: [
           {
-            title: "What the starting scope covers",
-            body: "DigitalFace AI implementation plus one Meta or Google campaign channel, tracking and one landing page with up to 2 revision rounds. Monthly management includes weekly campaign optimization, up to 4 static variations using client-supplied assets, one review and up to 3 total hours of requested system or landing-page changes.",
+            title: "What the custom scope covers",
+            body: "DigitalFace AI implementation plus management for up to three selected channels from Meta Ads, Google Ads and TikTok Ads. Tracking, landing-page requirements, creative volume, review cadence and requested changes are defined for each activated channel before launch.",
           },
           {
-            title: "Advertising budget",
-            body: "The starting scope manages up to $5,000/month in ad spend on one Meta or Google channel. You pay the advertising platform directly. A second channel, TikTok, additional offers or higher spend requires an agreed scope and management-fee adjustment.",
+            title: "Channel pricing and advertising budget",
+            body: "Each activated channel has its own custom management quote. The fee scales with the advertising budget managed on that channel, along with campaign complexity and required assets. Adding a channel or increasing its budget can increase the management fee. You pay ad spend directly to each platform.",
           },
           {
             title: "How custom scope is priced",
-            body: "We define your implementation and monthly management quote on the consultation. Additional locations, brands, inquiry volume, pipelines, integrations, reporting or dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
+            body: "We define your implementation and monthly management quote on the consultation. The number of activated channels, budget managed per channel, offers, locations, brands, inquiry volume, pipelines, integrations, reporting and dedicated infrastructure affect the scope. Deliverables, support capacity and fees are agreed in writing before work begins.",
           },
           {
             title: "Measurement and usage",
@@ -308,7 +319,7 @@ const en = {
       detailsLabel: "Setup & monthly support",
       scrollHint: "Scroll horizontally to see all three plans.",
       scopeNote:
-        "Adjustments are the total allowance per plan, alongside maintenance of the delivered system. Additional locations, offers, channels, integrations and new workflows are scoped on your call.",
+        "Channel limits show the maximum advertising capacity of each plan, not a flat included fee. Every activated channel is quoted separately, and its management price scales with the advertising budget managed. Ad spend is paid directly to the platform.",
       groups: [
         {
           title: "Follow-up essentials",
@@ -410,32 +421,32 @@ const en = {
             {
               id: "ads",
               title: "Paid advertising",
-              body: "One priority Meta or Google channel in the starting scope.",
-              optional: false,
+              body: "Management for Meta, Google or TikTok, quoted separately for every activated channel.",
+              optional: true,
             },
             {
               id: "landing",
               title: "Campaign landing page",
-              body: "One focused page for one priority offer.",
-              optional: false,
+              body: "Landing-page scope based on the activated channels and offers.",
+              optional: true,
             },
             {
               id: "creatives",
               title: "Static ad creatives",
-              body: "Up to four monthly variations using client-supplied materials.",
-              optional: false,
+              body: "Creative volume scoped by channel, campaign needs and managed budget.",
+              optional: true,
             },
             {
               id: "optimization",
               title: "Weekly campaign optimization",
-              body: "Adjust campaigns using their performance data.",
-              optional: false,
+              body: "Optimize every activated channel according to its approved scope.",
+              optional: true,
             },
             {
               id: "attribution",
               title: "Acquisition & booking review",
               body: "Connect advertising, inquiries, bookings and staff-recorded attendance.",
-              optional: false,
+              optional: true,
             },
           ],
         },
@@ -520,19 +531,27 @@ const en = {
         },
         {
           label: "Paid advertising channels",
-          values: ["—", "—", "1: Meta or Google"],
+          values: [
+            "Up to 1: Meta, Google or TikTok",
+            "Up to 2: Meta, Google and/or TikTok",
+            "Up to 3: Meta, Google and TikTok",
+          ],
         },
         {
-          label: "Ad budget managed",
-          values: ["—", "—", "Up to $5,000/month; media spend separate"],
+          label: "Channel management pricing",
+          values: [
+            "Custom per channel; scales with managed budget",
+            "Custom per channel; scales with managed budget",
+            "Custom per channel; scales with managed budget",
+          ],
         },
         {
           label: "Campaign landing pages",
-          values: ["—", "—", "1 offer · 2 initial revision rounds"],
+          values: ["—", "—", "Custom by channel and offer"],
         },
         {
           label: "Static ad variations",
-          values: ["—", "—", "Up to 4/month"],
+          values: ["—", "—", "Custom by channel and budget"],
         },
       ],
     },
@@ -541,8 +560,8 @@ const en = {
     title: "Costs and terms, explained",
     items: [
       {
-        title: "Advertising budget is separate",
-        body: "Advertising starts with Sales System: one Meta Ads or Google Ads channel and up to $5,000/month in ad spend. You pay the platform directly. More spend, a second channel or TikTok requires an agreed fee adjustment. You keep your accounts, tracking assets and audiences.",
+        title: "Advertising channels and custom pricing",
+        body: "Choose from Meta Ads, Google Ads and TikTok Ads. Facebook and Instagram together count as one Meta Ads channel. Capture supports up to 1 selected channel, AI up to 2 and Sales System up to 3. Every activated channel is scoped and quoted separately according to its managed budget, campaign complexity and required assets. Adding channels or increasing budget can increase the management fee. Ad spend is paid directly to each platform.",
       },
       {
         title: "AI and communication usage",
@@ -554,7 +573,7 @@ const en = {
       },
       {
         title: "Ads and campaign pages",
-        body: "Sales System includes one campaign landing page with up to 2 initial revision rounds and up to 4 static ad variations per month using your materials. Full websites, professional photo/video, SEO and bulk reactivation are separate projects. Capture and AI exclude ads and website builds; AI also excludes voice AI and bulk email campaigns.",
+        body: "Advertising is available in every plan within its channel limit and separate custom quote. Sales System can also scope campaign landing pages and channel-specific creative production. Additional pages, offers and creative volume are defined per channel. Full websites, professional photo/video, SEO and bulk reactivation remain separate projects; Voice AI and bulk email campaigns remain optional add-ons.",
       },
       {
         title: "Optional appointment deposits",
@@ -562,7 +581,7 @@ const en = {
       },
       {
         title: "Month-to-month, with a defined scope",
-        body: "No annual contract or minimum term. Setup is charged once, at the start. Included adjustments are available each week: up to 3 hours for Capture, 4 hours for AI and 6 hours for the Sales System, alongside ongoing maintenance. New workflows and additional locations, calendars, languages, channels or integrations are quoted separately. You can upgrade at any time.",
+        body: "No annual contract or minimum term. Setup is charged once, at the start. Included adjustments are available each week: up to 3 hours for Capture, 4 hours for AI and 6 hours for the Sales System, alongside ongoing maintenance. Advertising channels are quoted separately within each plan's capacity. New workflows and additional locations, calendars, languages or integrations are also quoted separately. You can upgrade at any time.",
       },
     ],
     guarantee:
@@ -605,18 +624,18 @@ const es: typeof en = {
   metadata: {
     title: "Planes y Precios para Clínicas | DigitalFace Marketing",
     description:
-      "Compara los planes DigitalFace de captación, seguimiento con IA y crecimiento gestionado: implementación, mensualidades, servicios incluidos y condiciones de uso.",
+      "Compara los planes DigitalFace de captación, seguimiento con IA y pauta en Meta, Google y TikTok, con gestión cotizada según alcance y presupuesto.",
   },
   hero: {
     eyebrow: "Planes y precios",
     title: "Elige el apoyo que necesita tu clínica.",
     description:
-      "Organiza las consultas, recibe ayuda para responder o suma publicidad. Nosotros configuramos y gestionamos tu sistema.",
+      "Organiza las consultas, suma apoyo con IA y activa hasta tres canales publicitarios. Nosotros configuramos y gestionamos tu sistema.",
   },
   pillars: [
     {
-      title: "Estandarizado",
-      copy: "Un sistema probado, con entregables definidos y una puesta en marcha rápida.",
+      title: "Alcance definido",
+      copy: "Un sistema probado con entregables claros y capacidad publicitaria para cada plan.",
     },
     {
       title: "Automatización primero",
@@ -632,13 +651,14 @@ const es: typeof en = {
     },
   ],
   packages: {
-    eyebrow: "Precio fundador",
+    eyebrow: "Precio personalizado por canal",
     intro:
-      "El precio fundador está reservado para los primeros 10 clientes y se mantiene durante 12 meses. Confirmamos el alcance y la cotización en la llamada. Todos los planes incluyen CRM.",
+      "Cada plan puede activar pauta dentro de su límite de canales. Cada canal seleccionado se define y cotiza por separado según el presupuesto gestionado.",
     recommendedLabel: "Recomendado",
     ctaLabel: "Agendar una llamada sobre el plan",
     ctaContext: "Agendar una llamada sobre",
-    callNote: "Confirmamos el alcance y la cotización en la llamada.",
+    callNote:
+      "Confirmamos el alcance, los canales y la cotización personalizada en la llamada.",
     exclusionsLabel: "No incluye",
     usageLabel: "Plataforma y consumo",
     idealForLabel: "Ideal para",
@@ -650,9 +670,12 @@ const es: typeof en = {
         level: "01 · Captura y seguimiento",
         name: "DigitalFace Capture",
         description:
-          "Para equipos que reciben consultas y necesitan dar seguimiento.",
+          "Para equipos que necesitan ordenar el seguimiento y gestionar pauta en hasta un canal seleccionado.",
+        adChannelCapacity: "Hasta 1 canal publicitario seleccionado",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google o TikTok · Cada canal activo se cotiza por separado y escala con el presupuesto gestionado.",
         idealFor:
-          "Una clínica con consultas constantes y un equipo disponible para atender las conversaciones.",
+          "Una clínica lista para organizar sus consultas y activar un canal de Meta, Google o TikTok.",
         features: [
           {
             title: "Reúne todas las consultas",
@@ -679,27 +702,28 @@ const es: typeof en = {
             body: "Ve el avance de las consultas mientras cuidamos tu sistema.",
           },
         ],
-        scope: "1 sede · 1 proceso comercial · 1 calendario · inglés o español",
+        scope:
+          "1 sede · 1 proceso comercial · 1 calendario · inglés o español · hasta 1 canal publicitario seleccionado",
         exclusions:
-          "No incluye gestión de pauta, IA conversacional ni desarrollo de sitios web.",
+          "No incluye IA conversacional, landings de campaña, producción creativa personalizada para pauta ni sitios web completos.",
         usageNote:
-          "CRM y hosting estándar incluidos. Mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
+          "CRM y hosting estándar incluidos. Cada canal publicitario activo se cotiza por separado según el presupuesto gestionado. La pauta se paga directamente a la plataforma seleccionada; mensajería, correo y telefonía se cobran aparte al costo del proveedor.",
         details: [
           {
             title: "Qué cubre la implementación",
-            body: "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. Migraciones e integraciones a medida se cotizan aparte.",
+            body: "Configuramos tu proceso comercial, conectamos hasta 2 formularios o fuentes de leads con conexión nativa y montamos la primera respuesta, el seguimiento, el agendamiento y la respuesta a llamadas perdidas. Probamos el sistema y capacitamos a tu equipo. La configuración publicitaria para hasta un canal seleccionado sigue su alcance aprobado por separado. Migraciones e integraciones a medida se cotizan aparte.",
           },
           {
             title: "Qué gestionamos cada mes",
-            body: "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
+            body: "Monitoreo de los flujos, corrección de fallas del sistema entregado, una revisión de desempeño y hasta 1 hora de ajustes solicitados en textos o flujos. La gestión del canal publicitario activo sigue su alcance y cotización basada en presupuesto. Los flujos nuevos se cotizan aparte. Tu equipo atiende las conversaciones y decide sobre las citas.",
           },
           {
             title: "Consumo y alcance",
-            body: "No hay saldo de consumo incluido. Antes del lanzamiento acordamos las tarifas de los proveedores y un presupuesto mensual de consumo; los proveedores cobran directamente o detallamos esos cargos al costo. Sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
+            body: "No hay saldo de consumo incluido. Capture admite hasta un canal publicitario seleccionado, cotizado por separado según ese canal y su presupuesto gestionado. La pauta se paga directamente a la plataforma. Antes del lanzamiento acordamos los demás cargos de proveedores y el presupuesto mensual de consumo; sedes, calendarios, idiomas o fuentes de consultas adicionales requieren una nueva cotización.",
           },
           {
             title: "Cuándo subir de nivel",
-            body: "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
+            body: "Elige DigitalFace AI cuando tu equipo necesite ayuda para responder, calificar el interés y llevar las consultas a una cita confirmada, con capacidad para hasta dos canales publicitarios seleccionados. Los flujos de anticipo y recuperación de inasistencias comienzan allí.",
           },
         ],
         inherits: "Tu base de seguimiento",
@@ -710,9 +734,12 @@ const es: typeof en = {
         level: "02 · Responde y agenda",
         name: "DigitalFace AI",
         description:
-          "Para equipos que necesitan ayuda para responder y agendar.",
+          "Para equipos que necesitan apoyo con IA y pauta en hasta dos canales seleccionados.",
+        adChannelCapacity: "Hasta 2 canales publicitarios seleccionados",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google o TikTok · Cada canal activo se cotiza por separado y escala con el presupuesto gestionado.",
         idealFor:
-          "Una clínica que pierde oportunidades por respuestas tardías y seguimiento manual.",
+          "Una clínica que necesita seguimiento con IA y flexibilidad para activar uno o dos canales publicitarios.",
         features: [
           {
             title: "La IA responde en varios idiomas",
@@ -740,19 +767,19 @@ const es: typeof en = {
           },
         ],
         scope:
-          "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento",
+          "1 sede · 1 proceso comercial · hasta 2 calendarios · 1 base de conocimiento · hasta 2 canales publicitarios seleccionados",
         exclusions:
-          "No incluye pauta, sitios web, IA de voz ni campañas masivas de correo.",
+          "No incluye landings de campaña, producción creativa personalizada para pauta, sitios web completos, IA de voz ni campañas masivas de correo.",
         usageNote:
-          "CRM y hosting estándar incluidos. IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
+          "CRM y hosting estándar incluidos. Cada canal publicitario activo se cotiza por separado según el presupuesto gestionado. La pauta se paga directamente a las plataformas seleccionadas; IA, mensajería, correo, telefonía y comisiones de pago se cobran aparte al costo del proveedor.",
         details: [
           {
             title: "Qué cubre la implementación",
-            body: "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
+            body: "La configuración de Capture más una base de conocimiento aprobada, chat web y un canal de mensajería (WhatsApp o SMS), respuestas en inglés y español, hasta 2 calendarios, reglas de entrega al equipo, flujos de citas, pruebas y capacitación. La configuración publicitaria para hasta dos canales seleccionados sigue sus alcances aprobados por separado. Se conectan hasta 2 fuentes de consultas existentes; integraciones a medida y migraciones se cotizan aparte.",
           },
           {
             title: "Qué gestionamos cada mes",
-            body: "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
+            body: "Monitoreamos el sistema, corregimos los flujos entregados, revisamos la calidad de las conversaciones, ajustamos respuestas aprobadas y reportamos el avance de consultas a citas. La gestión de los canales publicitarios activos sigue el alcance y la cotización basada en presupuesto de cada canal. Incluye una revisión mensual y hasta 2 horas de cambios solicitados en la base de conocimiento o los flujos; los sistemas nuevos se cotizan aparte.",
           },
           {
             title: "Límites en el agendamiento",
@@ -764,7 +791,7 @@ const es: typeof en = {
           },
           {
             title: "Cuándo ampliar el sistema",
-            body: "Añade el Sales System cuando necesites gestión de pauta y una landing de campaña. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
+            body: "Añade el Sales System cuando necesites capacidad para hasta tres canales publicitarios seleccionados, landings de campaña y un alcance creativo específico por canal. Más sedes, calendarios, bases de conocimiento, canales o idiomas requieren una cotización con alcance definido.",
           },
         ],
         inherits: "Todo lo de Capture, más",
@@ -775,21 +802,24 @@ const es: typeof en = {
         level: "03 · Atrae y crece",
         name: "The DigitalFace Sales System - Custom Plan",
         description:
-          "Para clínicas listas para sumar publicidad y seguir las citas.",
+          "Para clínicas que quieren escalar el sistema completo en hasta tres canales publicitarios seleccionados.",
+        adChannelCapacity: "Hasta 3 canales publicitarios seleccionados",
+        adChannelPricing:
+          "Meta (Facebook + Instagram), Google o TikTok · Cada canal activo se cotiza por separado y escala con el presupuesto gestionado.",
         idealFor:
-          "Una clínica lista para invertir en pauta y medir desde la consulta hasta la cita atendida.",
+          "Una clínica lista para coordinar la captación en hasta tres canales y medir desde la consulta hasta la cita atendida.",
         features: [
           {
-            title: "Llega a pacientes con anuncios",
-            body: "Gestionamos un canal prioritario: Meta Ads o Google Ads.",
+            title: "Coordina hasta tres canales publicitarios",
+            body: "Activa Meta Ads, Google Ads y TikTok Ads dentro de tu alcance personalizado.",
           },
           {
-            title: "Dale a tu oferta su propia página",
-            body: "Presenta tu oferta en una página enfocada en generar consultas.",
+            title: "Crea páginas para cada oferta",
+            body: "El alcance de las landings sigue los canales y las ofertas aprobadas en tu cotización.",
           },
           {
-            title: "Renueva tus anuncios",
-            body: "Crea hasta cuatro variaciones mensuales con tus materiales.",
+            title: "Mantén actualizada la creatividad",
+            body: "El volumen creativo se define para cada canal y su presupuesto gestionado.",
           },
           {
             title: "Mejora las campañas cada semana",
@@ -804,23 +834,24 @@ const es: typeof en = {
             body: "Revisa la captación y el agendamiento en una misma conversación.",
           },
         ],
-        scope: "Alcance inicial: 1 sede · 1 oferta · 1 canal publicitario",
+        scope:
+          "Alcance personalizado: 1 sede · ofertas seleccionadas · hasta 3 canales publicitarios seleccionados",
         exclusions:
           "Sitios web completos, foto/video profesional, SEO y reactivación masiva son proyectos aparte.",
         usageNote:
-          "CRM y hosting estándar incluidos. Pagas la pauta directamente a Meta o Google. IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
+          "CRM y hosting estándar incluidos. Cada canal publicitario activo se cotiza por separado según el presupuesto gestionado. La pauta se paga directamente a Meta, Google o TikTok; IA, mensajería y otros cargos de proveedores se cobran aparte al costo.",
         details: [
           {
-            title: "Qué cubre el alcance inicial",
-            body: "La implementación de DigitalFace AI más un canal de campañas en Meta o Google, medición y una landing con hasta 2 rondas de revisión. La gestión mensual incluye optimización semanal, hasta 4 variaciones estáticas con material del cliente, una revisión y hasta 3 horas totales de cambios solicitados en el sistema o la landing.",
+            title: "Qué cubre el alcance personalizado",
+            body: "La implementación de DigitalFace AI más la gestión de hasta tres canales seleccionados entre Meta Ads, Google Ads y TikTok Ads. La medición, las landings necesarias, el volumen creativo, la frecuencia de revisión y los cambios solicitados se definen para cada canal activo antes del lanzamiento.",
           },
           {
-            title: "Presupuesto de pauta",
-            body: "El alcance inicial gestiona hasta $5,000/mes de pauta en un canal de Meta o Google. Pagas directamente a la plataforma. Un segundo canal, TikTok, ofertas adicionales o mayor inversión requieren acordar un ajuste de alcance y gestión.",
+            title: "Precio por canal y presupuesto de pauta",
+            body: "Cada canal activo tiene su propia cotización personalizada de gestión. La tarifa escala con el presupuesto publicitario gestionado en ese canal, además de la complejidad de las campañas y los materiales necesarios. Agregar un canal o aumentar su presupuesto puede incrementar la tarifa de gestión. Pagas la pauta directamente a cada plataforma.",
           },
           {
             title: "Cómo cotizamos el alcance a medida",
-            body: "Definimos la propuesta de implementación y gestión mensual en la consulta. Más sedes, marcas, consultas, procesos comerciales, integraciones, reportes o infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
+            body: "Definimos la propuesta de implementación y gestión mensual en la consulta. La cantidad de canales activos, el presupuesto gestionado por canal, las ofertas, sedes, marcas, consultas, procesos comerciales, integraciones, reportes y la infraestructura dedicada afectan el alcance. Acordamos entregables, capacidad de soporte y tarifas por escrito antes de empezar.",
           },
           {
             title: "Medición y consumo",
@@ -846,7 +877,7 @@ const es: typeof en = {
       detailsLabel: "Implementación y soporte mensual",
       scrollHint: "Desliza horizontalmente para ver los tres planes.",
       scopeNote:
-        "Los ajustes son el total por plan, además del mantenimiento del sistema entregado. Más sedes, ofertas, canales, integraciones y flujos nuevos se definen en la llamada.",
+        "Los límites de canales muestran la capacidad publicitaria máxima de cada plan, no una tarifa plana incluida. Cada canal activo se cotiza por separado y su precio de gestión escala con el presupuesto publicitario gestionado. La pauta se paga directamente a la plataforma.",
       groups: [
         {
           title: "Base de seguimiento",
@@ -948,32 +979,32 @@ const es: typeof en = {
             {
               id: "ads",
               title: "Gestión de pauta",
-              body: "Un canal prioritario de Meta o Google en el alcance inicial.",
-              optional: false,
+              body: "Gestión de Meta, Google o TikTok, cotizada por separado para cada canal activo.",
+              optional: true,
             },
             {
               id: "landing",
               title: "Landing de campaña",
-              body: "Una página enfocada en una oferta prioritaria.",
-              optional: false,
+              body: "Alcance de landings según los canales y las ofertas activas.",
+              optional: true,
             },
             {
               id: "creatives",
               title: "Anuncios estáticos",
-              body: "Hasta cuatro variaciones mensuales con materiales del cliente.",
-              optional: false,
+              body: "Volumen creativo definido por canal, necesidades de campaña y presupuesto gestionado.",
+              optional: true,
             },
             {
               id: "optimization",
               title: "Optimización semanal",
-              body: "Ajusta las campañas según sus datos de desempeño.",
-              optional: false,
+              body: "Optimiza cada canal activo según su alcance aprobado.",
+              optional: true,
             },
             {
               id: "attribution",
               title: "Revisión de captación y citas",
               body: "Conecta pauta, consultas, citas y asistencia registrada por el equipo.",
-              optional: false,
+              optional: true,
             },
           ],
         },
@@ -1054,19 +1085,27 @@ const es: typeof en = {
         },
         {
           label: "Canales publicitarios",
-          values: ["—", "—", "1: Meta o Google"],
+          values: [
+            "Hasta 1: Meta, Google o TikTok",
+            "Hasta 2: Meta, Google y/o TikTok",
+            "Hasta 3: Meta, Google y TikTok",
+          ],
         },
         {
-          label: "Presupuesto de pauta gestionado",
-          values: ["—", "—", "Hasta $5,000/mes; pauta aparte"],
+          label: "Precio de gestión por canal",
+          values: [
+            "Personalizado por canal; escala con el presupuesto gestionado",
+            "Personalizado por canal; escala con el presupuesto gestionado",
+            "Personalizado por canal; escala con el presupuesto gestionado",
+          ],
         },
         {
           label: "Landings de campaña",
-          values: ["—", "—", "1 oferta · 2 rondas iniciales de revisión"],
+          values: ["—", "—", "Personalizadas por canal y oferta"],
         },
         {
           label: "Variaciones de anuncios estáticos",
-          values: ["—", "—", "Hasta 4/mes"],
+          values: ["—", "—", "Personalizadas por canal y presupuesto"],
         },
       ],
     },
@@ -1075,8 +1114,8 @@ const es: typeof en = {
     title: "Costos y condiciones claros",
     items: [
       {
-        title: "La pauta se paga aparte",
-        body: "La publicidad empieza con Sales System: un canal de Meta Ads o Google Ads y hasta $5,000 al mes de pauta gestionada. Pagas directamente a la plataforma. Más presupuesto, un segundo canal o TikTok requieren un ajuste de tarifa acordado. Conservas tus cuentas, activos de seguimiento y audiencias.",
+        title: "Canales publicitarios y precio personalizado",
+        body: "Elige entre Meta Ads, Google Ads y TikTok Ads. Facebook e Instagram juntos cuentan como un canal de Meta Ads. Capture admite hasta 1 canal seleccionado, AI hasta 2 y Sales System hasta 3. Cada canal activo se define y cotiza por separado según su presupuesto gestionado, la complejidad de las campañas y los materiales necesarios. Agregar canales o aumentar el presupuesto puede incrementar la tarifa de gestión. La pauta se paga directamente a cada plataforma.",
       },
       {
         title: "Uso de IA y comunicaciones",
@@ -1088,7 +1127,7 @@ const es: typeof en = {
       },
       {
         title: "Anuncios y páginas de campaña",
-        body: "Sales System incluye una página de campaña con hasta 2 rondas iniciales de revisión y hasta 4 variaciones de anuncios estáticos al mes con tus materiales. Los sitios completos, la foto y el video profesionales, el SEO y la reactivación masiva se cotizan aparte. Capture y AI no incluyen anuncios ni sitios web; AI tampoco incluye IA de voz ni campañas masivas de correo.",
+        body: "La pauta está disponible en todos los planes dentro de su límite de canales y con una cotización personalizada aparte. Sales System también puede incluir landings de campaña y producción creativa específica por canal. Las páginas, ofertas y el volumen creativo adicionales se definen por canal. Los sitios completos, la foto y el video profesionales, el SEO y la reactivación masiva siguen siendo proyectos aparte; la IA de voz y las campañas masivas de correo siguen disponibles como servicios adicionales.",
       },
       {
         title: "Anticipos opcionales para citas",
@@ -1096,7 +1135,7 @@ const es: typeof en = {
       },
       {
         title: "Mes a mes, con un alcance definido",
-        body: "Sin contrato anual ni permanencia mínima. La implementación se cobra una sola vez, al inicio. Cada semana se incluyen hasta 3 horas de ajustes para Capture, 4 horas para AI y 6 horas para Sales System, además del mantenimiento continuo. Los nuevos workflows y las ubicaciones, calendarios, idiomas, canales o integraciones adicionales se cotizan por separado. Puedes cambiar a un plan superior en cualquier momento.",
+        body: "Sin contrato anual ni permanencia mínima. La implementación se cobra una sola vez, al inicio. Cada semana se incluyen hasta 3 horas de ajustes para Capture, 4 horas para AI y 6 horas para Sales System, además del mantenimiento continuo. Los canales publicitarios se cotizan por separado dentro de la capacidad de cada plan. Los nuevos workflows y las ubicaciones, calendarios, idiomas o integraciones adicionales también se cotizan por separado. Puedes cambiar a un plan superior en cualquier momento.",
       },
     ],
     guarantee:

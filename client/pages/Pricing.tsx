@@ -87,7 +87,7 @@ export default function Pricing() {
                   aria-labelledby={`pricing-${pkg.id}`}
                   data-featured={pkg.recommended ? "true" : undefined}
                   className={cn(
-                    "pricing-card relative grid min-w-0 content-start rounded-3xl bg-white/95 p-6 lg:row-span-9 lg:grid-rows-[subgrid]",
+                    "pricing-card relative grid min-w-0 content-start rounded-3xl bg-white/95 p-6 lg:row-span-10 lg:grid-rows-[subgrid]",
                     pkg.recommended ? "border-2" : "border",
                   )}
                 >
@@ -108,6 +108,14 @@ export default function Pricing() {
                     </h2>
                     <p className="mt-3 text-sm leading-relaxed text-ink-500">
                       {pkg.description}
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-brand-100 bg-brand-50/60 px-4 py-3">
+                    <p className="text-sm font-semibold leading-5 text-brand-700">
+                      {pkg.adChannelCapacity}
+                    </p>
+                    <p className="mt-1 text-xs leading-5 text-ink-500">
+                      {pkg.adChannelPricing}
                     </p>
                   </div>
                   <p className="pricing-inherit mb-2 self-start rounded-lg px-3 py-2 text-xs font-semibold">
