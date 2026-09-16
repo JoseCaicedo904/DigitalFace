@@ -6,7 +6,7 @@ afterEach(() => vi.unstubAllGlobals());
 describe("SEO navigation and static head", () => {
   it("keeps every translated route canonical and reciprocal", () => {
     for (const route of site.routes)
-      for (const locale of ["en", "es"]) {
+      for (const locale of "locales" in route ? route.locales : ["en", "es"]) {
         const path =
           locale === "en"
             ? route.path
@@ -19,9 +19,21 @@ describe("SEO navigation and static head", () => {
           "Its real description",
         );
         expect(head.canonical).toBe(site.origin + path);
-        expect(head.links.filter((l) => l.rel === "alternate")).toHaveLength(3);
-        expect(head.noindex).toBe(false);
+        expect(head.links.filter((l) => l.rel === "alternate")).toHaveLength(
+          route.indexable ? 3 : 0,
+        );
+        expect(head.noindex).toBe(!route.indexable);
       }
+  });
+  it("does not expose a Spanish booking-confirmation document", () => {
+    const head = buildHead(
+      "/es/booking-confirmed",
+      "Appointment confirmed",
+      "Booking confirmation",
+      { noindex: true },
+    );
+    expect(head.canonical).toBeNull();
+    expect(head.links).toEqual([]);
   });
   it("clears old schema and alternates on a 404 and recovers on a valid navigation", () => {
     const initial = buildHead("/es/pricing", "Planes", "Precios");

@@ -60,6 +60,7 @@ describe("Generated HTML hydrates without changing the page contract", () => {
     "/es/industries/med-spas",
     "/es/industries/aesthetic-medicine",
     "/book",
+    "/booking-confirmed",
     "/es/privacy",
   ])("hydrates %s", async (url) => {
     window.history.replaceState({}, "", url);

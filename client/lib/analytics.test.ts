@@ -24,6 +24,11 @@ describe("Analytics production and privacy boundaries", () => {
       analyticsPage("/contact?email=synthetic@example.invalid"),
     ).toBeNull();
     expect(analyticsPage("/unknown/synthetic-private-value")).toBeNull();
+    expect(analyticsPage("/booking-confirmed")).toEqual({
+      page_path: "/booking-confirmed",
+      locale: "en",
+    });
+    expect(analyticsPage("/es/booking-confirmed")).toBeNull();
   });
 });
 
@@ -36,9 +41,11 @@ afterEach(() => {
   vi.unstubAllGlobals();
   vi.unstubAllEnvs();
 });
-async function productionAnalytics() {
+async function productionAnalytics(
+  url = "https://digitalface.app/contact?email=synthetic@example.invalid",
+) {
   dom = new JSDOM("<!doctype html><html><head></head><body></body></html>", {
-    url: "https://digitalface.app/contact?email=synthetic@example.invalid",
+    url,
     referrer: "https://www.google.com/search?q=synthetic-private-term",
   });
   vi.stubGlobal("window", dom.window);
@@ -83,6 +90,43 @@ describe("GA4 runtime behavior without any network requests", () => {
     analytics.trackPageView("/contact", "Contact");
     expect(document.querySelector("#df-ga4")).toBeNull();
     expect(window.gtag).not.toHaveBeenCalled();
+  });
+  it("records one parameter-free booking conversion per tab session", async () => {
+    const analytics = await productionAnalytics(
+      "https://digitalface.app/booking-confirmed?email=synthetic@example.invalid",
+    );
+
+    analytics.trackAppointmentBookedOnce();
+    analytics.trackAppointmentBookedOnce();
+
+    // A fresh module models a page reload while sessionStorage survives.
+    vi.resetModules();
+    const reloadedAnalytics = await import("./analytics");
+    reloadedAnalytics.trackAppointmentBookedOnce();
+
+    const calls = window.dataLayer!.map((entry) =>
+      Array.from(entry as ArrayLike<unknown>),
+    );
+    const bookingEvents = calls.filter(
+      (entry) => entry[0] === "event" && entry[1] === "appointment_booked",
+    );
+    expect(bookingEvents).toHaveLength(1);
+    expect(bookingEvents[0][2]).toEqual({
+      page_path: "/booking-confirmed",
+      locale: "en",
+      page_location: "https://digitalface.app/booking-confirmed",
+    });
+    expect(JSON.stringify(bookingEvents)).not.toContain(
+      "synthetic@example.invalid",
+    );
+  });
+  it("never records a booking conversion from another route", async () => {
+    const analytics = await productionAnalytics();
+
+    analytics.trackAppointmentBookedOnce();
+
+    expect(window.dataLayer).toBeUndefined();
+    expect(document.querySelector("#df-ga4")).toBeNull();
   });
   it("never lets a broken analytics script interrupt a lead or navigation", async () => {
     const analytics = await productionAnalytics();

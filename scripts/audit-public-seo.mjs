@@ -5,10 +5,15 @@ import { JSDOM } from "jsdom";
 
 const site = JSON.parse(fs.readFileSync("shared/site.json", "utf8"));
 const crawler = process.argv.includes("--crawler");
-const routes = site.routes.flatMap((r) => [
-  r.path,
-  r.path === "/" ? "/es" : "/es" + r.path,
-]);
+const routes = site.routes.flatMap((route) =>
+  (route.locales || ["en", "es"]).map((locale) =>
+    locale === "en"
+      ? route.path
+      : route.path === "/"
+        ? "/es"
+        : "/es" + route.path,
+  ),
+);
 const paths = [
   ...routes,
   "/robots.txt",

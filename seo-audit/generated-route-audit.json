@@ -72,7 +72,7 @@
       },
       {
         "level": 4,
-        "text": "JSSuccess storyDra. Jennifer SinisterraAesthetic Dentistry · Cali, Colombia"
+        "text": "Success storyDra. Jennifer SinisterraAesthetic Dentistry · Cali, Colombia"
       },
       {
         "level": 4,
@@ -80,7 +80,7 @@
       },
       {
         "level": 4,
-        "text": "BBSuccess storyBraveros Box / Neon RaceSports & Events · Bugalagrande, Colombia"
+        "text": "Success storyBraveros Box / Neon RaceSports & Events · Bugalagrande, Colombia"
       },
       {
         "level": 4,
@@ -154,19 +154,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -768,11 +768,27 @@
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
+        "src": "/media/clients/optimized/Logo Dra. Jennifer.PNG",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full object-contain p-1.5 sm:p-2"
+      },
+      {
         "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
         "alt": "",
         "loading": "lazy",
         "width": "256",
         "height": "154",
+        "class": "h-full w-full object-contain p-1.5 sm:p-2"
+      },
+      {
+        "src": "/media/clients/optimized/Logo Braveros.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
@@ -840,7 +856,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180300,
+    "htmlBytes": 180561,
     "incoming": [
       "/es",
       "/about",
@@ -850,6 +866,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -860,11 +877,11 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -945,7 +962,7 @@
       },
       {
         "level": 4,
-        "text": "JSCaso destacadoDra. Jennifer SinisterraOdontología estética · Cali, Colombia"
+        "text": "Caso destacadoDra. Jennifer SinisterraOdontología estética · Cali, Colombia"
       },
       {
         "level": 4,
@@ -953,7 +970,7 @@
       },
       {
         "level": 4,
-        "text": "BBCaso destacadoBraveros Box / Neon RaceDeporte y eventos · Bugalagrande, Colombia"
+        "text": "Caso destacadoBraveros Box / Neon RaceDeporte y eventos · Bugalagrande, Colombia"
       },
       {
         "level": 4,
@@ -1027,19 +1044,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -1641,11 +1658,27 @@
         "class": "h-full w-auto max-w-none object-contain"
       },
       {
+        "src": "/media/clients/optimized/Logo Dra. Jennifer.PNG",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
+        "class": "h-full w-full object-contain p-1.5 sm:p-2"
+      },
+      {
         "src": "/media/clients/optimized/dr-diego-sinisterra.webp",
         "alt": "",
         "loading": "lazy",
         "width": "256",
         "height": "154",
+        "class": "h-full w-full object-contain p-1.5 sm:p-2"
+      },
+      {
+        "src": "/media/clients/optimized/Logo Braveros.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": null,
+        "height": null,
         "class": "h-full w-full object-contain p-1.5 sm:p-2"
       },
       {
@@ -1713,7 +1746,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 181859,
+    "htmlBytes": 182114,
     "incoming": [
       "/",
       "/es/about",
@@ -1733,11 +1766,11 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -1828,19 +1861,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -2110,7 +2143,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81044,
+    "htmlBytes": 84055,
     "incoming": [
       "/",
       "/es/about",
@@ -2120,6 +2153,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms"
     ],
@@ -2127,11 +2161,11 @@
       "/",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/about",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -2222,19 +2256,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -2504,7 +2538,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81723,
+    "htmlBytes": 84742,
     "incoming": [
       "/es",
       "/about",
@@ -2521,11 +2555,11 @@
       "/es",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/about",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -2666,19 +2700,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -2904,7 +2938,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81618,
+    "htmlBytes": 81817,
     "incoming": [
       "/",
       "/about",
@@ -2914,6 +2948,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -2924,11 +2959,11 @@
       "/",
       "/about",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/features",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -3069,19 +3104,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -3307,7 +3342,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 82652,
+    "htmlBytes": 82857,
     "incoming": [
       "/es",
       "/es/about",
@@ -3327,11 +3362,11 @@
       "/es",
       "/es/about",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/features",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -3561,19 +3596,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -3891,7 +3926,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 105094,
+    "htmlBytes": 105285,
     "incoming": [
       "/",
       "/about",
@@ -3901,6 +3936,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms"
     ],
@@ -4142,19 +4178,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -4472,7 +4508,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 106881,
+    "htmlBytes": 107072,
     "incoming": [
       "/es",
       "/es/about",
@@ -4658,19 +4694,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -4924,7 +4960,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 100903,
+    "htmlBytes": 101864,
     "incoming": [
       "/",
       "/about",
@@ -4934,6 +4970,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -4944,11 +4981,11 @@
       "/",
       "/about",
       "/features",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/pay-per-service",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -5113,19 +5150,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -5379,7 +5416,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 102715,
+    "htmlBytes": 103676,
     "incoming": [
       "/es",
       "/es/about",
@@ -5399,11 +5436,11 @@
       "/es",
       "/es/about",
       "/es/features",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/pay-per-service",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -5422,7 +5459,7 @@
     "locale": "en",
     "url": "/pricing",
     "title": "Plans & Pricing for Clinic Growth Systems | DigitalFace Marketing",
-    "description": "Compare DigitalFace plans for lead capture, AI follow-up and managed growth. Review setup fees, monthly pricing, included services and usage terms.",
+    "description": "Compare DigitalFace plans for lead capture, AI follow-up and advertising across Meta, Google and TikTok, with channel management quoted by scope and budget.",
     "h1": "Choose the help your practice needs.",
     "canonical": "https://digitalface.app/pricing",
     "indexStatus": "index, follow",
@@ -5476,43 +5513,43 @@
       },
       {
         "level": 3,
-        "text": "Let AI answer in two languages"
+        "text": "AI answers in multiple languages"
       },
       {
         "level": 3,
-        "text": "Know what patients need"
+        "text": "Understand patient needs"
       },
       {
         "level": 3,
-        "text": "Help book and reschedule"
+        "text": "AI helps book and reschedule"
       },
       {
         "level": 3,
-        "text": "Let your team step in"
+        "text": "Bring your team in"
       },
       {
         "level": 3,
-        "text": "Reconnect after a missed visit"
+        "text": "Reconnect after missed visits"
       },
       {
         "level": 3,
-        "text": "Offer an optional deposit"
+        "text": "AI supports optional deposits"
       },
       {
         "level": 2,
-        "text": "The DigitalFace Sales System"
+        "text": "The DigitalFace Sales System - Custom Plan"
       },
       {
         "level": 3,
-        "text": "Reach patients with ads"
+        "text": "Coordinate up to three ad channels"
       },
       {
         "level": 3,
-        "text": "Give your offer its own page"
+        "text": "Build pages around each offer"
       },
       {
         "level": 3,
-        "text": "Keep your ads fresh"
+        "text": "Keep channel creative fresh"
       },
       {
         "level": 3,
@@ -5580,11 +5617,11 @@
       },
       {
         "level": 3,
-        "text": "What the starting scope covers"
+        "text": "What the custom scope covers"
       },
       {
         "level": 3,
-        "text": "Advertising budget"
+        "text": "Channel pricing and advertising budget"
       },
       {
         "level": 3,
@@ -5624,10 +5661,6 @@
       },
       {
         "level": 2,
-        "text": "Ready to get started?"
-      },
-      {
-        "level": 2,
         "text": "Find the right plan on a call."
       }
     ],
@@ -5658,19 +5691,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -5912,7 +5945,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 114861,
+    "htmlBytes": 129770,
     "incoming": [
       "/",
       "/about",
@@ -5922,6 +5955,7 @@
       "/es/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -5933,10 +5967,10 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/contact",
       "/es/pricing",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -5955,7 +5989,7 @@
     "locale": "es",
     "url": "/es/pricing",
     "title": "Planes y Precios para Clínicas | DigitalFace Marketing",
-    "description": "Compara los planes DigitalFace de captación, seguimiento con IA y crecimiento gestionado: implementación, mensualidades, servicios incluidos y condiciones de uso.",
+    "description": "Compara los planes DigitalFace de captación, seguimiento con IA y pauta en Meta, Google y TikTok, con gestión cotizada según alcance y presupuesto.",
     "h1": "Elige el apoyo que necesita tu clínica.",
     "canonical": "https://digitalface.app/es/pricing",
     "indexStatus": "index, follow",
@@ -6009,43 +6043,43 @@
       },
       {
         "level": 3,
-        "text": "Deja que la IA responda en dos idiomas"
+        "text": "La IA responde en varios idiomas"
       },
       {
         "level": 3,
-        "text": "Conoce qué necesita el paciente"
+        "text": "Entender lo que necesita el paciente"
       },
       {
         "level": 3,
-        "text": "Ayuda a agendar y reprogramar"
+        "text": "La IA ayuda a agendar y reprogramar"
       },
       {
         "level": 3,
-        "text": "Deja que tu equipo intervenga"
+        "text": "Incorporar a tu equipo"
       },
       {
         "level": 3,
-        "text": "Retoma las citas perdidas"
+        "text": "Retomar citas perdidas"
       },
       {
         "level": 3,
-        "text": "Ofrece un anticipo opcional"
+        "text": "La IA facilita depósitos opcionales"
       },
       {
         "level": 2,
-        "text": "The DigitalFace Sales System"
+        "text": "The DigitalFace Sales System - Custom Plan"
       },
       {
         "level": 3,
-        "text": "Llega a pacientes con anuncios"
+        "text": "Coordina hasta tres canales publicitarios"
       },
       {
         "level": 3,
-        "text": "Dale a tu oferta su propia página"
+        "text": "Crea páginas para cada oferta"
       },
       {
         "level": 3,
-        "text": "Renueva tus anuncios"
+        "text": "Mantén actualizada la creatividad"
       },
       {
         "level": 3,
@@ -6113,11 +6147,11 @@
       },
       {
         "level": 3,
-        "text": "Qué cubre el alcance inicial"
+        "text": "Qué cubre el alcance personalizado"
       },
       {
         "level": 3,
-        "text": "Presupuesto de pauta"
+        "text": "Precio por canal y presupuesto de pauta"
       },
       {
         "level": 3,
@@ -6157,10 +6191,6 @@
       },
       {
         "level": 2,
-        "text": "¿Listo para empezar?"
-      },
-      {
-        "level": 2,
         "text": "Encuentra tu plan en una llamada."
       }
     ],
@@ -6191,19 +6221,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -6445,7 +6475,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 116734,
+    "htmlBytes": 132035,
     "incoming": [
       "/es",
       "/es/about",
@@ -6466,10 +6496,10 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/contact",
       "/pricing",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -6556,19 +6586,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -6709,7 +6739,7 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -6802,7 +6832,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 67168,
+    "htmlBytes": 67352,
     "incoming": [
       "/",
       "/about",
@@ -6812,6 +6842,7 @@
       "/pricing",
       "/es/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -6823,10 +6854,10 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/es/contact",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -6913,19 +6944,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -7066,7 +7097,7 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -7159,7 +7190,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 67978,
+    "htmlBytes": 68156,
     "incoming": [
       "/es",
       "/es/about",
@@ -7180,10 +7211,10 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/contact",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -7250,19 +7281,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -7480,7 +7511,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 30875,
+    "htmlBytes": 31066,
     "incoming": [
       "/",
       "/about",
@@ -7490,6 +7521,7 @@
       "/pricing",
       "/contact",
       "/es/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -7501,10 +7533,10 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -7571,19 +7603,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -7801,7 +7833,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 31431,
+    "htmlBytes": 31622,
     "incoming": [
       "/es",
       "/es/about",
@@ -7822,15 +7854,301 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
       "/es/privacy",
       "/es/terms"
+    ]
+  },
+  {
+    "id": "booking-confirmed",
+    "path": "/booking-confirmed",
+    "layout": "corporate",
+    "locales": [
+      "en"
+    ],
+    "indexable": false,
+    "type": "WebPage",
+    "topic": "Successful DigitalFace appointment booking confirmation",
+    "intent": "Acknowledge a completed appointment booking",
+    "locale": "en",
+    "url": "/booking-confirmed",
+    "title": "Appointment Confirmed | DigitalFace Marketing",
+    "description": "Your appointment has been successfully booked. We’ve received your reservation and you’ll receive the corresponding confirmation and reminders shortly.",
+    "h1": "Appointment confirmed",
+    "canonical": "https://digitalface.app/booking-confirmed",
+    "indexStatus": "noindex, follow",
+    "alternates": {},
+    "schema": [
+      "WebPage",
+      "BreadcrumbList",
+      "Organization",
+      "WebSite"
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "Appointment confirmed"
+      }
+    ],
+    "headingJumps": [],
+    "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hi%20DigitalFace%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20services.",
+        "text": "Chat on WhatsAppChat on WhatsApp"
+      },
+      {
+        "href": "/",
+        "text": "DigitalFace MarketingColombia - Florida"
+      },
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/about",
+        "text": "About"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service"
+      },
+      {
+        "href": "/pay-per-service#paid-media",
+        "text": "Paid media and social advertising"
+      },
+      {
+        "href": "/pay-per-service#meta-ads",
+        "text": "Meta ads (Facebook and Instagram)"
+      },
+      {
+        "href": "/pay-per-service#google-campaigns",
+        "text": "Google ads"
+      },
+      {
+        "href": "/pay-per-service#tiktok-ads",
+        "text": "TikTok ads"
+      },
+      {
+        "href": "/pay-per-service#seo-strategy",
+        "text": "SEO strategy"
+      },
+      {
+        "href": "/pay-per-service#audiovisual-production",
+        "text": "Audiovisual production"
+      },
+      {
+        "href": "/pay-per-service#content-creation",
+        "text": "Content creation"
+      },
+      {
+        "href": "/pay-per-service#automation-and-chatbots",
+        "text": "Automation and chatbots"
+      },
+      {
+        "href": "/pay-per-service#chatbot-development",
+        "text": "Chatbot development (AI and rule-based)"
+      },
+      {
+        "href": "/pay-per-service#workflow-automation",
+        "text": "Specialized workflow automation"
+      },
+      {
+        "href": "/pay-per-service#appointment-automation",
+        "text": "Appointment and calendar automation"
+      },
+      {
+        "href": "/pay-per-service#ecommerce-automation",
+        "text": "E-commerce automation (Shopify and WooCommerce)"
+      },
+      {
+        "href": "/pay-per-service#comment-auto-reply",
+        "text": "Auto-reply for Facebook and Instagram comments"
+      },
+      {
+        "href": "/pay-per-service#lead-ops-crm",
+        "text": "Lead operations and CRM"
+      },
+      {
+        "href": "/pay-per-service#lead-capture",
+        "text": "Lead capture and CRM sync across every channel"
+      },
+      {
+        "href": "/pay-per-service#appointment-booking",
+        "text": "Appointment booking and reminders"
+      },
+      {
+        "href": "/pay-per-service#crm-pipeline",
+        "text": "CRM pipeline setup (GoHighLevel)"
+      },
+      {
+        "href": "/pay-per-service#crm-integration",
+        "text": "CRM integration and unified data sync"
+      },
+      {
+        "href": "/pay-per-service#reporting-dashboards",
+        "text": "Reporting and performance dashboards"
+      },
+      {
+        "href": "/pay-per-service#websites-and-funnels",
+        "text": "Websites and funnels"
+      },
+      {
+        "href": "/pay-per-service#corporate-websites",
+        "text": "Corporate and business websites"
+      },
+      {
+        "href": "/pay-per-service#campaign-landing-pages",
+        "text": "Campaign landing pages"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/book",
+        "text": "Book a call"
+      },
+      {
+        "href": "/",
+        "text": "Home→"
+      },
+      {
+        "href": "/about",
+        "text": "About→"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System→"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service→"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans→"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact→"
+      },
+      {
+        "href": "/book",
+        "text": "Book a demo"
+      },
+      {
+        "href": "/",
+        "text": "Back to DigitalFace"
+      },
+      {
+        "href": "/",
+        "text": "DigitalFace Marketing"
+      },
+      {
+        "href": "/",
+        "text": "Home"
+      },
+      {
+        "href": "/about",
+        "text": "About"
+      },
+      {
+        "href": "/features",
+        "text": "Sales System"
+      },
+      {
+        "href": "/pay-per-service",
+        "text": "Pay per Service"
+      },
+      {
+        "href": "/pricing",
+        "text": "Plans"
+      },
+      {
+        "href": "/contact",
+        "text": "Contact"
+      },
+      {
+        "href": "/industries/paid-advertising",
+        "text": "Paid Advertising"
+      },
+      {
+        "href": "/industries/dental-practices",
+        "text": "Dental Practices"
+      },
+      {
+        "href": "/industries/aesthetic-medicine",
+        "text": "Aesthetic Medicine"
+      },
+      {
+        "href": "/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "/privacy",
+        "text": "Privacy Policy"
+      },
+      {
+        "href": "/terms",
+        "text": "Terms of Service"
+      },
+      {
+        "href": "/sitemap.xml",
+        "text": "Sitemap"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "DigitalFace Marketing logo",
+        "loading": "eager",
+        "width": "44",
+        "height": "44",
+        "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
+      },
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "DigitalFace Marketing logo",
+        "loading": "eager",
+        "width": "40",
+        "height": "40",
+        "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
+      }
+    ],
+    "htmlBytes": 27415,
+    "incoming": [],
+    "outgoing": [
+      "/",
+      "/about",
+      "/features",
+      "/pay-per-service",
+      "/pricing",
+      "/contact",
+      "/book",
+      "/industries/paid-advertising",
+      "/industries/dental-practices",
+      "/industries/aesthetic-medicine",
+      "/industries/med-spas",
+      "/privacy",
+      "/terms"
     ]
   },
   {
@@ -7944,19 +8262,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -8174,7 +8492,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36034,
+    "htmlBytes": 36225,
     "incoming": [
       "/",
       "/about",
@@ -8184,6 +8502,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/es/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -8195,11 +8514,11 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/privacy",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -8317,19 +8636,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -8547,7 +8866,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37355,
+    "htmlBytes": 37547,
     "incoming": [
       "/es",
       "/es/about",
@@ -8568,11 +8887,11 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/privacy",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -8698,19 +9017,19 @@
         "text": "Pay per Service"
       },
       {
-        "href": "/industries/paid-advertising",
+        "href": "/pay-per-service#paid-media",
         "text": "Paid media and social advertising"
       },
       {
-        "href": "/industries/paid-advertising#meta-ads",
+        "href": "/pay-per-service#meta-ads",
         "text": "Meta ads (Facebook and Instagram)"
       },
       {
-        "href": "/industries/paid-advertising#google-campaigns",
+        "href": "/pay-per-service#google-campaigns",
         "text": "Google ads"
       },
       {
-        "href": "/industries/paid-advertising#tiktok-ads",
+        "href": "/pay-per-service#tiktok-ads",
         "text": "TikTok ads"
       },
       {
@@ -8928,7 +9247,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 34724,
+    "htmlBytes": 34915,
     "incoming": [
       "/",
       "/about",
@@ -8938,6 +9257,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/es/terms",
       "/industries/dental-practices",
@@ -8949,11 +9269,11 @@
       "/about",
       "/features",
       "/pay-per-service",
-      "/industries/paid-advertising",
       "/pricing",
       "/contact",
       "/es/terms",
       "/book",
+      "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -9079,19 +9399,19 @@
         "text": "Servicios por separado"
       },
       {
-        "href": "/es/industries/paid-advertising",
+        "href": "/es/pay-per-service#paid-media",
         "text": "Pauta digital y publicidad en redes"
       },
       {
-        "href": "/es/industries/paid-advertising#meta-ads",
+        "href": "/es/pay-per-service#meta-ads",
         "text": "Anuncios en Meta (Facebook e Instagram)"
       },
       {
-        "href": "/es/industries/paid-advertising#google-campaigns",
+        "href": "/es/pay-per-service#google-campaigns",
         "text": "Anuncios en Google"
       },
       {
-        "href": "/es/industries/paid-advertising#tiktok-ads",
+        "href": "/es/pay-per-service#tiktok-ads",
         "text": "Anuncios en TikTok"
       },
       {
@@ -9309,7 +9629,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 35746,
+    "htmlBytes": 35937,
     "incoming": [
       "/es",
       "/es/about",
@@ -9330,11 +9650,11 @@
       "/es/about",
       "/es/features",
       "/es/pay-per-service",
-      "/es/industries/paid-advertising",
       "/es/pricing",
       "/es/contact",
       "/terms",
       "/es/book",
+      "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -9434,7 +9754,7 @@
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -9454,19 +9774,11 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
-      },
-      {
-        "level": 3,
-        "text": "Not included"
-      },
-      {
-        "level": 3,
         "text": "Add AI patient follow-up"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -9490,27 +9802,23 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Scale dental acquisition"
       },
       {
         "level": 3,
-        "text": "Add dental advertising"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "What the custom scope covers"
       },
       {
         "level": 3,
-        "text": "What the starting scope covers"
-      },
-      {
-        "level": 3,
-        "text": "Advertising budget"
+        "text": "Channel pricing and advertising budget"
       },
       {
         "level": 3,
@@ -9526,11 +9834,31 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Advertising channels and custom pricing"
+      },
+      {
+        "level": 3,
+        "text": "AI and communication usage"
+      },
+      {
+        "level": 3,
+        "text": "Do we need to buy new software?"
+      },
+      {
+        "level": 3,
+        "text": "Ads and campaign pages"
+      },
+      {
+        "level": 3,
+        "text": "Optional appointment deposits"
+      },
+      {
+        "level": 3,
+        "text": "Month-to-month, with a defined scope"
       },
       {
         "level": 2,
@@ -9649,7 +9977,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -9774,7 +10102,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202659,
+    "htmlBytes": 212327,
     "incoming": [
       "/",
       "/about",
@@ -9784,6 +10112,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/es/industries/dental-practices",
@@ -9897,7 +10226,7 @@
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -9917,19 +10246,11 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
-      },
-      {
-        "level": 3,
-        "text": "No incluido"
-      },
-      {
-        "level": 3,
         "text": "Suma seguimiento con IA"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -9953,27 +10274,23 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Escala la captación dental"
       },
       {
         "level": 3,
-        "text": "Suma publicidad dental"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Qué cubre el alcance personalizado"
       },
       {
         "level": 3,
-        "text": "Qué cubre el alcance inicial"
-      },
-      {
-        "level": 3,
-        "text": "Presupuesto de pauta"
+        "text": "Precio por canal y presupuesto de pauta"
       },
       {
         "level": 3,
@@ -9989,11 +10306,31 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Canales publicitarios y precio personalizado"
+      },
+      {
+        "level": 3,
+        "text": "Uso de IA y comunicaciones"
+      },
+      {
+        "level": 3,
+        "text": "¿Necesitamos comprar nuevo software?"
+      },
+      {
+        "level": 3,
+        "text": "Anuncios y páginas de campaña"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos opcionales para citas"
+      },
+      {
+        "level": 3,
+        "text": "Mes a mes, con un alcance definido"
       },
       {
         "level": 2,
@@ -10112,7 +10449,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -10237,7 +10574,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 204716,
+    "htmlBytes": 215327,
     "incoming": [
       "/es",
       "/es/about",
@@ -10360,7 +10697,7 @@
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -10380,19 +10717,11 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
-      },
-      {
-        "level": 3,
-        "text": "Not included"
-      },
-      {
-        "level": 3,
         "text": "Add AI consultation support"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -10416,27 +10745,23 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Scale aesthetic acquisition"
       },
       {
         "level": 3,
-        "text": "Add aesthetic advertising"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "What the custom scope covers"
       },
       {
         "level": 3,
-        "text": "What the starting scope covers"
-      },
-      {
-        "level": 3,
-        "text": "Advertising budget"
+        "text": "Channel pricing and advertising budget"
       },
       {
         "level": 3,
@@ -10452,11 +10777,31 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Advertising channels and custom pricing"
+      },
+      {
+        "level": 3,
+        "text": "AI and communication usage"
+      },
+      {
+        "level": 3,
+        "text": "Do we need to buy new software?"
+      },
+      {
+        "level": 3,
+        "text": "Ads and campaign pages"
+      },
+      {
+        "level": 3,
+        "text": "Optional appointment deposits"
+      },
+      {
+        "level": 3,
+        "text": "Month-to-month, with a defined scope"
       },
       {
         "level": 2,
@@ -10575,7 +10920,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -10700,7 +11045,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 203264,
+    "htmlBytes": 212923,
     "incoming": [
       "/",
       "/about",
@@ -10710,6 +11055,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -10823,7 +11169,7 @@
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -10843,19 +11189,11 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
-      },
-      {
-        "level": 3,
-        "text": "No incluido"
-      },
-      {
-        "level": 3,
         "text": "Suma apoyo con IA"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -10879,27 +11217,23 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Escala la captación estética"
       },
       {
         "level": 3,
-        "text": "Suma publicidad para tu consulta"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Qué cubre el alcance personalizado"
       },
       {
         "level": 3,
-        "text": "Qué cubre el alcance inicial"
-      },
-      {
-        "level": 3,
-        "text": "Presupuesto de pauta"
+        "text": "Precio por canal y presupuesto de pauta"
       },
       {
         "level": 3,
@@ -10915,11 +11249,31 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Canales publicitarios y precio personalizado"
+      },
+      {
+        "level": 3,
+        "text": "Uso de IA y comunicaciones"
+      },
+      {
+        "level": 3,
+        "text": "¿Necesitamos comprar nuevo software?"
+      },
+      {
+        "level": 3,
+        "text": "Anuncios y páginas de campaña"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos opcionales para citas"
+      },
+      {
+        "level": 3,
+        "text": "Mes a mes, con un alcance definido"
       },
       {
         "level": 2,
@@ -11038,7 +11392,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -11163,7 +11517,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 205253,
+    "htmlBytes": 215852,
     "incoming": [
       "/es",
       "/es/about",
@@ -11286,7 +11640,7 @@
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -11306,19 +11660,11 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
-      },
-      {
-        "level": 3,
-        "text": "Not included"
-      },
-      {
-        "level": 3,
         "text": "Add AI booking support"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
@@ -11342,27 +11688,23 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Scale med spa acquisition"
       },
       {
         "level": 3,
-        "text": "Add med spa advertising"
+        "text": "Core plan capabilities"
       },
       {
         "level": 3,
-        "text": "What you get"
+        "text": "What the custom scope covers"
       },
       {
         "level": 3,
-        "text": "What the starting scope covers"
-      },
-      {
-        "level": 3,
-        "text": "Advertising budget"
+        "text": "Channel pricing and advertising budget"
       },
       {
         "level": 3,
@@ -11378,11 +11720,31 @@
       },
       {
         "level": 3,
-        "text": "Scope and limits"
+        "text": "Optional add-ons"
       },
       {
         "level": 3,
-        "text": "Not included"
+        "text": "Advertising channels and custom pricing"
+      },
+      {
+        "level": 3,
+        "text": "AI and communication usage"
+      },
+      {
+        "level": 3,
+        "text": "Do we need to buy new software?"
+      },
+      {
+        "level": 3,
+        "text": "Ads and campaign pages"
+      },
+      {
+        "level": 3,
+        "text": "Optional appointment deposits"
+      },
+      {
+        "level": 3,
+        "text": "Month-to-month, with a defined scope"
       },
       {
         "level": 2,
@@ -11501,7 +11863,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Mon14Tue15Wed16Thu17Fri18Sat19Mon21Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -11626,7 +11988,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 202542,
+    "htmlBytes": 212234,
     "incoming": [
       "/",
       "/about",
@@ -11636,6 +11998,7 @@
       "/pricing",
       "/contact",
       "/book",
+      "/booking-confirmed",
       "/privacy",
       "/terms",
       "/industries/dental-practices",
@@ -11749,7 +12112,7 @@
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -11769,19 +12132,11 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
-      },
-      {
-        "level": 3,
-        "text": "No incluido"
-      },
-      {
-        "level": 3,
         "text": "Suma apoyo de IA para reservas"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
@@ -11805,27 +12160,23 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Escala la captación de tu med spa"
       },
       {
         "level": 3,
-        "text": "Suma publicidad para tu med spa"
+        "text": "Funciones principales del plan"
       },
       {
         "level": 3,
-        "text": "Qué recibes"
+        "text": "Qué cubre el alcance personalizado"
       },
       {
         "level": 3,
-        "text": "Qué cubre el alcance inicial"
-      },
-      {
-        "level": 3,
-        "text": "Presupuesto de pauta"
+        "text": "Precio por canal y presupuesto de pauta"
       },
       {
         "level": 3,
@@ -11841,11 +12192,31 @@
       },
       {
         "level": 3,
-        "text": "Alcance y límites"
+        "text": "Servicios adicionales opcionales"
       },
       {
         "level": 3,
-        "text": "No incluido"
+        "text": "Canales publicitarios y precio personalizado"
+      },
+      {
+        "level": 3,
+        "text": "Uso de IA y comunicaciones"
+      },
+      {
+        "level": 3,
+        "text": "¿Necesitamos comprar nuevo software?"
+      },
+      {
+        "level": 3,
+        "text": "Anuncios y páginas de campaña"
+      },
+      {
+        "level": 3,
+        "text": "Anticipos opcionales para citas"
+      },
+      {
+        "level": 3,
+        "text": "Mes a mes, con un alcance definido"
       },
       {
         "level": 2,
@@ -11964,7 +12335,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026lun14mar15mié16jue17vie18sáb19lun21Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -12089,7 +12460,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 204618,
+    "htmlBytes": 215270,
     "incoming": [
       "/es",
       "/es/about",

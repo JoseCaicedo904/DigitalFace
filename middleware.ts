@@ -44,12 +44,15 @@ export default function middleware(request: Request): Response | undefined {
 
   if (shouldSkip(url.pathname)) return undefined;
   // Unknown pages must reach the host's real 404, not a guessed Spanish URL.
-  if (
-    !site.routes.some(
-      (route) => route.path === stripLocaleFromPathname(url.pathname),
-    )
-  )
-    return undefined;
+  const route = site.routes.find(
+    (entry) => entry.path === stripLocaleFromPathname(url.pathname),
+  );
+  if (!route) return undefined;
+  const supportedLocales: readonly string[] =
+    "locales" in route ? route.locales : ["en", "es"];
+  const currentLocale =
+    url.pathname === "/es" || url.pathname.startsWith("/es/") ? "es" : "en";
+  if (!supportedLocales.includes(currentLocale)) return undefined;
 
   const country = request.headers.get("x-vercel-ip-country");
   const cookieLocale = readCookieValue(
@@ -67,6 +70,7 @@ export default function middleware(request: Request): Response | undefined {
   });
 
   if (!decision.shouldRedirect) return undefined;
+  if (!supportedLocales.includes(decision.locale)) return undefined;
 
   const target = new URL(url);
   target.pathname = localePath(decision.locale, url.pathname);

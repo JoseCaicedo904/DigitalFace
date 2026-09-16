@@ -6,10 +6,15 @@ import site from "../shared/site.json";
 export function staticSite(distPath: string) {
   const router = express.Router();
   const paths = new Set(
-    site.routes.flatMap((route) => [
-      route.path,
-      route.path === "/" ? "/es" : "/es" + route.path,
-    ]),
+    site.routes.flatMap((route) =>
+      ("locales" in route ? route.locales : ["en", "es"]).map((locale) =>
+        locale === "en"
+          ? route.path
+          : route.path === "/"
+            ? "/es"
+            : "/es" + route.path,
+      ),
+    ),
   );
   router.use((req, res, next) => {
     if (req.method !== "GET" && req.method !== "HEAD") return next();

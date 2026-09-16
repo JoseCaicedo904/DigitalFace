@@ -4,6 +4,7 @@ import {
   absoluteUrl,
   getLocaleFromPathname,
   localePath,
+  routeSupportsLocale,
   stripLocaleFromPathname,
 } from "@/i18n/locale";
 
@@ -30,7 +31,15 @@ export function buildHead(
 ) {
   const locale = getLocaleFromPathname(pathname);
   const base = stripLocaleFromPathname(pathname);
-  const route = site.routes.find((entry) => entry.path === base);
+  const matchedRoute = site.routes.find((entry) => entry.path === base);
+  const route = routeSupportsLocale(pathname, locale)
+    ? matchedRoute
+    : undefined;
+  const routeLocales: readonly string[] = route
+    ? "locales" in route
+      ? route.locales
+      : ["en", "es"]
+    : [locale];
   const noindex = options.noindex || !route?.indexable;
   const canonical = route ? absoluteUrl(localePath(locale, route.path)) : null;
   const image = options.image?.startsWith("https://")
@@ -54,10 +63,12 @@ export function buildHead(
     { property: "og:type", content: "website" },
     ...(canonical ? [{ property: "og:url", content: canonical }] : []),
     { property: "og:locale", content: locale === "es" ? "es_LA" : "en_US" },
-    {
-      property: "og:locale:alternate",
-      content: locale === "es" ? "en_US" : "es_LA",
-    },
+    ...routeLocales
+      .filter((otherLocale) => otherLocale !== locale)
+      .map((otherLocale) => ({
+        property: "og:locale:alternate",
+        content: otherLocale === "es" ? "es_LA" : "en_US",
+      })),
     { property: "og:image", content: image },
     { property: "og:image:alt", content: imageAlt },
     ...(!options.image
@@ -76,11 +87,24 @@ export function buildHead(
     ? [
         { rel: "canonical", href: canonical },
         ...(!noindex
-          ? ["en", "es", "x-default"].map((lang) => ({
-              rel: "alternate",
-              hreflang: lang,
-              href: absoluteUrl(localePath(lang === "es" ? "es" : "en", base)),
-            }))
+          ? [
+              ...routeLocales.map((lang) => ({
+                rel: "alternate",
+                hreflang: lang,
+                href: absoluteUrl(
+                  localePath(lang === "es" ? "es" : "en", base),
+                ),
+              })),
+              ...(routeLocales.includes("en")
+                ? [
+                    {
+                      rel: "alternate",
+                      hreflang: "x-default",
+                      href: absoluteUrl(localePath("en", base)),
+                    },
+                  ]
+                : []),
+            ]
           : []),
       ]
     : [];

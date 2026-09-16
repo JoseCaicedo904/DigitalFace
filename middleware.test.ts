@@ -128,6 +128,21 @@ describe("middleware — pass-through", () => {
   it("passes through when Vercel sends no geo header", () => {
     expect(middleware(request("/pricing"))).toBeUndefined();
   });
+
+  it("does not redirect the English-only confirmation route to Spanish", () => {
+    expect(
+      middleware(
+        request("/booking-confirmed", { "x-vercel-ip-country": "CO" }),
+      ),
+    ).toBeUndefined();
+    expect(
+      middleware(
+        request("/booking-confirmed?lang=es", {
+          "x-vercel-ip-country": "US",
+        }),
+      ),
+    ).toBeUndefined();
+  });
 });
 
 describe("middleware — paths that must never be touched", () => {

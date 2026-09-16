@@ -13,7 +13,7 @@ import { ServiceRequestProvider } from "./components/request/ServiceRequestProvi
 import { Analytics } from "./components/seo/Analytics";
 import { WhatsAppButton } from "./components/contact/WhatsAppButton";
 import { GhlChatWidget } from "./components/ghl/GhlChatWidget";
-import { localePath } from "./i18n/locale";
+import { localePath, routeSupportsLocale } from "./i18n/locale";
 import site from "@shared/site.json";
 
 // The route manifest also drives static HTML, the sitemap and status handling.
@@ -27,6 +27,7 @@ const pages: Record<string, ComponentType> = {
   pricing: lazy(() => import("./pages/Pricing")),
   contact: lazy(() => import("./pages/Contact")),
   book: lazy(() => import("./pages/Book")),
+  "booking-confirmed": lazy(() => import("./pages/BookingConfirmed")),
   privacy: lazy(() => import("./pages/Privacy")),
   terms: lazy(() => import("./pages/Terms")),
   dental: lazy(() =>
@@ -71,7 +72,11 @@ export default function App() {
                 {(["en", "es"] as const).map((locale) => (
                   <Route key={locale} element={<MainLayout />}>
                     {site.routes
-                      .filter((r) => r.layout === "corporate")
+                      .filter(
+                        (route) =>
+                          route.layout === "corporate" &&
+                          routeSupportsLocale(route.path, locale),
+                      )
                       .map((route) => {
                         const Page = pages[route.id];
                         return (
@@ -86,7 +91,11 @@ export default function App() {
                 ))}
                 {(["en", "es"] as const).flatMap((locale) =>
                   site.routes
-                    .filter((r) => r.layout === "industry")
+                    .filter(
+                      (route) =>
+                        route.layout === "industry" &&
+                        routeSupportsLocale(route.path, locale),
+                    )
                     .map((route) => {
                       const Page = pages[route.id];
                       return (

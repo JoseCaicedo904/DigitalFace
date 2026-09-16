@@ -5,6 +5,7 @@ import {
   localePath,
   normalizePathname,
   readCookieValue,
+  stripLocaleFromPathname,
   type Locale,
 } from "./geo";
 
@@ -31,6 +32,17 @@ export const LOCALE_STORAGE_KEY = "digitalface.locale";
 // Canonicals must not drift with preview URLs or stale environment values.
 import site from "@shared/site.json";
 export const SITE_URL = site.origin;
+
+type SiteRoute = (typeof site.routes)[number] & { locales?: Locale[] };
+
+/** Whether a registered route has a real document in the requested language. */
+export function routeSupportsLocale(pathname: string, locale: Locale): boolean {
+  const base = stripLocaleFromPathname(pathname);
+  const route = (site.routes as SiteRoute[]).find(
+    (entry) => entry.path === base,
+  );
+  return Boolean(route && (!route.locales || route.locales.includes(locale)));
+}
 
 export const localeMeta: Record<
   Locale,

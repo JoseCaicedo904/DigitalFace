@@ -51,10 +51,15 @@ assert.equal(appleMeta.width, 180);
 assert.equal(appleMeta.height, 180);
 
 const site = JSON.parse(await fs.readFile("shared/site.json", "utf8"));
-const routes = site.routes.flatMap(({ path }) => [
-  path,
-  path === "/" ? "/es" : "/es" + path,
-]);
+const routes = site.routes.flatMap((route) =>
+  (route.locales || ["en", "es"]).map((locale) =>
+    locale === "en"
+      ? route.path
+      : route.path === "/"
+        ? "/es"
+        : "/es" + route.path,
+  ),
+);
 for (const route of [...routes, "/404", "/es/404"]) {
   const file = route === "/" ? "index.html" : route.slice(1) + ".html";
   const dom = new JSDOM(await fs.readFile("dist/spa/" + file, "utf8"));
@@ -82,5 +87,5 @@ for (const route of [...routes, "/404", "/es/404"]) {
   dom.window.close();
 }
 console.log(
-  "Validated 5 built icon assets, 3 ICO images, and all 26 prerendered HTML documents.",
+  `Validated 5 built icon assets, 3 ICO images, and all ${routes.length + 2} prerendered HTML documents.`,
 );

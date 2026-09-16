@@ -25,7 +25,7 @@ afterAll(async () => {
 describe("Generated production HTTP documents", () => {
   it("serves the actual localized HTML on every direct route", async () => {
     for (const route of site.routes)
-      for (const lang of ["en", "es"]) {
+      for (const lang of "locales" in route ? route.locales : ["en", "es"]) {
         const url =
           lang === "en"
             ? route.path
@@ -44,6 +44,7 @@ describe("Generated production HTTP documents", () => {
     for (const url of [
       "/not-a-page",
       "/es/not-a-page",
+      "/es/booking-confirmed",
       "/assets/not-a-file.js",
       "/api/missing",
     ]) {
@@ -77,7 +78,13 @@ describe("Generated production HTTP documents", () => {
     const xml = await fetch(origin + "/sitemap.xml");
     expect(xml.headers.get("content-type")).toContain("xml");
     expect((await xml.text()).match(/<loc>/g)).toHaveLength(
-      site.routes.length * 2,
+      site.routes
+        .filter((route) => route.indexable)
+        .reduce(
+          (count, route) =>
+            count + ("locales" in route ? route.locales.length : 2),
+          0,
+        ),
     );
     expect(await (await fetch(origin + "/robots.txt")).text()).toContain(
       "Sitemap: https://digitalface.app/sitemap.xml",

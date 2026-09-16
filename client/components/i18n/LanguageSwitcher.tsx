@@ -5,6 +5,7 @@ import { useLocale } from "@/i18n/LocaleProvider";
 import {
   LOCALES,
   localeMeta,
+  routeSupportsLocale,
   storeLocale,
   swapLocaleInPath,
 } from "@/i18n/locale";
@@ -32,6 +33,12 @@ export function LanguageSwitcher({
   const { locale } = useLocale();
   const { pathname, search, hash } = useLocation();
   const labels = copy[locale];
+  const availableLocales = LOCALES.filter((option) =>
+    routeSupportsLocale(pathname, option),
+  );
+
+  // An English-only transactional page must not advertise a missing translation.
+  if (availableLocales.length < 2) return null;
 
   return (
     <div
@@ -55,7 +62,7 @@ export function LanguageSwitcher({
           )}
         />
       ) : null}
-      {LOCALES.map((option) => {
+      {availableLocales.map((option) => {
         const isActive = option === locale;
         return (
           <Link

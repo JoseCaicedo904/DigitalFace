@@ -8,6 +8,7 @@ import {
   localeMeta,
   localePath,
   readLocaleCookie,
+  routeSupportsLocale,
   storeLocale,
   type Locale,
 } from "./locale";
@@ -76,10 +77,12 @@ function useBrowserLocaleDetection(pathname: string, search: string) {
     });
 
     if (!decision.shouldRedirect) return;
+    if (!routeSupportsLocale(pathname, decision.locale)) return;
 
     // A language *guess* must never override an in-app navigation. A stored choice
     // or an explicit ?lang= still applies, because both are the visitor's own doing.
-    if (decision.reason === "browser-language" && arrivedFromSameOrigin()) return;
+    if (decision.reason === "browser-language" && arrivedFromSameOrigin())
+      return;
 
     storeLocale(decision.locale);
     params.delete("lang");

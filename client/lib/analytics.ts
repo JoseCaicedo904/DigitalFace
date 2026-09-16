@@ -1,11 +1,13 @@
 import site from "@shared/site.json";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
+import { routeSupportsLocale } from "@/i18n/locale";
 
 type EventName =
   | "generate_lead"
   | "consultation_click"
   | "contact_click"
-  | "service_request_add";
+  | "service_request_add"
+  | "appointment_booked";
 type Parameters = {
   page_source?: string;
   lead_type?: "contact" | "service_request";
@@ -21,6 +23,9 @@ declare global {
 }
 let initialized = false;
 let lastPage: string | null = null;
+const APPOINTMENT_BOOKED_PATH = "/booking-confirmed";
+const APPOINTMENT_BOOKED_SESSION_KEY =
+  "digitalface.analytics.appointment_booked.sent";
 
 export function canTrack(
   measurementId: string | undefined,
@@ -39,8 +44,12 @@ export function canTrack(
 /** No unknown paths, URL queries, fragments, email addresses or form text in GA4. */
 export function analyticsPage(pathname: string) {
   const base = stripLocaleFromPathname(pathname);
-  if (!site.routes.some((route) => route.path === base)) return null;
   const locale = getLocaleFromPathname(pathname);
+  if (
+    !site.routes.some((route) => route.path === base) ||
+    !routeSupportsLocale(pathname, locale)
+  )
+    return null;
   return {
     page_path: locale === "es" ? (base === "/" ? "/es" : `/es${base}`) : base,
     locale,
@@ -172,4 +181,28 @@ export function trackEvent(name: EventName, parameters: Parameters = {}) {
   } catch {
     /* Lead delivery always wins over measurement. */
   }
+}
+
+/**
+ * Records the confirmed-booking conversion once per browser-tab session.
+ * The fixed route check and parameter-free event keep booking and contact data
+ * out of GA4; only the analytics layer's sanitized page context is attached.
+ */
+export function trackAppointmentBookedOnce() {
+  if (typeof window === "undefined") return;
+  if (
+    analyticsPage(window.location.pathname)?.page_path !==
+    APPOINTMENT_BOOKED_PATH
+  )
+    return;
+
+  try {
+    if (window.sessionStorage.getItem(APPOINTMENT_BOOKED_SESSION_KEY)) return;
+    window.sessionStorage.setItem(APPOINTMENT_BOOKED_SESSION_KEY, "1");
+  } catch {
+    // Without session storage, do not risk double-counting a confirmation reload.
+    return;
+  }
+
+  trackEvent("appointment_booked");
 }

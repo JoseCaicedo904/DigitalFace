@@ -78,6 +78,16 @@
       "intent": "Schedule a consultation"
     },
     {
+      "id": "booking-confirmed",
+      "path": "/booking-confirmed",
+      "layout": "corporate",
+      "locales": ["en"],
+      "indexable": false,
+      "type": "WebPage",
+      "topic": "Successful DigitalFace appointment booking confirmation",
+      "intent": "Acknowledge a completed appointment booking"
+    },
+    {
       "id": "privacy",
       "path": "/privacy",
       "layout": "corporate",

@@ -4,14 +4,18 @@ const { origin, routes } = JSON.parse(
 );
 const localize = (locale, route) =>
   locale === "en" ? route : route === "/" ? "/es" : "/es" + route;
+const localesFor = (route) => route.locales || ["en", "es"];
 const entries = routes
   .filter((r) => r.indexable)
   .flatMap((route) =>
-    ["en", "es"].map((locale) =>
+    localesFor(route).map((locale) =>
       [
         "  <url>",
         "    <loc>" + origin + localize(locale, route.path) + "</loc>",
-        ...["en", "es", "x-default"].map(
+        ...[
+          ...localesFor(route),
+          ...(localesFor(route).includes("en") ? ["x-default"] : []),
+        ].map(
           (lang) =>
             '    <xhtml:link rel="alternate" hreflang="' +
             lang +

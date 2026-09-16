@@ -7,8 +7,9 @@ const site = JSON.parse(fs.readFileSync("shared/site.json", "utf8"));
 const output = "dist/spa";
 const localized = (locale, base) =>
   locale === "en" ? base : base === "/" ? "/es" : "/es" + base;
+const localesFor = (route) => route.locales || ["en", "es"];
 const all = site.routes.flatMap((route) =>
-  ["en", "es"].map((locale) => ({
+  localesFor(route).map((locale) => ({
     ...route,
     locale,
     url: localized(locale, route.path),
@@ -103,11 +104,17 @@ for (const route of all) {
       link.href,
     ]),
   );
+  const expectedAlternateLocales = route.indexable
+    ? [
+        ...localesFor(route),
+        ...(localesFor(route).includes("en") ? ["x-default"] : []),
+      ]
+    : [];
   check(
-    Object.keys(alternates).length === 3,
-    route.url + ": expected en/es/x-default alternates",
+    Object.keys(alternates).length === expectedAlternateLocales.length,
+    route.url + ": unexpected alternate-language count",
   );
-  for (const lang of ["en", "es", "x-default"])
+  for (const lang of expectedAlternateLocales)
     check(
       alternates[lang] ===
         site.origin + localized(lang === "es" ? "es" : "en", route.path),
@@ -310,7 +317,10 @@ for (const record of records) {
   record.incoming = records
     .filter((from) => from.outgoing.includes(record.url))
     .map((from) => from.url);
-  check(record.incoming.length > 0, record.url + ": orphaned page");
+  check(
+    !record.indexable || record.incoming.length > 0,
+    record.url + ": orphaned page",
+  );
 }
 const xml = new JSDOM(
   fs.readFileSync(path.join(output, "sitemap.xml"), "utf8"),

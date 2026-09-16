@@ -5,10 +5,15 @@ const { routes } = JSON.parse(await fs.readFile("shared/site.json", "utf8"));
 const template = await fs.readFile("dist/spa/index.html", "utf8");
 if (!template.includes("<!--seo-head-->"))
   throw new Error("SEO head marker missing");
-const urls = routes.flatMap((route) => [
-  route.path,
-  route.path === "/" ? "/es" : "/es" + route.path,
-]);
+const urls = routes.flatMap((route) =>
+  (route.locales || ["en", "es"]).map((locale) =>
+    locale === "en"
+      ? route.path
+      : route.path === "/"
+        ? "/es"
+        : "/es" + route.path,
+  ),
+);
 for (const url of [...urls, "/404", "/es/404"]) {
   const result = await render(url);
   const isError = !urls.includes(url);
