@@ -94,7 +94,7 @@ describe("GA4 runtime behavior without any network requests", () => {
   it("records once per booking flow, survives refresh and resets on /book", async () => {
     const analytics = await productionAnalytics("https://digitalface.app/book");
 
-    analytics.resetAppointmentBookedGuard();
+    analytics.startAppointmentBookingAttempt();
     window.history.replaceState(
       {},
       "",
@@ -110,7 +110,7 @@ describe("GA4 runtime behavior without any network requests", () => {
 
     // Returning to /book starts a new legitimate booking flow.
     window.history.replaceState({}, "", "/book");
-    analytics.resetAppointmentBookedGuard();
+    analytics.startAppointmentBookingAttempt();
     window.history.replaceState({}, "", "/booking-confirmed");
     analytics.trackAppointmentBookedOnce();
     analytics.trackAppointmentBookedOnce();
@@ -131,6 +131,17 @@ describe("GA4 runtime behavior without any network requests", () => {
     expect(JSON.stringify(bookingEvents)).not.toContain(
       "synthetic@example.invalid",
     );
+  });
+  it("requires an explicit /book attempt before recording a conversion", async () => {
+    const analytics = await productionAnalytics(
+      "https://digitalface.app/booking-confirmed",
+    );
+
+    analytics.startAppointmentBookingAttempt();
+    analytics.trackAppointmentBookedOnce();
+
+    expect(window.dataLayer).toBeUndefined();
+    expect(document.querySelector("#df-ga4")).toBeNull();
   });
   it("never records a booking conversion from another route", async () => {
     const analytics = await productionAnalytics();

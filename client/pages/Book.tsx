@@ -4,7 +4,7 @@ import { GhlBookingEmbed } from "@/components/booking/GhlBookingEmbed";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { bookContent } from "@/i18n/content/book";
-import { resetAppointmentBookedGuard } from "@/lib/analytics";
+import { startAppointmentBookingAttempt } from "@/lib/analytics";
 
 /**
  * The single DigitalFace scheduling page, and the only route that loads the
@@ -24,7 +24,7 @@ export default function Book() {
   usePageMetadata(t.metadata.title, t.metadata.description);
 
   useEffect(() => {
-    resetAppointmentBookedGuard();
+    startAppointmentBookingAttempt();
   }, []);
 
   return (

@@ -23,9 +23,12 @@ declare global {
 }
 let initialized = false;
 let lastPage: string | null = null;
+const BOOKING_PATH = "/book";
 const APPOINTMENT_BOOKED_PATH = "/booking-confirmed";
-const APPOINTMENT_BOOKED_SESSION_KEY =
-  "digitalface.analytics.appointment_booked.sent";
+const APPOINTMENT_BOOKING_STATE_KEY =
+  "digitalface.analytics.appointment_booked.state";
+const APPOINTMENT_BOOKING_PENDING = "pending";
+const APPOINTMENT_BOOKING_FIRED = "fired";
 
 export function canTrack(
   measurementId: string | undefined,
@@ -183,12 +186,17 @@ export function trackEvent(name: EventName, parameters: Parameters = {}) {
   }
 }
 
-/** Clears the conversion claim when a visitor starts a new booking flow. */
-export function resetAppointmentBookedGuard() {
+/** Arms one conversion when this tab starts a new booking flow from /book. */
+export function startAppointmentBookingAttempt() {
   if (typeof window === "undefined") return;
+  if (stripLocaleFromPathname(window.location.pathname) !== BOOKING_PATH)
+    return;
 
   try {
-    window.sessionStorage.removeItem(APPOINTMENT_BOOKED_SESSION_KEY);
+    window.sessionStorage.setItem(
+      APPOINTMENT_BOOKING_STATE_KEY,
+      APPOINTMENT_BOOKING_PENDING,
+    );
   } catch {
     /* The booking page must still render if session storage is unavailable. */
   }
@@ -208,8 +216,15 @@ export function trackAppointmentBookedOnce() {
     return;
 
   try {
-    if (window.sessionStorage.getItem(APPOINTMENT_BOOKED_SESSION_KEY)) return;
-    window.sessionStorage.setItem(APPOINTMENT_BOOKED_SESSION_KEY, "1");
+    if (
+      window.sessionStorage.getItem(APPOINTMENT_BOOKING_STATE_KEY) !==
+      APPOINTMENT_BOOKING_PENDING
+    )
+      return;
+    window.sessionStorage.setItem(
+      APPOINTMENT_BOOKING_STATE_KEY,
+      APPOINTMENT_BOOKING_FIRED,
+    );
   } catch {
     // Without session storage, do not risk double-counting a confirmation reload.
     return;
