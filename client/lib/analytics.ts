@@ -30,6 +30,14 @@ const APPOINTMENT_BOOKING_STATE_KEY =
   "digitalface.analytics.appointment_booked.state";
 const APPOINTMENT_BOOKING_PENDING = "pending";
 const APPOINTMENT_BOOKING_FIRED = "fired";
+const ANALYTICS_CAMPAIGN_PARAMETER_MAP = [
+  ["utm_id", "campaign_id"],
+  ["utm_source", "campaign_source"],
+  ["utm_medium", "campaign_medium"],
+  ["utm_campaign", "campaign_name"],
+  ["utm_term", "campaign_term"],
+  ["utm_content", "campaign_content"],
+] as const;
 
 export function canTrack(
   measurementId: string | undefined,
@@ -64,6 +72,21 @@ function analyticsPageLocation(pagePath: string) {
   return site.origin + pagePath + readAnalyticsAttributionQuery();
 }
 
+function analyticsCampaignParameters() {
+  const attribution = new URLSearchParams(readAnalyticsAttributionQuery());
+  const campaign: Record<string, string> = {};
+
+  for (const [
+    queryParameter,
+    campaignParameter,
+  ] of ANALYTICS_CAMPAIGN_PARAMETER_MAP) {
+    const value = attribution.get(queryParameter);
+    if (value) campaign[campaignParameter] = value;
+  }
+
+  return campaign;
+}
+
 function initialize() {
   if (typeof window === "undefined") return false;
   const environment = import.meta.env;
@@ -95,6 +118,9 @@ function initialize() {
     send_page_view: false,
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
+    // Explicit fields make campaign attribution available to the first hit;
+    // relying on an overridden page_location alone did not populate them.
+    ...analyticsCampaignParameters(),
     // Exposes only the explicitly approved ad parameters, never arbitrary URL data.
     page_location: analyticsPageLocation(
       analyticsPage(window.location.pathname)?.page_path || "/",
@@ -131,17 +157,20 @@ function recordPageView(pathname: string, title: string) {
   }
   if (!initialize() || lastPage === page.page_path) return;
   const location = analyticsPageLocation(page.page_path);
+  const campaign = analyticsCampaignParameters();
   const referrer = lastPage
     ? site.origin + lastPage
     : safeReferrer(document.referrer);
   // Also updates the context used by engagement events between navigations.
   window.gtag!("set", {
+    ...campaign,
     page_location: location,
     page_title: title,
     page_referrer: referrer,
   });
   window.gtag!("event", "page_view", {
     ...page,
+    ...campaign,
     page_title: title,
     page_location: location,
     page_referrer: referrer,
