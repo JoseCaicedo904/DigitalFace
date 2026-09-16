@@ -1,6 +1,7 @@
 import site from "@shared/site.json";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
 import { routeSupportsLocale } from "@/i18n/locale";
+import { readAnalyticsAttributionQuery } from "@/lib/attribution";
 
 type EventName =
   | "generate_lead"
@@ -59,6 +60,10 @@ export function analyticsPage(pathname: string) {
   };
 }
 
+function analyticsPageLocation(pagePath: string) {
+  return site.origin + pagePath + readAnalyticsAttributionQuery();
+}
+
 function initialize() {
   if (typeof window === "undefined") return false;
   const environment = import.meta.env;
@@ -90,9 +95,10 @@ function initialize() {
     send_page_view: false,
     allow_google_signals: false,
     allow_ad_personalization_signals: false,
-    // Prevent automatic events from reading arbitrary campaign/contact URL data.
-    page_location:
-      site.origin + (analyticsPage(window.location.pathname)?.page_path || "/"),
+    // Exposes only the explicitly approved ad parameters, never arbitrary URL data.
+    page_location: analyticsPageLocation(
+      analyticsPage(window.location.pathname)?.page_path || "/",
+    ),
     page_referrer: safeReferrer(document.referrer),
   });
   const script = document.createElement("script");
@@ -124,7 +130,7 @@ function recordPageView(pathname: string, title: string) {
     return;
   }
   if (!initialize() || lastPage === page.page_path) return;
-  const location = site.origin + page.page_path;
+  const location = analyticsPageLocation(page.page_path);
   const referrer = lastPage
     ? site.origin + lastPage
     : safeReferrer(document.referrer);

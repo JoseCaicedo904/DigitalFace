@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { JSDOM } from "jsdom";
 import { analyticsPage, canTrack } from "./analytics";
+import { sanitizeAnalyticsAttributionQuery } from "./attribution";
 describe("Analytics production and privacy boundaries", () => {
   it("requires a real ID, production deployment and exact production hostname", () => {
     expect(
@@ -30,6 +31,21 @@ describe("Analytics production and privacy boundaries", () => {
     });
     expect(analyticsPage("/es/booking-confirmed")).toBeNull();
   });
+  it("keeps only approved campaign and click-id query parameters", () => {
+    expect(
+      sanitizeAnalyticsAttributionQuery(
+        "?utm_source=ga4test&utm_medium=cpc&utm_campaign=booking_test&utm_id=campaign-123&utm_content=hero&utm_term=dental+marketing&gclid=gclid-123&gbraid=gbraid-123&wbraid=wbraid-123&email=test%40example.com&phone=%2B15551234567&name=Test&message=private&foo=bar",
+      ),
+    ).toBe(
+      "?utm_source=ga4test&utm_medium=cpc&utm_campaign=booking_test&utm_id=campaign-123&utm_content=hero&utm_term=dental+marketing&gclid=gclid-123&gbraid=gbraid-123&wbraid=wbraid-123",
+    );
+    expect(
+      sanitizeAnalyticsAttributionQuery(
+        "?email=test%40example.com&phone=%2B15551234567&foo=bar",
+      ),
+    ).toBe("");
+    expect(sanitizeAnalyticsAttributionQuery("")).toBe("");
+  });
 });
 
 let dom: JSDOM;
@@ -53,9 +69,39 @@ async function productionAnalytics(
   vi.stubEnv("PROD", true);
   vi.stubEnv("VITE_DEPLOY_ENV", "production");
   vi.stubEnv("VITE_GA4_MEASUREMENT_ID", "G-SYNTHETIC123");
+  const attribution = await import("./attribution");
+  attribution.captureAttribution();
   return await import("./analytics");
 }
 describe("GA4 runtime behavior without any network requests", () => {
+  it("preserves approved landing attribution across English and Spanish SPA page views", async () => {
+    const analytics = await productionAnalytics(
+      "https://digitalface.app/?utm_source=ga4test&utm_medium=cpc&utm_campaign=booking_test&utm_id=campaign-123&utm_content=hero&utm_term=dental+marketing&gclid=gclid-123&gbraid=gbraid-123&wbraid=wbraid-123&email=test@example.com&foo=bar",
+    );
+
+    analytics.trackPageView("/", "DigitalFace Marketing");
+    window.history.replaceState({}, "", "/es");
+    analytics.trackPageView("/es", "DigitalFace Marketing en español");
+
+    const calls = window.dataLayer!.map((entry) =>
+      Array.from(entry as ArrayLike<unknown>),
+    );
+    const expectedQuery =
+      "?utm_source=ga4test&utm_medium=cpc&utm_campaign=booking_test&utm_id=campaign-123&utm_content=hero&utm_term=dental+marketing&gclid=gclid-123&gbraid=gbraid-123&wbraid=wbraid-123";
+    expect(calls.find((entry) => entry[0] === "config")?.[2]).toMatchObject({
+      page_location: `https://digitalface.app/${expectedQuery}`,
+    });
+    expect(
+      calls
+        .filter((entry) => entry[0] === "event" && entry[1] === "page_view")
+        .map((entry) => (entry[2] as { page_location: string }).page_location),
+    ).toEqual([
+      `https://digitalface.app/${expectedQuery}`,
+      `https://digitalface.app/es${expectedQuery}`,
+    ]);
+    expect(JSON.stringify(calls)).not.toContain("test@example.com");
+    expect(JSON.stringify(calls)).not.toContain("foo=bar");
+  });
   it("loads once, counts route changes once and omits PII and query strings", async () => {
     const analytics = await productionAnalytics();
     analytics.trackPageView("/contact", "Contact DigitalFace");
@@ -73,6 +119,14 @@ describe("GA4 runtime behavior without any network requests", () => {
     expect(
       calls.filter((entry) => entry[0] === "event" && entry[1] === "page_view"),
     ).toHaveLength(2);
+    expect(
+      calls
+        .filter((entry) => entry[0] === "event" && entry[1] === "page_view")
+        .map((entry) => (entry[2] as { page_location: string }).page_location),
+    ).toEqual([
+      "https://digitalface.app/contact",
+      "https://digitalface.app/es/contact",
+    ]);
     expect(
       calls.filter(
         (entry) => entry[0] === "event" && entry[1] === "generate_lead",
