@@ -183,8 +183,19 @@ export function trackEvent(name: EventName, parameters: Parameters = {}) {
   }
 }
 
+/** Clears the conversion claim when a visitor starts a new booking flow. */
+export function resetAppointmentBookedGuard() {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.sessionStorage.removeItem(APPOINTMENT_BOOKED_SESSION_KEY);
+  } catch {
+    /* The booking page must still render if session storage is unavailable. */
+  }
+}
+
 /**
- * Records the confirmed-booking conversion once per browser-tab session.
+ * Records the confirmed-booking conversion once per booking flow.
  * The fixed route check and parameter-free event keep booking and contact data
  * out of GA4; only the analytics layer's sanitized page context is attached.
  */

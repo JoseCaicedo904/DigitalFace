@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { CalendarDays } from "lucide-react";
 import { GhlBookingEmbed } from "@/components/booking/GhlBookingEmbed";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { bookContent } from "@/i18n/content/book";
+import { resetAppointmentBookedGuard } from "@/lib/analytics";
 
 /**
  * The single DigitalFace scheduling page, and the only route that loads the
@@ -20,6 +22,10 @@ export default function Book() {
   const t = bookContent[locale];
 
   usePageMetadata(t.metadata.title, t.metadata.description);
+
+  useEffect(() => {
+    resetAppointmentBookedGuard();
+  }, []);
 
   return (
     <div className="relative isolate overflow-hidden bg-slate-950 text-white">
