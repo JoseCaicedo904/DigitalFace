@@ -212,7 +212,7 @@ describe("GA4 runtime behavior without any network requests", () => {
     expect(document.querySelector("#df-ga4")).toBeNull();
     expect(window.gtag).not.toHaveBeenCalled();
   });
-  it("records once per booking flow, survives refresh and resets on /book", async () => {
+  it("marks the flow fired before one event, survives five calls and resets on /book", async () => {
     const analytics = await productionAnalytics("https://digitalface.app/book");
 
     analytics.startAppointmentBookingAttempt();
@@ -221,8 +221,21 @@ describe("GA4 runtime behavior without any network requests", () => {
       "",
       "/booking-confirmed?email=synthetic@example.invalid",
     );
-    analytics.trackAppointmentBookedOnce();
-    analytics.trackAppointmentBookedOnce();
+    window.dataLayer = [];
+    const originalPush = window.dataLayer.push.bind(window.dataLayer);
+    const bookingStatesAtEmit: Array<string | null> = [];
+    window.dataLayer.push = (...items: unknown[]) => {
+      const entry = Array.from(items[0] as ArrayLike<unknown>);
+      if (entry[0] === "event" && entry[1] === "appointment_booked")
+        bookingStatesAtEmit.push(
+          window.sessionStorage.getItem(
+            "digitalface.analytics.appointment_booked.state",
+          ),
+        );
+      return originalPush(...items);
+    };
+    for (let call = 0; call < 5; call++)
+      analytics.trackAppointmentBookedOnce();
 
     // A fresh module models a page reload while sessionStorage survives.
     vi.resetModules();
@@ -233,8 +246,8 @@ describe("GA4 runtime behavior without any network requests", () => {
     window.history.replaceState({}, "", "/book");
     analytics.startAppointmentBookingAttempt();
     window.history.replaceState({}, "", "/booking-confirmed");
-    analytics.trackAppointmentBookedOnce();
-    analytics.trackAppointmentBookedOnce();
+    for (let call = 0; call < 5; call++)
+      analytics.trackAppointmentBookedOnce();
 
     const calls = window.dataLayer!.map((entry) =>
       Array.from(entry as ArrayLike<unknown>),
@@ -243,6 +256,7 @@ describe("GA4 runtime behavior without any network requests", () => {
       (entry) => entry[0] === "event" && entry[1] === "appointment_booked",
     );
     expect(bookingEvents).toHaveLength(2);
+    expect(bookingStatesAtEmit).toEqual(["fired", "fired"]);
     for (const bookingEvent of bookingEvents)
       expect(bookingEvent[2]).toEqual({
         page_path: "/booking-confirmed",
