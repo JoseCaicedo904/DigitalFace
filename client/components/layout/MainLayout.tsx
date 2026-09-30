@@ -662,32 +662,23 @@ export default function MainLayout() {
                     ))}
                   </span>
                 </li>
-                <li>
-                  <span>{t.footer.locationsLabel}</span>
-                  <span className="block font-semibold text-white">
-                    {t.footer.locationsValue}
-                  </span>
-                </li>
               </ul>
             </div>
-            <div className="space-y-3">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
-                {t.footer.offices}
-              </h2>
-              <ul className="space-y-2 text-white/80">
-                <li>
-                  <span className="block font-semibold text-white">
-                    {t.footer.miamiTitle}
-                  </span>
-                  <span>{t.footer.miamiDetail}</span>
-                </li>
-                <li>
-                  <span className="block font-semibold text-white">
-                    {t.footer.caliTitle}
-                  </span>
-                  <span>{t.footer.caliDetail}</span>
-                </li>
-              </ul>
+            <div className="space-y-6">
+              {t.footer.locations.map(({ city, lines }) => (
+                <div key={city} className="space-y-3">
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
+                    {city}
+                  </h2>
+                  <address className="not-italic text-sm text-white/80">
+                    {lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </address>
+                </div>
+              ))}
             </div>
           </div>
         </div>
