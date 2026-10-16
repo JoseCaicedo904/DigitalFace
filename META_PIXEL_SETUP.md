@@ -4,7 +4,7 @@
 
 The owner explicitly selected Nicolas Caicedo's existing pixel, **2450656048502915**, for **https://digitalface.app**. The browser implementation is in `client/lib/metaPixel.ts`, called by the existing analytics entry points. No access token, new dependency, additional booking widget or Conversions API integration is required.
 
-**Status: local installation prepared; not deployed or verified in Meta Events Manager.** No Meta settings, ad account, GHL calendar or other external service was changed.
+**Status, 2026-10-16: deployment reported by the owner; live public code verified.** Read-only inspection of all 42 referenced JavaScript assets confirms the selected pixel ID and SDK loader in the live site. Browser execution, Meta event receipt and a real booking remain unverified. No agent-side deployment, Meta setting, ad account or GHL calendar change occurred.
 
 | Meta event | Trigger                                                                                                                                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,7 +24,7 @@ A consultation click, booking-page view, form submission or direct confirmation-
 
 ## Deployment and live test
 
-1. Obtain the separately required production-deployment authorization and deploy through the existing `digital-face` project. The existing Vite configuration supplies the production deployment gate from `VERCEL_ENV`. There is no new environment variable or token to configure.
+1. Deployment is now owner-reported and the public pixel code is verified. The existing Vite configuration supplies the production deployment gate from `VERCEL_ENV`. There is no new environment variable or token to configure.
 2. Open this pixel's **Probar eventos** tab. Visit `https://digitalface.app/?lang=en` in a browser session where tracking is permitted, then navigate to a Spanish page. Confirm the chosen pixel receives PageView events and there is one `fbevents.js` loader. Browser privacy signals and extensions may intentionally block the test.
 3. With authorization for a controlled booking, complete the actual GHL consultation flow from `/book` or `/es/book`. Confirm the calendar creates the booking and redirects to `/booking-confirmed`; expect one Schedule. Refresh the confirmation and check that no second Schedule appears. Opening `/book` or clicking a consultation link must not count as Schedule.
 4. Confirm Schedule is available to the intended ad account before choosing it as the website campaign's completed-consultation conversion. A custom conversion is not needed simply to name the installed pixel. Keep automatic events and automatic advanced matching off for this explicit-event setup.
