@@ -26,6 +26,14 @@ let ready = false;
 let requestedPage: string | null = null;
 let lastPage: string | null = null;
 let pendingSchedule = false;
+type Conversion = {
+  name: "Lead" | "Contact";
+  page: string;
+  parameters?:
+    | { lead_type: "contact" | "service_request" }
+    | { contact_method: "whatsapp" };
+};
+let pendingConversions: Conversion[] = [];
 const ALLOWED_QUERY_KEYS = new Set([
   "utm_source",
   "utm_medium",
@@ -100,6 +108,20 @@ function flush() {
   if (pendingSchedule && page === "/booking-confirmed") {
     pendingSchedule = false;
     ownedQueue!("trackSingle", META_PIXEL_ID, "Schedule");
+  }
+  const conversions = pendingConversions;
+  pendingConversions = [];
+  for (const conversion of conversions) {
+    // The SDK supplies the current URL, so never replay an action on another page.
+    if (conversion.page !== page) continue;
+    if (conversion.parameters)
+      ownedQueue!(
+        "trackSingle",
+        META_PIXEL_ID,
+        conversion.name,
+        conversion.parameters,
+      );
+    else ownedQueue!("trackSingle", META_PIXEL_ID, conversion.name);
   }
 }
 
@@ -177,4 +199,36 @@ export function trackMetaAppointmentBooked() {
   } catch {
     /* Booking success must not depend on a third-party script. */
   }
+}
+
+function trackConversion(
+  name: Conversion["name"],
+  parameters?: Conversion["parameters"],
+) {
+  try {
+    if (!eligible()) return;
+    const page = knownPage(window.location.pathname);
+    if (!page) return;
+    requestedPage = page;
+    if (!initialize()) return;
+    pendingConversions.push({ name, page, parameters });
+    flush();
+  } catch {
+    /* Contact actions and form success must never depend on measurement. */
+  }
+}
+
+/** The form calls generate_lead only after HTTP and application-level success. */
+export function trackMetaLead(leadType?: string) {
+  trackConversion(
+    "Lead",
+    leadType === "contact" || leadType === "service_request"
+      ? { lead_type: leadType }
+      : undefined,
+  );
+}
+
+/** A click opening WhatsApp; this does not assert that a message was sent. */
+export function trackMetaWhatsAppContact() {
+  trackConversion("Contact", { contact_method: "whatsapp" });
 }

@@ -78,6 +78,8 @@ describe("Meta pixel without external requests", () => {
       const pixel = await productionPixel(url);
       pixel.trackMetaPageView(window.location.pathname);
       pixel.trackMetaAppointmentBooked();
+      pixel.trackMetaLead("contact");
+      pixel.trackMetaWhatsAppContact();
       expect(document.querySelector("#df-meta-pixel")).toBeNull();
       expect(window.fbq).toBeUndefined();
     },
@@ -89,6 +91,8 @@ describe("Meta pixel without external requests", () => {
       const pixel = await productionPixel();
       vi.stubEnv("VITE_DEPLOY_ENV", deployment);
       pixel.trackMetaPageView("/");
+      pixel.trackMetaLead("contact");
+      pixel.trackMetaWhatsAppContact();
       expect(window.fbq).toBeUndefined();
     },
   );
@@ -97,6 +101,8 @@ describe("Meta pixel without external requests", () => {
     const pixel = await productionPixel();
     vi.stubEnv("PROD", false);
     pixel.trackMetaPageView("/");
+    pixel.trackMetaLead("contact");
+    pixel.trackMetaWhatsAppContact();
     expect(window.fbq).toBeUndefined();
   });
 
@@ -108,6 +114,8 @@ describe("Meta pixel without external requests", () => {
         value: signal === "doNotTrack" ? "1" : true,
       });
       pixel.trackMetaPageView("/");
+      pixel.trackMetaLead("contact");
+      pixel.trackMetaWhatsAppContact();
       expect(window.fbq).toBeUndefined();
     },
   );
@@ -231,7 +239,11 @@ describe("Completed-booking integration", () => {
       calls.mock.calls.filter((args) => args[2] === "Schedule"),
     ).toHaveLength(2);
     expect(window.dataLayer).toBeUndefined();
-    expect(calls.mock.calls.every((args) => args.length === 3)).toBe(true);
+    expect(
+      calls.mock.calls
+        .filter((args) => args[2] === "Schedule")
+        .every((args) => args.length === 3),
+    ).toBe(true);
   });
 
   it("does not count direct confirmation visits as bookings", async () => {
@@ -257,5 +269,124 @@ describe("Completed-booking integration", () => {
       ["trackSingle", pixel.META_PIXEL_ID, "PageView"],
       ["trackSingle", pixel.META_PIXEL_ID, "Schedule"],
     ]);
+  });
+});
+
+describe("Form and WhatsApp conversion integration", () => {
+  it("sends Lead for successful contact and service-request signals without form data", async () => {
+    const pixel = await productionPixel("https://digitalface.app/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/contact", "Contact");
+    const calls = finishSdkLoad();
+    for (const leadType of ["contact", "service_request"] as const) {
+      analytics.trackEvent("generate_lead", {
+        lead_type: leadType,
+        page_source: "contact",
+        service_count: 1,
+        email: "synthetic@example.invalid",
+        message: "Synthetic private message",
+      } as never);
+    }
+    expect(calls.mock.calls.filter((args) => args[2] === "Lead")).toEqual([
+      ["trackSingle", pixel.META_PIXEL_ID, "Lead", { lead_type: "contact" }],
+      [
+        "trackSingle",
+        pixel.META_PIXEL_ID,
+        "Lead",
+        { lead_type: "service_request" },
+      ],
+    ]);
+    expect(JSON.stringify(calls.mock.calls)).not.toContain("synthetic");
+    expect(JSON.stringify(calls.mock.calls)).not.toContain("service_count");
+    expect(window.dataLayer).toBeUndefined();
+  });
+
+  it("does not forward an unexpected lead category", async () => {
+    const pixel = await productionPixel("https://digitalface.app/es/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/es/contact", "Contacto");
+    const calls = finishSdkLoad();
+    analytics.trackEvent("generate_lead", {
+      lead_type: "synthetic@example.invalid",
+    } as never);
+    expect(calls.mock.calls.filter((args) => args[2] === "Lead")).toEqual([
+      ["trackSingle", pixel.META_PIXEL_ID, "Lead"],
+    ]);
+  });
+
+  it("sends Contact only for WhatsApp clicks and never treats it as a booking", async () => {
+    const pixel = await productionPixel("https://digitalface.app/es/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/es/contact", "Contacto");
+    const calls = finishSdkLoad();
+    analytics.trackEvent("contact_click", { contact_method: "email" });
+    analytics.trackEvent("contact_click", { contact_method: "phone" });
+    analytics.trackEvent("consultation_click");
+    analytics.trackEvent("service_request_add", { service_id: "meta-ads" });
+    analytics.trackEvent("contact_click", {
+      contact_method: "whatsapp",
+      phone: "+15555550123",
+      message: "Synthetic private message",
+    } as never);
+    expect(calls.mock.calls.filter((args) => args[2] !== "PageView")).toEqual([
+      [
+        "trackSingle",
+        pixel.META_PIXEL_ID,
+        "Contact",
+        { contact_method: "whatsapp" },
+      ],
+    ]);
+  });
+
+  it("retains form and WhatsApp actions until the SDK finishes loading on that page", async () => {
+    const pixel = await productionPixel("https://digitalface.app/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/contact", "Contact");
+    analytics.trackEvent("generate_lead", { lead_type: "contact" });
+    analytics.trackEvent("contact_click", { contact_method: "whatsapp" });
+    expect(window.fbq!.queue).toHaveLength(2);
+    const calls = finishSdkLoad();
+    expect(calls.mock.calls).toEqual([
+      ["trackSingle", pixel.META_PIXEL_ID, "PageView"],
+      ["trackSingle", pixel.META_PIXEL_ID, "Lead", { lead_type: "contact" }],
+      [
+        "trackSingle",
+        pixel.META_PIXEL_ID,
+        "Contact",
+        { contact_method: "whatsapp" },
+      ],
+    ]);
+    document
+      .querySelector("#df-meta-pixel")!
+      .dispatchEvent(new dom.window.Event("load"));
+    expect(calls).toHaveBeenCalledTimes(3);
+  });
+
+  it("does not replay a delayed action using another page's URL", async () => {
+    await productionPixel("https://digitalface.app/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/contact", "Contact");
+    analytics.trackEvent("generate_lead", { lead_type: "contact" });
+    analytics.trackEvent("contact_click", { contact_method: "whatsapp" });
+    window.history.replaceState({}, "", "/pricing");
+    analytics.trackPageView("/pricing", "Pricing");
+    const calls = finishSdkLoad();
+    expect(calls.mock.calls.map((args) => args[2])).toEqual(["PageView"]);
+  });
+
+  it("keeps contact and form actions safe when the SDK throws", async () => {
+    await productionPixel("https://digitalface.app/contact");
+    const analytics = await import("./analytics");
+    analytics.trackPageView("/contact", "Contact");
+    const calls = finishSdkLoad();
+    calls.mockImplementation(() => {
+      throw new Error("Synthetic SDK failure");
+    });
+    expect(() =>
+      analytics.trackEvent("generate_lead", { lead_type: "contact" }),
+    ).not.toThrow();
+    expect(() =>
+      analytics.trackEvent("contact_click", { contact_method: "whatsapp" }),
+    ).not.toThrow();
   });
 });

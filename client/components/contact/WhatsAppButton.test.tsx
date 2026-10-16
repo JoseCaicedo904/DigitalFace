@@ -5,6 +5,8 @@ import { MemoryRouter, useNavigate } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { LocaleProvider } from "@/i18n/LocaleProvider";
 import { memoryStorage } from "@/test/storage";
+import { Analytics } from "@/components/seo/Analytics";
+import { trackEvent } from "@/lib/analytics";
 import {
   buildWhatsAppUrl,
   getWhatsAppLabel,
@@ -13,6 +15,8 @@ import {
   WHATSAPP_NUMBER,
   WHATSAPP_NUMBER_DISPLAY,
 } from "./WhatsAppButton";
+
+vi.mock("@/lib/analytics", () => ({ trackEvent: vi.fn() }));
 
 let root: Root | null = null;
 
@@ -37,6 +41,7 @@ function renderHarness(to: string) {
     <MemoryRouter initialEntries={["/contact"]}>
       <LocaleProvider>
         <RouteTarget to={to} />
+        <Analytics />
         <WhatsAppButton />
       </LocaleProvider>
     </MemoryRouter>,
@@ -44,6 +49,7 @@ function renderHarness(to: string) {
 }
 
 beforeEach(() => {
+  vi.clearAllMocks();
   vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
   Object.defineProperty(window, "localStorage", {
     value: memoryStorage(),
@@ -118,4 +124,27 @@ describe("WhatsApp contact button", () => {
       getWhatsAppMessage("es"),
     );
   });
+
+  it.each(["/contact", "/es/contact"])(
+    "emits one WhatsApp contact signal for a click on the real button on %s",
+    async (route) => {
+      await act(async () => renderHarness(route));
+      const [button] = Array.from(whatsappButtons());
+      button.addEventListener("click", (event) => event.preventDefault(), {
+        once: true,
+      });
+      await act(async () => {
+        button.querySelector("svg")!.dispatchEvent(
+          new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            button: 0,
+          }),
+        );
+      });
+      expect(trackEvent).toHaveBeenCalledExactlyOnceWith("contact_click", {
+        contact_method: "whatsapp",
+      });
+    },
+  );
 });

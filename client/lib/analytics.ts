@@ -2,7 +2,12 @@ import site from "@shared/site.json";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
 import { routeSupportsLocale } from "@/i18n/locale";
 import { readAnalyticsAttributionQuery } from "@/lib/attribution";
-import { trackMetaAppointmentBooked, trackMetaPageView } from "@/lib/metaPixel";
+import {
+  trackMetaAppointmentBooked,
+  trackMetaLead,
+  trackMetaPageView,
+  trackMetaWhatsAppContact,
+} from "@/lib/metaPixel";
 
 type EventName =
   | "generate_lead"
@@ -216,6 +221,10 @@ export function trackPageView(pathname: string, title: string) {
   }
 }
 export function trackEvent(name: EventName, parameters: Parameters = {}) {
+  // Meta remains independent of the GA4 ID and receives only fixed category labels.
+  if (name === "generate_lead") trackMetaLead(parameters?.lead_type);
+  if (name === "contact_click" && parameters?.contact_method === "whatsapp")
+    trackMetaWhatsAppContact();
   try {
     recordEvent(name, parameters);
   } catch {
