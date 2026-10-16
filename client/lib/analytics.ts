@@ -2,6 +2,7 @@ import site from "@shared/site.json";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
 import { routeSupportsLocale } from "@/i18n/locale";
 import { readAnalyticsAttributionQuery } from "@/lib/attribution";
+import { trackMetaAppointmentBooked, trackMetaPageView } from "@/lib/metaPixel";
 
 type EventName =
   | "generate_lead"
@@ -207,6 +208,7 @@ function recordEvent(name: EventName, parameters: Parameters = {}) {
 }
 
 export function trackPageView(pathname: string, title: string) {
+  trackMetaPageView(pathname);
   try {
     recordPageView(pathname, title);
   } catch {
@@ -266,4 +268,5 @@ export function trackAppointmentBookedOnce() {
   }
 
   trackEvent("appointment_booked");
+  trackMetaAppointmentBooked();
 }
