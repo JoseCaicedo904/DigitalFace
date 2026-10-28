@@ -3,6 +3,14 @@
   --event-blue: #075b9b;
   --event-cyan: #62f1fa;
   --event-ink: #102a43;
+  --event-body-size: 1.125rem;
+  --event-label-size: 1rem;
+  --event-small-size: 0.875rem;
+  --event-eyebrow-size: 0.875rem;
+  --event-card-title-size: 1.5rem;
+  --event-callout-title-size: 1.25rem;
+  font-size: var(--event-body-size);
+  line-height: 1.65;
   color: var(--event-ink);
   background: #fff;
   isolation: isolate;
@@ -35,7 +43,7 @@
 }
 .event-eyebrow {
   display: block;
-  font-size: 11px;
+  font-size: var(--event-eyebrow-size);
   font-weight: 750;
   letter-spacing: 0.18em;
   line-height: 1.6;
@@ -49,7 +57,7 @@
   min-height: 54px;
   padding: 15px 25px;
   border-radius: 9px;
-  font-size: 14px;
+  font-size: var(--event-label-size);
   font-weight: 750;
   line-height: 1.4;
   transition:
@@ -87,7 +95,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: var(--event-label-size);
   font-weight: 650;
   min-height: 44px;
   text-decoration: none;
@@ -164,7 +172,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-size: 12px;
+  font-size: var(--event-eyebrow-size);
   letter-spacing: 0.16em;
   font-weight: 650;
   color: #a9e7f2;
@@ -194,7 +202,7 @@
   margin-top: 24px !important;
 }
 .event-hero-description {
-  font-size: 15px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #c2d8e8;
   max-width: 440px;
@@ -208,7 +216,7 @@
   flex-wrap: wrap;
 }
 .event-hero-actions .event-text-link {
-  font-size: 12px;
+  font-size: var(--event-label-size);
   color: #d5eaf4;
 }
 .event-hero-facts {
@@ -217,7 +225,7 @@
   flex-wrap: wrap;
   margin-top: 27px;
   color: #b0d1e4;
-  font-size: 12px;
+  font-size: var(--event-small-size);
 }
 .event-hero-facts > span {
   display: inline-flex;
@@ -233,7 +241,7 @@
   border-top: 1px solid #ffffff26;
   padding: 19px 0 21px;
   color: #b4d4e9;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   font-weight: 600;
 }
 .event-section-nav > a {
@@ -264,7 +272,7 @@
   align-items: center;
   gap: 8px;
   color: #e6f5fd;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   letter-spacing: 0.14em;
   font-weight: 700;
 }
@@ -369,14 +377,17 @@
   z-index: -1;
 }
 .event-physical-label {
+  max-width: 100%;
+  text-align: center;
+  padding-inline: 8px;
   position: absolute;
   bottom: 7px;
-  font-size: 11px;
+  font-size: var(--event-small-size);
   color: #acd3e5;
   letter-spacing: 0.02em;
 }
 .event-dice-console {
-  width: min(360px, 100%);
+  width: min(400px, 100%);
   margin: 12px auto 0;
   padding: 16px 20px;
   border: 1px solid #ffffff26;
@@ -388,7 +399,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: var(--event-small-size);
   letter-spacing: 0.12em;
   color: #b4d3e8;
   font-weight: 650;
@@ -397,9 +408,10 @@
   margin-left: auto;
   display: grid;
   place-content: center;
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
   border: 1px solid #ffffff2a;
+  flex-shrink: 0;
   border-radius: 6px;
 }
 .event-face-options {
@@ -432,20 +444,20 @@
 }
 .event-dice-caption {
   margin-top: 14px !important;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   font-weight: 650;
   color: #fff;
   min-height: 29px;
   line-height: 1.6;
 }
 .event-dice-caption > span {
-  font-size: 12px;
+  font-size: var(--event-small-size);
   letter-spacing: 0.1em;
   color: #77dce9;
   margin-right: 7px;
 }
 .event-demo-note {
-  font-size: 11px;
+  font-size: var(--event-small-size);
   color: #9fc1d6;
   line-height: 1.7;
   margin-top: 5px !important;
@@ -467,10 +479,10 @@
   margin-top: 12px;
 }
 .event-section-heading > p {
-  font-size: 14px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
-  max-width: 340px;
-  color: #62768a;
+  max-width: 400px;
+  color: #4e687e;
 }
 .event-heading-dot {
   color: #128cb5;
@@ -481,6 +493,8 @@
   gap: 32px;
 }
 .event-step {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid #cadce7;
   padding-top: 24px;
 }
@@ -498,16 +512,17 @@
   color: #a3bfce;
 }
 .event-step h3 {
-  font-size: 19px;
+  font-size: var(--event-card-title-size);
   font-weight: 750;
   margin-top: 25px;
   letter-spacing: -0.03em;
 }
 .event-step p {
-  font-size: 13px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
-  color: #62768a;
-  max-width: 310px;
+  color: #4e687e;
+  max-width: none;
+  flex: 1;
   margin-top: 12px;
   min-height: 70px;
 }
@@ -515,7 +530,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   min-height: 44px;
   font-weight: 750;
   color: #086198;
@@ -544,10 +559,10 @@
   box-shadow: none;
 }
 .event-rule-strip strong {
-  font-size: 13px;
+  font-size: var(--event-callout-title-size);
 }
 .event-rule-strip p {
-  font-size: 11px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #4c6a7f;
   margin-top: 5px;
@@ -598,7 +613,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   letter-spacing: 0.11em;
   font-weight: 750;
   color: #5c7388;
@@ -621,19 +636,19 @@
 .event-prize-title {
   display: block;
   font-family: Montserrat, Inter, sans-serif;
-  font-size: 20px;
+  font-size: var(--event-card-title-size);
   line-height: 1.28;
   letter-spacing: -0.04em;
   font-weight: 750;
   margin-top: 20px;
-  min-height: 76px;
+  min-height: 92px;
 }
 .event-prize-description {
   display: block;
-  font-size: 12px;
+  font-size: var(--event-body-size);
   line-height: 1.7;
-  color: #62768a;
-  min-height: 41px;
+  color: #4e687e;
+  min-height: 62px;
   margin-top: 5px;
 }
 .event-prize-discover {
@@ -641,7 +656,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   color: #07639b;
   font-weight: 700;
   border-top: 1px solid #e6eef4;
@@ -655,7 +670,7 @@
   position: relative;
   padding: 0 24px 24px;
   z-index: 1;
-  font-size: 12px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #43617b;
 }
@@ -699,7 +714,7 @@
 }
 .event-prize-availability {
   position: relative;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   font-weight: 700;
   padding: 0 24px 24px;
   color: #ddc5ff;
@@ -710,7 +725,7 @@
   gap: 13px;
   margin-top: 27px;
   color: #537085;
-  font-size: 11px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
 }
 .event-prize-delivery > svg {
@@ -739,7 +754,7 @@
   color: #006ca1;
 }
 .event-registration-copy > p {
-  font-size: 15px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #57728a;
   max-width: min(360px, 100%);
@@ -759,11 +774,11 @@
   flex-shrink: 0;
 }
 .event-registration-ticket strong {
-  font-size: 14px;
+  font-size: var(--event-label-size);
   line-height: 1.6;
 }
 .event-registration-ticket p {
-  font-size: 12px;
+  font-size: var(--event-body-size);
   color: #57728a;
   line-height: 1.8;
   margin-top: 8px;
@@ -775,7 +790,7 @@
   list-style: none;
   margin: 26px 0;
   color: #4b6a80;
-  font-size: 12px;
+  font-size: var(--event-body-size);
 }
 .event-check-list li {
   display: flex;
@@ -790,7 +805,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   font-weight: 650;
   color: #075f90;
   line-height: 1.8;
@@ -811,7 +826,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: var(--event-small-size);
   font-weight: 750;
   letter-spacing: 0.14em;
   color: #537085;
@@ -827,7 +842,7 @@
 }
 .event-form-grid > label {
   display: block;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   font-weight: 700;
   color: #304e65;
   line-height: 1.8;
@@ -841,7 +856,7 @@
   border-radius: 7px;
   background: #fafcfe;
   padding: 12px;
-  font-size: 12px;
+  font-size: var(--event-label-size);
   font-weight: 400;
   color: #24475f;
   transition: border-color 0.2s;
@@ -850,22 +865,22 @@
   border-color: #b83145;
 }
 .event-form input::placeholder {
-  color: #8395a6;
+  color: #61768a;
   opacity: 1;
 }
 .event-full {
   grid-column: 1/-1;
 }
 .event-optional {
-  color: #6b7f91;
+  color: #526b7f;
   font-weight: 400;
-  font-size: 12px;
+  font-size: var(--event-small-size);
 }
 .event-check {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   line-height: 1.85;
   color: #50697e;
   margin-top: 22px;
@@ -888,9 +903,9 @@
   color: #075c8d;
 }
 .event-privacy-note {
-  font-size: 11px;
+  font-size: var(--event-small-size);
   line-height: 1.8;
-  color: #6d8193;
+  color: #526b7f;
   margin-top: 15px !important;
 }
 .event-form > .event-button {
@@ -898,9 +913,9 @@
   margin-top: 22px;
 }
 .event-form-footnote {
-  font-size: 11px;
+  font-size: var(--event-small-size);
   line-height: 1.8;
-  color: #6d8193;
+  color: #526b7f;
   margin-top: 12px !important;
 }
 .event-trap {
@@ -912,14 +927,14 @@
 }
 .event-field-error {
   display: block;
-  font-size: 12px;
+  font-size: var(--event-small-size);
   font-weight: 500;
   color: #a52b3b;
   margin-top: 5px;
   line-height: 1.7;
 }
 .event-form-error {
-  font-size: 11px;
+  font-size: var(--event-small-size);
   line-height: 1.8;
   background: #fff1f0;
   border: 1px solid #f2d2cf;
@@ -941,13 +956,13 @@
   font-weight: 750;
 }
 .event-form-success p {
-  font-size: 14px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   margin-top: 20px;
 }
 .event-form-success .event-muted {
   color: #60788c;
-  font-size: 12px;
+  font-size: var(--event-body-size);
 }
 .event-form-success .event-button {
   margin-top: 28px;
@@ -988,24 +1003,24 @@
 }
 .event-service-copy {
   position: relative;
-  padding: 24px 25px 42px;
+  padding: 26px 25px 60px;
   min-width: 0;
 }
 .event-service-number {
-  font-size: 12px;
+  font-size: var(--event-small-size);
   letter-spacing: 0.14em;
   color: #5e7d92;
   font-weight: 700;
 }
 .event-service h3 {
-  font-size: 18px;
+  font-size: var(--event-card-title-size);
   line-height: 1.25;
   font-weight: 750;
   letter-spacing: -0.03em;
   margin-top: 12px;
 }
 .event-service p {
-  font-size: 11px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #5e778a;
   margin-top: 10px;
@@ -1016,8 +1031,8 @@
   bottom: 12px;
   display: grid;
   place-content: center;
-  width: 35px;
-  height: 35px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: #006d9c;
   border: 1px solid #c8dfe9;
@@ -1061,13 +1076,13 @@
 }
 .event-service-production p {
   color: #c1dce9;
-  font-size: 14px;
+  font-size: var(--event-body-size);
   margin-top: 17px;
 }
 .event-service-production a {
   color: var(--event-cyan);
   margin-top: 19px;
-  font-size: 12px;
+  font-size: var(--event-label-size);
 }
 .event-brand-story {
   display: grid;
@@ -1083,14 +1098,14 @@
   margin-top: 12px;
 }
 .event-brand-story p {
-  font-size: 13px;
+  font-size: var(--event-body-size);
   line-height: 1.9;
-  color: #617a8d;
+  color: #526b7f;
   margin-top: 15px;
   max-width: 390px;
 }
 .event-brand-story a {
-  font-size: 11px;
+  font-size: var(--event-label-size);
   color: #086399;
   margin-top: 16px;
 }
@@ -1106,6 +1121,25 @@
 .event-technologies {
   background: #061f36 !important;
 }
+.event-technologies .container > div:first-of-type > span {
+  font-size: var(--event-eyebrow-size);
+  letter-spacing: 0.12em;
+}
+.event-technologies .container > div:first-of-type > p:last-child,
+.event-technologies .container > p:last-child {
+  font-size: var(--event-small-size);
+  line-height: 1.8;
+  color: #b4cadb;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .event-registration-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .event-registration-copy > p {
+    max-width: 620px;
+  }
+}
 .event-scheduling {
   background: #eff5fa;
 }
@@ -1119,7 +1153,7 @@
   font-size: clamp(31px, 3.5vw, 43px);
 }
 .event-scheduling-grid > div > p {
-  font-size: 14px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #5b758c;
   margin-top: 22px;
@@ -1142,19 +1176,19 @@
   letter-spacing: -0.03em;
 }
 .event-calendar-container > p {
-  font-size: 12px !important;
+  font-size: var(--event-body-size) !important;
   margin-top: 14px !important;
 }
 .event-calendar-container .event-button {
   margin-top: 25px;
   width: 100%;
-  font-size: 12px;
+  font-size: var(--event-label-size);
 }
 .event-calendar-container > span {
   display: block;
   text-align: center;
-  color: #698094;
-  font-size: 11px;
+  color: #526b7f;
+  font-size: var(--event-small-size);
   line-height: 1.8;
   margin-top: 12px;
 }
@@ -1174,7 +1208,7 @@
   margin-top: 22px;
 }
 .event-contact-heading > p {
-  font-size: 14px;
+  font-size: var(--event-body-size);
   line-height: 1.8;
   color: #aac8dc;
   margin-top: 22px;
@@ -1187,7 +1221,7 @@
   margin-top: 30px;
 }
 .event-contact-actions .event-text-link {
-  font-size: 12px;
+  font-size: var(--event-label-size);
   color: #c5e6ef;
 }
 .event-contact-links {
@@ -1198,7 +1232,7 @@
   border-top: 1px solid #ffffff26;
   margin-top: 55px;
   padding-top: 28px;
-  font-size: 11px;
+  font-size: var(--event-label-size);
   color: #b2d2e5;
 }
 .event-contact-links > a {
@@ -1255,23 +1289,32 @@
   .event-registration-grid {
     gap: 40px;
   }
+  .event-prize-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .event-prize-button {
-    padding: 20px;
+    padding: 24px;
   }
   .event-prize-title {
-    font-size: 18px;
+    font-size: var(--event-card-title-size);
   }
   .event-prize-top {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-service-copy {
-    padding: 20px 18px 42px;
+    padding: 24px 20px 60px;
   }
   .event-scheduling-grid {
     gap: 45px;
   }
 }
 @media (max-width: 767px) {
+  .event-page {
+    --event-body-size: 1rem;
+    --event-eyebrow-size: 0.8125rem;
+    --event-card-title-size: 1.375rem;
+    --event-callout-title-size: 1.125rem;
+  }
   .event-shell {
     width: calc(100% - 40px);
   }
@@ -1299,7 +1342,7 @@
     border-radius: 13px;
   }
   .event-fair-lockup .event-eyebrow {
-    font-size: 11px;
+    font-size: var(--event-eyebrow-size);
   }
   .event-hero-grid {
     grid-template-columns: 1fr;
@@ -1307,7 +1350,7 @@
     gap: 14px;
   }
   .event-kicker {
-    font-size: 12px;
+    font-size: var(--event-eyebrow-size);
   }
   .event-hero h1 {
     font-size: clamp(32px, 8.6vw, 59px);
@@ -1319,7 +1362,7 @@
     margin-top: 20px !important;
   }
   .event-hero-description {
-    font-size: 13px;
+    font-size: var(--event-body-size);
     max-width: 430px;
     line-height: 1.8;
     margin-top: 10px !important;
@@ -1331,21 +1374,21 @@
   .event-hero-actions .event-button {
     min-height: 50px;
     padding: 13px 20px;
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-hero-actions .event-text-link {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-hero-facts {
     gap: 16px;
-    font-size: 11px;
+    font-size: var(--event-small-size);
     margin-top: 18px;
   }
   .event-dice-stage {
-    height: 245px;
+    height: 280px;
   }
   .event-dice-note {
-    font-size: 12px;
+    font-size: var(--event-small-size);
     top: 16px;
     right: 0;
   }
@@ -1366,15 +1409,15 @@
     bottom: 32px;
   }
   .event-physical-label {
-    font-size: 11px;
+    font-size: var(--event-small-size);
   }
   .event-dice-console {
     margin-top: 3px;
     padding: 12px 16px;
-    width: min(360px, 100%);
+    width: min(400px, 100%);
   }
   .event-console-label {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-face-options {
     gap: 8px;
@@ -1388,10 +1431,10 @@
     min-height: 0;
   }
   .event-demo-note {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-section-nav {
-    font-size: 11px;
+    font-size: var(--event-label-size);
     justify-content: flex-start;
     gap: 4px 18px;
     padding: 13px 0;
@@ -1407,7 +1450,7 @@
     font-size: 32px;
   }
   .event-section-heading > p {
-    font-size: 12px;
+    font-size: var(--event-body-size);
     max-width: 400px;
     margin-top: 18px;
   }
@@ -1438,18 +1481,18 @@
   .event-step h3 {
     grid-column: 2;
     margin-top: 0;
-    font-size: 18px;
+    font-size: var(--event-card-title-size);
   }
   .event-step p {
     grid-column: 2;
     min-height: 0;
     max-width: none;
-    font-size: 12px;
+    font-size: var(--event-body-size);
     margin-top: 8px;
   }
   .event-step a {
     grid-column: 2;
-    font-size: 12px;
+    font-size: var(--event-label-size);
     margin-top: 5px;
   }
   .event-rule-strip {
@@ -1467,10 +1510,10 @@
     display: none;
   }
   .event-rule-strip strong {
-    font-size: 11px;
+    font-size: var(--event-callout-title-size);
   }
   .event-rule-strip p {
-    font-size: 12px;
+    font-size: var(--event-body-size);
   }
   .event-prize-grid {
     grid-template-columns: 1fr;
@@ -1482,7 +1525,7 @@
   .event-prize-top {
     flex-wrap: wrap;
     gap: 7px;
-    font-size: 12px;
+    font-size: var(--event-small-size);
     letter-spacing: 0.04em;
     min-height: 48px;
   }
@@ -1497,17 +1540,17 @@
     height: 30px;
   }
   .event-prize-title {
-    font-size: 21px;
+    font-size: var(--event-card-title-size);
     min-height: 0;
     margin-top: 14px;
   }
   .event-prize-description {
-    font-size: 12px;
+    font-size: var(--event-body-size);
     line-height: 1.8;
     min-height: 0;
   }
   .event-prize-discover {
-    font-size: 12px;
+    font-size: var(--event-small-size);
     line-height: 1.5;
     gap: 5px;
     margin-top: 15px;
@@ -1519,17 +1562,17 @@
     width: 13px;
   }
   .event-prize-detail {
-    font-size: 12px;
+    font-size: var(--event-body-size);
     line-height: 1.8;
     padding: 0 14px 18px;
   }
   .event-prize-availability {
-    font-size: 11px;
+    font-size: var(--event-small-size);
     line-height: 1.7;
     padding: 0 14px 18px;
   }
   .event-prize-delivery {
-    font-size: 12px;
+    font-size: var(--event-body-size);
     align-items: flex-start;
     margin-top: 22px;
   }
@@ -1545,7 +1588,7 @@
     max-width: 410px;
   }
   .event-registration-copy > p {
-    font-size: 13px;
+    font-size: var(--event-body-size);
     margin-top: 16px;
     max-width: 440px;
   }
@@ -1554,18 +1597,18 @@
     padding: 20px 0;
   }
   .event-registration-ticket strong {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-registration-ticket p {
-    font-size: 11px;
+    font-size: var(--event-body-size);
   }
   .event-check-list {
-    font-size: 11px;
+    font-size: var(--event-body-size);
     gap: 10px;
     margin: 22px 0;
   }
   .event-registration-instagram {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-form,
   .event-form-success {
@@ -1573,24 +1616,25 @@
     border-radius: 12px;
   }
   .event-form-grid {
-    gap: 18px 12px;
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
   .event-form-grid > label {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-form :where(input:not([type="checkbox"]), select) {
-    font-size: 16px;
+    font-size: var(--event-label-size);
     padding: 10px;
     min-height: 48px;
   }
   .event-form input::placeholder {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-form-top {
     padding-bottom: 20px;
   }
   .event-check {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-services-grid {
     grid-template-columns: 1fr;
@@ -1601,13 +1645,13 @@
     grid-template-columns: 36% 1fr;
   }
   .event-service h3 {
-    font-size: 18px;
+    font-size: var(--event-card-title-size);
   }
   .event-service-copy {
-    padding: 23px 20px 42px;
+    padding: 24px 20px 60px;
   }
   .event-service p {
-    font-size: 11px;
+    font-size: var(--event-body-size);
   }
   .event-service-production {
     min-height: 330px;
@@ -1628,11 +1672,11 @@
     font-size: 29px;
   }
   .event-service-production p {
-    font-size: 12px;
+    font-size: var(--event-body-size);
     max-width: 250px;
   }
   .event-service-production .event-service-number {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-brand-story {
     grid-template-columns: 1fr;
@@ -1643,7 +1687,7 @@
     font-size: 27px;
   }
   .event-brand-story p {
-    font-size: 12px;
+    font-size: var(--event-body-size);
   }
   .event-brand-story video {
     max-width: 500px;
@@ -1656,7 +1700,7 @@
     font-size: 33px;
   }
   .event-scheduling-grid > div > p {
-    font-size: 13px;
+    font-size: var(--event-body-size);
     margin-top: 17px;
   }
   .event-calendar-container {
@@ -1666,28 +1710,28 @@
     font-size: 22px;
   }
   .event-calendar-container .event-button {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-contact h2 {
     font-size: 34px;
   }
   .event-contact-heading > p {
-    font-size: 12px;
+    font-size: var(--event-body-size);
   }
   .event-contact-actions {
     gap: 13px;
     margin-top: 24px;
   }
   .event-contact-actions .event-button {
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-contact-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
     margin-top: 35px;
     padding-top: 23px;
-    font-size: 12px;
+    font-size: var(--event-label-size);
   }
   .event-contact-links svg {
     flex-shrink: 0;
@@ -1726,7 +1770,7 @@
   }
   .event-prize-title {
     min-height: 0;
-    font-size: 20px;
+    font-size: var(--event-card-title-size);
   }
   .event-prize-description {
     min-height: 0;
@@ -1735,7 +1779,7 @@
     min-height: 0;
   }
   .event-prize-discover {
-    font-size: 12px;
+    font-size: var(--event-small-size);
   }
   .event-prize-button {
     padding: 21px;
@@ -1745,7 +1789,7 @@
   }
   .event-prize-detail {
     padding: 0 21px 21px;
-    font-size: 12px;
+    font-size: var(--event-body-size);
   }
   .event-contact-links {
     grid-template-columns: 1fr;

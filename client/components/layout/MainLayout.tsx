@@ -222,6 +222,9 @@ export default function MainLayout() {
     [t, path, locale],
   );
 
+  // Keep the event discoverable in the footer without crowding either header.
+  const headerNavItems = navItems.filter((item) => item.key !== "labsSummit");
+
   const industryNav = useMemo(
     () => [
       {
@@ -348,7 +351,7 @@ export default function MainLayout() {
               !navCollapsed && "lg:flex",
             )}
           >
-            {navItems.map((item) =>
+            {headerNavItems.map((item) =>
               item.key === "industries" ? (
                 <div
                   key={item.key}
@@ -528,7 +531,7 @@ export default function MainLayout() {
               }
               className="flex flex-col divide-y divide-ink-100"
             >
-              {navItems.map((item) =>
+              {headerNavItems.map((item) =>
                 item.key === "industries" ? (
                   <details key="mobile-industries" className="group/details">
                     <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-sm font-semibold text-ink-500 transition hover:text-brand-600">

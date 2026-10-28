@@ -12,6 +12,13 @@ export const EVENT_NEEDS = [
   { id: "content", label: "Producción audiovisual y contenido" },
   { id: "not_sure", label: "Aún no estoy seguro" },
 ] as const;
+export const EVENT_ROLES = [
+  "Propietario/socio",
+  "Decisor",
+  "Marketing/ventas",
+  "Colaborador",
+  "Otro",
+] as const;
 
 export const eventRegistrationSchema = z
   .object({
@@ -21,6 +28,14 @@ export const eventRegistrationSchema = z
       .trim()
       .min(2, "Escribe el nombre de tu negocio.")
       .max(160),
+    role: z.enum(EVENT_ROLES, {
+      errorMap: () => ({ message: "Selecciona tu rol dentro del negocio." }),
+    }),
+    businessActivity: z
+      .string()
+      .trim()
+      .min(2, "Describe brevemente la actividad de tu negocio.")
+      .max(500, "Usa máximo 500 caracteres para describir tu negocio."),
     phone: z
       .string()
       .trim()
@@ -59,7 +74,8 @@ export const eventRegistrationSchema = z
         message: "Autoriza el tratamiento de datos para participar.",
       }),
     }),
-    marketingConsent: z.boolean(),
+    // Preserve the receiver's contract without granting an unoffered opt-in.
+    marketingConsent: z.literal(false).default(false),
     website: z.string().max(0).default(""), // Honeypot; never a business URL.
   })
   .strict(); // No client-supplied prize, timestamp, consent version or campaign.

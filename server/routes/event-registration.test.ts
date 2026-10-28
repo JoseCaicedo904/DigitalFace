@@ -5,6 +5,8 @@ import { handleEventRegistration } from "./event-registration";
 const participant = {
   name: "Synthetic Participant",
   business: "Synthetic Event Business",
+  role: "Propietario/socio",
+  businessActivity: "Synthetic business activity",
   phone: "+1 (305) 555-0123",
   instagram: "@synthetic.example",
   email: "",
@@ -60,6 +62,14 @@ describe("event registration integrity", () => {
     { ...participant, receivedAt: "forged" },
     { ...participant, website: "bot-filled-field" },
     { ...participant, need: "unknown" },
+    { ...participant, role: undefined },
+    { ...participant, role: "" },
+    { ...participant, role: "not_a_role" },
+    { ...participant, role: ["Decisor", "Otro"] },
+    { ...participant, businessActivity: undefined },
+    { ...participant, businessActivity: "  " },
+    { ...participant, businessActivity: "x".repeat(501) },
+    { ...participant, marketingConsent: true },
   ])(
     "rejects invalid participation, bot fields and forged authority fields",
     async (body) => {
@@ -77,6 +87,8 @@ describe("event registration integrity", () => {
       email: "",
       marketingConsent: false,
       participationConsent: true,
+      role: "Propietario/socio",
+      businessActivity: "Synthetic business activity",
       instagram: "synthetic.example",
       source: "labs_summit_2026",
       campaign: "la_jugada_del_crecimiento",
@@ -88,6 +100,22 @@ describe("event registration integrity", () => {
     expect(forwarded).not.toHaveProperty("prize");
     expect(forwarded).not.toHaveProperty("website");
     expect(response.json).toHaveBeenCalledWith({ ok: true, duplicate: false });
+  });
+  it("forwards the new fields with trimmed activity and defaults absent marketing consent to false", async () => {
+    const upstream = configure();
+    const { marketingConsent: _omitted, ...withoutMarketingConsent } =
+      participant;
+    const response = await invoke({
+      ...withoutMarketingConsent,
+      role: "Marketing/ventas",
+      businessActivity: "  Synthetic retail activity  ",
+    });
+    expect(response.status).toHaveBeenCalledWith(200);
+    expect(JSON.parse(upstream.mock.calls[0][1].body)).toMatchObject({
+      role: "Marketing/ventas",
+      businessActivity: "Synthetic retail activity",
+      marketingConsent: false,
+    });
   });
   it("keeps person and business keys stable on retries and cosmetic company-name changes", async () => {
     const upstream = configure();

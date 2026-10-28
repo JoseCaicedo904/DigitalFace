@@ -9,7 +9,7 @@ real participant submission, CRM write, prize delivery or appointment was perfor
 - Prepared production URL: `https://digitalface.app/es/labs-summit-2026` — **not deployed by this task**.
 - QR-friendly alias: `/labs-summit-2026` redirects to the Spanish document, preserving query parameters and fragments. Express and Vercel redirect configuration accompany the client redirect.
 - One Spanish page. There is no English translation or English language-switch link on this route.
-- `Tuluá Labs Summit` appears in the Spanish corporate header, on desktop and in the mobile drawer. English navigation is unchanged.
+- `Tuluá Labs Summit` remains in the Spanish corporate footer. At the owner’s subsequent request, it is omitted from both desktop and mobile headers. English navigation is unchanged.
 - The hero prominently displays **TULUÁ LABS SUMMIT 2026**, with the supplied event identity. This overrides the master prompt's suggestion to make the event reference discreet.
 
 For local review, run `pnpm dev` from this repository and open
@@ -94,22 +94,22 @@ Scheduling uses the existing `/es/book` flow. No new calendar URL, fake availabi
 
 ## Validation
 
-| Check                    | Result                                                                                                                                                                                                |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm build`             | Passed: client, prerender, SEO validation and server build                                                                                                                                            |
-| Generated routes         | 28 actual documents, including the new Spanish page; 27 indexable sitemap URLs                                                                                                                        |
-| `pnpm typecheck`         | Passed                                                                                                                                                                                                |
-| `pnpm test`              | 244 tests passed in 21 files                                                                                                                                                                          |
-| New event-specific tests | 17 API integrity tests, six form acknowledgment tests, event hydration coverage and alias HTTP coverage                                                                                               |
-| Direct route/refresh     | Built HTTP tests serve the Spanish document; alias returns 308 with campaign parameters preserved                                                                                                     |
-| Browser widths           | 320, 360, 390, 768 and 1440 pixels passed without horizontal overflow; die controls fit                                                                                                               |
-| Media                    | All event and carousel image sources loaded in browser validation; video has native controls and a local optimized source/poster                                                                      |
-| Browser interactions     | Die/prize synchronization, validation focus, unavailable state, mocked acknowledgment success, fresh page without stored participant state, Spanish mobile header and unchanged English header passed |
-| Accessibility surface    | Associated form labels, error descriptions/focus, six accessible face selectors, visible focus, full-width mobile prizes, reduced-motion behavior and pause control checked                           |
-| Browser runtime          | No uncaught page errors in the event checks                                                                                                                                                           |
-| Real local API boundary  | Empty POST returned HTTP 400 / `ok: false`; no forwarding                                                                                                                                             |
-| Formatting               | Scoped Prettier checks; no repository lint script exists                                                                                                                                              |
-| Live provider chain      | Not tested; dedicated receiver/configuration remains necessary                                                                                                                                        |
+| Check                    | Result                                                                                                                                                                                                                                                                                    |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm build`             | Passed: client, prerender, SEO validation and server build                                                                                                                                                                                                                                |
+| Generated routes         | 28 actual documents, including the new Spanish page; 27 indexable sitemap URLs                                                                                                                                                                                                            |
+| `pnpm typecheck`         | Passed                                                                                                                                                                                                                                                                                    |
+| `pnpm test`              | 244 tests passed in 21 files                                                                                                                                                                                                                                                              |
+| New event-specific tests | 17 API integrity tests, six form acknowledgment tests, event hydration coverage and alias HTTP coverage                                                                                                                                                                                   |
+| Direct route/refresh     | Built HTTP tests serve the Spanish document; alias returns 308 with campaign parameters preserved                                                                                                                                                                                         |
+| Browser widths           | 320, 360, 390, 768 and 1440 pixels passed without horizontal overflow; die controls fit                                                                                                                                                                                                   |
+| Media                    | All event and carousel image sources loaded in browser validation; video has native controls and a local optimized source/poster                                                                                                                                                          |
+| Browser interactions     | Die/prize synchronization, validation focus, unavailable state, mocked acknowledgment success, fresh page without stored participant state, original Spanish mobile header and unchanged English header passed; the later footer-only change is checked separately against generated HTML |
+| Accessibility surface    | Associated form labels, error descriptions/focus, six accessible face selectors, visible focus, full-width mobile prizes, reduced-motion behavior and pause control checked                                                                                                               |
+| Browser runtime          | No uncaught page errors in the event checks                                                                                                                                                                                                                                               |
+| Real local API boundary  | Empty POST returned HTTP 400 / `ok: false`; no forwarding                                                                                                                                                                                                                                 |
+| Formatting               | Scoped Prettier checks; no repository lint script exists                                                                                                                                                                                                                                  |
+| Live provider chain      | Not tested; dedicated receiver/configuration remains necessary                                                                                                                                                                                                                            |
 
 Browser success/unavailable responses were deliberately mocked; they do not establish live storage. API integrity tests mock only the external receiver. Existing route/hydration, forms, booking, locale, analytics and Meta regression tests passed. Browser third-party widgets were blocked during isolated UI checks; no GHL account, analytics account or live booking was changed. No field Core Web Vitals or comprehensive WCAG certification is claimed. The build retains its existing large shared-bundle and old Browserslist-data warnings.
 
@@ -128,7 +128,7 @@ Created:
 
 Modified:
 
-- `client/App.tsx`, `client/components/layout/MainLayout.tsx`, `shared/site.json`: route and Spanish header link.
+- `client/App.tsx`, `client/components/layout/MainLayout.tsx`, `shared/site.json`: route and Spanish footer link.
 - `client/lib/seo.tsx`, `client/hooks/usePageMetadata.ts`: optional accurate social-image alt text.
 - `client/lib/analytics.ts`: event-specific names using the existing safe event pipeline.
 - `server/index.ts`, `.env.example`: separate event endpoint/configuration boundary.
@@ -142,3 +142,28 @@ Pre-existing user changes in `META_PIXEL_SETUP.md` and the website context were 
 ## Rollback
 
 Remove the event manifest entry/page mapping, redirect alias and Spanish navigation item together; remove the event endpoint registration and its separate configuration if unused. Regenerate the sitemap/build. Existing lead and booking routes need no migration. After real records exist, preserve them and their consent evidence in the private receiver; removing the page must not delete event records. No database migration or live rollback is required for this local-only task.
+
+## Navigation follow-up — footer only
+
+At the owner’s request, both desktop and mobile headers now exclude the Tuluá Labs Summit link, while the Spanish footer retains it. The event hero remains unchanged. Generated HTML checks confirmed the link placement across all 22 corporate documents; Chrome checks confirmed desktop (1440px) and mobile (390px), including the opened mobile menu. The current `desktop-preview.png` and `footer-only-preview-*.png` reflect this change. Earlier `final-*.png` images and the original browser receipt remain historical implementation evidence. Production build/SEO validation and TypeScript checks passed; no deployment occurred.
+
+All 244 regression tests passed in 21 files with `vitest --run --maxWorkers=2`. The initial default-worker run had two 5-second timeouts in existing hydration/lead-form tests; neither test required a source change.
+
+## Typography follow-up — readable presentation
+
+At the owner’s request, the event page’s small type has been replaced with a consistent, larger scale. Changes are scoped to `client/pages/labs-summit-2026.css`, including the reused technology section’s supporting text, without changing other site pages or integration behavior.
+
+| Role                                                           | Desktop | Phone |
+| -------------------------------------------------------------- | ------- | ----- |
+| Body, participation instructions, rules and prize descriptions | 18px    | 16px  |
+| Form labels, inputs, buttons, links and in-page navigation     | 16px    | 16px  |
+| Supporting notes, consent and helper text                      | 14px    | 14px  |
+| Step/service/prize titles                                      | 24px    | 22px  |
+| Rules callout title                                            | 20px    | 18px  |
+| Short uppercase section markers                                | 14px    | 13px  |
+
+Colors, imagery and main heading hierarchy are retained. Secondary text contrast is stronger. Cards have room for larger copy, step CTAs align, tablet prizes use two columns and phone form fields use one column. Text grows naturally instead of being clipped into fixed heights.
+
+Chrome verification at 320, 390, 768, 1024, 1253 and 1440 pixels confirmed these computed sizes, no horizontal page overflow or clipped copy, fitting die controls, and the preserved Spanish footer link with no header event link. Desktop and phone screenshots of instructions/rules, prizes, registration, services and the hero were visually reviewed. `typography-qa.json` records the measurements; `typography-declaration-changes.json` maps the original font declarations to the new role tokens. `desktop-preview.png` now reflects this typography update; earlier screenshots remain historical evidence.
+
+Production build/28-route SEO validation, TypeScript checks and all 244 regression tests in 21 files passed (`vitest --run --maxWorkers=2`). No deployment, real submission, CRM change or provider/analytics configuration change occurred.

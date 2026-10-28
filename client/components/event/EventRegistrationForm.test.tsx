@@ -30,6 +30,8 @@ async function prepare(fill = true) {
     for (const [name, value] of Object.entries({
       name: "Synthetic Tester",
       business: "Synthetic Brand",
+      role: "Propietario/socio",
+      businessActivity: "Synthetic business activity",
       phone: "+13055550123",
       need: "crm",
     })) {
@@ -51,7 +53,7 @@ async function submit() {
 }
 
 describe("event registration acknowledgments", () => {
-  it("validates fields, focuses the first error and keeps marketing optional and unchecked", async () => {
+  it("validates fields, focuses the first error and preserves only the required privacy checkbox", async () => {
     const request = vi.fn();
     vi.stubGlobal("fetch", request);
     await prepare(false);
@@ -61,11 +63,33 @@ describe("event registration acknowledgments", () => {
       document.querySelectorAll('[aria-invalid="true"]').length,
     ).toBeGreaterThan(3);
     expect(document.activeElement?.id).toBe("event-name");
+    expect(document.querySelector('[name="marketingConsent"]')).toBeNull();
+    expect(document.body.textContent).not.toContain("También quiero recibir");
+    expect(document.querySelectorAll('input[type="checkbox"]')).toHaveLength(1);
     expect(
-      (document.querySelector('[name="marketingConsent"]') as HTMLInputElement)
-        .checked,
-    ).toBe(false);
+      document
+        .querySelector('[name="participationConsent"]')
+        ?.hasAttribute("required"),
+    ).toBe(true);
+    expect(document.querySelector('a[href="/es/privacy"]')).not.toBeNull();
+    expect(
+      document.querySelector('[name="phone"]')?.parentElement?.textContent,
+    ).toContain("Tel o WhatsApp");
   });
+  it.each(["role", "businessActivity"])(
+    "blocks submission when %s is missing and focuses its error",
+    async (field) => {
+      const request = vi.fn();
+      vi.stubGlobal("fetch", request);
+      await prepare();
+      (document.querySelector(`[name="${field}"]`) as HTMLInputElement).value =
+        "";
+      await submit();
+      expect(request).not.toHaveBeenCalled();
+      expect(document.activeElement?.id).toBe(`event-${field}`);
+      expect(document.querySelector(`#event-error-${field}`)).not.toBeNull();
+    },
+  );
   it("records a single event registration only after a successful acknowledged API response", async () => {
     const request = vi.fn().mockResolvedValue({
       ok: true,
@@ -78,6 +102,8 @@ describe("event registration acknowledgments", () => {
       email: "",
       marketingConsent: false,
       participationConsent: true,
+      role: "Propietario/socio",
+      businessActivity: "Synthetic business activity",
     });
     expect(trackEvent).toHaveBeenCalledExactlyOnceWith(
       "event_registration_success",

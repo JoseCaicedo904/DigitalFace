@@ -1,0 +1,112 @@
+[
+  {
+    "pathname": "/es/labs-summit-2026",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/about",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/about",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/features",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/features",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/industries/paid-advertising",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/industries/paid-advertising",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/pay-per-service",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/pay-per-service",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/pricing",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/pricing",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/contact",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/contact",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/book",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/book",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/booking-confirmed",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/privacy",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/privacy",
+    "headerLinks": 0,
+    "footerLinks": 1
+  },
+  {
+    "pathname": "/terms",
+    "headerLinks": 0,
+    "footerLinks": 0
+  },
+  {
+    "pathname": "/es/terms",
+    "headerLinks": 0,
+    "footerLinks": 1
+  }
+]

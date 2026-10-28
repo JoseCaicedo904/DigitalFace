@@ -223,10 +223,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/es/book",
         "text": "Agenda una llamada"
       },
@@ -253,10 +249,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -857,7 +849,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87784,
+    "htmlBytes": 87234,
     "incoming": [
       "/es",
       "/es/about",
@@ -2027,10 +2019,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/",
         "text": "EN"
       },
@@ -2073,10 +2061,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -2645,7 +2629,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182996,
+    "htmlBytes": 182402,
     "incoming": [
       "/es/labs-summit-2026",
       "/",
@@ -2668,10 +2652,10 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/",
       "/es/book",
       "/es/industries/paid-advertising",
+      "/es/labs-summit-2026",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -3253,10 +3237,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/about",
         "text": "EN"
       },
@@ -3299,10 +3279,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -3451,7 +3427,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 85624,
+    "htmlBytes": 85030,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -3471,9 +3447,9 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/about",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -4115,10 +4091,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/features",
         "text": "EN"
       },
@@ -4161,10 +4133,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -4269,7 +4237,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 83739,
+    "htmlBytes": 83145,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -4292,9 +4260,9 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/features",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -5203,10 +5171,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/industries/paid-advertising",
         "text": "EN"
       },
@@ -5249,10 +5213,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -5449,7 +5409,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 107954,
+    "htmlBytes": 107360,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -5470,9 +5430,9 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/industries/paid-advertising",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -6189,10 +6149,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/pay-per-service",
         "text": "EN"
       },
@@ -6235,10 +6191,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -6371,7 +6323,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 104558,
+    "htmlBytes": 103964,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -6394,10 +6346,10 @@
       "/es/features",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/pay-per-service",
       "/es/book",
       "/es/industries/paid-advertising",
+      "/es/labs-summit-2026",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -7274,10 +7226,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/pricing",
         "text": "EN"
       },
@@ -7320,10 +7268,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -7444,7 +7388,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 132917,
+    "htmlBytes": 132323,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -7467,9 +7411,9 @@
       "/es/features",
       "/es/pay-per-service",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/pricing",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -8011,10 +7955,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/contact",
         "text": "EN"
       },
@@ -8057,10 +7997,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -8173,7 +8109,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 69030,
+    "htmlBytes": 68436,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -8196,9 +8132,9 @@
       "/es/features",
       "/es/pay-per-service",
       "/es/pricing",
-      "/es/labs-summit-2026",
       "/contact",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -8684,10 +8620,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/book",
         "text": "EN"
       },
@@ -8730,10 +8662,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -8830,7 +8758,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 32504,
+    "htmlBytes": 31910,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -8854,8 +8782,8 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -9731,10 +9659,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/privacy",
         "text": "EN"
       },
@@ -9777,10 +9701,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -9877,7 +9797,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 38428,
+    "htmlBytes": 37835,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -9901,9 +9821,9 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/privacy",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
@@ -10508,10 +10428,6 @@
         "text": "Contacto"
       },
       {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit"
-      },
-      {
         "href": "/terms",
         "text": "EN"
       },
@@ -10554,10 +10470,6 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
-      },
-      {
-        "href": "/es/labs-summit-2026",
-        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -10654,7 +10566,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36819,
+    "htmlBytes": 36225,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -10678,9 +10590,9 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
-      "/es/labs-summit-2026",
       "/terms",
       "/es/book",
+      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",

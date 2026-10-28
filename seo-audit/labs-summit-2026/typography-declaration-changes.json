@@ -1,0 +1,527 @@
+[
+  {
+    "selector": ".event-eyebrow",
+    "from": "11px",
+    "to": "var(--event-eyebrow-size)"
+  },
+  {
+    "selector": ".event-button",
+    "from": "14px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-text-link",
+    "from": "14px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-kicker",
+    "from": "12px",
+    "to": "var(--event-eyebrow-size)"
+  },
+  {
+    "selector": ".event-hero-description",
+    "from": "15px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-hero-actions .event-text-link",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-hero-facts",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-section-nav",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-dice-note",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-physical-label",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-console-label",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-dice-caption",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-dice-caption > span",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-demo-note",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-section-heading > p",
+    "from": "14px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-step h3",
+    "from": "19px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-step p",
+    "from": "13px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-step a",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-rule-strip strong",
+    "from": "13px",
+    "to": "var(--event-callout-title-size)"
+  },
+  {
+    "selector": ".event-rule-strip p",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-top",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-title",
+    "from": "20px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-prize-description",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-discover",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-detail",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-availability",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-delivery",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-copy > p",
+    "from": "15px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-ticket strong",
+    "from": "14px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-registration-ticket p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-check-list",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-instagram",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-form-top",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-form-grid > label",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-form :where(input:not([type=\"checkbox\"]), select)",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-optional",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-check",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-privacy-note",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-form-footnote",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-field-error",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-form-error",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-form-success p",
+    "from": "14px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-form-success .event-muted",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-service-number",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-service h3",
+    "from": "18px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-service p",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-service-production p",
+    "from": "14px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-service-production a",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-brand-story p",
+    "from": "13px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-brand-story a",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-scheduling-grid > div > p",
+    "from": "14px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-calendar-container > p",
+    "from": "12px !important",
+    "to": "var(--event-body-size) !important"
+  },
+  {
+    "selector": ".event-calendar-container .event-button",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-calendar-container > span",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-contact-heading > p",
+    "from": "14px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-contact-actions .event-text-link",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-contact-links",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-prize-title",
+    "from": "18px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-prize-top",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-fair-lockup .event-eyebrow",
+    "from": "11px",
+    "to": "var(--event-eyebrow-size)"
+  },
+  {
+    "selector": ".event-kicker",
+    "from": "12px",
+    "to": "var(--event-eyebrow-size)"
+  },
+  {
+    "selector": ".event-hero-description",
+    "from": "13px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-hero-actions .event-button",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-hero-actions .event-text-link",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-hero-facts",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-dice-note",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-physical-label",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-console-label",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-demo-note",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-section-nav",
+    "from": "11px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-section-heading > p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-step h3",
+    "from": "18px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-step p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-step a",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-rule-strip strong",
+    "from": "11px",
+    "to": "var(--event-callout-title-size)"
+  },
+  {
+    "selector": ".event-rule-strip p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-top",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-title",
+    "from": "21px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-prize-description",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-discover",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-detail",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-prize-availability",
+    "from": "11px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-delivery",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-copy > p",
+    "from": "13px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-ticket strong",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-registration-ticket p",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-check-list",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-registration-instagram",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-form-grid > label",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-form :where(input:not([type=\"checkbox\"]), select)",
+    "from": "16px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-form input::placeholder",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-check",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-service h3",
+    "from": "18px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-service p",
+    "from": "11px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-service-production p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-service-production .event-service-number",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-brand-story p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-scheduling-grid > div > p",
+    "from": "13px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-calendar-container .event-button",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-contact-heading > p",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  },
+  {
+    "selector": ".event-contact-actions .event-button",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-contact-links",
+    "from": "12px",
+    "to": "var(--event-label-size)"
+  },
+  {
+    "selector": ".event-prize-title",
+    "from": "20px",
+    "to": "var(--event-card-title-size)"
+  },
+  {
+    "selector": ".event-prize-discover",
+    "from": "12px",
+    "to": "var(--event-small-size)"
+  },
+  {
+    "selector": ".event-prize-detail",
+    "from": "12px",
+    "to": "var(--event-body-size)"
+  }
+]

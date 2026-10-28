@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import {
   EVENT_NEEDS,
+  EVENT_ROLES,
   eventRegistrationSchema,
   type EventRegistrationResponse,
 } from "@shared/eventRegistration";
@@ -29,12 +30,13 @@ export function EventRegistrationForm() {
     const parsed = eventRegistrationSchema.safeParse({
       name: data.get("name"),
       business: data.get("business"),
+      role: data.get("role"),
+      businessActivity: data.get("businessActivity"),
       phone: data.get("phone"),
       instagram: data.get("instagram"),
       email: data.get("email"),
       need: data.get("need"),
       participationConsent: data.get("participationConsent") === "on",
-      marketingConsent: data.get("marketingConsent") === "on",
       website: data.get("website") || "",
     });
     setMessage("");
@@ -170,7 +172,7 @@ export function EventRegistrationForm() {
           {error("business")}
         </label>
         <label>
-          WhatsApp con indicativo <span aria-hidden="true">*</span>
+          Tel o WhatsApp <span aria-hidden="true">*</span>
           <input
             {...control("phone")}
             type="tel"
@@ -191,6 +193,31 @@ export function EventRegistrationForm() {
             placeholder="@tunegocio"
           />
           {error("instagram")}
+        </label>
+        <label className="event-full">
+          ¿Cuál es tu rol dentro del negocio? <span aria-hidden="true">*</span>
+          <select {...control("role")} required defaultValue="">
+            <option value="" disabled>
+              Selecciona tu rol
+            </option>
+            {EVENT_ROLES.map((role) => (
+              <option key={role} value={role}>
+                {role}
+              </option>
+            ))}
+          </select>
+          {error("role")}
+        </label>
+        <label className="event-full">
+          ¿A qué se dedica tu negocio? <span aria-hidden="true">*</span>
+          <input
+            {...control("businessActivity")}
+            type="text"
+            maxLength={500}
+            required
+            placeholder="Describe brevemente la actividad de tu negocio"
+          />
+          {error("businessActivity")}
         </label>
         <label className="event-full">
           ¿Qué necesita tu negocio? <span aria-hidden="true">*</span>
@@ -235,14 +262,6 @@ export function EventRegistrationForm() {
           </Link>
           . <span aria-hidden="true">*</span>
           {error("participationConsent")}
-        </span>
-      </label>
-      <label className="event-check">
-        <input name="marketingConsent" type="checkbox" />
-        <span>
-          También quiero recibir novedades y propuestas comerciales de
-          DigitalFace por WhatsApp y, si lo proporciono, correo electrónico.{" "}
-          <span className="event-optional">(Opcional)</span>
         </span>
       </label>
       <p className="event-privacy-note">
