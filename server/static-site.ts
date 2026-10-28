@@ -23,6 +23,11 @@ export function staticSite(distPath: string) {
         .replace(/\/index\.html$/, "/")
         .replace(/\.html$/, "")
         .replace(/\/+$/, "") || "/";
+    if (clean === "/labs-summit-2026")
+      return res.redirect(
+        308,
+        "/es/labs-summit-2026" + req.url.slice(req.path.length),
+      );
     if (!paths.has(clean)) return next();
     if (req.path !== clean)
       return res.redirect(308, clean + req.url.slice(req.path.length));

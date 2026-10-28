@@ -1,0 +1,75 @@
+[
+  {
+    "original": "lab summit.jpg",
+    "destination": "/media/labs-summit-2026/labs-summit-2026.webp",
+    "section": "Hero: original event identity",
+    "width": 447,
+    "height": 447,
+    "bytes": 16906
+  },
+  {
+    "original": "IMG_0116.PNG",
+    "destination": "/media/labs-summit-2026/produccion-digitalface.webp",
+    "section": "Special Reel prize and audiovisual service",
+    "width": 750,
+    "height": 1325,
+    "bytes": 74188
+  },
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "destination": "/media/labs-summit-2026/digitalface-tulua.webp",
+    "section": "Social sharing and brand introduction",
+    "width": 1200,
+    "height": 839,
+    "bytes": 114686
+  },
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "destination": "/media/labs-summit-2026/publicidad-digital.webp",
+    "section": "Advertising service",
+    "width": 213,
+    "height": 157,
+    "bytes": 6820
+  },
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "destination": "/media/labs-summit-2026/sitios-web.webp",
+    "section": "Website service",
+    "width": 211,
+    "height": 157,
+    "bytes": 5270
+  },
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "destination": "/media/labs-summit-2026/crm-mensajeria.webp",
+    "section": "CRM service; supplied messaging illustration",
+    "width": 211,
+    "height": 157,
+    "bytes": 8112
+  },
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "destination": "/media/labs-summit-2026/asistentes-ia.webp",
+    "section": "AI service; supplied illustration",
+    "width": 210,
+    "height": 157,
+    "bytes": 5640
+  },
+  {
+    "original": "DIGITAL FACE MARCA AZUL.jpg",
+    "destination": "/media/labs-summit-2026/digitalface-video-poster.webp",
+    "section": "Brand film poster",
+    "width": 960,
+    "height": 742,
+    "bytes": 11684
+  },
+  {
+    "original": "DF outreach mini vid.mp4",
+    "destination": "/media/labs-summit-2026/digitalface-presentacion.mp4",
+    "section": "Brand introduction: user-controlled muted logo film",
+    "bytes": 388094,
+    "width": 1280,
+    "height": 720,
+    "durationSeconds": 5
+  }
+]

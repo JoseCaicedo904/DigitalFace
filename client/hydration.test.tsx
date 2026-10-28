@@ -62,6 +62,7 @@ describe("Generated HTML hydrates without changing the page contract", () => {
     "/book",
     "/booking-confirmed",
     "/es/privacy",
+    "/es/labs-summit-2026",
   ])("hydrates %s", async (url) => {
     window.history.replaceState({}, "", url);
     const file = "dist/spa/" + (url === "/" ? "index" : url.slice(1)) + ".html";

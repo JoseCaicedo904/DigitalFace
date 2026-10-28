@@ -2,6 +2,16 @@
   "origin": "https://digitalface.app",
   "routes": [
     {
+      "id": "labs-summit-2026",
+      "path": "/labs-summit-2026",
+      "layout": "corporate",
+      "locales": ["es"],
+      "indexable": true,
+      "type": "WebPage",
+      "topic": "DigitalFace en Tuluá Labs Summit 2026: La Jugada del Crecimiento",
+      "intent": "Participación presencial y registro de negocios en la feria"
+    },
+    {
       "id": "home",
       "preloadImage": "/images/hero-poster.webp",
       "path": "/",

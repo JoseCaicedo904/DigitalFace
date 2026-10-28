@@ -7,6 +7,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/labs-summit-2026",
+      "destination": "/es/labs-summit-2026",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

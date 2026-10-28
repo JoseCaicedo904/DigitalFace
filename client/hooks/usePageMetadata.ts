@@ -17,11 +17,13 @@ export function usePageMetadata(
 ) {
   const { pathname } = useLocation();
   const collector = useContext(SeoContext);
-  const { image, noindex } = options;
+  const { image, imageAlt, noindex } = options;
   if (collector)
     collector.head = buildHead(pathname, title, description, options);
   useEffect(() => {
-    applyHead(buildHead(pathname, title, description, { image, noindex }));
+    applyHead(
+      buildHead(pathname, title, description, { image, imageAlt, noindex }),
+    );
     trackPageView(pathname, title);
-  }, [pathname, title, description, image, noindex]);
+  }, [pathname, title, description, image, imageAlt, noindex]);
 }

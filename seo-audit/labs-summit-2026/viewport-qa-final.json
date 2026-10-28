@@ -1,0 +1,52 @@
+[
+  {
+    "width": 320,
+    "lang": "es",
+    "overflow": false,
+    "consoleFits": true,
+    "missingImages": [],
+    "prizes": 6,
+    "englishSwitch": false,
+    "motion": "none"
+  },
+  {
+    "width": 360,
+    "lang": "es",
+    "overflow": false,
+    "consoleFits": true,
+    "missingImages": [],
+    "prizes": 6,
+    "englishSwitch": false,
+    "motion": "none"
+  },
+  {
+    "width": 390,
+    "lang": "es",
+    "overflow": false,
+    "consoleFits": true,
+    "missingImages": [],
+    "prizes": 6,
+    "englishSwitch": false,
+    "motion": "none"
+  },
+  {
+    "width": 768,
+    "lang": "es",
+    "overflow": false,
+    "consoleFits": true,
+    "missingImages": [],
+    "prizes": 6,
+    "englishSwitch": false,
+    "motion": "none"
+  },
+  {
+    "width": 1440,
+    "lang": "es",
+    "overflow": false,
+    "consoleFits": true,
+    "missingImages": [],
+    "prizes": 6,
+    "englishSwitch": false,
+    "motion": "none"
+  }
+]

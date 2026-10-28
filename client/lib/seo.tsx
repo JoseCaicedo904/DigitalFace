@@ -8,7 +8,11 @@ import {
   stripLocaleFromPathname,
 } from "@/i18n/locale";
 
-export type PageMetadataOptions = { image?: string; noindex?: boolean };
+export type PageMetadataOptions = {
+  image?: string;
+  imageAlt?: string;
+  noindex?: boolean;
+};
 export type HeadData = ReturnType<typeof buildHead>;
 export type SeoCollector = { head?: HeadData; schemas: Map<string, string> };
 /** A fresh collector per build-time render; never shared between requests. */
@@ -46,9 +50,10 @@ export function buildHead(
     ? options.image
     : absoluteUrl(options.image || "/images/digitalface-post.png");
   const imageAlt =
-    locale === "es"
+    options.imageAlt ||
+    (locale === "es"
       ? "DigitalFace Marketing: captación y agendamiento para clínicas"
-      : "DigitalFace Marketing: patient acquisition and booking for clinics";
+      : "DigitalFace Marketing: patient acquisition and booking for clinics");
   const meta = [
     { name: "description", content: description },
     {

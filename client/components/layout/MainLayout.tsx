@@ -209,8 +209,17 @@ export default function MainLayout() {
       },
       { key: "pricing", label: t.nav.pricing, to: path("/pricing") },
       { key: "contact", label: t.nav.contact, to: path("/contact") },
+      ...(locale === "es"
+        ? [
+            {
+              key: "labsSummit",
+              label: "Tuluá Labs Summit",
+              to: "/es/labs-summit-2026",
+            },
+          ]
+        : []),
     ],
-    [t, path],
+    [t, path, locale],
   );
 
   const industryNav = useMemo(

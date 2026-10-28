@@ -20,7 +20,11 @@ describe("SEO navigation and static head", () => {
         );
         expect(head.canonical).toBe(site.origin + path);
         expect(head.links.filter((l) => l.rel === "alternate")).toHaveLength(
-          route.indexable ? 3 : 0,
+          route.indexable
+            ? "locales" in route
+              ? route.locales.length + (route.locales.includes("en") ? 1 : 0)
+              : 3
+            : 0,
         );
         expect(head.noindex).toBe(!route.indexable);
       }

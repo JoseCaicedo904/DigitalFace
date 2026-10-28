@@ -1,5 +1,892 @@
 [
   {
+    "id": "labs-summit-2026",
+    "path": "/labs-summit-2026",
+    "layout": "corporate",
+    "locales": [
+      "es"
+    ],
+    "indexable": true,
+    "type": "WebPage",
+    "topic": "DigitalFace en Tuluá Labs Summit 2026: La Jugada del Crecimiento",
+    "intent": "Participación presencial y registro de negocios en la feria",
+    "locale": "es",
+    "url": "/es/labs-summit-2026",
+    "title": "La Jugada del Crecimiento — Tuluá Labs Summit 2026 | DigitalFace",
+    "description": "Participa en La Jugada del Crecimiento de DigitalFace en Tuluá Labs Summit 2026. Descubre los seis premios para impulsar tu marca y conoce nuestras soluciones digitales.",
+    "h1": "LA JUGADA DEL CRECIMIENTO",
+    "canonical": "https://digitalface.app/es/labs-summit-2026",
+    "indexStatus": "index, follow",
+    "alternates": {
+      "es": "https://digitalface.app/es/labs-summit-2026"
+    },
+    "schema": [
+      "WebPage",
+      "BreadcrumbList",
+      "Organization",
+      "WebSite"
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "LA JUGADA DEL CRECIMIENTO"
+      },
+      {
+        "level": 2,
+        "text": "¿Cómo participar?"
+      },
+      {
+        "level": 3,
+        "text": "Sigue a DigitalFace"
+      },
+      {
+        "level": 3,
+        "text": "Registra tu negocio"
+      },
+      {
+        "level": 3,
+        "text": "Lanza el dado"
+      },
+      {
+        "level": 2,
+        "text": "Lanza y gana."
+      },
+      {
+        "level": 2,
+        "text": "Registra tu negocio y participa."
+      },
+      {
+        "level": 2,
+        "text": "Tu negocio puedellegar más lejos."
+      },
+      {
+        "level": 3,
+        "text": "Publicidad digital"
+      },
+      {
+        "level": 3,
+        "text": "Sitios web y landing pages"
+      },
+      {
+        "level": 3,
+        "text": "CRM y automatización"
+      },
+      {
+        "level": 3,
+        "text": "Asistentes con IA"
+      },
+      {
+        "level": 3,
+        "text": "Tu marca tambiénse cuenta en imágenes."
+      },
+      {
+        "level": 3,
+        "text": "Somos DigitalFace."
+      },
+      {
+        "level": 2,
+        "text": "La tecnología detrás de tus resultados"
+      },
+      {
+        "level": 2,
+        "text": "Hablemos del crecimiento de tu negocio."
+      },
+      {
+        "level": 3,
+        "text": "Encuentra un espacio para tu negocio."
+      },
+      {
+        "level": 2,
+        "text": "El crecimiento de tu negocio empieza con una conversación."
+      }
+    ],
+    "headingJumps": [],
+    "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace MarketingColombia - Florida"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/pay-per-service#paid-media",
+        "text": "Pauta digital y publicidad en redes"
+      },
+      {
+        "href": "/es/pay-per-service#meta-ads",
+        "text": "Anuncios en Meta (Facebook e Instagram)"
+      },
+      {
+        "href": "/es/pay-per-service#google-campaigns",
+        "text": "Anuncios en Google"
+      },
+      {
+        "href": "/es/pay-per-service#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
+        "href": "/es/pay-per-service#seo-strategy",
+        "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
+      },
+      {
+        "href": "/es/pay-per-service#content-creation",
+        "text": "Creación de contenido"
+      },
+      {
+        "href": "/es/pay-per-service#automation-and-chatbots",
+        "text": "Automatización y chatbots"
+      },
+      {
+        "href": "/es/pay-per-service#chatbot-development",
+        "text": "Desarrollo de chatbots (IA y por reglas)"
+      },
+      {
+        "href": "/es/pay-per-service#workflow-automation",
+        "text": "Automatización de procesos específicos"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-automation",
+        "text": "Automatización de citas y calendario"
+      },
+      {
+        "href": "/es/pay-per-service#ecommerce-automation",
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
+      },
+      {
+        "href": "/es/pay-per-service#comment-auto-reply",
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
+      },
+      {
+        "href": "/es/pay-per-service#lead-ops-crm",
+        "text": "Gestión de contactos y CRM"
+      },
+      {
+        "href": "/es/pay-per-service#lead-capture",
+        "text": "Captura de contactos y sincronización con el CRM"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-booking",
+        "text": "Agendamiento de citas y recordatorios"
+      },
+      {
+        "href": "/es/pay-per-service#crm-pipeline",
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
+      },
+      {
+        "href": "/es/pay-per-service#crm-integration",
+        "text": "Integración de CRM y sincronización de datos"
+      },
+      {
+        "href": "/es/pay-per-service#reporting-dashboards",
+        "text": "Reportes y tableros de rendimiento"
+      },
+      {
+        "href": "/es/pay-per-service#websites-and-funnels",
+        "text": "Sitios web y embudos"
+      },
+      {
+        "href": "/es/pay-per-service#corporate-websites",
+        "text": "Sitios web corporativos y de negocio"
+      },
+      {
+        "href": "/es/pay-per-service#campaign-landing-pages",
+        "text": "Landing pages para campañas"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una llamada"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio→"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros→"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas→"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado→"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes→"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una demostración"
+      },
+      {
+        "href": "#registro",
+        "text": "Participa y gana"
+      },
+      {
+        "href": "#premios",
+        "text": "Descubre los premios"
+      },
+      {
+        "href": "#como-participar",
+        "text": "Cómo participar"
+      },
+      {
+        "href": "#premios",
+        "text": "Los 6 premios"
+      },
+      {
+        "href": "#registro",
+        "text": "Registra tu negocio"
+      },
+      {
+        "href": "#soluciones",
+        "text": "Soluciones DigitalFace"
+      },
+      {
+        "href": "#conversemos",
+        "text": "Conversemos"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "text": "@digitalfacecolombia"
+      },
+      {
+        "href": "#registro",
+        "text": "Ir al registro"
+      },
+      {
+        "href": "#reglas",
+        "text": "Conoce las reglas"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "text": "Recuerda seguir a @digitalfacecolombia"
+      },
+      {
+        "href": "/es/privacy",
+        "text": "Política de privacidad"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Conoce nuestros servicios de publicidad digital"
+      },
+      {
+        "href": "/es/pay-per-service#websites-and-funnels",
+        "text": "Conoce nuestros servicios de sitios web y landing pages"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Conoce nuestros servicios de crm y automatización"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Conoce nuestros servicios de asistentes con ia"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Conoce la producción audiovisual"
+      },
+      {
+        "href": "/es/about",
+        "text": "Conoce nuestro trabajo"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+        "text": "Hablemos por WhatsApp"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "/es",
+        "text": "digitalface.app"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "tel:+573005061366",
+        "text": "+57 300 506 1366"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "text": "@digitalfacecolombia"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace Marketing"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
+        "href": "/es/industries/dental-practices",
+        "text": "Clínicas Odontológicas"
+      },
+      {
+        "href": "/es/industries/aesthetic-medicine",
+        "text": "Medicina Estética"
+      },
+      {
+        "href": "/es/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "/es/privacy",
+        "text": "Política de privacidad"
+      },
+      {
+        "href": "/es/terms",
+        "text": "Términos del servicio"
+      },
+      {
+        "href": "/sitemap.xml",
+        "text": "Mapa del sitio"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "44",
+        "height": "44",
+        "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
+      },
+      {
+        "src": "/media/labs-summit-2026/labs-summit-2026.webp",
+        "alt": "Identidad oficial suministrada de Labs Summit 2026",
+        "loading": "eager",
+        "width": "447",
+        "height": "447",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/produccion-digitalface.webp",
+        "alt": "Producción audiovisual de DigitalFace con cámara, iluminación y grabación en celular",
+        "loading": "lazy",
+        "width": "750",
+        "height": "1325",
+        "class": "event-prize-photo"
+      },
+      {
+        "src": "/media/labs-summit-2026/publicidad-digital.webp",
+        "alt": "Pieza promocional de DigitalFace con un anuncio en Instagram",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/sitios-web.webp",
+        "alt": "Diseño de sitio web presentado en el folleto de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/crm-mensajeria.webp",
+        "alt": "Ejemplo ilustrativo de seguimiento por WhatsApp del material de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/asistentes-ia.webp",
+        "alt": "Ilustración del asistente con inteligencia artificial del folleto de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/produccion-digitalface.webp",
+        "alt": "Equipo de DigitalFace en una grabación real con iluminación y cámara",
+        "loading": "lazy",
+        "width": "750",
+        "height": "1325",
+        "class": ""
+      },
+      {
+        "src": "/media/Logos_Partners/01-highlevel.png",
+        "alt": "Logo de GoHighLevel",
+        "loading": "lazy",
+        "width": "813",
+        "height": "210",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/02-hubspot.png",
+        "alt": "Logo de HubSpot",
+        "loading": "lazy",
+        "width": "565",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/03-pipedrive.png",
+        "alt": "Logo de Pipedrive",
+        "loading": "lazy",
+        "width": "456",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/04-kommo.png",
+        "alt": "Logo de Kommo",
+        "loading": "lazy",
+        "width": "390",
+        "height": "158",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/05-zoho-crm.png",
+        "alt": "Logo de Zoho CRM",
+        "loading": "lazy",
+        "width": "683",
+        "height": "135",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/06-activecampaign.png",
+        "alt": "Logo de ActiveCampaign",
+        "loading": "lazy",
+        "width": "648",
+        "height": "115",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/21-Odoo.png",
+        "alt": "Logo de Odoo",
+        "loading": "lazy",
+        "width": "1242",
+        "height": "392",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/08-openai.png",
+        "alt": "Logo de OpenAI",
+        "loading": "lazy",
+        "width": "494",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/09-chatgpt.png",
+        "alt": "Logo de ChatGPT",
+        "loading": "lazy",
+        "width": "564",
+        "height": "179",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/07-n8n.png",
+        "alt": "Logo de n8n",
+        "loading": "lazy",
+        "width": "360",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/10-whatsapp-business.png",
+        "alt": "Logo de WhatsApp Business",
+        "loading": "lazy",
+        "width": "869",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/11-messenger.png",
+        "alt": "Logo de Messenger",
+        "loading": "lazy",
+        "width": "618",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/12-instagram.png",
+        "alt": "Logo de Instagram",
+        "loading": "lazy",
+        "width": "587",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/22-Respond.io.png",
+        "alt": "Logo de Respond.io",
+        "loading": "lazy",
+        "width": "1228",
+        "height": "198",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/13-chatwoot.png",
+        "alt": "Logo de Chatwoot",
+        "loading": "lazy",
+        "width": "554",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "Logo de Meta",
+        "loading": "lazy",
+        "width": "440",
+        "height": "141",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "Logo de Google Ads",
+        "loading": "lazy",
+        "width": "541",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "Logo de TikTok",
+        "loading": "lazy",
+        "width": "466",
+        "height": "183",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/17-calendly.png",
+        "alt": "Logo de Calendly",
+        "loading": "lazy",
+        "width": "528",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/20-google-drive.png",
+        "alt": "Logo de Google Drive",
+        "loading": "lazy",
+        "width": "591",
+        "height": "161",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/18-react.png",
+        "alt": "Logo de React",
+        "loading": "lazy",
+        "width": "429",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/19-nextjs.png",
+        "alt": "Logo de Next.js",
+        "loading": "lazy",
+        "width": "472",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/01-highlevel.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "813",
+        "height": "210",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/02-hubspot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "565",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/03-pipedrive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "456",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/04-kommo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "390",
+        "height": "158",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/05-zoho-crm.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "683",
+        "height": "135",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/06-activecampaign.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "648",
+        "height": "115",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/21-Odoo.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1242",
+        "height": "392",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/08-openai.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "494",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/09-chatgpt.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "564",
+        "height": "179",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/07-n8n.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "360",
+        "height": "107",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/10-whatsapp-business.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "869",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/11-messenger.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "618",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/12-instagram.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "587",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/22-Respond.io.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "1228",
+        "height": "198",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/13-chatwoot.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "554",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/14-meta.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "440",
+        "height": "141",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/15-google-ads.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "541",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/16-tiktok.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "466",
+        "height": "183",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/17-calendly.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "528",
+        "height": "178",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/20-google-drive.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "591",
+        "height": "161",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/18-react.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "429",
+        "height": "166",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/media/Logos_Partners/19-nextjs.png",
+        "alt": "",
+        "loading": "lazy",
+        "width": "472",
+        "height": "173",
+        "class": "h-full w-auto max-w-none object-contain"
+      },
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "40",
+        "height": "40",
+        "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
+      }
+    ],
+    "htmlBytes": 87784,
+    "incoming": [
+      "/es",
+      "/es/about",
+      "/es/features",
+      "/es/industries/paid-advertising",
+      "/es/pay-per-service",
+      "/es/pricing",
+      "/es/contact",
+      "/es/book",
+      "/es/privacy",
+      "/es/terms"
+    ],
+    "outgoing": [
+      "/es",
+      "/es/about",
+      "/es/features",
+      "/es/pay-per-service",
+      "/es/pricing",
+      "/es/contact",
+      "/es/book",
+      "/es/privacy",
+      "/es/industries/paid-advertising",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
+      "/es/terms"
+    ]
+  },
+  {
     "id": "home",
     "preloadImage": "/images/hero-poster.webp",
     "path": "/",
@@ -856,7 +1743,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180561,
+    "htmlBytes": 180738,
     "incoming": [
       "/es",
       "/about",
@@ -1140,6 +2027,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/",
         "text": "EN"
       },
@@ -1182,6 +2073,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -1262,6 +2157,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -1746,8 +2645,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182114,
+    "htmlBytes": 182996,
     "incoming": [
+      "/es/labs-summit-2026",
       "/",
       "/es/about",
       "/es/features",
@@ -1768,6 +2668,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -2143,7 +3044,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 84055,
+    "htmlBytes": 84232,
     "incoming": [
       "/",
       "/es/about",
@@ -2352,6 +3253,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/about",
         "text": "EN"
       },
@@ -2396,6 +3301,10 @@
         "text": "Contacto→"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
         "href": "/es/book",
         "text": "Agenda una demostración"
       },
@@ -2438,6 +3347,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -2538,8 +3451,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 84742,
+    "htmlBytes": 85624,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/about",
       "/es/features",
@@ -2557,6 +3471,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/about",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -2938,7 +3853,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 81817,
+    "htmlBytes": 81994,
     "incoming": [
       "/",
       "/about",
@@ -3200,6 +4115,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/features",
         "text": "EN"
       },
@@ -3242,6 +4161,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -3290,6 +4213,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -3342,8 +4269,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 82857,
+    "htmlBytes": 83739,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/features",
@@ -3364,6 +4292,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/features",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -3926,7 +4855,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 105285,
+    "htmlBytes": 105462,
     "incoming": [
       "/",
       "/about",
@@ -4274,6 +5203,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/industries/paid-advertising",
         "text": "EN"
       },
@@ -4316,6 +5249,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -4384,6 +5321,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -4508,8 +5449,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 107072,
+    "htmlBytes": 107954,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -4528,6 +5470,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/industries/paid-advertising",
       "/es/book",
       "/es/industries/dental-practices",
@@ -4960,7 +5903,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 101864,
+    "htmlBytes": 102041,
     "incoming": [
       "/",
       "/about",
@@ -5246,6 +6189,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/pay-per-service",
         "text": "EN"
       },
@@ -5288,6 +6235,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -5366,6 +6317,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/es/industries/paid-advertising",
         "text": "Publicidad pagada"
       },
@@ -5416,8 +6371,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 103676,
+    "htmlBytes": 104558,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -5438,6 +6394,7 @@
       "/es/features",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/pay-per-service",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -5945,7 +6902,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 129770,
+    "htmlBytes": 129947,
     "incoming": [
       "/",
       "/about",
@@ -6317,6 +7274,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/pricing",
         "text": "EN"
       },
@@ -6359,6 +7320,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto→"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
       },
       {
         "href": "/es/book",
@@ -6425,6 +7390,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/es/industries/paid-advertising",
         "text": "Publicidad pagada"
       },
@@ -6475,8 +7444,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 132035,
+    "htmlBytes": 132917,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -6497,6 +7467,7 @@
       "/es/features",
       "/es/pay-per-service",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/pricing",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -6739,7 +7710,7 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -6832,7 +7803,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 67352,
+    "htmlBytes": 67523,
     "incoming": [
       "/",
       "/about",
@@ -7040,6 +8011,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/contact",
         "text": "EN"
       },
@@ -7084,6 +8059,10 @@
         "text": "Contacto→"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
         "href": "/es/book",
         "text": "Agenda una demostración"
       },
@@ -7097,7 +8076,7 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -7138,6 +8117,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -7190,8 +8173,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 68156,
+    "htmlBytes": 69030,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -7212,6 +8196,7 @@
       "/es/features",
       "/es/pay-per-service",
       "/es/pricing",
+      "/es/labs-summit-2026",
       "/contact",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -7511,7 +8496,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 31066,
+    "htmlBytes": 31243,
     "incoming": [
       "/",
       "/about",
@@ -7699,6 +8684,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/book",
         "text": "EN"
       },
@@ -7743,6 +8732,10 @@
         "text": "Contacto→"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
         "href": "/es/book",
         "text": "Agenda una demostración"
       },
@@ -7781,6 +8774,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -7833,8 +8830,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 31622,
+    "htmlBytes": 32504,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -7856,6 +8854,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/book",
       "/es/industries/paid-advertising",
       "/es/industries/dental-practices",
@@ -8133,7 +9132,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 27415,
+    "htmlBytes": 27592,
     "incoming": [],
     "outgoing": [
       "/",
@@ -8492,7 +9491,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 36225,
+    "htmlBytes": 36402,
     "incoming": [
       "/",
       "/about",
@@ -8732,6 +9731,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/privacy",
         "text": "EN"
       },
@@ -8776,6 +9779,10 @@
         "text": "Contacto→"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
         "href": "/es/book",
         "text": "Agenda una demostración"
       },
@@ -8814,6 +9821,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -8866,8 +9877,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 37547,
+    "htmlBytes": 38428,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -8889,6 +9901,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/privacy",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -9247,7 +10260,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 34915,
+    "htmlBytes": 35092,
     "incoming": [
       "/",
       "/about",
@@ -9495,6 +10508,10 @@
         "text": "Contacto"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
         "href": "/terms",
         "text": "EN"
       },
@@ -9539,6 +10556,10 @@
         "text": "Contacto→"
       },
       {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit→"
+      },
+      {
         "href": "/es/book",
         "text": "Agenda una demostración"
       },
@@ -9577,6 +10598,10 @@
       {
         "href": "/es/contact",
         "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
       },
       {
         "href": "/es/industries/paid-advertising",
@@ -9629,8 +10654,9 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 35937,
+    "htmlBytes": 36819,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -9652,6 +10678,7 @@
       "/es/pay-per-service",
       "/es/pricing",
       "/es/contact",
+      "/es/labs-summit-2026",
       "/terms",
       "/es/book",
       "/es/industries/paid-advertising",
@@ -9977,7 +11004,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -10102,7 +11129,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212327,
+    "htmlBytes": 212321,
     "incoming": [
       "/",
       "/about",
@@ -10449,7 +11476,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -10574,8 +11601,9 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215327,
+    "htmlBytes": 215319,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -10920,7 +11948,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -11045,7 +12073,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212923,
+    "htmlBytes": 212917,
     "incoming": [
       "/",
       "/about",
@@ -11392,7 +12420,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -11517,8 +12545,9 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215852,
+    "htmlBytes": 215844,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",
@@ -11863,7 +12892,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETSeptember 2026Wed16Thu17Fri18Sat19Mon21Tue22Wed23Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -11988,7 +13017,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212234,
+    "htmlBytes": 212228,
     "incoming": [
       "/",
       "/about",
@@ -12335,7 +13364,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en ETseptiembre de 2026mié16jue17vie18sáb19lun21mar22mié23Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -12460,8 +13489,9 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215270,
+    "htmlBytes": 215262,
     "incoming": [
+      "/es/labs-summit-2026",
       "/es",
       "/es/about",
       "/es/features",

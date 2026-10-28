@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo.js";
 import { handleLeadIntake } from "./routes/lead.js";
+import { handleEventRegistration } from "./routes/event-registration.js";
 
 export function createServer() {
   const app = express();
@@ -23,6 +24,7 @@ export function createServer() {
   // Website lead form to the DigitalFace lead intake. Keeps the intake URL server
   // side; the browser only ever talks to this route.
   app.post("/api/lead", handleLeadIntake);
+  app.post("/api/event-registration", handleEventRegistration);
 
   return app;
 }

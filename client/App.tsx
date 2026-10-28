@@ -15,10 +15,12 @@ import { WhatsAppButton } from "./components/contact/WhatsAppButton";
 import { GhlChatWidget } from "./components/ghl/GhlChatWidget";
 import { localePath, routeSupportsLocale } from "./i18n/locale";
 import site from "@shared/site.json";
+import { LabsSummitRedirect } from "./pages/LabsSummitRedirect";
 
 // The route manifest also drives static HTML, the sitemap and status handling.
 // Route chunks keep the booking widget and unrelated pages off the initial path.
 const pages: Record<string, ComponentType> = {
+  "labs-summit-2026": lazy(() => import("./pages/LabsSummit2026")),
   home: lazy(() => import("./pages/Index")),
   about: lazy(() => import("./pages/About")),
   features: lazy(() => import("./pages/Features")),
@@ -69,6 +71,10 @@ export default function App() {
               }
             >
               <Routes>
+                <Route
+                  path="/labs-summit-2026"
+                  element={<LabsSummitRedirect />}
+                />
                 {(["en", "es"] as const).map((locale) => (
                   <Route key={locale} element={<MainLayout />}>
                     {site.routes

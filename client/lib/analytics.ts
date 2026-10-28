@@ -14,6 +14,9 @@ type EventName =
   | "consultation_click"
   | "contact_click"
   | "service_request_add"
+  | "event_registration_click"
+  | "event_registration_success"
+  | "event_prize_explore"
   | "appointment_booked";
 type Parameters = {
   page_source?: string;

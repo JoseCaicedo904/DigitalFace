@@ -23,6 +23,16 @@ afterAll(async () => {
   );
 });
 describe("Generated production HTTP documents", () => {
+  it("keeps the event alias Spanish-only and preserves campaign parameters", async () => {
+    const response = await fetch(
+      origin + "/labs-summit-2026?utm_source=synthetic",
+      { redirect: "manual" },
+    );
+    expect(response.status).toBe(308);
+    expect(response.headers.get("location")).toBe(
+      "/es/labs-summit-2026?utm_source=synthetic",
+    );
+  });
   it("serves the actual localized HTML on every direct route", async () => {
     for (const route of site.routes)
       for (const lang of "locales" in route ? route.locales : ["en", "es"]) {

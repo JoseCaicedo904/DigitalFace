@@ -1,0 +1,85 @@
+[
+  {
+    "original": "DF BROCHURE FINAL TULUA Fair.jpeg",
+    "bytes": 336652,
+    "width": 1500,
+    "height": 1049,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "DF outreach mini vid.mp4",
+    "bytes": 4684813,
+    "width": 1280,
+    "height": 720,
+    "durationSeconds": 5,
+    "orientation": "landscape",
+    "codec": "H.264",
+    "audio": false,
+    "visual": "DigitalFace logo reveal; representative frames inspected"
+  },
+  {
+    "original": "DIGITAL FACE MARCA AZUL.jpg",
+    "bytes": 201851,
+    "width": 3300,
+    "height": 2550,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "DIGITAL FACE MARCA BLANCO.jpg",
+    "bytes": 1081761,
+    "width": 3300,
+    "height": 2550,
+    "mode": "CMYK",
+    "transparency": false
+  },
+  {
+    "original": "DIGITAL FACE MARCA ISOTIPO.png",
+    "bytes": 21893,
+    "width": 464,
+    "height": 860,
+    "mode": "RGBA",
+    "transparency": true
+  },
+  {
+    "original": "hablador-jugada-crecimiento-original-ajustado-11.5x20.5cm.jpg.jpeg",
+    "bytes": 1030525,
+    "width": 1358,
+    "height": 2421,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "hablador-premios-original-ajustado-11.5x20.5cm.jpg.jpeg",
+    "bytes": 1032320,
+    "width": 1358,
+    "height": 2421,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "IMG_0116.PNG",
+    "bytes": 219307,
+    "width": 897,
+    "height": 1585,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "lab summit.jpg",
+    "bytes": 21922,
+    "width": 447,
+    "height": 447,
+    "mode": "RGB",
+    "transparency": false
+  },
+  {
+    "original": "LOGO DIGITAL FACE MARCA AZUL.png",
+    "bytes": 72299,
+    "width": 1454,
+    "height": 860,
+    "mode": "RGBA",
+    "transparency": true
+  }
+]
