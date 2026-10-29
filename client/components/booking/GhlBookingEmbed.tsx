@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * The one DigitalFace booking calendar.
+ * DigitalFace's booking embed, with an optional dedicated event calendar.
  *
- * This module is imported by the /book page alone. That is load-bearing rather
- * than tidiness: it is what keeps the iframe and LeadConnector's script out of
- * the main bundle, so the marketing pages never touch an external widget while
- * a visitor is only browsing.
+ * Corporate booking imports this on /book. The event component loads it only
+ * after an explicit scheduling action once that dedicated calendar is enabled.
+ * The third-party widget stays out of ordinary corporate browsing.
  *
  * The calendar is a Personal Appointment calendar internally, but the public
  * experience is deliberately company-first: visitors book DigitalFace, not a
@@ -157,7 +156,11 @@ export type GhlBookingEmbedProps = {
 };
 
 /** The framed calendar panel. The page around it supplies the copy. */
-export function GhlBookingEmbed({ title, className, calendarId = BOOKING_CALENDAR_ID }: GhlBookingEmbedProps) {
+export function GhlBookingEmbed({
+  title,
+  className,
+  calendarId = BOOKING_CALENDAR_ID,
+}: GhlBookingEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const hasAuthoritativeHeight = useRef(false);
   const [sizing, setSizing] = useState<"pending" | "measured" | "unmanaged">(
@@ -239,7 +242,11 @@ export function GhlBookingEmbed({ title, className, calendarId = BOOKING_CALENDA
         <iframe
           ref={frameRef}
           id={frameId}
-          src={calendarId === BOOKING_CALENDAR_ID ? BOOKING_CALENDAR_URL : `https://api.leadconnectorhq.com/widget/booking/${calendarId}?locale=es`}
+          src={
+            calendarId === BOOKING_CALENDAR_ID
+              ? BOOKING_CALENDAR_URL
+              : `https://api.leadconnectorhq.com/widget/booking/${calendarId}?locale=es`
+          }
           title={title}
           allow="payment"
           scrolling="no"

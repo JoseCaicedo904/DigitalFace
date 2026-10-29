@@ -871,6 +871,52 @@
 .event-full {
   grid-column: 1/-1;
 }
+.event-needs-field {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.event-needs-field > legend {
+  padding: 0;
+  font-size: var(--event-label-size);
+  font-weight: 700;
+  line-height: 1.8;
+  color: #304e65;
+}
+.event-needs-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+.event-needs-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #d6e1ea;
+  border-radius: 7px;
+  background: #fafcfe;
+  color: #24475f;
+  font-size: var(--event-label-size);
+  line-height: 1.5;
+  cursor: pointer;
+}
+.event-needs-option input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: #07639b;
+}
+.event-needs-option:has(input:checked) {
+  border-color: #075994;
+  background: #edf8fc;
+}
+.event-needs-field[aria-invalid="true"] .event-needs-option {
+  border-color: #b83145;
+}
 .event-optional {
   color: #526b7f;
   font-weight: 400;
@@ -1618,6 +1664,9 @@
   .event-form-grid {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+  .event-needs-options {
+    grid-template-columns: 1fr;
   }
   .event-form-grid > label {
     font-size: var(--event-label-size);

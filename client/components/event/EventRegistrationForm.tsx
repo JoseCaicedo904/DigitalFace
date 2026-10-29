@@ -44,7 +44,7 @@ export function EventRegistrationForm() {
       phone: data.get("phone"),
       instagram: data.get("instagram"),
       email: data.get("email"),
-      need: data.get("need"),
+      need: data.getAll("need"),
       diceResult: data.get("diceResult"),
       validationCode: data.get("validationCode"),
       participationConsent: data.get("participationConsent") === "on",
@@ -59,8 +59,10 @@ export function EventRegistrationForm() {
         ]),
       );
       setErrors(next);
-      const first = form.elements.namedItem(Object.keys(next)[0]);
-      if (first instanceof HTMLElement) first.focus();
+      const first = form.querySelector<HTMLElement>(
+        `[name="${Object.keys(next)[0]}"]`,
+      );
+      first?.focus();
       return;
     }
     setErrors({});
@@ -230,20 +232,39 @@ export function EventRegistrationForm() {
           />
           {error("businessActivity")}
         </label>
-        <label className="event-full">
-          ¿Qué necesita tu negocio? <span aria-hidden="true">*</span>
-          <select {...control("need")} required defaultValue="">
-            <option value="" disabled>
-              Selecciona una opción
-            </option>
+        <fieldset
+          className="event-needs-field event-full"
+          aria-invalid={Boolean(errors.need)}
+          aria-describedby={
+            errors.need
+              ? "event-error-need event-needs-hint"
+              : "event-needs-hint"
+          }
+        >
+          <legend>
+            ¿Qué necesita tu negocio? <span aria-hidden="true">*</span>
+          </legend>
+          <p className="event-form-footnote" id="event-needs-hint">
+            Selecciona una o varias opciones.
+          </p>
+          <div className="event-needs-options">
             {EVENT_NEEDS.map((need) => (
-              <option key={need.id} value={need.id}>
-                {need.label}
-              </option>
+              <label key={need.id} className="event-needs-option">
+                <input
+                  id={`event-need-${need.id}`}
+                  type="checkbox"
+                  name="need"
+                  value={need.id}
+                  onChange={() =>
+                    setErrors((current) => ({ ...current, need: "" }))
+                  }
+                />
+                <span>{need.label}</span>
+              </label>
             ))}
-          </select>
+          </div>
           {error("need")}
-        </label>
+        </fieldset>
         <label className="event-full">
           Correo electrónico <span aria-hidden="true">*</span>
           <input
@@ -258,17 +279,23 @@ export function EventRegistrationForm() {
         </label>
         <label>
           Resultado del dado <span aria-hidden="true">*</span>
-          <input
+          <select
             {...control("diceResult")}
-            type="number"
-            inputMode="numeric"
-            min={1}
-            max={6}
-            step={1}
-            autoComplete="off"
             required
-            placeholder="Del 1 al 6"
-          />
+            defaultValue=""
+            onChange={() =>
+              setErrors((current) => ({ ...current, diceResult: "" }))
+            }
+          >
+            <option value="" disabled>
+              Selecciona el resultado
+            </option>
+            {[1, 2, 3, 4, 5, 6].map((face) => (
+              <option key={face} value={face}>
+                {face}
+              </option>
+            ))}
+          </select>
           {error("diceResult")}
         </label>
         <label>

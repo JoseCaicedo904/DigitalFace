@@ -67,9 +67,30 @@ export const eventRegistrationSchema = z
       .min(1, "Escribe el correo donde recibirás tu premio.")
       .max(200)
       .email("Revisa tu correo electrónico."),
-    need: z.enum(
-      ["advertising", "website", "crm", "ai", "content", "not_sure"],
-      { errorMap: () => ({ message: "Selecciona qué necesita tu negocio." }) },
+    need: z.preprocess(
+      // Older cached forms may send one string. The receiver always gets an array.
+      (value) => (typeof value === "string" ? [value] : value),
+      z
+        .array(
+          z.enum(
+            ["advertising", "website", "crm", "ai", "content", "not_sure"],
+            {
+              errorMap: () => ({
+                message: "Selecciona opciones válidas para tu negocio.",
+              }),
+            },
+          ),
+          {
+            errorMap: () => ({
+              message: "Selecciona al menos una necesidad de tu negocio.",
+            }),
+          },
+        )
+        .min(1, "Selecciona al menos una necesidad de tu negocio.")
+        .max(EVENT_NEEDS.length)
+        .refine((values) => new Set(values).size === values.length, {
+          message: "Selecciona cada opción solo una vez.",
+        }),
     ),
     diceResult: z.preprocess(
       (value) =>
@@ -78,11 +99,11 @@ export const eventRegistrationSchema = z
           : value,
       z
         .number({
-          errorMap: () => ({ message: "Ingresa un resultado del 1 al 6." }),
+          errorMap: () => ({ message: "Selecciona un resultado del 1 al 6." }),
         })
-        .int("Ingresa un resultado del 1 al 6.")
-        .min(1, "Ingresa un resultado del 1 al 6.")
-        .max(6, "Ingresa un resultado del 1 al 6."),
+        .int("Selecciona un resultado del 1 al 6.")
+        .min(1, "Selecciona un resultado del 1 al 6.")
+        .max(6, "Selecciona un resultado del 1 al 6."),
     ),
     validationCode: z.literal(EVENT_VALIDATION_CODE, {
       errorMap: () => ({ message: "El código de validación no es correcto." }),

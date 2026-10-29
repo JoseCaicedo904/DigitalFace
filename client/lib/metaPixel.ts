@@ -186,11 +186,15 @@ export function trackMetaPageView(pathname: string) {
 }
 
 /** Called only after the existing booking state changes from pending to fired. */
-export function trackMetaAppointmentBooked(confirmationPath = "/booking-confirmed") {
+export function trackMetaAppointmentBooked(
+  confirmationPath = "/booking-confirmed",
+) {
   try {
     if (
       typeof window === "undefined" ||
-      !["/booking-confirmed", "/es/labs-summit-booking-confirmed"].includes(confirmationPath) ||
+      !["/booking-confirmed", "/es/labs-summit-booking-confirmed"].includes(
+        confirmationPath,
+      ) ||
       knownPage(window.location.pathname) !== confirmationPath
     )
       return;

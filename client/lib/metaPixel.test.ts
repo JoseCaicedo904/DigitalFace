@@ -35,6 +35,22 @@ function finishSdkLoad() {
 }
 
 describe("Meta pixel without external requests", () => {
+  it("sends Schedule once for a completed event booking with an event attempt", async () => {
+    const pixel = await productionPixel(
+      "https://digitalface.app/es/labs-summit-2026",
+    );
+    const analytics = await import("./analytics");
+    analytics.startEventAppointmentBookingAttempt();
+    pixel.trackMetaPageView("/es/labs-summit-2026");
+    const calls = finishSdkLoad();
+    window.history.replaceState({}, "", "/es/labs-summit-booking-confirmed");
+    pixel.trackMetaPageView("/es/labs-summit-booking-confirmed");
+    analytics.trackEventAppointmentBookedOnce();
+    analytics.trackEventAppointmentBookedOnce();
+    expect(
+      calls.mock.calls.filter((call) => call[2] === "Schedule"),
+    ).toHaveLength(1);
+  });
   it("uses the selected pixel, disables automatic collection and loads once", async () => {
     const pixel = await productionPixel();
     pixel.trackMetaPageView("/");

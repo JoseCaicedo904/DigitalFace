@@ -34,12 +34,14 @@ async function prepare(fill = true) {
       businessActivity: "Synthetic business activity",
       phone: "+13055550123",
       email: "synthetic@example.invalid",
-      need: "crm",
       diceResult: "3",
     })) {
       (document.querySelector(`[name="${name}"]`) as HTMLInputElement).value =
         value;
     }
+    document.querySelector<HTMLInputElement>(
+      '[name="need"][value="crm"]',
+    )!.checked = true;
     await act(async () => {
       const code = document.querySelector<HTMLInputElement>(
         '[name="validationCode"]',
@@ -74,7 +76,9 @@ describe("event registration acknowledgments", () => {
     expect(document.activeElement?.id).toBe("event-name");
     expect(document.querySelector('[name="marketingConsent"]')).toBeNull();
     expect(document.body.textContent).not.toContain("También quiero recibir");
-    expect(document.querySelectorAll('input[type="checkbox"]')).toHaveLength(1);
+    expect(
+      document.querySelectorAll('input[type="checkbox"]:not([name="need"])'),
+    ).toHaveLength(1);
     expect(
       document
         .querySelector('[name="participationConsent"]')
@@ -97,8 +101,68 @@ describe("event registration acknowledgments", () => {
       expect(request).not.toHaveBeenCalled();
       expect(document.activeElement?.id).toBe(`event-${field}`);
       expect(document.querySelector(`#event-error-${field}`)).not.toBeNull();
+      if (field === "diceResult") {
+        await act(async () => {
+          const dice = document.querySelector<HTMLSelectElement>(
+            '[name="diceResult"]',
+          )!;
+          dice.value = "6";
+          Simulate.change(dice);
+        });
+        expect(document.querySelector("#event-error-diceResult")).toBeNull();
+      }
     },
   );
+  it("uses a single-choice dice dropdown with only faces 1–6", async () => {
+    await prepare(false);
+    const dice = document.querySelector<HTMLSelectElement>(
+      'select[name="diceResult"]',
+    )!;
+    expect(dice).not.toBeNull();
+    expect(dice.multiple).toBe(false);
+    expect(dice.required).toBe(true);
+    expect(Array.from(dice.options).map((option) => option.value)).toEqual([
+      "",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+    ]);
+    expect(document.querySelector('input[name="diceResult"]')).toBeNull();
+  });
+  it("requires at least one business need and focuses the first choice", async () => {
+    const request = vi.fn();
+    vi.stubGlobal("fetch", request);
+    await prepare();
+    document.querySelector<HTMLInputElement>(
+      '[name="need"][value="crm"]',
+    )!.checked = false;
+    await submit();
+    expect(request).not.toHaveBeenCalled();
+    expect(document.activeElement?.id).toBe("event-need-advertising");
+    expect(document.querySelector("#event-error-need")).not.toBeNull();
+  });
+  it("includes all selected business needs in the submission", async () => {
+    const request = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ ok: true, duplicate: false }),
+    });
+    vi.stubGlobal("fetch", request);
+    await prepare();
+    for (const value of ["advertising", "website"]) {
+      document.querySelector<HTMLInputElement>(
+        `[name="need"][value="${value}"]`,
+      )!.checked = true;
+    }
+    await submit();
+    expect(JSON.parse(request.mock.calls[0][1].body).need).toEqual([
+      "advertising",
+      "website",
+      "crm",
+    ]);
+  });
   it("locks submission for an incorrect code and unlocks only for the exact event code", async () => {
     const request = vi.fn();
     vi.stubGlobal("fetch", request);
@@ -142,6 +206,7 @@ describe("event registration acknowledgments", () => {
       participationConsent: true,
       role: "Propietario/socio",
       businessActivity: "Synthetic business activity",
+      need: ["crm"],
       diceResult: 3,
       validationCode: "DFLAB2026",
     });

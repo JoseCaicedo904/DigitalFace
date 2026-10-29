@@ -849,7 +849,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 87234,
+    "htmlBytes": 89079,
     "incoming": [
       "/es",
       "/es/about",
@@ -859,6 +859,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms"
     ],
@@ -2640,6 +2641,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -3438,6 +3440,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms"
     ],
@@ -4248,6 +4251,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -5420,6 +5424,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms"
     ],
@@ -6334,6 +6339,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -7399,6 +7405,7 @@
       "/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -8120,6 +8127,7 @@
       "/es/pricing",
       "/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -8769,6 +8777,7 @@
       "/es/pricing",
       "/es/contact",
       "/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -9076,6 +9085,297 @@
       "/industries/med-spas",
       "/privacy",
       "/terms"
+    ]
+  },
+  {
+    "id": "labs-summit-booking-confirmed",
+    "path": "/labs-summit-booking-confirmed",
+    "layout": "corporate",
+    "locales": [
+      "es"
+    ],
+    "indexable": false,
+    "type": "WebPage",
+    "topic": "Tuluá Labs Summit consultation booking confirmation",
+    "intent": "Acknowledge a completed event consultation booking",
+    "locale": "es",
+    "url": "/es/labs-summit-booking-confirmed",
+    "title": "Cita confirmada — Tuluá Labs Summit | DigitalFace",
+    "description": "Tu cita con DigitalFace ha sido registrada. Revisa tu correo para consultar la confirmación y los detalles.",
+    "h1": "Tu cita está confirmada.",
+    "canonical": "https://digitalface.app/es/labs-summit-booking-confirmed",
+    "indexStatus": "noindex, follow",
+    "alternates": {},
+    "schema": [
+      "WebPage",
+      "BreadcrumbList",
+      "Organization",
+      "WebSite"
+    ],
+    "headings": [
+      {
+        "level": 1,
+        "text": "Tu cita está confirmada."
+      }
+    ],
+    "headingJumps": [],
+    "links": [
+      {
+        "href": "https://wa.me/573005061366?text=Hola%20DigitalFace%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20sus%20servicios.",
+        "text": "Hablar por WhatsAppHablar por WhatsApp"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace MarketingColombia - Florida"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/pay-per-service#paid-media",
+        "text": "Pauta digital y publicidad en redes"
+      },
+      {
+        "href": "/es/pay-per-service#meta-ads",
+        "text": "Anuncios en Meta (Facebook e Instagram)"
+      },
+      {
+        "href": "/es/pay-per-service#google-campaigns",
+        "text": "Anuncios en Google"
+      },
+      {
+        "href": "/es/pay-per-service#tiktok-ads",
+        "text": "Anuncios en TikTok"
+      },
+      {
+        "href": "/es/pay-per-service#seo-strategy",
+        "text": "Estrategia SEO"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Producción audiovisual"
+      },
+      {
+        "href": "/es/pay-per-service#content-creation",
+        "text": "Creación de contenido"
+      },
+      {
+        "href": "/es/pay-per-service#automation-and-chatbots",
+        "text": "Automatización y chatbots"
+      },
+      {
+        "href": "/es/pay-per-service#chatbot-development",
+        "text": "Desarrollo de chatbots (IA y por reglas)"
+      },
+      {
+        "href": "/es/pay-per-service#workflow-automation",
+        "text": "Automatización de procesos específicos"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-automation",
+        "text": "Automatización de citas y calendario"
+      },
+      {
+        "href": "/es/pay-per-service#ecommerce-automation",
+        "text": "Automatización para e-commerce (Shopify y WooCommerce)"
+      },
+      {
+        "href": "/es/pay-per-service#comment-auto-reply",
+        "text": "Respuesta automática a comentarios en Facebook e Instagram"
+      },
+      {
+        "href": "/es/pay-per-service#lead-ops-crm",
+        "text": "Gestión de contactos y CRM"
+      },
+      {
+        "href": "/es/pay-per-service#lead-capture",
+        "text": "Captura de contactos y sincronización con el CRM"
+      },
+      {
+        "href": "/es/pay-per-service#appointment-booking",
+        "text": "Agendamiento de citas y recordatorios"
+      },
+      {
+        "href": "/es/pay-per-service#crm-pipeline",
+        "text": "Configuración del embudo en el CRM (GoHighLevel)"
+      },
+      {
+        "href": "/es/pay-per-service#crm-integration",
+        "text": "Integración de CRM y sincronización de datos"
+      },
+      {
+        "href": "/es/pay-per-service#reporting-dashboards",
+        "text": "Reportes y tableros de rendimiento"
+      },
+      {
+        "href": "/es/pay-per-service#websites-and-funnels",
+        "text": "Sitios web y embudos"
+      },
+      {
+        "href": "/es/pay-per-service#corporate-websites",
+        "text": "Sitios web corporativos y de negocio"
+      },
+      {
+        "href": "/es/pay-per-service#campaign-landing-pages",
+        "text": "Landing pages para campañas"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una llamada"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio→"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros→"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas→"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado→"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes→"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto→"
+      },
+      {
+        "href": "/es/book",
+        "text": "Agenda una demostración"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Volver a Tuluá Labs Summit"
+      },
+      {
+        "href": "/es",
+        "text": "DigitalFace Marketing"
+      },
+      {
+        "href": "/es",
+        "text": "Inicio"
+      },
+      {
+        "href": "/es/about",
+        "text": "Nosotros"
+      },
+      {
+        "href": "/es/features",
+        "text": "Sistema de Ventas"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Servicios por separado"
+      },
+      {
+        "href": "/es/pricing",
+        "text": "Planes"
+      },
+      {
+        "href": "/es/contact",
+        "text": "Contacto"
+      },
+      {
+        "href": "/es/labs-summit-2026",
+        "text": "Tuluá Labs Summit"
+      },
+      {
+        "href": "/es/industries/paid-advertising",
+        "text": "Publicidad pagada"
+      },
+      {
+        "href": "/es/industries/dental-practices",
+        "text": "Clínicas Odontológicas"
+      },
+      {
+        "href": "/es/industries/aesthetic-medicine",
+        "text": "Medicina Estética"
+      },
+      {
+        "href": "/es/industries/med-spas",
+        "text": "Med Spas"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "/es/privacy",
+        "text": "Política de privacidad"
+      },
+      {
+        "href": "/es/terms",
+        "text": "Términos del servicio"
+      },
+      {
+        "href": "/sitemap.xml",
+        "text": "Mapa del sitio"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "44",
+        "height": "44",
+        "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
+      },
+      {
+        "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
+        "alt": "Logotipo de DigitalFace Marketing",
+        "loading": "eager",
+        "width": "40",
+        "height": "40",
+        "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
+      }
+    ],
+    "htmlBytes": 27332,
+    "incoming": [],
+    "outgoing": [
+      "/es",
+      "/es/about",
+      "/es/features",
+      "/es/pay-per-service",
+      "/es/pricing",
+      "/es/contact",
+      "/es/book",
+      "/es/labs-summit-2026",
+      "/es/industries/paid-advertising",
+      "/es/industries/dental-practices",
+      "/es/industries/aesthetic-medicine",
+      "/es/industries/med-spas",
+      "/es/privacy",
+      "/es/terms"
     ]
   },
   {
@@ -9808,6 +10108,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -10577,6 +10878,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/terms",
       "/es/industries/dental-practices",
@@ -11524,6 +11826,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/industries/dental-practices",
@@ -12468,6 +12771,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",
@@ -13412,6 +13716,7 @@
       "/es/pricing",
       "/es/contact",
       "/es/book",
+      "/es/labs-summit-booking-confirmed",
       "/es/privacy",
       "/es/terms",
       "/es/industries/dental-practices",

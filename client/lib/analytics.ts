@@ -288,16 +288,40 @@ export function trackAppointmentBookedOnce() {
 
 /** Event bookings have their own state so they cannot consume corporate attempts. */
 export function startEventAppointmentBookingAttempt() {
-  if (typeof window === "undefined" || window.location.pathname !== EVENT_BOOKING_PATH) return;
-  try { window.sessionStorage.setItem(EVENT_BOOKING_STATE_KEY, APPOINTMENT_BOOKING_PENDING); } catch { /* Booking remains available. */ }
+  if (
+    typeof window === "undefined" ||
+    window.location.pathname !== EVENT_BOOKING_PATH
+  )
+    return;
+  try {
+    window.sessionStorage.setItem(
+      EVENT_BOOKING_STATE_KEY,
+      APPOINTMENT_BOOKING_PENDING,
+    );
+  } catch {
+    /* Booking remains available. */
+  }
 }
 
 export function trackEventAppointmentBookedOnce() {
-  if (typeof window === "undefined" || analyticsPage(window.location.pathname)?.page_path !== EVENT_BOOKED_PATH) return;
+  if (
+    typeof window === "undefined" ||
+    analyticsPage(window.location.pathname)?.page_path !== EVENT_BOOKED_PATH
+  )
+    return;
   try {
-    if (window.sessionStorage.getItem(EVENT_BOOKING_STATE_KEY) !== APPOINTMENT_BOOKING_PENDING) return;
-    window.sessionStorage.setItem(EVENT_BOOKING_STATE_KEY, APPOINTMENT_BOOKING_FIRED);
-  } catch { return; }
+    if (
+      window.sessionStorage.getItem(EVENT_BOOKING_STATE_KEY) !==
+      APPOINTMENT_BOOKING_PENDING
+    )
+      return;
+    window.sessionStorage.setItem(
+      EVENT_BOOKING_STATE_KEY,
+      APPOINTMENT_BOOKING_FIRED,
+    );
+  } catch {
+    return;
+  }
   trackEvent("appointment_booked", { page_source: "labs_summit_2026" });
   trackMetaAppointmentBooked(EVENT_BOOKED_PATH);
 }

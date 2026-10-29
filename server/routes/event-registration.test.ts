@@ -67,6 +67,10 @@ describe("event registration integrity", () => {
     { ...participant, receivedAt: "forged" },
     { ...participant, website: "bot-filled-field" },
     { ...participant, need: "unknown" },
+    { ...participant, need: [] },
+    { ...participant, need: undefined },
+    { ...participant, need: ["crm", "unknown"] },
+    { ...participant, need: ["crm", "crm"] },
     { ...participant, role: undefined },
     { ...participant, role: "" },
     { ...participant, role: "not_a_role" },
@@ -105,6 +109,7 @@ describe("event registration integrity", () => {
       participationConsent: true,
       role: "Propietario/socio",
       businessActivity: "Synthetic business activity",
+      need: ["crm"],
       diceResult: 3,
       instagram: "synthetic.example",
       source: "labs_summit_2026",
@@ -122,6 +127,19 @@ describe("event registration integrity", () => {
     expect(forwarded).not.toHaveProperty("website");
     expect(forwarded).not.toHaveProperty("validationCode");
     expect(response.json).toHaveBeenCalledWith({ ok: true, duplicate: false });
+  });
+  it("forwards all selected business needs as an array", async () => {
+    const upstream = configure();
+    const response = await invoke({
+      ...participant,
+      need: ["advertising", "website", "crm"],
+    });
+    expect(response.status).toHaveBeenCalledWith(200);
+    expect(JSON.parse(upstream.mock.calls[0][1].body).need).toEqual([
+      "advertising",
+      "website",
+      "crm",
+    ]);
   });
   it.each([1, 6])(
     "records face %s as entered without awarding or validating a prize",

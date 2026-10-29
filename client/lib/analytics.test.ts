@@ -234,8 +234,7 @@ describe("GA4 runtime behavior without any network requests", () => {
         );
       return originalPush(...items);
     };
-    for (let call = 0; call < 5; call++)
-      analytics.trackAppointmentBookedOnce();
+    for (let call = 0; call < 5; call++) analytics.trackAppointmentBookedOnce();
 
     // A fresh module models a page reload while sessionStorage survives.
     vi.resetModules();
@@ -246,8 +245,7 @@ describe("GA4 runtime behavior without any network requests", () => {
     window.history.replaceState({}, "", "/book");
     analytics.startAppointmentBookingAttempt();
     window.history.replaceState({}, "", "/booking-confirmed");
-    for (let call = 0; call < 5; call++)
-      analytics.trackAppointmentBookedOnce();
+    for (let call = 0; call < 5; call++) analytics.trackAppointmentBookedOnce();
 
     const calls = window.dataLayer!.map((entry) =>
       Array.from(entry as ArrayLike<unknown>),
@@ -285,6 +283,45 @@ describe("GA4 runtime behavior without any network requests", () => {
 
     expect(window.dataLayer).toBeUndefined();
     expect(document.querySelector("#df-ga4")).toBeNull();
+  });
+  it("counts a confirmed event booking once and keeps corporate booking state separate", async () => {
+    const analytics = await productionAnalytics(
+      "https://digitalface.app/es/labs-summit-2026",
+    );
+    analytics.startEventAppointmentBookingAttempt();
+    analytics.trackEventAppointmentBookedOnce();
+    expect(window.dataLayer).toBeUndefined();
+    expect(
+      window.sessionStorage.getItem(
+        "digitalface.analytics.appointment_booked.state",
+      ),
+    ).toBeNull();
+    window.history.replaceState({}, "", "/es/labs-summit-booking-confirmed");
+    analytics.trackEventAppointmentBookedOnce();
+    analytics.trackEventAppointmentBookedOnce();
+    const events = window
+      .dataLayer!.map((entry) => Array.from(entry as ArrayLike<unknown>))
+      .filter(
+        (entry) => entry[0] === "event" && entry[1] === "appointment_booked",
+      );
+    expect(events).toHaveLength(1);
+    expect(events[0][2]).toMatchObject({
+      page_source: "labs_summit_2026",
+      page_path: "/es/labs-summit-booking-confirmed",
+    });
+    expect(
+      window.sessionStorage.getItem(
+        "digitalface.analytics.tls_2026_booking.state",
+      ),
+    ).toBe("fired");
+  });
+  it("does not count a direct visit to event confirmation as a booking", async () => {
+    const analytics = await productionAnalytics(
+      "https://digitalface.app/es/labs-summit-booking-confirmed",
+    );
+    analytics.startEventAppointmentBookingAttempt();
+    analytics.trackEventAppointmentBookedOnce();
+    expect(window.dataLayer).toBeUndefined();
   });
   it("never lets a broken analytics script interrupt a lead or navigation", async () => {
     const analytics = await productionAnalytics();
