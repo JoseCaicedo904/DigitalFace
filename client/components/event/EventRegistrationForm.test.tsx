@@ -33,11 +33,20 @@ async function prepare(fill = true) {
       role: "Propietario/socio",
       businessActivity: "Synthetic business activity",
       phone: "+13055550123",
+      email: "synthetic@example.invalid",
       need: "crm",
+      diceResult: "3",
     })) {
       (document.querySelector(`[name="${name}"]`) as HTMLInputElement).value =
         value;
     }
+    await act(async () => {
+      const code = document.querySelector<HTMLInputElement>(
+        '[name="validationCode"]',
+      )!;
+      code.value = "DFLAB2026";
+      Simulate.change(code);
+    });
     (
       document.querySelector(
         '[name="participationConsent"]',
@@ -76,7 +85,7 @@ describe("event registration acknowledgments", () => {
       document.querySelector('[name="phone"]')?.parentElement?.textContent,
     ).toContain("Tel o WhatsApp");
   });
-  it.each(["role", "businessActivity"])(
+  it.each(["role", "businessActivity", "diceResult", "email"])(
     "blocks submission when %s is missing and focuses its error",
     async (field) => {
       const request = vi.fn();
@@ -90,6 +99,35 @@ describe("event registration acknowledgments", () => {
       expect(document.querySelector(`#event-error-${field}`)).not.toBeNull();
     },
   );
+  it("locks submission for an incorrect code and unlocks only for the exact event code", async () => {
+    const request = vi.fn();
+    vi.stubGlobal("fetch", request);
+    await prepare(false);
+    const button = document.querySelector<HTMLButtonElement>(
+      'button[type="submit"]',
+    )!;
+    const code = document.querySelector<HTMLInputElement>(
+      '[name="validationCode"]',
+    )!;
+    expect(button.disabled).toBe(true);
+    await act(async () => {
+      code.value = "dflab2026";
+      Simulate.change(code);
+      Simulate.blur(code);
+    });
+    expect(button.disabled).toBe(true);
+    expect(
+      document.querySelector("#event-error-validationCode"),
+    ).not.toBeNull();
+    await submit();
+    expect(request).not.toHaveBeenCalled();
+    await act(async () => {
+      code.value = "DFLAB2026";
+      Simulate.change(code);
+    });
+    expect(button.disabled).toBe(false);
+    expect(document.querySelector("#event-error-validationCode")).toBeNull();
+  });
   it("records a single event registration only after a successful acknowledged API response", async () => {
     const request = vi.fn().mockResolvedValue({
       ok: true,
@@ -99,11 +137,13 @@ describe("event registration acknowledgments", () => {
     await prepare();
     await submit();
     expect(JSON.parse(request.mock.calls[0][1].body)).toMatchObject({
-      email: "",
+      email: "synthetic@example.invalid",
       marketingConsent: false,
       participationConsent: true,
       role: "Propietario/socio",
       businessActivity: "Synthetic business activity",
+      diceResult: 3,
+      validationCode: "DFLAB2026",
     });
     expect(trackEvent).toHaveBeenCalledExactlyOnceWith(
       "event_registration_success",

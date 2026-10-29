@@ -25,7 +25,7 @@ let ownedQueue: PixelQueue | undefined;
 let ready = false;
 let requestedPage: string | null = null;
 let lastPage: string | null = null;
-let pendingSchedule = false;
+let pendingSchedule: string | null = null;
 type Conversion = {
   name: "Lead" | "Contact";
   page: string;
@@ -105,8 +105,8 @@ function flush() {
     lastPage = page;
     ownedQueue!("trackSingle", META_PIXEL_ID, "PageView");
   }
-  if (pendingSchedule && page === "/booking-confirmed") {
-    pendingSchedule = false;
+  if (pendingSchedule && page === pendingSchedule) {
+    pendingSchedule = null;
     ownedQueue!("trackSingle", META_PIXEL_ID, "Schedule");
   }
   const conversions = pendingConversions;
@@ -186,15 +186,16 @@ export function trackMetaPageView(pathname: string) {
 }
 
 /** Called only after the existing booking state changes from pending to fired. */
-export function trackMetaAppointmentBooked() {
+export function trackMetaAppointmentBooked(confirmationPath = "/booking-confirmed") {
   try {
     if (
       typeof window === "undefined" ||
-      knownPage(window.location.pathname) !== "/booking-confirmed"
+      !["/booking-confirmed", "/es/labs-summit-booking-confirmed"].includes(confirmationPath) ||
+      knownPage(window.location.pathname) !== confirmationPath
     )
       return;
-    requestedPage = "/booking-confirmed";
-    pendingSchedule = true;
+    requestedPage = confirmationPath;
+    pendingSchedule = confirmationPath;
     if (initialize()) flush();
   } catch {
     /* Booking success must not depend on a third-party script. */

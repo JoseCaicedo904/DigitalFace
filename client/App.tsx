@@ -21,6 +21,7 @@ import { LabsSummitRedirect } from "./pages/LabsSummitRedirect";
 // Route chunks keep the booking widget and unrelated pages off the initial path.
 const pages: Record<string, ComponentType> = {
   "labs-summit-2026": lazy(() => import("./pages/LabsSummit2026")),
+  "labs-summit-booking-confirmed": lazy(() => import("./pages/LabsSummitBookingConfirmed")),
   home: lazy(() => import("./pages/Index")),
   about: lazy(() => import("./pages/About")),
   features: lazy(() => import("./pages/Features")),

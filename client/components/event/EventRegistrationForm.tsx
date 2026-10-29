@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import {
   EVENT_NEEDS,
   EVENT_ROLES,
+  EVENT_VALIDATION_CODE,
   eventRegistrationSchema,
   type EventRegistrationResponse,
 } from "@shared/eventRegistration";
@@ -20,6 +21,14 @@ export function EventRegistrationForm() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState<"new" | "existing" | null>(null);
+  const [validationCode, setValidationCode] = useState("");
+  const [codeTouched, setCodeTouched] = useState(false);
+  const codeValid = validationCode === EVENT_VALIDATION_CODE;
+  const codeError =
+    errors.validationCode ||
+    (codeTouched && !codeValid
+      ? "El código de validación no es correcto."
+      : "");
   const resultRef = useRef<HTMLDivElement>(null);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -36,6 +45,8 @@ export function EventRegistrationForm() {
       instagram: data.get("instagram"),
       email: data.get("email"),
       need: data.get("need"),
+      diceResult: data.get("diceResult"),
+      validationCode: data.get("validationCode"),
       participationConsent: data.get("participationConsent") === "on",
       website: data.get("website") || "",
     });
@@ -125,8 +136,8 @@ export function EventRegistrationForm() {
           : "¡Tu negocio está registrado!"}
       </h3>
       <p>
-        Acércate al equipo de DigitalFace. Validaremos tu participación antes de
-        lanzar el dado físico.
+        Acércate al equipo de DigitalFace para confirmar tu participación y
+        validar el resultado registrado en el stand.
       </p>
       <p className="event-muted">
         Un intento por persona o empresa. El resultado y el premio se validan en
@@ -234,15 +245,61 @@ export function EventRegistrationForm() {
           {error("need")}
         </label>
         <label className="event-full">
-          Correo electrónico <span className="event-optional">(opcional)</span>
+          Correo electrónico <span aria-hidden="true">*</span>
           <input
             {...control("email")}
             type="email"
             autoComplete="email"
             maxLength={200}
+            required
             placeholder="tu@negocio.com"
           />
           {error("email")}
+        </label>
+        <label>
+          Resultado del dado <span aria-hidden="true">*</span>
+          <input
+            {...control("diceResult")}
+            type="number"
+            inputMode="numeric"
+            min={1}
+            max={6}
+            step={1}
+            autoComplete="off"
+            required
+            placeholder="Del 1 al 6"
+          />
+          {error("diceResult")}
+        </label>
+        <label>
+          Código de validación <span aria-hidden="true">*</span>
+          <input
+            {...control("validationCode")}
+            type="text"
+            autoComplete="off"
+            autoCapitalize="characters"
+            spellCheck={false}
+            maxLength={32}
+            required
+            placeholder="Ingresa el código del equipo"
+            value={validationCode}
+            onChange={(event) => {
+              setValidationCode(event.target.value);
+              setErrors((current) => ({ ...current, validationCode: "" }));
+            }}
+            onBlur={() => setCodeTouched(true)}
+            aria-invalid={Boolean(codeError)}
+            aria-describedby={
+              codeError
+                ? "event-error-validationCode event-code-hint"
+                : "event-code-hint"
+            }
+          />
+          {codeError ? (
+            <span className="event-field-error" id="event-error-validationCode">
+              {codeError}
+            </span>
+          ) : null}
         </label>
       </div>
       <div className="event-trap" aria-hidden="true">
@@ -256,7 +313,7 @@ export function EventRegistrationForm() {
         <span>
           Autorizo a DigitalFace Marketing a tratar estos datos para gestionar
           mi participación, validar el registro y coordinar mi premio por
-          WhatsApp, según la{" "}
+          WhatsApp y correo electrónico, según la{" "}
           <Link to="/es/privacy" target="_blank" rel="noopener noreferrer">
             Política de privacidad
           </Link>
@@ -277,7 +334,8 @@ export function EventRegistrationForm() {
       <button
         type="submit"
         className="event-button event-button-blue"
-        disabled={busy}
+        disabled={busy || !codeValid}
+        aria-describedby="event-code-hint"
       >
         {busy ? (
           <>
@@ -290,6 +348,11 @@ export function EventRegistrationForm() {
           </>
         )}
       </button>
+      <p className="event-form-footnote" id="event-code-hint">
+        Solicita al equipo de DigitalFace el código para habilitar el envío.
+        Registra el resultado del dado físico; el equipo valida el premio en el
+        stand.
+      </p>
       <p className="event-form-footnote">
         Los campos con * son obligatorios. Registrar tu negocio no asigna un
         premio ni reserva una cita.

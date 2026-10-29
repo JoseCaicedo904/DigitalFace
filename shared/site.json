@@ -98,6 +98,16 @@
       "intent": "Acknowledge a completed appointment booking"
     },
     {
+      "id": "labs-summit-booking-confirmed",
+      "path": "/labs-summit-booking-confirmed",
+      "layout": "corporate",
+      "locales": ["es"],
+      "indexable": false,
+      "type": "WebPage",
+      "topic": "Tuluá Labs Summit consultation booking confirmation",
+      "intent": "Acknowledge a completed event consultation booking"
+    },
+    {
       "id": "privacy",
       "path": "/privacy",
       "layout": "corporate",

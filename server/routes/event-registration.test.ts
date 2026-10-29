@@ -9,8 +9,10 @@ const participant = {
   businessActivity: "Synthetic business activity",
   phone: "+1 (305) 555-0123",
   instagram: "@synthetic.example",
-  email: "",
+  email: "synthetic@example.invalid",
   need: "crm",
+  diceResult: 3,
+  validationCode: "DFLAB2026",
   participationConsent: true,
   marketingConsent: false,
   website: "",
@@ -45,6 +47,7 @@ function configure(
     "EVENT_REGISTRATION_WEBHOOK_URL",
     "https://receiver.example.invalid/event",
   );
+  vi.stubEnv("EVENT_REGISTRATION_WEBHOOK_KEY", "synthetic-fixture-key");
   const upstream = vi.fn().mockResolvedValue({ ok, json: async () => receipt });
   vi.stubGlobal("fetch", upstream);
   return upstream;
@@ -57,6 +60,8 @@ afterEach(() => {
 describe("event registration integrity", () => {
   it.each([
     { ...participant, participationConsent: false },
+    { ...participant, email: "" },
+    { ...participant, email: "invalid" },
     { ...participant, phone: "3001234567" },
     { ...participant, prize: 6 },
     { ...participant, receivedAt: "forged" },
@@ -70,6 +75,17 @@ describe("event registration integrity", () => {
     { ...participant, businessActivity: "  " },
     { ...participant, businessActivity: "x".repeat(501) },
     { ...participant, marketingConsent: true },
+    { ...participant, diceResult: undefined },
+    { ...participant, diceResult: 0 },
+    { ...participant, diceResult: 7 },
+    { ...participant, diceResult: 1.5 },
+    { ...participant, diceResult: true },
+    { ...participant, validationCode: undefined },
+    { ...participant, validationCode: "" },
+    { ...participant, validationCode: "wrong" },
+    { ...participant, validationCode: "dflab2026" },
+    { ...participant, validationCode: " DFLAB2026" },
+    { ...participant, validationCode: "DFLAB2026 " },
   ])(
     "rejects invalid participation, bot fields and forged authority fields",
     async (body) => {
@@ -78,17 +94,18 @@ describe("event registration integrity", () => {
       expect(fetch).not.toHaveBeenCalled();
     },
   );
-  it("keeps optional email optional and commercial consent false; server stamps event identity", async () => {
+  it("requires email and keeps commercial consent false; server stamps event identity", async () => {
     const upstream = configure();
     const response = await invoke();
     const forwarded = JSON.parse(upstream.mock.calls[0][1].body);
     expect(forwarded).toMatchObject({
       phone: "+13055550123",
-      email: "",
+      email: "synthetic@example.invalid",
       marketingConsent: false,
       participationConsent: true,
       role: "Propietario/socio",
       businessActivity: "Synthetic business activity",
+      diceResult: 3,
       instagram: "synthetic.example",
       source: "labs_summit_2026",
       campaign: "la_jugada_del_crecimiento",
@@ -97,10 +114,30 @@ describe("event registration integrity", () => {
     expect(forwarded.receivedAt).toMatch(/^20\d\d-/);
     expect(forwarded.personKey).toMatch(/^[a-f0-9]{64}$/);
     expect(forwarded.businessKey).toMatch(/^[a-f0-9]{64}$/);
+    expect(forwarded.networkKey).toMatch(/^[a-f0-9]{64}$/);
+    expect(upstream.mock.calls[0][1].headers["X-DF-Event-Key"]).toBe(
+      "synthetic-fixture-key",
+    );
     expect(forwarded).not.toHaveProperty("prize");
     expect(forwarded).not.toHaveProperty("website");
+    expect(forwarded).not.toHaveProperty("validationCode");
     expect(response.json).toHaveBeenCalledWith({ ok: true, duplicate: false });
   });
+  it.each([1, 6])(
+    "records face %s as entered without awarding or validating a prize",
+    async (face) => {
+      const upstream = configure();
+      const response = await invoke({
+        ...participant,
+        diceResult: String(face),
+      });
+      expect(response.status).toHaveBeenCalledWith(200);
+      expect(JSON.parse(upstream.mock.calls[0][1].body)).toMatchObject({
+        diceResult: face,
+        resultStatus: "pending_staff_validation",
+      });
+    },
+  );
   it("forwards the new fields with trimmed activity and defaults absent marketing consent to false", async () => {
     const upstream = configure();
     const { marketingConsent: _omitted, ...withoutMarketingConsent } =
@@ -164,6 +201,12 @@ describe("event registration integrity", () => {
       "http://receiver.example.invalid/event",
     );
     expect((await invoke()).status).toHaveBeenCalledWith(503);
+  });
+  it("requires server-only receiver authentication", async () => {
+    const upstream = configure();
+    vi.stubEnv("EVENT_REGISTRATION_WEBHOOK_KEY", "");
+    expect((await invoke()).status).toHaveBeenCalledWith(503);
+    expect(upstream).not.toHaveBeenCalled();
   });
   it("reports upstream failures without disclosing participant or receiver data", async () => {
     configure({}, false);

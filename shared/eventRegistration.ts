@@ -4,6 +4,8 @@ import { normalizeInternationalPhone } from "./lead.js";
 export const EVENT_SOURCE = "labs_summit_2026";
 export const EVENT_CAMPAIGN = "la_jugada_del_crecimiento";
 export const EVENT_CONSENT_VERSION = "labs-summit-2026-10-28";
+// Shared event gate; it does not authenticate staff or award a prize.
+export const EVENT_VALIDATION_CODE = "DFLAB2026";
 export const EVENT_NEEDS = [
   { id: "advertising", label: "Publicidad digital" },
   { id: "website", label: "Sitio web o landing page" },
@@ -60,15 +62,31 @@ export const eventRegistrationSchema = z
       )
       .default(""),
     email: z
-      .union([
-        z.literal(""),
-        z.string().trim().max(200).email("Revisa tu correo electrónico."),
-      ])
-      .default(""),
+      .string()
+      .trim()
+      .min(1, "Escribe el correo donde recibirás tu premio.")
+      .max(200)
+      .email("Revisa tu correo electrónico."),
     need: z.enum(
       ["advertising", "website", "crm", "ai", "content", "not_sure"],
       { errorMap: () => ({ message: "Selecciona qué necesita tu negocio." }) },
     ),
+    diceResult: z.preprocess(
+      (value) =>
+        typeof value === "string" && /^[1-6]$/.test(value)
+          ? Number(value)
+          : value,
+      z
+        .number({
+          errorMap: () => ({ message: "Ingresa un resultado del 1 al 6." }),
+        })
+        .int("Ingresa un resultado del 1 al 6.")
+        .min(1, "Ingresa un resultado del 1 al 6.")
+        .max(6, "Ingresa un resultado del 1 al 6."),
+    ),
+    validationCode: z.literal(EVENT_VALIDATION_CODE, {
+      errorMap: () => ({ message: "El código de validación no es correcto." }),
+    }),
     participationConsent: z.literal(true, {
       errorMap: () => ({
         message: "Autoriza el tratamiento de datos para participar.",

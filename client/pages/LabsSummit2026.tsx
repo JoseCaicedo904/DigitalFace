@@ -26,6 +26,7 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { TechEcosystemSection } from "@/sections/TechEcosystem";
 import { homeContent } from "@/i18n/content/home";
 import { EventRegistrationForm } from "@/components/event/EventRegistrationForm";
+import { EventBookingCalendar } from "@/components/event/EventBookingCalendar";
 import { DiePips, InteractiveDice } from "@/components/event/InteractiveDice";
 import { trackEvent } from "@/lib/analytics";
 import "./labs-summit-2026.css";
@@ -592,7 +593,7 @@ export default function LabsSummit2026() {
         className="event-scheduling event-section"
         id="conversemos"
         aria-labelledby="scheduling-title"
-        data-calendar-slot="digitalface-existing-booking"
+        data-calendar-slot="digitalface-tls-2026-booking"
       >
         <div className="event-shell event-scheduling-grid">
           <div>
@@ -607,22 +608,7 @@ export default function LabsSummit2026() {
               automatizar procesos y convertir más clientes.
             </p>
           </div>
-          <div className="event-calendar-container">
-            <CalendarDays size={38} strokeWidth={1.4} aria-hidden="true" />
-            <h3>Encuentra un espacio para tu negocio.</h3>
-            <p>
-              Abre nuestra agenda y elige entre los horarios disponibles. Esta
-              conversación es independiente de tu registro en la feria.
-            </p>
-            <Link
-              to="/es/book"
-              className="event-button event-button-blue"
-              onClick={bookingClick}
-            >
-              Agendar una conversación <ArrowUpRight size={18} />
-            </Link>
-            <span>La cita se confirma al completar el agendamiento.</span>
-          </div>
+          <EventBookingCalendar />
         </div>
       </section>
 

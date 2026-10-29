@@ -152,10 +152,12 @@ export type GhlBookingEmbedProps = {
   /** Accessible name for the embedded widget. */
   title: string;
   className?: string;
+  /** An explicitly configured dedicated calendar; corporate booking stays the default. */
+  calendarId?: string;
 };
 
 /** The framed calendar panel. The page around it supplies the copy. */
-export function GhlBookingEmbed({ title, className }: GhlBookingEmbedProps) {
+export function GhlBookingEmbed({ title, className, calendarId = BOOKING_CALENDAR_ID }: GhlBookingEmbedProps) {
   const frameRef = useRef<HTMLIFrameElement>(null);
   const hasAuthoritativeHeight = useRef(false);
   const [sizing, setSizing] = useState<"pending" | "measured" | "unmanaged">(
@@ -163,7 +165,7 @@ export function GhlBookingEmbed({ title, className }: GhlBookingEmbedProps) {
   );
   // LeadConnector's own convention is `<calendarId>_<timestamp>`; a fresh
   // suffix per mount keeps the id unique across repeat visits to this route.
-  const [frameId] = useState(() => `${BOOKING_CALENDAR_ID}_${Date.now()}`);
+  const [frameId] = useState(() => `${calendarId}_${Date.now()}`);
 
   useEffect(() => {
     void loadEmbedScript();
@@ -237,7 +239,7 @@ export function GhlBookingEmbed({ title, className }: GhlBookingEmbedProps) {
         <iframe
           ref={frameRef}
           id={frameId}
-          src={BOOKING_CALENDAR_URL}
+          src={calendarId === BOOKING_CALENDAR_ID ? BOOKING_CALENDAR_URL : `https://api.leadconnectorhq.com/widget/booking/${calendarId}?locale=es`}
           title={title}
           allow="payment"
           scrolling="no"

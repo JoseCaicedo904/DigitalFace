@@ -52,13 +52,18 @@ export const handleEventRegistration: RequestHandler = async (req, res) => {
   // Deliberately separate from N8N_LEAD_WEBHOOK_URL: ordinary inquiries may trigger
   // unrelated offer/marketing workflows and cannot attest to event registration.
   const endpoint = process.env.EVENT_REGISTRATION_WEBHOOK_URL;
+  const webhookKey = process.env.EVENT_REGISTRATION_WEBHOOK_KEY;
   try {
-    if (!endpoint || new URL(endpoint).protocol !== "https:")
+    if (!endpoint || !webhookKey || new URL(endpoint).protocol !== "https:")
       return res.status(503).json({ ok: false, error: "not_configured" });
   } catch {
     return res.status(503).json({ ok: false, error: "not_configured" });
   }
-  const { website: _honeypot, ...participant } = parsed.data;
+  const {
+    website: _honeypot,
+    validationCode: _validationCode,
+    ...participant
+  } = parsed.data;
   const company = participant.business
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -76,6 +81,7 @@ export const handleEventRegistration: RequestHandler = async (req, res) => {
     privacyPolicy: "https://digitalface.app/es/privacy",
     personKey: digest(participant.phone),
     businessKey: digest(company),
+    networkKey: ipKey,
     // The receiver must uniquely reserve either identity before acknowledging.
     resultStatus: "pending_staff_validation",
   };
@@ -87,6 +93,7 @@ export const handleEventRegistration: RequestHandler = async (req, res) => {
       headers: {
         "Content-Type": "application/json",
         "Idempotency-Key": submission.personKey,
+        "X-DF-Event-Key": webhookKey!,
       },
       body: JSON.stringify(submission),
       signal: controller.signal,
