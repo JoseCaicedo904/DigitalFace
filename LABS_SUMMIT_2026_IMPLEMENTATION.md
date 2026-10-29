@@ -90,7 +90,7 @@ Consent wording describes participation/WhatsApp coordination separately from op
 
 The existing gated analytics infrastructure handles route visits. Fixed, non-personal event names were added: `event_registration_click`, `event_prize_explore`, and `event_registration_success`. The success event fires only after the local API's acknowledged nonduplicate success. Existing `consultation_click` and WhatsApp `contact_click` behavior is reused. No duplicate `generate_lead`, fake `appointment_booked`, GA4 key event or advertising conversion configuration was added. Event registrations do not automatically emit the regular Meta Lead conversion. No live analytics ingestion was tested.
 
-Scheduling uses the existing `/es/book` flow. No new calendar URL, fake availability or confirmation was introduced; provider availability and booking completion were not exercised live.
+Scheduling initially used the existing `/es/book` flow. The subsequent owner-authorized event calendar integration and click-to-open embed are recorded in the follow-up below; provider booking completion has not been exercised live.
 
 ## Validation
 
@@ -167,3 +167,13 @@ Colors, imagery and main heading hierarchy are retained. Secondary text contrast
 Chrome verification at 320, 390, 768, 1024, 1253 and 1440 pixels confirmed these computed sizes, no horizontal page overflow or clipped copy, fitting die controls, and the preserved Spanish footer link with no header event link. Desktop and phone screenshots of instructions/rules, prizes, registration, services and the hero were visually reviewed. `typography-qa.json` records the measurements; `typography-declaration-changes.json` maps the original font declarations to the new role tokens. `desktop-preview.png` now reflects this typography update; earlier screenshots remain historical evidence.
 
 Production build/28-route SEO validation, TypeScript checks and all 244 regression tests in 21 files passed (`vitest --run --maxWorkers=2`). No deployment, real submission, CRM change or provider/analytics configuration change occurred.
+
+## Dedicated calendar embed — October 28, 2026
+
+After completing and saving the dedicated GHL booking form and calendar, the owner supplied the LeadConnector iframe for `ELOONibg21k8gZnyNjJU` and requested that booking buttons open it inside the landing page. `EVENT_CALENDAR_READY` is now true locally. The scheduling button and final “Agendar una conversación” CTA share the page's open state. The final CTA also scrolls to `#conversemos`; the open calendar receives the full scheduling-section width and reduced phone padding.
+
+The existing `GhlBookingEmbed` uses the supplied booking URL with `locale=es`, `allow="payment"`, full width, an accessible Spanish title, a unique iframe ID, and the supplied `https://link.msgsndr.com/js/form_embed.js` helper. It loads after a booking action, keeps one helper-script instance, and preserves its existing origin/source-checked resizing and fallback height. The event-only pending-to-fired conversion guard is armed by the action; opening the calendar does not claim a completed booking. Corporate booking is unchanged.
+
+These are local source changes. No browser automation, live appointment, client email send or website deployment was performed. The owner’s pre-existing prize-email wording change was preserved. Registration and deferred PDF-delivery behavior were not modified.
+
+Validation passed: scoped Prettier and `git diff --check`, `pnpm typecheck`, `pnpm build` with 29 prerendered route documents/27 sitemap URLs and SEO validation, then `pnpm test --maxWorkers=1 --testTimeout=20000` with all 285 tests in 21 files passing. Generated HTML confirms the initial scheduling button, no calendar iframe before interaction, the final CTA's `#conversemos` target and the built Spanish confirmation page. React review checked shared state, typed callbacks, accessible native controls/iframe title, conditional third-party loading and preserved conversion boundaries. Widget rendering after interaction, responsive appearance and a completed provider booking remain unverified without a browser/booking test. Set `EVENT_CALENDAR_READY` false to restore the scheduling component's corporate fallback if the event calendar must be held.

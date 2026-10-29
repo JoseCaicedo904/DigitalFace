@@ -1195,6 +1195,11 @@
   gap: 90px;
   align-items: center;
 }
+.event-scheduling-grid.event-calendar-expanded {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+}
 .event-scheduling h2 {
   font-size: clamp(31px, 3.5vw, 43px);
 }
@@ -1206,6 +1211,7 @@
   max-width: 430px;
 }
 .event-calendar-container {
+  min-width: 0;
   padding: 35px;
   background: white;
   border: 1px solid #d5e5f0;
@@ -1754,6 +1760,9 @@
   }
   .event-calendar-container {
     padding: 26px 22px;
+  }
+  .event-calendar-expanded .event-calendar-container {
+    padding: 24px 10px;
   }
   .event-calendar-container h3 {
     font-size: 22px;

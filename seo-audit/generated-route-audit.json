@@ -331,15 +331,11 @@
         "text": "Conoce nuestro trabajo"
       },
       {
-        "href": "/es/book",
-        "text": "Agendar una conversación"
-      },
-      {
         "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
         "text": "Hablemos por WhatsApp"
       },
       {
-        "href": "/es/book",
+        "href": "#conversemos",
         "text": "Agendar una conversación"
       },
       {
@@ -849,7 +845,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 89079,
+    "htmlBytes": 89116,
     "incoming": [
       "/es",
       "/es/about",

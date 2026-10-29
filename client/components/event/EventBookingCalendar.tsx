@@ -1,10 +1,6 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { CalendarDays } from "lucide-react";
-import {
-  startEventAppointmentBookingAttempt,
-  trackEvent,
-} from "@/lib/analytics";
 
 const EventCalendar = lazy(() =>
   import("@/components/booking/GhlBookingEmbed").then((module) => ({
@@ -12,11 +8,16 @@ const EventCalendar = lazy(() =>
   })),
 );
 export const EVENT_CALENDAR_ID = "ELOONibg21k8gZnyNjJU";
-// Enable together with GHL activation after the dedicated booking form is ready.
-export const EVENT_CALENDAR_READY = false;
+// The owner supplied this embed after saving the dedicated GHL form and calendar.
+export const EVENT_CALENDAR_READY = true;
 
-export function EventBookingCalendar() {
-  const [open, setOpen] = useState(false);
+export function EventBookingCalendar({
+  open,
+  onOpen,
+}: {
+  open: boolean;
+  onOpen: () => void;
+}) {
   return (
     <div className="event-calendar-container">
       <CalendarDays size={38} strokeWidth={1.4} aria-hidden="true" />
@@ -38,13 +39,7 @@ export function EventBookingCalendar() {
         <button
           className="event-button event-button-blue"
           type="button"
-          onClick={() => {
-            startEventAppointmentBookingAttempt();
-            trackEvent("consultation_click", {
-              page_source: "labs_summit_2026",
-            });
-            setOpen(true);
-          }}
+          onClick={onOpen}
         >
           Ver horarios disponibles
         </button>
@@ -52,11 +47,7 @@ export function EventBookingCalendar() {
         <Link
           to="/es/book"
           className="event-button event-button-blue"
-          onClick={() =>
-            trackEvent("consultation_click", {
-              page_source: "labs_summit_2026",
-            })
-          }
+          onClick={onOpen}
         >
           Agendar una conversación
         </Link>

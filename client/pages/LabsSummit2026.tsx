@@ -26,9 +26,15 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { TechEcosystemSection } from "@/sections/TechEcosystem";
 import { homeContent } from "@/i18n/content/home";
 import { EventRegistrationForm } from "@/components/event/EventRegistrationForm";
-import { EventBookingCalendar } from "@/components/event/EventBookingCalendar";
+import {
+  EventBookingCalendar,
+  EVENT_CALENDAR_READY,
+} from "@/components/event/EventBookingCalendar";
 import { DiePips, InteractiveDice } from "@/components/event/InteractiveDice";
-import { trackEvent } from "@/lib/analytics";
+import {
+  startEventAppointmentBookingAttempt,
+  trackEvent,
+} from "@/lib/analytics";
 import "./labs-summit-2026.css";
 
 const MEDIA = "/media/labs-summit-2026/";
@@ -145,8 +151,14 @@ export default function LabsSummit2026() {
       service_id: `prize-${face}`,
     });
   }
-  const bookingClick = () =>
+  const [calendarOpen, setCalendarOpen] = useState(false);
+  const bookingClick = () => {
+    if (EVENT_CALENDAR_READY) {
+      startEventAppointmentBookingAttempt();
+      setCalendarOpen(true);
+    }
     trackEvent("consultation_click", { page_source: "labs_summit_2026" });
+  };
   const contactClick = () =>
     trackEvent("contact_click", {
       page_source: "labs_summit_2026",
@@ -400,11 +412,14 @@ export default function LabsSummit2026() {
             ))}
           </div>
           <div className="event-prize-delivery">
-            <MessageCircle size={21} aria-hidden="true" />
+            <Mail size={21} aria-hidden="true" />
             <p>
-              <strong>Los premios educativos se envían por WhatsApp.</strong> El
-              Reel requiere disponibilidad y coordinación en el stand. Explorar
-              una cara aquí no otorga ni descarga premios.
+              <strong>
+                Los premios educativos se envían al correo electrónico que
+                ingresaste al registrarte en el formulario.
+              </strong>{" "}
+              El Reel requiere disponibilidad y coordinación en el stand.
+              Explorar una cara aquí no otorga ni descarga premios.
             </p>
           </div>
         </div>
@@ -595,7 +610,9 @@ export default function LabsSummit2026() {
         aria-labelledby="scheduling-title"
         data-calendar-slot="digitalface-tls-2026-booking"
       >
-        <div className="event-shell event-scheduling-grid">
+        <div
+          className={`event-shell event-scheduling-grid${calendarOpen ? " event-calendar-expanded" : ""}`}
+        >
           <div>
             <span className="event-eyebrow">
               UNA CONVERSACIÓN CON PROPÓSITO
@@ -608,7 +625,7 @@ export default function LabsSummit2026() {
               automatizar procesos y convertir más clientes.
             </p>
           </div>
-          <EventBookingCalendar />
+          <EventBookingCalendar open={calendarOpen} onOpen={bookingClick} />
         </div>
       </section>
 
@@ -637,13 +654,13 @@ export default function LabsSummit2026() {
               >
                 <MessageCircle size={20} /> Hablemos por WhatsApp
               </a>
-              <Link
-                to="/es/book"
+              <a
+                href="#conversemos"
                 className="event-text-link"
                 onClick={bookingClick}
               >
                 Agendar una conversación <ArrowUpRight size={18} />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="event-contact-links">
