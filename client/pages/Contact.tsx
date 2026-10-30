@@ -5,7 +5,11 @@ import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { SignalFieldBackdrop } from "@/sections/SignalFieldBackdrop";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { contactPageContent } from "@/i18n/content/contactPage";
-import { Mail, MapPin } from "lucide-react";
+import {
+  DigitalFaceBrandStory,
+  DigitalFaceContactSection,
+} from "@/sections/DigitalFaceClosingSections";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Contact() {
   const { locale, path } = useLocale();
@@ -54,51 +58,19 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-white pb-20 sm:pb-24 lg:pb-28">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-[1.75rem] border border-ink-200/70 bg-ink-50/70 p-7 shadow-[0_40px_80px_-60px_rgba(15,23,42,0.45)] sm:p-10">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
-              {t.guide.title}
-            </h2>
-            <div className="mt-8 grid gap-8 md:grid-cols-2">
-              <div className="flex items-start gap-4">
-                <Mail
-                  aria-hidden="true"
-                  className="mt-1 h-5 w-5 shrink-0 text-brand-600"
-                />
-                <div className="min-w-0">
-                  <h3 className="text-sm font-semibold text-ink-600">
-                    {t.cards.email.title}
-                  </h3>
-                  <a
-                    href="mailto:sales@digitalface.app"
-                    className="mt-2 block break-words text-base font-semibold text-brand-600 underline underline-offset-4"
-                  >
-                    sales@digitalface.app
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin
-                  aria-hidden="true"
-                  className="mt-1 h-5 w-5 shrink-0 text-brand-600"
-                />
-                <div>
-                  <h3 className="text-sm font-semibold text-ink-600">
-                    {t.cards.location.title}
-                  </h3>
-                  <p className="mt-2 text-base font-semibold text-slate-900">
-                    {t.cards.location.body}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-500">
-                    {t.cards.location.hint}
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div className="digitalface-closing-sections" lang="es">
+        <section aria-label="Somos DigitalFace">
+          <div className="event-shell">
+            <DigitalFaceBrandStory />
           </div>
-        </div>
-      </section>
+        </section>
+        <DigitalFaceContactSection
+          bookingHref="/es/labs-summit-2026#conversemos"
+          onBookingClick={() =>
+            trackEvent("consultation_click", { page_source: "contact" })
+          }
+        />
+      </div>
     </div>
   );
 }

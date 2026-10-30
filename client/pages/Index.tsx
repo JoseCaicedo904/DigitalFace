@@ -14,11 +14,6 @@ import { Hero } from "@/sections/Hero";
 import { Link } from "react-router-dom";
 import { TechEcosystemSection } from "@/sections/TechEcosystem";
 import { WebsitePortfolioSection } from "@/sections/WebsitePortfolio";
-import {
-  DigitalFaceBrandStory,
-  DigitalFaceContactSection,
-} from "@/sections/DigitalFaceClosingSections";
-import { trackEvent } from "@/lib/analytics";
 
 const heroStageIcons = [Megaphone, MessageCircle, LayoutDashboard];
 
@@ -161,19 +156,6 @@ export default function Index() {
           />
         </div>
       </section>
-      <div className="digitalface-closing-sections" lang="es">
-        <section aria-label="Somos DigitalFace">
-          <div className="event-shell">
-            <DigitalFaceBrandStory />
-          </div>
-        </section>
-        <DigitalFaceContactSection
-          bookingHref="/es/labs-summit-2026#conversemos"
-          onBookingClick={() =>
-            trackEvent("consultation_click", { page_source: "homepage" })
-          }
-        />
-      </div>
     </div>
   );
 }

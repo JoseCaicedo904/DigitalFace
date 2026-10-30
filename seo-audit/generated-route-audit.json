@@ -847,13 +847,13 @@
     ],
     "htmlBytes": 89116,
     "incoming": [
-      "/",
       "/es",
       "/es/about",
       "/es/features",
       "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
+      "/contact",
       "/es/contact",
       "/es/book",
       "/es/labs-summit-booking-confirmed",
@@ -1002,14 +1002,6 @@
       {
         "level": 2,
         "text": "Tell us what you need."
-      },
-      {
-        "level": 3,
-        "text": "Somos DigitalFace."
-      },
-      {
-        "level": 2,
-        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -1223,41 +1215,6 @@
       {
         "href": "/pay-per-service",
         "text": "Choose Individual Services"
-      },
-      {
-        "href": "/es/about",
-        "contentLocale": "es",
-        "text": "Conoce nuestro trabajo"
-      },
-      {
-        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
-        "contentLocale": "es",
-        "text": "Hablemos por WhatsApp"
-      },
-      {
-        "href": "/es/labs-summit-2026#conversemos",
-        "contentLocale": "es",
-        "text": "Agendar una conversación"
-      },
-      {
-        "href": "/es",
-        "contentLocale": "es",
-        "text": "digitalface.app"
-      },
-      {
-        "href": "mailto:sales@digitalface.app",
-        "contentLocale": "es",
-        "text": "sales@digitalface.app"
-      },
-      {
-        "href": "tel:+573005061366",
-        "contentLocale": "es",
-        "text": "+57 300 506 1366"
-      },
-      {
-        "href": "https://www.instagram.com/digitalfacecolombia/",
-        "contentLocale": "es",
-        "text": "@digitalfacecolombia"
       },
       {
         "href": "/",
@@ -1779,7 +1736,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 185600,
+    "htmlBytes": 180738,
     "incoming": [
       "/es",
       "/about",
@@ -1805,8 +1762,6 @@
       "/es",
       "/book",
       "/industries/paid-advertising",
-      "/es/about",
-      "/es/labs-summit-2026",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -1940,14 +1895,6 @@
       {
         "level": 2,
         "text": "Cuéntanos qué necesitas."
-      },
-      {
-        "level": 3,
-        "text": "Somos DigitalFace."
-      },
-      {
-        "level": 2,
-        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -2161,34 +2108,6 @@
       {
         "href": "/es/pay-per-service",
         "text": "Elegir servicios individuales"
-      },
-      {
-        "href": "/es/about",
-        "text": "Conoce nuestro trabajo"
-      },
-      {
-        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
-        "text": "Hablemos por WhatsApp"
-      },
-      {
-        "href": "/es/labs-summit-2026#conversemos",
-        "text": "Agendar una conversación"
-      },
-      {
-        "href": "/es",
-        "text": "digitalface.app"
-      },
-      {
-        "href": "mailto:sales@digitalface.app",
-        "text": "sales@digitalface.app"
-      },
-      {
-        "href": "tel:+573005061366",
-        "text": "+57 300 506 1366"
-      },
-      {
-        "href": "https://www.instagram.com/digitalfacecolombia/",
-        "text": "@digitalfacecolombia"
       },
       {
         "href": "/es",
@@ -2714,7 +2633,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 187264,
+    "htmlBytes": 182402,
     "incoming": [
       "/es/labs-summit-2026",
       "/",
@@ -2723,6 +2642,7 @@
       "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
+      "/contact",
       "/es/contact",
       "/es/book",
       "/es/labs-summit-booking-confirmed",
@@ -3522,13 +3442,13 @@
     "htmlBytes": 85030,
     "incoming": [
       "/es/labs-summit-2026",
-      "/",
       "/es",
       "/about",
       "/es/features",
       "/es/industries/paid-advertising",
       "/es/pay-per-service",
       "/es/pricing",
+      "/contact",
       "/es/contact",
       "/es/book",
       "/es/labs-summit-booking-confirmed",
@@ -7668,16 +7588,12 @@
         "text": "Prefer to send a message?"
       },
       {
+        "level": 3,
+        "text": "Somos DigitalFace."
+      },
+      {
         "level": 2,
-        "text": "Contact details"
-      },
-      {
-        "level": 3,
-        "text": "Email"
-      },
-      {
-        "level": 3,
-        "text": "Where we work"
+        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -7865,8 +7781,39 @@
         "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Sat31Mon2Tue3Wed4Thu5Fri6Sat7Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
+        "href": "/es/about",
+        "contentLocale": "es",
+        "text": "Conoce nuestro trabajo"
+      },
+      {
+        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+        "contentLocale": "es",
+        "text": "Hablemos por WhatsApp"
+      },
+      {
+        "href": "/es/labs-summit-2026#conversemos",
+        "contentLocale": "es",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "/es",
+        "contentLocale": "es",
+        "text": "digitalface.app"
+      },
+      {
         "href": "mailto:sales@digitalface.app",
+        "contentLocale": "es",
         "text": "sales@digitalface.app"
+      },
+      {
+        "href": "tel:+573005061366",
+        "contentLocale": "es",
+        "text": "+57 300 506 1366"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "contentLocale": "es",
+        "text": "@digitalfacecolombia"
       },
       {
         "href": "/",
@@ -7956,7 +7903,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 67521,
+    "htmlBytes": 70523,
     "incoming": [
       "/",
       "/about",
@@ -7981,6 +7928,9 @@
       "/pricing",
       "/es/contact",
       "/book",
+      "/es/about",
+      "/es/labs-summit-2026",
+      "/es",
       "/industries/paid-advertising",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
@@ -8029,16 +7979,12 @@
         "text": "¿Prefieres escribirnos?"
       },
       {
+        "level": 3,
+        "text": "Somos DigitalFace."
+      },
+      {
         "level": 2,
-        "text": "Datos de contacto"
-      },
-      {
-        "level": 3,
-        "text": "Correo"
-      },
-      {
-        "level": 3,
-        "text": "Dónde trabajamos"
+        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -8226,8 +8172,32 @@
         "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026sáb31lun2mar3mié4jue5vie6sáb7Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
+        "href": "/es/about",
+        "text": "Conoce nuestro trabajo"
+      },
+      {
+        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+        "text": "Hablemos por WhatsApp"
+      },
+      {
+        "href": "/es/labs-summit-2026#conversemos",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "/es",
+        "text": "digitalface.app"
+      },
+      {
         "href": "mailto:sales@digitalface.app",
         "text": "sales@digitalface.app"
+      },
+      {
+        "href": "tel:+573005061366",
+        "text": "+57 300 506 1366"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "text": "@digitalfacecolombia"
       },
       {
         "href": "/es",
@@ -8321,7 +8291,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 68435,
+    "htmlBytes": 71412,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
