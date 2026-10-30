@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowDown,
@@ -15,12 +14,10 @@ import {
   Instagram,
   Mail,
   MessageCircle,
-  Phone,
   ShieldCheck,
   Sparkles,
   Target,
   Users,
-  Zap,
 } from "lucide-react";
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { TechEcosystemSection } from "@/sections/TechEcosystem";
@@ -35,15 +32,15 @@ import {
   startEventAppointmentBookingAttempt,
   trackEvent,
 } from "@/lib/analytics";
+import {
+  DigitalFaceBrandStory,
+  DigitalFaceContactSection,
+} from "@/sections/DigitalFaceClosingSections";
+import { DigitalFaceServicesSection } from "@/sections/DigitalFaceServices";
 import "./labs-summit-2026.css";
 
 const MEDIA = "/media/labs-summit-2026/";
 const INSTAGRAM = "https://www.instagram.com/digitalfacecolombia/";
-const WHATSAPP =
-  "https://wa.me/573005061366?text=" +
-  encodeURIComponent(
-    "Hola, conocí a DigitalFace en Tuluá Labs Summit 2026 y quiero hablar sobre mi negocio.",
-  );
 const prizes = [
   {
     title: "Pack de hooks",
@@ -86,40 +83,6 @@ const prizes = [
     icon: Clapperboard,
     detail:
       "Grabación durante el evento, edición, efectos y subtítulos. Entrega en 24 horas, sujeta a las condiciones informadas en el stand. Sujeto a cupos disponibles; coordina la grabación con nuestro equipo.",
-  },
-] as const;
-const services = [
-  {
-    number: "01",
-    title: "Publicidad digital",
-    copy: "Atraemos oportunidades para tu negocio.",
-    image: "publicidad-digital.webp",
-    alt: "Pieza promocional de DigitalFace con un anuncio en Instagram",
-    href: "/es/industries/paid-advertising",
-  },
-  {
-    number: "02",
-    title: "Sitios web y landing pages",
-    copy: "Experiencias digitales diseñadas para convertir.",
-    image: "sitios-web.webp",
-    alt: "Diseño de sitio web presentado en el folleto de DigitalFace",
-    href: "/es/pay-per-service#websites-and-funnels",
-  },
-  {
-    number: "03",
-    title: "CRM y automatización",
-    copy: "Organiza tus clientes y automatiza el seguimiento.",
-    image: "crm-mensajeria.webp",
-    alt: "Ejemplo ilustrativo de seguimiento por WhatsApp del material de DigitalFace",
-    href: "/es/pay-per-service",
-  },
-  {
-    number: "04",
-    title: "Asistentes con IA",
-    copy: "Respuestas inteligentes, atención y agendamiento.",
-    image: "asistentes-ia.webp",
-    alt: "Ilustración del asistente con inteligencia artificial del folleto de DigitalFace",
-    href: "/es/pay-per-service",
   },
 ] as const;
 
@@ -476,122 +439,9 @@ export default function LabsSummit2026() {
         </div>
       </section>
 
-      <section
-        className="event-services event-section"
-        id="soluciones"
-        aria-labelledby="services-title"
-      >
-        <div className="event-shell">
-          <div className="event-section-heading">
-            <div>
-              <span className="event-eyebrow">
-                DESPUÉS DE LA JUGADA, LA ESTRATEGIA
-              </span>
-              <h2 id="services-title">
-                Tu negocio puede
-                <br />
-                llegar más lejos.
-              </h2>
-            </div>
-            <p>
-              Conectamos marketing, creatividad, tecnología e inteligencia
-              artificial para atraer oportunidades y convertirlas en clientes.
-            </p>
-          </div>
-          <div className="event-services-grid">
-            {services.map((service) => (
-              <motion.article
-                key={service.number}
-                {...reveal}
-                className="event-service"
-              >
-                <div className="event-service-image">
-                  <img
-                    src={MEDIA + service.image}
-                    alt={service.alt}
-                    width={213}
-                    height={157}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="event-service-copy">
-                  <span className="event-service-number">
-                    {service.number} / SOLUCIONES
-                  </span>
-                  <h3>{service.title}</h3>
-                  <p>{service.copy}</p>
-                  <Link
-                    to={service.href}
-                    aria-label={`Conoce nuestros servicios de ${service.title.toLowerCase()}`}
-                  >
-                    <ArrowUpRight size={21} />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-            <motion.article
-              {...reveal}
-              className="event-service event-service-production"
-            >
-              <img
-                src={MEDIA + "produccion-digitalface.webp"}
-                alt="Equipo de DigitalFace en una grabación real con iluminación y cámara"
-                width={750}
-                height={1325}
-                loading="lazy"
-              />
-              <div>
-                <span className="event-service-number">
-                  05 / PRODUCCIÓN AUDIOVISUAL Y CONTENIDO
-                </span>
-                <h3>
-                  Tu marca también
-                  <br />
-                  se cuenta en imágenes.
-                </h3>
-                <p>Contenido profesional que conecta con tu audiencia.</p>
-                <Link
-                  to="/es/pay-per-service#audiovisual-production"
-                  className="event-text-link"
-                >
-                  Conoce la producción audiovisual <ArrowUpRight size={18} />
-                </Link>
-              </div>
-            </motion.article>
-          </div>
-          <div className="event-brand-story">
-            <div>
-              <span className="event-eyebrow">
-                ESTRATEGIA + CREATIVIDAD + TECNOLOGÍA
-              </span>
-              <h3>Somos DigitalFace.</h3>
-              <p>
-                Construimos las piezas digitales que tu negocio necesita: desde
-                la primera impresión hasta el seguimiento de cada oportunidad.
-              </p>
-              <Link to="/es/about" className="event-text-link">
-                Conoce nuestro trabajo <ArrowUpRight size={17} />
-              </Link>
-            </div>
-            <video
-              controls
-              muted
-              playsInline
-              preload="none"
-              poster={MEDIA + "digitalface-video-poster.webp"}
-              width={1280}
-              height={720}
-              aria-label="Presentación visual del logo de DigitalFace, sin audio"
-            >
-              <source
-                src={MEDIA + "digitalface-presentacion.mp4"}
-                type="video/mp4"
-              />
-              Tu navegador no puede reproducir este video.
-            </video>
-          </div>
-        </div>
-      </section>
+      <DigitalFaceServicesSection>
+        <DigitalFaceBrandStory />
+      </DigitalFaceServicesSection>
 
       <TechEcosystemSection
         className="event-technologies"
@@ -629,56 +479,10 @@ export default function LabsSummit2026() {
         </div>
       </section>
 
-      <section
-        className="event-contact event-section"
-        aria-labelledby="contact-title"
-      >
-        <div className="event-shell">
-          <div className="event-contact-heading">
-            <span className="event-kicker">
-              <Zap size={17} /> HAZ TU PRÓXIMO MOVIMIENTO
-            </span>
-            <h2 id="contact-title">
-              El crecimiento de tu negocio empieza con una conversación.
-            </h2>
-            <p>
-              Estrategia, creatividad y tecnología trabajando para tu negocio.
-            </p>
-            <div className="event-contact-actions">
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="event-button event-button-cyan"
-                onClick={contactClick}
-              >
-                <MessageCircle size={20} /> Hablemos por WhatsApp
-              </a>
-              <a
-                href="#conversemos"
-                className="event-text-link"
-                onClick={bookingClick}
-              >
-                Agendar una conversación <ArrowUpRight size={18} />
-              </a>
-            </div>
-          </div>
-          <div className="event-contact-links">
-            <Link to="/es">
-              digitalface.app <ArrowUpRight size={16} />
-            </Link>
-            <a href="mailto:sales@digitalface.app">
-              <Mail size={17} /> sales@digitalface.app
-            </a>
-            <a href="tel:+573005061366">
-              <Phone size={17} /> +57 300 506 1366
-            </a>
-            <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">
-              <Instagram size={17} /> @digitalfacecolombia
-            </a>
-          </div>
-        </div>
-      </section>
+      <DigitalFaceContactSection
+        onBookingClick={bookingClick}
+        onContactClick={contactClick}
+      />
     </div>
   );
 }

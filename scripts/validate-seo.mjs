@@ -248,6 +248,10 @@ for (const route of all) {
   }
   const links = [...doc.querySelectorAll("a[href]")].map((a) => ({
     href: a.getAttribute("href"),
+    contentLocale:
+      a.closest("[lang]")?.getAttribute("lang") !== route.locale
+        ? a.closest("[lang]")?.getAttribute("lang")
+        : undefined,
     text:
       cleanText(a.textContent) ||
       a.getAttribute("aria-label") ||
@@ -292,6 +296,8 @@ for (const record of records) {
       url.pathname === "/es" || url.pathname.startsWith("/es/") ? "es" : "en";
     if (
       linkLocale !== record.locale &&
+      // Explicit language islands may retain their original localized links.
+      linkLocale !== link.contentLocale &&
       !["/sitemap.xml", "/robots.txt"].includes(url.pathname)
     )
       check(

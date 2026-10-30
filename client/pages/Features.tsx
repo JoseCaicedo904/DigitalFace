@@ -1,6 +1,7 @@
 import { usePageMetadata } from "@/hooks/usePageMetadata";
 import { BOOKING_ROUTE } from "@/components/booking/bookingRoute";
 import { FeaturesSection } from "@/sections/Features";
+import { DigitalFaceServicesSection } from "@/sections/DigitalFaceServices";
 import { PatientJourneySection } from "@/sections/PatientJourney";
 import { CtaSection } from "@/sections/CTA";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -37,6 +38,12 @@ export default function Features() {
           icon: overviewIcons[index],
         }))}
       />
+
+      {locale === "es" ? (
+        <div className="event-page">
+          <DigitalFaceServicesSection />
+        </div>
+      ) : null}
 
       <PatientJourneySection content={t.journey} />
 

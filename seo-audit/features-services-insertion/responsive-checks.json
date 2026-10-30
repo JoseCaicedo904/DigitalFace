@@ -1,0 +1,16 @@
+{
+  "desktop": 1440,
+  "mobile": 390,
+  "smallMobile": 320,
+  "tablet": {
+    "gridColumns": "338.333px 338.333px",
+    "loadedImages": true,
+    "overflow": false,
+    "width": 768
+  },
+  "desktopMatchesOriginal": true,
+  "mobileMatchesOriginal": true,
+  "imagesLoaded": 5,
+  "ctaAudiovisual": "verified local navigation to /es/pay-per-service#audiovisual-production",
+  "browserErrors": 0
+}

@@ -1,0 +1,787 @@
+{
+  "origin": "http://127.0.0.1:8080",
+  "results": [
+    {
+      "width": 375,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3526,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 375,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3527,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3537,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 390,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3528,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3537,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 768,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3601,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1024,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3545,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1024,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3532,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3576,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1440,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3525,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1920,
+      "path": "/",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3528,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    },
+    {
+      "width": 1920,
+      "path": "/es",
+      "previousSection": "custom-proposal",
+      "consecutive": true,
+      "children": 2,
+      "language": "es",
+      "overflow": false,
+      "clipping": [],
+      "h1": 1,
+      "footers": 1,
+      "links": [
+        {
+          "href": "/es/about",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        },
+        {
+          "href": "/es/labs-summit-2026#conversemos",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "/es",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "mailto:sales@digitalface.app",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "tel:+573005061366",
+          "target": "",
+          "rel": ""
+        },
+        {
+          "href": "https://www.instagram.com/digitalfacecolombia/",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      ],
+      "video": {
+        "preload": "none",
+        "controls": true,
+        "muted": true,
+        "inline": true,
+        "poster": "/media/labs-summit-2026/digitalface-video-poster.webp"
+      },
+      "playback": {
+        "time": 0.3526,
+        "width": 1280,
+        "height": 720,
+        "error": null,
+        "playing": true
+      },
+      "sourceUnchanged": true,
+      "stylesMatch": true
+    }
+  ],
+  "schedulingHandoff": true,
+  "externalSubmissions": false
+}

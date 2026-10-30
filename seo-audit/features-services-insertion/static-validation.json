@@ -1,0 +1,13 @@
+{
+  "servicesData": "verbatim",
+  "sectionJsx": "verbatim except optional brand-story slot",
+  "sourcePageOutsideExtraction": "unchanged from task baseline",
+  "existingFeaturesContent": "unchanged",
+  "stylesAndOtherExistingChanges": "unchanged from task baseline",
+  "spanishFeaturesOrder": "overview -> services -> journey",
+  "englishFeatures": "no Spanish service section",
+  "assets": 5,
+  "links": 5,
+  "sourceServicesGrid": "identical generated HTML",
+  "sourceBrandStory": "retained"
+}

@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "path": "/",
+      "h1": 1,
+      "footers": 1,
+      "closing": 1,
+      "overflow": false,
+      "canonical": "https://digitalface.app/",
+      "videoPreload": "none",
+      "hydrationErrors": 22
+    },
+    {
+      "width": 390,
+      "path": "/es",
+      "h1": 1,
+      "footers": 1,
+      "closing": 1,
+      "overflow": false,
+      "canonical": "https://digitalface.app/es",
+      "videoPreload": "none",
+      "hydrationErrors": 22
+    },
+    {
+      "width": 390,
+      "path": "/es/labs-summit-2026",
+      "h1": 1,
+      "footers": 1,
+      "closing": 0,
+      "overflow": false,
+      "canonical": "https://digitalface.app/es/labs-summit-2026",
+      "videoPreload": "none",
+      "hydrationErrors": 0
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "h1": 1,
+      "footers": 1,
+      "closing": 1,
+      "overflow": false,
+      "canonical": "https://digitalface.app/",
+      "videoPreload": "none",
+      "hydrationErrors": 22
+    },
+    {
+      "width": 1440,
+      "path": "/es",
+      "h1": 1,
+      "footers": 1,
+      "closing": 1,
+      "overflow": false,
+      "canonical": "https://digitalface.app/es",
+      "videoPreload": "none",
+      "hydrationErrors": 22
+    },
+    {
+      "width": 1440,
+      "path": "/es/labs-summit-2026",
+      "h1": 1,
+      "footers": 1,
+      "closing": 0,
+      "overflow": false,
+      "canonical": "https://digitalface.app/es/labs-summit-2026",
+      "videoPreload": "none",
+      "hydrationErrors": 0
+    }
+  ],
+  "all29RoutesScoped": true,
+  "submissions": false
+}

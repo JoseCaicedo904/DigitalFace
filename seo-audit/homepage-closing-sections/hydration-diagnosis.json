@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/",
+    "changes": [
+      {
+        "code": "HK",
+        "server": "Hong Kong SAR China",
+        "browser": "Hong Kong"
+      },
+      {
+        "code": "MO",
+        "server": "Macao SAR China",
+        "browser": "Macao"
+      },
+      {
+        "code": "PS",
+        "server": "Palestinian Territories",
+        "browser": "Palestine"
+      }
+    ]
+  },
+  {
+    "path": "/es",
+    "changes": [
+      {
+        "code": "HK",
+        "server": "RAE de Hong Kong (China)",
+        "browser": "Hong Kong"
+      },
+      {
+        "code": "MO",
+        "server": "RAE de Macao (China)",
+        "browser": "Macao"
+      },
+      {
+        "code": "PS",
+        "server": "Territorios Palestinos",
+        "browser": "Palestina"
+      }
+    ]
+  }
+]

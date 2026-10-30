@@ -847,6 +847,7 @@
     ],
     "htmlBytes": 89116,
     "incoming": [
+      "/",
       "/es",
       "/es/about",
       "/es/features",
@@ -1001,6 +1002,14 @@
       {
         "level": 2,
         "text": "Tell us what you need."
+      },
+      {
+        "level": 3,
+        "text": "Somos DigitalFace."
+      },
+      {
+        "level": 2,
+        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -1131,6 +1140,7 @@
       },
       {
         "href": "/es",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -1143,6 +1153,7 @@
       },
       {
         "href": "/es",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -1214,6 +1225,41 @@
         "text": "Choose Individual Services"
       },
       {
+        "href": "/es/about",
+        "contentLocale": "es",
+        "text": "Conoce nuestro trabajo"
+      },
+      {
+        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+        "contentLocale": "es",
+        "text": "Hablemos por WhatsApp"
+      },
+      {
+        "href": "/es/labs-summit-2026#conversemos",
+        "contentLocale": "es",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "/es",
+        "contentLocale": "es",
+        "text": "digitalface.app"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "contentLocale": "es",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "tel:+573005061366",
+        "contentLocale": "es",
+        "text": "+57 300 506 1366"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "contentLocale": "es",
+        "text": "@digitalfacecolombia"
+      },
+      {
         "href": "/",
         "text": "DigitalFace Marketing"
       },
@@ -1223,6 +1269,7 @@
       },
       {
         "href": "/es",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -1732,7 +1779,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 180738,
+    "htmlBytes": 185600,
     "incoming": [
       "/es",
       "/about",
@@ -1758,6 +1805,8 @@
       "/es",
       "/book",
       "/industries/paid-advertising",
+      "/es/about",
+      "/es/labs-summit-2026",
       "/industries/dental-practices",
       "/industries/aesthetic-medicine",
       "/industries/med-spas",
@@ -1891,6 +1940,14 @@
       {
         "level": 2,
         "text": "Cuéntanos qué necesitas."
+      },
+      {
+        "level": 3,
+        "text": "Somos DigitalFace."
+      },
+      {
+        "level": 2,
+        "text": "El crecimiento de tu negocio empieza con una conversación."
       }
     ],
     "headingJumps": [],
@@ -2017,6 +2074,7 @@
       },
       {
         "href": "/",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -2029,6 +2087,7 @@
       },
       {
         "href": "/",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -2104,11 +2163,40 @@
         "text": "Elegir servicios individuales"
       },
       {
+        "href": "/es/about",
+        "text": "Conoce nuestro trabajo"
+      },
+      {
+        "href": "https://wa.me/573005061366?text=Hola%2C%20conoc%C3%AD%20a%20DigitalFace%20en%20Tulu%C3%A1%20Labs%20Summit%202026%20y%20quiero%20hablar%20sobre%20mi%20negocio.",
+        "text": "Hablemos por WhatsApp"
+      },
+      {
+        "href": "/es/labs-summit-2026#conversemos",
+        "text": "Agendar una conversación"
+      },
+      {
+        "href": "/es",
+        "text": "digitalface.app"
+      },
+      {
+        "href": "mailto:sales@digitalface.app",
+        "text": "sales@digitalface.app"
+      },
+      {
+        "href": "tel:+573005061366",
+        "text": "+57 300 506 1366"
+      },
+      {
+        "href": "https://www.instagram.com/digitalfacecolombia/",
+        "text": "@digitalfacecolombia"
+      },
+      {
         "href": "/es",
         "text": "DigitalFace Marketing"
       },
       {
         "href": "/",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -2626,7 +2714,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 182402,
+    "htmlBytes": 187264,
     "incoming": [
       "/es/labs-summit-2026",
       "/",
@@ -2845,6 +2933,7 @@
       },
       {
         "href": "/es/about",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -2857,6 +2946,7 @@
       },
       {
         "href": "/es/about",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -2901,6 +2991,7 @@
       },
       {
         "href": "/es/about",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -3236,6 +3327,7 @@
       },
       {
         "href": "/about",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -3248,6 +3340,7 @@
       },
       {
         "href": "/about",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -3292,6 +3385,7 @@
       },
       {
         "href": "/about",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -3428,6 +3522,7 @@
     "htmlBytes": 85030,
     "incoming": [
       "/es/labs-summit-2026",
+      "/",
       "/es",
       "/about",
       "/es/features",
@@ -3691,6 +3786,7 @@
       },
       {
         "href": "/es/features",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -3703,6 +3799,7 @@
       },
       {
         "href": "/es/features",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -3751,6 +3848,7 @@
       },
       {
         "href": "/es/features",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -3905,6 +4003,30 @@
       {
         "level": 2,
         "text": "Gestionar"
+      },
+      {
+        "level": 2,
+        "text": "Tu negocio puedellegar más lejos."
+      },
+      {
+        "level": 3,
+        "text": "Publicidad digital"
+      },
+      {
+        "level": 3,
+        "text": "Sitios web y landing pages"
+      },
+      {
+        "level": 3,
+        "text": "CRM y automatización"
+      },
+      {
+        "level": 3,
+        "text": "Asistentes con IA"
+      },
+      {
+        "level": 3,
+        "text": "Tu marca tambiénse cuenta en imágenes."
       },
       {
         "level": 2,
@@ -4091,6 +4213,7 @@
       },
       {
         "href": "/features",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -4103,6 +4226,7 @@
       },
       {
         "href": "/features",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -4138,6 +4262,26 @@
         "text": "Agenda una demostración"
       },
       {
+        "href": "/es/industries/paid-advertising",
+        "text": "Conoce nuestros servicios de publicidad digital"
+      },
+      {
+        "href": "/es/pay-per-service#websites-and-funnels",
+        "text": "Conoce nuestros servicios de sitios web y landing pages"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Conoce nuestros servicios de crm y automatización"
+      },
+      {
+        "href": "/es/pay-per-service",
+        "text": "Conoce nuestros servicios de asistentes con ia"
+      },
+      {
+        "href": "/es/pay-per-service#audiovisual-production",
+        "text": "Conoce la producción audiovisual"
+      },
+      {
         "href": "/es/book",
         "text": "Agendar una demostración"
       },
@@ -4151,6 +4295,7 @@
       },
       {
         "href": "/features",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -4228,6 +4373,46 @@
         "class": "h-11 w-11 shrink-0 rounded-2xl object-contain shadow-brand-soft"
       },
       {
+        "src": "/media/labs-summit-2026/publicidad-digital.webp",
+        "alt": "Pieza promocional de DigitalFace con un anuncio en Instagram",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/sitios-web.webp",
+        "alt": "Diseño de sitio web presentado en el folleto de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/crm-mensajeria.webp",
+        "alt": "Ejemplo ilustrativo de seguimiento por WhatsApp del material de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/asistentes-ia.webp",
+        "alt": "Ilustración del asistente con inteligencia artificial del folleto de DigitalFace",
+        "loading": "lazy",
+        "width": "213",
+        "height": "157",
+        "class": ""
+      },
+      {
+        "src": "/media/labs-summit-2026/produccion-digitalface.webp",
+        "alt": "Equipo de DigitalFace en una grabación real con iluminación y cámara",
+        "loading": "lazy",
+        "width": "750",
+        "height": "1325",
+        "class": ""
+      },
+      {
         "src": "/images/DIGITAL%20FACE%20MARCA%20ISOTIPO.png",
         "alt": "Logotipo de DigitalFace Marketing",
         "loading": "eager",
@@ -4236,7 +4421,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 83145,
+    "htmlBytes": 87916,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -4262,8 +4447,8 @@
       "/es/contact",
       "/features",
       "/es/book",
-      "/es/labs-summit-2026",
       "/es/industries/paid-advertising",
+      "/es/labs-summit-2026",
       "/es/industries/dental-practices",
       "/es/industries/aesthetic-medicine",
       "/es/industries/med-spas",
@@ -4594,6 +4779,7 @@
       },
       {
         "href": "/es/industries/paid-advertising",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -4606,6 +4792,7 @@
       },
       {
         "href": "/es/industries/paid-advertising",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -4674,6 +4861,7 @@
       },
       {
         "href": "/es/industries/paid-advertising",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -5172,6 +5360,7 @@
       },
       {
         "href": "/industries/paid-advertising",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -5184,6 +5373,7 @@
       },
       {
         "href": "/industries/paid-advertising",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -5252,6 +5442,7 @@
       },
       {
         "href": "/industries/paid-advertising",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -5699,6 +5890,7 @@
       },
       {
         "href": "/es/pay-per-service",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -5711,6 +5903,7 @@
       },
       {
         "href": "/es/pay-per-service",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -5787,6 +5980,7 @@
       },
       {
         "href": "/es/pay-per-service",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -6151,6 +6345,7 @@
       },
       {
         "href": "/pay-per-service",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -6163,6 +6358,7 @@
       },
       {
         "href": "/pay-per-service",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -6239,6 +6435,7 @@
       },
       {
         "href": "/pay-per-service",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -6703,6 +6900,7 @@
       },
       {
         "href": "/es/pricing",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -6715,6 +6913,7 @@
       },
       {
         "href": "/es/pricing",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -6779,6 +6978,7 @@
       },
       {
         "href": "/es/pricing",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -7229,6 +7429,7 @@
       },
       {
         "href": "/pricing",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -7241,6 +7442,7 @@
       },
       {
         "href": "/pricing",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -7305,6 +7507,7 @@
       },
       {
         "href": "/pricing",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -7605,6 +7808,7 @@
       },
       {
         "href": "/es/contact",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -7617,6 +7821,7 @@
       },
       {
         "href": "/es/contact",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -7657,7 +7862,7 @@
       },
       {
         "href": "/book?from=contact",
-        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Sat31Mon2Tue3Wed4Thu5Fri6Sat7Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -7673,6 +7878,7 @@
       },
       {
         "href": "/es/contact",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -7750,7 +7956,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 67523,
+    "htmlBytes": 67521,
     "incoming": [
       "/",
       "/about",
@@ -7959,6 +8165,7 @@
       },
       {
         "href": "/contact",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -7971,6 +8178,7 @@
       },
       {
         "href": "/contact",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -8015,7 +8223,7 @@
       },
       {
         "href": "/es/book?from=contact",
-        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026sáb31lun2mar3mié4jue5vie6sáb7Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "mailto:sales@digitalface.app",
@@ -8027,6 +8235,7 @@
       },
       {
         "href": "/contact",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -8112,7 +8321,7 @@
         "class": "h-10 w-10 rounded-xl object-contain shadow-brand-soft"
       }
     ],
-    "htmlBytes": 68436,
+    "htmlBytes": 68435,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -8307,6 +8516,7 @@
       },
       {
         "href": "/es/book",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -8319,6 +8529,7 @@
       },
       {
         "href": "/es/book",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -8359,6 +8570,7 @@
       },
       {
         "href": "/es/book",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -8625,6 +8837,7 @@
       },
       {
         "href": "/book",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -8637,6 +8850,7 @@
       },
       {
         "href": "/book",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -8677,6 +8891,7 @@
       },
       {
         "href": "/book",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -9586,6 +9801,7 @@
       },
       {
         "href": "/es/privacy",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -9598,6 +9814,7 @@
       },
       {
         "href": "/es/privacy",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -9638,6 +9855,7 @@
       },
       {
         "href": "/es/privacy",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -9956,6 +10174,7 @@
       },
       {
         "href": "/privacy",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -9968,6 +10187,7 @@
       },
       {
         "href": "/privacy",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -10008,6 +10228,7 @@
       },
       {
         "href": "/privacy",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -10348,6 +10569,7 @@
       },
       {
         "href": "/es/terms",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -10360,6 +10582,7 @@
       },
       {
         "href": "/es/terms",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -10400,6 +10623,7 @@
       },
       {
         "href": "/es/terms",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -10726,6 +10950,7 @@
       },
       {
         "href": "/terms",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -10738,6 +10963,7 @@
       },
       {
         "href": "/terms",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -10778,6 +11004,7 @@
       },
       {
         "href": "/terms",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -11154,6 +11381,7 @@
       },
       {
         "href": "/es/industries/dental-practices",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -11214,7 +11442,7 @@
       },
       {
         "href": "/book?from=dental-practices",
-        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Sat31Mon2Tue3Wed4Thu5Fri6Sat7Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -11258,6 +11486,7 @@
       },
       {
         "href": "/es/industries/dental-practices",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -11339,7 +11568,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212321,
+    "htmlBytes": 212319,
     "incoming": [
       "/",
       "/about",
@@ -11622,6 +11851,7 @@
       },
       {
         "href": "/industries/dental-practices",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -11686,7 +11916,7 @@
       },
       {
         "href": "/es/book?from=dental-practices",
-        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026sáb31lun2mar3mié4jue5vie6sáb7Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -11726,6 +11956,7 @@
       },
       {
         "href": "/industries/dental-practices",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -11811,7 +12042,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215319,
+    "htmlBytes": 215318,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -12099,6 +12330,7 @@
       },
       {
         "href": "/es/industries/aesthetic-medicine",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -12159,7 +12391,7 @@
       },
       {
         "href": "/book?from=aesthetic-medicine",
-        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Sat31Mon2Tue3Wed4Thu5Fri6Sat7Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -12203,6 +12435,7 @@
       },
       {
         "href": "/es/industries/aesthetic-medicine",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -12284,7 +12517,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212917,
+    "htmlBytes": 212915,
     "incoming": [
       "/",
       "/about",
@@ -12567,6 +12800,7 @@
       },
       {
         "href": "/industries/aesthetic-medicine",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -12631,7 +12865,7 @@
       },
       {
         "href": "/es/book?from=aesthetic-medicine",
-        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026sáb31lun2mar3mié4jue5vie6sáb7Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -12671,6 +12905,7 @@
       },
       {
         "href": "/industries/aesthetic-medicine",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -12756,7 +12991,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215844,
+    "htmlBytes": 215843,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",
@@ -13044,6 +13279,7 @@
       },
       {
         "href": "/es/industries/med-spas",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -13104,7 +13340,7 @@
       },
       {
         "href": "/book?from=med-spas",
-        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Thu29Fri30Sat31Mon2Tue3Wed4Thu5Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
+        "text": "DigitalFace consultation30 min · Times shown in ETOctober 2026Sat31Mon2Tue3Wed4Thu5Fri6Sat7Available times9:00 AM10:30 AM1:00 PM2:30 PM4:00 PM5:30 PM"
       },
       {
         "href": "/",
@@ -13148,6 +13384,7 @@
       },
       {
         "href": "/es/industries/med-spas",
+        "contentLocale": "es",
         "text": "ES"
       },
       {
@@ -13229,7 +13466,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 212228,
+    "htmlBytes": 212226,
     "incoming": [
       "/",
       "/about",
@@ -13512,6 +13749,7 @@
       },
       {
         "href": "/industries/med-spas",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -13576,7 +13814,7 @@
       },
       {
         "href": "/es/book?from=med-spas",
-        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026jue29vie30sáb31lun2mar3mié4jue5Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
+        "text": "Consulta DigitalFace30 min · Horarios en EToctubre de 2026sáb31lun2mar3mié4jue5vie6sáb7Horarios disponibles9:00 a. m.10:30 a. m.1:00 p. m.2:30 p. m.4:00 p. m.5:30 p. m."
       },
       {
         "href": "/es",
@@ -13616,6 +13854,7 @@
       },
       {
         "href": "/industries/med-spas",
+        "contentLocale": "en",
         "text": "EN"
       },
       {
@@ -13701,7 +13940,7 @@
         "class": "h-9 w-9 rounded-xl object-contain"
       }
     ],
-    "htmlBytes": 215262,
+    "htmlBytes": 215261,
     "incoming": [
       "/es/labs-summit-2026",
       "/es",

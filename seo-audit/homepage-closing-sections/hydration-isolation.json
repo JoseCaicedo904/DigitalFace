@@ -1,0 +1,21 @@
+{
+  "sourceChanged": false,
+  "results": [
+    {
+      "reducedMotion": "no-preference",
+      "browserOnlyCountryLabelNormalization": true,
+      "errors": 0,
+      "codes": []
+    },
+    {
+      "reducedMotion": "reduce",
+      "browserOnlyCountryLabelNormalization": true,
+      "errors": 22,
+      "codes": [
+        "#425",
+        "#418",
+        "#422"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "features": {
+    "cards": [
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 302.60418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "29px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.87px",
+          "lineHeight": "36.25px",
+          "margin": "20px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 397.9166870117187,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(7, 45, 77)",
+          "border": "0px none rgb(255, 255, 255)",
+          "borderRadius": "13px",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "334.667px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "330px",
+          "padding": "0px"
+        }
+      }
+    ],
+    "grid": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "border": "0px solid rgb(215, 220, 234)",
+      "borderRadius": "0px",
+      "color": "rgb(16, 42, 67)",
+      "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "gap": "14px",
+      "gridTemplateColumns": "334.667px",
+      "letterSpacing": "normal",
+      "lineHeight": "26.4px",
+      "margin": "0px",
+      "minHeight": "0px",
+      "padding": "0px"
+    },
+    "heading": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "border": "0px solid rgb(215, 220, 234)",
+      "borderRadius": "0px",
+      "color": "rgb(16, 42, 67)",
+      "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "32px",
+      "fontWeight": "750",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "letterSpacing": "-1.6px",
+      "lineHeight": "35.84px",
+      "margin": "12px 0px 0px",
+      "minHeight": "0px",
+      "padding": "0px"
+    },
+    "html": "<div class=\"event-services-grid\"><article class=\"event-service\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/publicidad-digital.webp\" alt=\"Pieza promocional de DigitalFace con un anuncio en Instagram\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">01 / SOLUCIONES</span><h3>Publicidad digital</h3><p>Atraemos oportunidades para tu negocio.</p><a aria-label=\"Conoce nuestros servicios de publicidad digital\" href=\"/es/industries/paid-advertising\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/sitios-web.webp\" alt=\"Diseño de sitio web presentado en el folleto de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">02 / SOLUCIONES</span><h3>Sitios web y landing pages</h3><p>Experiencias digitales diseñadas para convertir.</p><a aria-label=\"Conoce nuestros servicios de sitios web y landing pages\" href=\"/es/pay-per-service#websites-and-funnels\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/crm-mensajeria.webp\" alt=\"Ejemplo ilustrativo de seguimiento por WhatsApp del material de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">03 / SOLUCIONES</span><h3>CRM y automatización</h3><p>Organiza tus clientes y automatiza el seguimiento.</p><a aria-label=\"Conoce nuestros servicios de crm y automatización\" href=\"/es/pay-per-service\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/asistentes-ia.webp\" alt=\"Ilustración del asistente con inteligencia artificial del folleto de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">04 / SOLUCIONES</span><h3>Asistentes con IA</h3><p>Respuestas inteligentes, atención y agendamiento.</p><a aria-label=\"Conoce nuestros servicios de asistentes con ia\" href=\"/es/pay-per-service\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service event-service-production\"><img src=\"/media/labs-summit-2026/produccion-digitalface.webp\" alt=\"Equipo de DigitalFace en una grabación real con iluminación y cámara\" width=\"750\" height=\"1325\" loading=\"lazy\"><div><span class=\"event-service-number\">05 / PRODUCCIÓN AUDIOVISUAL Y CONTENIDO</span><h3>Tu marca también<br>se cuenta en imágenes.</h3><p>Contenido profesional que conecta con tu audiencia.</p><a class=\"event-text-link\" href=\"/es/pay-per-service#audiovisual-production\">Conoce la producción audiovisual <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article></div>",
+    "images": [
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/publicidad-digital.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/sitios-web.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/crm-mensajeria.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/asistentes-ia.webp"
+      },
+      {
+        "loaded": false,
+        "src": "/media/labs-summit-2026/produccion-digitalface.webp"
+      }
+    ],
+    "overflow": false,
+    "width": 390
+  },
+  "source": {
+    "cards": [
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 302.60418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "22px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.66px",
+          "lineHeight": "27.5px",
+          "margin": "12px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 275.10418701171875,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(245, 248, 251)",
+          "border": "0.666667px solid rgb(229, 237, 242)",
+          "borderRadius": "13px",
+          "color": "rgb(16, 42, 67)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "120px 213.333px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "170px",
+          "padding": "0px"
+        }
+      },
+      {
+        "heading": {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "border": "0px solid rgb(215, 220, 234)",
+          "borderRadius": "0px",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "29px",
+          "fontWeight": "750",
+          "gap": "normal",
+          "gridTemplateColumns": "none",
+          "letterSpacing": "-0.87px",
+          "lineHeight": "36.25px",
+          "margin": "20px 0px 0px",
+          "minHeight": "0px",
+          "padding": "0px"
+        },
+        "rect": {
+          "height": 397.9166870117187,
+          "width": 334.66668701171875
+        },
+        "style": {
+          "backgroundColor": "rgb(7, 45, 77)",
+          "border": "0px none rgb(255, 255, 255)",
+          "borderRadius": "13px",
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "gap": "normal",
+          "gridTemplateColumns": "334.667px",
+          "letterSpacing": "normal",
+          "lineHeight": "26.4px",
+          "margin": "0px",
+          "minHeight": "330px",
+          "padding": "0px"
+        }
+      }
+    ],
+    "grid": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "border": "0px solid rgb(215, 220, 234)",
+      "borderRadius": "0px",
+      "color": "rgb(16, 42, 67)",
+      "fontFamily": "Inter, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "gap": "14px",
+      "gridTemplateColumns": "334.667px",
+      "letterSpacing": "normal",
+      "lineHeight": "26.4px",
+      "margin": "0px",
+      "minHeight": "0px",
+      "padding": "0px"
+    },
+    "heading": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "border": "0px solid rgb(215, 220, 234)",
+      "borderRadius": "0px",
+      "color": "rgb(16, 42, 67)",
+      "fontFamily": "Montserrat, Inter, -apple-system, \"Segoe UI\", sans-serif",
+      "fontSize": "32px",
+      "fontWeight": "750",
+      "gap": "normal",
+      "gridTemplateColumns": "none",
+      "letterSpacing": "-1.6px",
+      "lineHeight": "35.84px",
+      "margin": "12px 0px 0px",
+      "minHeight": "0px",
+      "padding": "0px"
+    },
+    "html": "<div class=\"event-services-grid\"><article class=\"event-service\" style=\"transform: none; opacity: 1;\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/publicidad-digital.webp\" alt=\"Pieza promocional de DigitalFace con un anuncio en Instagram\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">01 / SOLUCIONES</span><h3>Publicidad digital</h3><p>Atraemos oportunidades para tu negocio.</p><a aria-label=\"Conoce nuestros servicios de publicidad digital\" href=\"/es/industries/paid-advertising\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\" style=\"transform: none; opacity: 1;\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/sitios-web.webp\" alt=\"Diseño de sitio web presentado en el folleto de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">02 / SOLUCIONES</span><h3>Sitios web y landing pages</h3><p>Experiencias digitales diseñadas para convertir.</p><a aria-label=\"Conoce nuestros servicios de sitios web y landing pages\" href=\"/es/pay-per-service#websites-and-funnels\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\" style=\"transform: none; opacity: 1;\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/crm-mensajeria.webp\" alt=\"Ejemplo ilustrativo de seguimiento por WhatsApp del material de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">03 / SOLUCIONES</span><h3>CRM y automatización</h3><p>Organiza tus clientes y automatiza el seguimiento.</p><a aria-label=\"Conoce nuestros servicios de crm y automatización\" href=\"/es/pay-per-service\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service\" style=\"transform: none; opacity: 1;\"><div class=\"event-service-image\"><img src=\"/media/labs-summit-2026/asistentes-ia.webp\" alt=\"Ilustración del asistente con inteligencia artificial del folleto de DigitalFace\" width=\"213\" height=\"157\" loading=\"lazy\"></div><div class=\"event-service-copy\"><span class=\"event-service-number\">04 / SOLUCIONES</span><h3>Asistentes con IA</h3><p>Respuestas inteligentes, atención y agendamiento.</p><a aria-label=\"Conoce nuestros servicios de asistentes con ia\" href=\"/es/pay-per-service\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article><article class=\"event-service event-service-production\" style=\"transform: none; opacity: 1;\"><img src=\"/media/labs-summit-2026/produccion-digitalface.webp\" alt=\"Equipo de DigitalFace en una grabación real con iluminación y cámara\" width=\"750\" height=\"1325\" loading=\"lazy\"><div><span class=\"event-service-number\">05 / PRODUCCIÓN AUDIOVISUAL Y CONTENIDO</span><h3>Tu marca también<br>se cuenta en imágenes.</h3><p>Contenido profesional que conecta con tu audiencia.</p><a class=\"event-text-link\" href=\"/es/pay-per-service#audiovisual-production\">Conoce la producción audiovisual <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-up-right\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></a></div></article></div>",
+    "images": [
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/publicidad-digital.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/sitios-web.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/crm-mensajeria.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/asistentes-ia.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/media/labs-summit-2026/produccion-digitalface.webp"
+      }
+    ],
+    "overflow": false,
+    "width": 390
+  }
+}
