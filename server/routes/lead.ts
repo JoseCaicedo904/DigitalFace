@@ -1,5 +1,6 @@
 import type { RequestHandler } from "express";
 import { z } from "zod";
+import { META_LEAD_EVENT_ID_PATTERN } from "../../shared/api.js";
 import {
   LEAD_GOALS,
   LEAD_PAGE_SOURCES,
@@ -8,6 +9,7 @@ import {
   normalizeInternationalPhone,
   type LeadResponse,
 } from "../../shared/lead.js";
+import { prepareMetaLead } from "../lib/metaConversions.js";
 
 /**
  * Server-side proxy between the website form and the DigitalFace lead intake.
@@ -77,6 +79,13 @@ const leadSchema = z.object({
   utmContent: optionalText(200),
   utmTerm: optionalText(200),
   submissionTimestamp: optionalText(40),
+  metaConversion: z
+    .object({
+      consent: z.literal(true),
+      eventId: z.string().regex(META_LEAD_EVENT_ID_PATTERN),
+    })
+    .optional()
+    .catch(undefined),
 });
 
 /** Upstream should never hold a request open long enough to hang the visitor. */
@@ -110,22 +119,20 @@ export const handleLeadIntake: RequestHandler = async (req, res) => {
     return res.status(503).json(body);
   }
 
+  const { metaConversion, ...lead } = parsed.data;
   const submission = {
-    ...parsed.data,
+    ...lead,
     // Server-stamped so the record has a time the client cannot skew.
     receivedAt: new Date().toISOString(),
   };
 
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
-
     const upstream = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(submission),
-      signal: controller.signal,
-    }).finally(() => clearTimeout(timeout));
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+    });
 
     if (!upstream.ok) {
       console.error(`[lead] Upstream responded ${upstream.status}.`);
@@ -134,6 +141,23 @@ export const handleLeadIntake: RequestHandler = async (req, res) => {
     }
 
     const body: LeadResponse = { ok: true };
+    if (metaConversion) {
+      const { formSource, pageSource, locale } = lead;
+      const sendMetaLead = prepareMetaLead(
+        req,
+        { formSource, pageSource, locale },
+        metaConversion.eventId,
+      );
+      // The n8n success response follows successful CRM intake. A generic 2xx
+      // still keeps the existing form contract, but cannot create a Meta event.
+      if (
+        sendMetaLead &&
+        (await upstream.json().catch(() => null))?.success === true
+      ) {
+        body.metaEventId = metaConversion.eventId;
+        await sendMetaLead();
+      }
+    }
     return res.status(200).json(body);
   } catch (error) {
     // Log the reason, never the endpoint.

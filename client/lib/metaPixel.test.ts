@@ -351,6 +351,27 @@ describe("Form and WhatsApp conversion integration", () => {
     expect(window.dataLayer).toBeUndefined();
   });
 
+  it("passes the shared Lead event ID as a Meta tracking option", async () => {
+    const pixel = await productionPixel("https://digitalface.app/contact");
+    const analytics = await import("./analytics");
+    const eventId = "c0ffee12-abcd-4123-abcd-0123456789ab";
+    analytics.trackPageView("/contact", "Contact");
+    const calls = finishSdkLoad();
+    analytics.trackEvent("generate_lead", {
+      lead_type: "contact",
+      metaEventId: eventId,
+    });
+    expect(calls.mock.calls.filter((args) => args[2] === "Lead")).toEqual([
+      [
+        "trackSingle",
+        pixel.META_PIXEL_ID,
+        "Lead",
+        { lead_type: "contact" },
+        { eventID: eventId },
+      ],
+    ]);
+  });
+
   it("does not forward an unexpected lead category", async () => {
     const pixel = await productionPixel("https://digitalface.app/es/contact");
     const analytics = await import("./analytics");

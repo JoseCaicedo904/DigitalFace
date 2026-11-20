@@ -21,6 +21,7 @@ type EventName =
 type Parameters = {
   page_source?: string;
   lead_type?: "contact" | "service_request";
+  metaEventId?: string;
   service_id?: string;
   service_count?: number;
   contact_method?: "email" | "phone" | "whatsapp";
@@ -228,7 +229,8 @@ export function trackPageView(pathname: string, title: string) {
 }
 export function trackEvent(name: EventName, parameters: Parameters = {}) {
   // Meta remains independent of the GA4 ID and receives only fixed category labels.
-  if (name === "generate_lead") trackMetaLead(parameters?.lead_type);
+  if (name === "generate_lead")
+    trackMetaLead(parameters?.lead_type, parameters?.metaEventId);
   if (name === "contact_click" && parameters?.contact_method === "whatsapp")
     trackMetaWhatsAppContact();
   try {

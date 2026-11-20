@@ -89,8 +89,14 @@ export interface LeadSubmission extends LeadAttribution {
   submissionTimestamp: string;
 }
 
+/** Website-only metadata. The intake webhook receives LeadSubmission. */
+export interface LeadRequest extends LeadSubmission {
+  metaConversion?: { consent: true; eventId: string };
+}
+
 export interface LeadResponse {
   ok: boolean;
+  metaEventId?: string;
   /**
    * Machine-readable reason, never a human sentence and never anything about
    * the upstream endpoint — the client owns the wording the visitor sees.

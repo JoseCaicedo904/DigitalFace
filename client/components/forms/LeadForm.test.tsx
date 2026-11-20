@@ -31,6 +31,7 @@ beforeEach(() => {
 afterEach(async () => {
   if (root) await act(async () => root.unmount());
   vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
 });
 async function prepare(withRequest = false, initialEntry = "/contact") {
   if (withRequest)
@@ -88,11 +89,49 @@ describe("Lead conversion confirmation", () => {
       lead_type: "service_request",
       service_count: 1,
     });
+    expect(JSON.parse(String(request.body))).not.toHaveProperty(
+      "metaConversion",
+    );
     expect(window.localStorage.getItem(REQUEST_STORAGE_KEY)).toBeNull();
     expect(JSON.stringify(vi.mocked(trackEvent).mock.calls)).not.toContain(
       "Synthetic",
     );
   });
+  it("uses one Meta event ID for a consented submission and its retry", async () => {
+    vi.stubEnv("VITE_META_CAPI_ENABLED", "true");
+    const fetchMock = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("Synthetic network failure"));
+    fetchMock.mockImplementationOnce(async (_url, request: RequestInit) => {
+      const { metaConversion } = JSON.parse(String(request.body));
+      return {
+        ok: true,
+        json: async () => ({ ok: true, metaEventId: metaConversion.eventId }),
+      };
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    await prepare();
+    const checkbox = document.querySelector<HTMLInputElement>(
+      '[name="metaConversionConsent"]',
+    )!;
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.required).toBe(false);
+    checkbox.checked = true;
+    await submit();
+    await submit();
+    const [first, retry] = fetchMock.mock.calls.map(
+      ([, request]) => JSON.parse(String(request.body)).metaConversion,
+    );
+    expect(first).toEqual({ consent: true, eventId: expect.any(String) });
+    expect(retry).toEqual(first);
+    expect(trackEvent).toHaveBeenCalledExactlyOnceWith("generate_lead", {
+      page_source: "contact",
+      lead_type: "contact",
+      service_count: 0,
+      metaEventId: first.eventId,
+    });
+  });
+
   it.each([
     { ok: false, json: async () => ({ ok: false }) },
     { ok: true, json: async () => ({ ok: false }) },

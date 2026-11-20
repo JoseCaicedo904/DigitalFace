@@ -1,4 +1,5 @@
 import site from "@shared/site.json";
+import { META_LEAD_EVENT_ID_PATTERN } from "@shared/api";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
 import { routeSupportsLocale } from "@/i18n/locale";
 
@@ -29,6 +30,7 @@ let pendingSchedule: string | null = null;
 type Conversion = {
   name: "Lead" | "Contact";
   page: string;
+  eventId?: string;
   parameters?:
     | { lead_type: "contact" | "service_request" }
     | { contact_method: "whatsapp" };
@@ -80,18 +82,23 @@ function safeUrl(value: string): boolean {
   }
 }
 
-function eligible(): boolean {
+export function allowsMetaTracking(): boolean {
   if (typeof window === "undefined") return false;
   const navigator = window.navigator as Navigator & {
     globalPrivacyControl?: boolean;
   };
   return (
+    navigator.globalPrivacyControl !== true && navigator.doNotTrack !== "1"
+  );
+}
+
+function eligible(): boolean {
+  return (
+    allowsMetaTracking() &&
     import.meta.env.PROD &&
     import.meta.env.VITE_DEPLOY_ENV === "production" &&
     window.location.origin === site.origin &&
     /^\d{10,20}$/.test(META_PIXEL_ID) &&
-    navigator.globalPrivacyControl !== true &&
-    navigator.doNotTrack !== "1" &&
     safeUrl(window.location.href) &&
     (!document.referrer || safeUrl(document.referrer))
   );
@@ -114,7 +121,15 @@ function flush() {
   for (const conversion of conversions) {
     // The SDK supplies the current URL, so never replay an action on another page.
     if (conversion.page !== page) continue;
-    if (conversion.parameters)
+    if (conversion.eventId)
+      ownedQueue!(
+        "trackSingle",
+        META_PIXEL_ID,
+        conversion.name,
+        conversion.parameters ?? {},
+        { eventID: conversion.eventId },
+      );
+    else if (conversion.parameters)
       ownedQueue!(
         "trackSingle",
         META_PIXEL_ID,
@@ -209,6 +224,7 @@ export function trackMetaAppointmentBooked(
 function trackConversion(
   name: Conversion["name"],
   parameters?: Conversion["parameters"],
+  eventId?: string,
 ) {
   try {
     if (!eligible()) return;
@@ -216,7 +232,7 @@ function trackConversion(
     if (!page) return;
     requestedPage = page;
     if (!initialize()) return;
-    pendingConversions.push({ name, page, parameters });
+    pendingConversions.push({ name, page, parameters, eventId });
     flush();
   } catch {
     /* Contact actions and form success must never depend on measurement. */
@@ -224,12 +240,13 @@ function trackConversion(
 }
 
 /** The form calls generate_lead only after HTTP and application-level success. */
-export function trackMetaLead(leadType?: string) {
+export function trackMetaLead(leadType?: string, eventId?: string) {
   trackConversion(
     "Lead",
     leadType === "contact" || leadType === "service_request"
       ? { lead_type: leadType }
       : undefined,
+    eventId && META_LEAD_EVENT_ID_PATTERN.test(eventId) ? eventId : undefined,
   );
 }
 

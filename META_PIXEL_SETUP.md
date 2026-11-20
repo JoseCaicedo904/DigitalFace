@@ -30,6 +30,16 @@ Failed/invalid form requests and the honeypot discard path do not emit Lead. Ema
 - Events wait for SDK load, then recheck the current URL. Pages left before the SDK loads may not be counted. Pending Lead/Contact events are associated with their originating known path and are not replayed using another page's URL. Blocking, rapid navigation, network failures or unavailable booking storage can prevent measurement; navigation, contact actions and booking must still work.
 - No consent banner or CMP was added. Existing privacy/cookie controls and disclosures remain the site's responsibility. These checks do not establish legal compliance.
 
+## Conversions API for website leads
+
+The local server implementation reports one `Lead` after the DigitalFace intake webhook returns HTTP success and `success: true`. The Pixel sends the same event name and ID so Meta can deduplicate the two copies. The site preserves the lead's success response if Meta rejects the event or exceeds the 1.5-second delivery timeout.
+
+1. In **DF AGENCY (1148795828005152)**, continue through **Seleccionar eventos** and choose **Cliente potencial (Lead)** for website events. In **Seleccionar detalles de eventos**, select the event name, timestamp, action source, event source URL and event ID. For customer information, select **User agent**, **Browser ID (\_fbp)** and **Click ID (\_fbc)**. The server uses existing Meta cookies when available and sends a conversion only when the visitor chooses the optional form checkbox. Keep email, phone, name, IP address and form answers out of this setup.
+2. In the instructions or the dataset's **Configuración → API de conversiones** section, generate a token for this dataset and store it directly in Vercel as the Production Secret `META_CAPI_ACCESS_TOKEN`. Keep the existing `VITE_META_PIXEL_ID=1148795828005152` and set `VITE_META_CAPI_ENABLED=true` for Production when ready to deploy. The flag exposes the optional checkbox and enables the server path only when the token is also present.
+3. For a controlled check, copy the server test code from **Probar eventos** into the temporary server setting `META_CAPI_TEST_EVENT_CODE` and deploy. Open the website from the browser section of **Probar eventos** and submit one approved, owned test lead with the optional box checked. This is a real intake in the existing CRM flow. Check for **Lead** via **Servidor** and **Navegador**, with the same event ID and successful deduplication. Remove the test code and redeploy once verified. While present, the code is added to all eligible server leads, and Meta can include test-coded events in measurement. [Meta Test Events](https://developers.facebook.com/documentation/ads-commerce/conversions-api/using-the-api#testEvents)
+
+Use a confirmed booking from the calendar system before adding a server `Schedule`. The corporate booking confirmation page measures a browser redirect. WhatsApp clicks measure a link open. Those events and `PageView` continue through the browser Pixel. To turn off server delivery, unset `VITE_META_CAPI_ENABLED` and redeploy.
+
 ## Deployment and live test
 
 1. For a new installation, add the approved dataset ID as `VITE_META_PIXEL_ID` in the Vercel project's Production environment and redeploy. Leave the variable unset while Meta tracking is paused. Vite uses `VERCEL_ENV` for the production gate.

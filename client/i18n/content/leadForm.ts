@@ -59,6 +59,8 @@ const en = {
   } satisfies Record<LeadGoal, string>,
 
   submit: "Get My Offer & Contact DigitalFace",
+  metaConversionConsent:
+    "Optional. Allow DigitalFace to share this submission event and existing browser identifiers with Meta to measure advertising.",
   submitShort: "Get My Offer",
   submitting: "Sending your request…",
 
@@ -131,6 +133,8 @@ const es: typeof en = {
   },
 
   submit: "Quiero mi oferta y contactar a DigitalFace",
+  metaConversionConsent:
+    "Opcional. Permito que DigitalFace comparta con Meta el evento de envío de este formulario y los identificadores existentes de mi navegador para medir la publicidad.",
   submitShort: "Quiero mi oferta",
   submitting: "Enviando tu solicitud…",
 

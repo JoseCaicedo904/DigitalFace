@@ -1,4 +1,5 @@
 import { trackEvent } from "@/lib/analytics";
+import { allowsMetaTracking } from "@/lib/metaPixel";
 import { Button } from "@/components/ui/button";
 import { getCountryOptions, getPhoneCountryOptions } from "@/data/countries";
 import { useLocale } from "@/i18n/LocaleProvider";
@@ -25,8 +26,8 @@ import {
   normalizeWebsite,
   type LeadGoal,
   type LeadPageSource,
+  type LeadRequest,
   type LeadResponse,
-  type LeadSubmission,
 } from "@shared/lead";
 import type { CountryCode } from "libphonenumber-js";
 import "country-flag-icons/3x2/flags.css";
@@ -37,7 +38,7 @@ import {
   Loader2,
   Sparkles,
 } from "lucide-react";
-import { useId, useMemo, useState, type FormEvent } from "react";
+import { useId, useMemo, useRef, useState, type FormEvent } from "react";
 
 /**
  * The single lead-capture form used by the homepage, the contact page and all
@@ -115,6 +116,7 @@ export function LeadForm({
   const { locale } = useLocale();
   const t = leadFormContent[locale];
   const fieldId = useId();
+  const metaCapiEnabled = import.meta.env.VITE_META_CAPI_ENABLED === "true";
   // The services the visitor picked while browsing. Read here so they travel
   // with the submission and stay editable inside the form.
   const { services: selectedServices, clear: clearRequest } =
@@ -142,6 +144,7 @@ export function LeadForm({
   const [errors, setErrors] = useState<Partial<Record<FieldKey, string>>>({});
   const [status, setStatus] = useState<Status>("idle");
   const [submittedName, setSubmittedName] = useState("");
+  const metaEventId = useRef<string | undefined>(undefined);
 
   const dark = tone === "dark";
   const id = (key: string) => `${fieldId}-${key}`;
@@ -262,7 +265,7 @@ export function LeadForm({
         (option) => option.code === values.country,
       )?.name ?? values.country;
 
-    const payload: LeadSubmission = {
+    const payload: LeadRequest = {
       name: values.name.trim(),
       business: values.business.trim(),
       email: values.email.trim(),
@@ -282,6 +285,25 @@ export function LeadForm({
     };
 
     try {
+      if (
+        metaCapiEnabled &&
+        allowsMetaTracking() &&
+        (
+          event.currentTarget.elements.namedItem(
+            "metaConversionConsent",
+          ) as HTMLInputElement | null
+        )?.checked
+      ) {
+        // Keep the same ID if the visitor retries a request after a network error.
+        metaEventId.current ??= globalThis.crypto?.randomUUID?.();
+        if (metaEventId.current) {
+          payload.metaConversion = {
+            consent: true,
+            eventId: metaEventId.current,
+          };
+        }
+      }
+
       const response = await fetch(LEAD_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -303,7 +325,9 @@ export function LeadForm({
         page_source: pageSource,
         lead_type: selectedServices.length ? "service_request" : "contact",
         service_count: selectedServices.length,
+        ...(result.metaEventId ? { metaEventId: result.metaEventId } : {}),
       });
+      metaEventId.current = undefined;
       setSubmittedName(values.name.trim().split(/\s+/)[0] ?? "");
       // The request has been sent, so it is no longer pending: leaving it in
       // place would follow the visitor around and prefill the next form.
@@ -861,6 +885,17 @@ export function LeadForm({
           <p role="alert" className={errorTextClass}>
             {t.errors.summary}
           </p>
+        ) : null}
+
+        {metaCapiEnabled ? (
+          <label className="flex items-start gap-2.5 text-sm leading-relaxed">
+            <input
+              type="checkbox"
+              name="metaConversionConsent"
+              className="mt-1 shrink-0 accent-brand-600"
+            />
+            <span>{t.metaConversionConsent}</span>
+          </label>
         ) : null}
 
         <Button
