@@ -2,8 +2,8 @@ import site from "@shared/site.json";
 import { getLocaleFromPathname, stripLocaleFromPathname } from "@/i18n/geo";
 import { routeSupportsLocale } from "@/i18n/locale";
 
-/** Public pixel ID selected by the owner; never an access token. */
-export const META_PIXEL_ID = "2450656048502915";
+/** Public pixel ID. An unconfigured deployment does not load the Meta SDK. */
+export const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID?.trim() ?? "";
 
 type PixelQueue = ((...args: unknown[]) => void) & {
   queue: unknown[][];

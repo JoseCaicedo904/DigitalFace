@@ -1,8 +1,8 @@
 # DigitalFace Meta pixel — 2026-10-16
 
-**Migration requested 2026-10-21:** the owner reports that the existing Nicolas pixel is in the wrong advertising setup and wants a new independent DigitalFace Pixel/Dataset for the same website. The owner confirms it has not been created yet and requests guided creation. Verify the DigitalFace business portfolio as owner and the intended DigitalFace ad account connection before switching IDs. The source still targets `2450656048502915`; no replacement ID, runtime change, deployment or Meta mutation has occurred. Preserve PageView, Schedule, Lead and Contact with their existing guards during the eventual switch, then retest all four against the new pixel. The October 16 receipts below apply to the old pixel only.
+**November 20 migration:** The owner requested that digitalface.app stop sending events to the Nicolas pixel (`2450656048502915`) before installing its successor. This release removes the hard-coded ID and keeps Meta tracking inactive unless a valid `VITE_META_PIXEL_ID` is supplied at build time. For the replacement, verify DigitalFace owns the new dataset and that it is connected to the intended ad account. Then configure the public ID for Vercel Production, redeploy, and verify PageView, Schedule, Lead and Contact in Events Manager. The October 16 receipts below apply to the historical installation.
 
-## Prepared installation
+## October 16 installation history
 
 The owner explicitly selected Nicolas Caicedo's existing pixel, **2450656048502915**, for **https://digitalface.app**. The browser implementation is in `client/lib/metaPixel.ts`, called by the existing analytics entry points. No access token, new dependency, additional booking widget or Conversions API integration is required.
 
@@ -23,7 +23,7 @@ Failed/invalid form requests and the honeypot discard path do not emit Lead. Ema
 
 ## Collection and failure boundaries
 
-- Requires a production build, production deployment environment and exact `https://digitalface.app` origin. Pixel ID is public configuration, not a secret. Development, preview and localhost stay untracked.
+- Requires a valid `VITE_META_PIXEL_ID`, a production build, production deployment environment and exact `https://digitalface.app` origin. The pixel ID is public configuration. Development, preview and localhost stay untracked.
 - Uses Meta's SDK with automatic configuration disabled and `fbq.disablePushState = true`, then explicitly dispatches `trackSingle` events to the chosen ID. A separately installed pixel prevents this loader from initializing rather than silently causing duplicates.
 - No form/contact payloads, advanced matching or automatic form events are supplied. Lead and Contact receive only the fixed category labels described above; names, phone numbers, emails, messages, selected-service lists and arbitrary parameters are excluded from those payloads. Browser Global Privacy Control and Do Not Track opt-outs prevent this integration from initializing or dispatching.
 - The Meta SDK reads the actual page URL and referrer. The integration skips contexts containing unknown URL query keys, email-like query values, unsafe fragments or unknown internal paths. Known campaign parameters, `fbclid`, `lang` and `from` are allowed. This is a conservative eligibility check, not a claim that the third-party SDK rewrites URLs or collects no browser identifiers.
@@ -32,8 +32,8 @@ Failed/invalid form requests and the honeypot discard path do not emit Lead. Ema
 
 ## Deployment and live test
 
-1. Deployment is owner-reported and all four browser event types have passed the user-provided Meta receipt check. For later changes, deploy through the same project before repeating the tests. The existing Vite configuration supplies the production deployment gate from `VERCEL_ENV`. There is no new environment variable or token to configure.
-2. Open this pixel's **Probar eventos** tab. Visit `https://digitalface.app/?lang=en` in a browser session where tracking is permitted, then navigate to a Spanish page. Confirm the chosen pixel receives PageView events and there is one `fbevents.js` loader. Browser privacy signals and extensions may intentionally block the test.
+1. For a new installation, add the approved dataset ID as `VITE_META_PIXEL_ID` in the Vercel project's Production environment and redeploy. Leave the variable unset while Meta tracking is paused. Vite uses `VERCEL_ENV` for the production gate.
+2. Open the new dataset's **Probar eventos** tab. Visit `https://digitalface.app/?lang=en` in a browser session where tracking is permitted, then navigate to a Spanish page. Confirm the new pixel receives PageView events and there is one `fbevents.js` loader. Browser privacy signals and extensions may intentionally block the test.
 3. With authorization for a controlled booking, complete the actual GHL consultation flow from `/book` or `/es/book`. Confirm the calendar creates the booking and redirects to `/booking-confirmed`; expect one Schedule. Refresh the confirmation and check that no second Schedule appears. Opening `/book` or clicking a consultation link must not count as Schedule.
 4. Using an owned synthetic test contact, submit a valid website contact form and confirm both the website success state and one Lead in Meta. A failed submission must not produce Lead. Repeat with a selected-service request if that flow needs separate verification; its category is `service_request`.
 5. Click the real WhatsApp button on an English page and a Spanish page. Expect one Contact per actual click with `contact_method: whatsapp`. The test does not require sending a WhatsApp message. Confirm that no form values, message text or phone number appear in the custom event data.
@@ -47,6 +47,6 @@ Run scoped Prettier, `pnpm build`, `pnpm typecheck` and `pnpm test`. The build i
 
 Initial installation checks on 2026-10-16 passed 211 tests. **The subsequent Lead/Contact expansion passed production build (with the production deployment gate), all 27 route/SEO checks, TypeScript, scoped Prettier and 219 tests in 19 files**, including 30 Meta tests, success/failure form checks and actual WhatsApp-button clicks in both languages. Existing large-chunk, Browserslist-age and React Router future-flag warnings remain. The implementation tests made no external Meta or booking requests. Subsequent live event receipt was established through the owner's tests described above.
 
-To revert only the expansion, remove the Lead/WhatsApp dispatches from `trackEvent` in `client/lib/analytics.ts` and redeploy; PageView/Schedule remain intact. To remove the entire integration, remove all Meta imports and dispatch calls from that file, remove the module/tests, and redeploy. No data migration is required; already recorded Meta events are not erased by a rollback.
+To disable tracking after a new installation, unset `VITE_META_PIXEL_ID` and redeploy. Use a release that includes the November 20 configuration change so the historical hard-coded ID stays out of production. Previously recorded events remain in Meta.
 
 Implementation reference: [Meta's official pixel tag template](https://github.com/facebook/GoogleTagManager-WebTemplate-For-FacebookPixel/blob/main/template.tpl), including automatic-configuration controls, history-event controls and `trackSingle` dispatch.

@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { JSDOM } from "jsdom";
 
 let dom: JSDOM;
+const TEST_PIXEL_ID = "100000000000001";
 beforeEach(() => vi.resetModules());
 afterEach(() => {
   dom?.window.close();
@@ -12,6 +13,7 @@ afterEach(() => {
 async function productionPixel(
   url = "https://digitalface.app/",
   referrer = "https://www.google.com/",
+  pixelId = TEST_PIXEL_ID,
 ) {
   dom = new JSDOM("<!doctype html><html><head></head><body></body></html>", {
     url,
@@ -22,6 +24,7 @@ async function productionPixel(
   vi.stubEnv("PROD", true);
   vi.stubEnv("VITE_DEPLOY_ENV", "production");
   vi.stubEnv("VITE_GA4_MEASUREMENT_ID", "");
+  vi.stubEnv("VITE_META_PIXEL_ID", pixelId);
   return await import("./metaPixel");
 }
 
@@ -35,6 +38,37 @@ function finishSdkLoad() {
 }
 
 describe("Meta pixel without external requests", () => {
+  it.each(["", "invalid"])(
+    "keeps Meta inactive when the configured ID is %j",
+    async (pixelId) => {
+      await productionPixel("https://digitalface.app/book", undefined, pixelId);
+      vi.stubEnv("VITE_GA4_MEASUREMENT_ID", "G-SYNTHETIC123");
+      const analytics = await import("./analytics");
+
+      analytics.trackPageView("/book", "Book a call");
+      analytics.startAppointmentBookingAttempt();
+      window.history.replaceState({}, "", "/booking-confirmed");
+      analytics.trackAppointmentBookedOnce();
+      analytics.trackEvent("generate_lead", { lead_type: "contact" });
+      analytics.trackEvent("contact_click", { contact_method: "whatsapp" });
+
+      expect(document.querySelector("#df-meta-pixel")).toBeNull();
+      expect(window.fbq).toBeUndefined();
+      expect(window._fbq).toBeUndefined();
+      expect(document.querySelector("#df-ga4")).not.toBeNull();
+      expect(
+        window.dataLayer?.map((entry) =>
+          Array.from(entry as ArrayLike<unknown>).slice(0, 2),
+        ),
+      ).toEqual(
+        expect.arrayContaining([
+          ["event", "page_view"],
+          ["event", "appointment_booked"],
+        ]),
+      );
+    },
+  );
+
   it("sends Schedule once for a completed event booking with an event attempt", async () => {
     const pixel = await productionPixel(
       "https://digitalface.app/es/labs-summit-2026",
@@ -61,8 +95,8 @@ describe("Meta pixel without external requests", () => {
     ).toBe("https://connect.facebook.net/en_US/fbevents.js");
     expect(window.fbq!.disablePushState).toBe(true);
     expect(window.fbq!.queue).toEqual([
-      ["set", "autoConfig", false, "2450656048502915"],
-      ["init", "2450656048502915"],
+      ["set", "autoConfig", false, TEST_PIXEL_ID],
+      ["init", TEST_PIXEL_ID],
     ]);
     const calls = finishSdkLoad();
     expect(calls.mock.calls).toEqual([

@@ -1,6 +1,6 @@
 # DigitalFace website context
 
-**Migration requested 2026-10-21:** the owner reports that the existing Nicolas pixel is in the wrong advertising setup and wants a new independent DigitalFace Pixel/Dataset for the same website. The owner confirms it has not been created yet and requests guided creation. Verify the DigitalFace business portfolio as owner and the intended DigitalFace ad account connection before switching IDs. The source still targets `2450656048502915`; no replacement ID, runtime change, deployment or Meta mutation has occurred. Preserve PageView, Schedule, Lead and Contact with their existing guards during the eventual switch, then retest all four against the new pixel. The October 16 receipts below apply to the old pixel only.
+**November 20 migration:** The owner requested that digitalface.app stop sending events to the Nicolas pixel (`2450656048502915`) before installing its successor. This release removes the hard-coded ID and keeps Meta tracking inactive unless a valid `VITE_META_PIXEL_ID` is supplied at build time. For the replacement, verify DigitalFace owns the new dataset and that it is connected to the intended ad account. Then configure the public ID for Vercel Production, redeploy, and verify PageView, Schedule, Lead and Contact in Events Manager. The October 16 receipts below apply to the historical installation.
 
 Updated 2026-10-16. This is the actual corporate website source, at C:/Users/jose\_/OneDrive/Documents/WEBSITES/Website Official DF/DF Site.
 
