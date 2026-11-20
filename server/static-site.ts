@@ -1,6 +1,6 @@
 import express from "express";
 import path from "node:path";
-import site from "../shared/site.json";
+import site from "../shared/site.json" with { type: "json" };
 
 /** Shared by the local production server and non-visual HTTP tests. */
 export function staticSite(distPath: string) {

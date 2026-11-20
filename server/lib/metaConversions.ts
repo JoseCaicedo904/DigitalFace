@@ -1,5 +1,5 @@
 import type { Request } from "express";
-import site from "../../shared/site.json";
+import site from "../../shared/site.json" with { type: "json" };
 import { LEAD_FORM_SOURCE, type LeadPageSource } from "../../shared/lead.js";
 import { readCookieValue } from "../../client/i18n/geo.js";
 
